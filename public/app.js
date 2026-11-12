@@ -29,7 +29,7 @@ const money = (n, cur) => (cur === 'USD' ? `$${(n / 100).toFixed(2)}` : `${n.toL
 const date = (ms) => (ms ? new Date(ms).toLocaleString('ko-KR', { dateStyle: 'medium', timeStyle: 'short' }) : '-');
 const svgUri = (s) => 'data:image/svg+xml;utf8,' + encodeURIComponent(s);
 const choiceNode = (c) => (c.startsWith('svg:') ? h('img', { src: svgUri(c.slice(4)), alt: 'option' }) : h('span', {}, c));
-const mount = (...n) => { clearInterval(timerInt); speechSynthesis?.cancel?.(); $app.replaceChildren(...n.flat()); window.scrollTo(0, 0); };
+const mount = (...n) => { clearInterval(timerInt); speechSynthesis?.cancel?.(); $app.replaceChildren(...n.flat(Infinity).filter((x) => x != null && x !== false)); window.scrollTo(0, 0); };
 const guard = (fn) => async (...a) => { try { await fn(...a); } catch (e) { toast(e.message); } };
 const examName = { MAP: 'MAP', CAT4: 'CAT4', WIDA: 'WIDA' };
 const field = (label, input) => h('div', {}, h('label', {}, label), input);
@@ -145,6 +145,11 @@ async function pageMe() {
     h('input', { name: 'name', class: 'grow', value: me.name, required: true }), h('input', { name: 'grade', class: 'grow', value: me.grade || '', placeholder: '학년' }), h('input', { name: 'phone', class: 'grow', value: me.phone || '', placeholder: '연락처' }), h('button', { class: 'btn sm' }, '저장'));
   const pw = h('form', { class: 'row', onsubmit: guard(async (e) => { e.preventDefault(); await api('POST', '/auth/password', { current: pw.cur.value, next: pw.nxt.value }); pw.reset(); toast('비밀번호가 변경되었습니다.'); }) },
     h('input', { name: 'cur', type: 'password', class: 'grow', placeholder: '현재 비밀번호', required: true }), h('input', { name: 'nxt', type: 'password', class: 'grow', placeholder: '새 비밀번호 (8자 이상)', minlength: 8, required: true }), h('button', { class: 'btn sm alt' }, '변경'));
+  const charts = ['MAP', 'CAT4'].map((t) => ({ t, pts: ov.attempts.filter((a) => a.exam_type === t && a.status === 'graded' && a.score?.overall != null).reverse().map((a) => ({ v: a.score.overall, t: a.finished_at })) }))
+    .filter((x) => x.pts.length >= 2).map((x) => growthChart(x.pts, x.t));
+  const del = h('form', { class: 'row', onsubmit: guard(async (e) => { e.preventDefault(); if (!confirm('정말 탈퇴하시겠습니까? 되돌릴 수 없습니다.')) return; await api('POST', '/auth/delete', { password: del.pw.value }); me = null; renderNav(); toast('탈퇴가 완료되었습니다.'); location.hash = '#/'; }) },
+    h('input', { name: 'pw', type: 'password', class: 'grow', placeholder: '비밀번호 확인', required: true }), h('button', { class: 'btn sm danger' }, '탈퇴하기'));
+  const refund = guard(async (o) => { const reason = prompt('환불 사유를 입력해 주세요 (선택)') ; if (reason === null) return; await api('POST', `/orders/${o.id}/request-refund`, { reason }); toast('환불 요청이 접수되었습니다.'); pageMe(); });
   mount(
     h('h2', {}, `안녕하세요, ${me.name}님`),
     h('div', { class: 'card' }, h('h3', {}, '내 이용권'), ov.entitlements.length ? h('table', {}, h('tr', {}, h('th', {}, '상품'), h('th', {}, '남은 횟수'), h('th', {}, '만료'), h('th', {})),
@@ -153,9 +158,28 @@ async function pageMe() {
     ov.attempts.some((a) => a.status === 'in_progress') ? h('div', { class: 'card' }, h('b', {}, '진행 중인 시험이 있습니다. '), ov.attempts.filter((a) => a.status === 'in_progress').map((a) => h('a', { class: 'btn sm', href: `#/exam/${a.id}` }, `${a.exam_type} 이어서 풀기`))) : null,
     h('div', { class: 'card' }, h('h3', {}, '응시 기록'), ov.attempts.length ? h('table', {}, ov.attempts.map((a) => h('tr', {}, h('td', {}, a.exam_type), h('td', {}, date(a.started_at)), h('td', {}, statusBadge(a.status)),
       h('td', {}, a.status !== 'in_progress' ? h('a', { href: `#/report/${a.id}` }, '리포트') : null)))) : h('p', { class: 'muted' }, '아직 응시 기록이 없습니다.')),
-    h('div', { class: 'card' }, h('h3', {}, '결제 내역'), ord.orders.length ? h('table', {}, ord.orders.map((o) => h('tr', {}, h('td', {}, o.title), h('td', {}, money(o.amount, o.currency)), h('td', {}, date(o.paid_at || o.created_at)), h('td', {}, h('span', { class: 'badge ' + (o.status === 'paid' ? 'ok' : 'bad') }, { paid: '결제완료', refunded: '환불', failed: '실패' }[o.status] || o.status))))) : h('p', { class: 'muted' }, '결제 내역이 없습니다.')),
+    h('div', { class: 'card' }, h('h3', {}, '결제 내역'), ord.orders.length ? h('table', {}, ord.orders.map((o) => h('tr', {}, h('td', {}, o.title), h('td', {}, money(o.amount, o.currency)), h('td', {}, date(o.paid_at || o.created_at)), h('td', {}, h('span', { class: 'badge ' + (o.status === 'paid' ? 'ok' : 'bad') }, { paid: '결제완료', refunded: '환불', failed: '실패' }[o.status] || o.status)),
+      h('td', {}, o.status === 'paid' && o.provider !== 'admin' ? (o.refund_status === 'pending' ? h('span', { class: 'badge warn' }, '환불 검토중') : o.refund_status === 'rejected' ? h('span', { class: 'badge' }, '환불 거절됨') : h('button', { class: 'btn sm alt', onclick: () => refund(o) }, '환불 요청')) : null)))) : h('p', { class: 'muted' }, '결제 내역이 없습니다.')),
+    charts.length ? h('div', { class: 'card' }, h('h3', {}, '성적 추이 (종합 추정 점수)'), h('div', { class: 'grid' }, charts)) : null,
     h('div', { class: 'card' }, h('h3', {}, '회원 정보'), prof, h('h3', {}, '비밀번호 변경'), pw),
+    h('div', { class: 'card' }, h('h3', {}, '회원 탈퇴'), h('p', { class: 'muted small' }, '탈퇴하면 응시 기록·답안·녹음이 삭제되고 계정 정보가 익명화됩니다. 결제 기록은 법령에 따라 5년간 보관됩니다.'), del),
   );
+}
+
+/* ---------- growth chart (inline SVG) ---------- */
+function growthChart(points, label) {
+  const W = 320, H = 110, pad = 24, ns = 'http://www.w3.org/2000/svg';
+  const mk = (t, a) => { const e = document.createElementNS(ns, t); for (const [k, v] of Object.entries(a)) e.setAttribute(k, v); return e; };
+  const ys = points.map((p) => p.v), lo = Math.min(...ys) - 5, hi = Math.max(...ys) + 5;
+  const X = (i) => pad + (i * (W - 2 * pad)) / Math.max(1, points.length - 1), Y = (v) => H - pad - ((v - lo) / (hi - lo || 1)) * (H - 2 * pad);
+  const svg = mk('svg', { viewBox: `0 0 ${W} ${H}`, width: '100%', style: 'max-width:360px', role: 'img', 'aria-label': `${label} 성적 추이` });
+  svg.append(mk('polyline', { points: points.map((p, i) => `${X(i)},${Y(p.v)}`).join(' '), fill: 'none', stroke: 'var(--brand)', 'stroke-width': 2.5 }));
+  points.forEach((p, i) => {
+    svg.append(mk('circle', { cx: X(i), cy: Y(p.v), r: 4, fill: 'var(--brand)' }));
+    const t = mk('text', { x: X(i), y: Y(p.v) - 8, 'text-anchor': 'middle', 'font-size': 11, fill: 'currentColor' }); t.textContent = p.v; svg.append(t);
+    const d = mk('text', { x: X(i), y: H - 6, 'text-anchor': 'middle', 'font-size': 9, fill: 'var(--muted)' }); d.textContent = new Date(p.t).toLocaleDateString('ko-KR', { month: 'numeric', day: 'numeric' }); svg.append(d);
+  });
+  return h('div', {}, h('b', {}, label), svg);
 }
 
 /* ---------- exam runner ---------- */
@@ -257,7 +281,7 @@ async function pageAdmin(tab = 'stats') {
 }
 async function adminStats(b) {
   const s = await api('GET', '/admin/stats');
-  b.append(h('div', { class: 'stats' }, [['회원', s.users], ['결제 주문', s.paidOrders], ['응시', s.attempts], ['채점 대기', s.pendingGrading], ['활성 문제', s.questions], ...s.revenue.map((r) => [`매출 ${r.currency}`, money(r.s, r.currency)])].map(([l, v]) => h('div', { class: 'stat' }, h('div', { class: 'muted small' }, l), h('b', {}, v)))));
+  b.append(h('div', { class: 'stats' }, [['회원', s.users], ['결제 주문', s.paidOrders], ['응시', s.attempts], ['채점 대기', s.pendingGrading], ['환불 요청', s.pendingRefunds], ['활성 문제', s.questions], ...s.revenue.map((r) => [`매출 ${r.currency}`, money(r.s, r.currency)])].map(([l, v]) => h('div', { class: 'stat' }, h('div', { class: 'muted small' }, l), h('b', {}, v)))));
 }
 async function adminUsers(b) {
   const q = h('input', { placeholder: '이메일/이름 검색', class: 'grow' }); const list = h('div', {});
@@ -289,9 +313,10 @@ async function userDetail(id) {
 }
 async function adminOrders(b) {
   const { orders } = await api('GET', '/admin/orders');
-  b.append(h('table', {}, h('tr', {}, ['일시', '회원', '상품', '수단', '금액', '상태', ''].map((x) => h('th', {}, x))), orders.map((o) => h('tr', {},
+  b.append(h('p', {}, h('a', { class: 'btn sm alt', href: '/api/admin/orders.csv' }, 'CSV 내보내기')), h('table', {}, h('tr', {}, ['일시', '회원', '상품', '수단', '금액', '상태', ''].map((x) => h('th', {}, x))), orders.map((o) => h('tr', {},
     h('td', {}, date(o.created_at)), h('td', {}, `${o.name} (${o.email})`), h('td', {}, o.title), h('td', {}, o.provider), h('td', {}, money(o.amount, o.currency)), h('td', {}, o.status),
-    h('td', {}, o.status === 'paid' && o.provider !== 'admin' ? h('button', { class: 'btn sm danger', onclick: guard(async () => { if (confirm('PG사에 환불을 요청하고 이용권을 회수합니다. 진행할까요?')) { await api('POST', `/admin/orders/${o.id}/refund`); toast('환불 완료'); pageAdmin('orders'); } }) }, '환불') : null)))));
+    h('td', {}, o.refund_status === 'pending' ? h('div', { class: 'small' }, h('span', { class: 'badge warn' }, '환불요청'), ` ${o.refund_reason || ''} `, h('button', { class: 'btn sm alt', onclick: guard(async () => { await api('POST', `/admin/refund-requests/${o.refund_id}/reject`); pageAdmin('orders'); }) }, '거절')) : null,
+      o.status === 'paid' && o.provider !== 'admin' ? h('button', { class: 'btn sm danger', onclick: guard(async () => { if (confirm('PG사에 환불을 요청하고 이용권을 회수합니다. 진행할까요?')) { await api('POST', `/admin/orders/${o.id}/refund`); toast('환불 완료'); pageAdmin('orders'); } }) }, '환불') : null)))));
 }
 async function adminProducts(b) {
   const { products } = await api('GET', '/admin/products');

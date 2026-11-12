@@ -114,10 +114,22 @@ app.post('/webhooks/portone', async (c) => {
 
 app.get('/orders', requireUser, async (c) => {
   const { results } = await c.env.DB.prepare(
-    `SELECT o.id,o.provider,o.amount,o.currency,o.status,o.created_at,o.paid_at,p.title FROM orders o JOIN products p ON p.id=o.product_id
+    `SELECT o.id,o.provider,o.amount,o.currency,o.status,o.created_at,o.paid_at,p.title,
+            (SELECT status FROM refund_requests r WHERE r.order_id=o.id) AS refund_status
+     FROM orders o JOIN products p ON p.id=o.product_id
      WHERE o.user_id=? AND o.status!='pending' ORDER BY o.created_at DESC`
   ).bind(c.get('user').id).all();
   return c.json({ orders: results });
+});
+
+app.post('/orders/:id/request-refund', requireUser, async (c) => {
+  const { reason } = await c.req.json().catch(() => ({}));
+  const o = await c.env.DB.prepare(`SELECT id FROM orders WHERE id=? AND user_id=? AND status='paid' AND provider!='admin'`).bind(c.req.param('id'), c.get('user').id).first();
+  if (!o) return c.json({ error: '환불 요청할 수 없는 주문입니다.' }, 400);
+  const r = await c.env.DB.prepare('INSERT OR IGNORE INTO refund_requests (id,order_id,user_id,reason,created_at) VALUES (?,?,?,?,?)')
+    .bind(uid(), o.id, c.get('user').id, String(reason || '').slice(0, 500), now()).run();
+  if (!r.meta.changes) return c.json({ error: '이미 환불 요청이 접수되었습니다.' }, 409);
+  return c.json({ ok: true });
 });
 
 export default app;

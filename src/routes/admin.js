@@ -18,7 +18,7 @@ app.get('/stats', async (c) => {
     q(`SELECT COUNT(*) n FROM answers a JOIN attempts t ON t.id=a.attempt_id WHERE a.kind IN ('text','audio') AND a.manual_score IS NULL AND t.status!='in_progress'`),
     q(`SELECT COUNT(*) n FROM questions WHERE active=1`),
   ]);
-  return c.json({ users: users.n, paidOrders: paid.n, revenue: revenue.results, attempts: attempts.n, pendingGrading: pending.n, questions: qs.n });
+  return c.json({ users: users.n, paidOrders: paid.n, revenue: revenue.results, attempts: attempts.n, pendingGrading: pending.n, pendingRefunds: (await q(`SELECT COUNT(*) n FROM refund_requests WHERE status='pending'`)).n, questions: qs.n });
 });
 
 /* ---- members ---- */
@@ -81,8 +81,10 @@ app.post('/users/:id/grant', async (c) => {
 /* ---- orders ---- */
 app.get('/orders', async (c) => {
   const { results } = await c.env.DB.prepare(
-    `SELECT o.*,u.email,u.name,p.title FROM orders o JOIN users u ON u.id=o.user_id JOIN products p ON p.id=o.product_id
-     ORDER BY o.created_at DESC LIMIT 300`).all();
+    `SELECT o.*,u.email,u.name,p.title, r.status AS refund_status, r.reason AS refund_reason, r.id AS refund_id
+     FROM orders o JOIN users u ON u.id=o.user_id JOIN products p ON p.id=o.product_id
+     LEFT JOIN refund_requests r ON r.order_id=o.id
+     ORDER BY (r.status='pending') DESC, o.created_at DESC LIMIT 300`).all();
   return c.json({ orders: results });
 });
 app.post('/orders/:id/refund', async (c) => {
@@ -99,8 +101,21 @@ app.post('/orders/:id/refund', async (c) => {
   await c.env.DB.batch([
     c.env.DB.prepare(`UPDATE orders SET status='refunded' WHERE id=?`).bind(o.id),
     c.env.DB.prepare(`UPDATE entitlements SET revoked=1 WHERE order_id=?`).bind(o.id),
+    c.env.DB.prepare(`UPDATE refund_requests SET status='done' WHERE order_id=?`).bind(o.id),
   ]);
   return c.json({ ok: true });
+});
+
+app.post('/refund-requests/:id/reject', async (c) => {
+  await c.env.DB.prepare(`UPDATE refund_requests SET status='rejected' WHERE id=? AND status='pending'`).bind(c.req.param('id')).run();
+  return c.json({ ok: true });
+});
+app.get('/orders.csv', async (c) => {
+  const { results } = await c.env.DB.prepare(
+    `SELECT o.created_at,o.paid_at,u.email,p.title,o.provider,o.amount,o.currency,o.status FROM orders o JOIN users u ON u.id=o.user_id JOIN products p ON p.id=o.product_id ORDER BY o.created_at DESC`).all();
+  const esc = (v) => { let s = String(v ?? ''); if (/^[=+\-@]/.test(s)) s = "'" + s; return `"${s.replace(/"/g, '""')}"`; }; // CSV-injection safe
+  const rows = results.map((r) => [new Date(r.created_at).toISOString(), r.paid_at ? new Date(r.paid_at).toISOString() : '', r.email, r.title, r.provider, r.amount, r.currency, r.status].map(esc).join(','));
+  return new Response('\uFEFF' + ['created,paid,email,product,provider,amount,currency,status', ...rows].join('\n'), { headers: { 'Content-Type': 'text/csv; charset=utf-8', 'Content-Disposition': 'attachment; filename="orders.csv"' } });
 });
 
 /* ---- products ---- */

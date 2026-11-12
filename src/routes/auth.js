@@ -1,4 +1,5 @@
 import { Hono } from 'hono';
+import { deleteCookie } from 'hono/cookie';
 import { uid, now, isEmail, randomToken, sha256hex } from '../lib/util.js';
 import { hashPassword, verifyPassword, createSession, destroySession, loadUser, requireUser } from '../lib/auth.js';
 import { sendMail, mailWelcome, mailReset } from '../lib/email.js';
@@ -30,9 +31,17 @@ app.post('/register', async (c) => {
 app.post('/login', async (c) => {
   const b = await c.req.json().catch(() => ({}));
   const email = String(b.email || '').trim().toLowerCase();
+  const key = `${email}|${c.req.header('cf-connecting-ip') || 'local'}`;
+  const since = now() - 15 * 60000;
+  const fails = await c.env.DB.prepare('SELECT COUNT(*) n FROM login_attempts WHERE key=? AND at>?').bind(key, since).first();
+  if (fails.n >= 8) return c.json({ error: '로그인 시도가 너무 많습니다. 15분 후 다시 시도해 주세요.' }, 429);
   const u = await c.env.DB.prepare('SELECT * FROM users WHERE email=?').bind(email).first();
-  if (!u || !(await verifyPassword(String(b.password || ''), u.password_hash, u.salt)))
+  if (!u || !(await verifyPassword(String(b.password || ''), u.password_hash, u.salt))) {
+    await c.env.DB.prepare('INSERT INTO login_attempts (key,at) VALUES (?,?)').bind(key, now()).run();
+    c.executionCtx.waitUntil(c.env.DB.prepare('DELETE FROM login_attempts WHERE at<?').bind(now() - 3600000).run());
     return c.json({ error: '이메일 또는 비밀번호가 올바르지 않습니다.' }, 401);
+  }
+  await c.env.DB.prepare('DELETE FROM login_attempts WHERE key=?').bind(key).run();
   if (u.status !== 'active') return c.json({ error: '정지된 계정입니다. 관리자에게 문의하세요.' }, 403);
   await createSession(c, u.id);
   await c.env.DB.prepare('UPDATE users SET last_login_at=? WHERE id=?').bind(now(), u.id).run();
@@ -59,6 +68,32 @@ app.post('/password', requireUser, async (c) => {
   if (String(b.next || '').length < 8) return c.json({ error: '새 비밀번호는 8자 이상이어야 합니다.' }, 400);
   const { hash, salt } = await hashPassword(b.next);
   await c.env.DB.prepare('UPDATE users SET password_hash=?, salt=? WHERE id=?').bind(hash, salt, u.id).run();
+  return c.json({ ok: true });
+});
+
+app.post('/delete', requireUser, async (c) => {
+  const b = await c.req.json().catch(() => ({}));
+  const u = c.get('user');
+  if (u.role === 'admin') return c.json({ error: '관리자 계정은 탈퇴할 수 없습니다. 먼저 권한을 해제하세요.' }, 400);
+  const row = await c.env.DB.prepare('SELECT * FROM users WHERE id=?').bind(u.id).first();
+  if (!(await verifyPassword(String(b.password || ''), row.password_hash, row.salt))) return c.json({ error: '비밀번호가 올바르지 않습니다.' }, 400);
+  // delete recorded voice answers from R2
+  const { results: atts } = await c.env.DB.prepare('SELECT id FROM attempts WHERE user_id=?').bind(u.id).all();
+  for (const a of atts) {
+    const list = await c.env.AUDIO.list({ prefix: `${a.id}/` });
+    if (list.objects.length) await c.env.AUDIO.delete(list.objects.map((o) => o.key));
+  }
+  const { hash, salt } = await hashPassword(randomToken());
+  // Personal data is erased; paid orders are kept (anonymised) for the 5-year commerce-law retention.
+  await c.env.DB.batch([
+    c.env.DB.prepare('DELETE FROM answers WHERE attempt_id IN (SELECT id FROM attempts WHERE user_id=?)').bind(u.id),
+    c.env.DB.prepare('DELETE FROM attempts WHERE user_id=?').bind(u.id),
+    c.env.DB.prepare('DELETE FROM sessions WHERE user_id=?').bind(u.id),
+    c.env.DB.prepare('DELETE FROM reset_tokens WHERE user_id=?').bind(u.id),
+    c.env.DB.prepare(`UPDATE users SET email=?, name='탈퇴회원', phone=NULL, grade=NULL, status='suspended', password_hash=?, salt=? WHERE id=?`)
+      .bind(`deleted-${u.id}@deleted.invalid`, hash, salt, u.id),
+  ]);
+  deleteCookie(c, 'sid', { path: '/' });
   return c.json({ ok: true });
 });
 
