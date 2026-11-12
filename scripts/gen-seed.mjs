@@ -20,11 +20,11 @@ function mcq(exam_type, section, difficulty, stem, correct, distractors, explana
 }
 
 /* ---------- MAP Math (generated) ---------- */
-for (let i = 0; i < 6; i++) { const a = ri(12, 89), b = ri(11, 78); mcq('MAP', 'math', 1, `What is ${a} + ${b}?`, a + b, [a + b + 10, a + b - 10, a + b + 1, a + b - 1], `${a} + ${b} = ${a + b}.`); }
-for (let i = 0; i < 6; i++) { const a = ri(3, 9), b = ri(12, 49); mcq('MAP', 'math', 2, `What is ${a} × ${b}?`, a * b, [a * b + a, a * b - a, a * b + 10, a * b - 10], `${a} × ${b} = ${a * b}.`); }
-for (let i = 0; i < 6; i++) { const p = pick([10, 20, 25, 50]), v = pick([40, 60, 80, 120, 200, 240]); const r = (p * v) / 100; mcq('MAP', 'math', 3, `What is ${p}% of ${v}?`, r, [r + 5, r * 2, r - 4, v - r], `${p}% of ${v} = ${r}.`); }
-for (let i = 0; i < 6; i++) { const x = ri(3, 15), a = ri(2, 6), b = ri(2, 20); mcq('MAP', 'math', 4, `Solve for x: ${a}x + ${b} = ${a * x + b}`, x, [x + 1, x - 1, x + 2, x * 2], `Subtract ${b}, then divide by ${a}: x = ${x}.`); }
-for (let i = 0; i < 6; i++) { const w = ri(4, 12), h = ri(3, 9), s = ri(2, 4); mcq('MAP', 'math', 5, `A rectangle is ${w} cm by ${h} cm. If both sides are multiplied by ${s}, by what factor does the area grow?`, s * s, [s, 2 * s, s * s + 1, s + 2], `Area scales by the square of the scale factor: ${s}² = ${s * s}.`); }
+for (let i = 0; i < 12; i++) { const a = ri(12, 89), b = ri(11, 78); mcq('MAP', 'math', 1, `What is ${a} + ${b}?`, a + b, [a + b + 10, a + b - 10, a + b + 1, a + b - 1], `${a} + ${b} = ${a + b}.`); }
+for (let i = 0; i < 12; i++) { const a = ri(3, 9), b = ri(12, 49); mcq('MAP', 'math', 2, `What is ${a} × ${b}?`, a * b, [a * b + a, a * b - a, a * b + 10, a * b - 10], `${a} × ${b} = ${a * b}.`); }
+for (let i = 0; i < 12; i++) { const p = pick([10, 20, 25, 50]), v = pick([40, 60, 80, 120, 200, 240]); const r = (p * v) / 100; mcq('MAP', 'math', 3, `What is ${p}% of ${v}?`, r, [r + 5, r * 2, r - 4, v - r], `${p}% of ${v} = ${r}.`); }
+for (let i = 0; i < 12; i++) { const x = ri(3, 15), a = ri(2, 6), b = ri(2, 20); mcq('MAP', 'math', 4, `Solve for x: ${a}x + ${b} = ${a * x + b}`, x, [x + 1, x - 1, x + 2, x * 2], `Subtract ${b}, then divide by ${a}: x = ${x}.`); }
+for (let i = 0; i < 12; i++) { const w = ri(4, 12), h = ri(3, 9), s = ri(2, 4); mcq('MAP', 'math', 5, `A rectangle is ${w} cm by ${h} cm. If both sides are multiplied by ${s}, by what factor does the area grow?`, s * s, [s, 2 * s, s * s + 1, s + 2], `Area scales by the square of the scale factor: ${s}² = ${s * s}.`); }
 
 /* ---------- MAP Reading (hand-written) ---------- */
 const P1 = 'Mira kept a small notebook in her backpack. Every evening she wrote down one thing she had noticed that day: a spider finishing its web, the way the bus driver hummed, a cloud shaped like a boot. "Small things add up," she told her brother. By June the notebook was full, and Mira realized that she had never once felt bored all year.';
@@ -80,11 +80,11 @@ const V = [
 for (const [d, s, c, a] of V) add('CAT4', 'verbal', d, s, c, a, 'Think about the relationship between the words.');
 
 /* ---------- CAT4 Quantitative (number series, generated) ---------- */
-for (let i = 0; i < 4; i++) { const s = ri(2, 9), k = ri(2, 6); const seq = [0, 1, 2, 3, 4].map((j) => s + j * k); mcq('CAT4', 'quantitative', 1, `What comes next? ${seq.join(', ')}, ?`, s + 5 * k, [s + 5 * k + 1, s + 6 * k, s + 4 * k, s + 5 * k - 1], `Add ${k} each time.`); }
-for (let i = 0; i < 4; i++) { const s = ri(2, 5), m = pick([2, 3]); const seq = [0, 1, 2, 3].map((j) => s * m ** j); mcq('CAT4', 'quantitative', 2, `What comes next? ${seq.join(', ')}, ?`, s * m ** 4, [s * m ** 4 + m, s * m ** 3 + m, seq[3] * 2 + 1, seq[3] + m], `Multiply by ${m} each time.`); }
-for (let i = 0; i < 4; i++) { const s = ri(1, 6), a = ri(2, 4), b = ri(5, 9); const seq = [s]; for (let j = 1; j < 6; j++) seq.push(seq[j - 1] + (j % 2 ? a : b)); mcq('CAT4', 'quantitative', 3, `What comes next? ${seq.slice(0, 5).join(', ')}, ?`, seq[5], [seq[5] + 1, seq[5] - 1, seq[4] + a + b, seq[4] + 2], `The step alternates +${a}, +${b}.`); }
-for (let i = 0; i < 4; i++) { const s = ri(1, 4); const seq = [0, 1, 2, 3, 4].map((j) => (j + s) ** 2); mcq('CAT4', 'quantitative', 4, `What comes next? ${seq.join(', ')}, ?`, (5 + s) ** 2, [(5 + s) ** 2 + 1, (5 + s) ** 2 - (5 + s), seq[4] + 2 * (4 + s), seq[4] * 2], 'These are consecutive square numbers.'); }
-for (let i = 0; i < 4; i++) { const a = ri(3, 8), b = ri(2, 5); const seq = [a]; let d = b; for (let j = 1; j < 6; j++) { seq.push(seq[j - 1] + d); d += 2; } mcq('CAT4', 'quantitative', 5, `What comes next? ${seq.slice(0, 5).join(', ')}, ?`, seq[5], [seq[5] + 1, seq[5] - 2, seq[4] + d - 4, seq[4] + d], 'The difference grows by 2 each step.'); }
+for (let i = 0; i < 8; i++) { const s = ri(2, 9), k = ri(2, 6); const seq = [0, 1, 2, 3, 4].map((j) => s + j * k); mcq('CAT4', 'quantitative', 1, `What comes next? ${seq.join(', ')}, ?`, s + 5 * k, [s + 5 * k + 1, s + 6 * k, s + 4 * k, s + 5 * k - 1], `Add ${k} each time.`); }
+for (let i = 0; i < 8; i++) { const s = ri(2, 5), m = pick([2, 3]); const seq = [0, 1, 2, 3].map((j) => s * m ** j); mcq('CAT4', 'quantitative', 2, `What comes next? ${seq.join(', ')}, ?`, s * m ** 4, [s * m ** 4 + m, s * m ** 3 + m, seq[3] * 2 + 1, seq[3] + m], `Multiply by ${m} each time.`); }
+for (let i = 0; i < 8; i++) { const s = ri(1, 6), a = ri(2, 4), b = ri(5, 9); const seq = [s]; for (let j = 1; j < 6; j++) seq.push(seq[j - 1] + (j % 2 ? a : b)); mcq('CAT4', 'quantitative', 3, `What comes next? ${seq.slice(0, 5).join(', ')}, ?`, seq[5], [seq[5] + 1, seq[5] - 1, seq[4] + a + b, seq[4] + 2], `The step alternates +${a}, +${b}.`); }
+for (let i = 0; i < 8; i++) { const s = ri(1, 4); const seq = [0, 1, 2, 3, 4].map((j) => (j + s) ** 2); mcq('CAT4', 'quantitative', 4, `What comes next? ${seq.join(', ')}, ?`, (5 + s) ** 2, [(5 + s) ** 2 + 1, (5 + s) ** 2 - (5 + s), seq[4] + 2 * (4 + s), seq[4] * 2], 'These are consecutive square numbers.'); }
+for (let i = 0; i < 8; i++) { const a = ri(3, 8), b = ri(2, 5); const seq = [a]; let d = b; for (let j = 1; j < 6; j++) { seq.push(seq[j - 1] + d); d += 2; } mcq('CAT4', 'quantitative', 5, `What comes next? ${seq.slice(0, 5).join(', ')}, ?`, seq[5], [seq[5] + 1, seq[5] - 2, seq[4] + d - 4, seq[4] + d], 'The difference grows by 2 each step.'); }
 
 /* ---------- SVG helpers ---------- */
 const svg = (inner, w = 60, h = 60) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}">${inner}</svg>`;
@@ -95,20 +95,20 @@ const poly = (sides, rot = 0, fill = '#4f46e5', r = 22, cx = 30, cy = 30) => {
 const strip = (cells) => svg(cells.map((c, i) => `<g transform="translate(${i * 64},0)">${c}</g>`).join('') , cells.length * 64, 60);
 
 /* ---------- CAT4 Non-verbal (generated) ---------- */
-for (let i = 0; i < 6; i++) { // growing number of sides
+for (let i = 0; i < 12; i++) { // growing number of sides
   const s = ri(3, 5), shown = [0, 1, 2].map((j) => poly(s + j)).concat(['<text x="30" y="42" font-size="36" text-anchor="middle">?</text>']);
   const ans = s + 3; const opts = shuffle([ans, ans + 1, ans - 1, Math.max(3, s)]).filter((v, k, a) => a.indexOf(v) === k);
   while (opts.length < 4) opts.push(ans + opts.length + 1);
   add('CAT4', 'nonverbal', 2, 'Which shape comes next in the pattern?', opts.map((o) => 'svg:' + svg(poly(o))), opts.indexOf(ans), `Each shape has one more side: next has ${ans}.`, { image_svg: strip(shown) });
 }
-for (let i = 0; i < 5; i++) { // rotating triangle
+for (let i = 0; i < 10; i++) { // rotating triangle
   const step = pick([45, 90, 120]), start = pick([0, 30]);
   const shown = [0, 1, 2].map((j) => poly(3, start + step * j, '#0ea5e9')).concat(['<text x="30" y="42" font-size="36" text-anchor="middle">?</text>']);
   const ans = (start + step * 3) % 360; const cand = [ans, (ans + 60) % 360, (ans + 180) % 360, (ans + 300) % 360].filter((v, k, a) => a.indexOf(v) === k);
   const opts = shuffle(cand);
   add('CAT4', 'nonverbal', 3, 'The triangle keeps turning by the same amount. Which comes next?', opts.map((o) => 'svg:' + svg(poly(3, o, '#0ea5e9'))), opts.indexOf(ans), `It turns ${step}° each step.`, { image_svg: strip(shown) });
 }
-for (let i = 0; i < 5; i++) { // dots increasing by k
+for (let i = 0; i < 10; i++) { // dots increasing by k
   const k = ri(1, 2), dots = (c) => Array.from({ length: c }, (_, j) => `<circle cx="${12 + (j % 4) * 12}" cy="${18 + Math.floor(j / 4) * 14}" r="4.5" fill="#ef4444"/>`).join('');
   const shown = [1, 2, 3].map((j) => dots(j * k)).concat(['<text x="30" y="42" font-size="36" text-anchor="middle">?</text>']);
   const ans = 4 * k, opts = shuffle([ans, ans + 1, ans - 1, ans + 2]);
@@ -117,7 +117,7 @@ for (let i = 0; i < 5; i++) { // dots increasing by k
 
 /* ---------- CAT4 Spatial (generated) ---------- */
 const F = (tr) => `<g transform="${tr}"><path d="M-10 -16 H12 V-8 H-2 V-2 H8 V6 H-2 V16 H-10 Z" fill="#16a34a" stroke="#111" stroke-width="2"/></g>`;
-for (let i = 0; i < 16; i++) {
+for (let i = 0; i < 32; i++) {
   const base = svg(F('translate(30,30)'), 60, 60);
   const angs = shuffle([0, 45, 90, 135, 180, 225, 270, 315]);
   const correctAng = angs[0];
@@ -159,6 +159,62 @@ Q.push({ id: 'seed-wida-writing-1', exam_type: 'WIDA', section: 'writing', kind:
 Q.push({ id: 'seed-wida-writing-2', exam_type: 'WIDA', section: 'writing', kind: 'text', difficulty: 4, stem: 'Some people think students should wear uniforms; others disagree. Write a paragraph giving your opinion with at least two reasons.', choices: null, answer: null });
 Q.push({ id: 'seed-wida-speaking-1', exam_type: 'WIDA', section: 'speaking', kind: 'audio', difficulty: 2, stem: 'Introduce yourself. Say your name, your age, and two things you like to do. (Record for about 30 seconds.)', choices: null, answer: null });
 Q.push({ id: 'seed-wida-speaking-2', exam_type: 'WIDA', section: 'speaking', kind: 'audio', difficulty: 4, stem: 'Describe a time you helped someone. What happened and how did you feel? (Record for about 60 seconds.)', choices: null, answer: null });
+
+
+/* ---------- additional hand-written items ---------- */
+const P4 = 'When the town planted trees along Maple Street, many residents complained about the cost. Ten years later, the shade lowered summer temperatures by several degrees, and neighbours began gathering under the branches each evening. The mayor admitted that the trees had paid for themselves in ways no budget could measure.';
+add('MAP', 'reading', 3, 'What is the mayor\'s attitude toward the trees by the end of the passage?', ['Regretful', 'Appreciative', 'Confused', 'Angry'], 1, 'He admits they paid for themselves.', { passage: P4 });
+add('MAP', 'reading', 4, 'Which sentence best states a theme of the passage?', ['Costs should never be questioned.', 'Some investments bring benefits that are hard to measure.', 'Trees grow slowly.', 'Neighbours dislike change.'], 1, 'Benefits beyond budget.', { passage: P4 });
+add('MAP', 'reading', 2, 'According to the passage, what happened ten years later?', ['The trees were cut down', 'Summers became cooler and neighbours gathered', 'The street was closed', 'The mayor resigned'], 1, 'Stated directly.', { passage: P4 });
+const P5 = 'Scientists studying coral reefs have noticed that reefs near busy harbours often recover more slowly after storms. The researchers suspect that pollution weakens the coral, but they caution that more data is needed before the cause can be confirmed.';
+add('MAP', 'reading', 4, 'Which word best describes the researchers\' conclusion?', ['Certain', 'Tentative', 'Careless', 'Hostile'], 1, '"Suspect" and "more data is needed" signal caution.', { passage: P5 });
+add('MAP', 'reading', 5, 'What does "caution" mean as used in the passage?', ['to hurry', 'to warn', 'to celebrate', 'to ignore'], 1, 'To caution = to warn.', { passage: P5 });
+add('MAP', 'reading', 3, 'What is the passage mainly about?', ['How storms form', 'A possible link between harbours and slow reef recovery', 'Why harbours are busy', 'How to build harbours'], 1, 'Main idea.', { passage: P5 });
+add('MAP', 'reading', 5, 'Choose the best meaning of "meticulous".', ['careless', 'extremely careful about details', 'quick', 'noisy'], 1, 'Meticulous = very careful and precise.');
+add('MAP', 'reading', 3, 'Which word is closest in meaning to "abundant"?', ['plentiful', 'empty', 'fragile', 'ordinary'], 0, 'Abundant = plentiful.');
+add('MAP', 'reading', 4, '"The wind whispered through the trees." This sentence is an example of', ['simile', 'personification', 'exaggeration', 'rhyme'], 1, 'The wind is given a human action.');
+for (const [d, s, c, a, e] of [
+  [1, 'Choose the correct word: "They ___ going to the zoo."', ['is', 'am', 'are', 'be'], 2, '"They" takes "are".'],
+  [1, 'Which sentence begins with a capital letter and ends correctly?', ['we like pizza.', 'We like pizza.', 'We like pizza', 'we Like pizza?'], 1, 'Capital + period.'],
+  [2, 'Choose the correct plural: one child, two ___', ['childs', 'childes', 'children', 'childrens'], 2, 'Irregular plural.'],
+  [2, 'Which word completes the sentence? "She ran ___ than her brother."', ['fast', 'faster', 'fastest', 'more fast'], 1, 'Comparative of two.'],
+  [3, 'Which sentence is in the past perfect tense?', ['I eat lunch.', 'I had eaten lunch before she arrived.', 'I will eat lunch.', 'I am eating lunch.'], 1, 'had + past participle.'],
+  [3, 'Choose the correct possessive: "The ___ toys were everywhere."', ['childrens', 'children\'s', 'childrens\'', 'childrens\'s'], 1, 'Irregular plural possessive.'],
+  [4, 'Which sentence contains a misplaced modifier?', ['She nearly drove her kids to school every day.', 'She drove her kids to school every day.', 'Every day, she drove her kids to school.', 'She drove her kids to school daily.'], 0, '"Nearly" should modify "every day" or be placed differently.'],
+  [4, 'Choose the correct sentence.', ['Between you and I, it is a secret.', 'Between you and me, it is a secret.', 'Between you and myself, it is a secret.', 'Between I and you, it is a secret.'], 1, 'Object pronoun after a preposition.'],
+  [5, 'Which is the best transition: "The experiment failed. ___, the team learned something useful."', ['Therefore', 'Nevertheless', 'Similarly', 'Meanwhile'], 1, 'Contrast.'],
+]) add('MAP', 'language', d, s, c, a, e);
+for (const [d, s, c, a] of [
+  [1, 'Day is to night as summer is to ___', ['sun', 'winter', 'hot', 'season'], 1],
+  [1, 'Which word does NOT belong? dog, cat, horse, chair', ['dog', 'cat', 'horse', 'chair'], 3],
+  [2, 'Eye is to see as ear is to ___', ['hear', 'sound', 'head', 'listen to'], 0],
+  [2, 'Which word means the same as "huge"?', ['tiny', 'enormous', 'quiet', 'quick'], 1],
+  [3, 'Chapter is to book as scene is to ___', ['actor', 'play', 'stage', 'ticket'], 1],
+  [3, 'Which word is the OPPOSITE of "generous"?', ['kind', 'selfish', 'wealthy', 'shy'], 1],
+  [3, 'Which word does NOT belong? triangle, square, circle, cube', ['triangle', 'square', 'circle', 'cube'], 3],
+  [4, 'Thermometer is to temperature as ruler is to ___', ['length', 'paper', 'wood', 'draw'], 0],
+  [4, 'All birds have feathers. A penguin is a bird. Which MUST be true?', ['A penguin has feathers.', 'A penguin can fly.', 'All feathered animals are birds.', 'Penguins live in cold places only.'], 0],
+  [5, 'Which word is closest in meaning to "ambiguous"?', ['clear', 'unclear', 'loud', 'rude'], 1],
+  [5, 'Prudent is to reckless as frugal is to ___', ['thrifty', 'wasteful', 'poor', 'careful'], 1],
+]) add('CAT4', 'verbal', d, s, c, a, 'Think about the relationship between the words.');
+for (const [d, script, stem, c, a] of [
+  [1, 'Anna says: "My birthday is on Saturday. I\'m having a party at my house."', 'Where is Anna\'s party?', ['At school', 'At her house', 'At the park', 'At a restaurant'], 1],
+  [2, 'Teacher: "Tomorrow is picture day. Please wear your school shirt and bring your homework."', 'What should students wear tomorrow?', ['A costume', 'Their school shirt', 'A jacket', 'Sports clothes'], 1],
+  [2, 'Dad: "We\'re out of milk, so I\'m going to the store. Do you need anything?"', 'Why is Dad going to the store?', ['To buy milk', 'To meet a friend', 'To return a book', 'To get gas'], 0],
+  [3, 'Principal: "The assembly will begin at ten, but students from Room 4 should arrive early to help set up chairs."', 'Who should come early?', ['All students', 'Teachers only', 'Students from Room 4', 'Parents'], 2],
+  [4, 'Ranger: "Because the trail is muddy after the rain, we will take the lower path, which is longer but safer."', 'Why will the group take the lower path?', ['It is shorter', 'It is safer', 'It has a view', 'It is closed'], 1],
+  [5, 'Lecturer: "Although electric cars produce no exhaust, their overall environmental benefit depends on how the electricity is generated."', 'What does the lecturer suggest?', ['Electric cars are always clean', 'Benefits depend on the electricity source', 'Exhaust is harmless', 'Electric cars are expensive'], 1],
+]) add('WIDA', 'listening', d, stem, c, a, 'Listen for the key detail.', { passage: script });
+for (const [d, p, stem, c, a] of [
+  [1, 'Mia has a cat named Pepper. Pepper likes to sleep on the sofa and drink milk.', 'What does Pepper like to drink?', ['Water', 'Milk', 'Juice', 'Tea'], 1],
+  [2, 'On Monday, the class started a garden. They planted beans, carrots, and corn. Each student has a job.', 'What did the class start on Monday?', ['A garden', 'A game', 'A play', 'A trip'], 0],
+  [3, 'The library offers free programs during the summer. Children can join a reading club, and older students can volunteer as helpers.', 'Who can volunteer as helpers?', ['Younger children', 'Older students', 'Teachers only', 'Nobody'], 1],
+  [3, 'Rain forests are home to millions of species. Many of these plants and animals cannot live anywhere else on Earth.', 'Why are rain forests important?', ['They are cold', 'They shelter species found nowhere else', 'They have no animals', 'They are small'], 1],
+  [4, 'The inventor tested hundreds of materials before finding one strong enough. "Every failure," she said, "taught me what not to do."', 'What does the inventor\'s statement show?', ['She gave up easily', 'She learned from failures', 'She disliked testing', 'She worked alone'], 1],
+  [5, 'Economists note that when a product becomes scarce, its price typically rises unless demand falls at the same time.', 'What usually happens to the price of a scarce product?', ['It falls', 'It rises', 'It stays the same', 'It disappears'], 1],
+]) add('WIDA', 'reading', d, stem, c, a, 'Find the answer in the text.', { passage: p });
+Q.push({ id: 'seed-wida-writing-3', exam_type: 'WIDA', section: 'writing', kind: 'text', difficulty: 3, stem: 'Describe what you do on a typical weekend. Use at least five sentences and words like "first", "then", and "finally".', choices: null, answer: null });
+Q.push({ id: 'seed-wida-speaking-3', exam_type: 'WIDA', section: 'speaking', kind: 'audio', difficulty: 3, stem: 'Talk about your favorite food. What is it, how is it made, and why do you like it? (Record for about 45 seconds.)', choices: null, answer: null });
 
 /* ---------- SQL ---------- */
 const q = (v) => (v === null || v === undefined ? 'NULL' : typeof v === 'number' ? String(v) : `'${String(v).replace(/'/g, "''")}'`);

@@ -118,7 +118,7 @@ function authForm(kind) {
     field('이메일', h('input', { name: 'email', type: 'email', required: true, autocomplete: 'email' })),
     field('비밀번호' + (reg ? ' (8자 이상)' : ''), h('input', { name: 'password', type: 'password', required: true, minlength: reg ? 8 : 1, autocomplete: reg ? 'new-password' : 'current-password' })),
     reg ? field('학년 (선택)', h('input', { name: 'grade', placeholder: '예: G5' })) : null,
-    reg ? h('label', {}, h('input', { type: 'checkbox', name: 'agree', required: true, style: 'width:auto' }), ' 이용약관 및 개인정보 처리방침에 동의합니다.') : null,
+    reg ? h('label', {}, h('input', { type: 'checkbox', name: 'agree', required: true, style: 'width:auto' }), ' ', h('a', { href: '#/terms', target: '_blank' }, '이용약관'), ' 및 ', h('a', { href: '#/privacy', target: '_blank' }, '개인정보처리방침'), '에 동의합니다. (만 14세 미만은 보호자 동의 필요)') : null,
     err, h('button', { class: 'btn' }, reg ? '가입하기' : '로그인'),
     h('p', { class: 'small' }, reg ? h('a', { href: '#/login' }, '이미 계정이 있나요?') : [h('a', { href: '#/register' }, '회원가입'), ' · ', h('a', { href: '#/forgot' }, '비밀번호 찾기')]),
   );
@@ -348,6 +348,43 @@ async function adminGrading(b) {
   }));
 }
 
+
+/* ---------- legal pages (템플릿: 게시 전 법률 검토 필요) ---------- */
+let cfg = { site: 'MockTest Lab', biz: {} };
+const LEGAL = {
+  terms: ['이용약관', (c) => [
+    ['제1조 (목적)', `이 약관은 ${c.biz.name}(이하 "회사")가 제공하는 ${c.site} 온라인 모의고사 서비스(이하 "서비스")의 이용 조건과 절차, 회사와 회원의 권리·의무를 규정합니다.`],
+    ['제2조 (서비스 내용)', '회사는 MAP, CAT4, WIDA 형식을 참고해 자체 제작한 연습용 모의고사를 제공합니다. 본 서비스는 NWEA, GL Assessment, WIDA와 제휴·승인 관계가 없으며, 제공되는 점수는 학습 참고용 추정치이고 공식 점수가 아닙니다.'],
+    ['제3조 (회원가입)', '회원은 정확한 정보를 입력해야 하며, 만 14세 미만 아동은 법정대리인(보호자)의 동의 하에 가입·이용해야 합니다. 계정은 타인에게 양도하거나 공유할 수 없습니다.'],
+    ['제4조 (이용권과 결제)', '이용권은 결제 완료 시 자동 지급되며, 상품별로 정해진 응시 횟수와 유효기간 내에서 사용할 수 있습니다. 시험을 시작하면 응시 1회가 차감됩니다.'],
+    ['제5조 (금지행위)', '문제의 복제·배포·캡처 후 공유, 자동화 도구를 이용한 응시, 타인 계정 도용, 서비스 운영 방해 행위를 금지하며, 위반 시 이용이 제한될 수 있습니다.'],
+    ['제6조 (저작권)', '서비스 내 문제와 해설의 저작권은 회사에 있으며, 회원은 개인 학습 목적 외로 이용할 수 없습니다.'],
+    ['제7조 (면책)', '회사는 천재지변, 통신 장애 등 불가항력으로 인한 서비스 중단에 책임을 지지 않으며, 모의고사 결과가 실제 시험 성적을 보장하지 않습니다.'],
+    ['제8조 (분쟁 해결)', '이 약관은 대한민국 법률에 따르며, 분쟁은 민사소송법상 관할 법원에서 해결합니다.'],
+  ]],
+  privacy: ['개인정보처리방침', (c) => [
+    ['1. 수집 항목', '필수: 이름, 이메일, 비밀번호(암호화 저장). 선택: 학년, 연락처. 서비스 이용 과정에서 응시 기록(답안, 소요 시간, 점수)과 결제 기록이 생성되며, 말하기 시험 시 음성 녹음이 수집됩니다.'],
+    ['2. 이용 목적', '회원 관리, 이용권 제공, 시험 채점 및 결과 리포트 제공, 결제·환불 처리, 고객 문의 대응, 서비스 개선.'],
+    ['3. 보유 기간', '회원 탈퇴 시 지체 없이 파기합니다. 단, 전자상거래법에 따라 계약·결제 기록 5년, 소비자 불만·분쟁 기록 3년은 보관합니다.'],
+    ['4. 제3자 제공 및 처리위탁', '결제 처리를 위해 포트원 및 결제대행사, Stripe에 결제에 필요한 정보를 전달하며, 서버·저장소는 Cloudflare, 이메일 발송은 Resend를 통해 처리됩니다. 이 외에는 법령에 근거한 경우를 제외하고 동의 없이 제공하지 않습니다.'],
+    ['5. 이용자의 권리', '회원은 언제든지 개인정보 열람·정정·삭제·처리정지를 요청할 수 있으며, 아래 문의처로 연락하면 지체 없이 처리합니다.'],
+    ['6. 아동의 개인정보', '만 14세 미만 아동의 개인정보는 법정대리인의 동의를 받아 수집합니다.'],
+    ['7. 개인정보 보호책임자', `${c.biz.owner} · 문의: ${c.biz.contact}`],
+  ]],
+  refund: ['환불규정', (c) => [
+    ['1. 전액 환불', '결제 후 7일 이내이며 응시 기록이 전혀 없는(미사용) 이용권은 전액 환불됩니다.'],
+    ['2. 부분 환불', '다회권은 사용하지 않은 회차에 대해, 이미 응시한 회차 가격(정가 기준)을 공제한 금액을 환불합니다.'],
+    ['3. 환불 불가', '응시를 시작한 1회권, 유효기간이 지난 이용권, 회원의 약관 위반으로 이용이 제한된 경우.'],
+    ['4. 환불 절차', `고객센터(${c.biz.contact})로 주문 정보와 함께 요청하시면 확인 후 영업일 기준 3일 이내에 결제 수단으로 환불합니다. 카드사 사정에 따라 취소 반영에 며칠이 더 걸릴 수 있습니다.`],
+    ['5. 서비스 장애', '회사 귀책으로 시험을 정상 응시하지 못한 경우 응시 횟수를 복구하거나 환불합니다.'],
+  ]],
+};
+function pageLegal(kind) {
+  const [title, build] = LEGAL[kind];
+  mount(h('div', { class: 'card' }, h('h2', {}, title), build(cfg).map(([t, body]) => h('div', {}, h('h3', {}, t), h('p', {}, body))),
+    h('p', { class: 'small muted' }, `사업자: ${cfg.biz.name} · 대표 ${cfg.biz.owner} · 사업자등록번호 ${cfg.biz.regNo} · 통신판매업 ${cfg.biz.salesNo} · ${cfg.biz.address} · ${cfg.biz.contact}`)));
+}
+
 /* ---------- router ---------- */
 async function route() {
   const [path, qs] = (location.hash.slice(1) || '/').split('?'); const q = Object.fromEntries(new URLSearchParams(qs || ''));
@@ -363,6 +400,7 @@ async function route() {
       case 'exam': return await pageExam(seg[1]);
       case 'report': return await pageReport(seg[1]);
       case 'admin': return await pageAdmin(seg[1]);
+      case 'terms': case 'privacy': case 'refund': return pageLegal(seg[0]);
       case 'pay': return seg[1] === 'success' ? await pagePaySuccess(q) : mount(h('div', { class: 'card' }, h('h2', {}, '결제가 취소되었습니다.'), h('a', { class: 'btn', href: '#/' }, '돌아가기')));
       default: return mount(h('div', { class: 'card' }, h('h2', {}, '페이지를 찾을 수 없습니다.')));
     }
@@ -374,6 +412,7 @@ async function route() {
 window.addEventListener('hashchange', route);
 (async () => {
   try { me = (await api('GET', '/auth/me')).user; } catch {}
+  try { cfg = await api('GET', '/config'); const b = cfg.biz; document.getElementById('bizinfo').textContent = `${b.name} · 대표 ${b.owner} · 사업자등록번호 ${b.regNo} · 통신판매업 ${b.salesNo} · ${b.address} · ${b.contact}`; } catch {}
   renderNav();
   const po = new URLSearchParams(location.search).get('portone_order'); // mobile redirect return
   if (po) { history.replaceState(null, '', '/'); location.hash = `#/pay/success?order=${po}&provider=portone`; }

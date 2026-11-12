@@ -43,7 +43,7 @@ async function take(examType, answerFor) {
 // "cheat" by reading answers from admin API so we can verify scoring
 const key = async (id) => (await admin.get(`/api/admin/questions/${id}`)).answer;
 const cheat = new Map();
-const qs = (await admin.get('/api/admin/questions')).questions;
+const qs = (await Promise.all(['MAP', 'CAT4', 'WIDA'].map((e) => admin.get(`/api/admin/questions?exam=${e}`)))).flatMap((r) => r.questions);
 for (const q of qs) if (q.kind === 'mcq') cheat.set(q.id, await key(q.id));
 
 for (const ex of ['CAT4', 'MAP']) {

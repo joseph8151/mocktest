@@ -20,6 +20,12 @@
     "ADMIN_EMAIL": "admin@example.com",
     "MAIL_FROM": "MockTest <noreply@example.com>",
     "PORTONE_STORE_ID": "",
-    "PORTONE_CHANNEL_KEY": ""
+    "PORTONE_CHANNEL_KEY": "",
+    "BIZ_NAME": "(상호명 입력)",
+    "BIZ_OWNER": "(대표자명)",
+    "BIZ_REG_NO": "(사업자등록번호)",
+    "BIZ_SALES_NO": "(통신판매업 신고번호)",
+    "BIZ_ADDRESS": "(사업장 주소)",
+    "BIZ_CONTACT": "(고객센터 이메일/전화)"
   }
 }

@@ -90,8 +90,9 @@ async function ensureCurrent(env, a, st) {
     if (!st.current) {
       const { results: bank } = await env.DB.prepare(
         'SELECT id,difficulty FROM questions WHERE exam_type=? AND section=? AND active=1').bind(a.exam_type, sec.key).all();
-      if (st.qi >= sectionTarget(a.exam_type, st.si, bank.length)) { nextSection(a, st); continue; }
-      const id = pickNext(a.exam_type, st, bank);
+      const target = sectionTarget(a.exam_type, st.si, bank.length);
+      if (st.qi >= target) { nextSection(a, st); continue; }
+      const id = pickNext(a.exam_type, st, bank, target);
       if (!id) { nextSection(a, st); continue; }
       st.current = id; st.shown = now();
     }

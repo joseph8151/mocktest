@@ -43,7 +43,7 @@ export function initialState(examType, now) {
 }
 
 /** Choose next question id for the current section. `bank` = [{id,difficulty}] active in section. */
-export function pickNext(examType, st, bank) {
+export function pickNext(examType, st, bank, target = 10) {
   const ex = EXAMS[examType];
   const sec = ex.sections[st.si];
   const used = new Set(st.served);
@@ -54,8 +54,11 @@ export function pickNext(examType, st, bank) {
     const cands = pool.filter((q) => Math.abs(q.difficulty - st.diff) === best);
     return cands[Math.floor(Math.random() * cands.length)].id;
   }
-  // fixed forms: ramp up in difficulty, random within each level
-  return shuffle(pool).sort((a, b) => a.difficulty - b.difficulty)[0].id;
+  // fixed forms: difficulty ramps 1→5 across the section; random among the closest matches
+  const want = 1 + (st.qi * 4) / Math.max(1, target - 1);
+  const best = Math.min(...pool.map((q) => Math.abs(q.difficulty - want)));
+  const cands = pool.filter((q) => Math.abs(q.difficulty - want) <= best + 0.5);
+  return shuffle(cands)[0].id;
 }
 
 export function sectionTarget(examType, si, bankSize) {

@@ -42,3 +42,12 @@ test('CAT4 SAS / stanine', () => {
   const s = scoreAttempt('CAT4', rows).sections.verbal;
   assert.equal(s.sas, 100); assert.equal(s.stanine, 5);
 });
+
+import { pickNext } from '../src/lib/exam.js';
+test('fixed-form selection ramps difficulty instead of taking only the easiest', () => {
+  const bank = Array.from({ length: 50 }, (_, i) => ({ id: 'q' + i, difficulty: 1 + (i % 5) }));
+  const st = { si: 0, qi: 0, served: [], diff: 3 }; const diffs = [];
+  for (let k = 0; k < 16; k++) { const id = pickNext('CAT4', st, bank, 16); diffs.push(bank.find((q) => q.id === id).difficulty); st.served.push(id); st.qi++; }
+  assert.ok(Math.max(...diffs) >= 4, `hardest picked: ${Math.max(...diffs)}`);
+  assert.ok(diffs[0] <= 2 && diffs[15] >= 4);
+});

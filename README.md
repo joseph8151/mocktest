@@ -12,7 +12,7 @@ Cloudflare Workers(Hono) + D1(SQLite) + R2 + 정적 SPA. 회원가입 → 결제
 - **리포트**: 영역별 점수, 문항별 해설, 인쇄/PDF 저장, 결과 이메일
 - **관리자**: 대시보드, 회원 관리(정지/삭제/권한/이용권 수동 지급), 주문·환불, 상품 CRUD, 문제은행 CRUD + JSON 대량등록, 쓰기/말하기 채점 큐
 
-> 문제는 형식만 참고해 새로 만든 **오리지널 샘플**(약 150문항)이며 NWEA/GL Assessment/WIDA와 무관합니다. 점수는 공식 점수가 아닌 추정치입니다. 실제 서비스 전에 문제은행을 확충하세요(관리자 > 문제 > JSON 대량 등록).
+> 문제는 형식만 참고해 새로 만든 **오리지널 샘플**(약 300문항)이며 NWEA/GL Assessment/WIDA와 무관합니다. 점수는 공식 점수가 아닌 추정치입니다. 실제 서비스 전에 문제은행을 확충하세요(관리자 > 문제 > JSON 대량 등록).
 
 ## 로컬 실행
 ```bash
@@ -22,7 +22,7 @@ npm run seed:gen && npm run db:seed:local
 cp .dev.vars.example .dev.vars   # 키 입력 (비워도 로컬 동작; 결제만 비활성)
 npm run dev                      # http://localhost:8787
 npm test                         # 단위 테스트
-npm run test:e2e                 # dev 서버 켜 둔 상태에서 E2E
+npm run test:e2e                 # dev 서버 켜 둔 상태에서 E2E (결제 웹훅 시뮬레이션 포함, .dev.vars에 STRIPE_WEBHOOK_SECRET=whsec_test 필요)
 ```
 `ADMIN_EMAIL`(wrangler.jsonc)로 **가장 먼저 가입한** 계정이 관리자가 됩니다.
 
@@ -51,7 +51,7 @@ npm run deploy
 Cloudflare 대시보드 → Workers & Pages → Create → Connect to Git → 이 저장소 선택 (빌드 명령 없음, 배포 명령 `npx wrangler deploy`).
 
 ## 운영 전 체크리스트
-- 이용약관/개인정보처리방침/환불규정 페이지 작성 (미성년자 대상이면 보호자 동의 절차 필요)
+- 이용약관/개인정보처리방침/환불규정은 **템플릿**입니다. 법률 검토 후 `public/app.js`의 `LEGAL`을 수정하고, `wrangler.jsonc`의 `BIZ_*` 사업자 정보를 채우세요 (푸터·약관에 자동 표시)
 - 한국 판매 시 통신판매업 신고 및 PG 계약(포트원 채널 키)
 - 로그인 시도 제한(Cloudflare Rate Limiting/Turnstile) 설정 권장
 - 문제은행 확충 및 난이도 보정(응시 데이터 기반)

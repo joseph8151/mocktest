@@ -8,6 +8,11 @@ import {
 
 const app = new Hono();
 
+app.get('/config', (c) => c.json({
+  site: c.env.SITE_NAME,
+  biz: { name: c.env.BIZ_NAME, owner: c.env.BIZ_OWNER, regNo: c.env.BIZ_REG_NO, salesNo: c.env.BIZ_SALES_NO, address: c.env.BIZ_ADDRESS, contact: c.env.BIZ_CONTACT },
+}));
+
 app.get('/products', async (c) => {
   const { results } = await c.env.DB.prepare('SELECT * FROM products WHERE active=1 ORDER BY sort,price_krw').all();
   return c.json({
