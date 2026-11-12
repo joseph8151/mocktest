@@ -1,0 +1,25 @@
+{
+  "name": "mocktest",
+  "main": "src/index.js",
+  "compatibility_date": "2025-09-01",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  },
+  "d1_databases": [
+    { "binding": "DB", "database_name": "mocktest", "database_id": "REPLACE_WITH_D1_ID", "migrations_dir": "migrations" }
+  ],
+  "r2_buckets": [
+    { "binding": "AUDIO", "bucket_name": "mocktest-audio" }
+  ],
+  "vars": {
+    "SITE_NAME": "MockTest Lab",
+    "SITE_URL": "http://localhost:8787",
+    "ADMIN_EMAIL": "admin@example.com",
+    "MAIL_FROM": "MockTest <noreply@example.com>",
+    "PORTONE_STORE_ID": "",
+    "PORTONE_CHANNEL_KEY": ""
+  }
+}
