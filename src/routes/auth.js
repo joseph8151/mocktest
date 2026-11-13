@@ -19,7 +19,12 @@ app.post('/register', async (c) => {
   if (exists) return c.json({ error: '이미 가입된 이메일입니다.' }, 409);
   const { hash, salt } = await hashPassword(password);
   const id = uid();
-  const role = c.env.ADMIN_EMAIL && email === c.env.ADMIN_EMAIL.toLowerCase() ? 'admin' : 'student';
+  // Admin: the configured ADMIN_EMAIL; if none is configured, the very first account becomes admin.
+  const adminEmail = (c.env.ADMIN_EMAIL || '').trim().toLowerCase();
+  const configured = adminEmail && adminEmail !== 'admin@example.com';
+  let role = 'student';
+  if (configured) { if (email === adminEmail) role = 'admin'; }
+  else if (!(await c.env.DB.prepare(`SELECT 1 FROM users WHERE role='admin' LIMIT 1`).first())) role = 'admin';
   await c.env.DB.prepare(
     'INSERT INTO users (id,email,password_hash,salt,name,role,grade,phone,created_at,last_login_at) VALUES (?,?,?,?,?,?,?,?,?,?)'
   ).bind(id, email, hash, salt, name, role, b.grade || null, b.phone || null, now(), now()).run();

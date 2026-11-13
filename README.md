@@ -28,22 +28,34 @@ npm run dev                      # http://localhost:8787
 npm test                         # 단위 테스트
 npm run test:e2e                 # dev 서버 켜 둔 상태에서 E2E (결제 웹훅 시뮬레이션 포함, .dev.vars에 STRIPE_WEBHOOK_SECRET=whsec_test 필요)
 ```
-`ADMIN_EMAIL`(wrangler.jsonc)로 **가장 먼저 가입한** 계정이 관리자가 됩니다.
+`ADMIN_EMAIL`이 비어 있으면 **가장 먼저 가입한** 계정이 관리자가 됩니다.
 
-## Cloudflare 배포
+## Cloudflare 배포 (설정 최소화)
+GitHub 연동(Workers Builds)이든 터미널이든 **배포 명령은 `npx wrangler deploy` 하나**입니다.
+
+- D1·R2는 `wrangler.jsonc`에 ID를 적지 않으면 **배포 시 자동 생성**됩니다(auto-provisioning).
+- 테이블과 샘플 문제/상품은 **첫 요청에서 Worker가 스스로 생성**합니다(`src/lib/bootstrap.js`). 수동 마이그레이션·시드가 필요 없습니다.
+- `SITE_URL`이 비어 있으면 접속 주소에서 자동으로 알아냅니다(커스텀 도메인 연결 후에도 그대로 동작).
+- **관리자**: `ADMIN_EMAIL`이 비어 있으면 **가장 먼저 가입한 계정이 관리자**가 됩니다 → 배포 직후 바로 본인 계정으로 가입하세요. 이후 `ADMIN_EMAIL`을 지정하면 그 이메일만 관리자 가입이 가능합니다.
+
 ```bash
 npx wrangler login
-npx wrangler d1 create mocktest          # 출력된 database_id를 wrangler.jsonc에 입력
-npx wrangler r2 bucket create mocktest-audio
-npm run db:migrate:remote && npm run db:seed:remote
+npx wrangler deploy
+```
+
+선택 사항(결제·이메일을 쓸 때): Workers → mocktest → Settings → Variables and Secrets에 시크릿 추가
+```bash
 npx wrangler secret put STRIPE_SECRET_KEY
 npx wrangler secret put STRIPE_WEBHOOK_SECRET
 npx wrangler secret put PORTONE_API_SECRET
 npx wrangler secret put PORTONE_WEBHOOK_SECRET
-npx wrangler secret put RESEND_API_KEY   # 이메일(선택)
-npm run deploy
+npx wrangler secret put RESEND_API_KEY
 ```
-`wrangler.jsonc`의 `SITE_URL`(실제 도메인), `ADMIN_EMAIL`, `MAIL_FROM`, `PORTONE_STORE_ID`, `PORTONE_CHANNEL_KEY`를 수정하세요.
+`wrangler.jsonc`의 `MAIL_FROM`, `PORTONE_STORE_ID`, `PORTONE_CHANNEL_KEY`, `BIZ_*`(사업자 정보)를 채우세요.
+
+> 자동 생성이 권한 문제로 실패하면(빌드 토큰에 D1/R2 권한 없음) 수동으로 만들고 `wrangler.jsonc`에 `database_id`(D1)와 `bucket_name`(R2)을 적으면 됩니다:
+> `npx wrangler d1 create mocktest`, `npx wrangler r2 bucket create mocktest-audio`.
+> 기존 DB가 `wrangler d1 migrations apply`로 이미 만들어져 있어도 자동 구성 코드가 이를 감지해 충돌하지 않습니다.
 
 ### 웹훅 등록
 - **Stripe**: `https://<도메인>/api/webhooks/stripe` — 이벤트 `checkout.session.completed`, `checkout.session.async_payment_succeeded`
@@ -58,5 +70,4 @@ Cloudflare 대시보드 → Workers & Pages → Create → Connect to Git → �
 - 이용약관/개인정보처리방침/환불규정은 **템플릿**입니다. 법률 검토 후 `public/app.js`의 `LEGAL`을 수정하고, `wrangler.jsonc`의 `BIZ_*` 사업자 정보를 채우세요 (푸터·약관에 자동 표시)
 - 한국 판매 시 통신판매업 신고 및 PG 계약(포트원 채널 키)
 - 로그인 제한은 앱 내장(D1)이며, 추가로 Cloudflare Rate Limiting/Turnstile 적용 권장
-- 마이그레이션이 2개(`0001`, `0002`)이므로 `npm run db:migrate:remote`를 반드시 실행
 - 문제은행 확충 및 난이도 보정(응시 데이터 기반)

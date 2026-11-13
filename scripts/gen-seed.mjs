@@ -428,5 +428,10 @@ const products = [
 ];
 for (const p of products) sql += `INSERT OR REPLACE INTO products (id,exam_type,title,description,price_krw,price_usd_cents,attempts,valid_days,active,sort) VALUES (${[...p.slice(0, 8), 1, p[8]].map((v) => q(v)).join(',')});\n`;
 writeFileSync(new URL('../seed/seed.sql', import.meta.url), sql);
+// JSON copy is bundled into the Worker so a fresh database can seed itself on first request.
+writeFileSync(new URL('../seed/seed.json', import.meta.url), JSON.stringify({
+  questions: Q.map((r) => [r.id, r.exam_type, r.section, r.kind, r.difficulty, r.passage ?? null, r.stem, r.image_svg ?? null, r.choices ? JSON.stringify(r.choices) : null, r.answer ?? null, r.explanation ?? null]),
+  products: products.map((p) => [...p.slice(0, 8), 1, p[8]]),
+}));
 const by = {}; for (const r of Q) by[`${r.exam_type}/${r.section}`] = (by[`${r.exam_type}/${r.section}`] || 0) + 1;
 console.log(by);
