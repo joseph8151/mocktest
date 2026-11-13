@@ -29,7 +29,7 @@ const money = (n, cur) => (cur === 'USD' ? `$${(n / 100).toFixed(2)}` : `${n.toL
 const date = (ms) => (ms ? new Date(ms).toLocaleString('ko-KR', { dateStyle: 'medium', timeStyle: 'short' }) : '-');
 const svgUri = (s) => 'data:image/svg+xml;utf8,' + encodeURIComponent(s);
 const choiceNode = (c) => (c.startsWith('svg:') ? h('img', { src: svgUri(c.slice(4)), alt: 'option' }) : h('span', {}, c));
-const mount = (...n) => { clearInterval(timerInt); speechSynthesis?.cancel?.(); $app.replaceChildren(...n.flat(Infinity).filter((x) => x != null && x !== false)); window.scrollTo(0, 0); };
+const mount = (...n) => { clearInterval(timerInt); if (window._kh) { document.removeEventListener('keydown', window._kh); window._kh = null; } speechSynthesis?.cancel?.(); $app.replaceChildren(...n.flat(Infinity).filter((x) => x != null && x !== false)); window.scrollTo(0, 0); };
 const guard = (fn) => async (...a) => { try { await fn(...a); } catch (e) { toast(e.message); } };
 const examName = { MAP: 'MAP', CAT4: 'CAT4', WIDA: 'WIDA' };
 const field = (label, input) => h('div', {}, h('label', {}, label), input);
@@ -38,27 +38,62 @@ function renderNav() {
   $nav.replaceChildren(...[
     h('a', { href: '#/' }, '시험 상품'),
     ...(me ? [
-      h('a', { href: '#/me' }, '내 시험'),
+      h('a', { class: 'keep', href: '#/me' }, '내 시험'),
       me.role === 'admin' ? h('a', { href: '#/admin' }, '관리자') : null,
       h('button', { onclick: guard(async () => { await api('POST', '/auth/logout'); me = null; renderNav(); location.hash = '#/'; }) }, `로그아웃 (${me.name})`),
-    ] : [h('a', { href: '#/login' }, '로그인'), h('a', { href: '#/register' }, '회원가입')]),
+    ] : [h('a', { class: 'keep', href: '#/login' }, '로그인'), h('a', { class: 'cta', href: '#/register' }, '시작하기')]),
   ].filter(Boolean));
 }
 
 /* ---------- pages ---------- */
+const EXAM_META = {
+  MAP: { name: 'MAP Growth', ico: 'M', accent: 'var(--map)', soft: 'var(--map-soft)', sub: '적응형 · Reading / Language Usage / Math',
+    points: ['정답이면 어려워지고 오답이면 쉬워지는 적응형 출제', '영역별 RIT 유사 추정 점수와 성취 수준', '응시를 거듭할수록 보이는 성장 추이'] },
+  CAT4: { name: 'CAT4', ico: 'C', accent: 'var(--cat4)', soft: 'var(--cat4-soft)', sub: '추론력 · Verbal / Quant / Non-verbal / Spatial',
+    points: ['4개 영역 추론 능력 진단 (그림 문항 포함)', '표준연령점수(SAS)와 스태나인 추정', '영역별 강점·약점 한눈에 보는 리포트'] },
+  WIDA: { name: 'WIDA ACCESS', ico: 'W', accent: 'var(--wida)', soft: 'var(--wida-soft)', sub: '영어 숙달도 · Listening / Reading / Writing / Speaking',
+    points: ['듣기·읽기 자동 채점, 쓰기·말하기는 교사 채점', '1–6 Proficiency Level 과 영역별 가중 종합 레벨', '브라우저 녹음으로 실제 말하기 응시'] },
+};
+const FAQ = [
+  ['결제하면 바로 시험을 볼 수 있나요?', '네. 결제가 확인되면 이용권이 자동으로 지급되어 곧바로 “내 시험”에서 시작할 수 있습니다.'],
+  ['시험 도중 나가면 어떻게 되나요?', '진행 상황이 저장되어 같은 계정으로 다시 접속하면 이어서 풀 수 있습니다. 단, 영역별 제한 시간은 계속 흘러갑니다.'],
+  ['실제 시험 점수와 같은가요?', '아니요. 형식을 참고해 만든 연습용 문제이며 점수는 학습 참고용 추정치입니다. NWEA · GL Assessment · WIDA와 무관합니다.'],
+  ['WIDA 쓰기·말하기 결과는 언제 나오나요?', '교사가 채점을 마치면 이메일로 알려드리고, 리포트에 종합 레벨이 표시됩니다.'],
+  ['환불이 가능한가요?', '결제 후 7일 이내 미사용 이용권은 전액 환불됩니다. “내 시험 > 결제 내역”에서 환불을 요청하세요.'],
+];
 async function pageHome() {
   const { products, payment } = await api('GET', '/products');
-  const groups = { MAP: 'MAP Growth 스타일 · 적응형 (쉬우면 어려워지고, 틀리면 쉬워집니다)', CAT4: 'CAT4 스타일 · 언어/수리/비언어/공간 추론', WIDA: 'WIDA ACCESS 스타일 · 듣기/읽기/쓰기/말하기 (교사 채점)' };
+  const toExams = () => document.getElementById('exams')?.scrollIntoView({ behavior: 'smooth' });
+  const total = products.length;
   mount(
-    h('section', { class: 'hero' }, h('h1', {}, 'MAP · CAT4 · WIDA 모의고사'), h('p', { class: 'muted' }, '결제 즉시 이용권이 자동 지급되고, 바로 온라인으로 응시할 수 있습니다. 시험이 끝나면 영역별 리포트가 제공됩니다.')),
-    Object.entries(groups).map(([type, desc]) => h('div', {},
-      h('h2', {}, type), h('p', { class: 'muted' }, desc),
-      h('div', { class: 'grid' }, products.filter((p) => p.exam_type === type).map((p) => h('div', { class: 'card' },
-        h('h3', {}, p.title), h('p', { class: 'muted small' }, p.description),
-        h('div', { class: 'price' }, money(p.price_krw, 'KRW')), h('div', { class: 'muted small' }, `${p.attempts}회 응시 · ${p.valid_days}일 이내 사용 · ${money(p.price_usd_cents, 'USD')}`),
-        h('p', {}, h('button', { class: 'btn', onclick: () => buy(p, payment) }, '구매하기')),
-      ))),
-    )),
+    h('section', { class: 'hero' },
+      h('div', {}, h('span', { class: 'eyebrow' }, '✨ 결제 즉시 응시 · 영역별 리포트 제공'),
+        h('h1', {}, '국제학교 입학·진단 대비', h('br'), h('em', {}, 'MAP · CAT4 · WIDA'), ' 실전 모의고사'),
+        h('p', { class: 'lead' }, '실제 시험과 같은 형식, 같은 긴장감. 집에서 온라인으로 응시하고 영역별 점수와 해설 리포트를 바로 확인하세요.'),
+        h('div', { class: 'row' }, h('button', { class: 'btn lg', onclick: toExams }, '시험 둘러보기'), me ? h('a', { class: 'btn lg alt', href: '#/me' }, '내 시험') : h('a', { class: 'btn lg alt', href: '#/register' }, '무료 회원가입')),
+        h('div', { class: 'chips' }, [['300+', '오리지널 문항'], ['3종', 'MAP · CAT4 · WIDA'], ['즉시', '자동 채점 리포트']].map(([b, t]) => h('div', {}, h('b', {}, b), t)))),
+      h('div', { class: 'mock', 'aria-hidden': 'true' },
+        h('div', { class: 'mrow' }, h('b', {}, 'Verbal Reasoning'), h('span', {}, '⏱ 08:42')),
+        h('div', { class: 'mq' }, 'Author is to book as composer is to ___'),
+        [['A', 'song', true], ['B', 'piano'], ['C', 'concert'], ['D', 'singer']].map(([l, t, sel]) => h('div', { class: 'mc' + (sel ? ' sel' : '') }, h('b', {}, l), t)),
+        h('div', { class: 'mbar' }, h('i'))),
+    ),
+    h('div', { id: 'exams', class: 'section-title' }, h('div', {}, h('h2', {}, '시험 선택'), h('p', {}, '원하는 시험과 횟수권을 고르세요. 모든 상품은 결제 즉시 이용 가능합니다.'))),
+    h('div', { class: 'grid', style: 'grid-template-columns:repeat(auto-fit,minmax(310px,1fr))' }, Object.entries(EXAM_META).map(([type, m]) => h('div', { class: 'exam-card', style: `--accent:${m.accent};--accent-soft:${m.soft}` },
+      h('div', { class: 'ico' }, m.ico), h('h3', {}, m.name), h('div', { class: 'sub' }, m.sub),
+      h('ul', {}, m.points.map((x) => h('li', {}, x))),
+      h('div', { class: 'push' }, products.filter((p) => p.exam_type === type).map((p) => h('div', { class: 'plan' },
+        h('div', {}, h('div', { class: 'pt' }, `${p.attempts}회권`), h('div', { class: 'pd' }, `${p.valid_days}일 이내 · ${money(p.price_usd_cents, 'USD')}`)),
+        h('div', { class: 'row', style: 'flex-wrap:nowrap' }, h('div', { class: 'price' }, money(p.price_krw, 'KRW')), h('button', { class: 'btn sm', onclick: () => buy(p, payment) }, '구매')))),
+      ),
+    ))),
+    h('div', { class: 'section-title' }, h('div', {}, h('h2', {}, '이렇게 진행돼요'), h('p', {}, '가입부터 리포트까지 5분이면 충분합니다.'))),
+    h('div', { class: 'steps' }, [['회원가입', '이메일로 간단히 가입하고 학년을 입력합니다.'], ['결제', '카드/간편결제(국내) 또는 해외 카드로 결제하면 이용권이 자동 지급됩니다.'], ['응시', '영역별 타이머와 함께 온라인으로 실전처럼 응시합니다.'], ['리포트', '점수·해설·성장 추이를 확인하고 PDF로 저장합니다.']].map(([t, d]) => h('div', { class: 'step' }, h('h3', {}, t), h('p', {}, d)))),
+    h('div', { class: 'section-title' }, h('div', {}, h('h2', {}, '준비된 기능'))),
+    h('div', { class: 'features' }, [['🎯', '실전형 출제', '서버에서 한 문항씩 출제하고 정답은 노출되지 않습니다. 새로고침해도 이어서 풀 수 있어요.'], ['📈', '성장 추이', '같은 시험을 반복 응시하면 점수 변화를 그래프로 보여드립니다.'], ['🧠', '해설 리포트', '문항별 정답·내 답·해설과 영역별 강약점을 제공합니다.'], ['🎧', '듣기·말하기', '듣기는 음성으로 재생, 말하기는 브라우저 녹음으로 응시합니다.'], ['🔒', '안전한 결제', 'Stripe · 포트원 결제, 서버 금액 검증과 웹훅으로 자동 지급됩니다.'], ['📄', 'PDF 저장', '리포트를 인쇄하거나 PDF로 저장해 상담에 활용하세요.']].map(([i, t, d]) => h('div', { class: 'feature' }, h('div', { class: 'fi' }, i), h('div', {}, h('b', {}, t), h('span', {}, d))))),
+    h('div', { class: 'section-title' }, h('div', {}, h('h2', {}, '자주 묻는 질문'))),
+    FAQ.map(([q, a]) => h('details', { class: 'faq' }, h('summary', {}, q), h('p', {}, a))),
+    h('div', { class: 'cta-band' }, h('h2', {}, '지금 실력을 확인해 보세요'), h('p', {}, '결제 후 바로 시작 · 결과는 즉시 확인'), h('button', { class: 'btn lg', onclick: toExams }, '시험 선택하러 가기')),
   );
 }
 
@@ -105,7 +140,7 @@ async function pagePaySuccess(q) {
 function authForm(kind) {
   const reg = kind === 'register';
   const err = h('div', { class: 'err' });
-  const f = h('form', { class: 'card narrow', onsubmit: async (e) => {
+  const f = h('form', { onsubmit: async (e) => {
     e.preventDefault(); err.textContent = '';
     const d = Object.fromEntries(new FormData(f));
     try {
@@ -122,7 +157,8 @@ function authForm(kind) {
     err, h('button', { class: 'btn' }, reg ? '가입하기' : '로그인'),
     h('p', { class: 'small' }, reg ? h('a', { href: '#/login' }, '이미 계정이 있나요?') : [h('a', { href: '#/register' }, '회원가입'), ' · ', h('a', { href: '#/forgot' }, '비밀번호 찾기')]),
   );
-  return f;
+  return h('div', { class: 'auth' },
+    h('div', { class: 'side' }, h('span', { class: 'eyebrow', style: 'align-self:flex-start' }, 'MockTest Lab'), h('h2', {}, reg ? '실전처럼 연습하고, 바로 확인하세요' : '다시 오신 걸 환영해요'), h('p', {}, 'MAP · CAT4 · WIDA 온라인 모의고사')), f);
 }
 function pageForgot() {
   const msg = h('p', { class: 'muted' });
@@ -194,13 +230,14 @@ async function pageExam(id) {
     const q = state.question, sec = state.section;
     if (sec.index !== lastSection) { // section intro
       lastSection = sec.index;
-      return mount(h('div', { class: 'card' }, h('h2', {}, `Section ${sec.index + 1}/${sec.total} · ${sec.name}`),
+      return mount(h('div', { class: 'card intro' }, h('div', { class: 'big' }, { listening: '🎧', speaking: '🎙', writing: '✍️', math: '➗', reading: '📖', language: '🔤', verbal: '💬', quantitative: '🔢', nonverbal: '🔷', spatial: '🧊' }[sec.key] || '📝'),
+        h('span', { class: 'badge' }, `Section ${sec.index + 1} / ${sec.total}`), h('h2', {}, sec.name),
         h('p', {}, `제한 시간: 약 ${Math.max(1, Math.round((sec.deadline - state.serverNow) / 60000))}분. 시간이 끝나면 자동으로 다음 영역으로 넘어갑니다.`),
         sec.manual ? h('p', { class: 'muted' }, '이 영역은 교사가 직접 채점하며, 채점이 끝나면 이메일로 알려드립니다.') : null,
         sec.key === 'speaking' ? h('p', { class: 'muted' }, '마이크 사용 권한이 필요합니다.') : null,
-        h('button', { class: 'btn', onclick: render }, '시작하기')));
+        h('button', { class: 'btn lg', onclick: render }, '시작하기')));
     }
-    let selected = null; const ans = {};
+    let selected = null, kh = null; const ans = {};
     const timer = h('span', { class: 'timer' });
     const tick = () => { const left = Math.max(0, sec.deadline - (Date.now() + offset)); const m = Math.floor(left / 60000), s = Math.floor((left % 60000) / 1000); timer.textContent = `${m}:${String(s).padStart(2, '0')}`; timer.classList.toggle('low', left < 60000); if (left <= 0) { clearInterval(timerInt); submit(true); } };
     let busy = false;
@@ -218,10 +255,12 @@ async function pageExam(id) {
       body.push(h('div', { class: 'passage' }, play));
     } else if (q.passage) body.push(h('div', { class: 'passage' }, q.passage));
     if (q.image_svg) body.push(h('img', { class: 'qimg', src: svgUri(q.image_svg), alt: '문제 그림' }));
-    body.push(h('h3', {}, q.stem));
+    body.push(h('h3', { class: 'stem' }, q.stem));
     if (q.kind === 'mcq') {
-      const boxes = q.choices.map((c, i) => { const el = h('label', { class: 'choice', onclick: () => { selected = i; boxes.forEach((b, j) => b.classList.toggle('sel', i === j)); next.disabled = false; } }, h('b', {}, 'ABCDEFGH'[i]), choiceNode(c)); return el; });
+      const pick = (i) => { selected = i; boxes.forEach((b, j) => b.classList.toggle('sel', i === j)); next.disabled = false; };
+      const boxes = q.choices.map((c, i) => h('label', { class: 'choice', onclick: () => pick(i) }, h('b', {}, 'ABCDEFGH'[i]), choiceNode(c)));
       body.push(...boxes);
+      kh = (e) => { if (e.target.closest?.('input,textarea')) return; const i = 'abcdefgh'.indexOf(e.key.toLowerCase()); if (e.key.length === 1 && i >= 0 && i < boxes.length) pick(i); else if (e.key === 'Enter' && selected !== null) submit(false); };
     } else if (q.kind === 'text') {
       ans.text = h('textarea', { rows: 9, maxlength: 6000, placeholder: 'Write your answer here…' }); body.push(ans.text);
     } else {
@@ -235,10 +274,14 @@ async function pageExam(id) {
       }) }, '🎙 녹음 시작');
       body.push(rb, st);
     }
-    const next = h('button', { class: 'btn', disabled: q.kind === 'mcq', onclick: () => submit(false) }, '다음 ▶');
-    mount(h('div', { class: 'card' },
-      h('div', { class: 'exam-head' }, h('div', {}, h('b', {}, sec.name), h('span', { class: 'muted' }, ` · 문항 ${state.progress.n}`)), timer),
-      h('hr'), body, h('p', {}, next)));
+    const next = h('button', { class: 'btn lg', disabled: q.kind === 'mcq', onclick: () => submit(false) }, '다음 →');
+    const tot = state.progress.total || state.progress.n;
+    mount(h('div', { class: 'exam-shell' },
+      h('div', { class: 'exam-top' },
+        h('div', { class: 'exam-head' }, h('div', { class: 'sec-pill' }, sec.name, h('i', {}, `${sec.index + 1}/${sec.total}`)), h('span', { class: 'muted small' }, `문항 ${state.progress.n} / ${tot}`), h('span', {}, '⏱ ', timer)),
+        h('div', { class: 'bar' }, h('i', { style: `width:${Math.round(((state.progress.n - 1) / tot) * 100)}%` }))),
+      h('div', { class: 'qcard' }, body, h('div', { class: 'exam-foot' }, h('span', { class: 'kbd' }, q.kind === 'mcq' ? '키보드 A–D 선택 · Enter 다음' : ''), next))));
+    if (kh) { window._kh = kh; document.addEventListener('keydown', kh); } // after mount(), which clears the previous handler
     tick(); timerInt = setInterval(tick, 500);
   };
   render();
@@ -249,12 +292,25 @@ async function pageReport(id) {
   if (!me) return (location.hash = '#/login');
   const r = await api('GET', `/attempts/${id}/report`);
   const sc = r.score, t = r.attempt.exam_type;
+  const ns = 'http://www.w3.org/2000/svg', C = 2 * Math.PI * 54;
+  const ring = (pct, big, small, color) => {
+    const svg = document.createElementNS(ns, 'svg'); svg.setAttribute('viewBox', '0 0 128 128'); svg.setAttribute('width', '128'); svg.setAttribute('height', '128');
+    for (const [stroke, off] of [['var(--line-2)', 0], [color, C * (1 - Math.max(0.02, pct) / 100)]]) {
+      const c = document.createElementNS(ns, 'circle'); for (const [k, v] of Object.entries({ cx: 64, cy: 64, r: 54, fill: 'none', stroke, 'stroke-width': 11, 'stroke-linecap': 'round', 'stroke-dasharray': C, 'stroke-dashoffset': off })) c.setAttribute(k, v); svg.append(c);
+    }
+    return h('div', { class: 'ring' }, svg, h('div', { class: 'c' }, h('b', {}, big), h('span', {}, small)));
+  };
+  const accent = { MAP: 'var(--map)', CAT4: 'var(--cat4)', WIDA: 'var(--wida)' }[t];
   const cards = Object.values(sc.sections).map((s) => {
-    const main = t === 'MAP' ? [s.scaleScore ?? '-', 'RIT 유사 추정'] : t === 'CAT4' ? [s.sas ?? '-', `SAS 추정 · 스태나인 ${s.stanine ?? '-'}`] : [s.level ?? (s.graded === false ? '채점 대기' : '-'), 'Proficiency Level (1–6)'];
-    return h('div', { class: 'stat' }, h('div', { class: 'muted small' }, s.name), h('b', {}, main[0]), h('div', { class: 'small muted' }, main[1]),
-      s.total ? h('div', {}, h('div', { class: 'bar' }, h('i', { style: `width:${s.pct}%` })), h('div', { class: 'small' }, `${s.correct}/${s.total} 정답`)) : null, s.band ? h('span', { class: 'badge' }, s.band) : null);
+    const big = t === 'MAP' ? (s.scaleScore ?? '-') : t === 'CAT4' ? (s.sas ?? '-') : (s.level ?? (s.graded === false ? '대기' : '-'));
+    const small = t === 'MAP' ? 'RIT 유사' : t === 'CAT4' ? `스태나인 ${s.stanine ?? '-'}` : 'Level (1–6)';
+    const pct = s.total ? s.pct : t === 'WIDA' && s.level ? (s.level / 6) * 100 : 0;
+    return h('div', { class: 'ring-card' }, h('div', { class: 'muted small' }, s.name), ring(pct, big, small, accent),
+      s.total ? h('div', { class: 'small' }, `${s.correct}/${s.total} 정답 · ${s.pct}%`) : h('div', { class: 'small muted' }, s.graded === false ? '교사 채점 대기 중' : '교사 채점'), s.band ? h('span', { class: 'badge' }, s.band) : null);
   });
-  const comp = sc.composites ? h('p', {}, `Oral ${sc.composites.oral ?? '-'} · Literacy ${sc.composites.literacy ?? '-'} · Overall ${sc.composites.overall ?? '-'}`) : null;
+  const comp = sc.composites ? h('p', { class: 'muted' }, `Oral ${sc.composites.oral ?? '-'} · Literacy ${sc.composites.literacy ?? '-'}`) : null;
+  const overallLabel = { MAP: '종합 추정 점수', CAT4: '종합 SAS (추정)', WIDA: 'Overall Level' }[t];
+  const overallVal = t === 'WIDA' ? sc.composites?.overall : sc.overall;
   const items = r.items.map((it, i) => h('div', { class: 'card ' + (it.correct === 1 ? 'good' : it.correct === 0 ? 'wrong' : '') },
     h('div', { class: 'small muted' }, `#${i + 1} · ${it.section} · 난이도 ${it.difficulty}`),
     it.passage ? h('div', { class: 'passage' }, it.passage) : null,
@@ -262,12 +318,13 @@ async function pageReport(id) {
     it.kind === 'mcq' ? h('div', {}, it.choices.map((c, j) => h('div', { class: 'choice' + (j === it.answer ? ' sel' : '') }, h('b', {}, 'ABCDEFGH'[j]), choiceNode(c), j === it.choice ? h('span', { class: 'badge ' + (j === it.answer ? 'ok' : 'bad') }, '내 답') : null, j === it.answer ? h('span', { class: 'badge ok' }, '정답') : null)), it.explanation ? h('p', { class: 'small muted' }, `해설: ${it.explanation}`) : null)
       : h('div', {}, it.text ? h('div', { class: 'passage' }, it.text) : h('p', { class: 'muted' }, '(녹음 응답)'), h('p', {}, it.manual_score ? `교사 점수: ${it.manual_score}/6` : '채점 대기 중', it.feedback ? ` · ${it.feedback}` : ''))));
   mount(
-    h('div', { class: 'card' }, h('div', { class: 'row' }, h('h2', { class: 'grow' }, `${r.attempt.title} 결과`), h('button', { class: 'btn alt noprint', onclick: () => window.print() }, '인쇄 / PDF 저장')),
-      h('p', { class: 'muted' }, `${r.student.name} · ${date(r.attempt.finished_at)}`),
-      sc.overall != null ? h('h3', {}, `종합: ${sc.overall}`) : null, comp,
-      sc.pendingManual ? h('p', { class: 'badge warn' }, '쓰기/말하기 채점이 끝나면 종합 점수가 표시됩니다.') : null,
-      h('div', { class: 'stats' }, cards),
-      h('p', { class: 'small muted' }, '※ 모의고사 결과는 공식 점수가 아닌 추정치이며 학습 참고용입니다.')),
+    h('div', { class: 'score-hero' },
+      h('div', {}, h('div', { class: 'muted small' }, `${r.student.name} · ${date(r.attempt.finished_at)}`), h('h2', {}, `${r.attempt.title} 결과`), comp,
+        sc.pendingManual ? h('span', { class: 'badge warn' }, '쓰기/말하기 채점 후 종합 점수가 표시됩니다') : null,
+        h('p', { class: 'muted small noprint' }, h('button', { class: 'btn sm alt', onclick: () => window.print() }, '인쇄 / PDF 저장'))),
+      h('div', { style: 'text-align:right' }, h('div', { class: 'muted small' }, overallLabel), h('div', { class: 'total' }, overallVal ?? '–'))),
+    h('div', { class: 'rings' }, cards),
+    h('p', { class: 'small muted' }, '※ 모의고사 결과는 공식 점수가 아닌 추정치이며 학습 참고용입니다.'),
     h('h3', {}, '문항별 리뷰'), items);
 }
 

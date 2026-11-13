@@ -91,6 +91,7 @@ async function ensureCurrent(env, a, st) {
       const { results: bank } = await env.DB.prepare(
         'SELECT id,difficulty FROM questions WHERE exam_type=? AND section=? AND active=1').bind(a.exam_type, sec.key).all();
       const target = sectionTarget(a.exam_type, st.si, bank.length);
+      st.target = target;
       if (st.qi >= target) { nextSection(a, st); continue; }
       const id = pickNext(a.exam_type, st, bank, target);
       if (!id) { nextSection(a, st); continue; }
@@ -108,7 +109,7 @@ function view(a, st, q, newSection) {
   return {
     status: q ? 'in_progress' : 'finished',
     section: { index: st.si, key: sec.key, name: sec.name, total: ex.sections.length, deadline: st.deadline, manual: !!sec.manual },
-    progress: { n: st.qi + 1 },
+    progress: { n: st.qi + 1, total: st.target || null },
     question: q ? publicQ(q) : null,
     serverNow: now(),
   };
