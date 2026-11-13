@@ -82,15 +82,10 @@ app.post('/delete', requireUser, async (c) => {
   if (u.role === 'admin') return c.json({ error: '관리자 계정은 탈퇴할 수 없습니다. 먼저 권한을 해제하세요.' }, 400);
   const row = await c.env.DB.prepare('SELECT * FROM users WHERE id=?').bind(u.id).first();
   if (!(await verifyPassword(String(b.password || ''), row.password_hash, row.salt))) return c.json({ error: '비밀번호가 올바르지 않습니다.' }, 400);
-  // delete recorded voice answers from R2
-  const { results: atts } = await c.env.DB.prepare('SELECT id FROM attempts WHERE user_id=?').bind(u.id).all();
-  for (const a of atts) {
-    const list = await c.env.AUDIO.list({ prefix: `${a.id}/` });
-    if (list.objects.length) await c.env.AUDIO.delete(list.objects.map((o) => o.key));
-  }
   const { hash, salt } = await hashPassword(randomToken());
   // Personal data is erased; paid orders are kept (anonymised) for the 5-year commerce-law retention.
   await c.env.DB.batch([
+    c.env.DB.prepare('DELETE FROM audio_files WHERE attempt_id IN (SELECT id FROM attempts WHERE user_id=?)').bind(u.id), // recorded voice answers
     c.env.DB.prepare('DELETE FROM answers WHERE attempt_id IN (SELECT id FROM attempts WHERE user_id=?)').bind(u.id),
     c.env.DB.prepare('DELETE FROM attempts WHERE user_id=?').bind(u.id),
     c.env.DB.prepare('DELETE FROM sessions WHERE user_id=?').bind(u.id),

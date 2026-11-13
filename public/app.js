@@ -254,7 +254,7 @@ async function pageExam(id) {
       const body = { questionId: q.id };
       if (q.kind === 'mcq') body.choice = selected;
       if (q.kind === 'text') body.text = ans.text.value;
-      if (q.kind === 'audio' && ans.blob) { const r = await fetch(`/api/attempts/${id}/audio`, { method: 'PUT', headers: { 'content-type': ans.blob.type || 'audio/webm' }, body: ans.blob }); if (!r.ok) throw new Error('녹음 업로드 실패'); body.audioKey = (await r.json()).audioKey; }
+      if (q.kind === 'audio' && ans.blob) { const r = await fetch(`/api/attempts/${id}/audio`, { method: 'PUT', headers: { 'content-type': ans.blob.type || 'audio/webm' }, body: ans.blob }); if (!r.ok) throw new Error((await r.json().catch(() => ({}))).error || '녹음 업로드 실패'); body.audioKey = (await r.json()).audioKey; }
       state = await api('POST', `/attempts/${id}/answer`, body); busy = false; render();
     });
     const body = [];
@@ -278,7 +278,7 @@ async function pageExam(id) {
         const stream = await navigator.mediaDevices.getUserMedia({ audio: true }); const chunks = [];
         rec = new MediaRecorder(stream); rec.ondataavailable = (e) => chunks.push(e.data);
         rec.onstop = () => { stream.getTracks().forEach((t) => t.stop()); ans.blob = new Blob(chunks, { type: rec.mimeType || 'audio/webm' }); rec = null; rb.textContent = '🎙 다시 녹음'; st.replaceChildren('녹음 완료 · ', h('audio', { controls: true, src: URL.createObjectURL(ans.blob) })); };
-        rec.start(); rb.textContent = '⏹ 녹음 종료'; st.textContent = '녹음 중…';
+        rec.start(); rb.textContent = '⏹ 녹음 종료'; st.textContent = '녹음 중… (최대 75초)'; setTimeout(() => rec && rec.state === 'recording' && rec.stop(), 75000);
       }) }, '🎙 녹음 시작');
       body.push(rb, st);
     }

@@ -28,6 +28,16 @@ assert.equal((await u.get('/api/orders')).orders[0].refund_status, 'rejected');
 const csv = await fetch(BASE + '/api/admin/orders.csv', { headers: { cookie: admin.cookie } }); assert.match(await csv.text(), /created,paid,email/);
 assert.equal((await fetch(BASE + '/api/admin/orders.csv', { headers: { cookie: u.cookie } })).status, 403);
 
+// voice answers are stored in D1 (no R2 needed)
+assert.ok((await admin.post(`/api/admin/users/${uid}/grant`, { productId: 'p-wida-1' })).ok);
+const att = await u.post('/api/attempts', { examType: 'WIDA' });
+const bytes = Uint8Array.from({ length: 70000 }, (_, i) => i % 251);
+const up = await fetch(BASE + `/api/attempts/${att.id}/audio`, { method: 'PUT', headers: { cookie: u.cookie, 'content-type': 'audio/webm' }, body: bytes });
+const { audioKey } = await up.json(); assert.ok(audioKey?.startsWith(att.id + '/'), 'audio stored');
+const got = new Uint8Array(await (await fetch(BASE + '/api/admin/audio/' + encodeURIComponent(audioKey), { headers: { cookie: admin.cookie } })).arrayBuffer());
+assert.equal(got.length, bytes.length); assert.deepEqual([...got.slice(0, 300)], [...bytes.slice(0, 300)], 'audio round-trips byte-exact');
+assert.equal((await fetch(BASE + `/api/attempts/${att.id}/audio`, { method: 'PUT', headers: { cookie: u.cookie }, body: new Uint8Array(1_300_000) })).status, 413, 'oversize rejected');
+
 // account deletion
 assert.equal((await u.post('/api/auth/delete', { password: 'bad' })).status, 400);
 assert.ok((await u.post('/api/auth/delete', { password: 'password123' })).ok);

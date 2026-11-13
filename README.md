@@ -1,6 +1,6 @@
 # MockTest Lab — MAP · CAT4 · SCAT · SSAT · ISEE · WIDA 모의고사 사이트
 
-Cloudflare Workers(Hono) + D1(SQLite) + R2 + 정적 SPA. 회원가입 → 결제(Stripe / 포트원) → **이용권 자동 지급** → 온라인 응시 → 자동 채점 리포트.
+Cloudflare Workers(Hono) + D1(SQLite) + 정적 SPA. 회원가입 → 결제(Stripe / 포트원) → **이용권 자동 지급** → 온라인 응시 → 자동 채점 리포트.
 
 ## 기능
 - **회원**: 가입/로그인(PBKDF2 해시, HttpOnly 세션 쿠키), 비밀번호 변경/재설정(이메일), 프로필, 응시·결제 내역
@@ -33,7 +33,7 @@ npm run test:e2e                 # dev 서버 켜 둔 상태에서 E2E (결제 �
 ## Cloudflare 배포 (설정 최소화)
 GitHub 연동(Workers Builds)이든 터미널이든 **배포 명령은 `npx wrangler deploy` 하나**입니다.
 
-- D1·R2는 `wrangler.jsonc`에 ID를 적지 않으면 **배포 시 자동 생성**됩니다(auto-provisioning).
+- 필요한 리소스는 **D1 하나뿐**이며 `wrangler.jsonc`에 ID를 적지 않으면 **배포 시 자동 생성**됩니다(auto-provisioning). 말하기 녹음도 D1에 저장하므로 R2가 필요 없습니다(녹음 1건 약 1.2MB 이하).
 - 테이블과 샘플 문제/상품은 **첫 요청에서 Worker가 스스로 생성**합니다(`src/lib/bootstrap.js`). 수동 마이그레이션·시드가 필요 없습니다.
 - `SITE_URL`이 비어 있으면 접속 주소에서 자동으로 알아냅니다(커스텀 도메인 연결 후에도 그대로 동작).
 - **관리자**: `ADMIN_EMAIL`이 비어 있으면 **가장 먼저 가입한 계정이 관리자**가 됩니다 → 배포 직후 바로 본인 계정으로 가입하세요. 이후 `ADMIN_EMAIL`을 지정하면 그 이메일만 관리자 가입이 가능합니다.
@@ -53,8 +53,7 @@ npx wrangler secret put RESEND_API_KEY
 ```
 `wrangler.jsonc`의 `MAIL_FROM`, `PORTONE_STORE_ID`, `PORTONE_CHANNEL_KEY`, `BIZ_*`(사업자 정보)를 채우세요.
 
-> 자동 생성이 권한 문제로 실패하면(빌드 토큰에 D1/R2 권한 없음) 수동으로 만들고 `wrangler.jsonc`에 `database_id`(D1)와 `bucket_name`(R2)을 적으면 됩니다:
-> `npx wrangler d1 create mocktest`, `npx wrangler r2 bucket create mocktest-audio`.
+> 자동 생성이 권한 문제로 실패하면 수동으로 만들고 `wrangler.jsonc`의 D1 항목에 `database_id`를 적으면 됩니다: `npx wrangler d1 create mocktest`.
 > 기존 DB가 `wrangler d1 migrations apply`로 이미 만들어져 있어도 자동 구성 코드가 이를 감지해 충돌하지 않습니다.
 
 ### 웹훅 등록

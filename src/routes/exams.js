@@ -1,5 +1,5 @@
 import { Hono } from 'hono';
-import { uid, now } from '../lib/util.js';
+import { uid, now, bufToB64 } from '../lib/util.js';
 import { requireUser } from '../lib/auth.js';
 import { EXAMS, GRACE_MS, initialState, pickNext, sectionTarget, adaptDifficulty, scoreAttempt } from '../lib/exam.js';
 import { sendMail, mailResult } from '../lib/email.js';
@@ -165,9 +165,11 @@ app.put('/attempts/:id/audio', async (c) => {
   const a = await loadAttempt(c);
   if (!a || a.user_id !== c.get('user').id || a.status !== 'in_progress') return c.json({ error: 'not found' }, 404);
   const buf = await c.req.arrayBuffer();
-  if (!buf.byteLength || buf.byteLength > 8 * 1024 * 1024) return c.json({ error: '녹음 파일 크기가 올바르지 않습니다.' }, 400);
+  if (!buf.byteLength) return c.json({ error: '녹음 파일이 비어 있습니다.' }, 400);
+  if (buf.byteLength > 1_200_000) return c.json({ error: '녹음이 너무 깁니다. 더 짧게 다시 녹음해 주세요. (약 1분 이내)' }, 413);
   const key = `${a.id}/${uid()}.webm`;
-  await c.env.AUDIO.put(key, buf, { httpMetadata: { contentType: c.req.header('content-type') || 'audio/webm' } });
+  await c.env.DB.prepare('INSERT INTO audio_files (key,attempt_id,content_type,data,created_at) VALUES (?,?,?,?,?)')
+    .bind(key, a.id, (c.req.header('content-type') || 'audio/webm').slice(0, 60), bufToB64(buf), now()).run();
   return c.json({ audioKey: key });
 });
 

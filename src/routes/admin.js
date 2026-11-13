@@ -56,6 +56,7 @@ app.delete('/users/:id', async (c) => {
   const hasOrders = await c.env.DB.prepare(`SELECT 1 FROM orders WHERE user_id=? AND status='paid'`).bind(id).first();
   if (hasOrders) return c.json({ error: '결제 내역이 있는 회원은 삭제 대신 정지하세요.' }, 400);
   await c.env.DB.batch([
+    c.env.DB.prepare('DELETE FROM audio_files WHERE attempt_id IN (SELECT id FROM attempts WHERE user_id=?)').bind(id),
     c.env.DB.prepare('DELETE FROM answers WHERE attempt_id IN (SELECT id FROM attempts WHERE user_id=?)').bind(id),
     c.env.DB.prepare('DELETE FROM attempts WHERE user_id=?').bind(id),
     c.env.DB.prepare('DELETE FROM entitlements WHERE user_id=?').bind(id),
@@ -212,9 +213,11 @@ app.get('/grading', async (c) => {
 });
 app.get('/audio/*', async (c) => {
   const key = decodeURIComponent(c.req.path.replace(/^\/api\/admin\/audio\//, ''));
-  const o = await c.env.AUDIO.get(key);
+  const o = await c.env.DB.prepare('SELECT content_type,data FROM audio_files WHERE key=?').bind(key).first();
   if (!o) return c.json({ error: 'not found' }, 404);
-  return new Response(o.body, { headers: { 'Content-Type': o.httpMetadata?.contentType || 'audio/webm' } });
+  const bin = atob(o.data), bytes = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+  return new Response(bytes, { headers: { 'Content-Type': o.content_type || 'audio/webm' } });
 });
 app.post('/grading/:id', async (c) => {
   const b = await c.req.json();

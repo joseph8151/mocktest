@@ -4,6 +4,11 @@ const enc = new TextEncoder();
 
 export const b64 = (buf) => btoa(String.fromCharCode(...new Uint8Array(buf)));
 export const unb64 = (s) => Uint8Array.from(atob(s), (c) => c.charCodeAt(0));
+export const bufToB64 = (buf) => { // chunked: spreading a large array into fromCharCode overflows the stack
+  const u = new Uint8Array(buf); let s = '';
+  for (let i = 0; i < u.length; i += 0x8000) s += String.fromCharCode(...u.subarray(i, i + 0x8000));
+  return btoa(s);
+};
 export const hex = (buf) => [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, '0')).join('');
 
 export async function sha256hex(s) {

@@ -12,9 +12,6 @@
   "d1_databases": [
     { "binding": "DB", "database_name": "mocktest", "migrations_dir": "migrations" }
   ],
-  "r2_buckets": [
-    { "binding": "AUDIO" }
-  ],
   "vars": {
     "SITE_NAME": "MockTest Lab",
     "SITE_URL": "",

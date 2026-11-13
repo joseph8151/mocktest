@@ -3,10 +3,11 @@
 // seed step is needed. Safe to run repeatedly and from several isolates at once (IF NOT EXISTS / OR IGNORE).
 import m1 from '../../migrations/0001_init.sql';
 import m2 from '../../migrations/0002_safety.sql';
+import m3 from '../../migrations/0003_audio.sql';
 import seed from '../../seed/seed.json';
 
 // [name, sql, a table that exists once this migration has been applied]
-const MIGRATIONS = [['0001_init', m1, 'users'], ['0002_safety', m2, 'login_attempts']];
+const MIGRATIONS = [['0001_init', m1, 'users'], ['0002_safety', m2, 'login_attempts'], ['0003_audio', m3, 'audio_files']];
 
 const statements = (sql) => sql.split('\n').map((l) => l.replace(/--.*$/, '')).join('\n').split(';').map((x) => x.trim()).filter(Boolean)
   .map((x) => x.replace(/^CREATE TABLE /i, 'CREATE TABLE IF NOT EXISTS ').replace(/^CREATE INDEX /i, 'CREATE INDEX IF NOT EXISTS '));
