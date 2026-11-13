@@ -2,8 +2,9 @@ import { shuffle } from './util.js';
 
 /**
  * NOTE: These are original, independently-written practice exams that imitate the
- * *format* of MAP Growth / CAT4 / WIDA ACCESS. They are not affiliated with NWEA,
- * GL Assessment or WIDA, and scores are estimates, not official scores.
+ * *format* of MAP Growth / CAT4 / WIDA ACCESS / SCAT / SSAT / ISEE. They are not affiliated with
+ * NWEA, GL Assessment, WIDA, Johns Hopkins CTY, the Enrollment Management Association (SSAT) or
+ * ERB (ISEE), and scores are estimates, not official scores.
  */
 export const EXAMS = {
   MAP: {
@@ -32,6 +33,34 @@ export const EXAMS = {
       { key: 'speaking', name: 'Speaking', n: 2, minutes: 10, manual: true },
     ],
   },
+};
+
+// Scaled-score exams (score = min + pct*(max-min) per section, estimated).
+EXAMS.SCAT = {
+  title: 'SCAT 스타일 모의고사', adaptive: false, scaled: { min: 200, max: 300, total: 'sum' },
+  sections: [
+    { key: 'verbal', name: 'Verbal (Analogies)', n: 16, minutes: 20 },
+    { key: 'quantitative', name: 'Quantitative (Comparisons)', n: 16, minutes: 20 },
+  ],
+};
+EXAMS.SSAT = {
+  title: 'SSAT 스타일 모의고사', adaptive: false, scaled: { min: 440, max: 710, total: 'sum' },
+  sections: [
+    { key: 'writing', name: 'Writing Sample', n: 1, minutes: 25, manual: true },
+    { key: 'quantitative', name: 'Quantitative (Math)', n: 20, minutes: 30 },
+    { key: 'reading', name: 'Reading', n: 12, minutes: 25 },
+    { key: 'verbal', name: 'Verbal', n: 20, minutes: 20 },
+  ],
+};
+EXAMS.ISEE = {
+  title: 'ISEE 스타일 모의고사', adaptive: false, scaled: { min: 760, max: 940, total: 'sum', stanine: true },
+  sections: [
+    { key: 'verbal', name: 'Verbal Reasoning', n: 16, minutes: 20 },
+    { key: 'quantitative', name: 'Quantitative Reasoning', n: 16, minutes: 35 },
+    { key: 'reading', name: 'Reading Comprehension', n: 12, minutes: 25 },
+    { key: 'math', name: 'Mathematics Achievement', n: 20, minutes: 35 },
+    { key: 'essay', name: 'Essay', n: 1, minutes: 30, manual: true },
+  ],
 };
 
 export const GRACE_MS = 5000;
@@ -91,6 +120,15 @@ export function scoreAttempt(examType, answers) {
       const sas = Math.round(clamp(100 + 15 * ((pct - 0.5) / 0.2), 60, 140));
       s.sas = total ? sas : null;
       s.stanine = total ? clamp(Math.round((sas - 100) / 7.5 + 5), 1, 9) : null;
+    } else if (ex.scaled) {
+      if (sec.manual) {
+        const scores = a.map((x) => x.manual_score).filter((x) => x != null);
+        s.graded = a.length === 0 || scores.length === a.length; // nothing submitted → nothing to wait for
+        s.level = scores.length ? Math.round((scores.reduce((m, x) => m + x, 0) / scores.length) * 10) / 10 : null;
+      } else {
+        s.scaled = total ? Math.round(ex.scaled.min + pct * (ex.scaled.max - ex.scaled.min)) : null;
+        if (ex.scaled.stanine) s.stanine = total ? clamp(Math.round(1 + pct * 8), 1, 9) : null;
+      }
     } else if (examType === 'WIDA') {
       if (sec.manual) {
         const scores = a.map((x) => x.manual_score).filter((x) => x != null);
@@ -109,6 +147,10 @@ export function scoreAttempt(examType, answers) {
   } else if (examType === 'CAT4') {
     const v = Object.values(sections).filter((s) => s.sas);
     out.overall = v.length ? Math.round(v.reduce((m, s) => m + s.sas, 0) / v.length) : null;
+  } else if (ex.scaled) {
+    const v = Object.values(sections).filter((x) => x.scaled);
+    out.overall = v.length ? v.reduce((m, x) => m + x.scaled, 0) : null; // sum of section scaled scores
+    out.pendingManual = Object.entries(sections).some(([k, x]) => ex.sections.find((q) => q.key === k)?.manual && !x.graded);
   } else if (examType === 'WIDA') {
     const L = sections.listening.level, R = sections.reading.level, W = sections.writing.level, S = sections.speaking.level;
     const f = (x) => (x == null ? null : x);

@@ -1,4 +1,4 @@
-# MockTest Lab — MAP · CAT4 · WIDA 모의고사 사이트
+# MockTest Lab — MAP · CAT4 · SCAT · SSAT · ISEE · WIDA 모의고사 사이트
 
 Cloudflare Workers(Hono) + D1(SQLite) + R2 + 정적 SPA. 회원가입 → 결제(Stripe / 포트원) → **이용권 자동 지급** → 온라인 응시 → 자동 채점 리포트.
 
@@ -8,12 +8,15 @@ Cloudflare Workers(Hono) + D1(SQLite) + R2 + 정적 SPA. 회원가입 → 결제
 - **시험**: 서버가 한 문항씩 출제(정답은 클라이언트에 전달되지 않음), 영역별 타이머(서버 검증), 새로고침/재접속 시 이어풀기
   - **MAP 스타일**: 적응형(정답→어려워지고 오답→쉬워짐), RIT 유사 추정점수
   - **CAT4 스타일**: 언어·수리·비언어·공간 4영역, SAS/스태나인 추정
+  - **SCAT 스타일**: Verbal(유추) · Quantitative(수량 비교), 영역별 척도 점수(200–300) 추정
+  - **SSAT 스타일**: Writing(교사 채점) · Quantitative · Reading · Verbal, 척도 점수(440–710) 합산
+  - **ISEE 스타일**: Verbal · Quantitative · Reading · Math · Essay, 척도 점수(760–940)·스태나인 추정
   - **WIDA 스타일**: Listening(TTS 2회) · Reading 자동채점, Writing · Speaking(녹음→R2) 교사 채점, 가중 종합 레벨
 - **리포트**: 영역별 점수, 문항별 해설, 인쇄/PDF 저장, 결과 이메일
 - **안전/개인정보**: 로그인 무차별 대입 차단(15분에 8회), 회원 본인 탈퇴(답안·녹음 삭제, 결제기록은 익명화 후 5년 보관), 환불 요청 → 관리자 승인/거절, 성적 추이 그래프
 - **관리자**: 대시보드, 회원 관리(정지/삭제/권한/이용권 수동 지급), 주문·환불, 상품 CRUD, 문제은행 CRUD + JSON 대량등록, 쓰기/말하기 채점 큐, 환불요청 처리, 주문 CSV 내보내기
 
-> 문제는 형식만 참고해 새로 만든 **오리지널 샘플**(약 300문항)이며 NWEA/GL Assessment/WIDA와 무관합니다. 점수는 공식 점수가 아닌 추정치입니다. 실제 서비스 전에 문제은행을 확충하세요(관리자 > 문제 > JSON 대량 등록).
+> 문제는 형식만 참고해 새로 만든 **오리지널 샘플**(약 700문항, 그래프·도형은 SVG로 직접 생성: `scripts/svgcharts.mjs`)이며 NWEA/GL Assessment/WIDA와 무관합니다. 점수는 공식 점수가 아닌 추정치입니다. 실제 서비스 전에 문제은행을 확충하세요(관리자 > 문제 > JSON 대량 등록).
 
 ## 로컬 실행
 ```bash

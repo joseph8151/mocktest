@@ -54,6 +54,14 @@ const EXAM_META = {
   WIDA: { name: 'WIDA ACCESS', ico: 'W', accent: 'var(--wida)', soft: 'var(--wida-soft)', sub: '영어 숙달도 · Listening / Reading / Writing / Speaking',
     points: ['듣기·읽기 자동 채점, 쓰기·말하기는 교사 채점', '1–6 Proficiency Level 과 영역별 가중 종합 레벨', '브라우저 녹음으로 실제 말하기 응시'] },
 };
+Object.assign(EXAM_META, {
+  SCAT: { name: 'SCAT', ico: 'S', accent: 'var(--scat)', soft: 'var(--scat-soft)', sub: '영재 선발 · Verbal / Quantitative',
+    points: ['유추(Analogy)와 수량 비교(Quantitative Comparison) 문항', '그래프·도형 문제는 SVG 그림으로 제공', '영역별 척도 점수 추정과 종합 점수'] },
+  SSAT: { name: 'SSAT', ico: 'S', accent: 'var(--ssat)', soft: 'var(--ssat-soft)', sub: '사립학교 입시 · Writing / Quant / Reading / Verbal',
+    points: ['동의어·유추 어휘, 독해, 수학(그래프·도형 포함)', '라이팅 샘플은 교사 채점(1–6점)', '영역별 척도 점수(440–710) 추정'] },
+  ISEE: { name: 'ISEE', ico: 'I', accent: 'var(--isee)', soft: 'var(--isee-soft)', sub: '사립학교 입시 · Verbal / Quant / Reading / Math / Essay',
+    points: ['Sentence Completion · Synonym 어휘 문항', 'Quantitative Reasoning · Mathematics Achievement', '영역별 척도 점수(760–940)와 스태나인 추정'] },
+});
 const FAQ = [
   ['결제하면 바로 시험을 볼 수 있나요?', '네. 결제가 확인되면 이용권이 자동으로 지급되어 곧바로 “내 시험”에서 시작할 수 있습니다.'],
   ['시험 도중 나가면 어떻게 되나요?', '진행 상황이 저장되어 같은 계정으로 다시 접속하면 이어서 풀 수 있습니다. 단, 영역별 제한 시간은 계속 흘러갑니다.'],
@@ -68,10 +76,10 @@ async function pageHome() {
   mount(
     h('section', { class: 'hero' },
       h('div', {}, h('span', { class: 'eyebrow' }, '✨ 결제 즉시 응시 · 영역별 리포트 제공'),
-        h('h1', {}, '국제학교 입학·진단 대비', h('br'), h('em', {}, 'MAP · CAT4 · WIDA'), ' 실전 모의고사'),
+        h('h1', {}, '국제학교 입시 대비', h('br'), h('em', {}, 'MAP · CAT4 · SCAT · SSAT · ISEE · WIDA'), h('br'), '실전 모의고사'),
         h('p', { class: 'lead' }, '실제 시험과 같은 형식, 같은 긴장감. 집에서 온라인으로 응시하고 영역별 점수와 해설 리포트를 바로 확인하세요.'),
         h('div', { class: 'row' }, h('button', { class: 'btn lg', onclick: toExams }, '시험 둘러보기'), me ? h('a', { class: 'btn lg alt', href: '#/me' }, '내 시험') : h('a', { class: 'btn lg alt', href: '#/register' }, '무료 회원가입')),
-        h('div', { class: 'chips' }, [['300+', '오리지널 문항'], ['3종', 'MAP · CAT4 · WIDA'], ['즉시', '자동 채점 리포트']].map(([b, t]) => h('div', {}, h('b', {}, b), t)))),
+        h('div', { class: 'chips' }, [['700+', '오리지널 문항'], ['6종', '시험 유형'], ['즉시', '자동 채점 리포트']].map(([b, t]) => h('div', {}, h('b', {}, b), t)))),
       h('div', { class: 'mock', 'aria-hidden': 'true' },
         h('div', { class: 'mrow' }, h('b', {}, 'Verbal Reasoning'), h('span', {}, '⏱ 08:42')),
         h('div', { class: 'mq' }, 'Author is to book as composer is to ___'),
@@ -158,7 +166,7 @@ function authForm(kind) {
     h('p', { class: 'small' }, reg ? h('a', { href: '#/login' }, '이미 계정이 있나요?') : [h('a', { href: '#/register' }, '회원가입'), ' · ', h('a', { href: '#/forgot' }, '비밀번호 찾기')]),
   );
   return h('div', { class: 'auth' },
-    h('div', { class: 'side' }, h('span', { class: 'eyebrow', style: 'align-self:flex-start' }, 'MockTest Lab'), h('h2', {}, reg ? '실전처럼 연습하고, 바로 확인하세요' : '다시 오신 걸 환영해요'), h('p', {}, 'MAP · CAT4 · WIDA 온라인 모의고사')), f);
+    h('div', { class: 'side' }, h('span', { class: 'eyebrow', style: 'align-self:flex-start' }, 'MockTest Lab'), h('h2', {}, reg ? '실전처럼 연습하고, 바로 확인하세요' : '다시 오신 걸 환영해요'), h('p', {}, 'MAP · CAT4 · SCAT · SSAT · ISEE · WIDA 온라인 모의고사')), f);
 }
 function pageForgot() {
   const msg = h('p', { class: 'muted' });
@@ -230,7 +238,7 @@ async function pageExam(id) {
     const q = state.question, sec = state.section;
     if (sec.index !== lastSection) { // section intro
       lastSection = sec.index;
-      return mount(h('div', { class: 'card intro' }, h('div', { class: 'big' }, { listening: '🎧', speaking: '🎙', writing: '✍️', math: '➗', reading: '📖', language: '🔤', verbal: '💬', quantitative: '🔢', nonverbal: '🔷', spatial: '🧊' }[sec.key] || '📝'),
+      return mount(h('div', { class: 'card intro' }, h('div', { class: 'big' }, { listening: '🎧', speaking: '🎙', writing: '✍️', math: '➗', reading: '📖', language: '🔤', verbal: '💬', quantitative: '🔢', nonverbal: '🔷', spatial: '🧊', essay: '📝' }[sec.key] || '📝'),
         h('span', { class: 'badge' }, `Section ${sec.index + 1} / ${sec.total}`), h('h2', {}, sec.name),
         h('p', {}, `제한 시간: 약 ${Math.max(1, Math.round((sec.deadline - state.serverNow) / 60000))}분. 시간이 끝나면 자동으로 다음 영역으로 넘어갑니다.`),
         sec.manual ? h('p', { class: 'muted' }, '이 영역은 교사가 직접 채점하며, 채점이 끝나면 이메일로 알려드립니다.') : null,
@@ -300,16 +308,17 @@ async function pageReport(id) {
     }
     return h('div', { class: 'ring' }, svg, h('div', { class: 'c' }, h('b', {}, big), h('span', {}, small)));
   };
-  const accent = { MAP: 'var(--map)', CAT4: 'var(--cat4)', WIDA: 'var(--wida)' }[t];
+  const accent = { MAP: 'var(--map)', CAT4: 'var(--cat4)', WIDA: 'var(--wida)', SCAT: 'var(--scat)', SSAT: 'var(--ssat)', ISEE: 'var(--isee)' }[t];
+  const scaledT = ['SCAT', 'SSAT', 'ISEE'].includes(t);
   const cards = Object.values(sc.sections).map((s) => {
-    const big = t === 'MAP' ? (s.scaleScore ?? '-') : t === 'CAT4' ? (s.sas ?? '-') : (s.level ?? (s.graded === false ? '대기' : '-'));
-    const small = t === 'MAP' ? 'RIT 유사' : t === 'CAT4' ? `스태나인 ${s.stanine ?? '-'}` : 'Level (1–6)';
-    const pct = s.total ? s.pct : t === 'WIDA' && s.level ? (s.level / 6) * 100 : 0;
+    const big = t === 'MAP' ? (s.scaleScore ?? '-') : t === 'CAT4' ? (s.sas ?? '-') : scaledT ? (s.scaled ?? s.level ?? (s.graded === false ? '대기' : '-')) : (s.level ?? (s.graded === false ? '대기' : '-'));
+    const small = t === 'MAP' ? 'RIT 유사' : t === 'CAT4' ? `스태나인 ${s.stanine ?? '-'}` : scaledT ? (s.scaled != null ? (s.stanine != null ? `스태나인 ${s.stanine}` : '척도 점수') : '교사 채점 1–6') : 'Level (1–6)';
+    const pct = s.total ? s.pct : s.level ? (s.level / 6) * 100 : 0;
     return h('div', { class: 'ring-card' }, h('div', { class: 'muted small' }, s.name), ring(pct, big, small, accent),
       s.total ? h('div', { class: 'small' }, `${s.correct}/${s.total} 정답 · ${s.pct}%`) : h('div', { class: 'small muted' }, s.graded === false ? '교사 채점 대기 중' : '교사 채점'), s.band ? h('span', { class: 'badge' }, s.band) : null);
   });
   const comp = sc.composites ? h('p', { class: 'muted' }, `Oral ${sc.composites.oral ?? '-'} · Literacy ${sc.composites.literacy ?? '-'}`) : null;
-  const overallLabel = { MAP: '종합 추정 점수', CAT4: '종합 SAS (추정)', WIDA: 'Overall Level' }[t];
+  const overallLabel = { MAP: '종합 추정 점수', CAT4: '종합 SAS (추정)', WIDA: 'Overall Level', SCAT: '합산 척도 점수 (추정)', SSAT: '합산 척도 점수 (추정)', ISEE: '합산 척도 점수 (추정)' }[t];
   const overallVal = t === 'WIDA' ? sc.composites?.overall : sc.overall;
   const items = r.items.map((it, i) => h('div', { class: 'card ' + (it.correct === 1 ? 'good' : it.correct === 0 ? 'wrong' : '') },
     h('div', { class: 'small muted' }, `#${i + 1} · ${it.section} · 난이도 ${it.difficulty}`),
@@ -320,7 +329,7 @@ async function pageReport(id) {
   mount(
     h('div', { class: 'score-hero' },
       h('div', {}, h('div', { class: 'muted small' }, `${r.student.name} · ${date(r.attempt.finished_at)}`), h('h2', {}, `${r.attempt.title} 결과`), comp,
-        sc.pendingManual ? h('span', { class: 'badge warn' }, '쓰기/말하기 채점 후 종합 점수가 표시됩니다') : null,
+        sc.pendingManual ? h('span', { class: 'badge warn' }, scaledT ? '에세이/라이팅은 교사 채점 후 표시됩니다 (합산 점수에는 포함되지 않음)' : '쓰기/말하기 채점 후 종합 점수가 표시됩니다') : null,
         h('p', { class: 'muted small noprint' }, h('button', { class: 'btn sm alt', onclick: () => window.print() }, '인쇄 / PDF 저장'))),
       h('div', { style: 'text-align:right' }, h('div', { class: 'muted small' }, overallLabel), h('div', { class: 'total' }, overallVal ?? '–'))),
     h('div', { class: 'rings' }, cards),
@@ -379,7 +388,7 @@ async function adminProducts(b) {
   const { products } = await api('GET', '/admin/products');
   const edit = (p = { exam_type: 'MAP', title: '', description: '', price_krw: 19000, price_usd_cents: 1400, attempts: 1, valid_days: 90, active: 1, sort: 0 }) => {
     const f = h('form', { class: 'card', onsubmit: guard(async (e) => { e.preventDefault(); const d = Object.fromEntries(new FormData(f)); await api('POST', '/admin/products', { ...d, id: p.id, active: !!d.active }); pageAdmin('products'); }) },
-      h('div', { class: 'row' }, field('시험', h('select', { name: 'exam_type', value: p.exam_type }, ['MAP', 'CAT4', 'WIDA'].map((x) => h('option', { selected: x === p.exam_type }, x)))), field('상품명', h('input', { name: 'title', value: p.title, required: true })), field('정렬', h('input', { name: 'sort', type: 'number', value: p.sort }))),
+      h('div', { class: 'row' }, field('시험', h('select', { name: 'exam_type', value: p.exam_type }, Object.keys(SECTIONS).map((x) => h('option', { selected: x === p.exam_type }, x)))), field('상품명', h('input', { name: 'title', value: p.title, required: true })), field('정렬', h('input', { name: 'sort', type: 'number', value: p.sort }))),
       field('설명', h('input', { name: 'description', value: p.description })),
       h('div', { class: 'row' }, field('가격(원)', h('input', { name: 'price_krw', type: 'number', value: p.price_krw })), field('가격(USD 센트)', h('input', { name: 'price_usd_cents', type: 'number', value: p.price_usd_cents })), field('응시 횟수', h('input', { name: 'attempts', type: 'number', value: p.attempts })), field('유효기간(일)', h('input', { name: 'valid_days', type: 'number', value: p.valid_days }))),
       h('label', {}, h('input', { type: 'checkbox', name: 'active', checked: !!p.active, style: 'width:auto' }), ' 판매 중'), h('button', { class: 'btn sm' }, '저장'));
@@ -387,7 +396,7 @@ async function adminProducts(b) {
   };
   b.append(h('p', {}, h('button', { class: 'btn sm', onclick: () => edit() }, '+ 새 상품')), h('table', {}, products.map((p) => h('tr', {}, h('td', {}, p.exam_type), h('td', {}, p.title), h('td', {}, `${money(p.price_krw, 'KRW')} / ${money(p.price_usd_cents, 'USD')}`), h('td', {}, `${p.attempts}회/${p.valid_days}일`), h('td', {}, p.active ? '판매중' : '중지'), h('td', {}, h('button', { class: 'btn sm alt', onclick: () => edit(p) }, '수정'))))));
 }
-const SECTIONS = { MAP: ['reading', 'language', 'math'], CAT4: ['verbal', 'quantitative', 'nonverbal', 'spatial'], WIDA: ['listening', 'reading', 'writing', 'speaking'] };
+const SECTIONS = { MAP: ['reading', 'language', 'math'], CAT4: ['verbal', 'quantitative', 'nonverbal', 'spatial'], WIDA: ['listening', 'reading', 'writing', 'speaking'], SCAT: ['verbal', 'quantitative'], SSAT: ['writing', 'quantitative', 'reading', 'verbal'], ISEE: ['verbal', 'quantitative', 'reading', 'math', 'essay'] };
 async function adminQuestions(b) {
   const fe = h('select', {}, h('option', { value: '' }, '전체 시험'), ...Object.keys(SECTIONS).map((x) => h('option', {}, x)));
   const list = h('div', {});
@@ -436,7 +445,7 @@ let cfg = { site: 'MockTest Lab', biz: {} };
 const LEGAL = {
   terms: ['이용약관', (c) => [
     ['제1조 (목적)', `이 약관은 ${c.biz.name}(이하 "회사")가 제공하는 ${c.site} 온라인 모의고사 서비스(이하 "서비스")의 이용 조건과 절차, 회사와 회원의 권리·의무를 규정합니다.`],
-    ['제2조 (서비스 내용)', '회사는 MAP, CAT4, WIDA 형식을 참고해 자체 제작한 연습용 모의고사를 제공합니다. 본 서비스는 NWEA, GL Assessment, WIDA와 제휴·승인 관계가 없으며, 제공되는 점수는 학습 참고용 추정치이고 공식 점수가 아닙니다.'],
+    ['제2조 (서비스 내용)', '회사는 MAP, CAT4, SCAT, SSAT, ISEE, WIDA 형식을 참고해 자체 제작한 연습용 모의고사를 제공합니다. 본 서비스는 NWEA, GL Assessment, Johns Hopkins CTY, Enrollment Management Association(SSAT), ERB(ISEE), WIDA와 제휴·승인 관계가 없으며, 제공되는 점수는 학습 참고용 추정치이고 공식 점수가 아닙니다.'],
     ['제3조 (회원가입)', '회원은 정확한 정보를 입력해야 하며, 만 14세 미만 아동은 법정대리인(보호자)의 동의 하에 가입·이용해야 합니다. 계정은 타인에게 양도하거나 공유할 수 없습니다.'],
     ['제4조 (이용권과 결제)', '이용권은 결제 완료 시 자동 지급되며, 상품별로 정해진 응시 횟수와 유효기간 내에서 사용할 수 있습니다. 시험을 시작하면 응시 1회가 차감됩니다.'],
     ['제5조 (금지행위)', '문제의 복제·배포·캡처 후 공유, 자동화 도구를 이용한 응시, 타인 계정 도용, 서비스 운영 방해 행위를 금지하며, 위반 시 이용이 제한될 수 있습니다.'],

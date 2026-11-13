@@ -1,5 +1,6 @@
 // Generates seed/seed.sql: products + ORIGINAL sample questions (format-inspired, not copied).
 import { writeFileSync } from 'node:fs';
+import { barChart, lineChart, pieChart, rectFig, rightTriangle, circleFig, coordPlane, angleFig, numberLine, gridShape } from './svgcharts.mjs';
 
 let seedState = 12345;
 const rnd = () => ((seedState = (seedState * 1664525 + 1013904223) % 4294967296) / 4294967296);
@@ -216,6 +217,195 @@ for (const [d, p, stem, c, a] of [
 Q.push({ id: 'seed-wida-writing-3', exam_type: 'WIDA', section: 'writing', kind: 'text', difficulty: 3, stem: 'Describe what you do on a typical weekend. Use at least five sentences and words like "first", "then", and "finally".', choices: null, answer: null });
 Q.push({ id: 'seed-wida-speaking-3', exam_type: 'WIDA', section: 'speaking', kind: 'audio', difficulty: 3, stem: 'Talk about your favorite food. What is it, how is it made, and why do you like it? (Record for about 45 seconds.)', choices: null, answer: null });
 
+
+/* =====================================================================
+   Graph / geometry items drawn as SVG + SCAT / SSAT / ISEE sets
+   ===================================================================== */
+const QC = ['Quantity A is greater', 'Quantity B is greater', 'The two quantities are equal', 'The relationship cannot be determined'];
+const SETS = [['Mon', 'Tue', 'Wed', 'Thu', 'Fri'], ['Red', 'Blue', 'Green', 'Pink', 'Gray'], ['Soccer', 'Chess', 'Art', 'Music', 'Drama'], ['Cats', 'Dogs', 'Birds', 'Fish', 'Frogs']];
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'];
+const uniq = (a) => new Set(a).size === a.length;
+
+/** returns {stem, svg, correct, wrong[], expl} */
+function graphItem(kind) {
+  switch (kind) {
+    case 'bar': {
+      const labels = pick(SETS), title = pick(['Students in each club', 'Books read this month', 'Votes for favorite pet', 'Tickets sold per day']);
+      let vals; do vals = labels.map(() => 5 * ri(2, 9)); while (!uniq(vals));
+      const svg = barChart({ title, labels, values: vals, yMax: 50, yStep: 5, yLabel: 'Count' }), t = ri(0, 2);
+      const [i, j] = shuffle([0, 1, 2, 3, 4]).slice(0, 2);
+      if (t === 0) return { stem: `According to the graph, how many more are there for "${labels[i]}" than for "${labels[j]}"? (Use the absolute difference.)`, svg, correct: Math.abs(vals[i] - vals[j]), wrong: [Math.abs(vals[i] - vals[j]) + 5, vals[i] + vals[j], Math.abs(vals[i] - vals[j]) - 5, 5], expl: `Read both bars and subtract: |${vals[i]} − ${vals[j]}|.` };
+      if (t === 1) return { stem: `What is the total for "${labels[i]}" and "${labels[j]}" together?`, svg, correct: vals[i] + vals[j], wrong: [vals[i] + vals[j] + 5, vals[i] + vals[j] - 5, Math.abs(vals[i] - vals[j]), vals[i] * 2], expl: `${vals[i]} + ${vals[j]} = ${vals[i] + vals[j]}.` };
+      const k = ri(0, 4); return { stem: `Which category has exactly ${vals[k]}?`, svg, correct: labels[k], wrong: labels.filter((_, x) => x !== k), expl: `Only "${labels[k]}" reaches ${vals[k]}.` };
+    }
+    case 'line': {
+      let vals; do vals = MONTHS.map(() => 5 * ri(1, 7)); while (!uniq(vals.slice(1).map((v, i) => v - vals[i])));
+      const svg = lineChart({ title: 'Average temperature (°C)', labels: MONTHS, values: vals, yMax: 40, yStep: 5, yLabel: '°C' });
+      const diffs = vals.slice(1).map((v, i) => v - vals[i]), best = diffs.indexOf(Math.max(...diffs));
+      const names = diffs.map((_, i) => `${MONTHS[i]}–${MONTHS[i + 1]}`);
+      return { stem: 'Between which two consecutive months did the temperature increase the most?', svg, correct: names[best], wrong: names.filter((_, i) => i !== best).slice(0, 3), expl: `The largest rise is ${Math.max(...diffs)}°C, from ${names[best].replace('–', ' to ')}.` };
+    }
+    case 'pie': {
+      let pct; do pct = [0, 0, 0, 0].map(() => 5 * ri(2, 8)); while (pct.reduce((a, b) => a + b) !== 100 || !uniq(pct));
+      const labels = pick([['Pizza', 'Pasta', 'Salad', 'Soup'], ['Math', 'Art', 'Music', 'Sports'], ['Bus', 'Walk', 'Car', 'Bike']]), n = pick([200, 240, 300, 400]), k = ri(0, 3);
+      return { stem: `${n} students were surveyed. How many students chose "${labels[k]}"?`, svg: pieChart({ title: 'Survey results', parts: labels.map((l, i) => ({ label: l, pct: pct[i] })) }), correct: (pct[k] * n) / 100, wrong: [(pct[k] * n) / 100 + 10, (pct[k] * n) / 100 - 10, pct[k], n - (pct[k] * n) / 100], expl: `${pct[k]}% of ${n} = ${(pct[k] * n) / 100}.` };
+    }
+    case 'rect': {
+      const w = ri(3, 12), h = ri(3, 9), ask = pick(['area', 'perimeter']);
+      return { stem: `What is the ${ask} of the rectangle, in ${ask === 'area' ? 'square centimeters' : 'centimeters'}?`, svg: rectFig(w, h), correct: ask === 'area' ? w * h : 2 * (w + h), wrong: ask === 'area' ? [2 * (w + h), w + h, w * h + w, w * h - h] : [w * h, w + h, 2 * (w + h) + 2, 2 * w + h], expl: ask === 'area' ? `Area = ${w} × ${h}.` : `Perimeter = 2 × (${w} + ${h}).` };
+    }
+    case 'tri': {
+      const [a, b, c] = pick([[3, 4, 5], [5, 12, 13], [6, 8, 10], [8, 15, 17], [9, 12, 15], [7, 24, 25]]);
+      return { stem: 'In the right triangle shown, what is the length of the hypotenuse (the side marked ?)', svg: rightTriangle(a, b), correct: c, wrong: [a + b, c + 1, c - 1, Math.abs(b - a)], expl: `${a}² + ${b}² = ${c}², so the hypotenuse is ${c}.` };
+    }
+    case 'circle': {
+      const r = ri(2, 9), ask = pick(['circumference', 'area']);
+      return { stem: `The circle has radius ${r}. What is its ${ask}?`, svg: circleFig(r), correct: ask === 'area' ? `${r * r}π` : `${2 * r}π`, wrong: ask === 'area' ? [`${2 * r}π`, `${r}π`, `${2 * r * r}π`, `${4 * r}π`] : [`${r * r}π`, `${r}π`, `${4 * r}π`, `${r * 2 + 2}π`], expl: ask === 'area' ? 'Area = πr².' : 'Circumference = 2πr.' };
+    }
+    case 'coord': {
+      let x, y; do { x = ri(-5, 5); y = ri(-5, 5); } while (!x || !y || x === y || x === -y);
+      return { stem: 'What are the coordinates of point P?', svg: coordPlane([{ x, y, label: 'P' }]), correct: `(${x}, ${y})`, wrong: [`(${y}, ${x})`, `(${-x}, ${y})`, `(${x}, ${-y})`, `(${-y}, ${-x})`], expl: 'Read x (left/right) first, then y (up/down).' };
+    }
+    case 'angle': {
+      const d = 5 * ri(8, 32);
+      return { stem: 'The figure shows two angles on a straight line. What is the value of x?', svg: angleFig(d), correct: 180 - d, wrong: [d, 90 - (d % 90), 360 - d, 180 - d + 10], expl: `Angles on a line sum to 180°: 180 − ${d} = ${180 - d}.` };
+    }
+    case 'numline': {
+      const v = ri(-5, 5), svg = numberLine(-6, 6, v);
+      return { stem: 'What number does point P represent on the number line?', svg, correct: v, wrong: [-v, v + 1, v - 1, v === 0 ? 2 : v * 2], expl: `P is at ${v}.` };
+    }
+    default: { // grid area
+      const all = []; for (let c = 0; c < 6; c++) for (let r = 0; r < 6; r++) all.push([c, r]);
+      const cells = shuffle(all).slice(0, ri(7, 16));
+      return { stem: 'Each small square has an area of 1 square unit. What is the total shaded area?', svg: gridShape(cells), correct: cells.length, wrong: [cells.length + 1, cells.length - 1, cells.length + 2, cells.length * 2], expl: 'Count the shaded squares.' };
+    }
+  }
+}
+const GKINDS = ['bar', 'line', 'pie', 'rect', 'tri', 'circle', 'coord', 'angle', 'numline', 'grid'];
+function addGraph(exam, section, kinds, count, dMin, dMax) {
+  for (let i = 0; i < count; i++) {
+    const kind = kinds[i % kinds.length], g = graphItem(kind);
+    const d = Math.min(dMax, dMin + (['tri', 'circle', 'angle', 'line'].includes(kind) ? 1 : 0) + (i % (dMax - dMin + 1)));
+    mcq(exam, section, Math.min(5, d), g.stem, g.correct, g.wrong, g.expl, { image_svg: g.svg });
+  }
+}
+
+/** Word / arithmetic problems for SSAT & ISEE (text only). */
+function wordMath(d) {
+  const t = ri(0, 7);
+  if (t === 0) { const den = pick([3, 4, 5, 8]), num = ri(1, den - 1), m = den * ri(3, 9); return [`What is ${num}/${den} of ${m}?`, (num * m) / den, [(num * m) / den + den, m - (num * m) / den + 1, num * den, m / den + 1], `${m} ÷ ${den} × ${num}.`]; }
+  if (t === 1) { const a = ri(2, 5), b = ri(2, 7), k = ri(3, 9); return [`The ratio of boys to girls in a class is ${a}:${b}. If there are ${a * k} boys, how many girls are there?`, b * k, [b * k + a, a * k + b, b + k, a * b], `${a * k} ÷ ${a} = ${k} groups, and ${k} × ${b} = ${b * k}.`]; }
+  if (t === 2) { const x = ri(8, 15), y = ri(8, 15), z = ri(8, 15), mean = ri(10, 14), fourth = 4 * mean - x - y - z; if (fourth < 1) return wordMath(d); return [`The average of four numbers is ${mean}. Three of the numbers are ${x}, ${y}, and ${z}. What is the fourth number?`, fourth, [fourth + 4, fourth - 2, mean, 4 * mean], `Total = 4 × ${mean} = ${4 * mean}; subtract ${x + y + z}.`]; }
+  if (t === 3) { const p = pick([60, 80, 120, 200]), off = pick([10, 20, 25, 50]), sale = p - (p * off) / 100; return [`A jacket that costs $${p} is on sale for ${off}% off. What is the sale price?`, `$${sale}`, [`$${(p * off) / 100}`, `$${sale + 10}`, `$${p - off}`, `$${sale - 5}`], `${off}% of ${p} = ${(p * off) / 100}, so ${p} − ${(p * off) / 100} = ${sale}.`]; }
+  if (t === 4) { const x = ri(3, 14), a = ri(2, 6), b = ri(1, 12); return [`If ${a}x − ${b} = ${a * x - b}, what is the value of x?`, x, [x + 1, x - 1, x + a, a * x], `Add ${b}, divide by ${a}.`]; }
+  if (t === 5) { const s = pick([40, 45, 50, 60]), hrs = pick([1.5, 2, 2.5, 3]); return [`A car travels at ${s} miles per hour for ${hrs} hours. How many miles does it travel?`, s * hrs, [s + hrs, s * hrs + 10, s / hrs, s * hrs - 10], `Distance = rate × time = ${s} × ${hrs}.`]; }
+  if (t === 6) { const a = ri(4, 12), b = ri(2, 4); return [`What is the value of √${a * a} + ${b}²?`, a + b * b, [a * a + b * b, a + 2 * b, a * a + b, a + b], `√${a * a} = ${a} and ${b}² = ${b * b}.`]; }
+  const n = ri(5, 25); return [`The sum of three consecutive integers is ${3 * n}. What is the greatest of the three integers?`, n + 1, [n, n + 2, n - 1, 3 * n - 2], `The middle integer is ${n}, so the greatest is ${n + 1}.`];
+}
+function addWordMath(exam, section, count, dMin) { for (let i = 0; i < count; i++) { const [stem, c, w, e] = wordMath(); mcq(exam, section, Math.min(5, dMin + (i % 3)), stem, c, w, e); } }
+
+/** SCAT / ISEE style quantity comparisons */
+function qcItem(figure) {
+  const t = figure ? pick(['rect', 'bar']) : pick(['frac', 'var', 'expr', 'pow', 'pct']);
+  let A, B, expl, extra = {}, forced = null, stem;
+  if (t === 'frac') { const [a, b, c, d] = [ri(1, 7), ri(2, 9), ri(1, 7), ri(2, 9)]; A = a / b; B = c / d; stem = `Quantity A: ${a}/${b}\nQuantity B: ${c}/${d}`; expl = `Compare ${a}×${d} with ${c}×${b}.`; }
+  else if (t === 'var') { const k = ri(2, 6); const c = pick([0, 1]); if (c) { A = null; forced = 0; stem = `x > ${k}\nQuantity A: x + 2\nQuantity B: ${k + 2}`; expl = `Since x > ${k}, x + 2 > ${k + 2}.`; } else { forced = 3; stem = `x is an integer and 0 < x < ${k + 3}\nQuantity A: x\nQuantity B: ${k}`; expl = `x could be smaller or larger than ${k}, so it cannot be determined.`; } }
+  else if (t === 'expr') { const n = ri(2, 9), m = ri(2, 6); A = m * (n + 4); B = m * n + pick([m * 4, m * 4, m * 4 + 2, m * 4 - 3]); stem = `n = ${n}\nQuantity A: ${m}(n + 4)\nQuantity B: ${m}n + ${B - m * n}`; expl = `Quantity A = ${A}; Quantity B = ${B}.`; }
+  else if (t === 'pow') { const a = ri(2, 4), b = ri(3, 6); A = a ** b; B = b ** a; stem = `Quantity A: ${a}^${b}\nQuantity B: ${b}^${a}`; expl = `${a}^${b} = ${A}; ${b}^${a} = ${B}.`; }
+  else if (t === 'pct') { const [p, v, q, w] = [pick([10, 20, 25, 50]), pick([40, 60, 80, 120]), pick([10, 20, 30, 40]), pick([30, 50, 70, 90])]; A = (p * v) / 100; B = (q * w) / 100; stem = `Quantity A: ${p}% of ${v}\nQuantity B: ${q}% of ${w}`; expl = `A = ${A}, B = ${B}.`; }
+  else if (t === 'rect') { const w = ri(3, 12), h = ri(3, 9); A = w * h; B = A + pick([-6, 0, 4, 9]); stem = `Quantity A: The area of the rectangle (in cm²)\nQuantity B: ${B}`; extra = { image_svg: rectFig(w, h) }; expl = `Area = ${w} × ${h} = ${A}.`; }
+  else { const labels = pick(SETS); let vals; do vals = labels.map(() => 5 * ri(2, 9)); while (!uniq(vals)); const [i, j] = shuffle([0, 1, 2, 3, 4]).slice(0, 2); A = vals[i]; B = vals[j]; stem = `Quantity A: The value of "${labels[i]}" in the graph\nQuantity B: The value of "${labels[j]}" in the graph`; extra = { image_svg: barChart({ title: 'Graph', labels, values: vals, yMax: 50, yStep: 5 }) }; expl = `${labels[i]} = ${A}, ${labels[j]} = ${B}.`; }
+  const ans = forced !== null ? forced : A > B ? 0 : A < B ? 1 : 2;
+  return { stem, ans, expl, extra };
+}
+function addQC(exam, section, count, figEvery) {
+  for (let i = 0; i < count; i++) { const q = qcItem(figEvery && i % figEvery === 0); add(exam, section, 1 + (i % 5), q.stem, QC, q.ans, q.expl, q.extra); }
+}
+
+/* ---- graph/geometry samples in existing exams ---- */
+addGraph('MAP', 'math', ['bar', 'line', 'pie', 'rect', 'tri', 'coord', 'angle', 'numline', 'grid', 'circle'], 20, 2, 4);
+addGraph('CAT4', 'quantitative', ['bar', 'pie', 'numline'], 6, 2, 4);
+addGraph('WIDA', 'reading', ['bar', 'pie'], 3, 2, 3);
+
+/* ---------------- SCAT ---------------- */
+for (const [d, s, c, a] of [
+  [1, 'Hot : Cold :: Light : ?', ['Lamp', 'Dark', 'Bright', 'Sun'], 1], [1, 'Puppy : Dog :: Kitten : ?', ['Cat', 'Mouse', 'Bird', 'Milk'], 0],
+  [2, 'Pilot : Airplane :: Captain : ?', ['Ship', 'Wheel', 'Army', 'Ocean'], 0], [2, 'Seed : Plant :: Egg : ?', ['Nest', 'Chicken', 'Shell', 'Yolk'], 1],
+  [2, 'Whisper : Shout :: Stroll : ?', ['Walk', 'Sprint', 'Rest', 'Slow'], 1], [3, 'Architect : Blueprint :: Composer : ?', ['Orchestra', 'Score', 'Piano', 'Concert'], 1],
+  [3, 'Barometer : Pressure :: Odometer : ?', ['Speed', 'Distance', 'Fuel', 'Weather'], 1], [3, 'Frugal : Wasteful :: Humble : ?', ['Modest', 'Arrogant', 'Poor', 'Quiet'], 1],
+  [4, 'Eulogy : Praise :: Satire : ?', ['Mockery', 'Sadness', 'Poetry', 'Funeral'], 0], [4, 'Gregarious : Solitary :: Verbose : ?', ['Talkative', 'Concise', 'Loud', 'Friendly'], 1],
+  [4, 'Lighthouse : Warning :: Bell : ?', ['Ring', 'Signal', 'Church', 'Metal'], 1], [5, 'Obsolete : Modern :: Transparent : ?', ['Clear', 'Opaque', 'Glass', 'Fragile'], 1],
+  [5, 'Zenith : Nadir :: Apex : ?', ['Peak', 'Base', 'Cone', 'Summit'], 1], [5, 'Skeptic : Doubt :: Optimist : ?', ['Hope', 'Fear', 'Think', 'Argue'], 0],
+  [3, 'Chef : Kitchen :: Surgeon : ?', ['Hospital', 'Scalpel', 'Doctor', 'Mask'], 0], [4, 'Brevity : Lengthy :: Clarity : ?', ['Obscure', 'Bright', 'Simple', 'Short'], 0],
+]) add('SCAT', 'verbal', d, s, c, a, 'Find the relationship in the first pair and apply it to the second.');
+addQC('SCAT', 'quantitative', 24, 4);
+
+/* ---------------- SSAT ---------------- */
+for (const [d, w, c, a] of [
+  [1, 'HAPPY', ['sad', 'joyful', 'tired', 'angry'], 1], [1, 'BEGIN', ['finish', 'start', 'wait', 'hide'], 1], [2, 'ANCIENT', ['modern', 'old', 'small', 'noisy'], 1],
+  [2, 'REPLY', ['answer', 'ask', 'repeat', 'listen'], 0], [3, 'SCARCE', ['rare', 'plentiful', 'costly', 'heavy'], 0], [3, 'CAUTIOUS', ['careful', 'bold', 'quick', 'angry'], 0],
+  [3, 'RELUCTANT', ['eager', 'unwilling', 'helpful', 'tired'], 1], [4, 'TENACIOUS', ['persistent', 'timid', 'clever', 'generous'], 0], [4, 'CANDID', ['honest', 'sweet', 'secretive', 'bright'], 0],
+  [4, 'MEAGER', ['plentiful', 'scanty', 'noble', 'hungry'], 1], [5, 'LUCID', ['clear', 'confusing', 'lucky', 'bright'], 0], [5, 'PRUDENT', ['wise', 'rude', 'loud', 'greedy'], 0],
+  [5, 'ABYSS', ['hill', 'chasm', 'river', 'tower'], 1], [4, 'ARDENT', ['passionate', 'cold', 'lazy', 'small'], 0],
+]) add('SSAT', 'verbal', d, `Choose the word closest in meaning to ${w}.`, c, a, `${w} means ${c[a]}.`);
+for (const [d, s, c, a] of [
+  [2, 'Finger is to hand as toe is to ___', ['foot', 'shoe', 'nail', 'leg'], 0], [2, 'Teacher is to school as doctor is to ___', ['patient', 'hospital', 'medicine', 'nurse'], 1],
+  [3, 'Tame is to wild as calm is to ___', ['peaceful', 'stormy', 'quiet', 'gentle'], 1], [3, 'Wheat is to bread as grape is to ___', ['vine', 'wine', 'purple', 'juicy'], 1],
+  [4, 'Philanthropist is to generosity as miser is to ___', ['wealth', 'greed', 'poverty', 'kindness'], 1], [5, 'Verdict is to jury as diagnosis is to ___', ['patient', 'physician', 'illness', 'prescription'], 1],
+]) add('SSAT', 'verbal', d, s, c, a, 'Define the relationship between the first two words.');
+addWordMath('SSAT', 'quantitative', 16, 1);
+addGraph('SSAT', 'quantitative', GKINDS, 20, 2, 4);
+const SP1 = 'Every morning before sunrise, Tomás walked to the harbor to help his uncle sort the night\'s catch. At first the cold bit through his gloves and the smell made his eyes water. But as weeks passed he learned to tell a mackerel from a herring by touch alone, and the fishermen began to nod at him as one of their own. By spring, he no longer dreaded the alarm clock.';
+add('SSAT', 'reading', 2, 'Why did Tomás stop dreading the alarm clock?', ['He bought a better coat.', 'He grew skilled and accepted at the harbor.', 'His uncle paid him more.', 'The harbor moved closer.'], 1, 'His skills and acceptance grew.', { passage: SP1 });
+add('SSAT', 'reading', 3, 'The phrase "one of their own" suggests that the fishermen', ['felt sorry for him', 'treated him as part of their group', 'wanted him to leave', 'were competing with him'], 1, 'Belonging.', { passage: SP1 });
+add('SSAT', 'reading', 4, 'Which best describes how Tomás changes in the passage?', ['From uncomfortable to confident', 'From rich to poor', 'From angry to forgiving', 'From lazy to bored'], 0, 'Discomfort → competence.', { passage: SP1 });
+const SP2 = 'Bridges are often built with arches because of how an arch handles weight. Instead of letting a load press straight down on a single span, an arch spreads the force outward along its curve and into the ground at each end. Engineers in ancient Rome used this principle to build aqueducts that still stand today, while flat beams of the same age have long since cracked.';
+add('SSAT', 'reading', 3, 'What is the main purpose of the passage?', ['To describe the history of Rome', 'To explain why arches are strong', 'To compare bridges and aqueducts', 'To argue that beams are useless'], 1, 'Explains arch strength.', { passage: SP2 });
+add('SSAT', 'reading', 4, 'According to the passage, an arch handles weight by', ['pressing it straight down', 'spreading force along its curve into the ground', 'absorbing it with the beam', 'reflecting it upward'], 1, 'Stated directly.', { passage: SP2 });
+add('SSAT', 'reading', 5, 'What can be inferred about Roman aqueducts?', ['They were built with flat beams.', 'Their design has proven durable.', 'They no longer exist.', 'They were never used.'], 1, 'They still stand.', { passage: SP2 });
+add('SSAT', 'reading', 4, 'The word "span" as used in the passage most nearly means', ['a length of time', 'the part of a bridge between supports', 'a small insect', 'to cross over'], 1, 'Bridge section.', { passage: SP2 });
+Q.push({ id: 'seed-ssat-writing-1', exam_type: 'SSAT', section: 'writing', kind: 'text', difficulty: 2, stem: 'Choose ONE prompt. (A) "The door was open, but nobody was home." Continue the story. (B) Describe a rule you would change at school, and explain why.', choices: null, answer: null });
+Q.push({ id: 'seed-ssat-writing-2', exam_type: 'SSAT', section: 'writing', kind: 'text', difficulty: 3, stem: 'Choose ONE prompt. (A) "It was the best mistake I ever made." (B) Is it more important to be honest or kind? Support your opinion with examples.', choices: null, answer: null });
+
+/* ---------------- ISEE ---------------- */
+for (const [d, w, c, a] of [
+  [1, 'RAPID', ['slow', 'fast', 'loud', 'late'], 1], [2, 'CONCEAL', ['reveal', 'hide', 'carry', 'repair'], 1], [2, 'FRAGILE', ['strong', 'delicate', 'bright', 'heavy'], 1],
+  [3, 'ABUNDANT', ['plentiful', 'rare', 'tiny', 'ugly'], 0], [3, 'DILIGENT', ['hardworking', 'careless', 'shy', 'angry'], 0], [3, 'HOSTILE', ['friendly', 'unfriendly', 'hungry', 'tall'], 1],
+  [4, 'BENEVOLENT', ['kind', 'cruel', 'lazy', 'proud'], 0], [4, 'SCRUTINIZE', ['ignore', 'examine closely', 'praise', 'forget'], 1], [5, 'EPHEMERAL', ['lasting', 'short-lived', 'enormous', 'hidden'], 1],
+  [5, 'AUDACIOUS', ['timid', 'bold', 'quiet', 'ordinary'], 1], [4, 'DEARTH', ['shortage', 'surplus', 'celebration', 'warmth'], 0],
+]) add('ISEE', 'verbal', d, `Select the word whose meaning is closest to ${w}.`, c, a, `${w} means ${c[a]}.`);
+for (const [d, s, c, a] of [
+  [2, 'The soup was so ___ that she had to wait before tasting it.', ['cold', 'hot', 'salty', 'thin'], 1], [2, 'Because the road was icy, drivers moved ___.', ['quickly', 'carelessly', 'slowly', 'loudly'], 2],
+  [3, 'Although the plan seemed ___ at first, it proved surprisingly effective.', ['brilliant', 'flawed', 'famous', 'obvious'], 1], [3, 'The scientist\'s ___ approach ensured that no detail was overlooked.', ['careless', 'meticulous', 'hasty', 'casual'], 1],
+  [4, 'The speaker was so ___ that the audience grew restless.', ['concise', 'tedious', 'witty', 'brief'], 1], [4, 'Despite her ___ , she never lost her sense of humor.', ['hardships', 'victories', 'friends', 'talents'], 0],
+  [5, 'His ___ remarks, though meant to help, only offended the guests.', ['tactless', 'gracious', 'brief', 'delightful'], 0], [5, 'The senator\'s speech was ___ ; it avoided taking any clear position.', ['equivocal', 'emphatic', 'candid', 'decisive'], 0],
+]) add('ISEE', 'verbal', d, s, c, a, 'Pick the word that makes the sentence logical.');
+addQC('ISEE', 'quantitative', 14, 4);
+addGraph('ISEE', 'quantitative', ['bar', 'line', 'pie', 'grid'], 8, 2, 4);
+addWordMath('ISEE', 'math', 16, 1);
+addGraph('ISEE', 'math', GKINDS, 20, 2, 5);
+const IP1 = 'In many coastal cities, rising sea levels are forcing planners to rethink where people can safely live. Some propose walls and pumps to hold the water back, while others argue that it is wiser to move neighborhoods inland and restore marshes that naturally absorb floods. Each approach is costly, but supporters of the second note that it can also create parks and wildlife habitat.';
+add('ISEE', 'reading', 3, 'The passage is primarily concerned with', ['the cost of building walls', 'different responses to rising sea levels', 'the history of coastal cities', 'how marshes support wildlife'], 1, 'Compares responses.', { passage: IP1 });
+add('ISEE', 'reading', 4, 'Supporters of moving neighborhoods inland believe that this approach', ['is cheaper than pumps', 'could also provide parks and habitat', 'will stop sea levels rising', 'is unpopular'], 1, 'Stated at the end.', { passage: IP1 });
+add('ISEE', 'reading', 5, 'The word "restore" in the passage most nearly means', ['destroy', 'bring back to a former condition', 'measure', 'sell'], 1, 'Restore = bring back.', { passage: IP1 });
+const IP2 = 'The first time Mara played the violin in front of an audience, her hands trembled so badly that the opening notes wobbled. She considered stopping, but the old man in the front row smiled and gave a tiny nod. Her breathing slowed. By the second page, the music seemed to play itself, and when she finally lowered her bow, the applause startled her.';
+add('ISEE', 'reading', 2, 'Why did Mara\'s breathing slow?', ['The piece became easier.', 'A listener gave her an encouraging nod.', 'She stopped playing.', 'The audience left.'], 1, 'The nod calmed her.', { passage: IP2 });
+add('ISEE', 'reading', 3, 'The word "startled" suggests that Mara felt', ['bored', 'surprised', 'embarrassed', 'furious'], 1, 'Surprised by applause.', { passage: IP2 });
+add('ISEE', 'reading', 4, 'Which sentence best states a theme of the passage?', ['Practice is unnecessary.', 'Support can help us overcome fear.', 'Audiences are unkind.', 'Violins are difficult.'], 1, 'Encouragement.', { passage: IP2 });
+Q.push({ id: 'seed-isee-essay-1', exam_type: 'ISEE', section: 'essay', kind: 'text', difficulty: 2, stem: 'Write an essay (about 200 words) in response to: "What is the most important quality of a good friend?" Use specific examples.', choices: null, answer: null });
+Q.push({ id: 'seed-isee-essay-2', exam_type: 'ISEE', section: 'essay', kind: 'text', difficulty: 3, stem: 'Write an essay (about 200 words): "If you could change one thing about your town, what would it be and why?"', choices: null, answer: null });
+
+/* ---------- sanity checks ---------- */
+{
+  const bad = [];
+  for (const r of Q) if (r.kind === 'mcq') {
+    const c = r.choices || [];
+    if (c.length < 3 || new Set(c).size !== c.length || !(r.answer >= 0 && r.answer < c.length) || !r.stem) bad.push(r.id + ' ' + JSON.stringify(c));
+  }
+  if (new Set(Q.map((r) => r.id)).size !== Q.length) bad.push('duplicate ids');
+  if (bad.length) { console.error('INVALID QUESTIONS:\n' + bad.slice(0, 15).join('\n')); process.exit(1); }
+}
+
 /* ---------- SQL ---------- */
 const q = (v) => (v === null || v === undefined ? 'NULL' : typeof v === 'number' ? String(v) : `'${String(v).replace(/'/g, "''")}'`);
 let sql = '-- generated by scripts/gen-seed.mjs\n';
@@ -229,7 +419,12 @@ const products = [
   ['p-map-3', 'MAP', 'MAP 모의고사 3회권', '3회 응시 · 성장 추이 비교', 49000, 3600, 3, 180, 2],
   ['p-cat4-1', 'CAT4', 'CAT4 모의고사 1회권', 'Verbal · Quantitative · Non-Verbal · Spatial', 19000, 1400, 1, 90, 3],
   ['p-cat4-3', 'CAT4', 'CAT4 모의고사 3회권', '3회 응시', 49000, 3600, 3, 180, 4],
-  ['p-wida-1', 'WIDA', 'WIDA 모의고사 1회권', 'Listening · Reading · Writing · Speaking (쓰기/말하기 채점 포함)', 25000, 1900, 1, 90, 5],
+  ['p-scat-1', 'SCAT', 'SCAT 모의고사 1회권', 'Verbal · Quantitative (그래프/도형 SVG 문항 포함)', 15000, 1100, 1, 90, 5],
+  ['p-ssat-1', 'SSAT', 'SSAT 모의고사 1회권', 'Writing · Quantitative · Reading · Verbal', 22000, 1600, 1, 90, 6],
+  ['p-ssat-3', 'SSAT', 'SSAT 모의고사 3회권', '3회 응시', 59000, 4300, 3, 180, 7],
+  ['p-isee-1', 'ISEE', 'ISEE 모의고사 1회권', 'Verbal · Quantitative · Reading · Math · Essay', 22000, 1600, 1, 90, 8],
+  ['p-isee-3', 'ISEE', 'ISEE 모의고사 3회권', '3회 응시', 59000, 4300, 3, 180, 9],
+  ['p-wida-1', 'WIDA', 'WIDA 모의고사 1회권', 'Listening · Reading · Writing · Speaking (쓰기/말하기 채점 포함)', 25000, 1900, 1, 90, 10],
 ];
 for (const p of products) sql += `INSERT OR REPLACE INTO products (id,exam_type,title,description,price_krw,price_usd_cents,attempts,valid_days,active,sort) VALUES (${[...p.slice(0, 8), 1, p[8]].map((v) => q(v)).join(',')});\n`;
 writeFileSync(new URL('../seed/seed.sql', import.meta.url), sql);

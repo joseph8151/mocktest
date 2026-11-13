@@ -43,7 +43,7 @@ async function take(examType, answerFor) {
 // "cheat" by reading answers from admin API so we can verify scoring
 const key = async (id) => (await admin.get(`/api/admin/questions/${id}`)).answer;
 const cheat = new Map();
-const qs = (await Promise.all(['MAP', 'CAT4', 'WIDA'].map((e) => admin.get(`/api/admin/questions?exam=${e}`)))).flatMap((r) => r.questions);
+const qs = (await Promise.all(['MAP', 'CAT4', 'WIDA', 'SCAT', 'SSAT', 'ISEE'].map((e) => admin.get(`/api/admin/questions?exam=${e}`)))).flatMap((r) => r.questions);
 for (const q of qs) if (q.kind === 'mcq') cheat.set(q.id, await key(q.id));
 
 for (const ex of ['CAT4', 'MAP']) {
@@ -76,6 +76,23 @@ for (const it of queue) assert.ok((await admin.post(`/api/admin/grading/${it.id}
 rep = await kid.get(`/api/attempts/${w.id}/report`);
 console.log('WIDA', rep.attempt.status, rep.score.composites);
 assert.equal(rep.attempt.status, 'graded'); assert.ok(rep.score.composites.overall);
+// SCAT / SSAT / ISEE: scaled scores, SVG questions, essay grading
+for (const pid of ['p-scat-1', 'p-ssat-1', 'p-isee-1']) assert.ok((await admin.post(`/api/admin/users/${kidId}/grant`, { productId: pid })).ok);
+let svgSeen = 0;
+const smart = (q) => { if (q.image_svg) { svgSeen++; assert.ok(q.image_svg.startsWith('<svg'), 'svg question'); } return q.kind === 'text' ? { text: 'A short essay about friendship and honesty.' } : { choice: cheat.get(q.id) }; };
+for (const [ex, minOverall] of [['SCAT', 400], ['SSAT', 1300], ['ISEE', 3000]]) {
+  const t = await take(ex, smart);
+  const r2 = await kid.get(`/api/attempts/${t.id}/report`);
+  console.log(ex, 'answered', t.n, 'overall', r2.score.overall, 'status', r2.attempt.status);
+  assert.ok(r2.score.overall >= minOverall, `${ex} perfect-run total`);
+  if (ex !== 'SCAT') {
+    assert.equal(r2.attempt.status, 'submitted'); assert.equal(r2.score.pendingManual, true);
+    const item = (await admin.get('/api/admin/grading')).items.find((i) => i.attempt_id === t.id);
+    assert.ok((await admin.post(`/api/admin/grading/${item.id}`, { score: 5, feedback: 'Nice' })).ok);
+    assert.equal((await kid.get(`/api/attempts/${t.id}/report`)).attempt.status, 'graded');
+  } else assert.equal(r2.attempt.status, 'graded');
+}
+assert.ok(svgSeen > 0, 'graph/figure questions were served');
 // stranger cannot read someone else's report
 const other = new Client(); await other.post('/api/auth/register', { email: `o${stamp}@t.com`, name: 'O', password: 'password123', agree: true });
 assert.equal((await other.get(`/api/attempts/${w.id}/report`)).status, 404);
