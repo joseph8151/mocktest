@@ -21,7 +21,7 @@ app.use('/api/*', async (c, next) => {
 
 app.use('/api/*', async (c, next) => {
   const m = c.req.method;
-  if (m !== 'GET' && m !== 'HEAD' && !c.req.path.startsWith('/api/webhooks/') && !c.req.path.includes('/webhooks/')) {
+  if (m !== 'GET' && m !== 'HEAD' && !c.req.path.startsWith('/api/webhooks/') && !c.req.path.includes('/webhooks/') && c.req.path !== '/api/pay/kcp/return') {
     const origin = c.req.header('origin');
     if (origin && new URL(origin).host !== new URL(c.req.url).host) return c.json({ error: 'forbidden origin' }, 403);
   }

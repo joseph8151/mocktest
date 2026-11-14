@@ -62,6 +62,14 @@ Object.assign(EXAM_META, {
   ISEE: { name: 'ISEE', ico: 'I', accent: 'var(--isee)', soft: 'var(--isee-soft)', sub: '사립학교 입시 · Verbal / Quant / Reading / Math / Essay',
     points: ['Sentence Completion · Synonym 어휘 문항', 'Quantitative Reasoning · Mathematics Achievement', '영역별 척도 점수(760–940)와 스태나인 추정'] },
 });
+Object.assign(EXAM_META, {
+  COGAT: { name: 'CogAT', ico: 'C', accent: 'var(--cogat)', sub: '인지능력 · Verbal / Quantitative / Nonverbal',
+    points: ['미국 영재·사립학교 선발에 쓰이는 3개 배터리(언어·수리·비언어)', '유추·분류·문장완성, 수 계열·수 유추, 도형 매트릭스·종이접기', '표준연령점수(SAS, 평균 100)와 스태나인 추정'] },
+  SAT: { name: 'SAT', ico: 'S', accent: 'var(--sat)', sub: '대학입시 · Reading & Writing / Math',
+    points: ['디지털 SAT 형식의 Reading & Writing 27문항, Math 22문항', '그래프·표·도형은 SVG 그림으로 제공', '영역별 200–800 척도 점수와 합산 점수(400–1600) 추정'] },
+  TOEFLJ: { name: 'TOEFL Junior', ico: 'T', accent: 'var(--toeflj)', sub: '영어 숙달도 · Listening / Language Form & Meaning / Reading',
+    points: ['듣기는 음성으로 재생(최대 2회), 문법·어휘, 독해 3개 영역', '영역별 200–300 척도 점수와 합산 점수(600–900) 추정', 'CEFR A2–B2 수준 문항'] },
+});
 const FAQ = [
   ['결제하면 바로 시험을 볼 수 있나요?', '네. 결제가 확인되면 이용권이 자동으로 지급되어 곧바로 “내 시험”에서 시작할 수 있습니다.'],
   ['시험 도중 나가면 어떻게 되나요?', '진행 상황이 저장되어 같은 계정으로 다시 접속하면 이어서 풀 수 있습니다. 단, 영역별 제한 시간은 계속 흘러갑니다.'],
@@ -93,7 +101,7 @@ async function pageHome() {
       h('h3', {}, m.name), h('div', { class: 'sub' }, m.sub),
       h('ul', {}, m.points.map((x) => h('li', {}, x))),
       h('div', { class: 'push' }, products.filter((p) => p.exam_type === type).map((p) => h('div', { class: 'plan' },
-        h('div', {}, h('div', { class: 'pt' }, `${p.attempts}회권`), h('div', { class: 'pd' }, `${p.valid_days}D · ${money(p.price_usd_cents, 'USD')}`)),
+        h('div', {}, h('div', { class: 'pt' }, p.id === 'p-test' ? '관리자 결제 테스트' : `${p.attempts}회권`), h('div', { class: 'pd' }, `${p.valid_days}D · ${money(p.price_usd_cents, 'USD')}`)),
         h('div', { class: 'row', style: 'flex-wrap:nowrap;gap:14px' }, h('div', { class: 'price' }, money(p.price_krw, 'KRW')), h('button', { class: 'btn sm', onclick: () => buy(p, payment) }, '구매'))))),
     ))),
     head('02', 'Process', '진행 방식', '가입부터 리포트까지, 군더더기 없이.'),
@@ -106,44 +114,70 @@ async function pageHome() {
   );
 }
 
+const PAY_METHODS = [['CARD', '신용·체크카드'], ['VIRTUAL_ACCOUNT', '가상계좌'], ['TRANSFER', '실시간 계좌이체'], ['MOBILE', '휴대폰 결제']];
 function buy(p, payment) {
   if (!me) { toast('먼저 로그인해 주세요.'); location.hash = '#/login'; return; }
   const close = () => modal.remove();
+  let method = 'CARD';
+  // Customers get one KRW option (KCP direct if configured, else PortOne); admins see every configured provider to try them.
+  const krw = [payment.kcp && ['kcp', 'KCP 직접결제'], payment.portone && ['portone', '포트원 결제 (KCP 등)']].filter(Boolean);
+  const shown = me.role === 'admin' ? krw : krw.slice(0, 1);
+  const methodBtns = PAY_METHODS.map(([k, l]) => h('button', { type: 'button', class: 'btn alt sm' + (k === method ? ' on' : ''), onclick: (e) => { method = k; methodBtns.forEach((b) => b.classList.toggle('sel', b === e.currentTarget)); } }, l));
+  methodBtns[0].classList.add('sel');
   const modal = h('div', { class: 'modal', onclick: (e) => e.target === modal && close() }, h('div', { class: 'card' },
-    h('h3', {}, p.title), h('p', { class: 'muted' }, '결제 수단을 선택하세요.'),
-    h('div', { class: 'row' },
-      payment.portone ? h('button', { class: 'btn', onclick: guard(() => payPortone(p, close)) }, `카드/간편결제 (${money(p.price_krw, 'KRW')})`) : null,
-      payment.stripe ? h('button', { class: 'btn alt', onclick: guard(() => payStripe(p)) }, `International card (${money(p.price_usd_cents, 'USD')})`) : null,
+    h('div', { class: 'kicker' }, 'Checkout'), h('h3', {}, p.title), h('p', { class: 'muted small' }, `${p.attempts}회 응시 · ${p.valid_days}일 이내 사용`),
+    shown.length ? h('div', {}, h('label', {}, '결제 수단'), h('div', { class: 'row paymethods' }, methodBtns)) : null,
+    h('div', { class: 'row', style: 'margin-top:18px' },
+      shown.map(([k, l]) => h('button', { class: 'btn', onclick: guard(() => (k === 'kcp' ? payKcp(p, method) : payPortone(p, close, method))) }, `${me.role === 'admin' ? l + ' · ' : ''}${money(p.price_krw, 'KRW')}`)),
+      payment.stripe ? h('button', { class: 'btn alt', onclick: guard(() => payStripe(p)) }, `International card · ${money(p.price_usd_cents, 'USD')}`) : null,
     ),
-    !payment.portone && !payment.stripe ? h('p', { class: 'err' }, '결제 수단이 아직 설정되지 않았습니다. (관리자: README의 결제 설정 참고)') : null,
-    h('p', {}, h('button', { class: 'btn alt sm', onclick: close }, '닫기')),
+    !shown.length && !payment.stripe ? h('p', { class: 'err' }, '결제 수단이 아직 설정되지 않았습니다.') : null,
+    h('p', { style: 'margin-top:16px' }, h('button', { class: 'btn alt sm', onclick: close }, '닫기')),
   ));
   document.body.append(modal);
 }
 async function payStripe(p) { const { url } = await api('POST', '/pay/stripe/checkout', { productId: p.id }); location.href = url; }
-async function payPortone(p, close) {
+async function payKcp(p, method) {
+  const { form } = await api('POST', '/pay/kcp/register', { productId: p.id, payMethod: method });
+  const f = h('form', { method: form.method, action: form.action, style: 'display:none' }, Object.entries(form.fields).map(([k, v]) => h('input', { type: 'hidden', name: k, value: v })));
+  document.body.append(f); f.submit();
+}
+async function payPortone(p, close, method = 'CARD') {
   const o = await api('POST', '/pay/portone/prepare', { productId: p.id });
   if (!window.PortOne) await new Promise((res, rej) => { const s = h('script', { src: 'https://cdn.portone.io/v2/browser-sdk.js' }); s.onload = res; s.onerror = () => rej(new Error('결제 모듈을 불러오지 못했습니다.')); document.head.append(s); });
-  const resp = await window.PortOne.requestPayment({
+  const req = {
     storeId: o.storeId, channelKey: o.channelKey, paymentId: o.paymentId, orderName: o.orderName, totalAmount: o.totalAmount,
-    currency: 'CURRENCY_KRW', payMethod: 'CARD', customer: o.customer, redirectUrl: `${location.origin}/?portone_order=${o.orderId}`,
-  });
+    currency: 'CURRENCY_KRW', payMethod: method, customer: o.customer, redirectUrl: `${location.origin}/?portone_order=${o.orderId}`,
+  };
+  if (method === 'VIRTUAL_ACCOUNT') req.virtualAccount = { accountExpiry: { validHours: 72 } };
+  if (method === 'MOBILE') req.productType = 'PRODUCT_TYPE_DIGITAL';
+  const resp = await window.PortOne.requestPayment(req);
   if (resp?.code) { toast(resp.message || '결제가 취소되었습니다.'); return; }
   close();
   location.hash = `#/pay/success?order=${o.orderId}&provider=portone`;
 }
 
 async function pagePaySuccess(q) {
-  mount(h('div', { class: 'card' }, h('h2', {}, '결제 확인 중…'), h('p', { class: 'muted' }, '잠시만 기다려 주세요.')));
-  const path = q.provider === 'portone' ? '/pay/portone/complete' : '/pay/stripe/confirm';
-  for (let i = 0; i < 6; i++) {
+  mount(h('div', { class: 'card intro' }, h('div', { class: 'big' }, 'Payment'), h('h2', {}, '결제 확인 중'), h('p', { class: 'muted' }, '잠시만 기다려 주세요.')));
+  const done = () => mount(h('div', { class: 'card intro' }, h('div', { class: 'big' }, 'Payment complete'), h('h2', {}, '결제가 완료되었습니다.'), h('p', {}, '이용권이 지급되었습니다. 지금 바로 시험을 시작할 수 있습니다.'), h('a', { class: 'btn', href: '#/me' }, '내 시험으로 가기 →')));
+  for (let i = 0; i < 8; i++) {
     try {
-      const r = await api('POST', path, { orderId: q.order });
-      if (r.ok || r.status === 'paid') return mount(h('div', { class: 'card' }, h('h2', { class: 'ok' }, '결제가 완료되었습니다 🎉'), h('p', {}, '이용권이 지급되었습니다. 지금 바로 시험을 시작할 수 있어요.'), h('a', { class: 'btn', href: '#/me' }, '내 시험으로 가기')));
-    } catch (e) { if (q.provider === 'portone') return mount(h('div', { class: 'card' }, h('h2', { class: 'err' }, '결제 확인 실패'), h('p', {}, e.message), h('a', { class: 'btn alt', href: '#/' }, '돌아가기'))); }
+      if (q.provider === 'kcp') { if ((await api('GET', `/orders/${q.order}/status`)).status === 'paid') return done(); }
+      else {
+        const r = await api('POST', q.provider === 'portone' ? '/pay/portone/complete' : '/pay/stripe/confirm', { orderId: q.order });
+        if (r.ok || r.status === 'paid') return done();
+        if (r.pending) { // virtual account issued, waiting for the deposit
+          const a = r.account || {};
+          return mount(h('div', { class: 'card intro' }, h('div', { class: 'big' }, 'Awaiting deposit'), h('h2', {}, '입금 대기 중입니다.'),
+            h('p', {}, '입금이 확인되면 이용권이 자동으로 지급됩니다. 입금 후 “내 시험”에서 확인하세요.'),
+            a.number ? h('table', {}, [['은행', a.bank], ['계좌번호', a.number], ['예금주', a.holder], ['입금액', a.amount ? money(a.amount, 'KRW') : null], ['입금기한', a.expiresAt ? date(Date.parse(a.expiresAt)) : null]].filter((x) => x[1]).map(([k, v]) => h('tr', {}, h('th', {}, k), h('td', {}, v)))) : null,
+            h('p', {}, h('a', { class: 'btn', href: '#/me' }, '내 시험 →'))));
+        }
+      }
+    } catch (e) { if (q.provider === 'portone') return mount(h('div', { class: 'card intro' }, h('h2', { class: 'err' }, '결제 확인 실패'), h('p', {}, e.message), h('a', { class: 'btn alt', href: '#/' }, '돌아가기'))); }
     await new Promise((r) => setTimeout(r, 1500));
   }
-  mount(h('div', { class: 'card' }, h('h2', {}, '결제 처리 중'), h('p', {}, '결제 승인이 지연되고 있습니다. 잠시 후 “내 시험”에서 확인해 주세요.'), h('a', { class: 'btn', href: '#/me' }, '내 시험')));
+  mount(h('div', { class: 'card intro' }, h('h2', {}, '결제 처리 중'), h('p', {}, '결제 승인이 지연되고 있습니다. 잠시 후 “내 시험”에서 확인해 주세요.'), h('a', { class: 'btn', href: '#/me' }, '내 시험')));
 }
 
 function authForm(kind) {
@@ -183,14 +217,15 @@ function pageReset(token) {
 
 async function pageMe() {
   if (!me) return (location.hash = '#/login');
-  const [ov, ord] = await Promise.all([api('GET', '/me/overview'), api('GET', '/orders')]);
+  const [ov, ord, exs] = await Promise.all([api('GET', '/me/overview'), api('GET', '/orders'), me.role === 'admin' ? api('GET', '/exams') : { exams: [] }]);
+  const exams = exs.exams;
   const start = guard(async (type) => { const r = await api('POST', '/attempts', { examType: type }); location.hash = `#/exam/${r.id}`; });
   const statusBadge = (s) => h('span', { class: 'badge ' + (s === 'graded' ? 'ok' : s === 'submitted' ? 'warn' : '') }, { in_progress: '진행 중', submitted: '채점 대기', graded: '완료' }[s] || s);
   const prof = h('form', { class: 'row', onsubmit: guard(async (e) => { e.preventDefault(); await api('PATCH', '/auth/me', { name: prof.name.value, grade: prof.grade.value, phone: prof.phone.value }); me.name = prof.name.value; renderNav(); toast('저장되었습니다.'); }) },
     h('input', { name: 'name', class: 'grow', value: me.name, required: true }), h('input', { name: 'grade', class: 'grow', value: me.grade || '', placeholder: '학년' }), h('input', { name: 'phone', class: 'grow', value: me.phone || '', placeholder: '연락처' }), h('button', { class: 'btn sm' }, '저장'));
   const pw = h('form', { class: 'row', onsubmit: guard(async (e) => { e.preventDefault(); await api('POST', '/auth/password', { current: pw.cur.value, next: pw.nxt.value }); pw.reset(); toast('비밀번호가 변경되었습니다.'); }) },
     h('input', { name: 'cur', type: 'password', class: 'grow', placeholder: '현재 비밀번호', required: true }), h('input', { name: 'nxt', type: 'password', class: 'grow', placeholder: '새 비밀번호 (8자 이상)', minlength: 8, required: true }), h('button', { class: 'btn sm alt' }, '변경'));
-  const charts = ['MAP', 'CAT4'].map((t) => ({ t, pts: ov.attempts.filter((a) => a.exam_type === t && a.status === 'graded' && a.score?.overall != null).reverse().map((a) => ({ v: a.score.overall, t: a.finished_at })) }))
+  const charts = [...new Set(ov.attempts.map((a) => a.exam_type))].map((t) => ({ t, pts: ov.attempts.filter((a) => a.exam_type === t && a.status === 'graded' && a.score?.overall != null).reverse().map((a) => ({ v: a.score.overall, t: a.finished_at })) }))
     .filter((x) => x.pts.length >= 2).map((x) => growthChart(x.pts, x.t));
   const del = h('form', { class: 'row', onsubmit: guard(async (e) => { e.preventDefault(); if (!confirm('정말 탈퇴하시겠습니까? 되돌릴 수 없습니다.')) return; await api('POST', '/auth/delete', { password: del.pw.value }); me = null; renderNav(); toast('탈퇴가 완료되었습니다.'); location.hash = '#/'; }) },
     h('input', { name: 'pw', type: 'password', class: 'grow', placeholder: '비밀번호 확인', required: true }), h('button', { class: 'btn sm danger' }, '탈퇴하기'));
@@ -198,13 +233,14 @@ async function pageMe() {
   mount(
     h('h2', {}, `안녕하세요, ${me.name}님`),
     h('div', { class: 'card' }, h('h3', {}, '내 이용권'), ov.entitlements.length ? h('table', {}, h('tr', {}, h('th', {}, '상품'), h('th', {}, '남은 횟수'), h('th', {}, '만료'), h('th', {})),
-      ov.entitlements.map((e) => h('tr', {}, h('td', {}, e.title), h('td', {}, `${e.remaining}/${e.attempts_total}`), h('td', {}, e.expired ? h('span', { class: 'badge bad' }, '만료') : date(e.expires_at)),
+      ov.entitlements.map((e) => h('tr', {}, h('td', {}, e.title), h('td', {}, e.trial ? h('span', { class: 'badge' }, '관리자 체험') : `${e.remaining}/${e.attempts_total}`), h('td', {}, e.expired ? h('span', { class: 'badge bad' }, '만료') : date(e.expires_at)),
         h('td', {}, e.remaining > 0 && !e.expired ? h('button', { class: 'btn sm', onclick: () => start(e.exam_type) }, '시험 시작') : null)))) : h('p', { class: 'muted' }, '이용권이 없습니다. ', h('a', { href: '#/' }, '시험 상품 보러가기'))),
     ov.attempts.some((a) => a.status === 'in_progress') ? h('div', { class: 'card' }, h('b', {}, '진행 중인 시험이 있습니다. '), ov.attempts.filter((a) => a.status === 'in_progress').map((a) => h('a', { class: 'btn sm', href: `#/exam/${a.id}` }, `${a.exam_type} 이어서 풀기`))) : null,
     h('div', { class: 'card' }, h('h3', {}, '응시 기록'), ov.attempts.length ? h('table', {}, ov.attempts.map((a) => h('tr', {}, h('td', {}, a.exam_type), h('td', {}, date(a.started_at)), h('td', {}, statusBadge(a.status)),
       h('td', {}, a.status !== 'in_progress' ? h('a', { href: `#/report/${a.id}` }, '리포트') : null)))) : h('p', { class: 'muted' }, '아직 응시 기록이 없습니다.')),
-    h('div', { class: 'card' }, h('h3', {}, '결제 내역'), ord.orders.length ? h('table', {}, ord.orders.map((o) => h('tr', {}, h('td', {}, o.title), h('td', {}, money(o.amount, o.currency)), h('td', {}, date(o.paid_at || o.created_at)), h('td', {}, h('span', { class: 'badge ' + (o.status === 'paid' ? 'ok' : 'bad') }, { paid: '결제완료', refunded: '환불', failed: '실패' }[o.status] || o.status)),
+    h('div', { class: 'card' }, h('h3', {}, '결제 내역'), ord.orders.length ? h('table', {}, ord.orders.map((o) => h('tr', {}, h('td', {}, o.title), h('td', {}, money(o.amount, o.currency)), h('td', {}, date(o.paid_at || o.created_at)), h('td', {}, h('span', { class: 'badge ' + (o.status === 'paid' ? 'ok' : o.status === 'awaiting_deposit' ? 'warn' : 'bad') }, { paid: '결제완료', refunded: '환불', failed: '실패', awaiting_deposit: '입금 대기' }[o.status] || o.status)),
       h('td', {}, o.status === 'paid' && o.provider !== 'admin' ? (o.refund_status === 'pending' ? h('span', { class: 'badge warn' }, '환불 검토중') : o.refund_status === 'rejected' ? h('span', { class: 'badge' }, '환불 거절됨') : h('button', { class: 'btn sm alt', onclick: () => refund(o) }, '환불 요청')) : null)))) : h('p', { class: 'muted' }, '결제 내역이 없습니다.')),
+    me.role === 'admin' ? h('div', { class: 'card' }, h('div', { class: 'kicker' }, 'Admin'), h('h3', {}, '관리자 체험 응시'), h('p', { class: 'muted small' }, '결제 없이 모든 시험을 직접 풀어 볼 수 있습니다. (횟수 제한 없음)'), h('div', { class: 'row' }, exams.map((x) => h('button', { class: 'btn sm alt', onclick: () => start(x.type) }, x.type === 'TOEFLJ' ? 'TOEFL Jr' : x.type)))) : null,
     charts.length ? h('div', { class: 'card' }, h('h3', {}, '성적 추이 (종합 추정 점수)'), h('div', { class: 'grid' }, charts)) : null,
     h('div', { class: 'card' }, h('h3', {}, '회원 정보'), prof, h('h3', {}, '비밀번호 변경'), pw),
     h('div', { class: 'card' }, h('h3', {}, '회원 탈퇴'), h('p', { class: 'muted small' }, '탈퇴하면 응시 기록·답안·녹음이 삭제되고 계정 정보가 익명화됩니다. 결제 기록은 법령에 따라 5년간 보관됩니다.'), del),
@@ -308,17 +344,17 @@ async function pageReport(id) {
     }
     return h('div', { class: 'ring' }, svg, h('div', { class: 'c' }, h('b', {}, big), h('span', {}, small)));
   };
-  const accent = { MAP: 'var(--map)', CAT4: 'var(--cat4)', WIDA: 'var(--wida)', SCAT: 'var(--scat)', SSAT: 'var(--ssat)', ISEE: 'var(--isee)' }[t];
-  const scaledT = ['SCAT', 'SSAT', 'ISEE'].includes(t);
+  const accent = { MAP: 'var(--map)', CAT4: 'var(--cat4)', WIDA: 'var(--wida)', SCAT: 'var(--scat)', SSAT: 'var(--ssat)', ISEE: 'var(--isee)', COGAT: 'var(--cogat)', SAT: 'var(--sat)', TOEFLJ: 'var(--toeflj)' }[t];
+  const scaledT = ['SCAT', 'SSAT', 'ISEE', 'SAT', 'TOEFLJ'].includes(t), sasT = ['CAT4', 'COGAT'].includes(t);
   const cards = Object.values(sc.sections).map((s) => {
-    const big = t === 'MAP' ? (s.scaleScore ?? '-') : t === 'CAT4' ? (s.sas ?? '-') : scaledT ? (s.scaled ?? s.level ?? (s.graded === false ? '대기' : '-')) : (s.level ?? (s.graded === false ? '대기' : '-'));
-    const small = t === 'MAP' ? 'RIT 유사' : t === 'CAT4' ? `스태나인 ${s.stanine ?? '-'}` : scaledT ? (s.scaled != null ? (s.stanine != null ? `스태나인 ${s.stanine}` : '척도 점수') : '교사 채점 1–6') : 'Level (1–6)';
+    const big = t === 'MAP' ? (s.scaleScore ?? '-') : sasT ? (s.sas ?? '-') : scaledT ? (s.scaled ?? s.level ?? (s.graded === false ? '대기' : '-')) : (s.level ?? (s.graded === false ? '대기' : '-'));
+    const small = t === 'MAP' ? 'RIT 유사' : sasT ? `스태나인 ${s.stanine ?? '-'}` : scaledT ? (s.scaled != null ? (s.stanine != null ? `스태나인 ${s.stanine}` : '척도 점수') : '교사 채점 1–6') : 'Level (1–6)';
     const pct = s.total ? s.pct : s.level ? (s.level / 6) * 100 : 0;
     return h('div', { class: 'ring-card' }, h('div', { class: 'muted small' }, s.name), ring(pct, big, small, accent),
       s.total ? h('div', { class: 'small' }, `${s.correct}/${s.total} 정답 · ${s.pct}%`) : h('div', { class: 'small muted' }, s.graded === false ? '교사 채점 대기 중' : '교사 채점'), s.band ? h('span', { class: 'badge' }, s.band) : null);
   });
   const comp = sc.composites ? h('p', { class: 'muted' }, `Oral ${sc.composites.oral ?? '-'} · Literacy ${sc.composites.literacy ?? '-'}`) : null;
-  const overallLabel = { MAP: '종합 추정 점수', CAT4: '종합 SAS (추정)', WIDA: 'Overall Level', SCAT: '합산 척도 점수 (추정)', SSAT: '합산 척도 점수 (추정)', ISEE: '합산 척도 점수 (추정)' }[t];
+  const overallLabel = { MAP: '종합 추정 점수', CAT4: '종합 SAS (추정)', COGAT: '종합 SAS (추정)', SAT: '합산 점수 (추정)', TOEFLJ: '합산 점수 (추정)', WIDA: 'Overall Level', SCAT: '합산 척도 점수 (추정)', SSAT: '합산 척도 점수 (추정)', ISEE: '합산 척도 점수 (추정)' }[t];
   const overallVal = t === 'WIDA' ? sc.composites?.overall : sc.overall;
   const items = r.items.map((it, i) => h('div', { class: 'card ' + (it.correct === 1 ? 'good' : it.correct === 0 ? 'wrong' : '') },
     h('div', { class: 'small muted' }, `#${i + 1} · ${it.section} · 난이도 ${it.difficulty}`),
@@ -338,12 +374,12 @@ async function pageReport(id) {
 }
 
 /* ---------- admin ---------- */
-const ADMIN_TABS = [['stats', '대시보드'], ['users', '회원'], ['orders', '주문'], ['products', '상품'], ['questions', '문제'], ['grading', '채점']];
+const ADMIN_TABS = [['stats', '대시보드'], ['users', '회원'], ['orders', '주문'], ['products', '상품'], ['questions', '문제'], ['grading', '채점'], ['payments', '결제설정']];
 async function pageAdmin(tab = 'stats') {
   if (!me || me.role !== 'admin') return (location.hash = '#/');
   const body = h('div', {});
   mount(h('h2', {}, '관리자'), h('div', { class: 'tabs' }, ADMIN_TABS.map(([k, l]) => h('button', { class: k === tab ? 'on' : '', onclick: () => (location.hash = `#/admin/${k}`) }, l))), body);
-  await ({ stats: adminStats, users: adminUsers, orders: adminOrders, products: adminProducts, questions: adminQuestions, grading: adminGrading }[tab] || adminStats)(body);
+  await ({ stats: adminStats, users: adminUsers, orders: adminOrders, products: adminProducts, questions: adminQuestions, grading: adminGrading, payments: adminPayments }[tab] || adminStats)(body);
 }
 async function adminStats(b) {
   const s = await api('GET', '/admin/stats');
@@ -396,7 +432,7 @@ async function adminProducts(b) {
   };
   b.append(h('p', {}, h('button', { class: 'btn sm', onclick: () => edit() }, '+ 새 상품')), h('table', {}, products.map((p) => h('tr', {}, h('td', {}, p.exam_type), h('td', {}, p.title), h('td', {}, `${money(p.price_krw, 'KRW')} / ${money(p.price_usd_cents, 'USD')}`), h('td', {}, `${p.attempts}회/${p.valid_days}일`), h('td', {}, p.active ? '판매중' : '중지'), h('td', {}, h('button', { class: 'btn sm alt', onclick: () => edit(p) }, '수정'))))));
 }
-const SECTIONS = { MAP: ['reading', 'language', 'math'], CAT4: ['verbal', 'quantitative', 'nonverbal', 'spatial'], WIDA: ['listening', 'reading', 'writing', 'speaking'], SCAT: ['verbal', 'quantitative'], SSAT: ['writing', 'quantitative', 'reading', 'verbal'], ISEE: ['verbal', 'quantitative', 'reading', 'math', 'essay'] };
+const SECTIONS = { MAP: ['reading', 'language', 'math'], CAT4: ['verbal', 'quantitative', 'nonverbal', 'spatial'], WIDA: ['listening', 'reading', 'writing', 'speaking'], SCAT: ['verbal', 'quantitative'], SSAT: ['writing', 'quantitative', 'reading', 'verbal'], ISEE: ['verbal', 'quantitative', 'reading', 'math', 'essay'], COGAT: ['verbal', 'quantitative', 'nonverbal'], SAT: ['rw', 'math'], TOEFLJ: ['listening', 'lfm', 'reading'] };
 async function adminQuestions(b) {
   const fe = h('select', {}, h('option', { value: '' }, '전체 시험'), ...Object.keys(SECTIONS).map((x) => h('option', {}, x)));
   const list = h('div', {});
@@ -426,6 +462,16 @@ async function adminQuestions(b) {
   b.append(h('div', { class: 'row' }, fe, h('button', { class: 'btn sm', onclick: () => qEdit() }, '+ 새 문제')), list,
     h('details', { class: 'card' }, h('summary', {}, 'JSON 대량 등록'), imp, h('p', {}, h('button', { class: 'btn sm', onclick: guard(async () => { const r = await api('POST', '/admin/questions/import', JSON.parse(imp.value)); toast(`${r.imported}개 등록됨`); pageAdmin('questions'); }) }, '등록'))));
   await load();
+}
+async function adminPayments(b) {
+  const st = await api('GET', '/admin/payment-status');
+  const row = (name, ok, lines) => h('div', { class: 'card' }, h('div', { class: 'row' }, h('h3', { class: 'grow', style: 'margin:0' }, name), h('span', { class: 'badge ' + (ok ? 'ok' : 'warn') }, ok ? '설정됨' : '미설정')), lines.map(([k, v]) => h('p', { class: 'small' }, h('span', { class: 'muted' }, k + ' '), h('code', {}, v))));
+  b.append(
+    h('p', { class: 'muted' }, '아래 주소를 각 결제사 관리자 화면에 등록하고, 시크릿은 Cloudflare → Workers → Settings → Variables and Secrets에 추가하세요. 연동 점검은 홈의 “[관리자 전용] 결제 테스트 1,000원” 상품으로 직접 결제해 볼 수 있습니다.'),
+    row('KCP 직접 연동', st.kcp.configured, [['모드', st.kcp.mode === 'prod' ? '운영(prod)' : '테스트(test)'], ['site_cd', st.kcp.siteCd || '(KCP_SITE_CD 필요)'], ['결과 수신(Ret_URL)', st.kcp.returnUrl], ['필요 시크릿', 'KCP_SITE_CD, KCP_CERT_INFO (운영 전환 시 KCP_MODE=prod)']]),
+    row('포트원 (KCP 등 PG 채널)', st.portone.configured, [['웹훅 URL', st.portone.webhookUrl], ['웹훅 시크릿', st.portone.webhookSecret ? '설정됨' : '(PORTONE_WEBHOOK_SECRET 필요)'], ['필요 값', 'PORTONE_STORE_ID, PORTONE_CHANNEL_KEY, PORTONE_API_SECRET']]),
+    row('Stripe (해외 카드)', st.stripe.configured, [['웹훅 URL', st.stripe.webhookUrl], ['웹훅 시크릿', st.stripe.webhookSecret ? '설정됨' : '(STRIPE_WEBHOOK_SECRET 필요)']]),
+    row('이메일 (Resend)', st.mail, [['필요 시크릿', 'RESEND_API_KEY']]));
 }
 async function adminGrading(b) {
   const { items } = await api('GET', '/admin/grading');
@@ -478,6 +524,7 @@ function pageLegal(kind) {
 
 /* ---------- router ---------- */
 async function route() {
+  document.querySelectorAll('.modal').forEach((m) => m.remove()); // never leave a dialog open across pages
   const [path, qs] = (location.hash.slice(1) || '/').split('?'); const q = Object.fromEntries(new URLSearchParams(qs || ''));
   const seg = path.split('/').filter(Boolean);
   try {
@@ -501,6 +548,7 @@ async function route() {
   }
 }
 window.addEventListener('hashchange', route);
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') document.querySelectorAll('.modal').forEach((m) => m.remove()); });
 (async () => {
   try { me = (await api('GET', '/auth/me')).user; } catch {}
   try { cfg = await api('GET', '/config'); const b = cfg.biz; document.getElementById('bizinfo').textContent = `${b.name} · 대표 ${b.owner} · 사업자등록번호 ${b.regNo} · 통신판매업 ${b.salesNo} · ${b.address} · ${b.contact}`; } catch {}

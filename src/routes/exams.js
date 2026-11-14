@@ -26,7 +26,7 @@ app.get('/me/overview', async (c) => {
       `SELECT id,exam_type,status,started_at,finished_at,score FROM attempts WHERE user_id=? ORDER BY started_at DESC`).bind(u.id).all(),
   ]);
   return c.json({
-    entitlements: ents.results.map((e) => ({ ...e, remaining: e.attempts_total - e.attempts_used, expired: !!e.expires_at && e.expires_at < now() })),
+    entitlements: ents.results.map((e) => ({ ...e, remaining: e.attempts_total - e.attempts_used, trial: e.order_id === null, expired: !!e.expires_at && e.expires_at < now() })),
     attempts: atts.results.map((a) => ({ ...a, score: a.score ? JSON.parse(a.score) : null })),
   });
 });
@@ -39,9 +39,17 @@ app.post('/attempts', async (c) => {
   const open = await c.env.DB.prepare(`SELECT id FROM attempts WHERE user_id=? AND exam_type=? AND status='in_progress'`).bind(u.id, examType).first();
   if (open) return c.json({ id: open.id, resumed: true });
 
-  const ent = await c.env.DB.prepare(
+  let ent = await c.env.DB.prepare(
     `SELECT id FROM entitlements WHERE user_id=? AND exam_type=? AND revoked=0 AND attempts_used<attempts_total
      AND (expires_at IS NULL OR expires_at>?) ORDER BY expires_at LIMIT 1`).bind(u.id, examType, now()).first();
+  if (!ent && u.role === 'admin') { // admins can try every exam without paying: unlimited trial ticket (no order attached)
+    const prod = await c.env.DB.prepare('SELECT id FROM products WHERE exam_type=? ORDER BY sort LIMIT 1').bind(examType).first();
+    if (prod) {
+      const eid = uid();
+      await c.env.DB.prepare(`INSERT INTO entitlements (id,user_id,product_id,order_id,exam_type,attempts_total,expires_at,created_at) VALUES (?,?,?,NULL,?,1000000,NULL,?)`).bind(eid, u.id, prod.id, examType, now()).run();
+      ent = { id: eid };
+    }
+  }
   if (!ent) return c.json({ error: '응시 가능한 이용권이 없습니다. 먼저 결제해 주세요.' }, 402);
   const claim = await c.env.DB.prepare('UPDATE entitlements SET attempts_used=attempts_used+1 WHERE id=? AND attempts_used<attempts_total').bind(ent.id).run();
   if (!claim.meta.changes) return c.json({ error: '이용권이 소진되었습니다.' }, 402);

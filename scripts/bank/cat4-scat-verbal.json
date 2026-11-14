@@ -1,0 +1,898 @@
+[
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Which word does NOT belong with the others? apple, banana, carrot, grape",
+  "choices": [
+   "carrot",
+   "apple",
+   "banana",
+   "grape"
+  ],
+  "answer": 0,
+  "explanation": "Carrot is a vegetable while the others are fruits."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Which word belongs with the group: dog, cat, rabbit?",
+  "choices": [
+   "table",
+   "tree",
+   "cloud",
+   "hamster"
+  ],
+  "answer": 3,
+  "explanation": "Dogs, cats and rabbits are pets and hamster is also a pet animal."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Bird is to nest as bee is to ?",
+  "choices": [
+   "honey",
+   "flower",
+   "hive",
+   "sting"
+  ],
+  "answer": 2,
+  "explanation": "A nest is where a bird lives and a hive is where bees live."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Which word means the same as happy?",
+  "choices": [
+   "sad",
+   "glad",
+   "tired",
+   "angry"
+  ],
+  "answer": 1,
+  "explanation": "Glad is a synonym of happy."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Which word is the opposite of hot?",
+  "choices": [
+   "warm",
+   "cold",
+   "boiling",
+   "sunny"
+  ],
+  "answer": 1,
+  "explanation": "Cold is the antonym of hot."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "All dogs are animals. Rex is a dog. Which statement MUST be true?",
+  "choices": [
+   "Rex is an animal.",
+   "Rex is a cat.",
+   "All animals are dogs.",
+   "Rex is not an animal."
+  ],
+  "answer": 0,
+  "explanation": "Rex belongs to the group dogs, and every dog is an animal."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Which word does NOT belong with the others? Monday, Friday, July, Sunday",
+  "choices": [
+   "Monday",
+   "Friday",
+   "Sunday",
+   "July"
+  ],
+  "answer": 3,
+  "explanation": "July is a month while the others are days of the week."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Hand is to glove as foot is to ?",
+  "choices": [
+   "leg",
+   "toe",
+   "sock",
+   "walk"
+  ],
+  "answer": 2,
+  "explanation": "A glove is worn on the hand and a sock is worn on the foot."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Which word means the same as rapid?",
+  "choices": [
+   "slow",
+   "loud",
+   "quick",
+   "early"
+  ],
+  "answer": 2,
+  "explanation": "Rapid and quick both mean fast."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Which word is the opposite of ancient?",
+  "choices": [
+   "historic",
+   "modern",
+   "huge",
+   "fragile"
+  ],
+  "answer": 1,
+  "explanation": "Ancient means very old and modern means of the present time."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "All roses are flowers. All flowers need water. Which statement MUST be true?",
+  "choices": [
+   "Roses need water.",
+   "Roses are the only flowers.",
+   "Some roses do not need water.",
+   "All plants are roses."
+  ],
+  "answer": 0,
+  "explanation": "Roses are flowers and all flowers need water, so roses need water."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Which word belongs with the group: triangle, square, pentagon?",
+  "choices": [
+   "cube",
+   "sphere",
+   "cone",
+   "hexagon"
+  ],
+  "answer": 3,
+  "explanation": "All are flat shapes with straight sides, and a hexagon is another one."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Which word does NOT belong with the others? violin, cello, flute, harp",
+  "choices": [
+   "violin",
+   "cello",
+   "harp",
+   "flute"
+  ],
+  "answer": 3,
+  "explanation": "The violin, cello and harp have strings but the flute is a wind instrument."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Author is to novel as composer is to ?",
+  "choices": [
+   "orchestra",
+   "concert",
+   "symphony",
+   "piano"
+  ],
+  "answer": 2,
+  "explanation": "An author creates a novel and a composer creates a symphony."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Which word means the same as reluctant?",
+  "choices": [
+   "eager",
+   "unwilling",
+   "careful",
+   "quiet"
+  ],
+  "answer": 1,
+  "explanation": "Reluctant means not wanting to do something, which is unwilling."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Which word is the opposite of scarce?",
+  "choices": [
+   "plentiful",
+   "rare",
+   "costly",
+   "hidden"
+  ],
+  "answer": 0,
+  "explanation": "Scarce means in short supply and plentiful means available in large amounts."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "No fish are mammals. All whales are mammals. Which statement MUST be true?",
+  "choices": [
+   "No whales are fish.",
+   "All fish are whales.",
+   "Some whales are fish.",
+   "All mammals are whales."
+  ],
+  "answer": 0,
+  "explanation": "Whales are mammals and no mammal is a fish, so no whale is a fish."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Which word does NOT belong with the others? scissors, knife, saw, spoon",
+  "choices": [
+   "scissors",
+   "knife",
+   "saw",
+   "spoon"
+  ],
+  "answer": 3,
+  "explanation": "Scissors, knife and saw are used for cutting but a spoon is not."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Thermometer is to temperature as barometer is to ?",
+  "choices": [
+   "wind speed",
+   "rainfall",
+   "air pressure",
+   "sunshine"
+  ],
+  "answer": 2,
+  "explanation": "A thermometer measures temperature and a barometer measures air pressure."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Which word means the same as meticulous?",
+  "choices": [
+   "careless",
+   "careful and precise",
+   "generous",
+   "hasty"
+  ],
+  "answer": 1,
+  "explanation": "Meticulous means showing great attention to detail."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Which word is the opposite of generous?",
+  "choices": [
+   "kind",
+   "stingy",
+   "wealthy",
+   "polite"
+  ],
+  "answer": 1,
+  "explanation": "Generous means giving freely and stingy means unwilling to give."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Some students in the club play chess. All students who play chess are in Year 7. Which statement MUST be true?",
+  "choices": [
+   "Some club students are in Year 7.",
+   "All club students are in Year 7.",
+   "No Year 7 students play chess.",
+   "All Year 7 students are in the club."
+  ],
+  "answer": 0,
+  "explanation": "The club members who play chess are in Year 7, so at least some club students are."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Which word does NOT belong with the others? cautious, prudent, wary, reckless",
+  "choices": [
+   "cautious",
+   "prudent",
+   "wary",
+   "reckless"
+  ],
+  "answer": 3,
+  "explanation": "Reckless means careless of danger while the others mean careful."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Drought is to water as famine is to ?",
+  "choices": [
+   "rain",
+   "hunger",
+   "food",
+   "farm"
+  ],
+  "answer": 2,
+  "explanation": "A drought is a shortage of water and a famine is a shortage of food."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Eulogy is to praise as satire is to ?",
+  "choices": [
+   "sorrow",
+   "instruction",
+   "mockery",
+   "prayer"
+  ],
+  "answer": 2,
+  "explanation": "A eulogy is meant to praise and satire is meant to mock."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Which word means the same as ephemeral?",
+  "choices": [
+   "eternal",
+   "short-lived",
+   "mysterious",
+   "enormous"
+  ],
+  "answer": 1,
+  "explanation": "Ephemeral describes something that lasts only a very short time."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Which word is the opposite of benevolent?",
+  "choices": [
+   "malicious",
+   "generous",
+   "timid",
+   "aloof"
+  ],
+  "answer": 0,
+  "explanation": "Benevolent means well-meaning and malicious means intending harm."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "No reptiles are warm-blooded. Some pets are reptiles. Which statement MUST be true?",
+  "choices": [
+   "All pets are reptiles.",
+   "No pets are warm-blooded.",
+   "Some warm-blooded animals are reptiles.",
+   "Some pets are not warm-blooded."
+  ],
+  "answer": 3,
+  "explanation": "The pets that are reptiles cannot be warm-blooded."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Mia is taller than Noor. Noor is taller than Omar. Pia is shorter than Omar. Who is the second tallest?",
+  "choices": [
+   "Mia",
+   "Omar",
+   "Pia",
+   "Noor"
+  ],
+  "answer": 3,
+  "explanation": "The order is Mia, Noor, Omar, Pia, so Noor is second."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Which word does NOT belong with the others? verbose, wordy, prolix, laconic",
+  "choices": [
+   "verbose",
+   "wordy",
+   "laconic",
+   "prolix"
+  ],
+  "answer": 2,
+  "explanation": "Laconic means using very few words while the others mean using too many."
+ },
+ {
+  "exam_type": "SCAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Finger : hand :: toe : ?",
+  "choices": [
+   "foot",
+   "shoe",
+   "leg",
+   "nail"
+  ],
+  "answer": 0,
+  "explanation": "A finger is part of a hand as a toe is part of a foot."
+ },
+ {
+  "exam_type": "SCAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Fish : swim :: bird : ?",
+  "choices": [
+   "nest",
+   "feather",
+   "egg",
+   "fly"
+  ],
+  "answer": 3,
+  "explanation": "A fish moves by swimming and a bird moves by flying."
+ },
+ {
+  "exam_type": "SCAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Hot : cold :: up : ?",
+  "choices": [
+   "high",
+   "over",
+   "down",
+   "top"
+  ],
+  "answer": 2,
+  "explanation": "Hot and cold are opposites as up and down are opposites."
+ },
+ {
+  "exam_type": "SCAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Page : book :: petal : ?",
+  "choices": [
+   "garden",
+   "flower",
+   "bee",
+   "stem"
+  ],
+  "answer": 1,
+  "explanation": "A page is part of a book as a petal is part of a flower."
+ },
+ {
+  "exam_type": "SCAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Baker : bread :: painter : ?",
+  "choices": [
+   "brush",
+   "painting",
+   "canvas",
+   "gallery"
+  ],
+  "answer": 1,
+  "explanation": "A baker makes bread as a painter makes a painting."
+ },
+ {
+  "exam_type": "SCAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Big : large :: small : ?",
+  "choices": [
+   "little",
+   "giant",
+   "heavy",
+   "narrow"
+  ],
+  "answer": 0,
+  "explanation": "Big and large are synonyms as small and little are synonyms."
+ },
+ {
+  "exam_type": "SCAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Pen : write :: knife : ?",
+  "choices": [
+   "sharp",
+   "kitchen",
+   "fork",
+   "cut"
+  ],
+  "answer": 3,
+  "explanation": "A pen is used to write as a knife is used to cut."
+ },
+ {
+  "exam_type": "SCAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Doctor : hospital :: teacher : ?",
+  "choices": [
+   "student",
+   "lesson",
+   "school",
+   "book"
+  ],
+  "answer": 2,
+  "explanation": "A doctor works in a hospital as a teacher works in a school."
+ },
+ {
+  "exam_type": "SCAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Cub : bear :: calf : ?",
+  "choices": [
+   "farm",
+   "milk",
+   "cow",
+   "grass"
+  ],
+  "answer": 2,
+  "explanation": "A cub is a young bear as a calf is a young cow."
+ },
+ {
+  "exam_type": "SCAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Sail : boat :: wing : ?",
+  "choices": [
+   "feather",
+   "airplane",
+   "sky",
+   "pilot"
+  ],
+  "answer": 1,
+  "explanation": "A sail is a part of a boat as a wing is a part of an airplane."
+ },
+ {
+  "exam_type": "SCAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Warm : hot :: cool : ?",
+  "choices": [
+   "cold",
+   "mild",
+   "wet",
+   "winter"
+  ],
+  "answer": 0,
+  "explanation": "Hot is a stronger degree of warm as cold is a stronger degree of cool."
+ },
+ {
+  "exam_type": "SCAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Thermometer : temperature :: clock : ?",
+  "choices": [
+   "hour",
+   "watch",
+   "wall",
+   "time"
+  ],
+  "answer": 3,
+  "explanation": "A thermometer measures temperature as a clock measures time."
+ },
+ {
+  "exam_type": "SCAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Hungry : eat :: tired : ?",
+  "choices": [
+   "run",
+   "book",
+   "bed",
+   "sleep"
+  ],
+  "answer": 3,
+  "explanation": "Hunger leads one to eat as tiredness leads one to sleep."
+ },
+ {
+  "exam_type": "SCAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Author : book :: composer : ?",
+  "choices": [
+   "singer",
+   "piano",
+   "song",
+   "radio"
+  ],
+  "answer": 2,
+  "explanation": "An author creates a book as a composer creates a song."
+ },
+ {
+  "exam_type": "SCAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Gale : breeze :: deluge : ?",
+  "choices": [
+   "storm",
+   "drizzle",
+   "puddle",
+   "river"
+  ],
+  "answer": 1,
+  "explanation": "A gale is a much stronger wind than a breeze as a deluge is a much heavier rain than a drizzle."
+ },
+ {
+  "exam_type": "SCAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Hammer : carpenter :: scalpel : ?",
+  "choices": [
+   "surgeon",
+   "hospital",
+   "knife",
+   "nurse"
+  ],
+  "answer": 0,
+  "explanation": "A carpenter uses a hammer as a surgeon uses a scalpel."
+ },
+ {
+  "exam_type": "SCAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Chapter : novel :: scene : ?",
+  "choices": [
+   "play",
+   "actor",
+   "stage",
+   "theatre"
+  ],
+  "answer": 0,
+  "explanation": "A chapter is a section of a novel as a scene is a section of a play."
+ },
+ {
+  "exam_type": "SCAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Exercise : fitness :: study : ?",
+  "choices": [
+   "school",
+   "exam",
+   "books",
+   "knowledge"
+  ],
+  "answer": 3,
+  "explanation": "Exercise leads to fitness as study leads to knowledge."
+ },
+ {
+  "exam_type": "SCAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Begin : commence :: end : ?",
+  "choices": [
+   "pause",
+   "continue",
+   "conclude",
+   "repeat"
+  ],
+  "answer": 2,
+  "explanation": "Begin and commence are synonyms as end and conclude are synonyms."
+ },
+ {
+  "exam_type": "SCAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Violin : instrument :: sonnet : ?",
+  "choices": [
+   "rhyme",
+   "poem",
+   "poet",
+   "stanza"
+  ],
+  "answer": 1,
+  "explanation": "A violin is a kind of instrument as a sonnet is a kind of poem."
+ },
+ {
+  "exam_type": "SCAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Shepherd : flock :: captain : ?",
+  "choices": [
+   "ship",
+   "crew",
+   "sea",
+   "uniform"
+  ],
+  "answer": 1,
+  "explanation": "A shepherd leads a flock as a captain leads a crew."
+ },
+ {
+  "exam_type": "SCAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Verbose : concise :: lavish : ?",
+  "choices": [
+   "frugal",
+   "generous",
+   "wealthy",
+   "extravagant"
+  ],
+  "answer": 0,
+  "explanation": "Verbose and concise are antonyms as lavish and frugal are antonyms."
+ },
+ {
+  "exam_type": "SCAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Surgeon : scalpel :: astronomer : ?",
+  "choices": [
+   "star",
+   "planet",
+   "observatory",
+   "telescope"
+  ],
+  "answer": 3,
+  "explanation": "A surgeon uses a scalpel as an astronomer uses a telescope."
+ },
+ {
+  "exam_type": "SCAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Tailor : suit :: weaver : ?",
+  "choices": [
+   "loom",
+   "thread",
+   "cloth",
+   "wool"
+  ],
+  "answer": 2,
+  "explanation": "A tailor makes a suit as a weaver makes cloth."
+ },
+ {
+  "exam_type": "SCAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Arid : moist :: barren : ?",
+  "choices": [
+   "empty",
+   "sandy",
+   "fertile",
+   "rocky"
+  ],
+  "answer": 2,
+  "explanation": "Arid and moist are antonyms as barren and fertile are antonyms."
+ },
+ {
+  "exam_type": "SCAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Miser : money :: glutton : ?",
+  "choices": [
+   "hunger",
+   "food",
+   "plate",
+   "weight"
+  ],
+  "answer": 1,
+  "explanation": "A miser is greedy for money as a glutton is greedy for food."
+ },
+ {
+  "exam_type": "SCAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Pebble : boulder :: puddle : ?",
+  "choices": [
+   "lake",
+   "rain",
+   "water",
+   "mud"
+  ],
+  "answer": 0,
+  "explanation": "A pebble is a small version of a boulder as a puddle is a small version of a lake."
+ },
+ {
+  "exam_type": "SCAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Vaccine : disease :: antidote : ?",
+  "choices": [
+   "snake",
+   "medicine",
+   "bottle",
+   "poison"
+  ],
+  "answer": 3,
+  "explanation": "A vaccine protects against disease as an antidote counters poison."
+ },
+ {
+  "exam_type": "SCAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Ephemeral : permanent :: transparent : ?",
+  "choices": [
+   "clear",
+   "fragile",
+   "glassy",
+   "opaque"
+  ],
+  "answer": 3,
+  "explanation": "Ephemeral and permanent are antonyms as transparent and opaque are antonyms."
+ },
+ {
+  "exam_type": "SCAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Candid : evasive :: lucid : ?",
+  "choices": [
+   "bright",
+   "rational",
+   "obscure",
+   "vivid"
+  ],
+  "answer": 2,
+  "explanation": "Candid and evasive are opposites as lucid (clear) and obscure are opposites."
+ },
+ {
+  "exam_type": "SCAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Pugnacious : quarrel :: loquacious : ?",
+  "choices": [
+   "silence",
+   "talk",
+   "listen",
+   "argue"
+  ],
+  "answer": 1,
+  "explanation": "A pugnacious person is inclined to quarrel as a loquacious person is inclined to talk."
+ },
+ {
+  "exam_type": "SCAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Obstinate : stubborn :: parsimonious : ?",
+  "choices": [
+   "stingy",
+   "wasteful",
+   "wealthy",
+   "humble"
+  ],
+  "answer": 0,
+  "explanation": "Obstinate and stubborn are synonyms as parsimonious and stingy are synonyms."
+ },
+ {
+  "exam_type": "SCAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Mitigate : lessen :: exacerbate : ?",
+  "choices": [
+   "worsen",
+   "relieve",
+   "ignore",
+   "explain"
+  ],
+  "answer": 0,
+  "explanation": "Mitigate means to lessen as exacerbate means to worsen."
+ },
+ {
+  "exam_type": "SCAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Lexicon : words :: anthology : ?",
+  "choices": [
+   "authors",
+   "libraries",
+   "pages",
+   "poems"
+  ],
+  "answer": 3,
+  "explanation": "A lexicon is a collection of words as an anthology is a collection of poems."
+ }
+]

@@ -1,0 +1,1012 @@
+[
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Choose the word closest in meaning to RAPID.",
+  "explanation": "Rapid means quick.",
+  "choices": [
+   "quick",
+   "quiet",
+   "heavy",
+   "early"
+  ],
+  "answer": 0
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Choose the word closest in meaning to BEGIN.",
+  "explanation": "Begin means start.",
+  "choices": [
+   "finish",
+   "hide",
+   "repeat",
+   "start"
+  ],
+  "answer": 3
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Choose the word closest in meaning to SILENT.",
+  "explanation": "Silent means quiet.",
+  "choices": [
+   "angry",
+   "clumsy",
+   "quiet",
+   "distant"
+  ],
+  "answer": 2
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Choose the word closest in meaning to DAMP.",
+  "explanation": "Damp means slightly wet.",
+  "choices": [
+   "cold",
+   "slightly wet",
+   "empty",
+   "sharp"
+  ],
+  "answer": 1
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Choose the word closest in meaning to FRAGILE.",
+  "explanation": "Fragile means easily broken.",
+  "choices": [
+   "heavy",
+   "easily broken",
+   "ancient",
+   "valuable"
+  ],
+  "answer": 1
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Choose the word closest in meaning to GENEROUS.",
+  "explanation": "Generous means unselfish.",
+  "choices": [
+   "unselfish",
+   "wealthy",
+   "shy",
+   "stubborn"
+  ],
+  "answer": 0
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Choose the word closest in meaning to WEARY.",
+  "explanation": "Weary means tired.",
+  "choices": [
+   "nervous",
+   "eager",
+   "hungry",
+   "tired"
+  ],
+  "answer": 3
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Choose the word closest in meaning to ANCIENT.",
+  "explanation": "Ancient means very old.",
+  "choices": [
+   "broken",
+   "mighty",
+   "very old",
+   "hidden"
+  ],
+  "answer": 2
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Choose the word closest in meaning to CAUTIOUS.",
+  "explanation": "Cautious means careful.",
+  "choices": [
+   "curious",
+   "hasty",
+   "careful",
+   "bold"
+  ],
+  "answer": 2
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Choose the word closest in meaning to CONCEAL.",
+  "explanation": "Conceal means hide.",
+  "choices": [
+   "reveal",
+   "hide",
+   "protect",
+   "imagine"
+  ],
+  "answer": 1
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Choose the word closest in meaning to ABUNDANT.",
+  "explanation": "Abundant means plentiful.",
+  "choices": [
+   "plentiful",
+   "scarce",
+   "useful",
+   "obvious"
+  ],
+  "answer": 0
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Choose the word closest in meaning to RELUCTANT.",
+  "explanation": "Reluctant means unwilling.",
+  "choices": [
+   "eager",
+   "tired",
+   "certain",
+   "unwilling"
+  ],
+  "answer": 3
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Choose the word closest in meaning to DILIGENT.",
+  "explanation": "Diligent means hardworking.",
+  "choices": [
+   "clever",
+   "careless",
+   "quiet",
+   "hardworking"
+  ],
+  "answer": 3
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Choose the word closest in meaning to PRUDENT.",
+  "explanation": "Prudent means sensible.",
+  "choices": [
+   "generous",
+   "reckless",
+   "sensible",
+   "talkative"
+  ],
+  "answer": 2
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Choose the word closest in meaning to CANDID.",
+  "explanation": "Candid means frank.",
+  "choices": [
+   "secretive",
+   "frank",
+   "polite",
+   "hesitant"
+  ],
+  "answer": 1
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Choose the word closest in meaning to MEAGER.",
+  "explanation": "Meager means scanty.",
+  "choices": [
+   "scanty",
+   "generous",
+   "unusual",
+   "heavy"
+  ],
+  "answer": 0
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Choose the word closest in meaning to TENACIOUS.",
+  "explanation": "Tenacious means persistent.",
+  "choices": [
+   "persistent",
+   "fragile",
+   "timid",
+   "boastful"
+  ],
+  "answer": 0
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Choose the word closest in meaning to AUSTERE.",
+  "explanation": "Austere means severe.",
+  "choices": [
+   "ornate",
+   "cheerful",
+   "wealthy",
+   "severe"
+  ],
+  "answer": 3
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Choose the word closest in meaning to BENIGN.",
+  "explanation": "Benign means harmless.",
+  "choices": [
+   "hostile",
+   "hidden",
+   "harmless",
+   "ancient"
+  ],
+  "answer": 2
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Choose the word closest in meaning to EPHEMERAL.",
+  "explanation": "Ephemeral means fleeting.",
+  "choices": [
+   "spiritual",
+   "fleeting",
+   "immense",
+   "hollow"
+  ],
+  "answer": 1
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Choose the word closest in meaning to LOQUACIOUS.",
+  "explanation": "Loquacious means talkative.",
+  "choices": [
+   "silent",
+   "talkative",
+   "stubborn",
+   "cheerful"
+  ],
+  "answer": 1
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Choose the word closest in meaning to OBSEQUIOUS.",
+  "explanation": "Obsequious means servile.",
+  "choices": [
+   "servile",
+   "rude",
+   "lazy",
+   "mysterious"
+  ],
+  "answer": 0
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Choose the word closest in meaning to PERFUNCTORY.",
+  "explanation": "Perfunctory means done without care.",
+  "choices": [
+   "thorough",
+   "joyful",
+   "sudden",
+   "done without care"
+  ],
+  "answer": 3
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Choose the word closest in meaning to CAPRICIOUS.",
+  "explanation": "Capricious means fickle.",
+  "choices": [
+   "stubborn",
+   "careful",
+   "fickle",
+   "cruel"
+  ],
+  "answer": 2
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Finger is to hand as toe is to ___",
+  "explanation": "A finger is part of a hand, and a toe is part of a foot.",
+  "choices": [
+   "shoe",
+   "knee",
+   "foot",
+   "sock"
+  ],
+  "answer": 2
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Bird is to nest as bee is to ___",
+  "explanation": "A nest is where a bird lives, and a hive is where bees live.",
+  "choices": [
+   "honey",
+   "hive",
+   "flower",
+   "wing"
+  ],
+  "answer": 1
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Pen is to write as knife is to ___",
+  "explanation": "A pen is used to write, and a knife is used to cut.",
+  "choices": [
+   "cut",
+   "sharp",
+   "kitchen",
+   "handle"
+  ],
+  "answer": 0
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Puppy is to dog as kitten is to ___",
+  "explanation": "A puppy is a young dog, and a kitten is a young cat.",
+  "choices": [
+   "bark",
+   "fur",
+   "milk",
+   "cat"
+  ],
+  "answer": 3
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Author is to book as composer is to ___",
+  "explanation": "An author creates a book, and a composer creates a symphony.",
+  "choices": [
+   "audience",
+   "piano",
+   "orchestra",
+   "symphony"
+  ],
+  "answer": 3
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Doctor is to patient as lawyer is to ___",
+  "explanation": "A doctor serves a patient, and a lawyer serves a client.",
+  "choices": [
+   "judge",
+   "court",
+   "client",
+   "law"
+  ],
+  "answer": 2
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Sculptor is to chisel as painter is to ___",
+  "explanation": "A chisel is a sculptor's tool, and a brush is a painter's tool.",
+  "choices": [
+   "gallery",
+   "brush",
+   "color",
+   "easel"
+  ],
+  "answer": 1
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Tadpole is to frog as caterpillar is to ___",
+  "explanation": "A tadpole grows into a frog, and a caterpillar grows into a butterfly.",
+  "choices": [
+   "butterfly",
+   "cocoon",
+   "leaf",
+   "insect"
+  ],
+  "answer": 0
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Timid is to bold as generous is to ___",
+  "explanation": "Timid and bold are opposites, as are generous and stingy.",
+  "choices": [
+   "stingy",
+   "kind",
+   "wealthy",
+   "careful"
+  ],
+  "answer": 0
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Drought is to water as famine is to ___",
+  "explanation": "A drought is a shortage of water, and a famine is a shortage of food.",
+  "choices": [
+   "farmer",
+   "crops",
+   "rain",
+   "food"
+  ],
+  "answer": 3
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Whisper is to shout as stroll is to ___",
+  "explanation": "A whisper is a quiet form of speaking and a shout a loud one, as a stroll is slow movement and a sprint is fast.",
+  "choices": [
+   "walk",
+   "rest",
+   "sprint",
+   "path"
+  ],
+  "answer": 2
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Barometer is to pressure as compass is to ___",
+  "explanation": "A barometer measures pressure, and a compass indicates direction.",
+  "choices": [
+   "north",
+   "direction",
+   "needle",
+   "map"
+  ],
+  "answer": 1
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Lethargic is to energy as destitute is to ___",
+  "explanation": "Lethargic means lacking energy, and destitute means lacking money.",
+  "choices": [
+   "charity",
+   "money",
+   "hunger",
+   "rags"
+  ],
+  "answer": 1
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Miser is to hoard as philanthropist is to ___",
+  "explanation": "A miser hoards wealth, and a philanthropist donates it.",
+  "choices": [
+   "donate",
+   "borrow",
+   "invest",
+   "earn"
+  ],
+  "answer": 0
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Eulogy is to praise as tirade is to ___",
+  "explanation": "A eulogy is a speech of praise, and a tirade is a long speech of angry condemnation.",
+  "choices": [
+   "applause",
+   "silence",
+   "humor",
+   "condemnation"
+  ],
+  "answer": 3
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Cacophony is to harmony as chaos is to ___",
+  "explanation": "Cacophony is the opposite of harmony, as chaos is the opposite of order.",
+  "choices": [
+   "noise",
+   "confusion",
+   "order",
+   "silence"
+  ],
+  "answer": 2
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Every morning, Tomas rowed his grandfather's old boat across the cove to collect the nets, and every morning the water seemed to push back against him. His grandfather, seated on the dock with a mug of tea, never offered advice. \"The sea is not your enemy,\" he said once, \"but it is not your servant, either.\" Tomas had rolled his eyes then. Now, as the oars slid through the gray water, he noticed that the current curved around the rocks in a predictable pattern. If he pulled left early, the tide carried him instead of fighting him. By the time he reached the nets, his arms barely ached. Back on the dock, he said nothing about his discovery, but his grandfather, studying the neat line of the wake, smiled into his mug.",
+  "stem": "Which statement best expresses the main idea of the passage?",
+  "explanation": "Tomas discovers that using the tide's pattern makes rowing easier.",
+  "choices": [
+   "Tomas decides that rowing is too difficult for him.",
+   "Tomas's grandfather teaches him to repair nets.",
+   "Tomas learns to work with the current rather than against it.",
+   "Tomas becomes angry at his grandfather's silence."
+  ],
+  "answer": 2
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "Every morning, Tomas rowed his grandfather's old boat across the cove to collect the nets, and every morning the water seemed to push back against him. His grandfather, seated on the dock with a mug of tea, never offered advice. \"The sea is not your enemy,\" he said once, \"but it is not your servant, either.\" Tomas had rolled his eyes then. Now, as the oars slid through the gray water, he noticed that the current curved around the rocks in a predictable pattern. If he pulled left early, the tide carried him instead of fighting him. By the time he reached the nets, his arms barely ached. Back on the dock, he said nothing about his discovery, but his grandfather, studying the neat line of the wake, smiled into his mug.",
+  "stem": "According to the passage, what did Tomas notice about the current?",
+  "explanation": "The passage states the current curved around the rocks in a predictable pattern.",
+  "choices": [
+   "It was strongest at midday.",
+   "It curved around the rocks in a predictable pattern.",
+   "It carried the nets away from the cove.",
+   "It changed direction every few minutes."
+  ],
+  "answer": 1
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "reading",
+  "difficulty": 3,
+  "passage": "Every morning, Tomas rowed his grandfather's old boat across the cove to collect the nets, and every morning the water seemed to push back against him. His grandfather, seated on the dock with a mug of tea, never offered advice. \"The sea is not your enemy,\" he said once, \"but it is not your servant, either.\" Tomas had rolled his eyes then. Now, as the oars slid through the gray water, he noticed that the current curved around the rocks in a predictable pattern. If he pulled left early, the tide carried him instead of fighting him. By the time he reached the nets, his arms barely ached. Back on the dock, he said nothing about his discovery, but his grandfather, studying the neat line of the wake, smiled into his mug.",
+  "stem": "The grandfather's remark that the sea \"is not your servant\" suggests that the sea",
+  "explanation": "A servant obeys commands, so the remark means the sea cannot be bossed around.",
+  "choices": [
+   "will not simply obey Tomas's wishes.",
+   "is dangerous and should be avoided.",
+   "belongs to the grandfather.",
+   "will always help those who ask politely."
+  ],
+  "answer": 0
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "Every morning, Tomas rowed his grandfather's old boat across the cove to collect the nets, and every morning the water seemed to push back against him. His grandfather, seated on the dock with a mug of tea, never offered advice. \"The sea is not your enemy,\" he said once, \"but it is not your servant, either.\" Tomas had rolled his eyes then. Now, as the oars slid through the gray water, he noticed that the current curved around the rocks in a predictable pattern. If he pulled left early, the tide carried him instead of fighting him. By the time he reached the nets, his arms barely ached. Back on the dock, he said nothing about his discovery, but his grandfather, studying the neat line of the wake, smiled into his mug.",
+  "stem": "Why does the grandfather most likely smile at the end?",
+  "explanation": "The neat wake shows Tomas has figured out what the grandfather hinted at.",
+  "choices": [
+   "He is amused that Tomas rowed badly.",
+   "He is pleased that the nets were full.",
+   "He plans to sell the boat.",
+   "He sees that Tomas has learned the lesson on his own."
+  ],
+  "answer": 3
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Ines Calloway never intended to become a famous bookbinder. Born in 1891 to a family of fishmongers in a northern port town, she took a job sweeping floors in a printing shop at fourteen. There she watched the binders stitch pages together and, in the evenings, practiced on scraps of leather the shop would have thrown away. Within a decade her work was sought by collectors, who praised the way her covers seemed to grow out of the books they protected rather than being fastened onto them. Calloway, however, resisted the label of artist. \"A binding is a promise that the pages will survive,\" she wrote in a letter. \"If it is beautiful too, that is a bonus.\" Her insistence on durability over display shaped a generation of craftspeople who followed her.",
+  "stem": "What is the main idea of the passage?",
+  "explanation": "The passage traces her path and her belief in lasting craftsmanship.",
+  "choices": [
+   "Ines Calloway was a fishmonger who disliked books.",
+   "Bookbinding is more artistic than printing.",
+   "Collectors in the 1890s sought rare leather.",
+   "Ines Calloway rose from humble beginnings to become a respected bookbinder who valued durability."
+  ],
+  "answer": 3
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "Ines Calloway never intended to become a famous bookbinder. Born in 1891 to a family of fishmongers in a northern port town, she took a job sweeping floors in a printing shop at fourteen. There she watched the binders stitch pages together and, in the evenings, practiced on scraps of leather the shop would have thrown away. Within a decade her work was sought by collectors, who praised the way her covers seemed to grow out of the books they protected rather than being fastened onto them. Calloway, however, resisted the label of artist. \"A binding is a promise that the pages will survive,\" she wrote in a letter. \"If it is beautiful too, that is a bonus.\" Her insistence on durability over display shaped a generation of craftspeople who followed her.",
+  "stem": "What job did Calloway first take in the printing shop?",
+  "explanation": "The passage says she began by sweeping floors at fourteen.",
+  "choices": [
+   "Stitching pages",
+   "Selling books to collectors",
+   "Sweeping floors",
+   "Cutting leather covers"
+  ],
+  "answer": 2
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "reading",
+  "difficulty": 3,
+  "passage": "Ines Calloway never intended to become a famous bookbinder. Born in 1891 to a family of fishmongers in a northern port town, she took a job sweeping floors in a printing shop at fourteen. There she watched the binders stitch pages together and, in the evenings, practiced on scraps of leather the shop would have thrown away. Within a decade her work was sought by collectors, who praised the way her covers seemed to grow out of the books they protected rather than being fastened onto them. Calloway, however, resisted the label of artist. \"A binding is a promise that the pages will survive,\" she wrote in a letter. \"If it is beautiful too, that is a bonus.\" Her insistence on durability over display shaped a generation of craftspeople who followed her.",
+  "stem": "As used in the passage, \"resisted\" most nearly means",
+  "explanation": "She did not want to be called an artist, so she declined the label.",
+  "choices": [
+   "physically fought against.",
+   "declined to accept.",
+   "pretended to enjoy.",
+   "slowly forgot."
+  ],
+  "answer": 1
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "Ines Calloway never intended to become a famous bookbinder. Born in 1891 to a family of fishmongers in a northern port town, she took a job sweeping floors in a printing shop at fourteen. There she watched the binders stitch pages together and, in the evenings, practiced on scraps of leather the shop would have thrown away. Within a decade her work was sought by collectors, who praised the way her covers seemed to grow out of the books they protected rather than being fastened onto them. Calloway, however, resisted the label of artist. \"A binding is a promise that the pages will survive,\" she wrote in a letter. \"If it is beautiful too, that is a bonus.\" Her insistence on durability over display shaped a generation of craftspeople who followed her.",
+  "stem": "Calloway's quoted remark about beauty suggests that she",
+  "explanation": "Calling beauty a bonus shows she put durability first.",
+  "choices": [
+   "considered function more important than appearance.",
+   "thought beauty was worthless.",
+   "disliked collectors.",
+   "wanted her books to be displayed."
+  ],
+  "answer": 0
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Mangrove forests grow where few other trees can survive: in salty mud that is flooded twice a day by the tide. Their tangled roots rise above the waterline like stilts, allowing the trees to take in air even when the soil beneath them contains almost none. Some species also pump excess salt out through their leaves, which can be seen as white crystals on sunny afternoons. These adaptations are only part of the story. The roots slow incoming waves, so sediment settles and builds up new land over time, and the sheltered water among them serves as a nursery for young fish. When coastal communities clear mangroves for shrimp farms, they often discover too late that storms hit harder and local fish catches shrink.",
+  "stem": "What is the main idea of the passage?",
+  "explanation": "The passage describes adaptations, benefits, and the cost of removing them.",
+  "choices": [
+   "Mangroves have special adaptations and provide benefits that make them valuable to coasts.",
+   "Mangroves grow faster than most other trees.",
+   "Shrimp farming is the best use of coastal land.",
+   "Salt crystals are harmful to young fish."
+  ],
+  "answer": 0
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "reading",
+  "difficulty": 3,
+  "passage": "Mangrove forests grow where few other trees can survive: in salty mud that is flooded twice a day by the tide. Their tangled roots rise above the waterline like stilts, allowing the trees to take in air even when the soil beneath them contains almost none. Some species also pump excess salt out through their leaves, which can be seen as white crystals on sunny afternoons. These adaptations are only part of the story. The roots slow incoming waves, so sediment settles and builds up new land over time, and the sheltered water among them serves as a nursery for young fish. When coastal communities clear mangroves for shrimp farms, they often discover too late that storms hit harder and local fish catches shrink.",
+  "stem": "According to the passage, how do some mangroves deal with excess salt?",
+  "explanation": "The passage says some species pump salt out through their leaves.",
+  "choices": [
+   "They store it in their roots.",
+   "They wash it away with each tide.",
+   "They absorb it into the mud.",
+   "They push it out through their leaves."
+  ],
+  "answer": 3
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "Mangrove forests grow where few other trees can survive: in salty mud that is flooded twice a day by the tide. Their tangled roots rise above the waterline like stilts, allowing the trees to take in air even when the soil beneath them contains almost none. Some species also pump excess salt out through their leaves, which can be seen as white crystals on sunny afternoons. These adaptations are only part of the story. The roots slow incoming waves, so sediment settles and builds up new land over time, and the sheltered water among them serves as a nursery for young fish. When coastal communities clear mangroves for shrimp farms, they often discover too late that storms hit harder and local fish catches shrink.",
+  "stem": "What can be inferred about coastal communities that clear mangroves?",
+  "explanation": "The last sentence says storms hit harder and catches shrink after clearing.",
+  "choices": [
+   "They always earn more money from shrimp.",
+   "They quickly replant the trees.",
+   "They may later suffer worse storm damage and smaller fish catches.",
+   "They no longer need protection from waves."
+  ],
+  "answer": 2
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "reading",
+  "difficulty": 5,
+  "passage": "Mangrove forests grow where few other trees can survive: in salty mud that is flooded twice a day by the tide. Their tangled roots rise above the waterline like stilts, allowing the trees to take in air even when the soil beneath them contains almost none. Some species also pump excess salt out through their leaves, which can be seen as white crystals on sunny afternoons. These adaptations are only part of the story. The roots slow incoming waves, so sediment settles and builds up new land over time, and the sheltered water among them serves as a nursery for young fish. When coastal communities clear mangroves for shrimp farms, they often discover too late that storms hit harder and local fish catches shrink.",
+  "stem": "The final sentence of the passage mainly serves to",
+  "explanation": "It describes what often happens after mangroves are cleared.",
+  "choices": [
+   "introduce a new species of tree.",
+   "show the consequences of removing mangroves.",
+   "criticize shrimp as a food.",
+   "explain how sediment forms."
+  ],
+  "answer": 1
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "reading",
+  "difficulty": 3,
+  "passage": "Sociologists use the term \"third place\" for spots that are neither home nor workplace, such as barbershops, community gardens, and public libraries. In a third place, status matters little: a retired electrician and a college student may end up chatting over the same chessboard. Researchers who studied a town after its only cafe closed found that residents reported feeling less connected to neighbors, even though most had plenty of online contacts. The finding does not prove that screens are to blame. It suggests instead that casual, repeated, face-to-face encounters build a sense of belonging that is hard to replace. Planners who treat such places as luxuries, the researchers argue, may be overlooking the quiet work they do holding a community together.",
+  "stem": "Which statement best summarizes the passage?",
+  "explanation": "The passage argues casual face-to-face encounters foster belonging.",
+  "choices": [
+   "Online contacts are more valuable than neighbors.",
+   "Informal gathering places help build community ties that are difficult to replace.",
+   "Cafes are the only true third places.",
+   "Planners should build more chessboards."
+  ],
+  "answer": 1
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Sociologists use the term \"third place\" for spots that are neither home nor workplace, such as barbershops, community gardens, and public libraries. In a third place, status matters little: a retired electrician and a college student may end up chatting over the same chessboard. Researchers who studied a town after its only cafe closed found that residents reported feeling less connected to neighbors, even though most had plenty of online contacts. The finding does not prove that screens are to blame. It suggests instead that casual, repeated, face-to-face encounters build a sense of belonging that is hard to replace. Planners who treat such places as luxuries, the researchers argue, may be overlooking the quiet work they do holding a community together.",
+  "stem": "What happened in the town studied by the researchers?",
+  "explanation": "The passage says researchers studied a town after its only cafe closed.",
+  "choices": [
+   "Its only cafe closed.",
+   "A new library opened.",
+   "Its community garden was destroyed.",
+   "Its barbershop was renovated."
+  ],
+  "answer": 0
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "Sociologists use the term \"third place\" for spots that are neither home nor workplace, such as barbershops, community gardens, and public libraries. In a third place, status matters little: a retired electrician and a college student may end up chatting over the same chessboard. Researchers who studied a town after its only cafe closed found that residents reported feeling less connected to neighbors, even though most had plenty of online contacts. The finding does not prove that screens are to blame. It suggests instead that casual, repeated, face-to-face encounters build a sense of belonging that is hard to replace. Planners who treat such places as luxuries, the researchers argue, may be overlooking the quiet work they do holding a community together.",
+  "stem": "The statement that the finding \"does not prove that screens are to blame\" shows that the researchers are",
+  "explanation": "They avoid claiming more than the evidence supports.",
+  "choices": [
+   "certain that screens are harmless.",
+   "opposed to technology.",
+   "unsure whether the study took place.",
+   "careful not to overstate their conclusions."
+  ],
+  "answer": 3
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "reading",
+  "difficulty": 5,
+  "passage": "Sociologists use the term \"third place\" for spots that are neither home nor workplace, such as barbershops, community gardens, and public libraries. In a third place, status matters little: a retired electrician and a college student may end up chatting over the same chessboard. Researchers who studied a town after its only cafe closed found that residents reported feeling less connected to neighbors, even though most had plenty of online contacts. The finding does not prove that screens are to blame. It suggests instead that casual, repeated, face-to-face encounters build a sense of belonging that is hard to replace. Planners who treat such places as luxuries, the researchers argue, may be overlooking the quiet work they do holding a community together.",
+  "stem": "The author's attitude toward planners who treat third places as luxuries is best described as",
+  "explanation": "The author suggests they may be overlooking important work, a mild criticism.",
+  "choices": [
+   "openly hostile.",
+   "completely approving.",
+   "gently critical.",
+   "indifferent."
+  ],
+  "answer": 2
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "When the Harrow Canal opened in 1824, the town of Millbrook celebrated with a parade of decorated barges. Within ten years, however, the canal's fortunes had begun to fade. Railways could carry coal faster, and by 1850 the barge traffic had dwindled to a trickle. Yet the canal did not disappear. Its towpaths, once trodden by horses, became popular walking routes, and the old warehouses were converted into workshops and apartments. Historians note that the canal's greatest legacy was not the cargo it carried but the town it created: Millbrook's streets, markets, and even its name grew up around the waterway. Today more visitors arrive each summer to admire the canal than ever used it for trade.",
+  "stem": "What is the main idea of the passage?",
+  "explanation": "The passage covers the decline and the lasting influence of the canal.",
+  "choices": [
+   "Railways were built to replace horses.",
+   "Millbrook was founded before the canal.",
+   "The Harrow Canal declined as a trade route but left a lasting legacy in Millbrook.",
+   "The canal still carries more cargo than ever."
+  ],
+  "answer": 2
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "When the Harrow Canal opened in 1824, the town of Millbrook celebrated with a parade of decorated barges. Within ten years, however, the canal's fortunes had begun to fade. Railways could carry coal faster, and by 1850 the barge traffic had dwindled to a trickle. Yet the canal did not disappear. Its towpaths, once trodden by horses, became popular walking routes, and the old warehouses were converted into workshops and apartments. Historians note that the canal's greatest legacy was not the cargo it carried but the town it created: Millbrook's streets, markets, and even its name grew up around the waterway. Today more visitors arrive each summer to admire the canal than ever used it for trade.",
+  "stem": "According to the passage, why did the canal's traffic decline?",
+  "explanation": "The passage states railways carried coal faster.",
+  "choices": [
+   "The barges were too decorated.",
+   "Railways could carry coal faster.",
+   "The towpaths were closed.",
+   "Horses were no longer available."
+  ],
+  "answer": 1
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "reading",
+  "difficulty": 3,
+  "passage": "When the Harrow Canal opened in 1824, the town of Millbrook celebrated with a parade of decorated barges. Within ten years, however, the canal's fortunes had begun to fade. Railways could carry coal faster, and by 1850 the barge traffic had dwindled to a trickle. Yet the canal did not disappear. Its towpaths, once trodden by horses, became popular walking routes, and the old warehouses were converted into workshops and apartments. Historians note that the canal's greatest legacy was not the cargo it carried but the town it created: Millbrook's streets, markets, and even its name grew up around the waterway. Today more visitors arrive each summer to admire the canal than ever used it for trade.",
+  "stem": "As used in the passage, \"dwindled\" most nearly means",
+  "explanation": "Traffic fell to a trickle, meaning it shrank.",
+  "choices": [
+   "shrank.",
+   "doubled.",
+   "stopped suddenly.",
+   "improved."
+  ],
+  "answer": 0
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "When the Harrow Canal opened in 1824, the town of Millbrook celebrated with a parade of decorated barges. Within ten years, however, the canal's fortunes had begun to fade. Railways could carry coal faster, and by 1850 the barge traffic had dwindled to a trickle. Yet the canal did not disappear. Its towpaths, once trodden by horses, became popular walking routes, and the old warehouses were converted into workshops and apartments. Historians note that the canal's greatest legacy was not the cargo it carried but the town it created: Millbrook's streets, markets, and even its name grew up around the waterway. Today more visitors arrive each summer to admire the canal than ever used it for trade.",
+  "stem": "The word \"Yet\" in the fifth sentence signals",
+  "explanation": "The canal declined but did not disappear, which is a contrast.",
+  "choices": [
+   "a further example of decline.",
+   "a new historical period.",
+   "a disagreement among historians.",
+   "a contrast with the canal's decline."
+  ],
+  "answer": 3
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Our school should keep its garden. Some argue that the plot behind the gym would make a better parking lot, and it is true that mornings are crowded. But a parking lot teaches nothing, while the garden teaches daily. Last spring, my science class measured soil acidity there, and the third graders learned fractions by dividing tomato harvests among their tables. The vegetables went to the food pantry on Maple Street, which received over two hundred pounds. Parking can be solved with a staggered drop-off schedule or a few spaces on the street; a living classroom cannot be so easily replaced. Before we pave over something that works, we should ask what we would be giving up.",
+  "stem": "The main purpose of the passage is to",
+  "explanation": "The opening sentence and argument defend the garden.",
+  "choices": [
+   "describe how to grow tomatoes.",
+   "explain fractions to third graders.",
+   "announce a new parking schedule.",
+   "persuade readers to keep the school garden."
+  ],
+  "answer": 3
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "Our school should keep its garden. Some argue that the plot behind the gym would make a better parking lot, and it is true that mornings are crowded. But a parking lot teaches nothing, while the garden teaches daily. Last spring, my science class measured soil acidity there, and the third graders learned fractions by dividing tomato harvests among their tables. The vegetables went to the food pantry on Maple Street, which received over two hundred pounds. Parking can be solved with a staggered drop-off schedule or a few spaces on the street; a living classroom cannot be so easily replaced. Before we pave over something that works, we should ask what we would be giving up.",
+  "stem": "How much food did the food pantry receive?",
+  "explanation": "The passage says the pantry received over two hundred pounds.",
+  "choices": [
+   "Exactly twenty pounds",
+   "Nearly a thousand pounds",
+   "Over two hundred pounds",
+   "None"
+  ],
+  "answer": 2
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "reading",
+  "difficulty": 3,
+  "passage": "Our school should keep its garden. Some argue that the plot behind the gym would make a better parking lot, and it is true that mornings are crowded. But a parking lot teaches nothing, while the garden teaches daily. Last spring, my science class measured soil acidity there, and the third graders learned fractions by dividing tomato harvests among their tables. The vegetables went to the food pantry on Maple Street, which received over two hundred pounds. Parking can be solved with a staggered drop-off schedule or a few spaces on the street; a living classroom cannot be so easily replaced. Before we pave over something that works, we should ask what we would be giving up.",
+  "stem": "Which technique does the author use in the second sentence?",
+  "explanation": "The author grants that mornings are crowded before disagreeing.",
+  "choices": [
+   "Quoting a scientific expert",
+   "Acknowledging a point made by the opposing side",
+   "Telling a personal story",
+   "Asking readers to vote"
+  ],
+  "answer": 1
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "Our school should keep its garden. Some argue that the plot behind the gym would make a better parking lot, and it is true that mornings are crowded. But a parking lot teaches nothing, while the garden teaches daily. Last spring, my science class measured soil acidity there, and the third graders learned fractions by dividing tomato harvests among their tables. The vegetables went to the food pantry on Maple Street, which received over two hundred pounds. Parking can be solved with a staggered drop-off schedule or a few spaces on the street; a living classroom cannot be so easily replaced. Before we pave over something that works, we should ask what we would be giving up.",
+  "stem": "As used in the passage, \"staggered\" most nearly means",
+  "explanation": "A staggered drop-off puts arrivals at different times.",
+  "choices": [
+   "spread out over different times.",
+   "unsteady.",
+   "expensive.",
+   "cancelled."
+  ],
+  "answer": 0
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "reading",
+  "difficulty": 3,
+  "passage": "Lena's hands hovered above the keys, two pale birds unwilling to land. Beyond the stage lights the audience was a dark, breathing ocean. She could hear her teacher's voice: begin softly and the rest will follow. The first note trembled, then steadied. By the second page the music was no longer something she was doing but something carrying her, a river with its own opinion about where to go. When the final chord faded, the silence that followed seemed to last an hour. Then the applause broke over her like rain on a tin roof, and she realized she had been holding her breath since the very first measure.",
+  "stem": "The comparison of Lena's hands to \"two pale birds unwilling to land\" suggests that she is",
+  "explanation": "Birds that will not land suggest hovering, hesitant hands.",
+  "choices": [
+   "nervous and hesitant to begin.",
+   "angry at her teacher.",
+   "bored with the piece.",
+   "confident and relaxed."
+  ],
+  "answer": 0
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "Lena's hands hovered above the keys, two pale birds unwilling to land. Beyond the stage lights the audience was a dark, breathing ocean. She could hear her teacher's voice: begin softly and the rest will follow. The first note trembled, then steadied. By the second page the music was no longer something she was doing but something carrying her, a river with its own opinion about where to go. When the final chord faded, the silence that followed seemed to last an hour. Then the applause broke over her like rain on a tin roof, and she realized she had been holding her breath since the very first measure.",
+  "stem": "The phrase \"a river with its own opinion about where to go\" suggests that the music",
+  "explanation": "A river carries things along, showing she was swept up in the music.",
+  "choices": [
+   "was difficult to remember.",
+   "was played too fast on purpose.",
+   "ended before she wanted it to.",
+   "seemed to move forward on its own momentum."
+  ],
+  "answer": 3
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "reading",
+  "difficulty": 5,
+  "passage": "Lena's hands hovered above the keys, two pale birds unwilling to land. Beyond the stage lights the audience was a dark, breathing ocean. She could hear her teacher's voice: begin softly and the rest will follow. The first note trembled, then steadied. By the second page the music was no longer something she was doing but something carrying her, a river with its own opinion about where to go. When the final chord faded, the silence that followed seemed to last an hour. Then the applause broke over her like rain on a tin roof, and she realized she had been holding her breath since the very first measure.",
+  "stem": "Which detail best supports the idea that Lena was fully absorbed in her playing?",
+  "explanation": "Not noticing her breath shows how deeply absorbed she was.",
+  "choices": [
+   "The audience was dark.",
+   "Her teacher gave advice before the recital.",
+   "She realized she had been holding her breath since the first measure.",
+   "The first note trembled."
+  ],
+  "answer": 2
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Scientists once assumed that the sleeping brain simply rests. Experiments with volunteers have since overturned that view. In one study, participants learned a list of word pairs and were then divided into two groups: one slept for eight hours, the other stayed awake. When tested the next day, the sleepers recalled roughly 20 percent more pairs. Brain scans suggest why: during deep sleep, patterns of activity from the day are replayed, apparently strengthening the connections that store new information. Researchers caution that sleep is not a substitute for study; a student who never reviews material has nothing for the brain to replay. Still, the results make all-night cramming look like a poor bargain.",
+  "stem": "What is the main idea of the passage?",
+  "explanation": "The passage reports that sleep boosted recall by strengthening connections.",
+  "choices": [
+   "The brain rests completely during sleep.",
+   "Sleep helps the brain strengthen new memories.",
+   "Students should avoid studying.",
+   "Volunteers dislike memory experiments."
+  ],
+  "answer": 1
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "reading",
+  "difficulty": 3,
+  "passage": "Scientists once assumed that the sleeping brain simply rests. Experiments with volunteers have since overturned that view. In one study, participants learned a list of word pairs and were then divided into two groups: one slept for eight hours, the other stayed awake. When tested the next day, the sleepers recalled roughly 20 percent more pairs. Brain scans suggest why: during deep sleep, patterns of activity from the day are replayed, apparently strengthening the connections that store new information. Researchers caution that sleep is not a substitute for study; a student who never reviews material has nothing for the brain to replay. Still, the results make all-night cramming look like a poor bargain.",
+  "stem": "In the study, how did the sleepers perform compared with the group that stayed awake?",
+  "explanation": "The passage states the sleepers recalled roughly 20 percent more.",
+  "choices": [
+   "They recalled about 20 percent fewer pairs.",
+   "They recalled about 20 percent more pairs.",
+   "They recalled exactly the same number.",
+   "They recalled twice as many pairs."
+  ],
+  "answer": 1
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "reading",
+  "difficulty": 5,
+  "passage": "Scientists once assumed that the sleeping brain simply rests. Experiments with volunteers have since overturned that view. In one study, participants learned a list of word pairs and were then divided into two groups: one slept for eight hours, the other stayed awake. When tested the next day, the sleepers recalled roughly 20 percent more pairs. Brain scans suggest why: during deep sleep, patterns of activity from the day are replayed, apparently strengthening the connections that store new information. Researchers caution that sleep is not a substitute for study; a student who never reviews material has nothing for the brain to replay. Still, the results make all-night cramming look like a poor bargain.",
+  "stem": "Which conclusion is best supported by the passage?",
+  "explanation": "The researchers note the brain needs studied material to replay.",
+  "choices": [
+   "Sleep helps most when a person has already studied the material.",
+   "Sleep can replace studying entirely.",
+   "Brain scans show the brain stops during deep sleep.",
+   "Eight hours of sleep guarantees a perfect score."
+  ],
+  "answer": 0
+ }
+]

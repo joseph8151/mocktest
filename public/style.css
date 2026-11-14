@@ -9,6 +9,7 @@
   --brand:#b31942;--hl:#f8d7de;--pop:#ff9db0;--brand-ink:#fffdf8;--navy-2:#0a3161;
   --map:#1d4ed8;--map-soft:#e3e9f7;--cat4:#6d3fc4;--cat4-soft:#ece5f7;--wida:#c25a12;--wida-soft:#f7e8dc;
   --scat:#946a06;--scat-soft:#f4ebd0;--ssat:#b31942;--ssat-soft:#f8e3e8;--isee:#0f7690;--isee-soft:#dcedf2;
+  --cogat:#0f7a5a;--sat:#0a3161;--toeflj:#a3318f;
   --ok:#1f7a4d;--bad:#b31942;--warn:#a86d10;
   --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
   --serif:"Noto Serif KR","Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
@@ -20,6 +21,7 @@
   --brand:#ff6b86;--hl:#4a1b2c;--pop:#ff9db0;--brand-ink:#0a1226;--navy-2:#6aa0ff;
   --map:#86a6ff;--map-soft:#16203d;--cat4:#bba2ff;--cat4-soft:#231b3f;--wida:#ff9d5e;--wida-soft:#35200f;
   --scat:#ecc65e;--scat-soft:#33290c;--ssat:#ff7f9a;--ssat-soft:#361520;--isee:#55d2f0;--isee-soft:#0e2c36;
+  --cogat:#5ee6a0;--sat:#6aa0ff;--toeflj:#e58bd4;
   --ok:#5ee6a0;--bad:#ff7f9a;--warn:#ecb84e;
 }}
 *{box-sizing:border-box}
@@ -161,6 +163,7 @@ details.faq p{color:var(--muted);padding:0 0 18px;margin:0;max-width:44em}
 .choice:hover{background:var(--bg);border-color:var(--ink-2);position:relative}
 .choice>b{flex:0 0 22px;font-family:var(--mono);font-size:.82rem;color:var(--muted);font-weight:500}
 .choice.sel{background:var(--ink);color:var(--bg);border-color:var(--ink);position:relative}.choice.sel>b{color:var(--pop)}
+.paymethods .btn.sel{background:var(--ink);color:var(--bg)}
 .choice img{max-height:76px;background:#fff;padding:2px}
 .qimg{display:block;max-width:100%;margin:4px 0 22px;background:#fff;border:1px solid var(--rule);padding:10px}
 .exam-foot{display:flex;justify-content:space-between;align-items:center;margin-top:28px;gap:10px}

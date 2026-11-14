@@ -1,6 +1,7 @@
 import { Hono } from 'hono';
 import { uid, now } from '../lib/util.js';
-import { requireUser } from '../lib/auth.js';
+import { requireUser, loadUser } from '../lib/auth.js';
+import { kcpEnabled, kcpRegister, kcpForm, kcpApprove, kcpCancel, kcpOrderId } from '../lib/kcp.js';
 import {
   fulfillOrder, stripeCreateCheckout, stripeVerify, stripeRetrieveSession,
   portoneVerifyAndFulfill, portoneGetPayment, portoneVerifyWebhook,
@@ -14,17 +15,18 @@ app.get('/config', (c) => c.json({
 }));
 
 app.get('/products', async (c) => {
-  const { results } = await c.env.DB.prepare('SELECT * FROM products WHERE active=1 ORDER BY sort,price_krw').all();
+  const admin = (await loadUser(c))?.role === 'admin'; // the 1,000-won payment test product is only visible to admins
+  const { results } = await c.env.DB.prepare(`SELECT * FROM products WHERE active=1 OR (?1 AND id='p-test') ORDER BY sort,price_krw`).bind(admin ? 1 : 0).all();
   return c.json({
     products: results,
-    payment: { stripe: !!c.env.STRIPE_SECRET_KEY, portone: !!(c.env.PORTONE_STORE_ID && c.env.PORTONE_CHANNEL_KEY),
+    payment: { kcp: kcpEnabled(c.env), stripe: !!c.env.STRIPE_SECRET_KEY, portone: !!(c.env.PORTONE_STORE_ID && c.env.PORTONE_CHANNEL_KEY),
       portoneStoreId: c.env.PORTONE_STORE_ID || null, portoneChannelKey: c.env.PORTONE_CHANNEL_KEY || null },
   });
 });
 
 async function newOrder(c, productId, provider) {
   const user = c.get('user');
-  const product = await c.env.DB.prepare('SELECT * FROM products WHERE id=? AND active=1').bind(productId).first();
+  const product = await c.env.DB.prepare(`SELECT * FROM products WHERE id=?1 AND (active=1 OR (?2 AND id='p-test'))`).bind(productId, user.role === 'admin' ? 1 : 0).first();
   if (!product) return {};
   const currency = provider === 'stripe' ? 'USD' : 'KRW';
   const amount = provider === 'stripe' ? product.price_usd_cents : product.price_krw;
@@ -96,7 +98,7 @@ app.post('/pay/portone/complete', requireUser, async (c) => {
   const o = await c.env.DB.prepare('SELECT id FROM orders WHERE id=? AND user_id=? AND provider=?').bind(orderId, c.get('user').id, 'portone').first();
   if (!o) return c.json({ error: 'not found' }, 404);
   const r = await portoneVerifyAndFulfill(c.env, o.id);
-  return c.json(r, r.ok ? 200 : 400);
+  return c.json(r, r.ok || r.pending ? 200 : 400);
 });
 
 app.post('/webhooks/portone', async (c) => {
@@ -105,11 +107,61 @@ app.post('/webhooks/portone', async (c) => {
     return c.json({ error: 'bad signature' }, 400);
   const ev = JSON.parse(raw);
   const paymentId = ev.data?.paymentId;
-  if (paymentId && /Transaction\.(Paid|Ready)/.test(ev.type || '')) {
+  if (paymentId && /Transaction\.(Paid|Ready|VirtualAccountIssued)/.test(ev.type || '')) {
     const o = await c.env.DB.prepare('SELECT id FROM orders WHERE provider=? AND provider_ref=?').bind('portone', paymentId).first();
     if (o) await portoneVerifyAndFulfill(c.env, o.id);
   }
+  if (paymentId && /Transaction\.(Failed|Cancelled)/.test(ev.type || '')) {
+    await c.env.DB.prepare(`UPDATE orders SET status='failed' WHERE provider='portone' AND provider_ref=? AND status IN ('pending','awaiting_deposit')`).bind(paymentId).run();
+  }
   return c.json({ ok: true });
+});
+
+/* ---- KCP direct ("표준웹") ---- */
+app.post('/pay/kcp/register', requireUser, async (c) => {
+  if (!kcpEnabled(c.env)) return c.json({ error: 'KCP가 설정되지 않았습니다.' }, 503);
+  const { productId, payMethod } = await c.req.json().catch(() => ({}));
+  const { user, product, order } = await newOrder(c, productId, 'kcp');
+  if (!product) return c.json({ error: '상품을 찾을 수 없습니다.' }, 404);
+  const ordr = kcpOrderId(order.id), retUrl = `${c.env.SITE_URL}/api/pay/kcp/return`;
+  await c.env.DB.prepare(`INSERT INTO orders (id,user_id,product_id,provider,provider_ref,amount,currency,status,created_at) VALUES (?,?,?,?,?,?,?,'pending',?)`)
+    .bind(order.id, user.id, product.id, 'kcp', ordr, order.amount, 'KRW', order.created_at).run();
+  const args = { orderId: ordr, amount: order.amount, goodName: product.title, payMethod, retUrl, userAgent: c.req.header('user-agent') };
+  const reg = await kcpRegister(c.env, args);
+  return c.json({ orderId: order.id, form: kcpForm(c.env, reg, args) });
+});
+
+// KCP posts the buyer back here (cross-site form POST, no cookie needed): approve server-side, verify the amount, then grant.
+app.post('/pay/kcp/return', async (c) => {
+  const b = await c.req.parseBody();
+  const o = await c.env.DB.prepare(`SELECT * FROM orders WHERE provider='kcp' AND provider_ref=?`).bind(String(b.ordr_idxx || '')).first();
+  const home = c.env.SITE_URL;
+  if (!o) return c.redirect(`${home}/#/pay/cancel`, 303);
+  if (o.status === 'paid') return c.redirect(`${home}/#/pay/success?order=${o.id}&provider=kcp`, 303);
+  if (b.res_cd !== '0000') {
+    await c.env.DB.prepare(`UPDATE orders SET status='failed' WHERE id=? AND status='pending'`).bind(o.id).run();
+    return c.redirect(`${home}/#/pay/cancel`, 303);
+  }
+  try {
+    const a = await kcpApprove(c.env, b);
+    if (!a.ok) throw new Error('approval refused');
+    if (a.amount !== o.amount) { // never grant on a mismatching amount; try to void what KCP just approved
+      await c.env.DB.prepare(`UPDATE orders SET status='failed' WHERE id=?`).bind(o.id).run();
+      if (a.tno) await kcpCancel(c.env, { tno: a.tno, reason: '금액 불일치 자동취소' }).catch(() => {});
+      return c.redirect(`${home}/#/pay/cancel`, 303);
+    }
+    await c.env.DB.prepare('UPDATE orders SET meta=? WHERE id=?').bind(JSON.stringify({ tno: a.tno }), o.id).run();
+    await fulfillOrder(c.env, o.id, o.provider_ref);
+    return c.redirect(`${home}/#/pay/success?order=${o.id}&provider=kcp`, 303);
+  } catch (e) {
+    console.error('kcp approve', e);
+    return c.redirect(`${home}/#/pay/cancel`, 303);
+  }
+});
+
+app.get('/orders/:id/status', requireUser, async (c) => {
+  const o = await c.env.DB.prepare('SELECT status FROM orders WHERE id=? AND user_id=?').bind(c.req.param('id'), c.get('user').id).first();
+  return o ? c.json({ status: o.status }) : c.json({ error: 'not found' }, 404);
 });
 
 app.get('/orders', requireUser, async (c) => {

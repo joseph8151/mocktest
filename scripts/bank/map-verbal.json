@@ -1,0 +1,1111 @@
+[
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "Mara carried the small blue bucket down to the shore every morning. The tide had gone out, and shiny shells lay scattered across the wet sand. She filled her bucket with only the smoothest ones. By the time the sun was high, her arms were tired, but her bucket was full. She planned to paint each shell and give them to her grandmother as a gift.",
+  "stem": "What is the main idea of the passage?",
+  "choices": [
+   "Mara collects shells to make gifts for her grandmother.",
+   "Mara is afraid of the ocean.",
+   "Mara wants to build a sandcastle.",
+   "Mara is looking for a lost bucket."
+  ],
+  "answer": 0,
+  "explanation": "Mara gathers shells she plans to paint for her grandmother."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "Mara carried the small blue bucket down to the shore every morning. The tide had gone out, and shiny shells lay scattered across the wet sand. She filled her bucket with only the smoothest ones. By the time the sun was high, her arms were tired, but her bucket was full. She planned to paint each shell and give them to her grandmother as a gift.",
+  "stem": "Which shells does Mara put in her bucket?",
+  "choices": [
+   "Every shell she finds",
+   "Only the biggest ones",
+   "Only the smoothest ones",
+   "The ones that are already painted"
+  ],
+  "answer": 2,
+  "explanation": "The passage says she filled her bucket with only the smoothest shells."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Mara carried the small blue bucket down to the shore every morning. The tide had gone out, and shiny shells lay scattered across the wet sand. She filled her bucket with only the smoothest ones. By the time the sun was high, her arms were tired, but her bucket was full. She planned to paint each shell and give them to her grandmother as a gift.",
+  "stem": "Why were Mara's arms tired by midday?",
+  "choices": [
+   "She had been swimming all morning.",
+   "She had carried a bucket full of shells.",
+   "She had been painting all morning.",
+   "She had walked to her grandmother's house."
+  ],
+  "answer": 1,
+  "explanation": "Her full bucket was heavy after hours of collecting."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Honey bees communicate through dancing. When a worker bee finds a good patch of flowers, it returns to the hive and performs a 'waggle dance.' The angle of the dance shows other bees which direction to fly relative to the sun, and the length of the waggle tells how far away the flowers are. Scientists studied this behavior for decades before they understood it. Today, the waggle dance is considered one of the most remarkable examples of animal communication.",
+  "stem": "What is the main idea of the passage?",
+  "choices": [
+   "Honey bees cannot find flowers without the sun.",
+   "Scientists dislike studying bees.",
+   "Bees build hives only near flowers.",
+   "Honey bees use a dance to tell each other where food is."
+  ],
+  "answer": 3,
+  "explanation": "The passage explains the waggle dance as bee communication about flowers."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Honey bees communicate through dancing. When a worker bee finds a good patch of flowers, it returns to the hive and performs a 'waggle dance.' The angle of the dance shows other bees which direction to fly relative to the sun, and the length of the waggle tells how far away the flowers are. Scientists studied this behavior for decades before they understood it. Today, the waggle dance is considered one of the most remarkable examples of animal communication.",
+  "stem": "According to the passage, what does the length of the waggle tell other bees?",
+  "choices": [
+   "Which direction the sun is",
+   "How many bees should come",
+   "What kind of flowers are there",
+   "How far away the flowers are"
+  ],
+  "answer": 3,
+  "explanation": "The text says the length of the waggle shows distance."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 3,
+  "passage": "Honey bees communicate through dancing. When a worker bee finds a good patch of flowers, it returns to the hive and performs a 'waggle dance.' The angle of the dance shows other bees which direction to fly relative to the sun, and the length of the waggle tells how far away the flowers are. Scientists studied this behavior for decades before they understood it. Today, the waggle dance is considered one of the most remarkable examples of animal communication.",
+  "stem": "As used in the passage, 'remarkable' most nearly means",
+  "choices": [
+   "easy to forget",
+   "worth noticing",
+   "dangerous",
+   "ordinary"
+  ],
+  "answer": 1,
+  "explanation": "Calling it one of the best examples means it is worth noticing."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 3,
+  "passage": "Honey bees communicate through dancing. When a worker bee finds a good patch of flowers, it returns to the hive and performs a 'waggle dance.' The angle of the dance shows other bees which direction to fly relative to the sun, and the length of the waggle tells how far away the flowers are. Scientists studied this behavior for decades before they understood it. Today, the waggle dance is considered one of the most remarkable examples of animal communication.",
+  "stem": "Why did the author most likely write this passage?",
+  "choices": [
+   "To persuade readers to keep bees",
+   "To tell a story about a lost bee",
+   "To explain how bees share information",
+   "To compare bees with ants"
+  ],
+  "answer": 2,
+  "explanation": "The passage is informational and explains the waggle dance."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 3,
+  "passage": "The old oak stretches its arms to the sky,\nHolding the clouds as they wander by.\nIts roots, like stories, run deep in the ground,\nWhispering secrets without a sound.",
+  "stem": "Which line from the poem contains a simile?",
+  "choices": [
+   "Its roots, like stories, run deep in the ground",
+   "The old oak stretches its arms to the sky",
+   "Holding the clouds as they wander by",
+   "Whispering secrets without a sound"
+  ],
+  "answer": 0,
+  "explanation": "Only this line uses 'like' to compare two unlike things."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 3,
+  "passage": "The old oak stretches its arms to the sky,\nHolding the clouds as they wander by.\nIts roots, like stories, run deep in the ground,\nWhispering secrets without a sound.",
+  "stem": "The phrase 'stretches its arms to the sky' is an example of",
+  "choices": [
+   "simile",
+   "personification",
+   "hyperbole",
+   "onomatopoeia"
+  ],
+  "answer": 1,
+  "explanation": "The tree is given a human body part and action."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "The old oak stretches its arms to the sky,\nHolding the clouds as they wander by.\nIts roots, like stories, run deep in the ground,\nWhispering secrets without a sound.",
+  "stem": "What does comparing the roots to stories suggest?",
+  "choices": [
+   "The tree is dangerous.",
+   "The tree is growing very quickly.",
+   "Stories are written on the leaves.",
+   "The tree has a long history hidden beneath the surface."
+  ],
+  "answer": 3,
+  "explanation": "Deep roots like stories imply old, unseen history."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 3,
+  "passage": "In many cities, empty lots that once collected trash are being transformed into community gardens. Neighbors who had never met now plant tomatoes side by side. Beyond providing fresh vegetables, these gardens reduce the heat that pavement traps, give rainwater a place to soak into the soil, and create spaces where people gather. However, some gardens struggle because the land is borrowed, and owners may sell it with little warning.",
+  "stem": "Which statement best expresses the main idea?",
+  "choices": [
+   "Community gardens offer several benefits but can be unstable.",
+   "Empty lots should be sold quickly.",
+   "Pavement is the best surface for cities.",
+   "Tomatoes are the easiest vegetable to grow."
+  ],
+  "answer": 0,
+  "explanation": "The passage lists benefits and then a challenge."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "In many cities, empty lots that once collected trash are being transformed into community gardens. Neighbors who had never met now plant tomatoes side by side. Beyond providing fresh vegetables, these gardens reduce the heat that pavement traps, give rainwater a place to soak into the soil, and create spaces where people gather. However, some gardens struggle because the land is borrowed, and owners may sell it with little warning.",
+  "stem": "The word 'However' signals that the next sentence will",
+  "choices": [
+   "give another benefit.",
+   "define a new term.",
+   "present a problem that contrasts with the benefits.",
+   "describe the history of gardens."
+  ],
+  "answer": 2,
+  "explanation": "'However' marks a contrast with the preceding positives."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "In many cities, empty lots that once collected trash are being transformed into community gardens. Neighbors who had never met now plant tomatoes side by side. Beyond providing fresh vegetables, these gardens reduce the heat that pavement traps, give rainwater a place to soak into the soil, and create spaces where people gather. However, some gardens struggle because the land is borrowed, and owners may sell it with little warning.",
+  "stem": "What can be inferred about a garden on borrowed land?",
+  "choices": [
+   "It will always grow more vegetables.",
+   "It does not need rainwater.",
+   "It might be lost if the owner decides to sell.",
+   "It is owned by the neighbors."
+  ],
+  "answer": 2,
+  "explanation": "The owner may sell with little warning, so the garden is at risk."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 3,
+  "passage": "Theo had rehearsed the speech forty times in his bedroom, yet when he stepped onto the stage his tongue felt like a lump of wet clay. The auditorium, usually echoing and empty, now hummed with a hundred murmuring voices. He glanced at his note cards, and the words swam like minnows. Then he spotted his sister in the third row, giving him an exaggerated thumbs-up, and a laugh escaped him. The knot in his chest loosened, and he began to speak.",
+  "stem": "What does the simile about Theo's tongue suggest?",
+  "choices": [
+   "It felt heavy and hard to move because he was nervous.",
+   "It was covered with dirt.",
+   "He had been eating clay.",
+   "It was cold from the air."
+  ],
+  "answer": 0,
+  "explanation": "Wet clay is heavy and sticky, showing stage fright."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 3,
+  "passage": "Theo had rehearsed the speech forty times in his bedroom, yet when he stepped onto the stage his tongue felt like a lump of wet clay. The auditorium, usually echoing and empty, now hummed with a hundred murmuring voices. He glanced at his note cards, and the words swam like minnows. Then he spotted his sister in the third row, giving him an exaggerated thumbs-up, and a laugh escaped him. The knot in his chest loosened, and he began to speak.",
+  "stem": "As used in the passage, 'exaggerated' most nearly means",
+  "choices": [
+   "quiet",
+   "hidden",
+   "mistaken",
+   "overdone"
+  ],
+  "answer": 3,
+  "explanation": "A big, silly thumbs-up is overdone."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "Theo had rehearsed the speech forty times in his bedroom, yet when he stepped onto the stage his tongue felt like a lump of wet clay. The auditorium, usually echoing and empty, now hummed with a hundred murmuring voices. He glanced at his note cards, and the words swam like minnows. Then he spotted his sister in the third row, giving him an exaggerated thumbs-up, and a laugh escaped him. The knot in his chest loosened, and he began to speak.",
+  "stem": "Why did the knot in Theo's chest loosen?",
+  "choices": [
+   "He suddenly remembered his speech.",
+   "His sister's silly gesture made him laugh and relax.",
+   "The audience left the room.",
+   "He found his lost note cards."
+  ],
+  "answer": 1,
+  "explanation": "The thumbs-up made him laugh, easing his nerves."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "Theo had rehearsed the speech forty times in his bedroom, yet when he stepped onto the stage his tongue felt like a lump of wet clay. The auditorium, usually echoing and empty, now hummed with a hundred murmuring voices. He glanced at his note cards, and the words swam like minnows. Then he spotted his sister in the third row, giving him an exaggerated thumbs-up, and a laugh escaped him. The knot in his chest loosened, and he began to speak.",
+  "stem": "How does Theo's mood change in the passage?",
+  "choices": [
+   "From nervous to calmer",
+   "From angry to proud",
+   "From bored to excited",
+   "From confident to scared"
+  ],
+  "answer": 0,
+  "explanation": "He starts tense and relaxes after laughing."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "Long before refrigerators, people preserved food using methods that sound surprising today. Salting drew moisture out of meat, depriving bacteria of the water they need to multiply. Pickling immersed vegetables in acidic vinegar, creating an environment where most microbes cannot survive. Smoking coated foods in compounds that slowed spoilage while adding flavor. Although these techniques were born from necessity, many remain popular because people enjoy the tastes they produce.",
+  "stem": "What is the main idea of the passage?",
+  "choices": [
+   "Refrigerators were invented to replace salt.",
+   "Vinegar is the best preservative.",
+   "People once used several methods to keep food from spoiling before refrigeration.",
+   "Bacteria are helpful to food."
+  ],
+  "answer": 2,
+  "explanation": "The passage describes salting, pickling, and smoking as old preservation methods."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "Long before refrigerators, people preserved food using methods that sound surprising today. Salting drew moisture out of meat, depriving bacteria of the water they need to multiply. Pickling immersed vegetables in acidic vinegar, creating an environment where most microbes cannot survive. Smoking coated foods in compounds that slowed spoilage while adding flavor. Although these techniques were born from necessity, many remain popular because people enjoy the tastes they produce.",
+  "stem": "According to the passage, why does salting help preserve meat?",
+  "choices": [
+   "It adds acid to the meat.",
+   "It removes moisture that bacteria need.",
+   "It coats the meat with smoke.",
+   "It freezes the meat."
+  ],
+  "answer": 1,
+  "explanation": "Salt draws out water, depriving bacteria of what they need."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "Long before refrigerators, people preserved food using methods that sound surprising today. Salting drew moisture out of meat, depriving bacteria of the water they need to multiply. Pickling immersed vegetables in acidic vinegar, creating an environment where most microbes cannot survive. Smoking coated foods in compounds that slowed spoilage while adding flavor. Although these techniques were born from necessity, many remain popular because people enjoy the tastes they produce.",
+  "stem": "As used in the passage, 'depriving' most nearly means",
+  "choices": [
+   "giving extra to",
+   "teaching",
+   "protecting",
+   "keeping from having"
+  ],
+  "answer": 3,
+  "explanation": "Bacteria are kept from getting the water they need."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 5,
+  "passage": "Long before refrigerators, people preserved food using methods that sound surprising today. Salting drew moisture out of meat, depriving bacteria of the water they need to multiply. Pickling immersed vegetables in acidic vinegar, creating an environment where most microbes cannot survive. Smoking coated foods in compounds that slowed spoilage while adding flavor. Although these techniques were born from necessity, many remain popular because people enjoy the tastes they produce.",
+  "stem": "What does the final sentence suggest about these old methods?",
+  "choices": [
+   "They are no longer used.",
+   "They are unsafe.",
+   "They were invented recently.",
+   "They are still valued for reasons beyond necessity."
+  ],
+  "answer": 3,
+  "explanation": "They remain popular because people enjoy the tastes."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 5,
+  "passage": "The lighthouse keeper's log, which had once recorded every passing ship, now lay open to a page unmarked since spring. Ines ran her finger along the blank lines. Automated beacons had replaced her grandfather's lamp years ago, yet the tower remained, stubbornly upright, like a sentry nobody had thought to relieve. She wondered whether it was loyalty or simple neglect that kept the town from tearing it down.",
+  "stem": "The comparison of the tower to a 'sentry nobody had thought to relieve' suggests that the tower",
+  "choices": [
+   "was recently built.",
+   "keeps standing guard though its purpose has ended.",
+   "is guarded by soldiers.",
+   "is about to be torn down."
+  ],
+  "answer": 1,
+  "explanation": "A sentry never relieved keeps his post after the need is gone."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 5,
+  "passage": "The lighthouse keeper's log, which had once recorded every passing ship, now lay open to a page unmarked since spring. Ines ran her finger along the blank lines. Automated beacons had replaced her grandfather's lamp years ago, yet the tower remained, stubbornly upright, like a sentry nobody had thought to relieve. She wondered whether it was loyalty or simple neglect that kept the town from tearing it down.",
+  "stem": "Which word best describes Ines's feelings?",
+  "choices": [
+   "furious",
+   "bored",
+   "wistful",
+   "terrified"
+  ],
+  "answer": 2,
+  "explanation": "She gazes at the blank log and wonders about the tower's fate, with quiet longing."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 5,
+  "passage": "The lighthouse keeper's log, which had once recorded every passing ship, now lay open to a page unmarked since spring. Ines ran her finger along the blank lines. Automated beacons had replaced her grandfather's lamp years ago, yet the tower remained, stubbornly upright, like a sentry nobody had thought to relieve. She wondered whether it was loyalty or simple neglect that kept the town from tearing it down.",
+  "stem": "What does the unmarked page in the log most likely symbolize?",
+  "choices": [
+   "The end of the lighthouse's active role",
+   "A mistake by her grandfather",
+   "A secret message",
+   "A coming storm"
+  ],
+  "answer": 0,
+  "explanation": "No ships are recorded because automation replaced the keeper."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "Economists often describe a 'tragedy of the commons': when many people share a limited resource, each has an incentive to take more than a fair portion, since the cost of overuse is spread among everyone while the benefit goes to the individual. A pasture shared by herders is the classic example. Critics point out, however, that many communities have managed shared resources sustainably through agreed-upon rules, suggesting the 'tragedy' is not inevitable.",
+  "stem": "Which statement best summarizes the passage?",
+  "choices": [
+   "Herders should never share pastures.",
+   "Shared resources may be overused, though communities can prevent this.",
+   "Economists disagree about what a pasture is.",
+   "Resources always run out eventually."
+  ],
+  "answer": 1,
+  "explanation": "It describes the problem and then a counterargument."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "Economists often describe a 'tragedy of the commons': when many people share a limited resource, each has an incentive to take more than a fair portion, since the cost of overuse is spread among everyone while the benefit goes to the individual. A pasture shared by herders is the classic example. Critics point out, however, that many communities have managed shared resources sustainably through agreed-upon rules, suggesting the 'tragedy' is not inevitable.",
+  "stem": "As used in the passage, 'incentive' most nearly means",
+  "choices": [
+   "punishment",
+   "warning",
+   "agreement",
+   "motivation"
+  ],
+  "answer": 3,
+  "explanation": "An incentive is a reason that motivates action."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 5,
+  "passage": "Economists often describe a 'tragedy of the commons': when many people share a limited resource, each has an incentive to take more than a fair portion, since the cost of overuse is spread among everyone while the benefit goes to the individual. A pasture shared by herders is the classic example. Critics point out, however, that many communities have managed shared resources sustainably through agreed-upon rules, suggesting the 'tragedy' is not inevitable.",
+  "stem": "Why does each person have an incentive to overuse a shared resource?",
+  "choices": [
+   "The individual gets the full benefit while the cost is shared.",
+   "Shared resources have no value.",
+   "Everyone dislikes sharing.",
+   "Herders do not own their animals."
+  ],
+  "answer": 0,
+  "explanation": "The passage states the benefit is individual and the cost is spread out."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 5,
+  "passage": "Economists often describe a 'tragedy of the commons': when many people share a limited resource, each has an incentive to take more than a fair portion, since the cost of overuse is spread among everyone while the benefit goes to the individual. A pasture shared by herders is the classic example. Critics point out, however, that many communities have managed shared resources sustainably through agreed-upon rules, suggesting the 'tragedy' is not inevitable.",
+  "stem": "How does the final sentence relate to the rest of the passage?",
+  "choices": [
+   "It restates the first sentence.",
+   "It gives another example of a herder.",
+   "It offers a counterpoint to the idea that the tragedy is inevitable.",
+   "It defines the word 'commons'."
+  ],
+  "answer": 2,
+  "explanation": "Critics argue agreed-upon rules can prevent the tragedy."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "On Saturday, Diego's dog Pepper dug a hole under the fence and escaped. Diego searched the park, the pond, and the baker's alley. At last he heard a happy bark from the community pool, where Pepper was splashing in the shallow end, soaked and proud. 'You silly dog,' Diego sighed, trying not to smile.",
+  "stem": "Where did Diego finally find Pepper?",
+  "choices": [
+   "In the park",
+   "At the pond",
+   "At the community pool",
+   "In the baker's alley"
+  ],
+  "answer": 2,
+  "explanation": "Pepper was splashing in the pool's shallow end."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "On Saturday, Diego's dog Pepper dug a hole under the fence and escaped. Diego searched the park, the pond, and the baker's alley. At last he heard a happy bark from the community pool, where Pepper was splashing in the shallow end, soaked and proud. 'You silly dog,' Diego sighed, trying not to smile.",
+  "stem": "How does Diego most likely feel at the end?",
+  "choices": [
+   "Relieved and amused",
+   "Furious",
+   "Sad",
+   "Bored"
+  ],
+  "answer": 0,
+  "explanation": "He sighs and tries not to smile, showing relief and amusement."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "On Saturday, Diego's dog Pepper dug a hole under the fence and escaped. Diego searched the park, the pond, and the baker's alley. At last he heard a happy bark from the community pool, where Pepper was splashing in the shallow end, soaked and proud. 'You silly dog,' Diego sighed, trying not to smile.",
+  "stem": "As used in the passage, 'shallow' describes the end of the pool as",
+  "choices": [
+   "very cold",
+   "crowded",
+   "noisy",
+   "not deep"
+  ],
+  "answer": 3,
+  "explanation": "Shallow means not deep."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 3,
+  "stem": "Which word means almost the same as 'reluctant'?",
+  "choices": [
+   "eager",
+   "unwilling",
+   "careless",
+   "generous"
+  ],
+  "answer": 1,
+  "explanation": "Reluctant means unwilling or hesitant."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 2,
+  "stem": "Which word means almost the same as 'abundant'?",
+  "choices": [
+   "plentiful",
+   "rare",
+   "tiny",
+   "fragile"
+  ],
+  "answer": 0,
+  "explanation": "Abundant means existing in large amounts."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 1,
+  "stem": "Which word is the opposite of 'ancient'?",
+  "choices": [
+   "old",
+   "dusty",
+   "modern",
+   "famous"
+  ],
+  "answer": 2,
+  "explanation": "Ancient means very old; modern is its opposite."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 1,
+  "stem": "Glove is to hand as sock is to ____.",
+  "choices": [
+   "shoe",
+   "foot",
+   "leg",
+   "finger"
+  ],
+  "answer": 1,
+  "explanation": "A glove covers a hand; a sock covers a foot."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 4,
+  "stem": "The detective's ____ observation, noticing even a single loose thread, solved the case. Which word best completes the sentence?",
+  "choices": [
+   "careless",
+   "hasty",
+   "vague",
+   "meticulous"
+  ],
+  "answer": 3,
+  "explanation": "Noticing tiny details shows careful, precise attention."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 5,
+  "stem": "Which word best describes something that lasts only a very short time?",
+  "choices": [
+   "perpetual",
+   "robust",
+   "ornate",
+   "ephemeral"
+  ],
+  "answer": 3,
+  "explanation": "Ephemeral means short-lived."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 1,
+  "stem": "Which word needs a capital letter in this sentence? My cousin lives in denver.",
+  "choices": [
+   "denver",
+   "cousin",
+   "lives",
+   "in"
+  ],
+  "answer": 0,
+  "explanation": "Denver is the name of a city, so it is capitalized."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 1,
+  "stem": "Choose the correct word: The dog wagged ____ tail.",
+  "choices": [
+   "it's",
+   "its'",
+   "its",
+   "is"
+  ],
+  "answer": 2,
+  "explanation": "'Its' is the possessive form; 'it's' means 'it is'."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 1,
+  "stem": "Which sentence has correct end punctuation?",
+  "choices": [
+   "Where did you put my backpack.",
+   "Where did you put my backpack?",
+   "Where did you put my backpack,",
+   "Where did you put my backpack:"
+  ],
+  "answer": 1,
+  "explanation": "A direct question ends with a question mark."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 1,
+  "stem": "Choose the correct word: Tom and Sam ____ to the store yesterday.",
+  "choices": [
+   "goed",
+   "gone",
+   "going",
+   "went"
+  ],
+  "answer": 3,
+  "explanation": "'Went' is the past tense of 'go'."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 2,
+  "stem": "Which is a complete sentence?",
+  "choices": [
+   "After the rain stopped.",
+   "Playing outside in the park.",
+   "Because we were tired.",
+   "After the rain stopped, we played outside."
+  ],
+  "answer": 3,
+  "explanation": "It has an independent clause with a subject and verb."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 2,
+  "stem": "Which sentence uses commas correctly in a series?",
+  "choices": [
+   "We bought, apples bananas and grapes.",
+   "We bought apples, bananas, and grapes.",
+   "We bought apples bananas, and, grapes.",
+   "We bought apples, bananas and, grapes."
+  ],
+  "answer": 1,
+  "explanation": "Items in a series are separated by commas."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 2,
+  "stem": "Choose the correct word: The students left ____ jackets in the gym.",
+  "choices": [
+   "there",
+   "they're",
+   "their",
+   "theirs"
+  ],
+  "answer": 2,
+  "explanation": "'Their' shows possession."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 2,
+  "stem": "Choose the correct verb: Each of the players ____ a uniform.",
+  "choices": [
+   "has",
+   "have",
+   "are having",
+   "having"
+  ],
+  "answer": 0,
+  "explanation": "'Each' is singular, so it takes 'has'."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 2,
+  "stem": "Which is the correct possessive? The ____ toys were scattered across the floor.",
+  "choices": [
+   "childrens'",
+   "children's",
+   "childrens",
+   "childrens's"
+  ],
+  "answer": 1,
+  "explanation": "Children is already plural, so add apostrophe plus s."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 2,
+  "stem": "Choose the correct word: My sister is taller ____ I am.",
+  "choices": [
+   "then",
+   "that",
+   "thin",
+   "than"
+  ],
+  "answer": 3,
+  "explanation": "'Than' is used in comparisons."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 2,
+  "stem": "Choose the correct word: ____ jacket is left on the bench?",
+  "choices": [
+   "Whose",
+   "Who's",
+   "Whos",
+   "Who"
+  ],
+  "answer": 0,
+  "explanation": "'Whose' asks about possession; 'who's' means 'who is'."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 3,
+  "stem": "Which choice correctly fixes this run-on? The bus was late we waited in the cold.",
+  "choices": [
+   "The bus was late, we waited in the cold.",
+   "The bus was late we, waited in the cold.",
+   "The bus was late, so we waited in the cold.",
+   "The bus, was late we waited in the cold."
+  ],
+  "answer": 2,
+  "explanation": "A comma plus a conjunction joins two independent clauses."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 3,
+  "stem": "Choose the correct word: When Maria and Ana arrived, ____ coats were wet.",
+  "choices": [
+   "her",
+   "its",
+   "their",
+   "his"
+  ],
+  "answer": 2,
+  "explanation": "Two people require the plural possessive 'their'."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 3,
+  "stem": "Choose the correct word: The girl ____ won the race is my cousin.",
+  "choices": [
+   "who",
+   "whom",
+   "whose",
+   "which"
+  ],
+  "answer": 0,
+  "explanation": "'Who' is the subject of 'won' and refers to a person."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 3,
+  "stem": "Which sentence uses a colon correctly?",
+  "choices": [
+   "I have: two pets a cat and a dog.",
+   "I have two pets; a cat and a dog.",
+   "I have two pets. a cat and a dog.",
+   "I have two pets: a cat and a dog."
+  ],
+  "answer": 3,
+  "explanation": "A colon follows a complete clause to introduce a list."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 3,
+  "stem": "Choose the word that keeps the list parallel: Lena likes swimming, hiking, and ____.",
+  "choices": [
+   "to bike",
+   "biking",
+   "bike",
+   "she bikes"
+  ],
+  "answer": 1,
+  "explanation": "All items should be -ing forms."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 3,
+  "stem": "Choose the correct verb: Yesterday, Jo opened the door and ____ inside.",
+  "choices": [
+   "stepped",
+   "steps",
+   "is stepping",
+   "will step"
+  ],
+  "answer": 0,
+  "explanation": "Both verbs must be in the past tense."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 3,
+  "stem": "Choose the correct word: The weather will ____ our plans.",
+  "choices": [
+   "effect",
+   "effects",
+   "affect",
+   "affection"
+  ],
+  "answer": 2,
+  "explanation": "'Affect' is the verb meaning to influence."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 3,
+  "stem": "Which sentence uses a comma correctly after an introductory clause?",
+  "choices": [
+   "When the bell rang the students, lined up.",
+   "When the bell rang, the students lined up.",
+   "When, the bell rang the students lined up.",
+   "When the bell rang the students lined up,"
+  ],
+  "answer": 1,
+  "explanation": "A comma follows an introductory dependent clause."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 3,
+  "stem": "Which word needs a capital letter in this sentence? My uncle drove to lake Michigan on Monday.",
+  "choices": [
+   "uncle",
+   "drove",
+   "on",
+   "lake"
+  ],
+  "answer": 3,
+  "explanation": "Lake Michigan is a proper name, so both words are capitalized."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 3,
+  "stem": "Choose the correct verb: The collection of rare coins ____ displayed in the museum.",
+  "choices": [
+   "are",
+   "were",
+   "have been",
+   "is"
+  ],
+  "answer": 3,
+  "explanation": "The subject 'collection' is singular."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 3,
+  "stem": "Which sentence is in active voice?",
+  "choices": [
+   "The window was broken by the baseball.",
+   "The baseball broke the window.",
+   "The window has been broken by a baseball.",
+   "Broken was the window by the baseball."
+  ],
+  "answer": 1,
+  "explanation": "The subject performs the action in active voice."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 3,
+  "stem": "Which group of words is NOT a complete sentence?",
+  "choices": [
+   "The team practiced all week.",
+   "Practice makes perfect.",
+   "Although the team practiced all week.",
+   "Did the team practice?"
+  ],
+  "answer": 2,
+  "explanation": "It begins with a subordinating word and leaves the thought unfinished."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 3,
+  "stem": "Choose the correct word: Honesty is a core ____ of our school.",
+  "choices": [
+   "principle",
+   "principal",
+   "principel",
+   "principals"
+  ],
+  "answer": 0,
+  "explanation": "'Principle' means a basic rule or belief."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 4,
+  "stem": "Which sentence best combines these ideas? The museum opened early. It was crowded. Many families came.",
+  "choices": [
+   "The museum opened early it was crowded many families came.",
+   "The museum, which opened early, was crowded with families.",
+   "The museum opened early, it was crowded, many families came.",
+   "The museum opened early and crowded and families many."
+  ],
+  "answer": 1,
+  "explanation": "It is clear, grammatical, and concise."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 4,
+  "stem": "Which sentence is the most concise without losing meaning?",
+  "choices": [
+   "The meeting begins at twelve noon exactly at that time.",
+   "The meeting is going to be beginning at noon time.",
+   "The meeting, which is one that begins, begins at noon.",
+   "The meeting begins at noon."
+  ],
+  "answer": 3,
+  "explanation": "The other choices are wordy or redundant."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 4,
+  "stem": "Choose the correct word: The cat likes to ____ in the sun.",
+  "choices": [
+   "lie",
+   "lay",
+   "laid",
+   "lain"
+  ],
+  "answer": 0,
+  "explanation": "'Lie' means to recline; 'lay' needs an object."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 4,
+  "stem": "Choose the parallel ending: The coach told us to stretch, to drink water, and ____.",
+  "choices": [
+   "resting",
+   "we should rest",
+   "to rest before the game",
+   "rest is needed"
+  ],
+  "answer": 2,
+  "explanation": "The series uses 'to' plus a verb."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 4,
+  "stem": "Which sentence has the clearest meaning?",
+  "choices": [
+   "She served sandwiches to the guests on paper plates.",
+   "On paper plates, the guests were served to sandwiches.",
+   "She served the guests sandwiches on paper plates.",
+   "Sandwiches were served to the guests who were on paper plates."
+  ],
+  "answer": 2,
+  "explanation": "The modifier 'on paper plates' sits next to 'sandwiches', so the guests are not on plates."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 4,
+  "stem": "Several students share lockers, and the lockers belong to all of them. Which is correct?",
+  "choices": [
+   "The students' lockers were freshly painted.",
+   "The student's lockers were freshly painted.",
+   "The students lockers were freshly painted.",
+   "The students's lockers were freshly painted."
+  ],
+  "answer": 0,
+  "explanation": "A plural possessive ending in s takes only an apostrophe."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 4,
+  "stem": "Which sentence is punctuated correctly?",
+  "choices": [
+   "\"I'm ready\", said Jon.",
+   "\"I'm ready.\" said Jon.",
+   "\"I'm ready, said Jon.\"",
+   "\"I'm ready,\" said Jon."
+  ],
+  "answer": 3,
+  "explanation": "The comma goes inside the closing quotation mark before the speaker tag."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 4,
+  "stem": "Choose the word that keeps the sentence parallel: The new park is both beautiful and ____.",
+  "choices": [
+   "it is useful",
+   "useful",
+   "usefulness",
+   "of some use"
+  ],
+  "answer": 1,
+  "explanation": "'Beautiful and useful' pairs two adjectives."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 4,
+  "stem": "Choose the best transition: Marcus practiced daily. ____, he won no medals this year.",
+  "choices": [
+   "Nevertheless",
+   "Therefore",
+   "Similarly",
+   "For example"
+  ],
+  "answer": 0,
+  "explanation": "The sentence shows contrast with expectations."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 5,
+  "stem": "Which sentence has a clear, correctly modified subject?",
+  "choices": [
+   "Walking to school, the rain started to fall.",
+   "Having walked to school, the rain soaked the sidewalk.",
+   "Walking to school, Ben felt the rain start to fall.",
+   "Walking to school, the rain fell on Ben's head."
+  ],
+  "answer": 2,
+  "explanation": "The introductory phrase must describe Ben, not the rain."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 5,
+  "stem": "Which sentence uses a semicolon correctly?",
+  "choices": [
+   "The storm knocked out power; and we lit candles.",
+   "The storm knocked out power; we lit candles.",
+   "The storm; knocked out power we lit candles.",
+   "Because the storm knocked out power; we lit candles."
+  ],
+  "answer": 1,
+  "explanation": "A semicolon joins two independent clauses."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 5,
+  "stem": "Which sentence has a clear pronoun reference?",
+  "choices": [
+   "Sara told Lily that she had left her book at home.",
+   "When Sara and Lily met, she said she'd forgotten it.",
+   "Sara told Lily she left it there.",
+   "Sara said to Lily, \"I left my book at home.\""
+  ],
+  "answer": 3,
+  "explanation": "The quotation removes the ambiguity about who 'she' is."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 5,
+  "stem": "Choose the correct form: If I ____ you, I would study more.",
+  "choices": [
+   "was",
+   "am",
+   "be",
+   "were"
+  ],
+  "answer": 3,
+  "explanation": "Contrary-to-fact statements use the subjunctive 'were'."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 5,
+  "stem": "Which sentence introduces its list with correct punctuation?",
+  "choices": [
+   "You will: need three items, a pencil, an eraser, and a ruler.",
+   "You will need three items: a pencil, an eraser, and a ruler.",
+   "You will need three items a pencil: an eraser, and a ruler.",
+   "You: will need three items, a pencil, an eraser and a ruler."
+  ],
+  "answer": 1,
+  "explanation": "A colon follows a complete clause before a list."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 5,
+  "stem": "Choose the correct pronoun: Between you and ____, the test was hard.",
+  "choices": [
+   "I",
+   "myself",
+   "me",
+   "mine"
+  ],
+  "answer": 2,
+  "explanation": "The object of a preposition takes the objective case."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 5,
+  "stem": "Which sentence punctuates the appositive correctly?",
+  "choices": [
+   "My neighbor, Mr. Kim, is a pilot.",
+   "My neighbor Mr. Kim, is a pilot.",
+   "My neighbor, Mr. Kim is a pilot.",
+   "My, neighbor Mr. Kim is a pilot."
+  ],
+  "answer": 0,
+  "explanation": "A nonessential appositive is set off by commas on both sides."
+ }
+]

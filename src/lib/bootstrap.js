@@ -5,6 +5,8 @@ import m1 from '../../migrations/0001_init.sql';
 import m2 from '../../migrations/0002_safety.sql';
 import m3 from '../../migrations/0003_audio.sql';
 import m4 from '../../migrations/0004_prices.sql';
+import m5 from '../../migrations/0005_admin_and_kcp.sql';
+import m6 from '../../migrations/0006_new_exams.sql';
 import seed from '../../seed/seed.json';
 
 // [name, sql, a table that exists once this migration has been applied]
@@ -14,7 +16,7 @@ const statements = (sql) => sql.split('\n').map((l) => l.replace(/--.*$/, '')).j
   .map((x) => x.replace(/^CREATE TABLE /i, 'CREATE TABLE IF NOT EXISTS ').replace(/^CREATE INDEX /i, 'CREATE INDEX IF NOT EXISTS '));
 
 // One-time data updates, applied AFTER seeding (so a fresh database is not left with only these rows).
-const DATA_FIXES = [['0004_prices', m4]];
+const DATA_FIXES = [['0004_prices', m4], ['0005_admin_and_kcp', m5], ['0006_new_exams', m6]];
 
 let ready = null;
 export function ensureDb(env) {
@@ -35,15 +37,29 @@ async function run(env) {
     else await db.batch([...statements(sql).map((s) => db.prepare(s)), mark]);
   }
 
-  if ((await db.prepare('SELECT COUNT(*) n FROM questions').first()).n === 0) {
+  // Question bank sync. Ids are content hashes, so a new seed version only adds new questions and retires removed ones
+  // (answered questions are kept but deactivated so old reports still render). Admin-created questions (uuid ids) are never touched.
+  const seedMark = `seed-${seed.version}`;
+  if (!done.has(seedMark)) {
+    const have = new Set((await db.prepare(`SELECT id FROM questions WHERE id LIKE 'seed-%'`).all()).results.map((r) => r.id));
+    const want = new Set(seed.questions.map((q) => q[0]));
+    const stale = [...have].filter((id) => !want.has(id));
+    if (stale.length) {
+      const answered = new Set((await db.prepare('SELECT DISTINCT question_id AS id FROM answers').all()).results.map((r) => r.id));
+      const ops = [];
+      for (const id of stale) ops.push(db.prepare(answered.has(id) ? 'UPDATE questions SET active=0 WHERE id=?' : 'DELETE FROM questions WHERE id=?').bind(id));
+      for (let i = 0; i < ops.length; i += 50) await db.batch(ops.slice(i, i + 50));
+    }
     const cols = 'id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at';
     const row = '(?,?,?,?,?,?,?,?,?,?,?,1,0)';
+    const fresh = seed.questions.filter((q) => !have.has(q[0]));
     const batch = [];
-    for (let i = 0; i < seed.questions.length; i += 8) { // 8 rows x 11 params stays under D1's 100-parameter limit
-      const chunk = seed.questions.slice(i, i + 8);
+    for (let i = 0; i < fresh.length; i += 8) { // 8 rows x 11 params stays under D1's 100-parameter limit
+      const chunk = fresh.slice(i, i + 8);
       batch.push(db.prepare(`INSERT OR IGNORE INTO questions (${cols}) VALUES ${chunk.map(() => row).join(',')}`).bind(...chunk.flat()));
     }
     for (let i = 0; i < batch.length; i += 25) await db.batch(batch.slice(i, i + 25));
+    await db.prepare('INSERT OR IGNORE INTO _app_migrations (name,at) VALUES (?,?)').bind(seedMark, Date.now()).run();
   }
   if ((await db.prepare('SELECT COUNT(*) n FROM products').first()).n === 0) {
     await db.batch(seed.products.map((p) => db.prepare(

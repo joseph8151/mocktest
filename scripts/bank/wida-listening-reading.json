@@ -1,0 +1,692 @@
+[
+ {
+  "exam_type": "WIDA",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Good morning, class. Today is Monday. Please put your backpack on the hook. Then sit at your table. Take out your pencil and your blue folder. We will read a story first. After the story, we will go to art.",
+  "stem": "Where should students put their backpacks?",
+  "choices": [
+   "On the table",
+   "On the hook",
+   "In the folder",
+   "Under the chair"
+  ],
+  "answer": 1,
+  "explanation": "The teacher says to put the backpack on the hook."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Good morning, class. Today is Monday. Please put your backpack on the hook. Then sit at your table. Take out your pencil and your blue folder. We will read a story first. After the story, we will go to art.",
+  "stem": "What will the class do first?",
+  "choices": [
+   "Go to art",
+   "Take a test",
+   "Draw pictures",
+   "Read a story"
+  ],
+  "answer": 3,
+  "explanation": "The teacher says they will read a story first."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "My name is Ben. I have a small dog. His name is Max. Max is brown and white. He likes to run in the park. Every day after school, I take Max to the park. We play with a yellow ball.",
+  "stem": "What color is Max?",
+  "choices": [
+   "Brown and white",
+   "Black and yellow",
+   "Yellow and white",
+   "All brown"
+  ],
+  "answer": 0,
+  "explanation": "Ben says Max is brown and white."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "My name is Ben. I have a small dog. His name is Max. Max is brown and white. He likes to run in the park. Every day after school, I take Max to the park. We play with a yellow ball.",
+  "stem": "When does Ben take Max to the park?",
+  "choices": [
+   "Before school",
+   "At night",
+   "After school",
+   "Only on Saturday"
+  ],
+  "answer": 2,
+  "explanation": "Ben says he goes every day after school."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Ms. Lopez has eight pencils on her desk. She gives three pencils to students at the front table. Then she finds two more pencils in a drawer and puts them on her desk. Now she wants to know how many pencils are on her desk.",
+  "stem": "How many pencils are on Ms. Lopez's desk now?",
+  "choices": [
+   "Five",
+   "Ten",
+   "Thirteen",
+   "Seven"
+  ],
+  "answer": 3,
+  "explanation": "Eight minus three is five, and five plus two is seven."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Ms. Lopez has eight pencils on her desk. She gives three pencils to students at the front table. Then she finds two more pencils in a drawer and puts them on her desk. Now she wants to know how many pencils are on her desk.",
+  "stem": "What did Ms. Lopez do with three of the pencils?",
+  "choices": [
+   "She lost them",
+   "She gave them to students",
+   "She found them in a drawer",
+   "She put them in a box"
+  ],
+  "answer": 1,
+  "explanation": "She gave three pencils to students at the front table."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "listening",
+  "difficulty": 3,
+  "passage": "Plants need three things to grow well: water, light, and air. Last week our class planted two bean seeds in cups. We put one cup near the window and the other in a dark closet. We gave both cups the same amount of water. After seven days, the bean near the window was tall and green. The bean in the closet was short and pale. This shows that plants need light to grow healthy.",
+  "stem": "Why did the class put one cup in the closet?",
+  "choices": [
+   "To give it more water",
+   "To keep it warm",
+   "To see what happens without light",
+   "To save space in the room"
+  ],
+  "answer": 2,
+  "explanation": "The closet cup had no light, so it tested whether plants need light."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "listening",
+  "difficulty": 3,
+  "passage": "Plants need three things to grow well: water, light, and air. Last week our class planted two bean seeds in cups. We put one cup near the window and the other in a dark closet. We gave both cups the same amount of water. After seven days, the bean near the window was tall and green. The bean in the closet was short and pale. This shows that plants need light to grow healthy.",
+  "stem": "What was the same for both cups?",
+  "choices": [
+   "The amount of water",
+   "The amount of light",
+   "The place where they sat",
+   "The height after seven days"
+  ],
+  "answer": 0,
+  "explanation": "The speaker says both cups got the same amount of water."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "listening",
+  "difficulty": 3,
+  "passage": "Plants need three things to grow well: water, light, and air. Last week our class planted two bean seeds in cups. We put one cup near the window and the other in a dark closet. We gave both cups the same amount of water. After seven days, the bean near the window was tall and green. The bean in the closet was short and pale. This shows that plants need light to grow healthy.",
+  "stem": "What happened to the bean in the closet?",
+  "choices": [
+   "It was tall and green",
+   "It was short and pale",
+   "It grew toward the window",
+   "It was given more water"
+  ],
+  "answer": 1,
+  "explanation": "The speaker says the closet bean was short and pale."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "A map is a drawing of a place. Many maps have a compass rose, which shows the directions north, south, east, and west. Many maps also have a key. The key tells you what the symbols on the map mean. For example, a small picture of a tree might mean a park, and a blue line might mean a river. If you want to find a river on a map, you should look at the key first.",
+  "stem": "What does a compass rose show?",
+  "choices": [
+   "Rivers",
+   "Parks",
+   "Distances",
+   "Directions"
+  ],
+  "answer": 3,
+  "explanation": "The speaker says it shows north, south, east, and west."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "A map is a drawing of a place. Many maps have a compass rose, which shows the directions north, south, east, and west. Many maps also have a key. The key tells you what the symbols on the map mean. For example, a small picture of a tree might mean a park, and a blue line might mean a river. If you want to find a river on a map, you should look at the key first.",
+  "stem": "Where can you learn what a symbol means?",
+  "choices": [
+   "In the key",
+   "In the compass rose",
+   "On the river",
+   "In the park"
+  ],
+  "answer": 0,
+  "explanation": "The key tells what the symbols mean."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "A map is a drawing of a place. Many maps have a compass rose, which shows the directions north, south, east, and west. Many maps also have a key. The key tells you what the symbols on the map mean. For example, a small picture of a tree might mean a park, and a blue line might mean a river. If you want to find a river on a map, you should look at the key first.",
+  "stem": "What might a blue line mean on a map?",
+  "choices": [
+   "A park",
+   "A road",
+   "A river",
+   "A tree"
+  ],
+  "answer": 2,
+  "explanation": "The speaker gives a blue line as an example of a river."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "listening",
+  "difficulty": 3,
+  "passage": "Last summer, Tomas visited his grandmother in the mountains. Every morning, they walked to the river to look for smooth stones. Tomas wanted to find a perfectly round one. On the last day, he still had not found one. He felt sad. Then his grandmother smiled and handed him a stone from her pocket. She had been saving it for him since the first day.",
+  "stem": "How did Tomas feel on the last day before his grandmother gave him the stone?",
+  "choices": [
+   "Happy",
+   "Sleepy",
+   "Angry",
+   "Sad"
+  ],
+  "answer": 3,
+  "explanation": "The speaker says he felt sad because he had not found a round stone."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "listening",
+  "difficulty": 3,
+  "passage": "Last summer, Tomas visited his grandmother in the mountains. Every morning, they walked to the river to look for smooth stones. Tomas wanted to find a perfectly round one. On the last day, he still had not found one. He felt sad. Then his grandmother smiled and handed him a stone from her pocket. She had been saving it for him since the first day.",
+  "stem": "What did the grandmother do?",
+  "choices": [
+   "She found a stone in the river",
+   "She gave him a stone she had saved",
+   "She told him to stop looking",
+   "She took his stone away"
+  ],
+  "answer": 1,
+  "explanation": "She handed him a stone from her pocket that she had been saving."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "listening",
+  "difficulty": 4,
+  "passage": "Last summer, Tomas visited his grandmother in the mountains. Every morning, they walked to the river to look for smooth stones. Tomas wanted to find a perfectly round one. On the last day, he still had not found one. He felt sad. Then his grandmother smiled and handed him a stone from her pocket. She had been saving it for him since the first day.",
+  "stem": "What can you tell about the grandmother?",
+  "choices": [
+   "She did not like the river",
+   "She was angry at Tomas",
+   "She wanted to make Tomas happy",
+   "She forgot about the stones"
+  ],
+  "answer": 2,
+  "explanation": "Saving a stone for him shows she cared about his wish."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Attention students. The school book fair starts on Tuesday and ends on Friday. It will be in the library. You can visit the fair during your lunch time or after school. Please bring money in an envelope with your name on it. Remember, the library closes at three thirty each day.",
+  "stem": "Where will the book fair be?",
+  "choices": [
+   "In the library",
+   "In the gym",
+   "In the cafeteria",
+   "In the office"
+  ],
+  "answer": 0,
+  "explanation": "The announcement says it will be in the library."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Attention students. The school book fair starts on Tuesday and ends on Friday. It will be in the library. You can visit the fair during your lunch time or after school. Please bring money in an envelope with your name on it. Remember, the library closes at three thirty each day.",
+  "stem": "What should students bring to the book fair?",
+  "choices": [
+   "A library card",
+   "Money in an envelope with their name",
+   "A signed paper from home",
+   "Their favorite book"
+  ],
+  "answer": 1,
+  "explanation": "Students should bring money in a named envelope."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Attention students. The school book fair starts on Tuesday and ends on Friday. It will be in the library. You can visit the fair during your lunch time or after school. Please bring money in an envelope with your name on it. Remember, the library closes at three thirty each day.",
+  "stem": "On which day does the book fair end?",
+  "choices": [
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday"
+  ],
+  "answer": 3,
+  "explanation": "The speaker says the fair ends on Friday."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "listening",
+  "difficulty": 4,
+  "passage": "Water on Earth moves in a cycle. The sun heats water in oceans and lakes, and some of it rises into the air as vapor. High in the sky, the cool air turns the vapor into tiny drops that form clouds. When the drops become heavy, they fall as rain or snow. Some of this water flows into rivers, which carry it back to the ocean, and the cycle begins again.",
+  "stem": "What causes water to rise into the air as vapor?",
+  "choices": [
+   "Heat from the sun",
+   "Cold air in the sky",
+   "Water flowing in rivers",
+   "Heavy clouds"
+  ],
+  "answer": 0,
+  "explanation": "The sun heats the water so it rises as vapor."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "listening",
+  "difficulty": 4,
+  "passage": "Water on Earth moves in a cycle. The sun heats water in oceans and lakes, and some of it rises into the air as vapor. High in the sky, the cool air turns the vapor into tiny drops that form clouds. When the drops become heavy, they fall as rain or snow. Some of this water flows into rivers, which carry it back to the ocean, and the cycle begins again.",
+  "stem": "What happens when the drops in a cloud become heavy?",
+  "choices": [
+   "They turn into vapor",
+   "They flow into the ocean as vapor",
+   "They fall as rain or snow",
+   "They are heated by the sun"
+  ],
+  "answer": 2,
+  "explanation": "Heavy drops fall as rain or snow."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "listening",
+  "difficulty": 4,
+  "passage": "In the early 1900s, many families moved from farms to cities because factories offered jobs. Cities grew quickly, and new neighborhoods were built near the factories. However, not everyone found the move easy. Housing was crowded, and some workers earned very little money. Even so, families kept coming, hoping their children would have better opportunities than they had.",
+  "stem": "Why did many families move to cities?",
+  "choices": [
+   "Farms had too much water",
+   "Cities had no crowded housing",
+   "Schools were free only in cities",
+   "Factories offered jobs"
+  ],
+  "answer": 3,
+  "explanation": "The speaker says factories offered jobs."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "listening",
+  "difficulty": 5,
+  "passage": "In the early 1900s, many families moved from farms to cities because factories offered jobs. Cities grew quickly, and new neighborhoods were built near the factories. However, not everyone found the move easy. Housing was crowded, and some workers earned very little money. Even so, families kept coming, hoping their children would have better opportunities than they had.",
+  "stem": "What does the speaker suggest about families who kept moving to cities?",
+  "choices": [
+   "They enjoyed the crowded housing",
+   "They hoped for a better future for their children",
+   "They earned a lot of money at first",
+   "They were forced to leave by leaders"
+  ],
+  "answer": 1,
+  "explanation": "The speaker says they hoped their children would have better opportunities."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "listening",
+  "difficulty": 5,
+  "passage": "The school store sells notebooks for two dollars each and pens for one dollar each. Lina has ten dollars. She buys three notebooks and wants to spend the rest on pens. Her friend says she can buy five pens, but Lina checks again. She realizes that after buying the notebooks, she only has four dollars left.",
+  "stem": "How many pens can Lina buy with the money she has left?",
+  "choices": [
+   "Three",
+   "Five",
+   "Four",
+   "Six"
+  ],
+  "answer": 2,
+  "explanation": "Three notebooks cost six dollars, leaving four dollars for four pens."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "listening",
+  "difficulty": 5,
+  "passage": "The school store sells notebooks for two dollars each and pens for one dollar each. Lina has ten dollars. She buys three notebooks and wants to spend the rest on pens. Her friend says she can buy five pens, but Lina checks again. She realizes that after buying the notebooks, she only has four dollars left.",
+  "stem": "Why was Lina's friend wrong?",
+  "choices": [
+   "The friend did not count the money spent on notebooks",
+   "Pens cost two dollars each",
+   "Lina bought four notebooks",
+   "Lina started with only six dollars"
+  ],
+  "answer": 0,
+  "explanation": "Five pens would need five dollars, but only four dollars were left after the notebooks."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "Pizza Day. Pizza day is on Friday. Lunch costs two dollars. Bring your money in an envelope. Write your name on the envelope. Give it to your teacher on Thursday.",
+  "stem": "When is pizza day?",
+  "choices": [
+   "On Monday",
+   "On Friday",
+   "On Thursday",
+   "On Tuesday"
+  ],
+  "answer": 1,
+  "explanation": "The notice says pizza day is on Friday."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "Pizza Day. Pizza day is on Friday. Lunch costs two dollars. Bring your money in an envelope. Write your name on the envelope. Give it to your teacher on Thursday.",
+  "stem": "What should you write on the envelope?",
+  "choices": [
+   "Your teacher's name",
+   "The price",
+   "The day",
+   "Your name"
+  ],
+  "answer": 3,
+  "explanation": "The notice says to write your name on the envelope."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "Pizza Day. Pizza day is on Friday. Lunch costs two dollars. Bring your money in an envelope. Write your name on the envelope. Give it to your teacher on Thursday.",
+  "stem": "Who gets the money?",
+  "choices": [
+   "Your teacher",
+   "The bus driver",
+   "The principal",
+   "Your friend"
+  ],
+  "answer": 0,
+  "explanation": "The notice says to give the envelope to your teacher."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "Sam has a red kite. Today the wind is strong. Sam runs to the field with his sister, Ana. The kite goes up, up, up into the sky. Then the string breaks! The kite flies away over the trees. Sam is sad, but Ana says, \"We can make a new one.\"",
+  "stem": "What color is Sam's kite?",
+  "choices": [
+   "Blue",
+   "Green",
+   "Red",
+   "Yellow"
+  ],
+  "answer": 2,
+  "explanation": "The first sentence says Sam has a red kite."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "Sam has a red kite. Today the wind is strong. Sam runs to the field with his sister, Ana. The kite goes up, up, up into the sky. Then the string breaks! The kite flies away over the trees. Sam is sad, but Ana says, \"We can make a new one.\"",
+  "stem": "What happens to the kite?",
+  "choices": [
+   "It falls in a tree",
+   "Ana takes it home",
+   "It tears in the wind",
+   "The string breaks and it flies away"
+  ],
+  "answer": 3,
+  "explanation": "The string breaks and the kite flies over the trees."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Butterflies change as they grow. First, a butterfly begins as a tiny egg on a leaf. Next, a caterpillar comes out of the egg and eats leaves for many days. Then the caterpillar makes a hard shell around itself called a chrysalis. Inside, its body changes. After about two weeks, a butterfly comes out.",
+  "stem": "What does the caterpillar eat?",
+  "choices": [
+   "Eggs",
+   "Leaves",
+   "Flowers",
+   "Shells"
+  ],
+  "answer": 1,
+  "explanation": "The text says the caterpillar eats leaves."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Butterflies change as they grow. First, a butterfly begins as a tiny egg on a leaf. Next, a caterpillar comes out of the egg and eats leaves for many days. Then the caterpillar makes a hard shell around itself called a chrysalis. Inside, its body changes. After about two weeks, a butterfly comes out.",
+  "stem": "What comes right after the egg?",
+  "choices": [
+   "A chrysalis",
+   "A butterfly",
+   "A caterpillar",
+   "A leaf"
+  ],
+  "answer": 2,
+  "explanation": "A caterpillar comes out of the egg."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Butterflies change as they grow. First, a butterfly begins as a tiny egg on a leaf. Next, a caterpillar comes out of the egg and eats leaves for many days. Then the caterpillar makes a hard shell around itself called a chrysalis. Inside, its body changes. After about two weeks, a butterfly comes out.",
+  "stem": "What is the hard shell called?",
+  "choices": [
+   "A chrysalis",
+   "A caterpillar",
+   "An egg",
+   "A leaf"
+  ],
+  "answer": 0,
+  "explanation": "The text names the shell a chrysalis."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "reading",
+  "difficulty": 3,
+  "passage": "The Garcia family is driving to the beach. The beach is 120 miles from their home. In the first hour, they drive 50 miles. In the second hour, they drive 40 miles. Then they stop for lunch.",
+  "stem": "How many miles have they driven when they stop for lunch?",
+  "choices": [
+   "70 miles",
+   "90 miles",
+   "120 miles",
+   "30 miles"
+  ],
+  "answer": 1,
+  "explanation": "50 plus 40 equals 90."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "reading",
+  "difficulty": 3,
+  "passage": "The Garcia family is driving to the beach. The beach is 120 miles from their home. In the first hour, they drive 50 miles. In the second hour, they drive 40 miles. Then they stop for lunch.",
+  "stem": "How many miles are left to drive after lunch?",
+  "choices": [
+   "40 miles",
+   "70 miles",
+   "90 miles",
+   "30 miles"
+  ],
+  "answer": 3,
+  "explanation": "120 minus 90 equals 30."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "reading",
+  "difficulty": 3,
+  "passage": "Parents and Guardians: Our class is going on a field trip to the City Science Museum on Thursday, March 12. The bus will leave school at 9:00 a.m. and return at 2:30 p.m. Students should wear comfortable shoes and bring a sack lunch. Please sign the permission slip and return it by Monday, March 9. Students without a signed slip must stay at school.",
+  "stem": "What must families do by March 9?",
+  "choices": [
+   "Return the signed permission slip",
+   "Send money for the bus",
+   "Pick up students at 2:30",
+   "Bring a sack lunch to the museum"
+  ],
+  "answer": 0,
+  "explanation": "The notice asks for the signed slip by Monday, March 9."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "reading",
+  "difficulty": 3,
+  "passage": "Parents and Guardians: Our class is going on a field trip to the City Science Museum on Thursday, March 12. The bus will leave school at 9:00 a.m. and return at 2:30 p.m. Students should wear comfortable shoes and bring a sack lunch. Please sign the permission slip and return it by Monday, March 9. Students without a signed slip must stay at school.",
+  "stem": "What should students bring on the trip?",
+  "choices": [
+   "A science book",
+   "Museum tickets",
+   "A sack lunch",
+   "A permission slip only"
+  ],
+  "answer": 2,
+  "explanation": "Students should wear comfortable shoes and bring a sack lunch."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "reading",
+  "difficulty": 3,
+  "passage": "Parents and Guardians: Our class is going on a field trip to the City Science Museum on Thursday, March 12. The bus will leave school at 9:00 a.m. and return at 2:30 p.m. Students should wear comfortable shoes and bring a sack lunch. Please sign the permission slip and return it by Monday, March 9. Students without a signed slip must stay at school.",
+  "stem": "What happens to a student without a signed slip?",
+  "choices": [
+   "The student rides the bus later",
+   "The student pays at the museum",
+   "The student goes with another class",
+   "The student stays at school"
+  ],
+  "answer": 3,
+  "explanation": "The notice says those students must stay at school."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "reading",
+  "difficulty": 3,
+  "passage": "Priya had practiced her speech for a week, but when she stood in front of the class, her mind went blank. Her hands shook, and the words disappeared. She looked at her teacher, who nodded gently. Priya took a deep breath, looked at her notes, and began again slowly. By the end, her classmates were clapping.",
+  "stem": "How did Priya most likely feel in front of the class?",
+  "choices": [
+   "Bored",
+   "Nervous",
+   "Proud",
+   "Sleepy"
+  ],
+  "answer": 1,
+  "explanation": "Her shaking hands and forgotten words show she was nervous."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "Priya had practiced her speech for a week, but when she stood in front of the class, her mind went blank. Her hands shook, and the words disappeared. She looked at her teacher, who nodded gently. Priya took a deep breath, looked at her notes, and began again slowly. By the end, her classmates were clapping.",
+  "stem": "What does \"her mind went blank\" mean?",
+  "choices": [
+   "She fell asleep",
+   "She was thinking of something fun",
+   "She could not remember what to say",
+   "She lost her notes"
+  ],
+  "answer": 2,
+  "explanation": "The words disappeared from her memory."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "reading",
+  "difficulty": 3,
+  "passage": "Priya had practiced her speech for a week, but when she stood in front of the class, her mind went blank. Her hands shook, and the words disappeared. She looked at her teacher, who nodded gently. Priya took a deep breath, looked at her notes, and began again slowly. By the end, her classmates were clapping.",
+  "stem": "What helped Priya finish her speech?",
+  "choices": [
+   "A deep breath, her notes, and her teacher's nod",
+   "A longer speech",
+   "A new teacher",
+   "Help from her classmates"
+  ],
+  "answer": 0,
+  "explanation": "She calmed down, used her notes, and had her teacher's support."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "A community needs rules and laws to keep people safe and to help them live together fairly. For example, traffic laws tell drivers when to stop and go, which prevents accidents. Leaders, such as a mayor, help make decisions for the community. Citizens also have responsibilities. They should follow the rules, vote when they are old enough, and help their neighbors.",
+  "stem": "Why do communities have traffic laws?",
+  "choices": [
+   "To make driving faster",
+   "To prevent accidents",
+   "To help mayors win",
+   "To make neighbors friends"
+  ],
+  "answer": 1,
+  "explanation": "The text says traffic laws prevent accidents."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "A community needs rules and laws to keep people safe and to help them live together fairly. For example, traffic laws tell drivers when to stop and go, which prevents accidents. Leaders, such as a mayor, help make decisions for the community. Citizens also have responsibilities. They should follow the rules, vote when they are old enough, and help their neighbors.",
+  "stem": "Which is a responsibility of citizens?",
+  "choices": [
+   "Becoming the mayor",
+   "Writing all traffic laws",
+   "Paying other drivers",
+   "Voting when they are old enough"
+  ],
+  "answer": 3,
+  "explanation": "The text lists voting when old enough as a responsibility."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "Sound is made when objects vibrate, or move back and forth very quickly. These vibrations travel through the air as waves until they reach our ears. If you touch your throat while you talk, you can feel the vibrations. Sound cannot travel in space because there is no air there to carry the vibrations. That is why astronauts use radios to talk to one another outside their spaceships.",
+  "stem": "What makes sound?",
+  "choices": [
+   "Vibrations",
+   "Silence",
+   "Light",
+   "Space"
+  ],
+  "answer": 0,
+  "explanation": "Sound is made when objects vibrate."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "reading",
+  "difficulty": 5,
+  "passage": "Sound is made when objects vibrate, or move back and forth very quickly. These vibrations travel through the air as waves until they reach our ears. If you touch your throat while you talk, you can feel the vibrations. Sound cannot travel in space because there is no air there to carry the vibrations. That is why astronauts use radios to talk to one another outside their spaceships.",
+  "stem": "Why do astronauts use radios outside their spaceships?",
+  "choices": [
+   "Radios are louder than voices",
+   "Space is too bright",
+   "There is no air in space to carry sound",
+   "Astronauts cannot feel vibrations"
+  ],
+  "answer": 2,
+  "explanation": "Sound needs air to travel, and space has none."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "reading",
+  "difficulty": 5,
+  "passage": "When the town council announced plans to cut down the old oak tree in Maple Park, many residents were upset. The tree was more than one hundred years old, and generations of children had climbed its branches. However, an engineer explained that its roots were damaging the water pipes beneath the park. After several meetings, the council decided to move the pipes instead, so the tree could stay.",
+  "stem": "Why did the council first plan to cut down the tree?",
+  "choices": [
+   "It was too old to climb",
+   "It blocked the park entrance",
+   "Children had hurt it",
+   "Its roots were damaging water pipes"
+  ],
+  "answer": 3,
+  "explanation": "The engineer explained the roots were damaging the pipes."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "reading",
+  "difficulty": 5,
+  "passage": "When the town council announced plans to cut down the old oak tree in Maple Park, many residents were upset. The tree was more than one hundred years old, and generations of children had climbed its branches. However, an engineer explained that its roots were damaging the water pipes beneath the park. After several meetings, the council decided to move the pipes instead, so the tree could stay.",
+  "stem": "What can you conclude about the council?",
+  "choices": [
+   "It did not care about the park",
+   "It changed its plan after hearing the community's concerns",
+   "It ignored the engineer's advice",
+   "It wanted to build a new park"
+  ],
+  "answer": 1,
+  "explanation": "The council first planned to cut the tree, then moved the pipes after meetings."
+ }
+]

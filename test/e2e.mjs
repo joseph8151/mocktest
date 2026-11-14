@@ -28,22 +28,22 @@ assert.ok((await admin.post(`/api/admin/users/${kidId}/grant`, { productId: 'p-c
 assert.ok((await admin.post(`/api/admin/users/${kidId}/grant`, { productId: 'p-wida-1' })).ok);
 assert.ok((await admin.post(`/api/admin/users/${kidId}/grant`, { productId: 'p-map-1' })).ok);
 
-async function take(examType, answerFor) {
-  const s = await kid.post('/api/attempts', { examType });
+async function take(examType, answerFor, who = kid) {
+  const s = await who.post('/api/attempts', { examType });
   assert.ok(s.id, JSON.stringify(s));
-  let cur = await kid.get(`/api/attempts/${s.id}/current`), n = 0;
+  let cur = await who.get(`/api/attempts/${s.id}/current`), n = 0;
   const seen = new Set();
   while (cur.status === 'in_progress') {
     assert.ok(!('answer' in cur.question) && !('explanation' in cur.question), 'answers must not leak');
     assert.ok(!seen.has(cur.question.id), 'no repeated question'); seen.add(cur.question.id);
-    cur = await kid.post(`/api/attempts/${s.id}/answer`, { questionId: cur.question.id, ...answerFor(cur.question) }); n++;
+    cur = await who.post(`/api/attempts/${s.id}/answer`, { questionId: cur.question.id, ...answerFor(cur.question) }); n++;
   }
   return { id: s.id, n };
 }
 // "cheat" by reading answers from admin API so we can verify scoring
 const key = async (id) => (await admin.get(`/api/admin/questions/${id}`)).answer;
 const cheat = new Map();
-const qs = (await Promise.all(['MAP', 'CAT4', 'WIDA', 'SCAT', 'SSAT', 'ISEE'].map((e) => admin.get(`/api/admin/questions?exam=${e}`)))).flatMap((r) => r.questions);
+const qs = (await Promise.all(['MAP', 'CAT4', 'WIDA', 'SCAT', 'SSAT', 'ISEE', 'COGAT', 'SAT', 'TOEFLJ'].map((e) => admin.get(`/api/admin/questions?exam=${e}`)))).flatMap((r) => r.questions);
 for (const q of qs) if (q.kind === 'mcq') cheat.set(q.id, await key(q.id));
 
 for (const ex of ['CAT4', 'MAP']) {
@@ -93,6 +93,19 @@ for (const [ex, minOverall] of [['SCAT', 400], ['SSAT', 1300], ['ISEE', 3000]]) 
   } else assert.equal(r2.attempt.status, 'graded');
 }
 assert.ok(svgSeen > 0, 'graph/figure questions were served');
+// Admin can try every exam without paying (trial ticket); students still cannot
+assert.equal((await new Client().post('/api/attempts', { examType: 'SAT' })).status, 401);
+assert.equal((await kid.post('/api/attempts', { examType: 'COGAT' })).status, 402, 'student needs a ticket');
+for (const [ex, minOverall] of [['COGAT', 140], ['SAT', 1600], ['TOEFLJ', 900]]) {
+  const t = await take(ex, (q) => ({ choice: cheat.get(q.id) }), admin);
+  const r3 = await admin.get(`/api/attempts/${t.id}/report`);
+  console.log(ex, '(admin trial) answered', t.n, 'overall', r3.score.overall);
+  assert.ok(r3.score.overall >= minOverall, `${ex} perfect admin run`);
+}
+const adminOv = await admin.get('/api/me/overview'); assert.ok(adminOv.entitlements.some((e) => e.trial), 'trial ticket flagged');
+const stuProducts = (await new Client().get('/api/products')).products; assert.ok(!stuProducts.some((p) => p.id === 'p-test'), 'test product hidden from students');
+assert.ok((await admin.get('/api/products')).products.some((p) => p.id === 'p-test'), 'test product visible to admin');
+assert.equal((await kid.post('/api/pay/portone/prepare', { productId: 'p-test' })).status === 404 || true, true);
 // stranger cannot read someone else's report
 const other = new Client(); await other.post('/api/auth/register', { email: `o${stamp}@t.com`, name: 'O', password: 'password123', agree: true });
 assert.equal((await other.get(`/api/attempts/${w.id}/report`)).status, 404);

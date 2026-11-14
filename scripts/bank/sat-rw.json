@@ -1,0 +1,1667 @@
+[
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 1,
+  "passage": "The hikers were ____ after the long climb, so they sat down and rested for an hour.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "exhausted",
+   "energetic",
+   "curious",
+   "generous"
+  ],
+  "answer": 0,
+  "explanation": "The hikers needed rest, so they must have been worn out."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 1,
+  "passage": "Maya's garden was so ____ that neighbors often stopped to admire the bright flowers.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "careless",
+   "beautiful",
+   "noisy",
+   "hidden"
+  ],
+  "answer": 1,
+  "explanation": "Neighbors admiring the flowers indicates the garden was lovely."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 2,
+  "passage": "Although the committee's report was lengthy, its main argument was ____: the town needed a new bridge.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "ambiguous",
+   "contradictory",
+   "straightforward",
+   "irrelevant"
+  ],
+  "answer": 2,
+  "explanation": "The contrast with 'lengthy' and the clear one-line argument call for 'straightforward'."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 2,
+  "passage": "Botanist Ines Varga's field notes are ____; she recorded the exact height, soil, and bloom date of every plant she surveyed.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "hasty",
+   "sparse",
+   "speculative",
+   "meticulous"
+  ],
+  "answer": 3,
+  "explanation": "Recording exact details for every plant shows extreme care."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 2,
+  "passage": "The novelist's early work was largely ignored, but critics later ____ it as a forerunner of the movement.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "acknowledged",
+   "forgot",
+   "obscured",
+   "postponed"
+  ],
+  "answer": 0,
+  "explanation": "The 'but' signals a shift from being ignored to being recognized."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 3,
+  "passage": "Because the ancient manuscript had been ____ by moisture, scholars could read only fragments of its text.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "illuminated",
+   "degraded",
+   "preserved",
+   "translated"
+  ],
+  "answer": 1,
+  "explanation": "Moisture damage explains why only fragments are readable."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 3,
+  "passage": "The mayor's response to the petition was ____, neither promising action nor rejecting the request outright.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "enthusiastic",
+   "hostile",
+   "noncommittal",
+   "decisive"
+  ],
+  "answer": 2,
+  "explanation": "Neither promising nor rejecting describes a noncommittal reply."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 3,
+  "passage": "Researchers found that the lizard's coloring serves as camouflage, making the animal nearly ____ against the desert rocks.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "conspicuous",
+   "aggressive",
+   "unfamiliar",
+   "indistinguishable"
+  ],
+  "answer": 3,
+  "explanation": "Camouflage makes the lizard hard to tell apart from its background."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 4,
+  "passage": "The historian cautioned that the diary, while vivid, offers only a ____ view of the period, since its author lived in a single village and never traveled.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "limited",
+   "panoramic",
+   "comprehensive",
+   "balanced"
+  ],
+  "answer": 0,
+  "explanation": "One village and no travel means the view is narrow."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 4,
+  "passage": "The sculptor's style is anything but ____: each of her pieces departs sharply from the last, and no two look as though the same artist made them.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "unpredictable",
+   "uniform",
+   "expressive",
+   "innovative"
+  ],
+  "answer": 1,
+  "explanation": "Pieces that differ sharply are the opposite of uniform."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 5,
+  "passage": "The physicist's lecture was ____ in the best sense: it distilled decades of dense mathematics into a handful of images that a general audience could grasp.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "ponderous",
+   "austere",
+   "lucid",
+   "tedious"
+  ],
+  "answer": 2,
+  "explanation": "Making dense material easy to grasp is clarity, or lucidity."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 5,
+  "passage": "Given the ____ nature of the evidence, since each witness recalled the event differently, the panel declined to reach a firm conclusion.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "corroborating",
+   "abundant",
+   "conclusive",
+   "conflicting"
+  ],
+  "answer": 3,
+  "explanation": "Witnesses who disagree produce conflicting evidence."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 3,
+  "passage": "The author's tone in the memoir is ____; rather than lamenting her difficult childhood, she recounts it with gentle humor.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "wry",
+   "bitter",
+   "solemn",
+   "indignant"
+  ],
+  "answer": 0,
+  "explanation": "Gentle humor about hardship is a wry tone."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 2,
+  "passage": "Wind turbines can be especially ____ in areas with steady breezes, producing far more power than in calm regions.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "unnecessary",
+   "effective",
+   "dangerous",
+   "unreliable"
+  ],
+  "answer": 1,
+  "explanation": "Producing far more power describes effectiveness."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 4,
+  "passage": "Critics praised the translator's ____ rendering of the poem, which preserved its rhythm without sacrificing the precise meaning of any line.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "careless",
+   "loose",
+   "faithful",
+   "abridged"
+  ],
+  "answer": 2,
+  "explanation": "Preserving both rhythm and meaning is faithful translation."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 5,
+  "passage": "Her argument, though ____ at first glance, rests on a subtle distinction that most readers overlook.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "revolutionary",
+   "confusing",
+   "bombastic",
+   "unassuming"
+  ],
+  "answer": 3,
+  "explanation": "An argument that hides a subtle point appears unassuming at first."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 1,
+  "passage": "The cat was ____ when the dog barked, and it jumped onto the counter.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "startled",
+   "bored",
+   "sleepy",
+   "pleased"
+  ],
+  "answer": 0,
+  "explanation": "Jumping away suggests the cat was surprised."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 2,
+  "passage": "To ____ the spread of invasive plants, park workers removed seedlings by hand each spring.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "encourage",
+   "curb",
+   "celebrate",
+   "ignore"
+  ],
+  "answer": 1,
+  "explanation": "Removing seedlings is meant to limit the plants' spread."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 3,
+  "passage": "The treaty's wording was deliberately ____ so that both nations could interpret its terms in the way that best suited them.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "exact",
+   "forceful",
+   "vague",
+   "lengthy"
+  ],
+  "answer": 2,
+  "explanation": "Flexible interpretation requires imprecise wording."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 4,
+  "passage": "Although the economist's forecast seemed ____ to some colleagues, who saw no evidence for such rapid growth, subsequent data supported it.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "unsurprising",
+   "cautious",
+   "redundant",
+   "implausible"
+  ],
+  "answer": 3,
+  "explanation": "Colleagues who saw no evidence would find it hard to believe."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 3,
+  "passage": "The museum's new exhibit ____ visitors to consider how everyday objects reflect the values of the people who made them.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "invites",
+   "warns",
+   "deceives",
+   "excuses"
+  ],
+  "answer": 0,
+  "explanation": "An exhibit prompting reflection invites visitors to consider something."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 5,
+  "passage": "The committee's decision, far from being ____, followed a year of deliberation and public comment.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "thorough",
+   "capricious",
+   "measured",
+   "transparent"
+  ],
+  "answer": 1,
+  "explanation": "A year of deliberation contradicts a whimsical, capricious choice."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 2,
+  "passage": "Sea otters are considered a ____ species because their presence helps keep kelp forests healthy.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "negligible",
+   "redundant",
+   "pivotal",
+   "fragile"
+  ],
+  "answer": 2,
+  "explanation": "A species that sustains an ecosystem plays a pivotal role."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 4,
+  "passage": "The poet's reputation, once ____, has grown steadily since her letters were published decades after her death.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "secure",
+   "notorious",
+   "enviable",
+   "obscure"
+  ],
+  "answer": 3,
+  "explanation": "Growth since publication implies her reputation was previously little known."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 5,
+  "passage": "The engineer's confidence was ____: she had tested the design under dozens of conditions before declaring it safe.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "well founded",
+   "reckless",
+   "arbitrary",
+   "fleeting"
+  ],
+  "answer": 0,
+  "explanation": "Extensive testing justifies confidence."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 1,
+  "passage": "The soup was so ____ that Leo had to wait for it to cool before eating.",
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": [
+   "cold",
+   "hot",
+   "plain",
+   "sweet"
+  ],
+  "answer": 1,
+  "explanation": "Waiting for it to cool means it was hot."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 2,
+  "passage": "In 1894, a young lighthouse keeper named Abel Rourke began a journal. He recorded the weather, passing ships, and, increasingly, his loneliness. The journal, discovered in an attic last year, offers historians a rare personal account of coastal life.",
+  "stem": "Which choice best states the main purpose of the text?",
+  "choices": [
+   "To argue that lighthouse keepers were poorly treated.",
+   "To compare two journals from the same era.",
+   "To introduce a historical document and explain why it is valuable.",
+   "To describe how lighthouses operate."
+  ],
+  "answer": 2,
+  "explanation": "The text presents the journal and notes its value to historians."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 3,
+  "passage": "Many people assume that bees die immediately after stinging. In fact, only honeybees have barbed stingers that lodge in skin; bumblebees and many other species can sting repeatedly. The misconception persists because honeybees are the species people most often encounter.",
+  "stem": "Which choice best describes the overall structure of the text?",
+  "choices": [
+   "It presents a hypothesis and then describes an experiment that tests it.",
+   "It describes a problem and then proposes a solution.",
+   "It contrasts two scientific theories and then favors one.",
+   "It corrects a common belief and then explains why the belief persists."
+  ],
+  "answer": 3,
+  "explanation": "The text refutes a misconception and then accounts for it."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 4,
+  "passage": "Economist Dara Okafor argues that remote work has reshaped small-town economies. Cafes, hardware stores, and childcare centers have reported rising demand since 2020. Critics, however, note that these gains are concentrated in towns within a two-hour drive of a major city. Okafor concedes the point but maintains that even this limited effect is significant.",
+  "stem": "Which choice best describes the function of the third sentence?",
+  "choices": [
+   "It introduces a limitation on the claim presented earlier.",
+   "It provides a specific example supporting Okafor's claim.",
+   "It restates Okafor's central argument in different terms.",
+   "It defines a term used in the previous sentence."
+  ],
+  "answer": 0,
+  "explanation": "The critics' note qualifies how widely the claimed gains apply."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 2,
+  "passage": "The kitchen smelled of cardamom and burnt sugar. Nadia stood at the counter, flour to her elbows, listening for her grandmother's footsteps on the stairs. Each creak of the old boards made her heart quicken, though she could not have said whether from fear or hope.",
+  "stem": "Which choice best describes the overall focus of the text?",
+  "choices": [
+   "A character's detailed recipe for a family dessert.",
+   "A character's mixed anticipation as she waits in a familiar setting.",
+   "A grandmother's disapproval of her granddaughter's cooking.",
+   "A narrator's regret about leaving a childhood home."
+  ],
+  "answer": 1,
+  "explanation": "Nadia feels both fear and hope while waiting."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 5,
+  "passage": "Archaeologists long interpreted the stone circles of the northern plateau as calendars, aligning each with solstice sunrises. A recent survey, however, found that only four of the thirty-one circles align with any solar event, a proportion no greater than chance would predict. The finding does not rule out ceremonial use, but it undermines the calendar hypothesis as a general explanation.",
+  "stem": "Which choice best states the main purpose of the text?",
+  "choices": [
+   "To propose a new method for surveying ancient sites.",
+   "To defend the calendar hypothesis against criticism.",
+   "To present new evidence that weakens a long-held interpretation.",
+   "To explain how solstices were observed in antiquity."
+  ],
+  "answer": 2,
+  "explanation": "The survey results cast doubt on the calendar hypothesis."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 3,
+  "passage": "Text 1\nUrban planner Lila Moreno argues that cities should replace parking lots with housing, since doing so would ease the housing shortage.\n\nText 2\nTransportation analyst Greg Hale cautions that removing parking without improving public transit could strand residents who depend on cars.",
+  "stem": "Based on the texts, how would Hale most likely respond to Moreno's argument?",
+  "choices": [
+   "By denying that a housing shortage exists in cities.",
+   "By arguing that parking lots are more valuable than housing in every case.",
+   "By proposing that cities build more parking garages instead.",
+   "By agreeing that parking could be replaced but insisting that transit improvements accompany the change."
+  ],
+  "answer": 3,
+  "explanation": "Hale warns against removing parking without better transit, not against the idea itself."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 4,
+  "passage": "Text 1\nSome linguists claim that children acquire grammar mainly through an innate capacity, noting that all children, regardless of upbringing, master complex rules by age five.\n\nText 2\nLinguist Pei Chen found that children exposed to richer conversation at home mastered certain constructions months earlier than peers with less exposure, suggesting that input matters more than the Text 1 view allows.",
+  "stem": "Which choice best describes how Text 2 relates to Text 1?",
+  "choices": [
+   "It offers evidence that complicates the view described in Text 1.",
+   "It restates the view described in Text 1 with additional examples.",
+   "It explains the biological origin of the capacity described in Text 1.",
+   "It applies the view described in Text 1 to a different language."
+  ],
+  "answer": 0,
+  "explanation": "Chen's findings suggest input plays a larger role than the innate-capacity view admits."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 3,
+  "passage": "Few visitors to the gallery notice the small brass plaque beside Ito's painting. Yet the plaque tells the story of its rescue: in 1962, a flood submerged the storage vault, and conservators spent three years restoring the canvas. The painting, in other words, survives not only because of Ito's skill but also because of the patience of those who saved it.",
+  "stem": "Which choice best states the main purpose of the text?",
+  "choices": [
+   "To criticize the gallery for hiding the plaque.",
+   "To suggest that the painting's survival reflects the work of conservators as well as its creator.",
+   "To explain the techniques Ito used to paint the canvas.",
+   "To describe the causes of the 1962 flood."
+  ],
+  "answer": 1,
+  "explanation": "The final sentence credits both the artist and the conservators."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 1,
+  "passage": "Tomas planted tomato seeds in early April. By late May, the seedlings were tall enough to move outside, and by August the plants were heavy with fruit. Tomas gave most of the tomatoes to his neighbors.",
+  "stem": "According to the text, what did Tomas do with most of the tomatoes?",
+  "choices": [
+   "He sold them at a market.",
+   "He canned them for winter.",
+   "He gave them to his neighbors.",
+   "He saved their seeds."
+  ],
+  "answer": 2,
+  "explanation": "The final sentence states he gave most to neighbors."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 1,
+  "passage": "Octopuses are known for their intelligence. In laboratory tests, they have opened jars, solved mazes, and even escaped from sealed tanks. Researchers say these abilities suggest that complex problem solving evolved in more than one branch of the animal kingdom.",
+  "stem": "Which choice best states the main idea of the text?",
+  "choices": [
+   "Octopuses are difficult to keep in laboratory tanks.",
+   "Mazes are the best way to test animal intelligence.",
+   "Jars are commonly found in ocean habitats.",
+   "Octopuses display problem-solving abilities that interest researchers."
+  ],
+  "answer": 3,
+  "explanation": "The text centers on octopus intelligence and its significance."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 2,
+  "passage": "When the town library extended its hours in March, the number of visitors per week rose from about 400 to about 650. The library director noted that most of the new visitors arrived after 6 p.m.",
+  "stem": "Which choice is most strongly supported by the text?",
+  "choices": [
+   "The extended hours made the library accessible to some people who could not previously visit.",
+   "The library's collection expanded in March.",
+   "Most visitors prefer the library to other town services.",
+   "The number of visitors will keep rising every month."
+  ],
+  "answer": 0,
+  "explanation": "New evening visitors suggest later hours reached people who could not come earlier."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 2,
+  "passage": "Fourth-grade teacher Ms. Adeyemi asks students to keep a weather log for one month. Each day, they record the temperature, cloud cover, and wind direction, and at month's end they graph the results.",
+  "stem": "According to the text, what do students do at the end of the month?",
+  "choices": [
+   "They compare their logs with a meteorologist's.",
+   "They graph the results of their observations.",
+   "They predict the next month's weather.",
+   "They present their logs to the principal."
+  ],
+  "answer": 1,
+  "explanation": "The text says they graph the results at month's end."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 3,
+  "passage": "Tardigrades survive extreme conditions by entering a dried-out state in which their metabolism nearly stops. In 2017, researchers identified a protein unique to tardigrades that appears to shield their DNA from radiation damage. When that protein was introduced into human cells in the lab, the cells showed less damage after exposure to X-rays.",
+  "stem": "Which choice best states the main idea of the text?",
+  "choices": [
+   "Tardigrades are the only animals that can survive without water.",
+   "Human cells are naturally more resistant to X-rays than tardigrade cells.",
+   "A protein found in tardigrades may protect DNA, and it reduced radiation damage even in human cells grown in a lab.",
+   "Researchers have developed a way for humans to survive extreme conditions."
+  ],
+  "answer": 2,
+  "explanation": "The text describes the protein and its protective effect in human cells."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 3,
+  "passage": "Historian Priya Anand notes that the village's records show no births between 1846 and 1849, while burial entries doubled. She adds that the records resume normal patterns in 1850, with a sharp rise in baptisms.",
+  "stem": "Which choice is most strongly supported by the text?",
+  "choices": [
+   "The village's record keeper retired in 1850.",
+   "Baptisms were illegal before 1850.",
+   "Burial entries rose because the village grew larger.",
+   "The village likely experienced a crisis that affected its population in the late 1840s."
+  ],
+  "answer": 3,
+  "explanation": "No births, doubled burials, and a later rebound suggest a population crisis."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 4,
+  "passage": "Ruth Calloway's novel follows a fishing family. Early on, the narrator calls the harbor \"a cradle rocking the town to sleep.\" Near the end, the narrator calls the same water \"a hungry mouth waiting beyond the rocks.\" The family's boat, the Marigold, appears in nearly every chapter.",
+  "stem": "A student claims that Calloway portrays the sea ambivalently. Which choice best supports the student's claim?",
+  "choices": [
+   "The narrator calls the harbor a cradle early in the novel and a hungry mouth near the end.",
+   "The novel follows a fishing family.",
+   "The Marigold appears in nearly every chapter.",
+   "The narrator describes the harbor only once."
+  ],
+  "answer": 0,
+  "explanation": "Contrasting images of the same water show conflicting attitudes."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 5,
+  "passage": "Ecologist Hana Sato hypothesizes that urban birds sing at higher pitches because low-pitched songs are masked by traffic noise. To test this, she recorded great tits in quiet forests and in noisy city parks.",
+  "stem": "Which finding, if true, would most directly support Sato's hypothesis?",
+  "choices": [
+   "Great tits in forests sang more often than those in city parks.",
+   "Great tits in city parks sang at a higher average pitch than great tits in forests.",
+   "Great tits in city parks were larger than those in forests.",
+   "Great tits in both settings sang at the same pitch."
+  ],
+  "answer": 1,
+  "explanation": "A higher pitch in noisy places matches the hypothesis."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 3,
+  "passage": "A school surveyed 200 students about how they travel to class. Of those students, 80 walked, 60 rode the bus, 40 were driven by family, and 20 biked.",
+  "stem": "Which choice most accurately describes data from the survey?",
+  "choices": [
+   "Riding the bus was the most common method, used by 40 percent of students.",
+   "Biking was used by 20 percent of students.",
+   "Walking was the most common method, used by 40 percent of students.",
+   "Being driven by family was used by half of students."
+  ],
+  "answer": 2,
+  "explanation": "80 of 200 is 40 percent, the largest group."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 4,
+  "passage": "A librarian recorded the books checked out in one week: fiction, 310; nonfiction, 150; poetry, 40; graphic novels, 100. She wants to show that fiction made up more than half of all checkouts.",
+  "stem": "Which choice most effectively uses the data to support her claim?",
+  "choices": [
+   "Fiction accounted for 310 checkouts, more than any other category.",
+   "Nonfiction and graphic novels together accounted for 250 checkouts.",
+   "Poetry accounted for the fewest checkouts, at 40.",
+   "Fiction accounted for 310 of the 600 books checked out, which is more than half."
+  ],
+  "answer": 3,
+  "explanation": "310 of 600 exceeds 50 percent, directly supporting the claim."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 2,
+  "passage": "Elena had practiced the cello piece for weeks, but when she stepped onto the stage, the audience's silence made her hands tremble. She closed her eyes, remembered her teacher's advice to breathe slowly, and began to play.",
+  "stem": "What does Elena do to steady herself?",
+  "choices": [
+   "She closes her eyes and recalls her teacher's advice about breathing.",
+   "She asks the audience for quiet.",
+   "She switches to a simpler piece.",
+   "She looks for her teacher in the front row."
+  ],
+  "answer": 0,
+  "explanation": "The text says she closed her eyes and remembered the breathing advice."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 5,
+  "passage": "Scholars once attributed the unsigned portrait to the workshop of a famous master, citing its confident brushwork. But infrared imaging has revealed underdrawings that differ markedly from the master's documented habits, and the pigments include a blue unavailable in the region until a generation after his death.",
+  "stem": "Which choice is most strongly supported by the text?",
+  "choices": [
+   "The portrait was painted by someone deliberately imitating the master.",
+   "The portrait was probably not produced in the master's workshop during his lifetime.",
+   "The master's brushwork was inconsistent throughout his career.",
+   "Infrared imaging cannot be used on portraits."
+  ],
+  "answer": 1,
+  "explanation": "Differing underdrawings and an anachronistic pigment argue against the attribution."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 4,
+  "passage": "Urban beekeeping has grown quickly, but ecologists warn that it can backfire. Honeybees compete with native pollinators for limited flowers, and in cities with few green spaces, the added competition may reduce native bee populations. The researchers recommend planting more flowers before adding hives.",
+  "stem": "Which choice best states the main idea of the text?",
+  "choices": [
+   "Honeybees are less effective pollinators than native bees.",
+   "Cities should ban beekeeping entirely.",
+   "Urban beekeeping may harm native pollinators unless enough flowering plants are available.",
+   "Native bees prefer cities to rural areas."
+  ],
+  "answer": 2,
+  "explanation": "The text warns of competition and recommends adding flowers first."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 1,
+  "passage": "Every morning, the baker at Corner Loaf arrives at 4 a.m. By 6 a.m., a line of customers is already waiting outside the door.",
+  "stem": "Which choice is most strongly supported by the text?",
+  "choices": [
+   "The baker dislikes early mornings.",
+   "Corner Loaf opens at 4 a.m.",
+   "The customers bake their own bread.",
+   "Corner Loaf's bread is popular with customers."
+  ],
+  "answer": 3,
+  "explanation": "An early line of customers suggests the bread is popular."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 3,
+  "passage": "Volcanologist Sam Ortiz measures gas emissions at the crater's rim before and after each eruption. Before the 2019 eruption, sulfur dioxide levels climbed for two weeks. Ortiz suggests that tracking such increases could help officials issue earlier warnings.",
+  "stem": "Which choice best states Ortiz's suggestion?",
+  "choices": [
+   "Rising sulfur dioxide levels may serve as an early warning of eruptions.",
+   "Eruptions can be prevented by reducing gas emissions.",
+   "Sulfur dioxide is the only gas worth measuring.",
+   "Craters should be measured only after eruptions."
+  ],
+  "answer": 0,
+  "explanation": "The final sentence proposes using gas increases for earlier warnings."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 5,
+  "passage": "Economists often treat price as the main signal of a good's value, yet studies of secondhand markets suggest that provenance also shapes willingness to pay. In one experiment, identical mugs sold for nearly twice as much when buyers were told they had belonged to a celebrated poet. The results imply that value is partly a story buyers tell themselves.",
+  "stem": "Which choice best states the main idea of the text?",
+  "choices": [
+   "Mugs that belonged to poets are more durable than other mugs.",
+   "Buyers' valuation of goods can depend on narratives about an item as well as its price.",
+   "Economists disagree about how to measure prices.",
+   "Secondhand markets are more efficient than new-goods markets."
+  ],
+  "answer": 1,
+  "explanation": "The experiment shows a story about the item changing what buyers will pay."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 2,
+  "passage": "At a science fair, 5 projects were in botany, 8 in chemistry, 4 in physics, and 3 in astronomy. Judges awarded ribbons to 2 botany, 4 chemistry, 1 physics, and 1 astronomy projects.",
+  "stem": "Which category had the highest proportion of its projects awarded ribbons?",
+  "choices": [
+   "Botany",
+   "Physics",
+   "Chemistry",
+   "Astronomy"
+  ],
+  "answer": 2,
+  "explanation": "Chemistry 4/8 is 50 percent, higher than botany 40, astronomy about 33, and physics 25."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 4,
+  "passage": "When Ansel returned to the village after thirty years, he found the mill silent and the millpond choked with reeds. He walked its length slowly, touching the splintered railing as though it might answer him.",
+  "stem": "Which choice best describes Ansel's reaction?",
+  "choices": [
+   "He is irritated that the village ignored his return.",
+   "He is eager to restart the mill himself.",
+   "He is indifferent to the changes.",
+   "He is moved by the decline of a place that once mattered to him."
+  ],
+  "answer": 3,
+  "explanation": "His slow walk and touching the railing show emotional attachment."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 1,
+  "passage": "The Greenfield Zoo opened a new reptile house last month. It houses twelve species, including a Komodo dragon that visitors can watch being fed on Saturdays.",
+  "stem": "According to the text, when can visitors watch the Komodo dragon being fed?",
+  "choices": [
+   "On Saturdays",
+   "Every morning",
+   "On Sundays",
+   "During the opening ceremony"
+  ],
+  "answer": 0,
+  "explanation": "The text states the feeding is on Saturdays."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 2,
+  "passage": "Rising sea levels are forcing some coastal communities to consider relocating. In Marlow Bay, residents voted last year to move their school and clinic inland, a costly decision that planners say will save money over the next fifty years.",
+  "stem": "Which choice best states the main idea of the text?",
+  "choices": [
+   "Sea levels are rising faster than scientists predicted.",
+   "A coastal community has chosen to relocate services inland as a long-term response to rising seas.",
+   "Most coastal communities have chosen to relocate.",
+   "Marlow Bay residents regret their vote."
+  ],
+  "answer": 1,
+  "explanation": "The text focuses on Marlow Bay's relocation decision."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 3,
+  "passage": "Seeds of the fire poppy can lie dormant in soil for decades. They germinate only after exposure to chemicals found in smoke, which is why the plant appears in great numbers on hillsides just after wildfires.",
+  "stem": "Which choice is most strongly supported by the text?",
+  "choices": [
+   "Fire poppies cannot grow unless neighboring plants have been damaged.",
+   "Wildfires are started by chemicals in fire poppy seeds.",
+   "The fire poppy's germination is triggered by conditions that wildfires create.",
+   "Fire poppy seeds die within a few years unless they are burned."
+  ],
+  "answer": 2,
+  "explanation": "Smoke chemicals trigger germination, explaining post-fire abundance."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 4,
+  "passage": "Historian Leo Brandt argues that the 1870s railway boom transformed the town of Calder from a farming village into a trading hub. Census records show Calder's population rising from 800 in 1870 to 3,400 in 1880, and the number of registered shops growing from 6 to 52.",
+  "stem": "Which choice provides the strongest evidence for Brandt's claim that Calder became a trading hub?",
+  "choices": [
+   "Calder's population rose from 800 to 3,400.",
+   "A railway boom occurred in the 1870s.",
+   "Calder was once a farming village.",
+   "The number of registered shops grew from 6 to 52."
+  ],
+  "answer": 3,
+  "explanation": "Growth in shops most directly indicates commerce."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 5,
+  "passage": "Though critics hailed the symphony's premiere, composer Tobias Reyes withdrew it from performance after only two concerts, writing to a friend that the final movement \"says nothing I wished to say.\" He rewrote that movement entirely over the next decade, leaving the first three untouched.",
+  "stem": "Which choice best describes Reyes's attitude toward the symphony?",
+  "choices": [
+   "He was dissatisfied with one part despite the work's positive reception.",
+   "He was content with the work but feared harsh critics.",
+   "He regarded all four movements as flawed.",
+   "He doubted his ability to compose anything further."
+  ],
+  "answer": 0,
+  "explanation": "Only the final movement was rewritten, despite praise."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 2,
+  "passage": "At the Lakeside Market, vendors set up stalls at dawn. By nine, shoppers crowd the aisles, and by noon, most produce has sold out.",
+  "stem": "According to the text, what is true by noon?",
+  "choices": [
+   "Vendors begin setting up stalls.",
+   "Most produce has been sold.",
+   "Shoppers crowd the aisles for the first time.",
+   "The market closes."
+  ],
+  "answer": 1,
+  "explanation": "The text says most produce has sold out by noon."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 3,
+  "passage": "A survey of 150 residents asked which public improvement they preferred: 60 chose parks, 45 chose bike lanes, 30 chose libraries, and 15 chose lighting.",
+  "stem": "Which choice most accurately reflects the data?",
+  "choices": [
+   "Parks were chosen by a majority of respondents.",
+   "Libraries were chosen by 35 percent of respondents.",
+   "Parks were chosen by 40 percent of respondents, more than any other improvement.",
+   "Lighting was chosen by 15 percent of respondents."
+  ],
+  "answer": 2,
+  "explanation": "60 of 150 is 40 percent, the largest share but not a majority."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 1,
+  "passage": "Regular exercise helps people in many ways. It strengthens the heart, improves sleep, and can even lift a person's mood.",
+  "stem": "Which choice best states the main idea of the text?",
+  "choices": [
+   "Exercise is easy to start.",
+   "Sleep matters more than exercise.",
+   "Hearts need rest more than movement.",
+   "Regular exercise provides several health benefits."
+  ],
+  "answer": 3,
+  "explanation": "The text lists multiple benefits of exercise."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 1,
+  "passage": "The flowers in the vase ____ fresh and bright.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "look",
+   "looks",
+   "looking",
+   "has looked"
+  ],
+  "answer": 0,
+  "explanation": "The plural subject 'flowers' takes 'look'."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 1,
+  "passage": "Yesterday, the class ____ a trip to the science museum.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "takes",
+   "took",
+   "will take",
+   "taking"
+  ],
+  "answer": 1,
+  "explanation": "'Yesterday' requires the past tense."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 2,
+  "passage": "The storm knocked out the power ____ families lit candles and played board games.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   ",",
+   "; and",
+   ", and",
+   ": and"
+  ],
+  "answer": 2,
+  "explanation": "A comma with a coordinating conjunction correctly joins two independent clauses."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 2,
+  "passage": "The ____ playground was closed for repairs.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "childrens'",
+   "childrens",
+   "children",
+   "children's"
+  ],
+  "answer": 3,
+  "explanation": "'Children' is irregular plural, so the possessive is 'children's'."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 2,
+  "passage": "Each of the students in the choir ____ a solo during the spring concert.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "performs",
+   "perform",
+   "are performing",
+   "have performed"
+  ],
+  "answer": 0,
+  "explanation": "'Each' is singular and takes 'performs'."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 3,
+  "passage": "The recipe requires three ingredients ____",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "; flour, butter, and sugar.",
+   ": flour, butter, and sugar.",
+   ". Flour, butter, and sugar.",
+   " flour, butter, and sugar."
+  ],
+  "answer": 1,
+  "explanation": "A colon after a complete clause introduces the list."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 3,
+  "passage": "Walking along the shoreline, ____",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "a dolphin was spotted by Marta leaping in the waves.",
+   "the waves held a leaping dolphin that Marta saw.",
+   "Marta spotted a dolphin leaping in the waves.",
+   "there was a dolphin Marta saw leaping in the waves."
+  ],
+  "answer": 2,
+  "explanation": "The opening modifier must describe Marta, the one walking."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 3,
+  "passage": "The manager told the clerk that ____",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "his schedule had changed.",
+   "their schedule had changed.",
+   "her schedule had changed.",
+   "the clerk's schedule had changed."
+  ],
+  "answer": 3,
+  "explanation": "Repeating the noun avoids an ambiguous pronoun."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 3,
+  "passage": "By the time the rescue team arrived, the hikers ____ for nearly six hours.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "had been waiting",
+   "have waited",
+   "waited",
+   "are waiting"
+  ],
+  "answer": 0,
+  "explanation": "The past perfect progressive fits an action before a past event."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 4,
+  "passage": "The lecture ran long ____ most of the audience stayed until the end.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   ", however,",
+   "; however,",
+   "however,",
+   ": however"
+  ],
+  "answer": 1,
+  "explanation": "A semicolon before a conjunctive adverb correctly joins independent clauses."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 4,
+  "passage": "Among the artifacts displayed in the new gallery ____ a bronze mirror and two ceramic bowls.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "is",
+   "was",
+   "are",
+   "has been"
+  ],
+  "answer": 2,
+  "explanation": "The plural compound subject follows the verb and requires 'are'."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 4,
+  "passage": "The mayor, who had promised to reduce traffic congestion ____ announced a new bus plan.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   ";",
+   ":",
+   "—",
+   ","
+  ],
+  "answer": 3,
+  "explanation": "The nonrestrictive clause opened with a comma must close with a comma."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 4,
+  "passage": "The new program aims to reduce waste, conserve water, and ____ local farms.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "support",
+   "supporting",
+   "supports",
+   "has supported"
+  ],
+  "answer": 0,
+  "explanation": "Parallel structure requires the base form 'support'."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 5,
+  "passage": "If the museum ____ more funding last year, it could have expanded its collection.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "received",
+   "had received",
+   "would receive",
+   "has received"
+  ],
+  "answer": 1,
+  "explanation": "A past unreal conditional uses the past perfect."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 5,
+  "passage": "The architect, ____ designed the library, will speak at tonight's ceremony.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "whom",
+   "which",
+   "who",
+   "she"
+  ],
+  "answer": 2,
+  "explanation": "'Who' is the subject of 'designed' and refers to a person."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 5,
+  "passage": "The award will go to the researcher ____ the committee believes made the most significant contribution.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "whom",
+   "whose",
+   "which",
+   "who"
+  ],
+  "answer": 3,
+  "explanation": "'Who' is the subject of 'made'."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 3,
+  "passage": "The company announced that ____ new headquarters would open in March.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "its",
+   "it's",
+   "its'",
+   "they're"
+  ],
+  "answer": 0,
+  "explanation": "'Its' is the singular possessive pronoun."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 4,
+  "passage": "The festival, ____ draws thousands of visitors each year, features local musicians.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "that",
+   "which",
+   "it",
+   "and"
+  ],
+  "answer": 1,
+  "explanation": "A nonrestrictive clause set off by commas needs 'which'."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 2,
+  "passage": "The author and her editor ____ revising the manuscript this week.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "is",
+   "has been",
+   "are",
+   "was"
+  ],
+  "answer": 2,
+  "explanation": "A compound subject takes the plural 'are' in the present."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 2,
+  "passage": "The two ____ essays were both selected for publication.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "student's",
+   "students",
+   "students's",
+   "students'"
+  ],
+  "answer": 3,
+  "explanation": "The plural possessive of 'students' is 'students''."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 4,
+  "passage": "As the sun set, the fishermen hauled in their nets, stacked the crates, and ____ toward the harbor.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "rowed",
+   "row",
+   "rowing",
+   "are rowing"
+  ],
+  "answer": 0,
+  "explanation": "The past tense matches the other verbs in the series."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 5,
+  "passage": "A tireless advocate for public libraries, ____",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "the campaign of Naomi Fields raised over two million dollars.",
+   "Naomi Fields raised over two million dollars through her campaign.",
+   "Naomi Fields's campaign raised over two million dollars.",
+   "over two million dollars was raised by Naomi Fields's campaign."
+  ],
+  "answer": 1,
+  "explanation": "The modifier must be followed by the person it describes."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 5,
+  "passage": "Books ____ are overdue incur a fine of ten cents per day.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "who",
+   "what",
+   "that",
+   ", which"
+  ],
+  "answer": 2,
+  "explanation": "A restrictive clause about things uses 'that' without commas."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 2,
+  "passage": "Although the experiment failed ____ the researchers learned something valuable about the process.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   ";",
+   ":",
+   ".",
+   ","
+  ],
+  "answer": 3,
+  "explanation": "A comma follows an introductory dependent clause."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 1,
+  "passage": "The two friends shared ____ lunch at the park.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "their",
+   "there",
+   "they're",
+   "them"
+  ],
+  "answer": 0,
+  "explanation": "'Their' is the possessive pronoun."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 2,
+  "passage": "The explorers lost most of ____ supplies in the river.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "its",
+   "their",
+   "there",
+   "they're"
+  ],
+  "answer": 1,
+  "explanation": "A plural noun takes the plural possessive 'their'."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 4,
+  "passage": "The author ____ latest novel won the prize will tour next spring.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "who's",
+   "whom",
+   "whose",
+   "which"
+  ],
+  "answer": 2,
+  "explanation": "'Whose' shows possession."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 5,
+  "passage": "Neither the director nor the actors ____ satisfied with the first take.",
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": [
+   "was",
+   "is",
+   "has been",
+   "were"
+  ],
+  "answer": 3,
+  "explanation": "The verb agrees with the nearer subject, 'actors'."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 1,
+  "passage": "The sky was dark and heavy with clouds. ____ the family decided to bring umbrellas on their walk.",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": [
+   "Therefore,",
+   "However,",
+   "For example,",
+   "Meanwhile,"
+  ],
+  "answer": 0,
+  "explanation": "Bringing umbrellas is a result of the dark clouds."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 2,
+  "passage": "Solar panels have become far cheaper over the past decade. ____ many homeowners still hesitate to install them because of the upfront cost.",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": [
+   "Likewise,",
+   "Even so,",
+   "As a result,",
+   "In particular,"
+  ],
+  "answer": 1,
+  "explanation": "The hesitation contrasts with the falling prices."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 2,
+  "passage": "Marine biologists tagged forty sharks off the coast. ____ they were able to track the animals' migrations for more than two years.",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": [
+   "In contrast,",
+   "Instead,",
+   "As a result,",
+   "Previously,"
+  ],
+  "answer": 2,
+  "explanation": "Tracking was a consequence of tagging."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 3,
+  "passage": "Some insects, such as ants, live in highly organized colonies. ____ other insects, such as most beetles, live largely solitary lives.",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": [
+   "Similarly,",
+   "Consequently,",
+   "For instance,",
+   "By contrast,"
+  ],
+  "answer": 3,
+  "explanation": "The sentences contrast social and solitary insects."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 3,
+  "passage": "The author's first novel sold few copies. ____ it earned a devoted following among critics, who later helped her second book reach a wide audience.",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": [
+   "Still,",
+   "Therefore,",
+   "Likewise,",
+   "For example,"
+  ],
+  "answer": 0,
+  "explanation": "Critical devotion contrasts with poor sales."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 3,
+  "passage": "Many plants rely on bees for pollination. ____ apple orchards often rent hives each spring to ensure a good harvest.",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": [
+   "On the other hand,",
+   "For this reason,",
+   "Nonetheless,",
+   "In other words,"
+  ],
+  "answer": 1,
+  "explanation": "Orchards rent hives because of plants' reliance on bees."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 4,
+  "passage": "The first draft of the bill proposed a flat tax. ____ the final version included three separate rates.",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": [
+   "Similarly,",
+   "For example,",
+   "Ultimately,",
+   "Specifically,"
+  ],
+  "answer": 2,
+  "explanation": "The final version came after the first draft."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 4,
+  "passage": "Critics praised the film's cinematography. ____ they found its screenplay uneven and its ending rushed.",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": [
+   "Accordingly,",
+   "Moreover,",
+   "Likewise,",
+   "However,"
+  ],
+  "answer": 3,
+  "explanation": "The second sentence contrasts with the praise."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 2,
+  "passage": "Glass is made primarily from sand. ____ it is among the most easily recycled materials, since it can be melted and reformed without losing quality.",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": [
+   "Moreover,",
+   "Nevertheless,",
+   "Instead,",
+   "Previously,"
+  ],
+  "answer": 0,
+  "explanation": "The sentence adds another positive point about glass."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 5,
+  "passage": "Early telescopes distorted images with colored fringes. ____ Newton's reflecting telescope used a mirror instead of a lens, avoiding the problem altogether.",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": [
+   "Accordingly,",
+   "In contrast,",
+   "For example,",
+   "Likewise,"
+  ],
+  "answer": 1,
+  "explanation": "Newton's design differs from the lens-based telescopes."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 5,
+  "passage": "The study found that students who slept eight hours scored higher on memory tests. ____ the researchers caution that the study cannot prove sleep caused the difference.",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": [
+   "Therefore,",
+   "Similarly,",
+   "That said,",
+   "For example,"
+  ],
+  "answer": 2,
+  "explanation": "The caution qualifies the finding."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 5,
+  "passage": "The expedition's maps proved inaccurate in several places. ____ the team reached the summit on schedule by relying on local guides' knowledge.",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": [
+   "Hence,",
+   "In addition,",
+   "Namely,",
+   "Nonetheless,"
+  ],
+  "answer": 3,
+  "explanation": "Success despite faulty maps is a contrast."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 1,
+  "passage": "Sam loves to read. ____ he visits the library every Saturday.",
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": [
+   "For example,",
+   "However,",
+   "Instead,",
+   "Otherwise,"
+  ],
+  "answer": 0,
+  "explanation": "The library visits illustrate his love of reading."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 2,
+  "passage": "- Kelp is a large brown algae.\n- Kelp forests grow in cold, nutrient-rich coastal waters.\n- A single kelp stalk can grow up to two feet in a day.\n- Kelp forests shelter hundreds of marine species.",
+  "stem": "The student wants to emphasize how quickly kelp grows. Which choice most effectively uses relevant information from the notes to accomplish the stated goal?",
+  "choices": [
+   "Kelp forests shelter hundreds of marine species in cold coastal waters.",
+   "Kelp, a large brown algae found in cold coastal waters, can grow as much as two feet in a single day.",
+   "Kelp is a large brown algae that grows in nutrient-rich water.",
+   "Kelp stalks, which are found in forests, are large."
+  ],
+  "answer": 1,
+  "explanation": "Only this choice highlights the daily growth rate."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 3,
+  "passage": "- Tides of Ash (2015) is a historical novel set in Lisbon.\n- Salt Road (2019) is a historical novel set in Morocco.\n- Both were written by Ines Duarte.\n- Both received national book awards.",
+  "stem": "The student wants to emphasize what the two books have in common. Which choice most effectively uses relevant information from the notes to accomplish the stated goal?",
+  "choices": [
+   "Tides of Ash was published in 2015, and Salt Road was published in 2019.",
+   "Tides of Ash is set in Lisbon, while Salt Road is set in Morocco.",
+   "Ines Duarte wrote both Tides of Ash and Salt Road, historical novels that each received a national book award.",
+   "Ines Duarte wrote historical novels."
+  ],
+  "answer": 2,
+  "explanation": "This choice highlights shared features of both books."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 4,
+  "passage": "- In 2021, divers found a shipwreck off Crete.\n- The ship dates to roughly 400 B.C.E.\n- Its cargo included over 300 intact wine jars.\n- Residues in the jars let researchers study ancient winemaking.",
+  "stem": "The student wants to explain why the discovery matters to researchers. Which choice most effectively uses relevant information from the notes to accomplish the stated goal?",
+  "choices": [
+   "Divers found a shipwreck off Crete in 2021.",
+   "The shipwreck, dating to roughly 400 B.C.E., carried over 300 intact wine jars.",
+   "Ancient winemaking was practiced on Crete.",
+   "The shipwreck found off Crete in 2021 matters because residues in its 300 intact wine jars let researchers study ancient winemaking."
+  ],
+  "answer": 3,
+  "explanation": "Only this choice ties the find to its research value."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 1,
+  "passage": "- The Maple Street Library opened in 1923.\n- It has over 20,000 books.\n- It hosts a story hour every Friday.",
+  "stem": "The student wants to briefly describe the library's history. Which choice most effectively uses relevant information from the notes to accomplish the stated goal?",
+  "choices": [
+   "The Maple Street Library opened in 1923.",
+   "The library hosts a story hour every Friday.",
+   "The library has over 20,000 books.",
+   "The library has many books and a story hour."
+  ],
+  "answer": 0,
+  "explanation": "Only the opening date concerns history."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 3,
+  "passage": "- Researchers at Alder University studied 120 volunteers.\n- Volunteers wore sleep trackers for 30 nights.\n- Researchers compared sleep length with next-day reaction times.\n- Longer sleep predicted faster reaction times.",
+  "stem": "The student wants to describe the study's method. Which choice most effectively uses relevant information from the notes to accomplish the stated goal?",
+  "choices": [
+   "Longer sleep predicted faster reaction times among volunteers.",
+   "Researchers at Alder University had 120 volunteers wear sleep trackers for 30 nights and compared their sleep length with next-day reaction times.",
+   "The study at Alder University showed that sleep matters.",
+   "Sleep trackers can measure how long people sleep."
+  ],
+  "answer": 1,
+  "explanation": "Only this choice describes how the study was conducted."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 5,
+  "passage": "- Electric buses cost about 40 percent more than diesel buses to buy.\n- Electric buses cost far less to fuel and maintain.\n- Over twelve years, total costs for electric buses were about 15 percent lower in one city's analysis.",
+  "stem": "The student wants to argue that electric buses are cost-effective despite a higher purchase price. Which choice most effectively uses relevant information from the notes to accomplish the stated goal?",
+  "choices": [
+   "Electric buses cost about 40 percent more than diesel buses to buy.",
+   "Electric buses cost far less to fuel and maintain than diesel buses.",
+   "Although electric buses cost about 40 percent more to buy, lower fuel and maintenance costs made their total cost about 15 percent lower over twelve years in one city's analysis.",
+   "One city analyzed electric buses over twelve years."
+  ],
+  "answer": 2,
+  "explanation": "This choice acknowledges the price and then shows overall savings."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 4,
+  "passage": "- Wangari Pierce is a ceramic artist.\n- She grew up in Nairobi and now lives in Toronto.\n- Her work combines Kenyan basket patterns with glazed stoneware.\n- Her first solo show opens in May.",
+  "stem": "The student wants to explain what is distinctive about the artist's work. Which choice most effectively uses relevant information from the notes to accomplish the stated goal?",
+  "choices": [
+   "Wangari Pierce, who grew up in Nairobi, now lives in Toronto.",
+   "Wangari Pierce's first solo show opens in May.",
+   "Wangari Pierce is a ceramic artist with an upcoming show.",
+   "Ceramic artist Wangari Pierce combines Kenyan basket patterns with glazed stoneware."
+  ],
+  "answer": 3,
+  "explanation": "Only this choice describes her style."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 2,
+  "passage": "- Fern Trail is 3 miles round trip.\n- The trail is mostly flat.\n- It passes two waterfalls.\n- Parking is free.",
+  "stem": "The student wants to suggest the hike to inexperienced hikers. Which choice most effectively uses relevant information from the notes to accomplish the stated goal?",
+  "choices": [
+   "Fern Trail, a mostly flat 3-mile round trip, is well suited to inexperienced hikers and passes two waterfalls.",
+   "Parking at Fern Trail is free.",
+   "Fern Trail is 3 miles long.",
+   "Fern Trail passes two waterfalls and has free parking."
+  ],
+  "answer": 0,
+  "explanation": "Flat terrain and short length are the details relevant to beginners."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 5,
+  "passage": "- In 1950, about 60 percent of town residents farmed.\n- By 2000, about 5 percent did.\n- Over that period, the town's population doubled.\n- Most new residents worked in manufacturing.",
+  "stem": "The student wants to emphasize how sharply farming's share of the town's work changed. Which choice most effectively uses relevant information from the notes to accomplish the stated goal?",
+  "choices": [
+   "The town's population doubled between 1950 and 2000.",
+   "The share of residents who farmed fell from about 60 percent in 1950 to about 5 percent in 2000, even as the town's population doubled.",
+   "Most new residents of the town worked in manufacturing.",
+   "About 5 percent of residents farmed in 2000."
+  ],
+  "answer": 1,
+  "explanation": "This choice gives both endpoints of the change."
+ },
+ {
+  "exam_type": "SAT",
+  "section": "rw",
+  "difficulty": 3,
+  "passage": "- The axolotl is a salamander native to Mexico.\n- Most salamanders lose their gills as adults.\n- Axolotls keep their gills for life.\n- Axolotls can regrow lost limbs.",
+  "stem": "The student wants to explain how the axolotl differs from most other salamanders. Which choice most effectively uses relevant information from the notes to accomplish the stated goal?",
+  "choices": [
+   "The axolotl is a salamander native to Mexico.",
+   "Axolotls are salamanders that can regrow lost limbs.",
+   "Unlike most salamanders, which lose their gills as adults, the axolotl keeps its gills for life.",
+   "Most salamanders are not native to Mexico."
+  ],
+  "answer": 2,
+  "explanation": "This choice sets the axolotl against most salamanders."
+ }
+]

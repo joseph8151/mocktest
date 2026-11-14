@@ -5,7 +5,7 @@ import { sendMail, mailReceipt } from './email.js';
 export async function fulfillOrder(env, orderId, providerRef) {
   const db = env.DB;
   const upd = await db.prepare(
-    `UPDATE orders SET status='paid', paid_at=?, provider_ref=COALESCE(?,provider_ref) WHERE id=? AND status IN ('pending','failed')`
+    `UPDATE orders SET status='paid', paid_at=?, provider_ref=COALESCE(?,provider_ref) WHERE id=? AND status IN ('pending','failed','awaiting_deposit')`
   ).bind(now(), providerRef || null, orderId).run();
   if (!upd.meta.changes) return false; // already fulfilled
   const o = await db.prepare(
@@ -111,6 +111,11 @@ export async function portoneVerifyAndFulfill(env, orderId) {
   if (order.status === 'paid') return { ok: true, already: true };
   const pay = await portoneGetPayment(env, order.provider_ref);
   if (!pay) return { ok: false, error: '결제 조회 실패' };
+  if (pay.status === 'VIRTUAL_ACCOUNT_ISSUED') { // bank-transfer payments wait for the customer's deposit
+    await env.DB.prepare(`UPDATE orders SET status='awaiting_deposit' WHERE id=? AND status IN ('pending','awaiting_deposit')`).bind(order.id).run();
+    const va = pay.method || {};
+    return { ok: false, pending: true, account: { bank: va.bank, number: va.accountNumber, holder: va.remitteeName, expiresAt: va.expiredAt, amount: order.amount } };
+  }
   if (pay.status !== 'PAID') return { ok: false, error: `결제 상태: ${pay.status}` };
   if (pay.amount?.total !== order.amount || pay.currency !== order.currency) {
     await env.DB.prepare(`UPDATE orders SET status='failed' WHERE id=?`).bind(order.id).run();

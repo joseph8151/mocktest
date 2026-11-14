@@ -1,4 +1,4 @@
-# MockTest Lab — MAP · CAT4 · SCAT · SSAT · ISEE · WIDA 모의고사 사이트
+# MockTest Lab — MAP · CAT4 · CogAT · SCAT · SSAT · ISEE · SAT · TOEFL Junior · WIDA 모의고사 사이트
 
 Cloudflare Workers(Hono) + D1(SQLite) + 정적 SPA. 회원가입 → 결제(Stripe / 포트원) → **이용권 자동 지급** → 온라인 응시 → 자동 채점 리포트.
 
@@ -11,12 +11,15 @@ Cloudflare Workers(Hono) + D1(SQLite) + 정적 SPA. 회원가입 → 결제(Stri
   - **SCAT 스타일**: Verbal(유추) · Quantitative(수량 비교), 영역별 척도 점수(200–300) 추정
   - **SSAT 스타일**: Writing(교사 채점) · Quantitative · Reading · Verbal, 척도 점수(440–710) 합산
   - **ISEE 스타일**: Verbal · Quantitative · Reading · Math · Essay, 척도 점수(760–940)·스태나인 추정
+  - **CogAT 스타일**: Verbal · Quantitative · Nonverbal (SAS 평균 100, 도형은 SVG)
+  - **SAT 스타일**: Reading & Writing(27) · Math(22, 적응형), 영역별 200–800 → 합산 400–1600 추정
+  - **TOEFL Junior 스타일**: Listening(TTS) · Language Form & Meaning · Reading, 영역별 200–300 → 합산 600–900 추정
   - **WIDA 스타일**: Listening(TTS 2회) · Reading 자동채점, Writing · Speaking(녹음→R2) 교사 채점, 가중 종합 레벨
 - **리포트**: 영역별 점수, 문항별 해설, 인쇄/PDF 저장, 결과 이메일
 - **안전/개인정보**: 로그인 무차별 대입 차단(15분에 8회), 회원 본인 탈퇴(답안·녹음 삭제, 결제기록은 익명화 후 5년 보관), 환불 요청 → 관리자 승인/거절, 성적 추이 그래프
 - **관리자**: 대시보드, 회원 관리(정지/삭제/권한/이용권 수동 지급), 주문·환불, 상품 CRUD, 문제은행 CRUD + JSON 대량등록, 쓰기/말하기 채점 큐, 환불요청 처리, 주문 CSV 내보내기
 
-> 문제는 형식만 참고해 새로 만든 **오리지널 샘플**(약 700문항, 그래프·도형은 SVG로 직접 생성: `scripts/svgcharts.mjs`)이며 NWEA/GL Assessment/WIDA와 무관합니다. 점수는 공식 점수가 아닌 추정치입니다. 실제 서비스 전에 문제은행을 확충하세요(관리자 > 문제 > JSON 대량 등록).
+> 문제는 형식만 참고해 새로 만든 **오리지널 샘플**(약 1,400문항. 그래프·도형은 SVG로 직접 생성: `scripts/svgcharts.mjs`, 독해·어휘 등은 `scripts/bank/*.json`에 작성 후 블라인드 검증)이며 NWEA/GL Assessment/WIDA와 무관합니다. 점수는 공식 점수가 아닌 추정치입니다. 실제 서비스 전에 문제은행을 확충하세요(관리자 > 문제 > JSON 대량 등록).
 
 ## 로컬 실행
 ```bash
@@ -64,6 +67,20 @@ npx wrangler secret put RESEND_API_KEY
 
 ### GitHub 자동 배포
 Cloudflare 대시보드 → Workers & Pages → Create → Connect to Git → 이 저장소 선택 (빌드 명령 없음, 배포 명령 `npx wrangler deploy`).
+
+## 결제 (KCP · 포트원 · Stripe)
+| 방식 | 필요한 값 | 비고 |
+|---|---|---|
+| **포트원 경유 KCP** (권장) | `PORTONE_STORE_ID`, `PORTONE_CHANNEL_KEY`(wrangler vars) + `PORTONE_API_SECRET`, `PORTONE_WEBHOOK_SECRET`(secret) | 포트원 콘솔에서 PG사를 **NHN KCP**로 채널 등록. 카드·가상계좌·계좌이체·휴대폰 지원, 가상계좌는 입금 웹훅으로 자동 지급 |
+| **KCP 직접** | `KCP_SITE_CD`, `KCP_CERT_INFO`(secret), 운영 전환 시 `KCP_MODE=prod` | 코드는 `src/lib/kcp.js` 한 파일. **KCP 공식 가이드로 필드명/URL/pay_method 코드 검증 필요**(아래 참고) |
+| **Stripe** | `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET` | 해외 카드(USD) |
+
+- 일반 고객에게는 원화 결제 수단이 **하나**(KCP 직접이 설정돼 있으면 KCP, 아니면 포트원)만 보이고, **관리자에게는 설정된 모든 수단**이 보입니다.
+- 관리자 > **결제설정** 탭에서 연동 상태와 웹훅/Ret_URL 주소를 확인하세요. 홈에서 관리자에게만 보이는 **“[관리자 전용] 결제 테스트 1,000원”** 상품으로 실제 결제·환불을 시험해 볼 수 있습니다.
+- KCP 직접 연동은 KCP 서버에 접근할 수 없는 환경에서 **자체 모의 서버**로만 검증했습니다(`npm run test:e2e`의 `kcp.e2e.mjs`). 계약 후 받는 공식 개발 가이드(developer.kcp.co.kr)와 KCP 테스트 몰(site_cd `T0000`)로 아래를 확인하세요: 거래등록/승인/취소 URL(`KCP_REGISTER_URL`·`KCP_APPROVE_URL`·`KCP_CANCEL_URL`로 덮어쓰기 가능), 요청·응답 필드명, `pay_method` 코드, 결제창 호출 방식(`kcpForm`), 가상계좌 입금 통보(공통통보) 처리.
+
+## 관리자 체험
+관리자는 결제 없이 모든 시험을 응시할 수 있습니다(마이페이지 > 관리자 체험 응시, 횟수 제한 없음).
 
 ## 운영 전 체크리스트
 - 이용약관/개인정보처리방침/환불규정은 **템플릿**입니다. 법률 검토 후 `public/app.js`의 `LEGAL`을 수정하고, `wrangler.jsonc`의 `BIZ_*` 사업자 정보를 채우세요 (푸터·약관에 자동 표시)

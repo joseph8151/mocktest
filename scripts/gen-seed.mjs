@@ -9,9 +9,14 @@ const pick = (a) => a[Math.floor(rnd() * a.length)];
 const shuffle = (a) => { a = [...a]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 
 const Q = [];
-let n = 0;
+const seen = new Set();
+// Content-hash ids: re-generating the seed never renumbers existing questions, so deployed databases can sync incrementally.
+const hash = (str) => { let a = 0x811c9dc5, b = 0x1b873593; for (let i = 0; i < str.length; i++) { const c = str.charCodeAt(i); a = Math.imul(a ^ c, 16777619); b = Math.imul(b + c, 2246822519) ^ (b >>> 13); } return ((a >>> 0).toString(16).padStart(8, '0') + (b >>> 0).toString(16).padStart(8, '0')).slice(0, 12); };
 function add(exam_type, section, difficulty, stem, choices, answer, explanation, extra = {}) {
-  Q.push({ id: `seed-${exam_type.toLowerCase()}-${section}-${++n}`, exam_type, section, kind: 'mcq', difficulty, stem, choices, answer, explanation, ...extra });
+  const key = hash([exam_type, section, stem, extra.passage || '', extra.image_svg ? 'img' : '', [...choices].sort().join('|')].join('\u0001'));
+  if (seen.has(key)) return; // identical generated item: keep one
+  seen.add(key);
+  Q.push({ id: `seed-${exam_type.toLowerCase()}-${section}-${key}`, exam_type, section, kind: 'mcq', difficulty, stem, choices, answer, explanation, ...extra });
 }
 /** Build a shuffled MCQ from a correct value and distractors. */
 function mcq(exam_type, section, difficulty, stem, correct, distractors, explanation, extra) {
@@ -117,7 +122,7 @@ for (let i = 0; i < 10; i++) { // dots increasing by k
 }
 
 /* ---------- CAT4 Spatial (generated) ---------- */
-const F = (tr) => `<g transform="${tr}"><path d="M-10 -16 H12 V-8 H-2 V-2 H8 V6 H-2 V16 H-10 Z" fill="#16a34a" stroke="#111" stroke-width="2"/></g>`;
+const F = (tr, fill = '#16a34a') => `<g transform="${tr}"><path d="M-10 -16 H12 V-8 H-2 V-2 H8 V6 H-2 V16 H-10 Z" fill="${fill}" stroke="#111" stroke-width="2"/></g>`;
 for (let i = 0; i < 32; i++) {
   const base = svg(F('translate(30,30)'), 60, 60);
   const angs = shuffle([0, 45, 90, 135, 180, 225, 270, 315]);
@@ -395,6 +400,106 @@ add('ISEE', 'reading', 4, 'Which sentence best states a theme of the passage?', 
 Q.push({ id: 'seed-isee-essay-1', exam_type: 'ISEE', section: 'essay', kind: 'text', difficulty: 2, stem: 'Write an essay (about 200 words) in response to: "What is the most important quality of a good friend?" Use specific examples.', choices: null, answer: null });
 Q.push({ id: 'seed-isee-essay-2', exam_type: 'ISEE', section: 'essay', kind: 'text', difficulty: 3, stem: 'Write an essay (about 200 words): "If you could change one thing about your town, what would it be and why?"', choices: null, answer: null });
 
+
+/* =====================================================================
+   Round 3: CogAT / SAT / TOEFL Junior + larger banks
+   ===================================================================== */
+import { readdirSync, readFileSync } from 'node:fs';
+
+/** number-series items (5 rule types, difficulty 1..5) */
+function seriesItems(exam, section, per) {
+  for (let i = 0; i < per; i++) { const s = ri(2, 9), k = ri(2, 6); const q = [0, 1, 2, 3, 4].map((j) => s + j * k); mcq(exam, section, 1, `What number comes next?  ${q.join(', ')}, ?`, s + 5 * k, [s + 5 * k + 1, s + 6 * k, s + 4 * k, s + 5 * k - 1], `Add ${k} each time.`); }
+  for (let i = 0; i < per; i++) { const s = ri(2, 5), m = pick([2, 3]); const q = [0, 1, 2, 3].map((j) => s * m ** j); mcq(exam, section, 2, `What number comes next?  ${q.join(', ')}, ?`, s * m ** 4, [s * m ** 4 + m, s * m ** 3 + m, q[3] * 2 + 1, q[3] + m], `Multiply by ${m} each time.`); }
+  for (let i = 0; i < per; i++) { const s = ri(1, 6), a = ri(2, 4), b = ri(5, 9); const q = [s]; for (let j = 1; j < 6; j++) q.push(q[j - 1] + (j % 2 ? a : b)); mcq(exam, section, 3, `What number comes next?  ${q.slice(0, 5).join(', ')}, ?`, q[5], [q[5] + 1, q[5] - 1, q[4] + a + b, q[4] + 2], `The step alternates +${a}, +${b}.`); }
+  for (let i = 0; i < per; i++) { const s = ri(1, 5); const q = [0, 1, 2, 3, 4].map((j) => (j + s) ** 2); mcq(exam, section, 4, `What number comes next?  ${q.join(', ')}, ?`, (5 + s) ** 2, [(5 + s) ** 2 + 1, (5 + s) ** 2 - (5 + s), q[4] + 2 * (4 + s), q[4] * 2], 'Consecutive square numbers.'); }
+  for (let i = 0; i < per; i++) { const a = ri(3, 8), b = ri(2, 5); const q = [a]; let d = b; for (let j = 1; j < 6; j++) { q.push(q[j - 1] + d); d += 2; } mcq(exam, section, 5, `What number comes next?  ${q.slice(0, 5).join(', ')}, ?`, q[5], [q[5] + 1, q[5] - 2, q[4] + d - 4, q[4] + d], 'The difference grows by 2 each step.'); }
+}
+/** CogAT number analogies  a : b :: c : ?   and number puzzles  a ? b = c */
+function cogatQuant(count) {
+  for (let i = 0; i < count; i++) {
+    const t = ri(0, 3), c = ri(3, 12);
+    if (t === 0) { const a = ri(2, 9), k = ri(2, 5); mcq('COGAT', 'quantitative', 2 + (i % 3), `Number analogy:  ${a} : ${a * k}  ::  ${c} : ?`, c * k, [c + k, c * k + k, c * k - 1, c + a * k], `The second number is the first × ${k}.`); }
+    else if (t === 1) { const a = ri(2, 15), k = ri(3, 12); mcq('COGAT', 'quantitative', 1 + (i % 3), `Number analogy:  ${a} : ${a + k}  ::  ${c} : ?`, c + k, [c * k, c + k + 1, c + k - 2, c - k], `Add ${k}.`); }
+    else if (t === 2) { const a = ri(2, 9), b = ri(2, 9); mcq('COGAT', 'quantitative', 3 + (i % 3), `Number analogy:  ${a}, ${b} → ${a * b}  ::  ${c}, ${b + 1} → ?`, c * (b + 1), [c + b + 1, c * b, c * (b + 1) + c, c * (b + 1) - 1], 'Multiply the two numbers.'); }
+    else {
+      const ops = { '+': (x, y) => x + y, '−': (x, y) => x - y, '×': (x, y) => x * y, '÷': (x, y) => (y ? x / y : NaN) };
+      const x = ri(4, 18), y = ri(2, 9), op = pick(['+', '−', '×']); const r = ops[op](x, y);
+      const works = Object.keys(ops).filter((o) => ops[o](x, y) === r);
+      if (works.length === 1) add('COGAT', 'quantitative', 2 + (i % 4), `Which sign makes the equation true?   ${x}  ?  ${y}  =  ${r}`, ['+', '−', '×', '÷'], ['+', '−', '×', '÷'].indexOf(op), `${x} ${op} ${y} = ${r}.`);
+    }
+  }
+}
+/** figure items (shapes): polygon-side sequences, rotations, dot counts, plus rotated "F" spatial items */
+function figureSet(exam, section, count) {
+  const q = (s) => 'svg:' + s;
+  const PAL = ['#4f46e5', '#0ea5e9', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#0a3161', '#b31942', '#14b8a6', '#d97706'];
+  for (let i = 0; i < count; i++) {
+    const t = i % 4;
+    if (t === 0) { const col = pick(PAL), s0 = ri(3, 6), shown = [0, 1, 2].map((j) => poly(s0 + j, ri(0, 1) * 0, col)).concat(['<text x="30" y="42" font-size="36" text-anchor="middle">?</text>']), ans = s0 + 3; const opts = shuffle([ans, ans + 1, ans - 1, Math.max(3, s0)]).filter((v, k, a) => a.indexOf(v) === k); while (opts.length < 4) opts.push(ans + opts.length + 1); add(exam, section, 2, 'Which shape comes next in the pattern?', opts.map((o) => q(svg(poly(o, 0, col)))), opts.indexOf(ans), `Each shape gains one side.`, { image_svg: strip(shown) }); }
+    else if (t === 1) { const col = pick(PAL), sides = pick([3, 4, 5]), step = pick([30, 45, 60, 90, 120]), st = pick([0, 15, 30, 45]); const shown = [0, 1, 2].map((j) => poly(sides, st + step * j, col)).concat(['<text x="30" y="42" font-size="36" text-anchor="middle">?</text>']); const ans = (st + step * 3) % 360, per = 360 / sides; const cand = [ans, ans + per / 2, ans + per / 3, ans + per * 0.8].map((v) => ((Math.round(v) % 360) + 360) % 360); const opts = shuffle(cand.filter((v, k, a) => a.indexOf(v) === k && (v % per) !== (cand[0] % per) || k === 0)); if (opts.length === 4 && new Set(opts.map((v) => v % per)).size === 4) add(exam, section, 3, 'The shape keeps turning by the same amount. Which comes next?', opts.map((o) => q(svg(poly(sides, o, col)))), opts.indexOf(ans), `Turns ${step}° each step.`, { image_svg: strip(shown) }); }
+    else if (t === 2) { const col = pick(PAL), k = ri(1, 3), dots = (c) => Array.from({ length: c }, (_, j) => `<circle cx="${12 + (j % 4) * 12}" cy="${18 + Math.floor(j / 4) * 14}" r="4.5" fill="${col}"/>`).join(''); const shown = [1, 2, 3].map((j) => dots(j * k)).concat(['<text x="30" y="42" font-size="36" text-anchor="middle">?</text>']); const ans = 4 * k, opts = shuffle([ans, ans + 1, ans - 1, ans + 2]); add(exam, section, 1, 'How many dots come next?', opts.map((o) => q(svg(dots(o)))), opts.indexOf(ans), `Dots increase by ${k}.`, { image_svg: strip(shown) }); }
+    else { const base = svg(F('translate(30,30)'), 60, 60), angs = shuffle([0, 45, 90, 135, 180, 225, 270, 315]); const items = shuffle([{ s: F(`translate(30,30) rotate(${angs[0]})`), ok: true }, { s: F(`translate(30,30) rotate(${angs[1]}) scale(-1,1)`) }, { s: F(`translate(30,30) rotate(${angs[2]}) scale(-1,1)`) }, { s: F(`translate(30,30) rotate(${angs[3]}) scale(-1,1)`) }]); add(exam, section, 2 + (i % 4), 'Which option shows the same shape turned (rotated) but NOT flipped?', items.map((x) => q(svg(x.s, 60, 60))), items.findIndex((x) => x.ok), 'A mirrored shape cannot be made by turning.', { image_svg: base }); }
+  }
+}
+/** SAT Math (digital SAT domains: algebra, advanced math, problem-solving & data analysis, geometry & trigonometry) */
+function satMath(count) {
+  const kinds = ['lin', 'func', 'sys', 'pct', 'ratio', 'quad', 'exp', 'slope', 'mean', 'prob', 'circ', 'rate', 'ineq', 'abs', 'vol', 'trig', 'data', 'geo', 'age', 'inv'];
+  for (let i = 0; i < count; i++) {
+    const t = kinds[i % kinds.length]; let d = 2, st, cor, wr, ex, img;
+    if (t === 'lin') { const x = ri(2, 15), a = ri(2, 9), b = ri(1, 20); st = `If ${a}x + ${b} = ${a * x + b}, what is the value of x?`; cor = x; wr = [x + 1, x - 1, x + a, a * x]; ex = `Subtract ${b}, divide by ${a}.`; d = 1; }
+    else if (t === 'func') { const a = ri(2, 7), b = ri(1, 12), x = ri(2, 9); st = `The function f is defined by f(x) = ${a}x − ${b}. What is f(${x})?`; cor = a * x - b; wr = [a * x + b, a + x - b, a * (x - b), a * x]; ex = `${a}(${x}) − ${b}.`; d = 1; }
+    else if (t === 'sys') { const x = ri(3, 12), y = ri(1, x - 1); st = `x + y = ${x + y} and x − y = ${x - y}. What is the value of x?`; cor = x; wr = [y, x + 1, x + y, x - 1]; ex = 'Add the two equations: 2x = ' + 2 * x + '.'; d = 2; }
+    else if (t === 'pct') { const a = pick([40, 50, 60, 80, 120]), pc = pick([10, 20, 25, 30, 50]); const b = a + (a * pc) / 100; st = `A price increased from $${a} to $${b}. By what percent did the price increase?`; cor = `${pc}%`; wr = [`${pc + 5}%`, `${pc - 5}%`, `${Math.round((pc / (100 + pc)) * 100)}%`, `${pc * 2}%`]; ex = `(${b} − ${a}) ÷ ${a} = ${pc / 100}.`; d = 2; }
+    else if (t === 'ratio') { const a = ri(2, 5), b = ri(2, 7), k = ri(3, 9); st = `A mixture contains red paint and blue paint in the ratio ${a} : ${b}. If it contains ${a * k} liters of red paint, how many liters of blue paint does it contain?`; cor = b * k; wr = [b * k + a, a * b, b + k, a * k + b]; ex = `${a * k}/${a} = ${k}; ${k} × ${b}.`; d = 2; }
+    else if (t === 'quad') { const r1 = ri(1, 6), r2 = ri(r1 + 1, 9); st = `What are the solutions to x² − ${r1 + r2}x + ${r1 * r2} = 0?`; cor = `${r1} and ${r2}`; wr = [`${-r1} and ${-r2}`, `${r1} and ${-r2}`, `${r1 + 1} and ${r2 - 1}`, `${r1 * r2} and 1`]; ex = `(x − ${r1})(x − ${r2}) = 0.`; d = 3; }
+    else if (t === 'exp') { const b = pick([2, 3, 5]), e = ri(2, 5); st = `If ${b}^x = ${b ** e}, what is the value of x?`; cor = e; wr = [e + 1, e - 1, b * e, b ** e / b]; ex = `${b}^${e} = ${b ** e}.`; d = 2; }
+    else if (t === 'slope') { const m = ri(2, 6), x1 = ri(0, 4), y1 = ri(-3, 5), dx = ri(1, 4); st = `A line passes through the points (${x1}, ${y1}) and (${x1 + dx}, ${y1 + m * dx}). What is the slope of the line?`; cor = m; wr = [m + 1, 1 / m < 1 ? `1/${m}` : m + 2, -m, m * dx]; ex = `Rise over run = ${m * dx}/${dx}.`; d = 2; }
+    else if (t === 'mean') { const arr = Array.from({ length: 5 }, () => ri(4, 30)); const sum = arr.reduce((a, b) => a + b, 0), m = Math.round(sum / 5); const fix = m * 5 - (sum - arr[4]); arr[4] = fix; if (fix < 1) continue; st = `The mean of the five numbers ${arr.join(', ')} is ${m}. (Assume the mean is exactly ${m}.) What is the sum of the five numbers?`; cor = m * 5; wr = [m * 5 + 5, m * 4, m + 5, m * 6]; ex = `Sum = mean × count = ${m} × 5.`; d = 2; }
+    else if (t === 'prob') { const r = ri(2, 8), b = ri(2, 8), g = ri(2, 8), tot = r + b + g; const gcd = (x, y) => (y ? gcd(y, x % y) : x); const g1 = gcd(b, tot); st = `A bag contains ${r} red marbles, ${b} blue marbles, and ${g} green marbles. One marble is chosen at random. What is the probability that it is blue?`; cor = `${b / g1}/${tot / g1}`; wr = [`${r}/${tot}`, `${b}/${tot - b}`, `${g}/${tot}`, `${b}/${r + g + 1}`].filter((x) => x !== cor); ex = `${b} of ${tot} marbles are blue.`; d = 2; }
+    else if (t === 'circ') { const h = ri(-5, 6), k = ri(-5, 6), r = ri(2, 9); st = `The equation of a circle in the xy-plane is (x ${h >= 0 ? '−' : '+'} ${Math.abs(h)})² + (y ${k >= 0 ? '−' : '+'} ${Math.abs(k)})² = ${r * r}. What is the radius of the circle?`; cor = r; wr = [r * r, r * 2, r + 1, Math.abs(h) + r]; ex = `r² = ${r * r}, so r = ${r}.`; d = 3; }
+    else if (t === 'rate') { const base = ri(20, 60), per = ri(10, 35), hrs = ri(2, 6); st = `A technician charges a $${base} fee plus $${per} per hour. What is the total charge, in dollars, for a ${hrs}-hour job?`; cor = base + per * hrs; wr = [(base + per) * hrs, base * hrs + per, base + per + hrs, base + per * (hrs + 1)]; ex = `${base} + ${per} × ${hrs}.`; d = 1; }
+    else if (t === 'ineq') { const a = ri(2, 6), b = ri(1, 9), c = ri(10, 40); const x = Math.floor((c + b) / a) + 1; st = `What is the least integer x that satisfies ${a}x − ${b} > ${c}?`; cor = x; wr = [x - 1, x + 1, Math.floor((c + b) / a), Math.ceil((c - b) / a)]; ex = `x > ${(c + b) / a}.`; d = 3; }
+    else if (t === 'abs') { const c = ri(1, 9), k = ri(2, 12); st = `What is the sum of the solutions to |x − ${c}| = ${k}?`; cor = 2 * c; wr = [c, 2 * k, c + k, 0]; ex = `x = ${c + k} or x = ${c - k}; the sum is ${2 * c}.`; d = 3; }
+    else if (t === 'vol') { const r = ri(2, 7), h = ri(3, 12); st = `A right circular cylinder has radius ${r} and height ${h}. What is its volume?`; cor = `${r * r * h}π`; wr = [`${2 * r * h}π`, `${r * h}π`, `${r * r * h * 2}π`, `${r * r + h}π`]; ex = `V = πr²h = π(${r})²(${h}).`; d = 3; }
+    else if (t === 'trig') { const [a, b, c] = pick([[3, 4, 5], [5, 12, 13], [8, 15, 17], [7, 24, 25]]); st = `In right triangle ABC, the right angle is at B, AB = ${a}, BC = ${b}, and AC = ${c}. What is sin A?`; cor = `${b}/${c}`; wr = [`${a}/${c}`, `${a}/${b}`, `${b}/${a}`, `${c}/${b}`]; ex = `sin A = opposite/hypotenuse = BC/AC.`; d = 4; }
+    else if (t === 'data') { const kind = pick(['bar', 'line', 'pie']); const g = graphItem(kind); st = g.stem; cor = g.correct; wr = g.wrong; ex = g.expl; img = g.svg; d = 2; }
+    else if (t === 'geo') { const kind = pick(['rect', 'tri', 'circle', 'angle', 'coord', 'grid']); const g = graphItem(kind); st = g.stem; cor = g.correct; wr = g.wrong; ex = g.expl; img = g.svg; d = 2; }
+    else if (t === 'age') { const a = ri(4, 12), k = ri(2, 4), y = ri(2, 6); st = `Maya is ${k} times as old as her brother. In ${y} years, the sum of their ages will be ${a * (k + 1) + 2 * y}. How old is Maya now?`; cor = a * k; wr = [a, a * k + y, a * (k + 1), a * k - 1]; ex = `Let her brother be ${a}; Maya is ${k} × ${a}.`; d = 4; }
+    else { const p0 = ri(1, 5) * 1000, rate = pick([2, 3, 4, 5]), yrs = ri(2, 4); st = `An account starts with $${p0} and earns simple interest of ${rate}% per year. How much interest, in dollars, is earned after ${yrs} years?`; cor = (p0 * rate * yrs) / 100; wr = [(p0 * rate) / 100, p0 + (p0 * rate * yrs) / 100, (p0 * rate * (yrs + 1)) / 100, p0 * rate * yrs]; ex = `I = P·r·t = ${p0} × ${rate / 100} × ${yrs}.`; d = 2; }
+    if (cor === undefined || !wr) continue;
+    mcq('SAT', 'math', Math.min(5, d + (i % 2)), st, cor, wr, ex, img ? { image_svg: img } : undefined);
+  }
+}
+/** Merge the hand-written banks that were authored by writers in scripts/bank/*.json */
+function mergeBanks() {
+  const dir = new URL('./bank/', import.meta.url);
+  let files = []; try { files = readdirSync(dir).filter((f) => f.endsWith('.json') && !f.endsWith('.drop.json')).sort(); } catch {}
+  let total = 0;
+  for (const f of files) {
+    let drop = new Set(); try { drop = new Set(JSON.parse(readFileSync(new URL(f.replace(/\.json$/, '.drop.json'), dir), 'utf8'))); } catch {} // items a blind verifier found wrong/ambiguous
+    JSON.parse(readFileSync(new URL(f, dir), 'utf8')).forEach((it, i) => { if (drop.has(i)) return;
+    // Writers tended to place the key in a rotating A-B-C-D pattern: shuffle choices (deterministically) unless an option refers to another option.
+    let ch = it.choices.map(String), ans = it.answer;
+    if (!ch.some((c) => /\b(all|none|both|neither|either)\b.*\b(above|these)\b|\b(A|B|C|D)\b\s*(and|&|or)\s*\b(A|B|C|D)\b|^(A|B|C|D)\)?$/i.test(c))) {
+      const idx = shuffle([0, 1, 2, 3]); ch = idx.map((k) => ch[k]); ans = idx.indexOf(it.answer);
+    }
+    add(it.exam_type, it.section, it.difficulty, it.stem, ch, ans, it.explanation, it.passage ? { passage: it.passage } : {}); total++;
+    });
+  }
+  console.log('merged', total, 'hand-written items from', files.length, 'files');
+}
+
+// ---- volume boosts for existing exams ----
+addWordMath('MAP', 'math', 20, 2); addGraph('MAP', 'math', GKINDS, 20, 2, 5);
+seriesItems('CAT4', 'quantitative', 3); figureSet('CAT4', 'nonverbal', 24); figureSet('CAT4', 'spatial', 12);
+addQC('SCAT', 'quantitative', 24, 4);
+addWordMath('SSAT', 'quantitative', 12, 2); addGraph('SSAT', 'quantitative', GKINDS, 12, 2, 5);
+addQC('ISEE', 'quantitative', 12, 4); addWordMath('ISEE', 'math', 14, 2); addGraph('ISEE', 'math', GKINDS, 14, 2, 5);
+// ---- new exams ----
+seriesItems('COGAT', 'quantitative', 5); cogatQuant(30); figureSet('COGAT', 'nonverbal', 48);
+satMath(140);
+mergeBanks();
+
 /* ---------- sanity checks ---------- */
 {
   const bad = [];
@@ -428,7 +533,16 @@ const products = [
   ['p-isee-3', 'ISEE', 'ISEE 모의고사 3회권', '3회 응시', 125000, 9900, 3, 180, 10],
   ['p-wida-1', 'WIDA', 'WIDA 모의고사 1회권', 'Listening · Reading · Writing · Speaking (쓰기/말하기 채점 포함)', 49000, 3900, 1, 90, 11],
   ['p-wida-3', 'WIDA', 'WIDA 모의고사 3회권', '3회 응시', 125000, 9900, 3, 180, 12],
+  ['p-cogat-1', 'COGAT', 'CogAT 모의고사 1회권', 'Verbal · Quantitative · Nonverbal (도형 SVG 문항 포함)', 45000, 3500, 1, 90, 13],
+  ['p-cogat-3', 'COGAT', 'CogAT 모의고사 3회권', '3회 응시', 115000, 8900, 3, 180, 14],
+  ['p-sat-1', 'SAT', 'SAT 모의고사 1회권', 'Reading & Writing · Math (그래프/도형 SVG 문항 포함)', 49000, 3900, 1, 90, 15],
+  ['p-sat-3', 'SAT', 'SAT 모의고사 3회권', '3회 응시', 125000, 9900, 3, 180, 16],
+  ['p-toeflj-1', 'TOEFLJ', 'TOEFL Junior 모의고사 1회권', 'Listening · Language Form & Meaning · Reading', 45000, 3500, 1, 90, 17],
+  ['p-toeflj-3', 'TOEFLJ', 'TOEFL Junior 모의고사 3회권', '3회 응시', 115000, 8900, 3, 180, 18],
 ];
+// One-time data migration so already-deployed databases get the three new exams' products.
+writeFileSync(new URL('../migrations/0006_new_exams.sql', import.meta.url), '-- generated by scripts/gen-seed.mjs: products for CogAT / SAT / TOEFL Junior\n' + products.filter((p) => /cogat|sat-|toeflj/.test(p[0]) && !/ssat|isee/.test(p[0])).map((p) =>
+  `INSERT OR IGNORE INTO products (id,exam_type,title,description,price_krw,price_usd_cents,attempts,valid_days,active,sort) VALUES (${[...p.slice(0, 8), 1, p[8]].map((v) => q(v)).join(',')});`).join('\n') + '\n');
 // One-time data migration so already-deployed databases pick up the new price list.
 writeFileSync(new URL('../migrations/0004_prices.sql', import.meta.url), '-- generated by scripts/gen-seed.mjs: price list update (adds missing products)\n' + products.map((p) =>
   `INSERT INTO products (id,exam_type,title,description,price_krw,price_usd_cents,attempts,valid_days,active,sort) VALUES (${[...p.slice(0, 8), 1, p[8]].map((v) => q(v)).join(',')}) ON CONFLICT(id) DO UPDATE SET price_krw=excluded.price_krw, price_usd_cents=excluded.price_usd_cents, sort=excluded.sort;`).join('\n') + '\n');
@@ -436,6 +550,7 @@ for (const p of products) sql += `INSERT OR REPLACE INTO products (id,exam_type,
 writeFileSync(new URL('../seed/seed.sql', import.meta.url), sql);
 // JSON copy is bundled into the Worker so a fresh database can seed itself on first request.
 writeFileSync(new URL('../seed/seed.json', import.meta.url), JSON.stringify({
+  version: hash(Q.map((r) => r.id).join(',')),
   questions: Q.map((r) => [r.id, r.exam_type, r.section, r.kind, r.difficulty, r.passage ?? null, r.stem, r.image_svg ?? null, r.choices ? JSON.stringify(r.choices) : null, r.answer ?? null, r.explanation ?? null]),
   products: products.map((p) => [...p.slice(0, 8), 1, p[8]]),
 }));

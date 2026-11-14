@@ -4,6 +4,7 @@ import { requireAdmin } from '../lib/auth.js';
 import { EXAMS, scoreAttempt } from '../lib/exam.js';
 import { stripeRetrieveSession, stripeRefund, portoneCancel } from '../lib/payments.js';
 import { notifyResult } from './exams.js';
+import { kcpCancel, kcpEnabled, kcpConfig } from '../lib/kcp.js';
 
 const app = new Hono();
 app.use('*', requireAdmin);
@@ -19,6 +20,17 @@ app.get('/stats', async (c) => {
     q(`SELECT COUNT(*) n FROM questions WHERE active=1`),
   ]);
   return c.json({ users: users.n, paidOrders: paid.n, revenue: revenue.results, attempts: attempts.n, pendingGrading: pending.n, pendingRefunds: (await q(`SELECT COUNT(*) n FROM refund_requests WHERE status='pending'`)).n, questions: qs.n });
+});
+
+app.get('/payment-status', (c) => {
+  const e = c.env, site = e.SITE_URL;
+  return c.json({
+    siteUrl: site,
+    stripe: { configured: !!e.STRIPE_SECRET_KEY, webhookSecret: !!e.STRIPE_WEBHOOK_SECRET, webhookUrl: `${site}/api/webhooks/stripe` },
+    portone: { configured: !!(e.PORTONE_API_SECRET && e.PORTONE_STORE_ID && e.PORTONE_CHANNEL_KEY), webhookSecret: !!e.PORTONE_WEBHOOK_SECRET, webhookUrl: `${site}/api/webhooks/portone` },
+    kcp: { configured: kcpEnabled(e), mode: kcpConfig(e).mode, siteCd: e.KCP_SITE_CD ? e.KCP_SITE_CD.slice(0, 2) + '***' : null, returnUrl: `${site}/api/pay/kcp/return` },
+    mail: !!e.RESEND_API_KEY,
+  });
 });
 
 /* ---- members ---- */
@@ -97,6 +109,9 @@ app.post('/orders/:id/refund', async (c) => {
     ok = !!s.payment_intent && (await stripeRefund(c.env, s.payment_intent));
   } else if (o.provider === 'portone') {
     ok = await portoneCancel(c.env, o.provider_ref);
+  } else if (o.provider === 'kcp') {
+    const tno = JSON.parse(o.meta || '{}').tno;
+    ok = !!tno && (await kcpCancel(c.env, { tno }));
   }
   if (!ok) return c.json({ error: 'PG사 환불 처리에 실패했습니다.' }, 502);
   await c.env.DB.batch([

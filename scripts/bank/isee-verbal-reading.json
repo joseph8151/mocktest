@@ -1,0 +1,956 @@
+[
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Select the word whose meaning is closest to BRAVE.",
+  "choices": [
+   "timid",
+   "courageous",
+   "clever",
+   "tired"
+  ],
+  "answer": 1,
+  "explanation": "Brave means showing courage."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Select the word whose meaning is closest to HUGE.",
+  "choices": [
+   "enormous",
+   "narrow",
+   "quiet",
+   "ancient"
+  ],
+  "answer": 0,
+  "explanation": "Huge means extremely large, as enormous does."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Select the word whose meaning is closest to RAPID.",
+  "choices": [
+   "gentle",
+   "hollow",
+   "swift",
+   "bitter"
+  ],
+  "answer": 2,
+  "explanation": "Rapid means fast, like swift."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Select the word whose meaning is closest to ABUNDANT.",
+  "choices": [
+   "scarce",
+   "fragile",
+   "hidden",
+   "plentiful"
+  ],
+  "answer": 3,
+  "explanation": "Abundant means existing in large quantities."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Select the word whose meaning is closest to DILIGENT.",
+  "choices": [
+   "hardworking",
+   "careless",
+   "jealous",
+   "distant"
+  ],
+  "answer": 0,
+  "explanation": "Diligent describes someone who works carefully and steadily."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Select the word whose meaning is closest to CONCEAL.",
+  "choices": [
+   "reveal",
+   "praise",
+   "hide",
+   "measure"
+  ],
+  "answer": 2,
+  "explanation": "To conceal is to hide."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Select the word whose meaning is closest to FRUGAL.",
+  "choices": [
+   "wasteful",
+   "thrifty",
+   "generous",
+   "boastful"
+  ],
+  "answer": 1,
+  "explanation": "Frugal means careful about spending money."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Select the word whose meaning is closest to RELUCTANT.",
+  "choices": [
+   "eager",
+   "exhausted",
+   "curious",
+   "unwilling"
+  ],
+  "answer": 3,
+  "explanation": "Reluctant means unwilling or hesitant."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Select the word whose meaning is closest to CANDID.",
+  "choices": [
+   "honest",
+   "secretive",
+   "polite",
+   "nervous"
+  ],
+  "answer": 0,
+  "explanation": "Candid means frank and honest."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Select the word whose meaning is closest to MEAGER.",
+  "choices": [
+   "generous",
+   "ordinary",
+   "scanty",
+   "fortunate"
+  ],
+  "answer": 2,
+  "explanation": "Meager means small in amount, like scanty."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Select the word whose meaning is closest to OBSOLETE.",
+  "choices": [
+   "modern",
+   "outdated",
+   "valuable",
+   "complex"
+  ],
+  "answer": 1,
+  "explanation": "Obsolete means no longer in use, or outdated."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Select the word whose meaning is closest to BENIGN.",
+  "choices": [
+   "harmless",
+   "hostile",
+   "tedious",
+   "sincere"
+  ],
+  "answer": 0,
+  "explanation": "Benign means gentle or not harmful."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Select the word whose meaning is closest to TENACIOUS.",
+  "choices": [
+   "fickle",
+   "persistent",
+   "gullible",
+   "lenient"
+  ],
+  "answer": 1,
+  "explanation": "Tenacious means holding firmly, or persistent."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Select the word whose meaning is closest to ELOQUENT.",
+  "choices": [
+   "awkward",
+   "hesitant",
+   "verbose",
+   "articulate"
+  ],
+  "answer": 3,
+  "explanation": "Eloquent means fluent and persuasive in speech, or articulate."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Select the word whose meaning is closest to PRUDENT.",
+  "choices": [
+   "reckless",
+   "sensible",
+   "stubborn",
+   "hasty"
+  ],
+  "answer": 1,
+  "explanation": "Prudent means showing good judgment, or sensible."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Select the word whose meaning is closest to EPHEMERAL.",
+  "choices": [
+   "lasting",
+   "immense",
+   "fleeting",
+   "hidden"
+  ],
+  "answer": 2,
+  "explanation": "Ephemeral means lasting a very short time."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Select the word whose meaning is closest to AUSTERE.",
+  "choices": [
+   "lavish",
+   "cheerful",
+   "vague",
+   "severe"
+  ],
+  "answer": 3,
+  "explanation": "Austere means stern and plain, without luxury."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Select the word whose meaning is closest to PERFUNCTORY.",
+  "choices": [
+   "cursory",
+   "thorough",
+   "heartfelt",
+   "lengthy"
+  ],
+  "answer": 0,
+  "explanation": "Perfunctory means done with minimal effort, or cursory."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "The puppy was so ___ after the long walk that it fell asleep immediately.",
+  "choices": [
+   "energetic",
+   "exhausted",
+   "noisy",
+   "friendly"
+  ],
+  "answer": 1,
+  "explanation": "Falling asleep right away suggests the puppy was exhausted."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Because the road was icy, the driver proceeded ___.",
+  "choices": [
+   "carelessly",
+   "cautiously",
+   "quickly",
+   "angrily"
+  ],
+  "answer": 1,
+  "explanation": "Ice calls for careful, cautious driving."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "The soup was so ___ that she added more salt.",
+  "choices": [
+   "bland",
+   "spicy",
+   "scalding",
+   "thick"
+  ],
+  "answer": 0,
+  "explanation": "Adding salt makes sense only if the soup lacked flavor."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Despite her ___ appearance, the old dog was surprisingly strong.",
+  "choices": [
+   "imposing",
+   "glossy",
+   "frail",
+   "energetic"
+  ],
+  "answer": 2,
+  "explanation": "Despite and surprisingly signal a contrast with strong, so frail fits."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "The author's ___ prose made even the simplest idea easy to follow.",
+  "choices": [
+   "muddled",
+   "lengthy",
+   "dense",
+   "lucid"
+  ],
+  "answer": 3,
+  "explanation": "Lucid means clear, which makes ideas easy to follow."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "The hikers were ___ by the sudden storm, but their guide remained ___.",
+  "choices": [
+   "alarmed ... composed",
+   "comforted ... frantic",
+   "alarmed ... frantic",
+   "comforted ... composed"
+  ],
+  "answer": 0,
+  "explanation": "But signals contrast between the hikers' alarm and the guide's calm."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "The mayor's speech was deliberately ___; no one could tell whether she supported the plan.",
+  "choices": [
+   "emphatic",
+   "ambiguous",
+   "blunt",
+   "brief"
+  ],
+  "answer": 1,
+  "explanation": "If no one could tell her position, the speech was unclear or ambiguous."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Because the museum's funds were ___, the curators had to ___ several planned exhibits.",
+  "choices": [
+   "plentiful ... expand",
+   "growing ... double",
+   "limited ... cancel",
+   "unknown ... admire"
+  ],
+  "answer": 2,
+  "explanation": "Limited money would force the curators to cancel exhibits."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Her ___ remarks hurt his feelings, though she insisted she had meant no harm.",
+  "choices": [
+   "thoughtless",
+   "flattering",
+   "cheerful",
+   "accurate"
+  ],
+  "answer": 0,
+  "explanation": "Hurtful remarks made without intent to harm were thoughtless."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "The explorer's ___ nature drove him to seek out every unmapped valley.",
+  "choices": [
+   "indifferent",
+   "fearful",
+   "lazy",
+   "adventurous"
+  ],
+  "answer": 3,
+  "explanation": "Seeking unmapped places shows an adventurous nature."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "The critic was usually ___, so her ___ praise of the film astonished readers.",
+  "choices": [
+   "generous ... lavish",
+   "gentle ... mild",
+   "harsh ... enthusiastic",
+   "harsh ... bitter"
+  ],
+  "answer": 2,
+  "explanation": "Astonishment implies a harsh critic gave unexpectedly enthusiastic praise."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "The detective's ___ attention to detail allowed him to notice what others overlooked.",
+  "choices": [
+   "cursory",
+   "meticulous",
+   "sporadic",
+   "fleeting"
+  ],
+  "answer": 1,
+  "explanation": "Noticing what others miss requires meticulous, extremely careful attention."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "The tyrant's ___ rule left the citizens with no voice in their own government.",
+  "choices": [
+   "despotic",
+   "benevolent",
+   "feeble",
+   "transient"
+  ],
+  "answer": 0,
+  "explanation": "A tyrant who denies citizens a voice rules in a despotic way."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "The ___ heat of the desert made travel ___ during the afternoon.",
+  "choices": [
+   "mild ... pleasant",
+   "scorching ... delightful",
+   "mild ... grueling",
+   "scorching ... grueling"
+  ],
+  "answer": 3,
+  "explanation": "Scorching heat would make afternoon travel grueling."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "The professor's ___ lecture, filled with obscure references, left most students more confused than before.",
+  "choices": [
+   "pellucid",
+   "abstruse",
+   "succinct",
+   "jocular"
+  ],
+  "answer": 1,
+  "explanation": "Abstruse means hard to understand, matching the confusion described."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Though the diplomat's manner was ___, her proposals were ruthlessly firm.",
+  "choices": [
+   "affable",
+   "truculent",
+   "inflexible",
+   "dogmatic"
+  ],
+  "answer": 0,
+  "explanation": "Though signals contrast, so a friendly (affable) manner contrasts with firm proposals."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Not content with ___ praise, the ambitious young poet craved ___ acclaim.",
+  "choices": [
+   "lavish ... meager",
+   "scant ... scarce",
+   "widespread ... modest",
+   "modest ... universal"
+  ],
+  "answer": 3,
+  "explanation": "An ambitious person unsatisfied with modest praise would crave universal acclaim."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Her ___ response to the crisis, neither panicking nor hesitating, earned her the board's trust.",
+  "choices": [
+   "impetuous",
+   "indecisive",
+   "measured",
+   "frantic"
+  ],
+  "answer": 2,
+  "explanation": "Neither panicking nor hesitating describes a measured response."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Every morning, Marisol climbed the narrow stairs to her grandfather's workshop, where dozens of clocks ticked out of step with one another. As a small child she had found the noise maddening, but now she barely heard it. Her grandfather, bent over a brass gear no larger than a coin, never looked up when she entered. \"Hand me the tweezers,\" he would say, and she would, and that was their entire conversation until noon. Yet she had come to understand that this silence was not coldness. It was the way he welcomed her: by assuming she belonged there. When a customer once asked why such a quiet girl bothered to visit, her grandfather answered without lifting his eyes. \"She is the only one who knows when to stay still,\" he said. Marisol pretended to polish a clock face, but her cheeks burned with pride.",
+  "stem": "What is the passage mainly about?",
+  "choices": [
+   "A girl's growing appreciation of her grandfather's quiet way of showing acceptance",
+   "The history of clockmaking in a small town",
+   "A customer's complaint about a clock repair",
+   "A child's frustration with a noisy workplace"
+  ],
+  "answer": 0,
+  "explanation": "The passage traces how Marisol comes to see her grandfather's silence as welcome."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "Every morning, Marisol climbed the narrow stairs to her grandfather's workshop, where dozens of clocks ticked out of step with one another. As a small child she had found the noise maddening, but now she barely heard it. Her grandfather, bent over a brass gear no larger than a coin, never looked up when she entered. \"Hand me the tweezers,\" he would say, and she would, and that was their entire conversation until noon. Yet she had come to understand that this silence was not coldness. It was the way he welcomed her: by assuming she belonged there. When a customer once asked why such a quiet girl bothered to visit, her grandfather answered without lifting his eyes. \"She is the only one who knows when to stay still,\" he said. Marisol pretended to polish a clock face, but her cheeks burned with pride.",
+  "stem": "What does Marisol's grandfather usually say when she enters the workshop?",
+  "choices": [
+   "Good morning",
+   "Hand me the tweezers",
+   "Why have you come",
+   "Stay still"
+  ],
+  "answer": 1,
+  "explanation": "The passage quotes him asking for the tweezers."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "reading",
+  "difficulty": 3,
+  "passage": "Every morning, Marisol climbed the narrow stairs to her grandfather's workshop, where dozens of clocks ticked out of step with one another. As a small child she had found the noise maddening, but now she barely heard it. Her grandfather, bent over a brass gear no larger than a coin, never looked up when she entered. \"Hand me the tweezers,\" he would say, and she would, and that was their entire conversation until noon. Yet she had come to understand that this silence was not coldness. It was the way he welcomed her: by assuming she belonged there. When a customer once asked why such a quiet girl bothered to visit, her grandfather answered without lifting his eyes. \"She is the only one who knows when to stay still,\" he said. Marisol pretended to polish a clock face, but her cheeks burned with pride.",
+  "stem": "The statement that Marisol's \"cheeks burned with pride\" suggests that she was",
+  "choices": [
+   "embarrassed by the customer's question",
+   "angry at her grandfather",
+   "pleased by her grandfather's compliment",
+   "tired from polishing"
+  ],
+  "answer": 2,
+  "explanation": "Pride shows she was happy about his praise."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "reading",
+  "difficulty": 3,
+  "passage": "Every morning, Marisol climbed the narrow stairs to her grandfather's workshop, where dozens of clocks ticked out of step with one another. As a small child she had found the noise maddening, but now she barely heard it. Her grandfather, bent over a brass gear no larger than a coin, never looked up when she entered. \"Hand me the tweezers,\" he would say, and she would, and that was their entire conversation until noon. Yet she had come to understand that this silence was not coldness. It was the way he welcomed her: by assuming she belonged there. When a customer once asked why such a quiet girl bothered to visit, her grandfather answered without lifting his eyes. \"She is the only one who knows when to stay still,\" he said. Marisol pretended to polish a clock face, but her cheeks burned with pride.",
+  "stem": "As used in the passage, \"maddening\" most nearly means",
+  "choices": [
+   "extremely irritating",
+   "mysterious",
+   "pleasant",
+   "rhythmic"
+  ],
+  "answer": 0,
+  "explanation": "She once disliked the noise, so maddening means very irritating."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "reading",
+  "difficulty": 3,
+  "passage": "Octopuses are masters of disguise, but the mechanism behind their transformations is stranger than most people realize. Beneath an octopus's skin lie thousands of tiny sacs of pigment called chromatophores, each surrounded by muscles. When the animal wants to change color, its brain signals the muscles to stretch the sacs open or squeeze them shut, altering the pattern across its body within a fraction of a second. Remarkably, octopuses appear to be colorblind; their eyes contain only one type of light-sensing cell. Researchers therefore puzzle over how the animal matches its background so well. One hypothesis is that the skin itself contains light-sensitive proteins that detect surroundings directly, allowing the octopus to \"see\" with its body. Although the idea remains unproven, laboratory studies have shown that isolated patches of skin react when exposed to light, lending the theory some support.",
+  "stem": "Which statement best expresses the main idea of the passage?",
+  "choices": [
+   "Octopuses are the most intelligent sea animals.",
+   "Octopuses change color using pigment sacs, yet how they match their backgrounds remains puzzling.",
+   "Colorblind animals cannot hide from predators.",
+   "Laboratory research is more reliable than field research."
+  ],
+  "answer": 1,
+  "explanation": "The passage explains the color mechanism and then raises the open question."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Octopuses are masters of disguise, but the mechanism behind their transformations is stranger than most people realize. Beneath an octopus's skin lie thousands of tiny sacs of pigment called chromatophores, each surrounded by muscles. When the animal wants to change color, its brain signals the muscles to stretch the sacs open or squeeze them shut, altering the pattern across its body within a fraction of a second. Remarkably, octopuses appear to be colorblind; their eyes contain only one type of light-sensing cell. Researchers therefore puzzle over how the animal matches its background so well. One hypothesis is that the skin itself contains light-sensitive proteins that detect surroundings directly, allowing the octopus to \"see\" with its body. Although the idea remains unproven, laboratory studies have shown that isolated patches of skin react when exposed to light, lending the theory some support.",
+  "stem": "According to the passage, what causes the pigment sacs to open or close?",
+  "choices": [
+   "Changes in water temperature",
+   "Light-sensitive proteins",
+   "Muscles signaled by the brain",
+   "Chemicals released by predators"
+  ],
+  "answer": 2,
+  "explanation": "Muscles around the sacs respond to signals from the brain."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "Octopuses are masters of disguise, but the mechanism behind their transformations is stranger than most people realize. Beneath an octopus's skin lie thousands of tiny sacs of pigment called chromatophores, each surrounded by muscles. When the animal wants to change color, its brain signals the muscles to stretch the sacs open or squeeze them shut, altering the pattern across its body within a fraction of a second. Remarkably, octopuses appear to be colorblind; their eyes contain only one type of light-sensing cell. Researchers therefore puzzle over how the animal matches its background so well. One hypothesis is that the skin itself contains light-sensitive proteins that detect surroundings directly, allowing the octopus to \"see\" with its body. Although the idea remains unproven, laboratory studies have shown that isolated patches of skin react when exposed to light, lending the theory some support.",
+  "stem": "Why do researchers find the octopus's ability to match its background puzzling?",
+  "choices": [
+   "Its eyes seem unable to perceive color",
+   "Its skin contains no pigment",
+   "Its brain is unusually small",
+   "It rarely changes color"
+  ],
+  "answer": 0,
+  "explanation": "The animal appears colorblind yet matches colors well."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "reading",
+  "difficulty": 3,
+  "passage": "Octopuses are masters of disguise, but the mechanism behind their transformations is stranger than most people realize. Beneath an octopus's skin lie thousands of tiny sacs of pigment called chromatophores, each surrounded by muscles. When the animal wants to change color, its brain signals the muscles to stretch the sacs open or squeeze them shut, altering the pattern across its body within a fraction of a second. Remarkably, octopuses appear to be colorblind; their eyes contain only one type of light-sensing cell. Researchers therefore puzzle over how the animal matches its background so well. One hypothesis is that the skin itself contains light-sensitive proteins that detect surroundings directly, allowing the octopus to \"see\" with its body. Although the idea remains unproven, laboratory studies have shown that isolated patches of skin react when exposed to light, lending the theory some support.",
+  "stem": "As used in the passage, \"hypothesis\" most nearly means",
+  "choices": [
+   "a final conclusion",
+   "a historical record",
+   "a measurement",
+   "a proposed explanation"
+  ],
+  "answer": 3,
+  "explanation": "The idea is described as unproven, so it is a proposed explanation."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "reading",
+  "difficulty": 3,
+  "passage": "Before the Erie Canal opened in 1825, shipping a ton of goods from Buffalo to New York City cost about one hundred dollars and took weeks of jolting travel by wagon. The canal, a 363-mile waterway dug largely by hand, cut that cost to roughly ten dollars and shortened the trip considerably. Farmers in the Midwest suddenly found that their grain could reach eastern markets profitably, and they planted more. Towns such as Rochester and Syracuse grew rapidly along the route, and New York City surpassed rival ports to become the nation's busiest. Not everyone benefited, however. Farmers in New England, facing cheaper western produce, struggled to compete, and many abandoned their land for factory jobs or for the West itself. The canal thus illustrates how a single improvement in transportation can reshape the economy, creating winners and losers at the same time.",
+  "stem": "Which statement best expresses the main idea of the passage?",
+  "choices": [
+   "Wagon travel was safer than canal travel.",
+   "New England farmers invented new crops.",
+   "The Erie Canal was the longest waterway ever built.",
+   "The Erie Canal reshaped the economy, helping some regions while hurting others."
+  ],
+  "answer": 3,
+  "explanation": "The passage describes both gains and losses from the canal."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Before the Erie Canal opened in 1825, shipping a ton of goods from Buffalo to New York City cost about one hundred dollars and took weeks of jolting travel by wagon. The canal, a 363-mile waterway dug largely by hand, cut that cost to roughly ten dollars and shortened the trip considerably. Farmers in the Midwest suddenly found that their grain could reach eastern markets profitably, and they planted more. Towns such as Rochester and Syracuse grew rapidly along the route, and New York City surpassed rival ports to become the nation's busiest. Not everyone benefited, however. Farmers in New England, facing cheaper western produce, struggled to compete, and many abandoned their land for factory jobs or for the West itself. The canal thus illustrates how a single improvement in transportation can reshape the economy, creating winners and losers at the same time.",
+  "stem": "According to the passage, the canal changed the cost of shipping a ton of goods from Buffalo to New York City by about how much?",
+  "choices": [
+   "From ten dollars to one dollar",
+   "From one hundred dollars to fifty dollars",
+   "From one hundred dollars to ten dollars",
+   "It did not change the cost"
+  ],
+  "answer": 2,
+  "explanation": "The passage gives about one hundred dollars before and ten dollars after."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "Before the Erie Canal opened in 1825, shipping a ton of goods from Buffalo to New York City cost about one hundred dollars and took weeks of jolting travel by wagon. The canal, a 363-mile waterway dug largely by hand, cut that cost to roughly ten dollars and shortened the trip considerably. Farmers in the Midwest suddenly found that their grain could reach eastern markets profitably, and they planted more. Towns such as Rochester and Syracuse grew rapidly along the route, and New York City surpassed rival ports to become the nation's busiest. Not everyone benefited, however. Farmers in New England, facing cheaper western produce, struggled to compete, and many abandoned their land for factory jobs or for the West itself. The canal thus illustrates how a single improvement in transportation can reshape the economy, creating winners and losers at the same time.",
+  "stem": "Why did many New England farmers leave their land?",
+  "choices": [
+   "Their land was flooded by the canal.",
+   "They could not compete with cheaper western produce.",
+   "They were hired to dig the canal.",
+   "Wagon travel was banned."
+  ],
+  "answer": 1,
+  "explanation": "The passage says they struggled against cheaper western produce."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "reading",
+  "difficulty": 3,
+  "passage": "Before the Erie Canal opened in 1825, shipping a ton of goods from Buffalo to New York City cost about one hundred dollars and took weeks of jolting travel by wagon. The canal, a 363-mile waterway dug largely by hand, cut that cost to roughly ten dollars and shortened the trip considerably. Farmers in the Midwest suddenly found that their grain could reach eastern markets profitably, and they planted more. Towns such as Rochester and Syracuse grew rapidly along the route, and New York City surpassed rival ports to become the nation's busiest. Not everyone benefited, however. Farmers in New England, facing cheaper western produce, struggled to compete, and many abandoned their land for factory jobs or for the West itself. The canal thus illustrates how a single improvement in transportation can reshape the economy, creating winners and losers at the same time.",
+  "stem": "The final sentence of the passage serves to",
+  "choices": [
+   "present a counterexample",
+   "criticize the builders of the canal",
+   "draw a general lesson from the specific case",
+   "introduce a new historical event"
+  ],
+  "answer": 2,
+  "explanation": "It generalizes from the canal to transportation improvements in general."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "Translators are often described as invisible, and the best are said to be those whose work readers never notice. Yet this ideal is more contested than it appears. A translator who renders a novel into smooth, natural English may erase the strangeness that made the original distinctive; the foreign rhythms, unfamiliar idioms, and odd turns of phrase are, after all, part of what the author intended. Some contemporary translators therefore deliberately preserve awkwardness, trusting readers to tolerate friction in exchange for authenticity. Critics reply that a translation no one can comfortably read has failed its audience as surely as one that distorts the original. The disagreement is unlikely to be settled, because it reflects a genuine tension between two loyalties: fidelity to the author and service to the reader. Every translator, in effect, must choose where to stand between them.",
+  "stem": "Which statement best expresses the main idea of the passage?",
+  "choices": [
+   "Translators face a genuine tension between faithfulness to the author and service to the reader.",
+   "Translators should always remain invisible.",
+   "Smooth translations are always inferior to awkward ones.",
+   "Critics have proved that awkward translations fail."
+  ],
+  "answer": 0,
+  "explanation": "The passage ends by naming this tension as the core of the disagreement."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "Translators are often described as invisible, and the best are said to be those whose work readers never notice. Yet this ideal is more contested than it appears. A translator who renders a novel into smooth, natural English may erase the strangeness that made the original distinctive; the foreign rhythms, unfamiliar idioms, and odd turns of phrase are, after all, part of what the author intended. Some contemporary translators therefore deliberately preserve awkwardness, trusting readers to tolerate friction in exchange for authenticity. Critics reply that a translation no one can comfortably read has failed its audience as surely as one that distorts the original. The disagreement is unlikely to be settled, because it reflects a genuine tension between two loyalties: fidelity to the author and service to the reader. Every translator, in effect, must choose where to stand between them.",
+  "stem": "As used in the passage, \"contested\" most nearly means",
+  "choices": [
+   "widely accepted",
+   "disputed",
+   "simple",
+   "ignored"
+  ],
+  "answer": 1,
+  "explanation": "The ideal is called more contested than it appears, meaning argued over."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "Translators are often described as invisible, and the best are said to be those whose work readers never notice. Yet this ideal is more contested than it appears. A translator who renders a novel into smooth, natural English may erase the strangeness that made the original distinctive; the foreign rhythms, unfamiliar idioms, and odd turns of phrase are, after all, part of what the author intended. Some contemporary translators therefore deliberately preserve awkwardness, trusting readers to tolerate friction in exchange for authenticity. Critics reply that a translation no one can comfortably read has failed its audience as surely as one that distorts the original. The disagreement is unlikely to be settled, because it reflects a genuine tension between two loyalties: fidelity to the author and service to the reader. Every translator, in effect, must choose where to stand between them.",
+  "stem": "The author's tone in discussing the debate is best described as",
+  "choices": [
+   "dismissive and sarcastic",
+   "angry and defensive",
+   "nostalgic and wistful",
+   "even-handed and reflective"
+  ],
+  "answer": 3,
+  "explanation": "The author presents both sides without favoring either."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "reading",
+  "difficulty": 5,
+  "passage": "Translators are often described as invisible, and the best are said to be those whose work readers never notice. Yet this ideal is more contested than it appears. A translator who renders a novel into smooth, natural English may erase the strangeness that made the original distinctive; the foreign rhythms, unfamiliar idioms, and odd turns of phrase are, after all, part of what the author intended. Some contemporary translators therefore deliberately preserve awkwardness, trusting readers to tolerate friction in exchange for authenticity. Critics reply that a translation no one can comfortably read has failed its audience as surely as one that distorts the original. The disagreement is unlikely to be settled, because it reflects a genuine tension between two loyalties: fidelity to the author and service to the reader. Every translator, in effect, must choose where to stand between them.",
+  "stem": "According to the passage, why might a very smooth translation be a problem?",
+  "choices": [
+   "It requires translators to be visible.",
+   "It always contains errors of grammar.",
+   "It may erase the strangeness that was part of the original's character.",
+   "It is rejected by all critics."
+  ],
+  "answer": 2,
+  "explanation": "The passage says smoothness may erase what made the original distinctive."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "The bus hissed to a stop, and Daniel stepped onto the unfamiliar sidewalk with his duffel bag clutched against his chest. The town looked smaller than the photographs his aunt had sent: one traffic light, a bakery with a faded awning, and a hardware store whose windows were crowded with ladders. He told himself that smaller was better, that fewer streets meant fewer ways to get lost. But when his aunt's old truck rattled around the corner and she leaned out the window, waving both arms as if flagging down a ship, something in his chest loosened. For the first time in weeks, he laughed.",
+  "stem": "Daniel's feelings upon arriving can best be described as",
+  "choices": [
+   "confident and bored",
+   "angry and resentful",
+   "joyful from the start",
+   "uneasy at first, then relieved"
+  ],
+  "answer": 3,
+  "explanation": "He reassures himself nervously, then relaxes and laughs on seeing his aunt."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "The bus hissed to a stop, and Daniel stepped onto the unfamiliar sidewalk with his duffel bag clutched against his chest. The town looked smaller than the photographs his aunt had sent: one traffic light, a bakery with a faded awning, and a hardware store whose windows were crowded with ladders. He told himself that smaller was better, that fewer streets meant fewer ways to get lost. But when his aunt's old truck rattled around the corner and she leaned out the window, waving both arms as if flagging down a ship, something in his chest loosened. For the first time in weeks, he laughed.",
+  "stem": "How does Daniel's aunt greet him?",
+  "choices": [
+   "By waving both arms from her truck",
+   "By hugging him at the bus stop",
+   "By sending a letter",
+   "By waiting silently"
+  ],
+  "answer": 0,
+  "explanation": "She leans out the truck window waving both arms."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "reading",
+  "difficulty": 3,
+  "passage": "The bus hissed to a stop, and Daniel stepped onto the unfamiliar sidewalk with his duffel bag clutched against his chest. The town looked smaller than the photographs his aunt had sent: one traffic light, a bakery with a faded awning, and a hardware store whose windows were crowded with ladders. He told himself that smaller was better, that fewer streets meant fewer ways to get lost. But when his aunt's old truck rattled around the corner and she leaned out the window, waving both arms as if flagging down a ship, something in his chest loosened. For the first time in weeks, he laughed.",
+  "stem": "As used in the passage, \"loosened\" most nearly means",
+  "choices": [
+   "came apart",
+   "relaxed",
+   "hurt",
+   "broke"
+  ],
+  "answer": 1,
+  "explanation": "His tension eased when he saw her, so loosened means relaxed."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "When a honeybee finds a rich patch of flowers, it returns to the hive and performs a \"waggle dance\" to share the news. The bee shuffles in a figure-eight pattern, vibrating its abdomen during the straight middle section. The angle of this waggle run, measured against the vertical wall of the comb, tells the other bees which direction to fly relative to the sun. The length of the run indicates distance: the longer the waggle, the farther away the food. Observers in dark hives have confirmed that the bees follow these instructions with surprising accuracy, even when the sun is hidden behind clouds. Scientists consider the dance remarkable because few animals other than humans communicate information about things that are not present.",
+  "stem": "What is the passage mainly about?",
+  "choices": [
+   "Why honeybees build hives in the dark",
+   "How the sun affects the growth of flowers",
+   "How honeybees use a dance to communicate the location of food",
+   "Why bees vibrate their wings to keep warm"
+  ],
+  "answer": 2,
+  "explanation": "The whole passage describes the waggle dance and what it tells other bees."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "When a honeybee finds a rich patch of flowers, it returns to the hive and performs a \"waggle dance\" to share the news. The bee shuffles in a figure-eight pattern, vibrating its abdomen during the straight middle section. The angle of this waggle run, measured against the vertical wall of the comb, tells the other bees which direction to fly relative to the sun. The length of the run indicates distance: the longer the waggle, the farther away the food. Observers in dark hives have confirmed that the bees follow these instructions with surprising accuracy, even when the sun is hidden behind clouds. Scientists consider the dance remarkable because few animals other than humans communicate information about things that are not present.",
+  "stem": "According to the passage, what does the length of the waggle run indicate?",
+  "choices": [
+   "The direction of the sun",
+   "The quality of the nectar",
+   "The time of day",
+   "How far away the food is"
+  ],
+  "answer": 3,
+  "explanation": "The passage states that a longer waggle means farther food."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "reading",
+  "difficulty": 3,
+  "passage": "When a honeybee finds a rich patch of flowers, it returns to the hive and performs a \"waggle dance\" to share the news. The bee shuffles in a figure-eight pattern, vibrating its abdomen during the straight middle section. The angle of this waggle run, measured against the vertical wall of the comb, tells the other bees which direction to fly relative to the sun. The length of the run indicates distance: the longer the waggle, the farther away the food. Observers in dark hives have confirmed that the bees follow these instructions with surprising accuracy, even when the sun is hidden behind clouds. Scientists consider the dance remarkable because few animals other than humans communicate information about things that are not present.",
+  "stem": "Why do scientists consider the dance remarkable?",
+  "choices": [
+   "It is the only form of communication among insects.",
+   "It conveys information about things that are not present, which few animals besides humans do.",
+   "It requires bees to see the sun.",
+   "It is performed outdoors."
+  ],
+  "answer": 1,
+  "explanation": "The last sentence gives this as the reason."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "In the early nineteenth century, a person who wished to read widely had few options. Books were expensive, and most were owned by the wealthy or housed in private subscription libraries that charged steep annual fees. The idea of a free public library, supported by local taxes and open to anyone, struck many citizens as both unnecessary and unfair; why, they asked, should a shopkeeper pay for books that a lawyer would read? Advocates answered that an educated population benefited everyone, much as paved roads and clean water did. Gradually this argument prevailed. By the end of the century, hundreds of towns had established libraries, and reading, once a mark of privilege, had become an ordinary part of civic life.",
+  "stem": "How does the author develop the passage?",
+  "choices": [
+   "By describing an earlier situation, the objections to a change, and the eventual outcome",
+   "By listing famous libraries in order of size",
+   "By comparing two kinds of books",
+   "By telling one citizen's story"
+  ],
+  "answer": 0,
+  "explanation": "The passage moves from limited access to objections to the eventual spread of libraries."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "reading",
+  "difficulty": 3,
+  "passage": "In the early nineteenth century, a person who wished to read widely had few options. Books were expensive, and most were owned by the wealthy or housed in private subscription libraries that charged steep annual fees. The idea of a free public library, supported by local taxes and open to anyone, struck many citizens as both unnecessary and unfair; why, they asked, should a shopkeeper pay for books that a lawyer would read? Advocates answered that an educated population benefited everyone, much as paved roads and clean water did. Gradually this argument prevailed. By the end of the century, hundreds of towns had established libraries, and reading, once a mark of privilege, had become an ordinary part of civic life.",
+  "stem": "According to the passage, what was one objection to free public libraries?",
+  "choices": [
+   "Libraries would be too noisy.",
+   "Private libraries would charge more.",
+   "Taxes would pay for books that some citizens might not use.",
+   "Wealthy people would stop reading."
+  ],
+  "answer": 2,
+  "explanation": "Critics asked why a shopkeeper should pay for books a lawyer would read."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "In the early nineteenth century, a person who wished to read widely had few options. Books were expensive, and most were owned by the wealthy or housed in private subscription libraries that charged steep annual fees. The idea of a free public library, supported by local taxes and open to anyone, struck many citizens as both unnecessary and unfair; why, they asked, should a shopkeeper pay for books that a lawyer would read? Advocates answered that an educated population benefited everyone, much as paved roads and clean water did. Gradually this argument prevailed. By the end of the century, hundreds of towns had established libraries, and reading, once a mark of privilege, had become an ordinary part of civic life.",
+  "stem": "As used in the passage, \"prevailed\" most nearly means",
+  "choices": [
+   "lost",
+   "succeeded",
+   "delayed",
+   "vanished"
+  ],
+  "answer": 1,
+  "explanation": "The argument gradually won out, so prevailed means succeeded."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "In the early nineteenth century, a person who wished to read widely had few options. Books were expensive, and most were owned by the wealthy or housed in private subscription libraries that charged steep annual fees. The idea of a free public library, supported by local taxes and open to anyone, struck many citizens as both unnecessary and unfair; why, they asked, should a shopkeeper pay for books that a lawyer would read? Advocates answered that an educated population benefited everyone, much as paved roads and clean water did. Gradually this argument prevailed. By the end of the century, hundreds of towns had established libraries, and reading, once a mark of privilege, had become an ordinary part of civic life.",
+  "stem": "The comparison to paved roads and clean water serves to",
+  "choices": [
+   "show that libraries were cheaper than roads",
+   "suggest that roads and water are less important",
+   "amuse the reader with an unlikely comparison",
+   "suggest that libraries, like other public goods, benefit everyone"
+  ],
+  "answer": 3,
+  "explanation": "Advocates used the comparison to argue that libraries serve the whole community."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Seventeenth-century Dutch painters turned away from the grand religious and mythological scenes that had dominated European art. Instead, a rising merchant class wanted pictures of their own world: a woman pouring milk, a tavern crowded with card players, a quiet street after rain. Such works were modest in scale, since they were meant to hang in ordinary homes rather than cathedrals. Yet their apparent simplicity is deceptive. Painters labored over the fall of light on a copper pot or the texture of a linen cloth, convinced that attention to the everyday could reveal something enduring. Some scholars read hidden moral lessons into these scenes, such as warnings against idleness or excess. Others argue that the paintings celebrate ordinary life for its own sake. Probably both views contain some truth, for the artists seldom explained themselves.",
+  "stem": "According to the passage, why were these paintings modest in scale?",
+  "choices": [
+   "Churches forbade large canvases.",
+   "Painters lacked skill.",
+   "They were meant to hang in ordinary homes.",
+   "Paint was scarce."
+  ],
+  "answer": 2,
+  "explanation": "The passage says they were meant for ordinary homes rather than cathedrals."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "Seventeenth-century Dutch painters turned away from the grand religious and mythological scenes that had dominated European art. Instead, a rising merchant class wanted pictures of their own world: a woman pouring milk, a tavern crowded with card players, a quiet street after rain. Such works were modest in scale, since they were meant to hang in ordinary homes rather than cathedrals. Yet their apparent simplicity is deceptive. Painters labored over the fall of light on a copper pot or the texture of a linen cloth, convinced that attention to the everyday could reveal something enduring. Some scholars read hidden moral lessons into these scenes, such as warnings against idleness or excess. Others argue that the paintings celebrate ordinary life for its own sake. Probably both views contain some truth, for the artists seldom explained themselves.",
+  "stem": "As used in the passage, \"deceptive\" most nearly means",
+  "choices": [
+   "misleading",
+   "obvious",
+   "honest",
+   "pleasing"
+  ],
+  "answer": 0,
+  "explanation": "The simplicity hides the painters' great effort, so it is misleading."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "reading",
+  "difficulty": 5,
+  "passage": "Seventeenth-century Dutch painters turned away from the grand religious and mythological scenes that had dominated European art. Instead, a rising merchant class wanted pictures of their own world: a woman pouring milk, a tavern crowded with card players, a quiet street after rain. Such works were modest in scale, since they were meant to hang in ordinary homes rather than cathedrals. Yet their apparent simplicity is deceptive. Painters labored over the fall of light on a copper pot or the texture of a linen cloth, convinced that attention to the everyday could reveal something enduring. Some scholars read hidden moral lessons into these scenes, such as warnings against idleness or excess. Others argue that the paintings celebrate ordinary life for its own sake. Probably both views contain some truth, for the artists seldom explained themselves.",
+  "stem": "The author suggests that the two scholarly interpretations",
+  "choices": [
+   "are impossible to reconcile",
+   "are probably both partly correct",
+   "have been disproved",
+   "are unrelated to the paintings"
+  ],
+  "answer": 1,
+  "explanation": "The author says both views probably contain some truth."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "reading",
+  "difficulty": 3,
+  "passage": "Seventeenth-century Dutch painters turned away from the grand religious and mythological scenes that had dominated European art. Instead, a rising merchant class wanted pictures of their own world: a woman pouring milk, a tavern crowded with card players, a quiet street after rain. Such works were modest in scale, since they were meant to hang in ordinary homes rather than cathedrals. Yet their apparent simplicity is deceptive. Painters labored over the fall of light on a copper pot or the texture of a linen cloth, convinced that attention to the everyday could reveal something enduring. Some scholars read hidden moral lessons into these scenes, such as warnings against idleness or excess. Others argue that the paintings celebrate ordinary life for its own sake. Probably both views contain some truth, for the artists seldom explained themselves.",
+  "stem": "Which statement best expresses the main idea of the passage?",
+  "choices": [
+   "Dutch painters rejected the use of light.",
+   "Merchants refused to buy art.",
+   "Religious art vanished from Europe.",
+   "Dutch painters of this era depicted everyday life with care for a new merchant audience."
+  ],
+  "answer": 3,
+  "explanation": "The passage describes the shift to everyday subjects and why they were painted."
+ }
+]

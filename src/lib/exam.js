@@ -63,6 +63,30 @@ EXAMS.ISEE = {
   ],
 };
 
+EXAMS.COGAT = {
+  title: 'CogAT 스타일 모의고사', adaptive: false, sas: { mean: 100, sd: 16 },
+  sections: [
+    { key: 'verbal', name: 'Verbal Battery', n: 16, minutes: 15 },
+    { key: 'quantitative', name: 'Quantitative Battery', n: 16, minutes: 15 },
+    { key: 'nonverbal', name: 'Nonverbal Battery', n: 16, minutes: 15 },
+  ],
+};
+EXAMS.SAT = {
+  title: 'SAT 스타일 모의고사', adaptive: true, scaled: { min: 200, max: 800, total: 'sum' },
+  sections: [
+    { key: 'rw', name: 'Reading and Writing', n: 27, minutes: 32 },
+    { key: 'math', name: 'Math', n: 22, minutes: 35 },
+  ],
+};
+EXAMS.TOEFLJ = {
+  title: 'TOEFL Junior 스타일 모의고사', adaptive: false, scaled: { min: 200, max: 300, total: 'sum' },
+  sections: [
+    { key: 'listening', name: 'Listening Comprehension', n: 20, minutes: 25 },
+    { key: 'lfm', name: 'Language Form and Meaning', n: 20, minutes: 15 },
+    { key: 'reading', name: 'Reading Comprehension', n: 24, minutes: 30 },
+  ],
+};
+
 export const GRACE_MS = 5000;
 
 /** Build the initial attempt state. */
@@ -116,10 +140,11 @@ export function scoreAttempt(examType, answers) {
       s.ability = Math.round(d * 100) / 100;
       s.scaleScore = total ? Math.round(140 + clamp(d, 0, 6) * 18) : null; // RIT-like, estimated
       s.band = d >= 4.2 ? 'Advanced' : d >= 3.2 ? 'Proficient' : d >= 2.2 ? 'Developing' : 'Beginning';
-    } else if (examType === 'CAT4') {
-      const sas = Math.round(clamp(100 + 15 * ((pct - 0.5) / 0.2), 60, 140));
+    } else if (examType === 'CAT4' || ex.sas) {
+      const sd = ex.sas?.sd ?? 15;
+      const sas = Math.round(clamp(100 + sd * ((pct - 0.5) / 0.2), 100 - 4 * sd, 100 + 4 * sd));
       s.sas = total ? sas : null;
-      s.stanine = total ? clamp(Math.round((sas - 100) / 7.5 + 5), 1, 9) : null;
+      s.stanine = total ? clamp(Math.round((sas - 100) / (sd / 2) + 5), 1, 9) : null;
     } else if (ex.scaled) {
       if (sec.manual) {
         const scores = a.map((x) => x.manual_score).filter((x) => x != null);
@@ -144,7 +169,7 @@ export function scoreAttempt(examType, answers) {
   if (examType === 'MAP') {
     const v = Object.values(sections).filter((s) => s.scaleScore);
     out.overall = v.length ? Math.round(v.reduce((m, s) => m + s.scaleScore, 0) / v.length) : null;
-  } else if (examType === 'CAT4') {
+  } else if (examType === 'CAT4' || ex.sas) {
     const v = Object.values(sections).filter((s) => s.sas);
     out.overall = v.length ? Math.round(v.reduce((m, s) => m + s.sas, 0) / v.length) : null;
   } else if (ex.scaled) {
