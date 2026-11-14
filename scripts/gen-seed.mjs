@@ -658,6 +658,91 @@ function figureHard(exam, section, count) {
 figureHard('CAT4', 'nonverbal', 16); figureHard('COGAT', 'nonverbal', 14);
 addQC('ISEE', 'quantitative', 20, 3); addQC('SCAT', 'quantitative', 16, 3);
 
+/* =====================================================================
+   Missing real-test item types: figure matrices, figure classification, paper folding (CAT4/CogAT),
+   number analogies (CAT4), SAT student-produced responses (grid-ins).  Appended last: earlier ids are unchanged.
+   ===================================================================== */
+function shapeSvg({ sides = 3, fill = true, size = 1, rot = 0, count = 1, color = '#0a3161' }) {
+  const r = 17 * size, pos = count === 1 ? [[30, 30]] : count === 2 ? [[19, 30], [41, 30]] : [[19, 20], [41, 20], [30, 42]];
+  const rr = count === 1 ? r : r * 0.62;
+  return svg(pos.map(([cx, cy]) => {
+    const pts = Array.from({ length: sides }, (_, i) => { const a = ((rot + (360 / sides) * i - 90) * Math.PI) / 180; return `${(cx + rr * Math.cos(a)).toFixed(1)},${(cy + rr * Math.sin(a)).toFixed(1)}`; }).join(' ');
+    return `<polygon points="${pts}" fill="${fill ? color : '#fff'}" stroke="${color}" stroke-width="2.4"/>`;
+  }).join(''));
+}
+const cell = (inner, x, y) => `<g transform="translate(${x},${y})"><rect width="60" height="60" fill="#fff" stroke="#9ca3af"/>${inner.replace(/^<svg[^>]*>|<\/svg>$/g, '')}</g>`;
+/** 2x2 figure matrix: A -> A' (one change), B -> ? (same change). */
+function figureMatrix(exam, section, count) {
+  const RULES = ['fill', 'size', 'rotate', 'count'];
+  for (let i = 0; i < count; i++) {
+    const rule = RULES[i % 4], color = pick(['#0a3161', '#b31942', '#059669', '#7c3aed']);
+    const A = { sides: pick([3, 5]), fill: true, size: 1, rot: 0, count: 1, color }, B = { ...A, sides: A.sides === 3 ? 5 : 3, color: pick(['#0a3161', '#b31942', '#059669', '#7c3aed'].filter((c) => c !== color)) };
+    const t = (s) => (rule === 'fill' ? { ...s, fill: !s.fill } : rule === 'size' ? { ...s, size: 0.55 } : rule === 'rotate' ? { ...s, rot: 180 } : { ...s, count: 2 });
+    const wrongs = RULES.filter((x) => x !== rule).map((x) => (x === 'fill' ? { ...B, fill: !B.fill } : x === 'size' ? { ...B, size: 0.55 } : x === 'rotate' ? { ...B, rot: 180 } : { ...B, count: 2 }));
+    const grid = svg(cell(shapeSvg(A), 0, 0) + cell(shapeSvg(t(A)), 64, 0) + cell(shapeSvg(B), 0, 64) + `<g transform="translate(64,64)"><rect width="60" height="60" fill="#fff" stroke="#9ca3af"/><text x="30" y="42" font-size="34" text-anchor="middle">?</text></g>`, 128, 128);
+    const opts = shuffle([{ s: t(B), ok: true }, ...shuffle(wrongs).slice(0, 2).map((s) => ({ s })), { s: B }]);
+    const why = { fill: 'the shading is reversed', size: 'the shape becomes smaller', rotate: 'the shape turns upside down', count: 'the shape is doubled' }[rule];
+    add(exam, section, 3 + (i % 3 === 0 ? 1 : 0), 'The top row shows a change. Apply the same change to the bottom row. Which picture goes in the empty box?', opts.map((o) => 'svg:' + shapeSvg(o.s)), opts.findIndex((o) => o.ok), `In the top row ${why}, so the bottom shape changes the same way.`, { image_svg: grid });
+  }
+}
+/** Three shapes share a property (number of sides); pick the one that belongs. */
+function figureClassify(exam, section, count) {
+  for (let i = 0; i < count; i++) {
+    const sides = pick([3, 4, 5, 6]), others = shuffle([3, 4, 5, 6].filter((x) => x !== sides));
+    const look = () => ({ fill: rnd() < 0.5, size: pick([0.7, 0.85, 1]), rot: pick([0, 15, 30, 45]), color: pick(['#0a3161', '#b31942', '#059669', '#7c3aed']) });
+    const shown = [0, 1, 2].map(() => shapeSvg({ sides, ...look() }));
+    const strip3 = svg(shown.map((s3, k) => `<g transform="translate(${k * 64},0)">${s3.replace(/^<svg[^>]*>|<\/svg>$/g, '')}</g>`).join(''), 192, 60);
+    const opts = shuffle([{ s: { sides, ...look() }, ok: true }, ...others.map((o) => ({ s: { sides: o, ...look() } }))]);
+    add(exam, section, 2 + (i % 3), 'The three figures are alike in some way. Which option belongs with them?', opts.map((o) => 'svg:' + shapeSvg(o.s)), opts.findIndex((o) => o.ok), `All three figures have ${sides} sides (colour, size and turn do not matter); only one option also has ${sides} sides.`, { image_svg: strip3 });
+  }
+}
+/** Paper folding: fold a square once, punch one hole, unfold. */
+function paperFold(exam, section, count) {
+  const sq = (holes, extra = '') => svg(`<rect x="6" y="6" width="48" height="48" fill="#fff" stroke="#111" stroke-width="2"/>${extra}${holes.map(([x, y]) => `<circle cx="${x}" cy="${y}" r="4" fill="#111"/>`).join('')}`);
+  for (let i = 0; i < count; i++) {
+    const vertical = i % 2 === 0; // vertical fold line: right half folded over the left half
+    const a = vertical ? [pick([12, 16, 20]), pick([14, 24, 34, 44])] : [pick([14, 24, 34, 44]), pick([12, 16, 20])];
+    const mirror = vertical ? [60 - a[0], a[1]] : [a[0], 60 - a[1]], wrongMirror = vertical ? [a[0], 60 - a[1]] : [60 - a[0], a[1]];
+    const foldLine = vertical ? '<line x1="30" y1="6" x2="30" y2="54" stroke="#6b7280" stroke-dasharray="4 3"/>' : '<line x1="6" y1="30" x2="54" y2="30" stroke="#6b7280" stroke-dasharray="4 3"/>';
+    const folded = vertical ? `<rect x="6" y="6" width="24" height="48" fill="#e5e7eb" stroke="#111" stroke-width="2"/><circle cx="${a[0]}" cy="${a[1]}" r="4" fill="#111"/>` : `<rect x="6" y="6" width="48" height="24" fill="#e5e7eb" stroke="#111" stroke-width="2"/><circle cx="${a[0]}" cy="${a[1]}" r="4" fill="#111"/>`;
+    const steps = svg(`<g>${sq([], foldLine).replace(/^<svg[^>]*>|<\/svg>$/g, '')}</g><text x="72" y="36" font-size="18" text-anchor="middle">→</text><g transform="translate(84,0)">${svg(folded).replace(/^<svg[^>]*>|<\/svg>$/g, '')}</g>`, 150, 60);
+    const opts = shuffle([{ h: [a, mirror], ok: true }, { h: [a] }, { h: [a, wrongMirror] }, { h: [mirror, [60 - a[0], 60 - a[1]]] }].filter((o, k, arr) => arr.findIndex((p) => JSON.stringify(p.h.slice().sort()) === JSON.stringify(o.h.slice().sort())) === k));
+    if (opts.length < 4) continue;
+    add(exam, section, 3 + (i % 3 === 2 ? 1 : 0), `A square sheet is folded along the dashed line (the ${vertical ? 'right half onto the left' : 'bottom half onto the top'}), and one hole is punched through both layers. What does the sheet look like when it is unfolded?`, opts.map((o) => 'svg:' + sq(o.h)), opts.findIndex((o) => o.ok), `The hole goes through both layers, so after unfolding there are two holes, mirror images across the ${vertical ? 'vertical' : 'horizontal'} fold line.`, { image_svg: steps });
+  }
+}
+/** Number analogies with two worked examples (CAT4 quantitative). */
+function numberAnalogies(exam, section, count) {
+  for (let i = 0; i < count; i++) {
+    const mul = i % 2 === 0, a = ri(2, 9), k = mul ? ri(2, 5) : ri(3, 12), a2 = a + 1 + (i % 3), c = a2 + 2 + (i % 4);
+    const f = (x) => (mul ? x * k : x + k);
+    mcq(exam, section, mul ? 3 : 2, `Number analogy:  ${a} → ${f(a)},   ${a2} → ${f(a2)},   ${c} → ?`, f(c), analogyDistractors(a, f(a), c, f(c), mul ? [c + k, f(c) + k, f(c) - 1] : [c * k, f(c) + 1, f(c) - 2]),
+      mul ? `Each number is multiplied by ${k}: ${c} × ${k} = ${f(c)}.` : `Each number increases by ${k}: ${c} + ${k} = ${f(c)}.`);
+  }
+}
+/** SAT student-produced responses: no choices; any equivalent number (fraction or decimal) is accepted. */
+function satGridIn(count) {
+  const T = ['lin', 'func', 'pct', 'mean', 'area', 'sys', 'frac', 'rate'];
+  for (let i = 0; i < count; i++) {
+    const t = T[i % T.length]; let st, ans, ex, d = 2;
+    if (t === 'lin') { const x = ri(2, 20), a = ri(2, 9), b = ri(1, 30); st = `If ${a}x − ${b} = ${a * x - b}, what is the value of x?`; ans = x; ex = `Add ${b} to both sides and divide by ${a}.`; }
+    else if (t === 'func') { const a = ri(2, 6), b = ri(1, 9), c = ri(1, 5), x = ri(2, 6); st = `The function g is defined by g(x) = ${a}x² − ${b === 1 ? '' : b}x + ${c}. What is the value of g(${x})?`; ans = a * x * x - b * x + c; ex = `${a}(${x})² − ${b}(${x}) + ${c} = ${ans}.`; d = 3; }
+    else if (t === 'pct') { const base = pick([80, 120, 150, 240, 320]), p = pick([15, 35, 45, 65, 85]); st = `What is ${p}% of ${base}?`; ans = (base * p) / 100; ex = `${p}/100 × ${base} = ${ans}.`; }
+    else if (t === 'mean') { const xs = Array.from({ length: 4 }, () => ri(10, 40)), m = ri(20, 30), x5 = 5 * m - xs.reduce((s2, v) => s2 + v, 0); if (x5 <= 0) continue; st = `The mean of five numbers is ${m}. Four of the numbers are ${xs.join(', ')}. What is the fifth number?`; ans = x5; ex = `The total is 5 × ${m} = ${5 * m}; subtract the four known numbers.`; d = 3; }
+    else if (t === 'area') { const b = ri(4, 16), hh = 2 * ri(2, 9); st = `A triangle has a base of ${b} centimeters and a height of ${hh} centimeters. What is its area, in square centimeters?`; ans = (b * hh) / 2; ex = `Area = ½ × ${b} × ${hh}.`; }
+    else if (t === 'sys') { const x = ri(1, 9), y = ri(1, 9); st = `If 2x + y = ${2 * x + y} and x − y = ${x - y}, what is the value of y?`; ans = y; ex = `Adding the equations gives 3x = ${3 * x}, so x = ${x} and y = ${y}.`; d = 3; }
+    else if (t === 'frac') { const n = ri(1, 6), dd = ri(n + 1, 9), gcd = (u, v) => (v ? gcd(v, u % v) : u), g2 = gcd(n, dd); st = `A recipe uses ${n} cup${n > 1 ? 's' : ''} of oats for every ${dd} cups of flour. How many cups of oats are used for each cup of flour? (Answer as a fraction or decimal.)`; ans = `${n / g2}/${dd / g2}`; ex = `${n} ÷ ${dd} = ${n / g2}/${dd / g2}${dd / g2 <= 10 && Number.isInteger((n / dd) * 1000) ? ` = ${n / dd}` : ''}.`; d = 3; }
+    else { const r = ri(40, 75), tt = pick([1.5, 2.5, 3]); st = `A cyclist rides at a constant ${r} kilometers per hour for ${tt} hours. How many kilometers does she ride?`; ans = r * tt; ex = `${r} × ${tt} = ${r * tt}.`; }
+    const key = `grid|${st}`; if (seen.has(key)) continue; seen.add(key);
+    Q.push({ id: `seed-sat-math-g${hash(st)}`, exam_type: 'SAT', section: 'math', kind: 'num', difficulty: d + (i % 3 === 2 ? 1 : 0), stem: st + '  (Enter your answer.)', choices: [String(ans)], answer: null, explanation: ex });
+  }
+}
+figureMatrix('CAT4', 'nonverbal', 16); figureMatrix('COGAT', 'nonverbal', 16);
+figureClassify('CAT4', 'nonverbal', 10); figureClassify('COGAT', 'nonverbal', 10);
+paperFold('CAT4', 'spatial', 16); paperFold('COGAT', 'nonverbal', 10);
+numberAnalogies('CAT4', 'quantitative', 14);
+satGridIn(48);
+
 
 /* ---------- review export (REVIEW_DIR=...): sets for blind verification of generated questions ---------- */
 if (process.env.REVIEW_DIR) {

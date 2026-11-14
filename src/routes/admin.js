@@ -172,6 +172,8 @@ function validateQ(b) {
   if (!ex.sections.find((s) => s.key === b.section)) return '영역이 올바르지 않습니다.';
   if (!b.stem) return '문제 본문이 필요합니다.';
   const kind = b.kind || 'mcq';
+  if (!['mcq', 'num', 'text', 'audio'].includes(kind)) return '유형이 올바르지 않습니다.';
+  if (kind === 'num' && (!Array.isArray(b.choices) || !b.choices.length)) return '주관식은 정답(허용 답)을 한 줄에 하나씩 입력하세요.';
   if (kind === 'mcq') {
     if (!Array.isArray(b.choices) || b.choices.length < 2) return '보기는 2개 이상이어야 합니다.';
     if (!Number.isInteger(b.answer) || b.answer < 0 || b.answer >= b.choices.length) return '정답 번호가 올바르지 않습니다.';

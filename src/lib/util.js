@@ -35,4 +35,12 @@ export const shuffle = (arr) => {
   }
   return a;
 };
+/** Parse a student-produced numeric answer: integers, decimals, fractions (3/4), mixed numbers are not accepted. */
+export function parseNum(v) {
+  const t = String(v ?? '').trim().replace(/,/g, '');
+  if (/^-?\d+(\.\d+)?$/.test(t) || /^-?\.\d+$/.test(t)) return Number(t);
+  const m = t.match(/^(-?\d+)\s*\/\s*(\d+)$/); if (m && +m[2] !== 0) return +m[1] / +m[2];
+  return null;
+}
+export const numEqual = (input, accepted) => { const x = parseNum(input); return x !== null && accepted.some((a) => { const y = parseNum(a); return y !== null && Math.abs(x - y) < 1e-6; }); };
 export const isEmail = (s) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(s || '');

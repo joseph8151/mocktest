@@ -352,7 +352,7 @@ async function pageMistakes(q = {}) {
   const sel = h('select', { onchange: () => (location.hash = `#/mistakes${sel.value ? '?exam=' + sel.value : ''}`) }, h('option', { value: '' }, '전체 시험'), ...Object.keys(EXAM_META).map((x) => h('option', { value: x, selected: x === exam }, x)));
   mount(h('div', { class: 'kicker' }, 'Review'), h('h2', {}, '오답노트'), h('p', { class: 'muted' }, '지금까지 틀린 문제를 최근 순으로 모았습니다. 해설을 읽고 같은 유형을 다시 풀어 보세요.'), h('div', { class: 'row', style: 'margin-bottom:16px' }, sel, h('span', { class: 'muted small' }, `${items.length}문항`)),
     items.length ? items.map((it, i) => h('div', { class: 'card wrong' }, h('div', { class: 'small muted' }, `${it.exam_type} · ${it.section} · 난이도 ${it.difficulty}`), it.passage ? h('div', { class: 'passage' }, it.passage) : null, it.image_svg ? h('img', { class: 'qimg', src: svgUri(it.image_svg), alt: '' }) : null, h('b', {}, it.stem),
-      h('div', {}, it.choices.map((c, j) => h('div', { class: 'choice' + (j === it.answer ? ' right' : j === it.choice ? ' miss' : '') }, h('b', {}, 'ABCD'[j]), choiceNode(c), j === it.choice ? h('span', { class: 'badge bad' }, '내 답') : null, j === it.answer ? h('span', { class: 'badge ok' }, '정답') : null))),
+      it.kind === 'num' ? h('p', {}, h('span', { class: 'badge bad' }, '내 답'), ' ', it.text || '(무응답)', '  ', h('span', { class: 'badge ok' }, '정답'), ' ', it.choices.join(' 또는 ')) : h('div', {}, it.choices.map((c, j) => h('div', { class: 'choice' + (j === it.answer ? ' right' : j === it.choice ? ' miss' : '') }, h('b', {}, 'ABCD'[j]), choiceNode(c), j === it.choice ? h('span', { class: 'badge bad' }, '내 답') : null, j === it.answer ? h('span', { class: 'badge ok' }, '정답') : null))),
       it.explanation ? h('p', { class: 'small' }, h('b', {}, '해설 '), it.explanation) : null)) : h('div', { class: 'card' }, h('p', { class: 'muted' }, '아직 오답이 없습니다. 시험을 응시하면 틀린 문제가 여기에 쌓입니다.')));
 }
 
@@ -388,7 +388,7 @@ function pageExamSection(id, state) {
   const flagsKey = () => `flags:${id}:${state.section.index}`;
   const getFlags = () => { try { return new Set(JSON.parse(localStorage.getItem(flagsKey()) || '[]')); } catch { return new Set(); } };
   const setFlags = (f) => { try { localStorage.setItem(flagsKey(), JSON.stringify([...f])); } catch {} };
-  const answered = (q) => { const v = state.saved[q.id]; return !!v && (q.kind === 'mcq' ? v.choice !== null && v.choice !== undefined : q.kind === 'text' ? !!(v.text || '').trim() : !!v.audio); };
+  const answered = (q) => { const v = state.saved[q.id]; return !!v && (q.kind === 'mcq' ? v.choice !== null && v.choice !== undefined : q.kind === 'text' || q.kind === 'num' ? !!(v.text || '').trim() : !!v.audio); };
   const save = async (q, body) => {
     const ms = Date.now() - shownAt; shownAt = Date.now();
     try { await api('POST', `/attempts/${id}/save`, { questionId: q.id, ms, ...body }); }
@@ -445,6 +445,10 @@ function pageExamSection(id, state) {
       const boxes = q.choices.map((c, i) => h('label', { class: 'choice' + (state.saved[q.id]?.choice === i ? ' sel' : ''), onclick: () => pickC(i) }, h('b', {}, 'ABCDEFGH'[i]), choiceNode(c)));
       body.push(...boxes);
       kh = (e) => { if (e.target.closest?.('input,textarea')) return; const i = 'abcdefgh'.indexOf(e.key.toLowerCase()); if (e.key.length === 1 && i >= 0 && i < boxes.length) pickC(i); else if (e.key === 'ArrowRight') go(cur + 1); else if (e.key === 'ArrowLeft') go(cur - 1); };
+    } else if (q.kind === 'num') {
+      const inp = h('input', { class: 'gridin', inputmode: 'decimal', autocomplete: 'off', placeholder: '예: 12, 0.75, 3/4' }); inp.value = state.saved[q.id]?.text || '';
+      inp.addEventListener('input', () => { state.saved[q.id] = { text: inp.value }; palette.children[cur].classList.toggle('done', !!inp.value.trim()); counter.textContent = `${qs.filter(answered).length}/${qs.length} 답함`; clearTimeout(textTimer); textTimer = setTimeout(() => save(q, { text: inp.value }), 600); });
+      body.push(inp, h('p', { class: 'small muted' }, '숫자로 입력하세요. 분수(3/4)와 소수(0.75) 모두 정답으로 인정됩니다. 단위는 쓰지 않습니다.'));
     } else if (q.kind === 'text') {
       const ta = h('textarea', { rows: 10, maxlength: 6000, placeholder: 'Write your answer here…' }); ta.value = state.saved[q.id]?.text || '';
       ta.addEventListener('input', () => { state.saved[q.id] = { text: ta.value }; clearTimeout(textTimer); textTimer = setTimeout(() => save(q, { text: ta.value }), 700); });
@@ -578,31 +582,29 @@ async function pageReport(id) {
     return h('div', { class: 'ring' }, svg, h('div', { class: 'c' }, h('b', {}, big), h('span', {}, small)));
   };
   const accent = { MAP: 'var(--map)', CAT4: 'var(--cat4)', WIDA: 'var(--wida)', SCAT: 'var(--scat)', SSAT: 'var(--ssat)', ISEE: 'var(--isee)', COGAT: 'var(--cogat)', SAT: 'var(--sat)', TOEFLJ: 'var(--toeflj)' }[t];
-  const scaledT = ['SCAT', 'SSAT', 'ISEE', 'SAT', 'TOEFLJ'].includes(t), sasT = ['CAT4', 'COGAT'].includes(t);
-  const cards = Object.values(sc.sections).map((s) => {
-    const big = t === 'MAP' ? (s.scaleScore ?? '-') : sasT ? (s.sas ?? '-') : scaledT ? (s.scaled ?? s.level ?? (s.graded === false ? '대기' : '-')) : (s.level ?? (s.graded === false ? '대기' : '-'));
-    const small = t === 'MAP' ? 'RIT 유사' : sasT ? `스태나인 ${s.stanine ?? '-'}` : scaledT ? (s.scaled != null ? (s.stanine != null ? `스태나인 ${s.stanine}` : '척도 점수') : '교사 채점 1–6') : 'Level (1–6)';
-    const pct = s.total ? s.pct : s.level ? (s.level / 6) * 100 : 0;
-    return h('div', { class: 'ring-card' }, h('div', { class: 'muted small' }, s.name), ring(pct, big, small, accent),
-      s.total ? h('div', { class: 'small' }, `${s.correct}/${s.total} 정답 · ${s.pct}%`) : h('div', { class: 'small muted' }, s.graded === false ? '교사 채점 대기 중' : '교사 채점'), s.band ? h('span', { class: 'badge' }, s.band) : null);
-  });
-  const comp = sc.composites ? h('p', { class: 'muted' }, `Oral ${sc.composites.oral ?? '-'} · Literacy ${sc.composites.literacy ?? '-'}`) : null;
-  const overallLabel = { MAP: '종합 추정 점수', CAT4: '종합 SAS (추정)', COGAT: '종합 SAS (추정)', SAT: '합산 점수 (추정)', TOEFLJ: '합산 점수 (추정)', WIDA: 'Overall Level', SCAT: '합산 척도 점수 (추정)', SSAT: '합산 척도 점수 (추정)', ISEE: '합산 척도 점수 (추정)' }[t];
-  const overallVal = t === 'WIDA' ? sc.composites?.overall : sc.overall;
+  // Each section arrives formatted the way the real test reports it (main value, sub line, optional chip).
+  const cards = Object.values(sc.sections).map((s) => h('div', { class: 'ring-card' }, h('div', { class: 'muted small' }, s.name),
+    ring(s.ring ?? s.pct ?? 0, s.main ?? '–', '', accent),
+    h('div', { class: 'small', style: 'min-height:2.6em' }, s.sub || ''),
+    s.total ? h('div', { class: 'small muted' }, `${s.correct}/${s.total} 정답${s.omitted ? ` · 무응답 ${s.omitted}` : ''}`) : null,
+    s.chip ? h('span', { class: 'badge' }, s.chip) : null));
+  const head = sc.headline || { label: '종합', value: sc.overall ?? '–' };
   const items = r.items.map((it, i) => h('div', { class: 'card ' + (it.correct === 1 ? 'good' : it.correct === 0 ? 'wrong' : '') },
     h('div', { class: 'small muted' }, `#${i + 1} · ${it.section} · 난이도 ${it.difficulty}`),
     it.passage ? h('div', { class: 'passage' }, it.passage) : null,
     it.image_svg ? h('img', { class: 'qimg', src: svgUri(it.image_svg), alt: '' }) : null, h('b', {}, it.stem),
+    it.kind === 'num' ? h('div', {}, h('p', {}, h('span', { class: 'badge ' + (it.correct ? 'ok' : 'bad') }, '내 답'), ' ', it.text || '(무응답)', '  ', h('span', { class: 'badge ok' }, '정답'), ' ', (it.choices || []).join(' 또는 ')), it.explanation ? h('p', { class: 'small muted' }, `해설: ${it.explanation}`) : null) :
     it.kind === 'mcq' ? h('div', {}, it.choices.map((c, j) => h('div', { class: 'choice' + (j === it.answer ? ' right' : j === it.choice ? ' miss' : '') }, h('b', {}, 'ABCDEFGH'[j]), choiceNode(c), j === it.choice ? h('span', { class: 'badge ' + (j === it.answer ? 'ok' : 'bad') }, '내 답') : null, j === it.answer ? h('span', { class: 'badge ok' }, '정답') : null)), it.explanation ? h('p', { class: 'small muted' }, `해설: ${it.explanation}`) : null)
       : h('div', {}, it.text ? h('div', { class: 'passage' }, it.text) : h('p', { class: 'muted' }, '(녹음 응답)'), h('p', {}, it.manual_score ? `교사 점수: ${it.manual_score}/6` : '채점 대기 중', it.feedback ? ` · ${it.feedback}` : ''))));
   mount(
     h('div', { class: 'score-hero' },
-      h('div', {}, h('div', { class: 'muted small' }, `${r.student.name} · ${date(r.attempt.finished_at)}${r.attempt.level?.name && r.attempt.level.key !== 'all' ? ' · ' + r.attempt.level.name : ''}`), h('h2', {}, `${r.attempt.title} 결과`), comp,
-        sc.pendingManual ? h('span', { class: 'badge warn' }, scaledT ? '에세이/라이팅은 교사 채점 후 표시됩니다 (합산 점수에는 포함되지 않음)' : '쓰기/말하기 채점 후 종합 점수가 표시됩니다') : null,
+      h('div', {}, h('div', { class: 'muted small' }, `${r.student.name} · ${date(r.attempt.finished_at)}${r.attempt.level?.name && r.attempt.level.key !== 'all' ? ' · ' + r.attempt.level.name : ''}`), h('h2', {}, `${r.attempt.title} 결과`),
+        sc.pendingManual ? h('span', { class: 'badge warn' }, t === 'WIDA' ? '쓰기/말하기 채점 후 종합 레벨이 표시됩니다' : '에세이/라이팅은 교사 채점 후 표시됩니다 (점수에는 포함되지 않음)') : null,
         h('p', { class: 'muted small noprint' }, h('button', { class: 'btn sm alt', onclick: () => window.print() }, '인쇄 / PDF 저장'))),
-      h('div', { style: 'text-align:right' }, h('div', { class: 'muted small' }, overallLabel), h('div', { class: 'total' }, overallVal ?? '–'))),
+      h('div', { class: 'hero-score' }, h('div', { class: 'muted small' }, head.label), h('div', { class: 'total' + (String(head.value).length > 6 ? ' long' : '') }, head.value ?? '–'))),
     h('div', { class: 'rings' }, cards),
-    h('p', { class: 'small muted' }, '※ 모의고사 결과는 공식 점수가 아닌 추정치이며 학습 참고용입니다.'),
+    (sc.extras || []).length ? h('div', { class: 'extras' }, sc.extras.map((x) => h('div', {}, h('div', { class: 'kicker' }, x.label), h('b', {}, x.value)))) : null,
+    h('div', { class: 'small muted', style: 'margin:10px 0 18px' }, (sc.notes || ['※ 모의고사 결과는 공식 점수가 아닌 추정치이며 학습 참고용입니다.']).map((n) => h('p', { style: 'margin:3px 0' }, '※ ' + n))),
     analytics(r, t),
     h('h3', {}, '문항별 리뷰'), items);
 }
@@ -681,10 +683,10 @@ async function adminQuestions(b) {
     const f = h('form', { class: 'card', onsubmit: guard(async (e) => {
       e.preventDefault(); const d = Object.fromEntries(new FormData(f));
       const body = { exam_type: d.exam_type, section: d.section, kind: d.kind, difficulty: +d.difficulty, passage: d.passage, stem: d.stem, image_svg: d.image_svg, explanation: d.explanation, active: !!d.active,
-        choices: d.kind === 'mcq' ? d.choices.split('\n').map((x) => x.trim()).filter(Boolean) : null, answer: d.kind === 'mcq' ? (+d.answer) - 1 : null };
+        choices: d.kind === 'mcq' || d.kind === 'num' ? d.choices.split('\n').map((x) => x.trim()).filter(Boolean) : null, answer: d.kind === 'mcq' ? (+d.answer) - 1 : null };
       await api(id ? 'PUT' : 'POST', '/admin/questions' + (id ? '/' + id : ''), body); toast('저장됨'); pageAdmin('questions');
     }) },
-      h('div', { class: 'row' }, field('시험', h('select', { name: 'exam_type' }, Object.keys(SECTIONS).map((x) => h('option', { selected: x === q.exam_type }, x)))), field('영역(section key)', h('input', { name: 'section', value: q.section })), field('유형', h('select', { name: 'kind' }, ['mcq', 'text', 'audio'].map((x) => h('option', { selected: x === q.kind }, x)))), field('난이도(1-5)', h('input', { name: 'difficulty', type: 'number', min: 1, max: 5, value: q.difficulty }))),
+      h('div', { class: 'row' }, field('시험', h('select', { name: 'exam_type' }, Object.keys(SECTIONS).map((x) => h('option', { selected: x === q.exam_type }, x)))), field('영역(section key)', h('input', { name: 'section', value: q.section })), field('유형', h('select', { name: 'kind' }, ['mcq', 'num', 'text', 'audio'].map((x) => h('option', { selected: x === q.kind }, x)))), field('난이도(1-5)', h('input', { name: 'difficulty', type: 'number', min: 1, max: 5, value: q.difficulty }))),
       field('지문 (듣기는 읽어줄 스크립트)', h('textarea', { name: 'passage', rows: 3 }, q.passage || '')), field('문제', h('textarea', { name: 'stem', rows: 2, required: true }, q.stem)),
       field('보기 (한 줄에 하나, 그림은 svg:<svg ...>)', h('textarea', { name: 'choices', rows: 5 }, (q.choices || []).join('\n'))), field('정답 번호 (1부터)', h('input', { name: 'answer', type: 'number', min: 1, value: (q.answer ?? 0) + 1 })),
       field('문제 그림 SVG (선택)', h('textarea', { name: 'image_svg', rows: 3 }, q.image_svg || '')), field('해설', h('textarea', { name: 'explanation', rows: 2 }, q.explanation || '')),

@@ -36,7 +36,7 @@ const QUINTILE = (p) => (p <= 20 ? 'Low' : p <= 40 ? 'LoAvg' : p <= 60 ? 'Avg' :
 function sectionBase(sec, a) {
   const auto = a.filter((x) => x.correct === 0 || x.correct === 1);
   const correct = auto.filter((x) => x.correct === 1).length, total = auto.length;
-  const omitted = auto.filter((x) => x.correct === 0 && (x.choice === null || x.choice === undefined) && x.kind === 'mcq').length;
+  const omitted = auto.filter((x) => x.correct === 0 && (x.kind === 'mcq' ? x.choice === null || x.choice === undefined : x.kind === 'num' ? !String(x.text || '').trim() : false)).length;
   return { name: sec.name, answered: a.length, correct, total, wrong: total - correct - omitted, omitted, pct: total ? Math.round((correct / total) * 100) : 0 };
 }
 const cefr = (score, cuts) => (score >= cuts[2] ? 'B2' : score >= cuts[1] ? 'B1' : score >= cuts[0] ? 'A2' : 'Below A2');

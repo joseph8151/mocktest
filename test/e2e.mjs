@@ -37,7 +37,7 @@ async function take(examType, answerFor, who = kid, level) {
       for (const q of cur.questions) {
         assert.ok(!('answer' in q) && !('explanation' in q), 'answers must not leak');
         assert.ok(!seen.has(q.id), 'no repeated question'); seen.add(q.id);
-        const body = answerFor(q); if (body === null) continue; // skipped on purpose
+        const body = q.kind === 'num' ? { text: numKey.get(q.id) } : answerFor(q); if (body === null) continue; // skipped on purpose
         assert.ok((await who.post(`/api/attempts/${s.id}/save`, { questionId: q.id, ...body })).ok); n++;
       }
       cur = await who.post(`/api/attempts/${s.id}/submit-section`, { section: cur.section.index });
@@ -54,6 +54,7 @@ const key = async (id) => (await admin.get(`/api/admin/questions/${id}`)).answer
 const cheat = new Map();
 const qs = (await Promise.all(['MAP', 'CAT4', 'WIDA', 'SCAT', 'SSAT', 'ISEE', 'COGAT', 'SAT', 'TOEFLJ'].map((e) => admin.get(`/api/admin/questions?exam=${e}&limit=1000`)))).flatMap((r) => r.questions);
 for (const q of qs) if (q.kind === 'mcq') cheat.set(q.id, await key(q.id));
+const numKey = new Map(); for (const q of qs) if (q.kind === 'num') numKey.set(q.id, (await admin.get(`/api/admin/questions/${q.id}`)).choices[0]);
 
 for (const ex of ['CAT4', 'MAP']) {
   const { id, n } = await take(ex, () => ({ choice: 0 }));

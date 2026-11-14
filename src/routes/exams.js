@@ -1,5 +1,5 @@
 import { Hono } from 'hono';
-import { uid, now, bufToB64 } from '../lib/util.js';
+import { uid, now, bufToB64, numEqual } from '../lib/util.js';
 import { requireUser } from '../lib/auth.js';
 import { EXAMS, GRACE_MS, initialState, pickNext, sectionTarget, adaptDifficulty, scoreAttempt, getLevel, levelBank, levelForGrade } from '../lib/exam.js';
 import { sendMail, mailResult } from '../lib/email.js';
@@ -9,7 +9,7 @@ app.use('*', requireUser);
 
 const publicQ = (q) => ({
   id: q.id, section: q.section, kind: q.kind, passage: q.passage, stem: q.stem, image_svg: q.image_svg,
-  choices: q.choices ? JSON.parse(q.choices) : null,
+  choices: q.choices && q.kind !== 'num' ? JSON.parse(q.choices) : null,
 });
 
 app.get('/exams', (c) => c.json({
@@ -20,7 +20,7 @@ app.get('/exams', (c) => c.json({
 app.get('/me/mistakes', async (c) => {
   const u = c.get('user'), { exam, section } = c.req.query();
   const { results } = await c.env.DB.prepare(
-    `SELECT q.id, q.exam_type, q.section, q.difficulty, q.passage, q.stem, q.image_svg, q.choices, q.answer, q.explanation, a.choice, a.created_at
+    `SELECT q.id, q.exam_type, q.section, q.kind, q.difficulty, q.passage, q.stem, q.image_svg, q.choices, q.answer, q.explanation, a.choice, a.text, a.created_at
      FROM answers a JOIN attempts t ON t.id=a.attempt_id JOIN questions q ON q.id=a.question_id
      WHERE t.user_id=?1 AND a.correct=0 AND t.status!='in_progress' AND (?2 IS NULL OR q.exam_type=?2) AND (?3 IS NULL OR q.section=?3)
      ORDER BY a.created_at DESC LIMIT 400`).bind(u.id, exam || null, section || null).all();
@@ -147,8 +147,9 @@ async function finalizeSection(env, a, st) { // unanswered -> omitted (choice NU
   const have = new Set(done.map((r) => r.question_id)), missing = st.set.ids.filter((id) => !have.has(id));
   if (!missing.length) return;
   const { results: qs } = await env.DB.prepare(`SELECT id,section,kind,difficulty FROM questions WHERE id IN (${missing.map(() => '?').join(',')})`).bind(...missing).all();
-  await env.DB.batch(qs.filter((q) => q.kind === 'mcq').map((q) => env.DB.prepare(
-    `INSERT OR IGNORE INTO answers (id,attempt_id,question_id,section,kind,difficulty,choice,correct,time_ms,created_at) VALUES (?,?,?,?,?,?,NULL,0,0,?)`).bind(uid(), a.id, q.id, q.section, q.kind, q.difficulty, now())));
+  const rows = qs.filter((q) => q.kind === 'mcq' || q.kind === 'num').map((q) => env.DB.prepare(
+    `INSERT OR IGNORE INTO answers (id,attempt_id,question_id,section,kind,difficulty,choice,correct,time_ms,created_at) VALUES (?,?,?,?,?,?,NULL,0,0,?)`).bind(uid(), a.id, q.id, q.section, q.kind, q.difficulty, now()));
+  if (rows.length) await env.DB.batch(rows);
 }
 /** Advance through expired sections, build the current section's set, or finish. Returns false when the attempt finished. */
 async function ensureSection(env, a, st) {
@@ -218,6 +219,7 @@ app.post('/attempts/:id/save', async (c) => {
   if (b.clear) { await c.env.DB.prepare('DELETE FROM answers WHERE attempt_id=? AND question_id=?').bind(a.id, q.id).run(); return c.json({ ok: true }); }
   let choice = null, text = null, audioKey = null, correct = null;
   if (q.kind === 'mcq') { choice = Number.isInteger(b.choice) ? b.choice : null; correct = choice !== null && choice === q.answer ? 1 : 0; }
+  else if (q.kind === 'num') { text = String(b.text ?? '').slice(0, 20); correct = text.trim() ? (numEqual(text, JSON.parse(q.choices)) ? 1 : 0) : 0; }
   else if (q.kind === 'text') text = String(b.text || '').slice(0, 6000);
   else if (q.kind === 'audio') audioKey = typeof b.audioKey === 'string' && b.audioKey.startsWith(`${a.id}/`) ? b.audioKey : null;
   await c.env.DB.prepare(

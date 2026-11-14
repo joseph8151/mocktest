@@ -217,3 +217,10 @@ details.faq p{color:var(--muted);padding:0 0 18px;margin:0;max-width:44em}
 .pal.cur{outline:2px solid var(--brand);outline-offset:1px}
 .qmeta{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:-6px 0 14px;font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
 .btn.flagged{color:var(--brand);border-color:var(--brand)}
+
+.gridin{max-width:260px;font:600 1.4rem var(--mono);letter-spacing:.02em;padding:12px 14px;border:2px solid var(--ink)}
+
+.extras{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));border:1px solid var(--ink);border-top:0;background:var(--surface)}
+.extras>div{padding:14px 18px;border-right:1px solid var(--rule)}.extras b{font-size:1.25rem;letter-spacing:-.03em;font-family:var(--mono);font-weight:600}
+.score-hero .total.long{font-size:2.6rem;letter-spacing:-.04em}
+.hero-score{text-align:right}
