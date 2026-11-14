@@ -76,11 +76,11 @@ async function pageHome() {
   mount(
     h('section', { class: 'hero' },
       h('div', {},
-        h('span', { class: 'eyebrow' }, 'Online mock assessments'),
+        h('span', { class: 'eyebrow' }, '★ U.S. admissions test prep'),
         h('h1', {}, '집에서 치르는', h('br'), h('span', { class: 'hl' }, '실전'), ' 입시 모의고사', h('em', {}, 'MAP / CAT4 / SCAT / SSAT / ISEE / WIDA')),
         h('p', { class: 'lead' }, '실제 시험과 같은 형식, 같은 시간 압박. 결제하면 곧바로 응시할 수 있고, 끝나는 즉시 영역별 점수와 문항별 해설이 나옵니다.'),
         h('div', { class: 'row' }, h('button', { class: 'btn lg', onclick: toExams }, '시험 둘러보기 →'), me ? h('a', { class: 'btn lg alt', href: '#/me' }, '내 시험') : h('a', { class: 'btn lg alt', href: '#/register' }, '회원가입')),
-        h('div', { class: 'chips' }, [['700+', '오리지널 문항'], ['6', '시험 유형'], ['0s', '채점 대기 시간']].map(([b, t]) => h('div', {}, h('b', {}, b), t)))),
+        h('div', { class: 'chips' }, [['700+', '오리지널 문항'], ['6', '시험 유형'], ['0s', '채점 대기']].map(([b, t]) => h('div', {}, h('b', {}, b), t)))),
       h('div', { class: 'mock', 'aria-hidden': 'true' },
         h('div', { class: 'mrow' }, h('b', { style: 'font-weight:500' }, 'Verbal / 03'), h('span', {}, '08:42')),
         h('div', { class: 'mq' }, 'Author is to book as composer is to ___'),
