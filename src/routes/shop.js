@@ -4,7 +4,7 @@ import { requireUser, loadUser } from '../lib/auth.js';
 import { kcpEnabled, kcpRegister, kcpForm, kcpApprove, kcpCancel, kcpOrderId } from '../lib/kcp.js';
 import {
   fulfillOrder, stripeCreateCheckout, stripeVerify, stripeRetrieveSession,
-  portoneVerifyAndFulfill, portoneGetPayment, portoneVerifyWebhook,
+  portoneVerifyAndFulfill, portoneGetPayment, portoneVerifyWebhook, recheckOrder,
 } from '../lib/payments.js';
 
 const app = new Hono();
@@ -65,14 +65,17 @@ app.post('/webhooks/stripe', async (c) => {
   if (!c.env.STRIPE_WEBHOOK_SECRET || !(await stripeVerify(c.env.STRIPE_WEBHOOK_SECRET, raw, c.req.header('stripe-signature'))))
     return c.json({ error: 'bad signature' }, 400);
   const ev = JSON.parse(raw);
-  const seen = await c.env.DB.prepare('INSERT OR IGNORE INTO webhook_events (id,created_at) VALUES (?,?)').bind(ev.id, now()).run();
-  if (!seen.meta.changes) return c.json({ ok: true, duplicate: true });
-  if (ev.type === 'checkout.session.completed' || ev.type === 'checkout.session.async_payment_succeeded') {
-    const s = ev.data.object;
-    const orderId = s.metadata?.order_id || s.client_reference_id;
-    const o = orderId && (await c.env.DB.prepare('SELECT * FROM orders WHERE id=?').bind(orderId).first());
-    if (o && s.payment_status === 'paid' && s.amount_total === o.amount) await fulfillOrder(c.env, o.id, s.id);
+  if (await c.env.DB.prepare('SELECT 1 FROM webhook_events WHERE id=?').bind(ev.id).first()) return c.json({ ok: true, duplicate: true });
+  const obj = ev.data?.object || {};
+  const orderId = obj.metadata?.order_id || obj.client_reference_id;
+  const o = orderId && (await c.env.DB.prepare('SELECT * FROM orders WHERE id=?').bind(orderId).first());
+  if (o && (ev.type === 'checkout.session.completed' || ev.type === 'checkout.session.async_payment_succeeded')) {
+    if (obj.payment_status === 'paid' && obj.amount_total === o.amount) await fulfillOrder(c.env, o.id, obj.id);
+  } else if (o && (ev.type === 'checkout.session.expired' || ev.type === 'checkout.session.async_payment_failed')) {
+    await c.env.DB.prepare(`UPDATE orders SET status='failed' WHERE id=? AND status='pending'`).bind(o.id).run();
   }
+  // Record the event only after it was handled: if handling threw, Stripe's retry must not be treated as a duplicate.
+  await c.env.DB.prepare('INSERT OR IGNORE INTO webhook_events (id,created_at) VALUES (?,?)').bind(ev.id, now()).run();
   return c.json({ ok: true });
 });
 
@@ -109,7 +112,7 @@ app.post('/webhooks/portone', async (c) => {
   const paymentId = ev.data?.paymentId;
   if (paymentId && /Transaction\.(Paid|Ready|VirtualAccountIssued)/.test(ev.type || '')) {
     const o = await c.env.DB.prepare('SELECT id FROM orders WHERE provider=? AND provider_ref=?').bind('portone', paymentId).first();
-    if (o) await portoneVerifyAndFulfill(c.env, o.id);
+    if (o) { const r = await portoneVerifyAndFulfill(c.env, o.id); if (r.error === '결제 조회 실패') return c.json({ error: 'lookup failed, retry' }, 503); }
   }
   if (paymentId && /Transaction\.(Failed|Cancelled)/.test(ev.type || '')) {
     await c.env.DB.prepare(`UPDATE orders SET status='failed' WHERE provider='portone' AND provider_ref=? AND status IN ('pending','awaiting_deposit')`).bind(paymentId).run();
@@ -165,13 +168,19 @@ app.get('/orders/:id/status', requireUser, async (c) => {
 });
 
 app.get('/orders', requireUser, async (c) => {
+  await c.env.DB.prepare(`UPDATE orders SET status='failed' WHERE status='pending' AND created_at<?`).bind(now() - 3 * 86400000).run(); // abandoned checkouts
   const { results } = await c.env.DB.prepare(
     `SELECT o.id,o.provider,o.amount,o.currency,o.status,o.created_at,o.paid_at,p.title,
             (SELECT status FROM refund_requests r WHERE r.order_id=o.id) AS refund_status
      FROM orders o JOIN products p ON p.id=o.product_id
-     WHERE o.user_id=? AND o.status!='pending' ORDER BY o.created_at DESC`
-  ).bind(c.get('user').id).all();
+     WHERE o.user_id=? AND (o.status!='pending' OR o.created_at>?) AND NOT (o.status='failed' AND o.created_at<?) ORDER BY o.created_at DESC`
+  ).bind(c.get('user').id, now() - 3 * 86400000, now() - 7 * 86400000).all();
   return c.json({ orders: results });
+});
+
+app.post('/orders/:id/recheck', requireUser, async (c) => {
+  const o = await c.env.DB.prepare('SELECT * FROM orders WHERE id=? AND user_id=?').bind(c.req.param('id'), c.get('user').id).first();
+  return o ? c.json(await recheckOrder(c.env, o)) : c.json({ error: 'not found' }, 404);
 });
 
 app.post('/orders/:id/request-refund', requireUser, async (c) => {

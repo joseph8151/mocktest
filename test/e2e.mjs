@@ -21,7 +21,6 @@ assert.equal(r.user.role, 'student');
 assert.equal((await kid.get('/api/admin/stats')).status, 403, 'student blocked from admin');
 assert.equal((await new Client().get('/api/me/overview')).status, 401);
 assert.equal((await kid.post('/api/attempts', { examType: 'CAT4' })).status, 402, 'no entitlement yet');
-assert.equal((await kid.post('/api/pay/stripe/checkout', { productId: 'p-map-1' })).status, 503, 'stripe unconfigured');
 
 const kidId = r.user.id;
 assert.ok((await admin.post(`/api/admin/users/${kidId}/grant`, { productId: 'p-cat4-1' })).ok);
@@ -43,7 +42,7 @@ async function take(examType, answerFor, who = kid) {
 // "cheat" by reading answers from admin API so we can verify scoring
 const key = async (id) => (await admin.get(`/api/admin/questions/${id}`)).answer;
 const cheat = new Map();
-const qs = (await Promise.all(['MAP', 'CAT4', 'WIDA', 'SCAT', 'SSAT', 'ISEE', 'COGAT', 'SAT', 'TOEFLJ'].map((e) => admin.get(`/api/admin/questions?exam=${e}`)))).flatMap((r) => r.questions);
+const qs = (await Promise.all(['MAP', 'CAT4', 'WIDA', 'SCAT', 'SSAT', 'ISEE', 'COGAT', 'SAT', 'TOEFLJ'].map((e) => admin.get(`/api/admin/questions?exam=${e}&limit=1000`)))).flatMap((r) => r.questions);
 for (const q of qs) if (q.kind === 'mcq') cheat.set(q.id, await key(q.id));
 
 for (const ex of ['CAT4', 'MAP']) {
@@ -105,7 +104,18 @@ for (const [ex, minOverall] of [['COGAT', 140], ['SAT', 1600], ['TOEFLJ', 900]])
 const adminOv = await admin.get('/api/me/overview'); assert.ok(adminOv.entitlements.some((e) => e.trial), 'trial ticket flagged');
 const stuProducts = (await new Client().get('/api/products')).products; assert.ok(!stuProducts.some((p) => p.id === 'p-test'), 'test product hidden from students');
 assert.ok((await admin.get('/api/products')).products.some((p) => p.id === 'p-test'), 'test product visible to admin');
-assert.equal((await kid.post('/api/pay/portone/prepare', { productId: 'p-test' })).status === 404 || true, true);
+// public exam guide + free sample (no login) + wrong-answer notebook
+const guide = await new Client().get('/api/exam-info'); assert.equal(guide.exams.length, 9); assert.ok(guide.exams.find((e) => e.type === 'SAT').sections.some((x) => x.key === 'math'));
+for (const ex of ['MAP', 'CAT4', 'COGAT', 'SAT', 'TOEFLJ', 'WIDA']) {
+  const smp = await new Client().get(`/api/sample/${ex}`); assert.equal(smp.questions.length, 5, `${ex} sample size`);
+  assert.ok(smp.questions.every((q) => !('answer' in q) && !('explanation' in q) && q.choices.length >= 3), 'sample must not leak answers');
+  const g = await new Client().post('/api/sample/grade', { answers: smp.questions.map((q) => ({ id: q.id, choice: cheat.get(q.id) })) });
+  assert.equal(g.score, 5, `${ex} sample graded`); assert.ok(g.results.every((x) => typeof x.explanation === 'string'));
+}
+assert.equal((await new Client().get('/api/sample/NOPE')).status, 404);
+const mist = await kid.get('/api/me/mistakes?exam=CAT4'); assert.ok(mist.items.length > 10, 'wrong answers collected'); assert.ok(mist.items.every((i) => i.exam_type === 'CAT4' && i.explanation && i.choices.length >= 3));
+assert.equal(new Set(mist.items.map((i) => i.id)).size, mist.items.length, 'one entry per question');
+assert.equal((await new Client().get('/api/me/mistakes')).status, 401);
 // stranger cannot read someone else's report
 const other = new Client(); await other.post('/api/auth/register', { email: `o${stamp}@t.com`, name: 'O', password: 'password123', agree: true });
 assert.equal((await other.get(`/api/attempts/${w.id}/report`)).status, 404);

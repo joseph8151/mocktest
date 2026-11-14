@@ -3,6 +3,7 @@ import auth from './routes/auth.js';
 import shop from './routes/shop.js';
 import exams from './routes/exams.js';
 import admin from './routes/admin.js';
+import sample from './routes/sample.js';
 import { ensureDb } from './lib/bootstrap.js';
 
 const app = new Hono();
@@ -31,6 +32,7 @@ app.use('/api/*', async (c, next) => {
 
 app.route('/api/auth', auth);
 app.route('/api/admin', admin);
+app.route('/api', sample);
 app.route('/api', shop);
 app.route('/api', exams);
 

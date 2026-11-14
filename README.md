@@ -79,6 +79,31 @@ Cloudflare 대시보드 → Workers & Pages → Create → Connect to Git → �
 - 관리자 > **결제설정** 탭에서 연동 상태와 웹훅/Ret_URL 주소를 확인하세요. 홈에서 관리자에게만 보이는 **“[관리자 전용] 결제 테스트 1,000원”** 상품으로 실제 결제·환불을 시험해 볼 수 있습니다.
 - KCP 직접 연동은 KCP 서버에 접근할 수 없는 환경에서 **자체 모의 서버**로만 검증했습니다(`npm run test:e2e`의 `kcp.e2e.mjs`). 계약 후 받는 공식 개발 가이드(developer.kcp.co.kr)와 KCP 테스트 몰(site_cd `T0000`)로 아래를 확인하세요: 거래등록/승인/취소 URL(`KCP_REGISTER_URL`·`KCP_APPROVE_URL`·`KCP_CANCEL_URL`로 덮어쓰기 가능), 요청·응답 필드명, `pay_method` 코드, 결제창 호출 방식(`kcpForm`), 가상계좌 입금 통보(공통통보) 처리.
 
+## 학습 기능
+- **시험 안내 페이지**(`#/info/<시험>`): 구성·시간·채점 방식·점수 해석·준비 팁 (공개)
+- **무료 샘플 5문항**(`#/sample/<시험>`): 로그인 없이 풀고 해설 확인 (공개)
+- **오답노트**(`#/mistakes`): 틀린 문제를 모아 해설과 함께 복습
+- **결과 분석**: 난이도별 정답률, 영역별 풀이 시간, 보완 영역 안내, 점수 해석
+
+## 결제 안정성
+- 웹훅이 누락돼도 고객은 **마이페이지 > 결제 내역 > 결제 확인**으로 재조회할 수 있고, 관리자는 주문 탭의 **재확인**으로 처리합니다.
+- 포트원 가상계좌는 **입금 대기** 상태로 두었다가 입금 웹훅이 오면 이용권을 지급합니다. 3일이 지난 미완료 결제는 자동으로 만료 처리됩니다.
+- 금액이 다른 결제는 이용권을 주지 않고 PG사에도 **자동 취소**를 요청합니다.
+- 웹훅 처리 중 오류가 나면 결제사가 재시도하도록 5xx를 돌려주며(중복 이벤트로 오인하지 않음), 모바일 리디렉션 결제 실패 사유를 화면에 보여 줍니다.
+
+## 테스트
+```bash
+npm test                 # 단위 테스트
+npm run test:e2e         # wrangler dev 실행 후: 응시·결제·KCP·안전 기능 종단 테스트
+```
+결제 종단 테스트(`kcp.e2e.mjs`, `pay.e2e.mjs`)는 자체 **모의 결제사 서버**를 띄우므로 `.dev.vars`에 다음이 필요합니다(로컬 전용, 커밋 금지):
+`KCP_SITE_CD`, `KCP_CERT_INFO`, `KCP_REGISTER_URL`/`KCP_APPROVE_URL`/`KCP_CANCEL_URL`(→ `http://localhost:9099/...`), `PORTONE_STORE_ID`, `PORTONE_CHANNEL_KEY`, `PORTONE_API_SECRET`, `PORTONE_WEBHOOK_SECRET`(`whsec_<base64>`), `PORTONE_API_BASE`·`STRIPE_API_BASE`(→ `http://localhost:9098`), `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET=whsec_test`.
+
+## 문제 품질 관리
+- 손으로 쓴 문항(`scripts/bank/*.json`)과 코드로 생성한 문항(숫자·그래프·도형 SVG)은 **정답을 가린 채 별도 검수자가 직접 풀어** 정답과 대조했습니다(`scripts/blind-view.mjs`, `scripts/compare-blind.mjs`, `scripts/compare-review.mjs`).
+- 결함으로 판정된 문항은 `scripts/bank/*.drop.json` / `_generated.drop.json`으로 제외하고, 생성기 자체의 결함(모호한 수 유추, 부동소수점 잡음, 보이지 않는 회전 등)은 코드에서 고쳤습니다.
+- `REVIEW_DIR=<폴더> node scripts/gen-seed.mjs`로 검수용 세트(텍스트 JSON + 그림 갤러리)를 내보낼 수 있고, `REVIEW_SKIP=<id목록.json>`으로 이미 검수한 문항은 제외합니다.
+
 ## 관리자 체험
 관리자는 결제 없이 모든 시험을 응시할 수 있습니다(마이페이지 > 관리자 체험 응시, 횟수 제한 없음).
 

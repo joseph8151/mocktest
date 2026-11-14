@@ -20,6 +20,9 @@ export async function fulfillOrder(env, orderId, providerRef) {
   return true;
 }
 
+const stripeBase = (env) => env.STRIPE_API_BASE || 'https://api.stripe.com';
+const portoneBase = (env) => env.PORTONE_API_BASE || 'https://api.portone.io';
+
 /* ---------------- Stripe ---------------- */
 const form = (obj) => {
   const p = new URLSearchParams();
@@ -42,7 +45,7 @@ export async function stripeCreateCheckout(env, { order, product, user }) {
     success_url: `${env.SITE_URL}/#/pay/success?order=${order.id}`,
     cancel_url: `${env.SITE_URL}/#/pay/cancel`,
   });
-  const r = await fetch('https://api.stripe.com/v1/checkout/sessions', {
+  const r = await fetch(`${stripeBase(env)}/v1/checkout/sessions`, {
     method: 'POST',
     headers: { Authorization: `Bearer ${env.STRIPE_SECRET_KEY}`, 'Content-Type': 'application/x-www-form-urlencoded' },
     body,
@@ -64,13 +67,13 @@ export async function stripeVerify(secret, raw, header, toleranceSec = 300) {
 }
 
 export async function stripeRetrieveSession(env, id) {
-  const r = await fetch(`https://api.stripe.com/v1/checkout/sessions/${encodeURIComponent(id)}`, {
+  const r = await fetch(`${stripeBase(env)}/v1/checkout/sessions/${encodeURIComponent(id)}`, {
     headers: { Authorization: `Bearer ${env.STRIPE_SECRET_KEY}` },
   });
   return r.json();
 }
 export async function stripeRefund(env, paymentIntent) {
-  const r = await fetch('https://api.stripe.com/v1/refunds', {
+  const r = await fetch(`${stripeBase(env)}/v1/refunds`, {
     method: 'POST',
     headers: { Authorization: `Bearer ${env.STRIPE_SECRET_KEY}`, 'Content-Type': 'application/x-www-form-urlencoded' },
     body: form({ payment_intent: paymentIntent }),
@@ -80,14 +83,14 @@ export async function stripeRefund(env, paymentIntent) {
 
 /* ---------------- PortOne V2 ---------------- */
 export async function portoneGetPayment(env, paymentId) {
-  const r = await fetch(`https://api.portone.io/payments/${encodeURIComponent(paymentId)}`, {
+  const r = await fetch(`${portoneBase(env)}/payments/${encodeURIComponent(paymentId)}`, {
     headers: { Authorization: `PortOne ${env.PORTONE_API_SECRET}` },
   });
   if (!r.ok) return null;
   return r.json();
 }
 export async function portoneCancel(env, paymentId, reason = '관리자 환불') {
-  const r = await fetch(`https://api.portone.io/payments/${encodeURIComponent(paymentId)}/cancel`, {
+  const r = await fetch(`${portoneBase(env)}/payments/${encodeURIComponent(paymentId)}/cancel`, {
     method: 'POST',
     headers: { Authorization: `PortOne ${env.PORTONE_API_SECRET}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({ reason }),
@@ -119,8 +122,30 @@ export async function portoneVerifyAndFulfill(env, orderId) {
   if (pay.status !== 'PAID') return { ok: false, error: `결제 상태: ${pay.status}` };
   if (pay.amount?.total !== order.amount || pay.currency !== order.currency) {
     await env.DB.prepare(`UPDATE orders SET status='failed' WHERE id=?`).bind(order.id).run();
+    await portoneCancel(env, order.provider_ref, '금액 불일치 자동취소').catch(() => {}); // never keep money we will not honour
     return { ok: false, error: '결제 금액이 일치하지 않습니다.' };
   }
   await fulfillOrder(env, order.id, order.provider_ref);
   return { ok: true };
+}
+
+/** Re-check an unfinished order with its payment provider (lost webhook, closed tab, delayed deposit). */
+export async function recheckOrder(env, order) {
+  if (order.status === 'paid') return { status: 'paid' };
+  try {
+    if (order.provider === 'portone') {
+      const r = await portoneVerifyAndFulfill(env, order.id);
+      if (r.pending) return { status: 'awaiting_deposit', account: r.account };
+      if (!r.ok && r.error?.startsWith('결제 상태: ')) {
+        const st = r.error.slice(7);
+        if (['FAILED', 'CANCELLED', 'PARTIAL_CANCELLED'].includes(st)) await env.DB.prepare(`UPDATE orders SET status='failed' WHERE id=? AND status!='paid'`).bind(order.id).run();
+      }
+    } else if (order.provider === 'stripe') {
+      const s = await stripeRetrieveSession(env, order.provider_ref);
+      if (s.payment_status === 'paid' && s.amount_total === order.amount) await fulfillOrder(env, order.id, order.provider_ref);
+      else if (s.status === 'expired') await env.DB.prepare(`UPDATE orders SET status='failed' WHERE id=? AND status='pending'`).bind(order.id).run();
+    }
+  } catch (e) { console.error('recheck failed', e); return { status: order.status, error: '결제사 조회에 실패했습니다. 잠시 후 다시 시도해 주세요.' }; }
+  const fresh = await env.DB.prepare('SELECT status FROM orders WHERE id=?').bind(order.id).first();
+  return { status: fresh.status };
 }

@@ -16,6 +16,19 @@ app.get('/exams', (c) => c.json({
   exams: Object.entries(EXAMS).map(([k, e]) => ({ type: k, title: e.title, sections: e.sections })),
 }));
 
+/** Wrong-answer notebook: the most recent wrong answer per question, with the explanation. */
+app.get('/me/mistakes', async (c) => {
+  const u = c.get('user'), { exam, section } = c.req.query();
+  const { results } = await c.env.DB.prepare(
+    `SELECT q.id, q.exam_type, q.section, q.difficulty, q.passage, q.stem, q.image_svg, q.choices, q.answer, q.explanation, a.choice, a.created_at
+     FROM answers a JOIN attempts t ON t.id=a.attempt_id JOIN questions q ON q.id=a.question_id
+     WHERE t.user_id=?1 AND a.correct=0 AND t.status!='in_progress' AND (?2 IS NULL OR q.exam_type=?2) AND (?3 IS NULL OR q.section=?3)
+     ORDER BY a.created_at DESC LIMIT 400`).bind(u.id, exam || null, section || null).all();
+  const seen = new Set(), items = [];
+  for (const r of results) { if (seen.has(r.id)) continue; seen.add(r.id); items.push({ ...r, choices: JSON.parse(r.choices) }); }
+  return c.json({ items: items.slice(0, 200) });
+});
+
 app.get('/me/overview', async (c) => {
   const u = c.get('user');
   const [ents, atts] = await Promise.all([

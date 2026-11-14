@@ -2,7 +2,7 @@ import { Hono } from 'hono';
 import { uid, now } from '../lib/util.js';
 import { requireAdmin } from '../lib/auth.js';
 import { EXAMS, scoreAttempt } from '../lib/exam.js';
-import { stripeRetrieveSession, stripeRefund, portoneCancel } from '../lib/payments.js';
+import { stripeRetrieveSession, stripeRefund, portoneCancel, recheckOrder } from '../lib/payments.js';
 import { notifyResult } from './exams.js';
 import { kcpCancel, kcpEnabled, kcpConfig } from '../lib/kcp.js';
 
@@ -100,6 +100,10 @@ app.get('/orders', async (c) => {
      ORDER BY (r.status='pending') DESC, o.created_at DESC LIMIT 300`).all();
   return c.json({ orders: results });
 });
+app.post('/orders/:id/recheck', async (c) => {
+  const o = await c.env.DB.prepare('SELECT * FROM orders WHERE id=?').bind(c.req.param('id')).first();
+  return o ? c.json(await recheckOrder(c.env, o)) : c.json({ error: 'not found' }, 404);
+});
 app.post('/orders/:id/refund', async (c) => {
   const o = await c.env.DB.prepare('SELECT * FROM orders WHERE id=?').bind(c.req.param('id')).first();
   if (!o || o.status !== 'paid') return c.json({ error: '환불할 수 없는 주문입니다.' }, 400);
@@ -153,7 +157,7 @@ app.get('/questions', async (c) => {
   const { results } = await c.env.DB.prepare(
     `SELECT id,exam_type,section,kind,difficulty,stem,active FROM questions
      WHERE (?1 IS NULL OR exam_type=?1) AND (?2 IS NULL OR section=?2) AND (?3 IS NULL OR stem LIKE ?3)
-     ORDER BY created_at DESC LIMIT 300`).bind(exam || null, section || null, q ? `%${q}%` : null).all();
+     ORDER BY created_at DESC LIMIT ?4`).bind(exam || null, section || null, q ? `%${q}%` : null, Math.min(1000, Math.max(1, +c.req.query('limit') || 300))).all();
   const counts = await c.env.DB.prepare(`SELECT exam_type,section,COUNT(*) n FROM questions WHERE active=1 GROUP BY exam_type,section`).all();
   return c.json({ questions: results, counts: counts.results });
 });

@@ -10,11 +10,12 @@ const shuffle = (a) => { a = [...a]; for (let i = a.length - 1; i > 0; i--) { co
 
 const Q = [];
 const seen = new Set();
+let dropIds = new Set(); try { dropIds = new Set(JSON.parse(readFileSync(new URL('./bank/_generated.drop.json', import.meta.url), 'utf8'))); } catch {} // ids a reviewer rejected
 // Content-hash ids: re-generating the seed never renumbers existing questions, so deployed databases can sync incrementally.
 const hash = (str) => { let a = 0x811c9dc5, b = 0x1b873593; for (let i = 0; i < str.length; i++) { const c = str.charCodeAt(i); a = Math.imul(a ^ c, 16777619); b = Math.imul(b + c, 2246822519) ^ (b >>> 13); } return ((a >>> 0).toString(16).padStart(8, '0') + (b >>> 0).toString(16).padStart(8, '0')).slice(0, 12); };
 function add(exam_type, section, difficulty, stem, choices, answer, explanation, extra = {}) {
   const key = hash([exam_type, section, stem, extra.passage || '', extra.image_svg ? 'img' : '', [...choices].sort().join('|')].join('\u0001'));
-  if (seen.has(key)) return; // identical generated item: keep one
+  if (seen.has(key) || dropIds.has(`seed-${exam_type.toLowerCase()}-${section}-${key}`)) return; // identical generated item: keep one / reviewer-rejected
   seen.add(key);
   Q.push({ id: `seed-${exam_type.toLowerCase()}-${section}-${key}`, exam_type, section, kind: 'mcq', difficulty, stem, choices, answer, explanation, ...extra });
 }
@@ -83,7 +84,8 @@ const V = [
   [5, 'Candid is to frank as cautious is to ___', ['wary', 'bold', 'careless', 'quiet'], 0],
   [5, 'If no teachers are bored and Sam is bored, which MUST be true?', ['Sam is a teacher.', 'Sam is not a teacher.', 'Sam likes teachers.', 'Teachers like Sam.'], 1],
 ];
-for (const [d, s, c, a] of V) add('CAT4', 'verbal', d, s, c, a, 'Think about the relationship between the words.');
+const VE = ['Hot and cold are opposites; so are up and down.', 'Apple, banana and grape are fruits; a carrot is a vegetable.', 'A bird lives in a nest; a bee lives in a hive.', 'River, lake and ocean are bodies of water; a mountain is a landform.', 'A pen is used to write; a knife is used to cut (tool and function).', 'An author creates a book; a composer creates a song.', '"Reluctant" means unwilling to do something.', 'Sprint, jog and stroll are ways of moving; whisper is a way of speaking.', 'A drought is a shortage of water; a famine is a shortage of food.', '"Scarce" means hard to find; the opposite is plentiful.', 'A glove covers a hand; a sock covers a foot.', 'A pebble is a small stone and a boulder a large one; a puddle is small water and a lake large water.', 'Nothing says the red flowers are roses, so none of the statements must be true.', '"Ephemeral" means lasting only a short time, i.e. brief.', '"Candid" and "frank" are synonyms; so are "cautious" and "wary".', 'Teachers are never bored, so a bored person cannot be a teacher.'];
+V.forEach(([d, s, c, a], i) => add('CAT4', 'verbal', d, s, c, a, VE[i]));
 
 /* ---------- CAT4 Quantitative (number series, generated) ---------- */
 for (let i = 0; i < 8; i++) { const s = ri(2, 9), k = ri(2, 6); const seq = [0, 1, 2, 3, 4].map((j) => s + j * k); mcq('CAT4', 'quantitative', 1, `What comes next? ${seq.join(', ')}, ?`, s + 5 * k, [s + 5 * k + 1, s + 6 * k, s + 4 * k, s + 5 * k - 1], `Add ${k} each time.`); }
@@ -102,15 +104,15 @@ const strip = (cells) => svg(cells.map((c, i) => `<g transform="translate(${i * 
 
 /* ---------- CAT4 Non-verbal (generated) ---------- */
 for (let i = 0; i < 12; i++) { // growing number of sides
-  const s = ri(3, 5), shown = [0, 1, 2].map((j) => poly(s + j)).concat(['<text x="30" y="42" font-size="36" text-anchor="middle">?</text>']);
+  const s = Math.min(ri(3, 5), 4), shown = [0, 1, 2].map((j) => poly(s + j)).concat(['<text x="30" y="42" font-size="36" text-anchor="middle">?</text>']);
   const ans = s + 3; const opts = shuffle([ans, ans + 1, ans - 1, Math.max(3, s)]).filter((v, k, a) => a.indexOf(v) === k);
   while (opts.length < 4) opts.push(ans + opts.length + 1);
   add('CAT4', 'nonverbal', 2, 'Which shape comes next in the pattern?', opts.map((o) => 'svg:' + svg(poly(o))), opts.indexOf(ans), `Each shape has one more side: next has ${ans}.`, { image_svg: strip(shown) });
 }
 for (let i = 0; i < 10; i++) { // rotating triangle
-  const step = pick([45, 90, 120]), start = pick([0, 30]);
+  const step = pick([45, 90, 30]), start = pick([0, 30]); // a 120-degree step is invisible on an equilateral triangle
   const shown = [0, 1, 2].map((j) => poly(3, start + step * j, '#0ea5e9')).concat(['<text x="30" y="42" font-size="36" text-anchor="middle">?</text>']);
-  const ans = (start + step * 3) % 360; const cand = [ans, (ans + 60) % 360, (ans + 180) % 360, (ans + 300) % 360].filter((v, k, a) => a.indexOf(v) === k);
+  const ans = (start + step * 3) % 360; const cand = [ans, (ans + 30) % 360, (ans + 60) % 360, (ans + 90) % 360].filter((v, k, a) => a.indexOf(v) === k); // offsets that are distinct for a 3-fold symmetric shape
   const opts = shuffle(cand);
   add('CAT4', 'nonverbal', 3, 'The triangle keeps turning by the same amount. Which comes next?', opts.map((o) => 'svg:' + svg(poly(3, o, '#0ea5e9'))), opts.indexOf(ans), `It turns ${step}° each step.`, { image_svg: strip(shown) });
 }
@@ -126,6 +128,7 @@ const F = (tr, fill = '#16a34a') => `<g transform="${tr}"><path d="M-10 -16 H12 
 for (let i = 0; i < 32; i++) {
   const base = svg(F('translate(30,30)'), 60, 60);
   const angs = shuffle([0, 45, 90, 135, 180, 225, 270, 315]);
+  if (angs[0] === 0) [angs[0], angs[1]] = [angs[1], angs[0]]; // the keyed option must really be turned
   const correctAng = angs[0];
   const items = shuffle([
     { s: F(`translate(30,30) rotate(${correctAng})`), ok: true },
@@ -190,7 +193,7 @@ for (const [d, s, c, a, e] of [
   [4, 'Choose the correct sentence.', ['Between you and I, it is a secret.', 'Between you and me, it is a secret.', 'Between you and myself, it is a secret.', 'Between I and you, it is a secret.'], 1, 'Object pronoun after a preposition.'],
   [5, 'Which is the best transition: "The experiment failed. ___, the team learned something useful."', ['Therefore', 'Nevertheless', 'Similarly', 'Meanwhile'], 1, 'Contrast.'],
 ]) add('MAP', 'language', d, s, c, a, e);
-for (const [d, s, c, a] of [
+[
   [1, 'Day is to night as summer is to ___', ['sun', 'winter', 'hot', 'season'], 1],
   [1, 'Which word does NOT belong? dog, cat, horse, chair', ['dog', 'cat', 'horse', 'chair'], 3],
   [2, 'Eye is to see as ear is to ___', ['hear', 'sound', 'head', 'listen to'], 0],
@@ -202,7 +205,7 @@ for (const [d, s, c, a] of [
   [4, 'All birds have feathers. A penguin is a bird. Which MUST be true?', ['A penguin has feathers.', 'A penguin can fly.', 'All feathered animals are birds.', 'Penguins live in cold places only.'], 0],
   [5, 'Which word is closest in meaning to "ambiguous"?', ['clear', 'unclear', 'loud', 'rude'], 1],
   [5, 'Prudent is to reckless as frugal is to ___', ['thrifty', 'wasteful', 'poor', 'careful'], 1],
-]) add('CAT4', 'verbal', d, s, c, a, 'Think about the relationship between the words.');
+].map((x, i) => [...x, ['Day and night are opposites; so are summer and winter.', 'Dog, cat and horse are animals; a chair is furniture.', 'The eye is used to see; the ear is used to hear.', '"Huge" and "enormous" both mean very large.', 'A chapter is a part of a book; a scene is a part of a play.', '"Generous" means giving; the opposite is selfish.', 'Triangle, square and circle are flat (2-D); a cube is solid (3-D).', 'A thermometer measures temperature; a ruler measures length.', 'Penguins are birds and all birds have feathers, so penguins have feathers.', '"Ambiguous" means open to more than one meaning, i.e. unclear.', '"Prudent" is the opposite of "reckless"; "frugal" is the opposite of "wasteful".'][i]]).forEach(([d, s, c, a, e]) => add('CAT4', 'verbal', d, s, c, a, e));
 for (const [d, script, stem, c, a] of [
   [1, 'Anna says: "My birthday is on Saturday. I\'m having a party at my house."', 'Where is Anna\'s party?', ['At school', 'At her house', 'At the park', 'At a restaurant'], 1],
   [2, 'Teacher: "Tomorrow is picture day. Please wear your school shirt and bring your homework."', 'What should students wear tomorrow?', ['A costume', 'Their school shirt', 'A jacket', 'Sports clothes'], 1],
@@ -354,11 +357,11 @@ function addGraph(exam, section, kinds, count, dMin, dMax) {
 function wordMath(d) {
   const t = ri(0, 7);
   if (t === 0) { const den = pick([3, 4, 5, 8]), num = ri(1, den - 1), m = den * ri(3, 9); return [`What is ${num}/${den} of ${m}?`, (num * m) / den, [(num * m) / den + den, m - (num * m) / den + 1, num * den, m / den + 1], `${m} ÷ ${den} × ${num}.`]; }
-  if (t === 1) { const a = ri(2, 5), b = ri(2, 7), k = ri(3, 9); return [`The ratio of boys to girls in a class is ${a}:${b}. If there are ${a * k} boys, how many girls are there?`, b * k, [b * k + a, a * k + b, b + k, a * b], `${a * k} ÷ ${a} = ${k} groups, and ${k} × ${b} = ${b * k}.`]; }
+  if (t === 1) { const a = ri(2, 5), b0 = ri(2, 7), b = b0 === a ? b0 + 1 : b0, k = ri(3, 9); return [`The ratio of boys to girls in a class is ${a}:${b}. If there are ${a * k} boys, how many girls are there?`, b * k, [b * k + a, a * k + b, b + k, a * b], `${a * k} ÷ ${a} = ${k} groups, and ${k} × ${b} = ${b * k}.`]; }
   if (t === 2) { const x = ri(8, 15), y = ri(8, 15), z = ri(8, 15), mean = ri(10, 14), fourth = 4 * mean - x - y - z; if (fourth < 1) return wordMath(d); return [`The average of four numbers is ${mean}. Three of the numbers are ${x}, ${y}, and ${z}. What is the fourth number?`, fourth, [fourth + 4, fourth - 2, mean, 4 * mean], `Total = 4 × ${mean} = ${4 * mean}; subtract ${x + y + z}.`]; }
   if (t === 3) { const p = pick([60, 80, 120, 200]), off = pick([10, 20, 25, 50]), sale = p - (p * off) / 100; return [`A jacket that costs $${p} is on sale for ${off}% off. What is the sale price?`, `$${sale}`, [`$${(p * off) / 100}`, `$${sale + 10}`, `$${p - off}`, `$${sale - 5}`], `${off}% of ${p} = ${(p * off) / 100}, so ${p} − ${(p * off) / 100} = ${sale}.`]; }
   if (t === 4) { const x = ri(3, 14), a = ri(2, 6), b = ri(1, 12); return [`If ${a}x − ${b} = ${a * x - b}, what is the value of x?`, x, [x + 1, x - 1, x + a, a * x], `Add ${b}, divide by ${a}.`]; }
-  if (t === 5) { const s = pick([40, 45, 50, 60]), hrs = pick([1.5, 2, 2.5, 3]); return [`A car travels at ${s} miles per hour for ${hrs} hours. How many miles does it travel?`, s * hrs, [s + hrs, s * hrs + 10, s / hrs, s * hrs - 10], `Distance = rate × time = ${s} × ${hrs}.`]; }
+  if (t === 5) { const s = pick([40, 45, 50, 60]), hrs = pick([1.5, 2, 2.5, 3]); return [`A car travels at ${s} miles per hour for ${hrs} hours. How many miles does it travel?`, s * hrs, [s + hrs, s * hrs + 10, Math.round((s / hrs) * 10) / 10, s * hrs - 10], `Distance = rate × time = ${s} × ${hrs}.`]; }
   if (t === 6) { const a = ri(4, 12), b = ri(2, 4); return [`What is the value of √${a * a} + ${b}²?`, a + b * b, [a * a + b * b, a + 2 * b, a * a + b, a + b], `√${a * a} = ${a} and ${b}² = ${b * b}.`]; }
   const n = ri(5, 25); return [`The sum of three consecutive integers is ${3 * n}. What is the greatest of the three integers?`, n + 1, [n, n + 2, n - 1, 3 * n - 2], `The middle integer is ${n}, so the greatest is ${n + 1}.`];
 }
@@ -371,7 +374,7 @@ function qcItem(figure) {
   if (t === 'frac') { const [a, b, c, d] = [ri(1, 7), ri(2, 9), ri(1, 7), ri(2, 9)]; A = a / b; B = c / d; stem = `Quantity A: ${a}/${b}\nQuantity B: ${c}/${d}`; expl = `Compare ${a}×${d} with ${c}×${b}.`; }
   else if (t === 'var') { const k = ri(2, 6); const c = pick([0, 1]); if (c) { A = null; forced = 0; stem = `x > ${k}\nQuantity A: x + 2\nQuantity B: ${k + 2}`; expl = `Since x > ${k}, x + 2 > ${k + 2}.`; } else { forced = 3; stem = `x is an integer and 0 < x < ${k + 3}\nQuantity A: x\nQuantity B: ${k}`; expl = `x could be smaller or larger than ${k}, so it cannot be determined.`; } }
   else if (t === 'expr') { const n = ri(2, 9), m = ri(2, 6); A = m * (n + 4); B = m * n + pick([m * 4, m * 4, m * 4 + 2, m * 4 - 3]); stem = `n = ${n}\nQuantity A: ${m}(n + 4)\nQuantity B: ${m}n + ${B - m * n}`; expl = `Quantity A = ${A}; Quantity B = ${B}.`; }
-  else if (t === 'pow') { const a = ri(2, 4), b = ri(3, 6); A = a ** b; B = b ** a; stem = `Quantity A: ${a}^${b}\nQuantity B: ${b}^${a}`; expl = `${a}^${b} = ${A}; ${b}^${a} = ${B}.`; }
+  else if (t === 'pow') { const a = ri(2, 4), b0 = ri(3, 6), b = b0 === a ? b0 + 1 : b0; A = a ** b; B = b ** a; stem = `Quantity A: ${a}^${b}\nQuantity B: ${b}^${a}`; expl = `${a}^${b} = ${A}; ${b}^${a} = ${B}.`; }
   else if (t === 'pct') { const [p, v, q, w] = [pick([10, 20, 25, 50]), pick([40, 60, 80, 120]), pick([10, 20, 30, 40]), pick([30, 50, 70, 90])]; A = (p * v) / 100; B = (q * w) / 100; stem = `Quantity A: ${p}% of ${v}\nQuantity B: ${q}% of ${w}`; expl = `A = ${A}, B = ${B}.`; }
   else if (t === 'rect') { const w = ri(3, 12), h = ri(3, 9); A = w * h; B = A + pick([-6, 0, 4, 9]); stem = `Quantity A: The area of the rectangle (in cm²)\nQuantity B: ${B}`; extra = { image_svg: rectFig(w, h) }; expl = `Area = ${w} × ${h} = ${A}.`; }
   else { const labels = pick(SETS); let vals; do vals = labels.map(() => 5 * ri(2, 9)); while (!uniq(vals)); const [i, j] = shuffle([0, 1, 2, 3, 4]).slice(0, 2); A = vals[i]; B = vals[j]; stem = `Quantity A: The value of "${labels[i]}" in the graph\nQuantity B: The value of "${labels[j]}" in the graph`; extra = { image_svg: barChart({ title: 'Graph', labels, values: vals, yMax: 50, yStep: 5 }) }; expl = `${labels[i]} = ${A}, ${labels[j]} = ${B}.`; }
@@ -388,7 +391,7 @@ addGraph('CAT4', 'quantitative', ['bar', 'pie', 'numline'], 6, 2, 4);
 addGraph('WIDA', 'reading', ['bar', 'pie'], 3, 2, 3);
 
 /* ---------------- SCAT ---------------- */
-for (const [d, s, c, a] of [
+[
   [1, 'Hot : Cold :: Light : ?', ['Lamp', 'Dark', 'Bright', 'Sun'], 1], [1, 'Puppy : Dog :: Kitten : ?', ['Cat', 'Mouse', 'Bird', 'Milk'], 0],
   [2, 'Pilot : Airplane :: Captain : ?', ['Ship', 'Wheel', 'Army', 'Ocean'], 0], [2, 'Seed : Plant :: Egg : ?', ['Nest', 'Chicken', 'Shell', 'Yolk'], 1],
   [2, 'Whisper : Shout :: Stroll : ?', ['Walk', 'Sprint', 'Rest', 'Slow'], 1], [3, 'Architect : Blueprint :: Composer : ?', ['Orchestra', 'Score', 'Piano', 'Concert'], 1],
@@ -397,7 +400,7 @@ for (const [d, s, c, a] of [
   [4, 'Lighthouse : Warning :: Bell : ?', ['Ring', 'Signal', 'Church', 'Metal'], 1], [5, 'Obsolete : Modern :: Transparent : ?', ['Clear', 'Opaque', 'Glass', 'Fragile'], 1],
   [5, 'Zenith : Nadir :: Apex : ?', ['Peak', 'Base', 'Cone', 'Summit'], 1], [5, 'Skeptic : Doubt :: Optimist : ?', ['Hope', 'Fear', 'Think', 'Argue'], 0],
   [3, 'Chef : Kitchen :: Surgeon : ?', ['Hospital', 'Scalpel', 'Doctor', 'Mask'], 0], [4, 'Brevity : Lengthy :: Clarity : ?', ['Obscure', 'Bright', 'Simple', 'Short'], 0],
-]) add('SCAT', 'verbal', d, s, c, a, 'Find the relationship in the first pair and apply it to the second.');
+].map((x, i) => [...x, ['Opposites: hot/cold, light/dark.', 'A young animal and its adult: puppy/dog, kitten/cat.', 'The person who operates the vehicle: pilot/airplane, captain/ship.', 'What the first becomes: seed/plant, egg/chicken.', 'Low versus high intensity of the same action: whisper/shout, stroll/sprint.', 'The plan a professional produces: architect/blueprint, composer/score.', 'An instrument and what it measures: barometer/pressure, odometer/distance.', 'Antonyms: frugal/wasteful, humble/arrogant.', 'A eulogy is meant to praise; satire is meant to mock.', 'Antonyms: gregarious/solitary, verbose/concise.', 'The function of the object: a lighthouse warns, a bell signals.', 'Antonyms: obsolete/modern, transparent/opaque.', 'Opposite extremes: zenith/nadir, apex/base.', 'A skeptic tends to doubt; an optimist tends to hope.', 'A worker and the place they work: chef/kitchen, surgeon/hospital.', 'Antonyms: brevity/lengthy, clarity/obscure.'][i]]).forEach(([d, s, c, a, e]) => add('SCAT', 'verbal', d, s, c, a, e));
 addQC('SCAT', 'quantitative', 24, 4);
 
 /* ---------------- SSAT ---------------- */
@@ -459,7 +462,7 @@ Q.push({ id: 'seed-isee-essay-2', exam_type: 'ISEE', section: 'essay', kind: 'te
 /* =====================================================================
    Round 3: CogAT / SAT / TOEFL Junior + larger banks
    ===================================================================== */
-import { readdirSync, readFileSync } from 'node:fs';
+import { readdirSync, readFileSync, mkdirSync } from 'node:fs';
 
 /** number-series items (5 rule types, difficulty 1..5) */
 function seriesItems(exam, section, per) {
@@ -470,11 +473,17 @@ function seriesItems(exam, section, per) {
   for (let i = 0; i < per; i++) { const a = ri(3, 8), b = ri(2, 5); const q = [a]; let d = b; for (let j = 1; j < 6; j++) { q.push(q[j - 1] + d); d += 2; } mcq(exam, section, 5, `What number comes next?  ${q.slice(0, 5).join(', ')}, ?`, q[5], [q[5] + 1, q[5] - 2, q[4] + d - 4, q[4] + d], 'The difference grows by 2 each step.'); }
 }
 /** CogAT number analogies  a : b :: c : ?   and number puzzles  a ? b = c */
+/** distractors for "a : b :: c : ?" that no other simple rule (x -> m*x + n, x -> x*b/a, x -> x + (b-a)) would also give */
+function analogyDistractors(a, b, c, corr, cands) {
+  const alts = new Set([c + (b - a)]); for (const m of [2, 3]) alts.add(m * c + (b - m * a)); if (b % a === 0) alts.add((c * b) / a);
+  alts.delete(corr);
+  return [...cands, corr + 5, corr - 5, corr + 7, corr + 10, corr + 3, corr - 3, corr + 12].filter((v, i, arr) => v > 0 && v !== corr && !alts.has(v) && arr.indexOf(v) === i).slice(0, 3);
+}
 function cogatQuant(count) {
   for (let i = 0; i < count; i++) {
     const t = ri(0, 3), c = ri(3, 12);
-    if (t === 0) { const a = ri(2, 9), k = ri(2, 5); mcq('COGAT', 'quantitative', 2 + (i % 3), `Number analogy:  ${a} : ${a * k}  ::  ${c} : ?`, c * k, [c + k, c * k + k, c * k - 1, c + a * k], `The second number is the first × ${k}.`); }
-    else if (t === 1) { const a = ri(2, 15), k = ri(3, 12); mcq('COGAT', 'quantitative', 1 + (i % 3), `Number analogy:  ${a} : ${a + k}  ::  ${c} : ?`, c + k, [c * k, c + k + 1, c + k - 2, c - k], `Add ${k}.`); }
+    if (t === 0) { const a = ri(2, 9), k = ri(2, 5), a2 = a + 1 + (c % 3), c2 = c === a || c === a2 ? c + 13 : c; mcq('COGAT', 'quantitative', 2 + (i % 3), `Number analogy:  ${a} → ${a * k},   ${a2} → ${a2 * k},   ${c2} → ?`, c2 * k, analogyDistractors(a, a * k, c2, c2 * k, [c2 + k, c2 * k + k, c2 * k - 1, c2 + a * k]), `Each number is multiplied by ${k}: ${a}×${k} = ${a * k} and ${a2}×${k} = ${a2 * k}, so ${c2} × ${k} = ${c2 * k}.`); }
+    else if (t === 1) { const a = ri(2, 15), k = ri(3, 12), a2 = a + 2 + (c % 4), c2 = c === a || c === a2 ? c + 17 : c; mcq('COGAT', 'quantitative', 1 + (i % 3), `Number analogy:  ${a} → ${a + k},   ${a2} → ${a2 + k},   ${c2} → ?`, c2 + k, analogyDistractors(a, a + k, c2, c2 + k, [c2 * k, c2 + k + 1, c2 + k - 2, c2 - k]), `Each number increases by ${k}: ${a} + ${k} = ${a + k} and ${a2} + ${k} = ${a2 + k}, so ${c2} + ${k} = ${c2 + k}.`); }
     else if (t === 2) { const a = ri(2, 9), b = ri(2, 9); mcq('COGAT', 'quantitative', 3 + (i % 3), `Number analogy:  ${a}, ${b} → ${a * b}  ::  ${c}, ${b + 1} → ?`, c * (b + 1), [c + b + 1, c * b, c * (b + 1) + c, c * (b + 1) - 1], 'Multiply the two numbers.'); }
     else {
       const ops = { '+': (x, y) => x + y, '−': (x, y) => x - y, '×': (x, y) => x * y, '÷': (x, y) => (y ? x / y : NaN) };
@@ -490,10 +499,10 @@ function figureSet(exam, section, count) {
   const PAL = ['#4f46e5', '#0ea5e9', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#0a3161', '#b31942', '#14b8a6', '#d97706'];
   for (let i = 0; i < count; i++) {
     const t = i % 4;
-    if (t === 0) { const col = pick(PAL), s0 = ri(3, 6), shown = [0, 1, 2].map((j) => poly(s0 + j, ri(0, 1) * 0, col)).concat(['<text x="30" y="42" font-size="36" text-anchor="middle">?</text>']), ans = s0 + 3; const opts = shuffle([ans, ans + 1, ans - 1, Math.max(3, s0)]).filter((v, k, a) => a.indexOf(v) === k); while (opts.length < 4) opts.push(ans + opts.length + 1); add(exam, section, 2, 'Which shape comes next in the pattern?', opts.map((o) => q(svg(poly(o, 0, col)))), opts.indexOf(ans), `Each shape gains one side.`, { image_svg: strip(shown) }); }
-    else if (t === 1) { const col = pick(PAL), sides = pick([3, 4, 5]), step = pick([30, 45, 60, 90, 120]), st = pick([0, 15, 30, 45]); const shown = [0, 1, 2].map((j) => poly(sides, st + step * j, col)).concat(['<text x="30" y="42" font-size="36" text-anchor="middle">?</text>']); const ans = (st + step * 3) % 360, per = 360 / sides; const cand = [ans, ans + per / 2, ans + per / 3, ans + per * 0.8].map((v) => ((Math.round(v) % 360) + 360) % 360); const opts = shuffle(cand.filter((v, k, a) => a.indexOf(v) === k && (v % per) !== (cand[0] % per) || k === 0)); if (opts.length === 4 && new Set(opts.map((v) => v % per)).size === 4) add(exam, section, 3, 'The shape keeps turning by the same amount. Which comes next?', opts.map((o) => q(svg(poly(sides, o, col)))), opts.indexOf(ans), `Turns ${step}° each step.`, { image_svg: strip(shown) }); }
-    else if (t === 2) { const col = pick(PAL), k = ri(1, 3), dots = (c) => Array.from({ length: c }, (_, j) => `<circle cx="${12 + (j % 4) * 12}" cy="${18 + Math.floor(j / 4) * 14}" r="4.5" fill="${col}"/>`).join(''); const shown = [1, 2, 3].map((j) => dots(j * k)).concat(['<text x="30" y="42" font-size="36" text-anchor="middle">?</text>']); const ans = 4 * k, opts = shuffle([ans, ans + 1, ans - 1, ans + 2]); add(exam, section, 1, 'How many dots come next?', opts.map((o) => q(svg(dots(o)))), opts.indexOf(ans), `Dots increase by ${k}.`, { image_svg: strip(shown) }); }
-    else { const base = svg(F('translate(30,30)'), 60, 60), angs = shuffle([0, 45, 90, 135, 180, 225, 270, 315]); const items = shuffle([{ s: F(`translate(30,30) rotate(${angs[0]})`), ok: true }, { s: F(`translate(30,30) rotate(${angs[1]}) scale(-1,1)`) }, { s: F(`translate(30,30) rotate(${angs[2]}) scale(-1,1)`) }, { s: F(`translate(30,30) rotate(${angs[3]}) scale(-1,1)`) }]); add(exam, section, 2 + (i % 4), 'Which option shows the same shape turned (rotated) but NOT flipped?', items.map((x) => q(svg(x.s, 60, 60))), items.findIndex((x) => x.ok), 'A mirrored shape cannot be made by turning.', { image_svg: base }); }
+    if (t === 0) { const col = pick(PAL), s0 = Math.min(ri(3, 6), 4), shown = [0, 1, 2].map((j) => poly(s0 + j, ri(0, 1) * 0, col)).concat(['<text x="30" y="42" font-size="36" text-anchor="middle">?</text>']), ans = s0 + 3; const opts = shuffle([ans, ans + 1, ans - 1, Math.max(3, s0)]).filter((v, k, a) => a.indexOf(v) === k); while (opts.length < 4) opts.push(ans + opts.length + 1); add(exam, section, 2, 'Which shape comes next in the pattern?', opts.map((o) => q(svg(poly(o, 0, col)))), opts.indexOf(ans), `Each shape gains one side.`, { image_svg: strip(shown) }); }
+    else if (t === 1) { const col = pick(PAL), sides = pick([3, 4, 5]), step = pick([30, 45, 60, 90, 120]), st = pick([0, 15, 30, 45]), symm = 360 / sides; const shown = [0, 1, 2].map((j) => poly(sides, st + step * j, col)).concat(['<text x="30" y="42" font-size="36" text-anchor="middle">?</text>']); const ans = (st + step * 3) % 360, per = 360 / sides; const cand = [ans, ans + per / 2, ans + per / 3, ans + per * 0.8].map((v) => ((Math.round(v) % 360) + 360) % 360); const opts = shuffle(cand.filter((v, k, a) => a.indexOf(v) === k && (v % per) !== (cand[0] % per) || k === 0)); if (step % symm !== 0 && (2 * step) % symm !== 0 && opts.length === 4 && new Set(opts.map((v) => v % per)).size === 4) add(exam, section, 3, 'The shape keeps turning by the same amount. Which comes next?', opts.map((o) => q(svg(poly(sides, o, col)))), opts.indexOf(ans), `Turns ${step}° each step.`, { image_svg: strip(shown) }); }
+    else if (t === 2) { const col = pick(PAL), k = Math.min(ri(1, 3), 2), dots = (c) => Array.from({ length: c }, (_, j) => `<circle cx="${12 + (j % 4) * 12}" cy="${14 + Math.floor(j / 4) * 14}" r="4.5" fill="${col}"/>`).join(''); const shown = [1, 2, 3].map((j) => dots(j * k)).concat(['<text x="30" y="42" font-size="36" text-anchor="middle">?</text>']); const ans = 4 * k, opts = shuffle([ans, ans + 1, ans - 1, ans + 2]); add(exam, section, 1, 'How many dots come next?', opts.map((o) => q(svg(dots(o)))), opts.indexOf(ans), `Dots increase by ${k}.`, { image_svg: strip(shown) }); }
+    else { const base = svg(F('translate(30,30)'), 60, 60), angs = shuffle([0, 45, 90, 135, 180, 225, 270, 315]); if (angs[0] === 0) [angs[0], angs[1]] = [angs[1], angs[0]]; const items = shuffle([{ s: F(`translate(30,30) rotate(${angs[0]})`), ok: true }, { s: F(`translate(30,30) rotate(${angs[1]}) scale(-1,1)`) }, { s: F(`translate(30,30) rotate(${angs[2]}) scale(-1,1)`) }, { s: F(`translate(30,30) rotate(${angs[3]}) scale(-1,1)`) }]); add(exam, section, 2 + (i % 4), 'Which option shows the same shape turned (rotated) but NOT flipped?', items.map((x) => q(svg(x.s, 60, 60))), items.findIndex((x) => x.ok), 'A mirrored shape cannot be made by turning.', { image_svg: base }); }
   }
 }
 /** SAT Math (digital SAT domains: algebra, advanced math, problem-solving & data analysis, geometry & trigonometry) */
@@ -505,7 +514,7 @@ function satMath(count) {
     else if (t === 'func') { const a = ri(2, 7), b = ri(1, 12), x = ri(2, 9); st = `The function f is defined by f(x) = ${a}x − ${b}. What is f(${x})?`; cor = a * x - b; wr = [a * x + b, a + x - b, a * (x - b), a * x]; ex = `${a}(${x}) − ${b}.`; d = 1; }
     else if (t === 'sys') { const x = ri(3, 12), y = ri(1, x - 1); st = `x + y = ${x + y} and x − y = ${x - y}. What is the value of x?`; cor = x; wr = [y, x + 1, x + y, x - 1]; ex = 'Add the two equations: 2x = ' + 2 * x + '.'; d = 2; }
     else if (t === 'pct') { const a = pick([40, 50, 60, 80, 120]), pc = pick([10, 20, 25, 30, 50]); const b = a + (a * pc) / 100; st = `A price increased from $${a} to $${b}. By what percent did the price increase?`; cor = `${pc}%`; wr = [`${pc + 5}%`, `${pc - 5}%`, `${Math.round((pc / (100 + pc)) * 100)}%`, `${pc * 2}%`]; ex = `(${b} − ${a}) ÷ ${a} = ${pc / 100}.`; d = 2; }
-    else if (t === 'ratio') { const a = ri(2, 5), b = ri(2, 7), k = ri(3, 9); st = `A mixture contains red paint and blue paint in the ratio ${a} : ${b}. If it contains ${a * k} liters of red paint, how many liters of blue paint does it contain?`; cor = b * k; wr = [b * k + a, a * b, b + k, a * k + b]; ex = `${a * k}/${a} = ${k}; ${k} × ${b}.`; d = 2; }
+    else if (t === 'ratio') { const a = ri(2, 5), b0 = ri(2, 7), b = b0 === a ? b0 + 1 : b0, k = ri(3, 9); st = `A mixture contains red paint and blue paint in the ratio ${a} : ${b}. If it contains ${a * k} liters of red paint, how many liters of blue paint does it contain?`; cor = b * k; wr = [b * k + a, a * b, b + k, a * k + b]; ex = `${a * k}/${a} = ${k}; ${k} × ${b}.`; d = 2; }
     else if (t === 'quad') { const r1 = ri(1, 6), r2 = ri(r1 + 1, 9); st = `What are the solutions to x² − ${r1 + r2}x + ${r1 * r2} = 0?`; cor = `${r1} and ${r2}`; wr = [`${-r1} and ${-r2}`, `${r1} and ${-r2}`, `${r1 + 1} and ${r2 - 1}`, `${r1 * r2} and 1`]; ex = `(x − ${r1})(x − ${r2}) = 0.`; d = 3; }
     else if (t === 'exp') { const b = pick([2, 3, 5]), e = ri(2, 5); st = `If ${b}^x = ${b ** e}, what is the value of x?`; cor = e; wr = [e + 1, e - 1, b * e, b ** e / b]; ex = `${b}^${e} = ${b ** e}.`; d = 2; }
     else if (t === 'slope') { const m = ri(2, 6), x1 = ri(0, 4), y1 = ri(-3, 5), dx = ri(1, 4); st = `A line passes through the points (${x1}, ${y1}) and (${x1 + dx}, ${y1 + m * dx}). What is the slope of the line?`; cor = m; wr = [m + 1, 1 / m < 1 ? `1/${m}` : m + 2, -m, m * dx]; ex = `Rise over run = ${m * dx}/${dx}.`; d = 2; }
@@ -562,6 +571,29 @@ function tableReading(exam, section, count) {
   }
 }
 
+
+/** More SAT Math templates (added last so earlier generated items keep their ids) */
+function satMath2(count) {
+  const kinds = ['tickets', 'median', 'growth', 'vertex', 'similar', 'model', 'pctof', 'units', 'budget', 'spinner', 'scale', 'comp'];
+  const gcd = (x, y) => (y ? gcd(y, x % y) : x);
+  for (let i = 0; i < count; i++) {
+    const t = kinds[i % kinds.length]; let st, cor, wr, ex, d = 2;
+    if (t === 'tickets') { const x = ri(5, 25), y = ri(4, 22), a = ri(9, 15), b = ri(4, a - 2); st = `A theater sold adult tickets for $${a} each and child tickets for $${b} each. In all, ${x + y} tickets were sold for $${a * x + b * y}. How many adult tickets were sold?`; cor = x; wr = [y, x + 1, x - 1, x + y]; ex = `Let x be the adult tickets: x + y = ${x + y} and ${a}x + ${b}y = ${a * x + b * y}. Solving gives x = ${x}.`; d = 3; }
+    else if (t === 'median') { const base = ri(3, 9), arr = shuffle(Array.from({ length: 7 }, (_, k) => base + k * 2 + ri(0, 1))); const sorted = [...arr].sort((m, n) => m - n); st = `What is the median of the data set ${arr.join(', ')}?`; cor = sorted[3]; wr = [sorted[2], sorted[4], Math.round(arr.reduce((m, n) => m + n, 0) / 7) + 1, sorted[1]]; ex = `Order the values: ${sorted.join(', ')}. The middle (4th) value is ${sorted[3]}.`; d = 2; }
+    else if (t === 'growth') { const p0 = pick([20, 50, 100, 200]), every = pick([2, 3, 4]), n = ri(2, 4); st = `A colony starts with ${p0} bacteria and doubles every ${every} hours. How many bacteria are there after ${every * n} hours?`; cor = p0 * 2 ** n; wr = [p0 * 2 * n, p0 + 2 * n, p0 * 2 ** (n + 1), p0 * n * n]; ex = `${n} doublings: ${p0} × 2^${n}.`; d = 3; }
+    else if (t === 'vertex') { const h = ri(-4, 5), k = ri(1, 12); st = `The function f(x) = −(x ${h >= 0 ? '−' : '+'} ${Math.abs(h)})² + ${k} is graphed in the xy-plane. What is the maximum value of f?`; cor = k; wr = [h === 0 ? k + 2 : h, k + Math.abs(h), -k, k * k]; ex = `The squared term is never positive, so the maximum value is the constant ${k}.`; d = 4; }
+    else if (t === 'similar') { const ab = ri(2, 6), r = pick([2, 3]), bc = ri(3, 9); st = `Triangle ABC is similar to triangle DEF, with AB = ${ab}, DE = ${ab * r}, and BC = ${bc}. What is the length of EF?`; cor = bc * r; wr = [bc + (ab * r - ab), bc * r + ab, bc + r, ab * r]; ex = `The scale factor is DE/AB = ${r}, so EF = ${bc} × ${r}.`; d = 3; }
+    else if (t === 'model') { const m = ri(5, 25), b = ri(20, 80), ctx = pick([['cost, in dollars, of renting a bike for x hours', 'the cost for each additional hour', 'the fixed fee charged regardless of hours', 'the total cost for one hour', 'the number of hours rented'], ['height, in centimeters, of a plant x weeks after planting', "the plant's growth in height each week", "the plant's height when it was planted", "the plant's height after one week", 'the number of weeks since planting']]); st = `The equation y = ${m}x + ${b} models the ${ctx[0]}. What does the number ${m} represent in this context?`; cor = ctx[1]; wr = [ctx[2], ctx[3], ctx[4]]; ex = 'In y = mx + b, m is the rate of change of y for each 1-unit increase in x.'; d = 3; }
+    else if (t === 'pctof') { const w = pick([20, 25, 40, 50, 60, 75]), pc = pick([10, 20, 25, 30, 40]), whole = w * 10, part = (whole * pc) / 100; st = `${pc}% of a number is ${part}. What is the number?`; cor = whole; wr = [part * 2, whole + pc, (whole * (100 - pc)) / 100, whole / 10]; ex = `${part} ÷ ${pc / 100} = ${whole}.`; d = 2; }
+    else if (t === 'units') { const v = 3 * ri(12, 30), mins = pick([20, 40]); st = `A train travels at a constant speed of ${v} kilometers per hour. How many kilometers does it travel in ${mins} minutes?`; cor = (v * mins) / 60; wr = [v * mins, Math.round(v / mins), (v * mins) / 100, v / 2]; ex = `${mins} minutes = ${mins}/60 hour, so the distance is ${v} × ${mins}/60 = ${(v * mins) / 60}.`; d = 2; }
+    else if (t === 'budget') { const money = ri(40, 120), each = ri(3, 9), fee = ri(4, 15), n = Math.floor((money - fee) / each); st = `Dana has $${money}. She pays a $${fee} entry fee and then buys snacks that cost $${each} each. What is the greatest number of snacks she can buy?`; cor = n; wr = [n + 1, n - 1, Math.floor(money / each), n + 2]; ex = `${each}n + ${fee} ≤ ${money}, so n ≤ ${((money - fee) / each).toFixed(2)}; the greatest whole number is ${n}.`; d = 3; }
+    else if (t === 'spinner') { const tot = pick([8, 10, 12]), red = ri(2, tot - 3), g = gcd(tot - red, tot), gr = gcd(red, tot); st = `A spinner has ${tot} equal sections, ${red} of which are red. What is the probability that a spin does NOT land on red?`; cor = `${(tot - red) / g}/${tot / g}`; wr = [`${red / gr}/${tot / gr}`, `${tot - red}/${red}`, `${tot - red + 1}/${tot}`, `${red}/${tot - red}`]; ex = `${tot - red} of the ${tot} sections are not red.`; d = 2; }
+    else if (t === 'scale') { const sc = pick([5, 10, 25, 50]), cm = ri(3, 12) + pick([0, 0.5]); st = `On a map, 1 centimeter represents ${sc} kilometers. Two towns are ${cm} centimeters apart on the map. What is the actual distance, in kilometers, between the towns?`; cor = cm * sc; wr = [cm + sc, Math.round((cm / sc) * 100) / 100, sc * 2, cm * sc + sc]; ex = `${cm} × ${sc} = ${cm * sc}.`; d = 1; }
+    else { const w = ri(6, 14), h = ri(5, 10), cw = ri(2, w - 3), ch = ri(2, h - 3); st = `A rectangular poster is ${w} inches wide and ${h} inches tall. A rectangular ${cw}-inch by ${ch}-inch photo is placed on it. What is the area, in square inches, of the part of the poster NOT covered by the photo?`; cor = w * h - cw * ch; wr = [w * h, cw * ch, w * h + cw * ch, (w - cw) * (h - ch)]; ex = `${w} × ${h} − ${cw} × ${ch} = ${w * h - cw * ch}.`; d = 2; }
+    mcq('SAT', 'math', d, st, cor, wr, ex);
+  }
+}
+
 /** Merge the hand-written banks that were authored by writers in scripts/bank/*.json */
 function mergeBanks() {
   const dir = new URL('./bank/', import.meta.url);
@@ -575,7 +607,7 @@ function mergeBanks() {
     if (!ch.some((c) => /\b(all|none|both|neither|either)\b.*\b(above|these)\b|\b(A|B|C|D)\b\s*(and|&|or)\s*\b(A|B|C|D)\b|^(A|B|C|D)\)?$/i.test(c))) {
       const idx = shuffle([0, 1, 2, 3]); ch = idx.map((k) => ch[k]); ans = idx.indexOf(it.answer);
     }
-    add(it.exam_type, it.section, it.difficulty, it.stem, ch, ans, it.explanation, it.passage ? { passage: it.passage } : {}); total++;
+    add(it.exam_type, it.section, it.difficulty, it.stem, ch, ans, it.explanation, { ...(it.passage ? { passage: it.passage } : {}), _src: 'bank' }); total++;
     });
   }
   console.log('merged', total, 'hand-written items from', files.length, 'files');
@@ -593,6 +625,30 @@ satMath(140); satRwChart(36);
 addGraph('CAT4', 'quantitative', ['hist', 'pict', 'venn', 'clock', 'fraction', 'gbar'], 14, 2, 4); addGraph('COGAT', 'quantitative', ['pict', 'venn', 'fraction', 'hist', 'clock'], 10, 2, 4);
 addGraph('WIDA', 'reading', ['bar', 'pie', 'table', 'pict', 'clock'], 8, 1, 3); addGraph('TOEFLJ', 'reading', ['table', 'bar', 'pict', 'line'], 8, 2, 4); tableReading('TOEFLJ', 'reading', 8);
 mergeBanks();
+satMath2(72);
+
+
+/* ---------- review export (REVIEW_DIR=...): sets for blind verification of generated questions ---------- */
+if (process.env.REVIEW_DIR) {
+  const dir = process.env.REVIEW_DIR; mkdirSync(dir + '/keys', { recursive: true });
+  const skip = process.env.REVIEW_SKIP ? new Set(JSON.parse(readFileSync(process.env.REVIEW_SKIP, 'utf8'))) : new Set(); // ids that were already reviewed
+  const gen = Q.filter((r) => r.kind === 'mcq' && r._src !== 'bank' && !skip.has(r.id));
+  const isImg = (r) => r.image_svg || r.choices.some((c) => String(c).startsWith('svg:'));
+  const text = gen.filter((r) => !isImg(r)), img = gen.filter(isImg);
+  const uri = (x) => 'data:image/svg+xml;utf8,' + encodeURIComponent(x);
+  for (let k = 0, i = 0; i < text.length; k++, i += 150) {
+    const part = text.slice(i, i + 150);
+    writeFileSync(`${dir}/text-${k}.json`, JSON.stringify(part.map((r) => ({ exam_type: r.exam_type, section: r.section, difficulty: r.difficulty, passage: r.passage, stem: r.stem, choices: r.choices, answer: r.answer, explanation: r.explanation }))));
+    writeFileSync(`${dir}/keys/text-${k}.ids.json`, JSON.stringify(part.map((r) => r.id)));
+  }
+  for (let k = 0, i = 0; i < img.length; k++, i += 8) {
+    const part = img.slice(i, i + 8);
+    const html = '<body style="margin:0;font:14px sans-serif;background:#fff;width:1300px;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px">' + part.map((r, j) => `<div style="border:2px solid #444;padding:10px"><b>Item ${k}-${j + 1}</b> <span style="color:#777">[${r.exam_type}/${r.section}]</span>${r.passage ? `<div style="margin:6px 0;color:#333">${String(r.passage).replace(/</g, '&lt;')}</div>` : ''}${r.image_svg ? `<div><img src="${uri(r.image_svg)}" style="max-width:100%;max-height:260px;border:1px solid #ddd"></div>` : ''}<div style="margin:8px 0;white-space:pre-wrap"><b>${r.stem.replace(/</g, '&lt;')}</b></div>${r.choices.map((c, x) => `<div style="margin:3px 0;display:flex;gap:8px;align-items:center"><b>${'ABCD'[x]})</b>${String(c).startsWith('svg:') ? `<img src="${uri(String(c).slice(4))}" style="height:64px;border:1px solid #ddd">` : String(c).replace(/</g, '&lt;')}</div>`).join('')}</div>`).join('') + '</body>';
+    writeFileSync(`${dir}/img-${k}.html`, html);
+    writeFileSync(`${dir}/keys/img-${k}.key.json`, JSON.stringify(part.map((r, j) => ({ n: `${k}-${j + 1}`, id: r.id, answer: r.answer, stem: r.stem.slice(0, 80), explanation: r.explanation }))));
+  }
+  console.log('review export:', text.length, 'text items in', Math.ceil(text.length / 150), 'files;', img.length, 'image items in', Math.ceil(img.length / 8), 'galleries');
+}
 
 /* ---------- sanity checks ---------- */
 {

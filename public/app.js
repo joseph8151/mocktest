@@ -39,6 +39,7 @@ function renderNav() {
     h('a', { href: '#/' }, '시험 상품'),
     ...(me ? [
       h('a', { class: 'keep', href: '#/me' }, '내 시험'),
+      h('a', { href: '#/mistakes' }, '오답노트'),
       me.role === 'admin' ? h('a', { href: '#/admin' }, '관리자') : null,
       h('button', { onclick: guard(async () => { await api('POST', '/auth/logout'); me = null; renderNav(); location.hash = '#/'; }) }, `로그아웃 (${me.name})`),
     ] : [h('a', { class: 'keep', href: '#/login' }, '로그인'), h('a', { class: 'cta', href: '#/register' }, '시작하기')]),
@@ -99,6 +100,7 @@ async function pageHome() {
     h('div', { class: 'index' }, Object.entries(EXAM_META).map(([type, m], i) => h('div', { class: 'exam-card', style: `--accent:${m.accent}` },
       h('div', { class: 'idx' }, h('span', {}, h('b', {}), `0${i + 1}`), h('span', {}, type)),
       h('h3', {}, m.name), h('div', { class: 'sub' }, m.sub),
+      h('div', { class: 'row small', style: 'margin:-6px 0 16px;gap:14px' }, h('a', { href: `#/info/${type}` }, '시험 안내'), h('a', { href: `#/sample/${type}` }, '무료 샘플 5문항')),
       h('ul', {}, m.points.map((x) => h('li', {}, x))),
       h('div', { class: 'push' }, products.filter((p) => p.exam_type === type).map((p) => h('div', { class: 'plan' },
         h('div', {}, h('div', { class: 'pt' }, p.id === 'p-test' ? '관리자 결제 테스트' : `${p.attempts}회권`), h('div', { class: 'pd' }, `${p.valid_days}D · ${money(p.price_usd_cents, 'USD')}`)),
@@ -115,6 +117,8 @@ async function pageHome() {
 }
 
 const PAY_METHODS = [['CARD', '신용·체크카드'], ['VIRTUAL_ACCOUNT', '가상계좌'], ['TRANSFER', '실시간 계좌이체'], ['MOBILE', '휴대폰 결제']];
+let paying = false;
+const once = (fn) => async (...a) => { if (paying) return; paying = true; try { await fn(...a); } finally { paying = false; } };
 function buy(p, payment) {
   if (!me) { toast('먼저 로그인해 주세요.'); location.hash = '#/login'; return; }
   const close = () => modal.remove();
@@ -128,8 +132,8 @@ function buy(p, payment) {
     h('div', { class: 'kicker' }, 'Checkout'), h('h3', {}, p.title), h('p', { class: 'muted small' }, `${p.attempts}회 응시 · ${p.valid_days}일 이내 사용`),
     shown.length ? h('div', {}, h('label', {}, '결제 수단'), h('div', { class: 'row paymethods' }, methodBtns)) : null,
     h('div', { class: 'row', style: 'margin-top:18px' },
-      shown.map(([k, l]) => h('button', { class: 'btn', onclick: guard(() => (k === 'kcp' ? payKcp(p, method) : payPortone(p, close, method))) }, `${me.role === 'admin' ? l + ' · ' : ''}${money(p.price_krw, 'KRW')}`)),
-      payment.stripe ? h('button', { class: 'btn alt', onclick: guard(() => payStripe(p)) }, `International card · ${money(p.price_usd_cents, 'USD')}`) : null,
+      shown.map(([k, l]) => h('button', { class: 'btn', onclick: guard(once(() => (k === 'kcp' ? payKcp(p, method) : payPortone(p, close, method)))) }, `${me.role === 'admin' ? l + ' · ' : ''}${money(p.price_krw, 'KRW')}`)),
+      payment.stripe ? h('button', { class: 'btn alt', onclick: guard(once(() => payStripe(p))) }, `International card · ${money(p.price_usd_cents, 'USD')}`) : null,
     ),
     !shown.length && !payment.stripe ? h('p', { class: 'err' }, '결제 수단이 아직 설정되지 않았습니다.') : null,
     h('p', { style: 'margin-top:16px' }, h('button', { class: 'btn alt sm', onclick: close }, '닫기')),
@@ -229,6 +233,11 @@ async function pageMe() {
     .filter((x) => x.pts.length >= 2).map((x) => growthChart(x.pts, x.t));
   const del = h('form', { class: 'row', onsubmit: guard(async (e) => { e.preventDefault(); if (!confirm('정말 탈퇴하시겠습니까? 되돌릴 수 없습니다.')) return; await api('POST', '/auth/delete', { password: del.pw.value }); me = null; renderNav(); toast('탈퇴가 완료되었습니다.'); location.hash = '#/'; }) },
     h('input', { name: 'pw', type: 'password', class: 'grow', placeholder: '비밀번호 확인', required: true }), h('button', { class: 'btn sm danger' }, '탈퇴하기'));
+  const recheck = guard(async (o) => {
+    const r = await api('POST', `/orders/${o.id}/recheck`);
+    toast(r.status === 'paid' ? '결제가 확인되어 이용권이 지급되었습니다.' : r.status === 'awaiting_deposit' ? '아직 입금이 확인되지 않았습니다.' : r.error || (r.status === 'failed' ? '결제가 완료되지 않았습니다.' : '결제 승인을 기다리는 중입니다.'));
+    pageMe();
+  });
   const refund = guard(async (o) => { const reason = prompt('환불 사유를 입력해 주세요 (선택)') ; if (reason === null) return; await api('POST', `/orders/${o.id}/request-refund`, { reason }); toast('환불 요청이 접수되었습니다.'); pageMe(); });
   mount(
     h('h2', {}, `안녕하세요, ${me.name}님`),
@@ -238,8 +247,8 @@ async function pageMe() {
     ov.attempts.some((a) => a.status === 'in_progress') ? h('div', { class: 'card' }, h('b', {}, '진행 중인 시험이 있습니다. '), ov.attempts.filter((a) => a.status === 'in_progress').map((a) => h('a', { class: 'btn sm', href: `#/exam/${a.id}` }, `${a.exam_type} 이어서 풀기`))) : null,
     h('div', { class: 'card' }, h('h3', {}, '응시 기록'), ov.attempts.length ? h('table', {}, ov.attempts.map((a) => h('tr', {}, h('td', {}, a.exam_type), h('td', {}, date(a.started_at)), h('td', {}, statusBadge(a.status)),
       h('td', {}, a.status !== 'in_progress' ? h('a', { href: `#/report/${a.id}` }, '리포트') : null)))) : h('p', { class: 'muted' }, '아직 응시 기록이 없습니다.')),
-    h('div', { class: 'card' }, h('h3', {}, '결제 내역'), ord.orders.length ? h('table', {}, ord.orders.map((o) => h('tr', {}, h('td', {}, o.title), h('td', {}, money(o.amount, o.currency)), h('td', {}, date(o.paid_at || o.created_at)), h('td', {}, h('span', { class: 'badge ' + (o.status === 'paid' ? 'ok' : o.status === 'awaiting_deposit' ? 'warn' : 'bad') }, { paid: '결제완료', refunded: '환불', failed: '실패', awaiting_deposit: '입금 대기' }[o.status] || o.status)),
-      h('td', {}, o.status === 'paid' && o.provider !== 'admin' ? (o.refund_status === 'pending' ? h('span', { class: 'badge warn' }, '환불 검토중') : o.refund_status === 'rejected' ? h('span', { class: 'badge' }, '환불 거절됨') : h('button', { class: 'btn sm alt', onclick: () => refund(o) }, '환불 요청')) : null)))) : h('p', { class: 'muted' }, '결제 내역이 없습니다.')),
+    h('div', { class: 'card' }, h('h3', {}, '결제 내역'), ord.orders.length ? h('table', {}, ord.orders.map((o) => h('tr', {}, h('td', {}, o.title), h('td', {}, money(o.amount, o.currency)), h('td', {}, date(o.paid_at || o.created_at)), h('td', {}, h('span', { class: 'badge ' + (o.status === 'paid' ? 'ok' : ['awaiting_deposit', 'pending'].includes(o.status) ? 'warn' : 'bad') }, { paid: '결제완료', refunded: '환불', failed: '실패', awaiting_deposit: '입금 대기', pending: '결제 진행중' }[o.status] || o.status)),
+      h('td', {}, ['pending', 'awaiting_deposit'].includes(o.status) ? h('button', { class: 'btn sm alt', onclick: () => recheck(o) }, '결제 확인') : null, o.status === 'paid' && o.provider !== 'admin' ? (o.refund_status === 'pending' ? h('span', { class: 'badge warn' }, '환불 검토중') : o.refund_status === 'rejected' ? h('span', { class: 'badge' }, '환불 거절됨') : h('button', { class: 'btn sm alt', onclick: () => refund(o) }, '환불 요청')) : null)))) : h('p', { class: 'muted' }, '결제 내역이 없습니다.')),
     me.role === 'admin' ? h('div', { class: 'card' }, h('div', { class: 'kicker' }, 'Admin'), h('h3', {}, '관리자 체험 응시'), h('p', { class: 'muted small' }, '결제 없이 모든 시험을 직접 풀어 볼 수 있습니다. (횟수 제한 없음)'), h('div', { class: 'row' }, exams.map((x) => h('button', { class: 'btn sm alt', onclick: () => start(x.type) }, x.type === 'TOEFLJ' ? 'TOEFL Jr' : x.type)))) : null,
     charts.length ? h('div', { class: 'card' }, h('h3', {}, '성적 추이 (종합 추정 점수)'), h('div', { class: 'grid' }, charts)) : null,
     h('div', { class: 'card' }, h('h3', {}, '회원 정보'), prof, h('h3', {}, '비밀번호 변경'), pw),
@@ -261,6 +270,89 @@ function growthChart(points, label) {
     const d = mk('text', { x: X(i), y: H - 6, 'text-anchor': 'middle', 'font-size': 9, fill: 'var(--muted)' }); d.textContent = new Date(p.t).toLocaleDateString('ko-KR', { month: 'numeric', day: 'numeric' }); svg.append(d);
   });
   return h('div', {}, h('b', {}, label), svg);
+}
+
+
+/* ---------- exam guides, free sample, wrong-answer notebook ---------- */
+const EXAM_INFO = {
+  MAP: { about: 'NWEA가 만든 적응형 학업 진단. 정답이면 더 어려운 문제, 오답이면 더 쉬운 문제가 나와 실제 수준을 정밀하게 찾아갑니다.', who: '미국 초·중등 학생, 국제학교 입학·진급 평가(Reading · Language Usage · Math)', score: 'RIT 점수(대략 100~350)로 표시되며 같은 학생이 반복 응시해 성장 폭을 보는 데 적합합니다. 이 사이트의 점수는 RIT와 비슷한 척도로 환산한 추정치입니다.',
+    tips: ['모르는 문제에 오래 머물지 마세요. 정확도가 난이도를 결정하므로 모르면 가장 그럴듯한 답을 고르고 넘어가는 편이 낫습니다.', '독해는 질문을 먼저 읽고 근거 문장을 찾아 확인하세요.', '수학은 계산 실수를 줄이려면 식을 한 줄씩 적어 보세요.'] },
+  CAT4: { about: 'GL Assessment의 인지능력 검사. 학교에서 배운 지식이 아니라 추론하는 힘을 네 영역(언어·수리·비언어·공간)으로 측정합니다.', who: '영국계 국제학교 입학·배치(만 6~17세)', score: '표준연령점수(SAS) 평균 100, 표준편차 15. 스태나인 1~9에서 5가 평균이며 7 이상이면 상위권입니다. 이 사이트는 정답률을 SAS로 환산한 추정치를 보여 줍니다.',
+    tips: ['영역마다 제한 시간이 짧습니다. 한 문제에 30초 이상 쓰지 않는 연습을 하세요.', '비언어·공간 문제는 도형의 "변하는 규칙(개수·방향·색)"을 하나씩 확인하세요.', '언어 영역은 단어 관계(반대·부분·기능 등)를 먼저 한 문장으로 정의한 뒤 보기를 보세요.'] },
+  COGAT: { about: 'Riverside Insights의 인지능력 검사. 언어·수리·비언어 세 배터리로 구성되며 영재 선발과 사립학교 입학에 널리 쓰입니다.', who: '미국 영재 프로그램·사립학교 지원 학생(K~12)', score: '표준연령점수(SAS) 평균 100, 표준편차 16, 스태나인 1~9. 이 사이트는 정답률을 SAS로 환산한 추정치입니다.',
+    tips: ['수 계열은 앞뒤 숫자의 차이→차이의 차이 순서로 규칙을 찾으세요.', '유추 문제는 두 단어의 관계를 문장으로 만들어 세 번째 단어에 그대로 적용하세요.', '도형 문제는 보기를 하나씩 소거하는 방식이 빠릅니다.'] },
+  SCAT: { about: 'Johns Hopkins CTY가 영재 판별에 쓰는 상위 수준(above-level) 검사. 현재 학년보다 높은 난이도의 어휘 유추와 수량 비교로 구성됩니다.', who: '영재교육 프로그램 지원 학생(주로 초 2~중 8)', score: '영역별 척도 점수와 학년 대비 백분위로 해석합니다. 이 사이트는 영역별 200~300 척도를 가정한 추정치입니다.',
+    tips: ['수량 비교는 "계산하지 않고 비교"하는 것이 핵심입니다. 같은 항을 지워 보세요.', '문자 값이 정해지지 않은 문제는 "결정할 수 없다"가 정답일 수 있습니다.', '어려운 어휘는 어근·접두사로 뜻을 추측하세요.'] },
+  SSAT: { about: 'Enrollment Management Association의 사립(특히 기숙) 학교 입학 시험. Writing Sample, Quantitative, Reading, Verbal로 구성됩니다.', who: '미국 사립·기숙학교 지원 학생(초 3~고 11)', score: '영역별 440~710 척도점수의 합계와 백분위. 오답 감점이 있는 실제 시험과 달리 이 모의고사는 정답 수로 환산한 추정치입니다. 라이팅은 점수화되지 않고 학교에 전달됩니다.',
+    tips: ['Verbal은 동의어·유추를 빨리 풀고 시간을 Reading에 남기세요.', 'Reading은 지문의 주제문·화자의 태도(tone)를 먼저 파악하세요.', '라이팅 샘플은 첫 문단에서 입장을 분명히 하고 구체적 예시를 쓰세요.'] },
+  ISEE: { about: 'ERB가 주관하는 사립학교 입학 시험. Verbal Reasoning, Quantitative Reasoning, Reading, Mathematics Achievement, Essay로 구성됩니다.', who: '미국 사립 통학학교 지원 학생(초 2~고 12)', score: '영역별 760~940 척도점수와 스태나인, 백분위. 에세이는 점수화되지 않고 학교에 전달됩니다. 이 사이트는 추정치를 보여 줍니다.',
+    tips: ['문장 완성은 빈칸 앞뒤의 접속어(however, because)로 방향을 먼저 잡으세요.', 'Quantitative는 "계산 없이 어림"으로 보기를 줄일 수 있는지 먼저 보세요.', '에세이는 도입-근거 2개-결론의 틀을 외워 두세요.'] },
+  SAT: { about: 'College Board의 대학 입학 시험(디지털 SAT). Reading & Writing과 Math 두 섹션이며 응답에 따라 두 번째 모듈의 난이도가 달라집니다.', who: '고등학생(대학 지원), 국제학교 상위 학년', score: '섹션별 200~800, 합산 400~1600. 이 사이트는 정답률을 환산한 추정치이며 실제 SAT의 등화(equating)와 다릅니다.',
+    tips: ['Reading & Writing은 지문을 다 읽기 전에 "무엇을 묻는지"를 먼저 보세요.', '문법 문제는 문장 경계(쉼표·접속사)→주어-동사 일치→시제 순으로 점검하세요.', 'Math는 그래프·표 문제에서 축의 단위를 먼저 확인하세요.'] },
+  TOEFLJ: { about: 'ETS의 중등용 영어 숙달도 평가(TOEFL Junior Standard). 듣기 · 언어 형식과 의미(문법·어휘) · 읽기로 구성됩니다.', who: '만 11~15세 영어 학습자, 영어 성적 제출이 필요한 국제학교 지원자', score: '영역별 200~300, 합산 600~900과 CEFR(A2~B2) 수준으로 해석합니다. 이 사이트는 영역별 정답률을 환산한 추정치입니다.',
+    tips: ['듣기는 질문 유형(주제·세부·의도)을 미리 떠올리고 들으세요. (이 사이트는 최대 2회 재생)', '문법 문제는 빈칸의 품사를 먼저 판단하세요.', '독해는 공지·이메일·기사 등 글의 목적을 먼저 파악하세요.'] },
+  WIDA: { about: 'WIDA ACCESS는 미국 K-12 영어 학습자의 영어 숙달도를 듣기·말하기·읽기·쓰기로 평가합니다.', who: '미국 공립학교 영어 학습자(ELL/EL), 영어 숙달도를 확인하려는 학생', score: '영역별 Proficiency Level 1~6. 종합 레벨은 읽기·쓰기 35%씩, 듣기·말하기 15%씩 가중합니다. 쓰기·말하기는 교사가 채점합니다.',
+    tips: ['듣기는 핵심어(누가·언제·어디)를 메모하듯 들으세요.', '말하기는 완전한 문장으로 이유와 예시를 덧붙여 말해 보세요.', '쓰기는 첫 문장에 주제를 쓰고 연결어(first, then, because)를 활용하세요.'] },
+};
+const SCORE_HELP = {
+  MAP: '영역 점수는 난이도를 반영한 추정치이며 Beginning → Developing → Proficient → Advanced 순으로 성취 수준을 나눕니다. 같은 영역을 반복 응시해 변화를 보세요.',
+  CAT4: 'SAS 100이 평균입니다. 85 미만이면 보완이 필요하고 115 이상이면 강점 영역입니다. 스태나인 5가 평균, 7 이상이 상위권입니다.',
+  COGAT: 'SAS 100이 평균입니다(표준편차 16). 스태나인 7 이상이면 상위권이고 영재 프로그램 선발은 보통 상위 3~5% 이내를 봅니다.',
+  SCAT: '영역별 점수는 현재 학년보다 높은 수준의 문제를 기준으로 합니다. 절대 점수보다 영역 간 균형과 반복 응시 시 변화를 보세요.',
+  SSAT: '합산 점수는 3개 점수 영역(Quantitative · Reading · Verbal)의 합입니다. 라이팅 샘플은 점수에 포함되지 않습니다.',
+  ISEE: '합산 점수는 4개 점수 영역의 합이며 에세이는 점수에 포함되지 않습니다. 스태나인 5가 평균입니다.',
+  SAT: '합산 점수는 Reading & Writing + Math(400~1600)입니다. 실제 SAT는 응시자 집단 기준으로 환산하므로 이 점수는 참고용입니다.',
+  TOEFLJ: '영역별 200~300점, 합산 600~900점입니다. 점수대가 높을수록 CEFR 상위 수준(B1~B2)에 해당합니다.',
+  WIDA: 'Level 1(Entering) → 6(Reaching). 종합 레벨은 영역별 가중 평균입니다. 쓰기·말하기는 채점 후 표시됩니다.',
+};
+
+async function pageInfo(type) {
+  type = (type || '').toUpperCase(); const meta = EXAM_META[type], inf = EXAM_INFO[type];
+  if (!meta || !inf) return mount(h('div', { class: 'card' }, h('h2', {}, '시험을 찾을 수 없습니다.')));
+  const [{ exams }, { products, payment }] = await Promise.all([api('GET', '/exam-info'), api('GET', '/products')]);
+  const e = exams.find((x) => x.type === type), mine = products.filter((p) => p.exam_type === type && p.id !== 'p-test');
+  const totalMin = e.sections.reduce((a, s) => a + s.minutes, 0), totalQ = e.sections.reduce((a, s) => a + s.n, 0);
+  mount(
+    h('div', { class: 'kicker' }, 'Test guide'), h('h1', { style: 'font-family:var(--serif);font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-.05em;margin:6px 0 10px' }, meta.name),
+    h('p', { class: 'lead muted', style: 'max-width:42em' }, inf.about),
+    h('div', { class: 'stats', style: 'margin:22px 0;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))' }, [['총 문항', `${totalQ}`], ['총 시간', `${totalMin}분`], ['영역', `${e.sections.length}개`], ['출제 방식', e.adaptive ? '적응형' : '고정형']].map(([l, v]) => h('div', { class: 'stat' }, h('div', { class: 'muted small' }, l), h('b', {}, v)))),
+    h('div', { class: 'card' }, h('h3', {}, '시험 구성'), h('table', {}, h('tr', {}, ['영역', '문항', '시간', '채점'].map((x) => h('th', {}, x))), e.sections.map((s) => h('tr', {}, h('td', {}, s.name), h('td', {}, s.n), h('td', {}, `${s.minutes}분`), h('td', {}, s.manual ? '교사 채점' : '자동 채점'))))),
+    h('div', { class: 'grid', style: 'grid-template-columns:repeat(auto-fit,minmax(300px,1fr))' },
+      h('div', { class: 'card' }, h('div', { class: 'kicker' }, 'Who takes it'), h('p', {}, inf.who)),
+      h('div', { class: 'card' }, h('div', { class: 'kicker' }, 'Scoring'), h('p', {}, inf.score))),
+    h('div', { class: 'card' }, h('h3', {}, '이렇게 준비하세요'), h('ul', { style: 'padding-left:1.1em;margin:0' }, inf.tips.map((t) => h('li', { style: 'margin:6px 0' }, t)))),
+    h('div', { class: 'cta-band', style: 'margin-top:28px' }, h('div', {}, h('h2', {}, `${meta.name} 무료 체험`), h('p', {}, '로그인 없이 5문항을 풀어 보고 바로 해설을 확인하세요.')), h('div', { class: 'row' },
+      h('a', { class: 'btn lg', href: `#/sample/${type}` }, '무료 샘플 풀기 →'), ...mine.slice(0, 1).map((p) => h('button', { class: 'btn lg alt', style: 'color:inherit;border-color:currentColor', onclick: () => buy(p, payment) }, `${p.title} · ${money(p.price_krw, 'KRW')}`)))),
+  );
+}
+
+async function pageSample(type) {
+  type = (type || '').toUpperCase();
+  const d = await api('GET', `/sample/${type}`), picked = {};
+  const out = h('div', {});
+  const submit = guard(async () => {
+    const answers = d.questions.map((q) => ({ id: q.id, choice: picked[q.id] ?? null }));
+    const r = await api('POST', '/sample/grade', { answers });
+    const by = Object.fromEntries(r.results.map((x) => [x.id, x]));
+    document.querySelectorAll('[data-q]').forEach((card) => { const x = by[card.dataset.q]; if (!x) return; card.classList.add(x.correct ? 'good' : 'wrong'); card.querySelectorAll('.choice').forEach((c, i) => { c.style.pointerEvents = 'none'; c.classList.remove('sel'); if (i === x.answer) c.classList.add('right'); else if (picked[card.dataset.q] === i) c.classList.add('miss'); }); card.append(h('p', { class: 'small' }, h('b', {}, x.correct ? '정답. ' : '오답. '), x.explanation || '')); });
+    btn.remove(); out.replaceChildren(h('div', { class: 'score-hero' }, h('div', {}, h('div', { class: 'muted' }, 'Sample result'), h('h2', {}, `${r.total}문항 중 ${r.score}문항 정답`), h('p', { class: 'muted small' }, '실제 시험은 영역별 제한 시간이 있고 점수와 리포트가 제공됩니다.')), h('a', { class: 'btn', href: `#/info/${type}` }, '시험 안내 · 구매 →')));
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  const btn = h('button', { class: 'btn lg', onclick: submit }, '채점하기');
+  mount(h('div', { class: 'kicker' }, 'Free sample · no login'), h('h2', {}, `${d.title} 무료 샘플`), out,
+    d.questions.map((q, n) => { const boxes = q.choices.map((c, i) => h('label', { class: 'choice', onclick: () => { picked[q.id] = i; boxes.forEach((b, j) => b.classList.toggle('sel', i === j)); } }, h('b', {}, 'ABCD'[i]), choiceNode(c)));
+      return h('div', { class: 'card', 'data-q': q.id }, h('div', { class: 'small muted' }, `#${n + 1} · ${q.section}`), q.passage ? h('div', { class: 'passage' }, q.passage) : null, q.image_svg ? h('img', { class: 'qimg', src: svgUri(q.image_svg), alt: '' }) : null, h('h3', { class: 'stem' }, q.stem), boxes); }), btn);
+}
+
+async function pageMistakes(q = {}) {
+  if (!me) return (location.hash = '#/login');
+  const exam = q.exam || '';
+  const { items } = await api('GET', '/me/mistakes' + (exam ? `?exam=${exam}` : ''));
+  const sel = h('select', { onchange: () => (location.hash = `#/mistakes${sel.value ? '?exam=' + sel.value : ''}`) }, h('option', { value: '' }, '전체 시험'), ...Object.keys(EXAM_META).map((x) => h('option', { value: x, selected: x === exam }, x)));
+  mount(h('div', { class: 'kicker' }, 'Review'), h('h2', {}, '오답노트'), h('p', { class: 'muted' }, '지금까지 틀린 문제를 최근 순으로 모았습니다. 해설을 읽고 같은 유형을 다시 풀어 보세요.'), h('div', { class: 'row', style: 'margin-bottom:16px' }, sel, h('span', { class: 'muted small' }, `${items.length}문항`)),
+    items.length ? items.map((it, i) => h('div', { class: 'card wrong' }, h('div', { class: 'small muted' }, `${it.exam_type} · ${it.section} · 난이도 ${it.difficulty}`), it.passage ? h('div', { class: 'passage' }, it.passage) : null, it.image_svg ? h('img', { class: 'qimg', src: svgUri(it.image_svg), alt: '' }) : null, h('b', {}, it.stem),
+      h('div', {}, it.choices.map((c, j) => h('div', { class: 'choice' + (j === it.answer ? ' right' : j === it.choice ? ' miss' : '') }, h('b', {}, 'ABCD'[j]), choiceNode(c), j === it.choice ? h('span', { class: 'badge bad' }, '내 답') : null, j === it.answer ? h('span', { class: 'badge ok' }, '정답') : null))),
+      it.explanation ? h('p', { class: 'small' }, h('b', {}, '해설 '), it.explanation) : null)) : h('div', { class: 'card' }, h('p', { class: 'muted' }, '아직 오답이 없습니다. 시험을 응시하면 틀린 문제가 여기에 쌓입니다.')));
 }
 
 /* ---------- exam runner ---------- */
@@ -332,6 +424,22 @@ async function pageExam(id) {
 }
 
 /* ---------- report ---------- */
+function analytics(r, t) {
+  const A = r.items.filter((i) => i.correct === 0 || i.correct === 1);
+  if (!A.length) return null;
+  const pct = (xs) => (xs.length ? Math.round((xs.filter((i) => i.correct === 1).length / xs.length) * 100) : null);
+  const bands = [['쉬움 (난이도 1–2)', A.filter((i) => i.difficulty <= 2)], ['보통 (3)', A.filter((i) => i.difficulty === 3)], ['어려움 (4–5)', A.filter((i) => i.difficulty >= 4)]];
+  const secs = Object.entries(Object.groupBy ? Object.groupBy(A, (i) => i.section) : A.reduce((m, i) => ((m[i.section] ||= []).push(i), m), {}));
+  const secStats = secs.map(([k, xs]) => ({ k, n: xs.length, pct: pct(xs), sec: Math.round(xs.reduce((a, i) => a + (i.time_ms || 0), 0) / xs.length / 1000) }));
+  const weak = secStats.filter((x) => x.n >= 3).sort((a, b) => a.pct - b.pct)[0];
+  return h('div', { class: 'card' }, h('div', { class: 'kicker' }, 'Analysis'), h('h3', {}, '결과 분석'),
+    h('div', { class: 'grid', style: 'grid-template-columns:repeat(auto-fit,minmax(260px,1fr))' },
+      h('div', {}, h('b', { class: 'small' }, '난이도별 정답률'), bands.map(([l, xs]) => h('div', { style: 'margin:10px 0' }, h('div', { class: 'small muted' }, `${l} · ${xs.length ? pct(xs) + '%' : '-'} (${xs.filter((i) => i.correct === 1).length}/${xs.length})`), h('div', { class: 'bar' }, h('i', { style: `width:${pct(xs) || 0}%` }))))),
+      h('div', {}, h('b', { class: 'small' }, '영역별 평균 풀이 시간'), h('table', {}, secStats.map((x) => h('tr', {}, h('td', {}, x.k), h('td', {}, x.sec < 1 ? '<1초/문항' : `${x.sec}초/문항`), h('td', {}, `${x.pct}%`)))))),
+    weak ? h('p', {}, h('b', {}, '보완 포인트: '), `${weak.k} 영역의 정답률이 ${weak.pct}%로 가장 낮습니다. `, h('a', { href: `#/mistakes?exam=${t}` }, '오답노트에서 복습하기 →')) : null,
+    SCORE_HELP[t] ? h('p', { class: 'small muted' }, h('b', {}, '점수 해석: '), SCORE_HELP[t]) : null);
+}
+
 async function pageReport(id) {
   if (!me) return (location.hash = '#/login');
   const r = await api('GET', `/attempts/${id}/report`);
@@ -360,7 +468,7 @@ async function pageReport(id) {
     h('div', { class: 'small muted' }, `#${i + 1} · ${it.section} · 난이도 ${it.difficulty}`),
     it.passage ? h('div', { class: 'passage' }, it.passage) : null,
     it.image_svg ? h('img', { class: 'qimg', src: svgUri(it.image_svg), alt: '' }) : null, h('b', {}, it.stem),
-    it.kind === 'mcq' ? h('div', {}, it.choices.map((c, j) => h('div', { class: 'choice' + (j === it.answer ? ' sel' : '') }, h('b', {}, 'ABCDEFGH'[j]), choiceNode(c), j === it.choice ? h('span', { class: 'badge ' + (j === it.answer ? 'ok' : 'bad') }, '내 답') : null, j === it.answer ? h('span', { class: 'badge ok' }, '정답') : null)), it.explanation ? h('p', { class: 'small muted' }, `해설: ${it.explanation}`) : null)
+    it.kind === 'mcq' ? h('div', {}, it.choices.map((c, j) => h('div', { class: 'choice' + (j === it.answer ? ' right' : j === it.choice ? ' miss' : '') }, h('b', {}, 'ABCDEFGH'[j]), choiceNode(c), j === it.choice ? h('span', { class: 'badge ' + (j === it.answer ? 'ok' : 'bad') }, '내 답') : null, j === it.answer ? h('span', { class: 'badge ok' }, '정답') : null)), it.explanation ? h('p', { class: 'small muted' }, `해설: ${it.explanation}`) : null)
       : h('div', {}, it.text ? h('div', { class: 'passage' }, it.text) : h('p', { class: 'muted' }, '(녹음 응답)'), h('p', {}, it.manual_score ? `교사 점수: ${it.manual_score}/6` : '채점 대기 중', it.feedback ? ` · ${it.feedback}` : ''))));
   mount(
     h('div', { class: 'score-hero' },
@@ -370,6 +478,7 @@ async function pageReport(id) {
       h('div', { style: 'text-align:right' }, h('div', { class: 'muted small' }, overallLabel), h('div', { class: 'total' }, overallVal ?? '–'))),
     h('div', { class: 'rings' }, cards),
     h('p', { class: 'small muted' }, '※ 모의고사 결과는 공식 점수가 아닌 추정치이며 학습 참고용입니다.'),
+    analytics(r, t),
     h('h3', {}, '문항별 리뷰'), items);
 }
 
@@ -418,6 +527,7 @@ async function adminOrders(b) {
   b.append(h('p', {}, h('a', { class: 'btn sm alt', href: '/api/admin/orders.csv' }, 'CSV 내보내기')), h('table', {}, h('tr', {}, ['일시', '회원', '상품', '수단', '금액', '상태', ''].map((x) => h('th', {}, x))), orders.map((o) => h('tr', {},
     h('td', {}, date(o.created_at)), h('td', {}, `${o.name} (${o.email})`), h('td', {}, o.title), h('td', {}, o.provider), h('td', {}, money(o.amount, o.currency)), h('td', {}, o.status),
     h('td', {}, o.refund_status === 'pending' ? h('div', { class: 'small' }, h('span', { class: 'badge warn' }, '환불요청'), ` ${o.refund_reason || ''} `, h('button', { class: 'btn sm alt', onclick: guard(async () => { await api('POST', `/admin/refund-requests/${o.refund_id}/reject`); pageAdmin('orders'); }) }, '거절')) : null,
+      ['pending', 'failed', 'awaiting_deposit'].includes(o.status) && o.provider !== 'admin' ? h('button', { class: 'btn sm alt', onclick: guard(async () => { const r = await api('POST', `/admin/orders/${o.id}/recheck`); toast(`결제사 확인 결과: ${r.status}${r.error ? ' (' + r.error + ')' : ''}`); pageAdmin('orders'); }) }, '재확인') : null,
       o.status === 'paid' && o.provider !== 'admin' ? h('button', { class: 'btn sm danger', onclick: guard(async () => { if (confirm('PG사에 환불을 요청하고 이용권을 회수합니다. 진행할까요?')) { await api('POST', `/admin/orders/${o.id}/refund`); toast('환불 완료'); pageAdmin('orders'); } }) }, '환불') : null)))));
 }
 async function adminProducts(b) {
@@ -491,7 +601,7 @@ let cfg = { site: 'MockTest Lab', biz: {} };
 const LEGAL = {
   terms: ['이용약관', (c) => [
     ['제1조 (목적)', `이 약관은 ${c.biz.name}(이하 "회사")가 제공하는 ${c.site} 온라인 모의고사 서비스(이하 "서비스")의 이용 조건과 절차, 회사와 회원의 권리·의무를 규정합니다.`],
-    ['제2조 (서비스 내용)', '회사는 MAP, CAT4, SCAT, SSAT, ISEE, WIDA 형식을 참고해 자체 제작한 연습용 모의고사를 제공합니다. 본 서비스는 NWEA, GL Assessment, Johns Hopkins CTY, Enrollment Management Association(SSAT), ERB(ISEE), WIDA와 제휴·승인 관계가 없으며, 제공되는 점수는 학습 참고용 추정치이고 공식 점수가 아닙니다.'],
+    ['제2조 (서비스 내용)', '회사는 MAP, CAT4, CogAT, SCAT, SSAT, ISEE, SAT, TOEFL Junior, WIDA 형식을 참고해 자체 제작한 연습용 모의고사를 제공합니다. 본 서비스는 NWEA, GL Assessment, Riverside Insights(CogAT), Johns Hopkins CTY, Enrollment Management Association(SSAT), ERB(ISEE), College Board(SAT), ETS(TOEFL), WIDA와 제휴·승인 관계가 없으며, 제공되는 점수는 학습 참고용 추정치이고 공식 점수가 아닙니다.'],
     ['제3조 (회원가입)', '회원은 정확한 정보를 입력해야 하며, 만 14세 미만 아동은 법정대리인(보호자)의 동의 하에 가입·이용해야 합니다. 계정은 타인에게 양도하거나 공유할 수 없습니다.'],
     ['제4조 (이용권과 결제)', '이용권은 결제 완료 시 자동 지급되며, 상품별로 정해진 응시 횟수와 유효기간 내에서 사용할 수 있습니다. 시험을 시작하면 응시 1회가 차감됩니다.'],
     ['제5조 (금지행위)', '문제의 복제·배포·캡처 후 공유, 자동화 도구를 이용한 응시, 타인 계정 도용, 서비스 운영 방해 행위를 금지하며, 위반 시 이용이 제한될 수 있습니다.'],
@@ -535,11 +645,16 @@ async function route() {
       case 'forgot': return pageForgot();
       case 'reset': return pageReset(seg[1]);
       case 'me': return await pageMe();
+      case 'info': return await pageInfo(seg[1]);
+      case 'sample': return await pageSample(seg[1]);
+      case 'mistakes': return await pageMistakes(q);
       case 'exam': return await pageExam(seg[1]);
       case 'report': return await pageReport(seg[1]);
       case 'admin': return await pageAdmin(seg[1]);
       case 'terms': case 'privacy': case 'refund': return pageLegal(seg[0]);
-      case 'pay': return seg[1] === 'success' ? await pagePaySuccess(q) : mount(h('div', { class: 'card' }, h('h2', {}, '결제가 취소되었습니다.'), h('a', { class: 'btn', href: '#/' }, '돌아가기')));
+      case 'pay': return seg[1] === 'success' ? await pagePaySuccess(q) : mount(h('div', { class: 'card intro' }, h('div', { class: 'big' }, 'Payment not completed'), h('h2', {}, '결제가 완료되지 않았습니다.'),
+        q.msg ? h('p', { class: 'err' }, q.msg) : null, h('p', { class: 'muted' }, '결제 금액이 청구되지 않았거나, 청구된 경우 자동으로 취소됩니다. 이미 결제가 됐는데 이용권이 보이지 않으면 “내 시험 > 결제 내역”에서 “결제 확인”을 눌러 주세요.'),
+        h('div', { class: 'row' }, h('a', { class: 'btn', href: '#/' }, '다시 시도하기'), h('a', { class: 'btn alt', href: '#/me' }, '내 시험'))));
       default: return mount(h('div', { class: 'card' }, h('h2', {}, '페이지를 찾을 수 없습니다.')));
     }
   } catch (e) {
@@ -554,6 +669,10 @@ document.addEventListener('keydown', (e) => { if (e.key === 'Escape') document.q
   try { cfg = await api('GET', '/config'); const b = cfg.biz; document.getElementById('bizinfo').textContent = `${b.name} · 대표 ${b.owner} · 사업자등록번호 ${b.regNo} · 통신판매업 ${b.salesNo} · ${b.address} · ${b.contact}`; } catch {}
   renderNav();
   const po = new URLSearchParams(location.search).get('portone_order'); // mobile redirect return
-  if (po) { history.replaceState(null, '', '/'); location.hash = `#/pay/success?order=${po}&provider=portone`; }
+  if (po) {
+    const qp = new URLSearchParams(location.search), code = qp.get('code'), msg = qp.get('message');
+    history.replaceState(null, '', '/');
+    location.hash = code ? `#/pay/cancel?msg=${encodeURIComponent(msg || code)}` : `#/pay/success?order=${po}&provider=portone`;
+  }
   route();
 })();
