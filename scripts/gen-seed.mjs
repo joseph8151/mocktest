@@ -1,6 +1,6 @@
 // Generates seed/seed.sql: products + ORIGINAL sample questions (format-inspired, not copied).
 import { writeFileSync } from 'node:fs';
-import { barChart, lineChart, pieChart, rectFig, rightTriangle, circleFig, coordPlane, angleFig, numberLine, gridShape } from './svgcharts.mjs';
+import { barChart, lineChart, pieChart, rectFig, rightTriangle, circleFig, coordPlane, angleFig, numberLine, gridShape, scatterPlot, groupedBar, histogram, pictograph, venn, clockFace, fractionShade, tableSvg, reflectGrid } from './svgcharts.mjs';
 
 let seedState = 12345;
 const rnd = () => ((seedState = (seedState * 1664525 + 1013904223) % 4294967296) / 4294967296);
@@ -279,6 +279,61 @@ function graphItem(kind) {
       const v = ri(-5, 5), svg = numberLine(-6, 6, v);
       return { stem: 'What number does point P represent on the number line?', svg, correct: v, wrong: [-v, v + 1, v - 1, v === 0 ? 2 : v * 2], expl: `P is at ${v}.` };
     }
+    case 'scatter': {
+      const m = ri(1, 3), b = ri(0, 3), yMax = 5 * Math.ceil((10 * m + b + 1) / 5), pts = [];
+      for (let x = 1; x <= 9; x++) pts.push([x, Math.max(0, Math.min(yMax, m * x + b + ri(-1, 1)))]);
+      const xq = ri(5, 9), ans = m * xq + b;
+      return { stem: `The scatterplot shows data with a line of best fit. According to the line, what is the predicted value of y when x = ${xq}?`, svg: scatterPlot({ title: 'Line of best fit', points: pts, xMax: 10, yMax, step: yMax <= 20 ? 2 : 5, line: { m, b } }), correct: ans, wrong: [ans + m, ans - m, m * xq, ans + 2], expl: `The line has slope ${m} and y-intercept ${b}: y = ${m}(${xq}) + ${b}.` };
+    }
+    case 'scatter2': {
+      const type = pick(['positive', 'negative', 'none']), pts = [];
+      for (let x = 1; x <= 9; x++) pts.push([x, Math.max(0, Math.min(10, type === 'positive' ? x + ri(-1, 1) : type === 'negative' ? 10 - x + ri(-1, 1) : ri(1, 9)))]);
+      const labels = { positive: 'a positive association', negative: 'a negative association', none: 'little or no association' };
+      return { stem: 'Which statement best describes the relationship between x and y in the scatterplot?', svg: scatterPlot({ title: 'Scatterplot', points: pts }), correct: labels[type], wrong: Object.entries(labels).filter(([k]) => k !== type).map(([, v]) => v).concat(['an exact linear relationship with slope 0']), expl: `The points trend ${type === 'none' ? 'in no clear direction' : type === 'positive' ? 'upward' : 'downward'}.` };
+    }
+    case 'gbar': {
+      const [s1, s2] = pick([['2023', '2024'], ['Boys', 'Girls'], ['Class A', 'Class B']]), labels = pick([['Math', 'Art', 'Music', 'Sports'], ['Fall', 'Winter', 'Spring', 'Summer'], ['Grade 5', 'Grade 6', 'Grade 7', 'Grade 8']]);
+      let a, c, diffs; do { a = labels.map(() => 5 * ri(2, 9)); c = labels.map(() => 5 * ri(2, 9)); diffs = a.map((v, i) => Math.abs(v - c[i])); } while (!uniq(diffs) || Math.min(...diffs) === 0);
+      const svg = groupedBar({ title: `${s1} vs ${s2}`, labels, series: [{ name: s1, values: a }, { name: s2, values: c }], yMax: 50, yStep: 5, yLabel: 'Count' }), t = ri(0, 1);
+      if (t === 0) { const k = diffs.indexOf(Math.max(...diffs)); return { stem: `In which category is the difference between ${s1} and ${s2} the greatest?`, svg, correct: labels[k], wrong: labels.filter((_, i) => i !== k), expl: `The largest gap is ${Math.max(...diffs)} in ${labels[k]}.` }; }
+      const k = ri(0, 3); return { stem: `What is the combined total of ${s1} and ${s2} for "${labels[k]}"?`, svg, correct: a[k] + c[k], wrong: [a[k] + c[k] + 5, a[k] + c[k] - 5, Math.abs(a[k] - c[k]), a[k] * 2], expl: `${a[k]} + ${c[k]}.` };
+    }
+    case 'hist': {
+      const bins = ['50–59', '60–69', '70–79', '80–89', '90–100'], vals = bins.map(() => 2 * ri(1, 7)), k = ri(1, 3), sum = vals.slice(k).reduce((x, y) => x + y, 0), from = ['60', '70', '80'][k - 1];
+      return { stem: `The histogram shows test scores. How many students scored ${from} or higher?`, svg: histogram({ title: 'Test scores', bins, values: vals, yMax: 16, yStep: 2, xLabel: 'Score' }), correct: sum, wrong: [sum + 2, sum - 2, vals.slice(0, k).reduce((x, y) => x + y, 0), vals[k]], expl: `Add the bars from ${from} up: ${vals.slice(k).join(' + ')}.` };
+    }
+    case 'pict': {
+      const labels = pick([['Mon', 'Tue', 'Wed', 'Thu'], ['Apples', 'Pears', 'Plums', 'Figs'], ['Team A', 'Team B', 'Team C', 'Team D']]), unit = pick([2, 5, 10]); let cnt; do cnt = labels.map(() => ri(1, 7)); while (!uniq(cnt));
+      const [i, j] = shuffle([0, 1, 2, 3]).slice(0, 2), t = ri(0, 1);
+      if (t === 0) return { stem: `How many in total are shown for "${labels[i]}" and "${labels[j]}" together?`, svg: pictograph({ title: 'Picture graph', rows: labels.map((l, k) => ({ label: l, count: cnt[k] })), unit }), correct: (cnt[i] + cnt[j]) * unit, wrong: [(cnt[i] + cnt[j]) * unit + unit, (cnt[i] + cnt[j]), Math.abs(cnt[i] - cnt[j]) * unit, (cnt[i] + cnt[j]) * unit - unit], expl: `(${cnt[i]} + ${cnt[j]}) stars × ${unit}.` };
+      return { stem: `Each star stands for ${unit}. How many more does "${labels[i]}" have than "${labels[j]}"? (Use the absolute difference.)`, svg: pictograph({ title: 'Picture graph', rows: labels.map((l, k) => ({ label: l, count: cnt[k] })), unit }), correct: Math.abs(cnt[i] - cnt[j]) * unit, wrong: [Math.abs(cnt[i] - cnt[j]), (cnt[i] + cnt[j]) * unit, Math.abs(cnt[i] - cnt[j]) * unit + unit, cnt[i] * unit], expl: `${Math.abs(cnt[i] - cnt[j])} stars × ${unit}.` };
+    }
+    case 'venn': {
+      const [A, B] = pick([['Soccer', 'Chess'], ['Choir', 'Band'], ['Math Club', 'Art Club']]), oa = ri(3, 14), bo = ri(2, 9), ob = ri(3, 14), out = ri(2, 10), t = ri(0, 2);
+      const svg = venn({ title: 'Students in clubs', aLabel: A, bLabel: B, onlyA: oa, both: bo, onlyB: ob, outside: out });
+      if (t === 0) return { stem: `How many students are in exactly one of the two clubs?`, svg, correct: oa + ob, wrong: [oa + ob + bo, oa + bo + ob + out, bo, oa + bo], expl: `${oa} + ${ob}.` };
+      if (t === 1) return { stem: `How many students are in ${A}? (Include those in both clubs.)`, svg, correct: oa + bo, wrong: [oa, oa + bo + ob, bo, oa + ob], expl: `${oa} + ${bo}.` };
+      return { stem: 'How many students are shown in total, including the students outside both circles?', svg, correct: oa + bo + ob + out, wrong: [oa + bo + ob, oa + ob + out, oa + bo + ob + out + bo, bo + out], expl: `${oa} + ${bo} + ${ob} + ${out}.` };
+    }
+    case 'clock': {
+      const h = ri(1, 12), m = 5 * ri(0, 11), fmt = (hh, mm) => `${((hh + 11) % 12) + 1}:${String(mm).padStart(2, '0')}`;
+      return { stem: 'What time does the clock show?', svg: clockFace(h, m), correct: fmt(h, m), wrong: [fmt(m / 5 || 12, h * 5 % 60), fmt(h + 1, m), fmt(h - 1, m), fmt(h, (m + 5) % 60)], expl: 'The short hand shows the hour and the long hand shows the minutes.' };
+    }
+    case 'fraction': {
+      const total = pick([4, 5, 6, 8, 10, 12]), sh = ri(1, total - 1), shape = pick(['bar', 'circle']);
+      return { stem: 'What fraction of the figure is shaded?', svg: fractionShade(total, sh, shape), correct: `${sh}/${total}`, wrong: [`${total - sh}/${total}`, `${sh}/${total - sh}`, `${Math.min(total, sh + 1)}/${total}`, `${total}/${sh}`], expl: `${sh} of ${total} equal parts are shaded.` };
+    }
+    case 'table': {
+      const items = shuffle(['Notebook', 'Pencil', 'Ruler', 'Eraser', 'Marker']).slice(0, 3), price = items.map(() => ri(1, 6)), qty = items.map(() => ri(2, 6));
+      const total = price.reduce((a, p, i) => a + p * qty[i], 0), k = ri(0, 2);
+      if (ri(0, 1)) return { stem: 'Based on the table, what is the total cost of all the items?', svg: tableSvg({ title: 'School supplies', headers: ['Item', 'Price ($)', 'Qty'], rows: items.map((n, i) => [n, price[i], qty[i]]) }), correct: `$${total}`, wrong: [`$${total + 3}`, `$${total - 2}`, `$${price.reduce((a, b) => a + b, 0)}`, `$${qty.reduce((a, b) => a + b, 0)}`], expl: `Multiply price × quantity for each row and add.` };
+      return { stem: `Based on the table, how much do the ${items[k].toLowerCase()}s cost altogether?`, svg: tableSvg({ title: 'School supplies', headers: ['Item', 'Price ($)', 'Qty'], rows: items.map((n, i) => [n, price[i], qty[i]]) }), correct: `$${price[k] * qty[k]}`, wrong: [`$${price[k] + qty[k]}`, `$${price[k] * qty[k] + price[k]}`, `$${price[k]}`, `$${price[k] * qty[k] - qty[k]}`], expl: `${price[k]} × ${qty[k]}.` };
+    }
+    case 'reflect': {
+      let x, y, pts; do { x = ri(1, 5) * pick([-1, 1]); y = ri(1, 5) * pick([-1, 1]); pts = [{ x, y, label: 'A' }, { x: x + pick([-2, 2]), y: y + pick([-2, 2]), label: 'B' }, { x: x + pick([-3, 3]), y, label: 'C' }]; } while (pts.some((p) => Math.abs(p.x) > 6 || Math.abs(p.y) > 6) || x === y || x === -y);
+      const axis = pick(['y-axis', 'x-axis']), cor = axis === 'y-axis' ? `(${-x}, ${y})` : `(${x}, ${-y})`;
+      return { stem: `Triangle ABC is reflected across the ${axis}. What are the coordinates of the image of point A?`, svg: reflectGrid(pts), correct: cor, wrong: [axis === 'y-axis' ? `(${x}, ${-y})` : `(${-x}, ${y})`, `(${-x}, ${-y})`, `(${y}, ${x})`, `(${x}, ${y})`], expl: `Reflecting across the ${axis} changes the sign of the ${axis === 'y-axis' ? 'x' : 'y'}-coordinate.` };
+    }
     default: { // grid area
       const all = []; for (let c = 0; c < 6; c++) for (let r = 0; r < 6; r++) all.push([c, r]);
       const cells = shuffle(all).slice(0, ri(7, 16));
@@ -286,7 +341,7 @@ function graphItem(kind) {
     }
   }
 }
-const GKINDS = ['bar', 'line', 'pie', 'rect', 'tri', 'circle', 'coord', 'angle', 'numline', 'grid'];
+const GKINDS = ['bar', 'line', 'pie', 'rect', 'tri', 'circle', 'coord', 'angle', 'numline', 'grid', 'scatter', 'scatter2', 'gbar', 'hist', 'pict', 'venn', 'clock', 'fraction', 'table', 'reflect'];
 function addGraph(exam, section, kinds, count, dMin, dMax) {
   for (let i = 0; i < count; i++) {
     const kind = kinds[i % kinds.length], g = graphItem(kind);
@@ -462,14 +517,51 @@ function satMath(count) {
     else if (t === 'abs') { const c = ri(1, 9), k = ri(2, 12); st = `What is the sum of the solutions to |x − ${c}| = ${k}?`; cor = 2 * c; wr = [c, 2 * k, c + k, 0]; ex = `x = ${c + k} or x = ${c - k}; the sum is ${2 * c}.`; d = 3; }
     else if (t === 'vol') { const r = ri(2, 7), h = ri(3, 12); st = `A right circular cylinder has radius ${r} and height ${h}. What is its volume?`; cor = `${r * r * h}π`; wr = [`${2 * r * h}π`, `${r * h}π`, `${r * r * h * 2}π`, `${r * r + h}π`]; ex = `V = πr²h = π(${r})²(${h}).`; d = 3; }
     else if (t === 'trig') { const [a, b, c] = pick([[3, 4, 5], [5, 12, 13], [8, 15, 17], [7, 24, 25]]); st = `In right triangle ABC, the right angle is at B, AB = ${a}, BC = ${b}, and AC = ${c}. What is sin A?`; cor = `${b}/${c}`; wr = [`${a}/${c}`, `${a}/${b}`, `${b}/${a}`, `${c}/${b}`]; ex = `sin A = opposite/hypotenuse = BC/AC.`; d = 4; }
-    else if (t === 'data') { const kind = pick(['bar', 'line', 'pie']); const g = graphItem(kind); st = g.stem; cor = g.correct; wr = g.wrong; ex = g.expl; img = g.svg; d = 2; }
-    else if (t === 'geo') { const kind = pick(['rect', 'tri', 'circle', 'angle', 'coord', 'grid']); const g = graphItem(kind); st = g.stem; cor = g.correct; wr = g.wrong; ex = g.expl; img = g.svg; d = 2; }
+    else if (t === 'data') { const kind = pick(['bar', 'line', 'pie', 'scatter', 'scatter2', 'gbar', 'hist', 'table']); const g = graphItem(kind); st = g.stem; cor = g.correct; wr = g.wrong; ex = g.expl; img = g.svg; d = 2; }
+    else if (t === 'geo') { const kind = pick(['rect', 'tri', 'circle', 'angle', 'coord', 'grid', 'reflect']); const g = graphItem(kind); st = g.stem; cor = g.correct; wr = g.wrong; ex = g.expl; img = g.svg; d = 2; }
     else if (t === 'age') { const a = ri(4, 12), k = ri(2, 4), y = ri(2, 6); st = `Maya is ${k} times as old as her brother. In ${y} years, the sum of their ages will be ${a * (k + 1) + 2 * y}. How old is Maya now?`; cor = a * k; wr = [a, a * k + y, a * (k + 1), a * k - 1]; ex = `Let her brother be ${a}; Maya is ${k} × ${a}.`; d = 4; }
     else { const p0 = ri(1, 5) * 1000, rate = pick([2, 3, 4, 5]), yrs = ri(2, 4); st = `An account starts with $${p0} and earns simple interest of ${rate}% per year. How much interest, in dollars, is earned after ${yrs} years?`; cor = (p0 * rate * yrs) / 100; wr = [(p0 * rate) / 100, p0 + (p0 * rate * yrs) / 100, (p0 * rate * (yrs + 1)) / 100, p0 * rate * yrs]; ex = `I = P·r·t = ${p0} × ${rate / 100} × ${yrs}.`; d = 2; }
     if (cor === undefined || !wr) continue;
     mcq('SAT', 'math', Math.min(5, d + (i % 2)), st, cor, wr, ex, img ? { image_svg: img } : undefined);
   }
 }
+
+/** SAT Reading & Writing "data" questions: a chart plus a sentence to complete accurately from the chart */
+function satRwChart(count) {
+  for (let i = 0; i < count; i++) {
+    const t = i % 3, d = 2 + (i % 3);
+    if (t < 2) {
+      const topic = pick([['favorite after-school activity', ['Soccer', 'Chess', 'Art', 'Music', 'Drama'], 'students'], ['preferred way to read', ['Print', 'E-book', 'Audio', 'Comic', 'Online'], 'readers'], ['school lunch choice', ['Pizza', 'Salad', 'Pasta', 'Soup', 'Tacos'], 'students']]);
+      let vals; do vals = topic[1].map(() => 5 * ri(2, 9)); while (!uniq(vals));
+      const order = vals.map((v, k) => k).sort((a, b) => vals[b] - vals[a]), top = order[0], second = order[1], low = order[4];
+      const svg = barChart({ title: `Survey: ${topic[0]}`, labels: topic[1], values: vals, yMax: 50, yStep: 10, showValues: true });
+      const most = t === 0;
+      const key = most ? top : low;
+      const phr = (k, v) => `${topic[1][k]} was chosen ${most ? 'most often' : 'least often'}, by ${v} ${topic[2]}.`;
+      add('SAT', 'rw', d, 'Which choice most effectively uses data from the graph to complete the statement?', [phr(key, vals[key]), phr(most ? second : order[3], vals[key]), phr(key, vals[most ? second : order[3]]), phr(most ? low : top, vals[most ? low : top])].filter((v, k, a) => a.indexOf(v) === k), 0, `The graph shows ${topic[1][key]} = ${vals[key]}.`, { passage: `A student is writing about a survey of students' ${topic[0]}. She wants to complete the following sentence accurately using the graph: "In the survey, ______"`, image_svg: svg });
+      const q = Q[Q.length - 1]; if (q && q.choices.length === 4) { const sh = shuffle([0, 1, 2, 3]); q.choices = sh.map((k) => q.choices[k]); q.answer = sh.indexOf(0); }
+    } else {
+      const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']; let vals = [ri(1, 4) * 5]; for (let k = 1; k < 6; k++) vals.push(vals[k - 1] + 5 * ri(1, 2)); if (vals[5] > 40) { vals = vals.map((v, k) => 5 + k * 5); }
+      const svg = lineChart({ title: 'Monthly visitors (hundreds)', labels: months, values: vals, yMax: 40, yStep: 5, showValues: true });
+      const a = `Visitors rose every month, from ${vals[0]} hundred in January to ${vals[5]} hundred in June.`;
+      const ch = [a, `Visitors fell every month, from ${vals[0]} hundred in January to ${vals[5]} hundred in June.`, `Visitors rose every month, from ${vals[5]} hundred in January to ${vals[0]} hundred in June.`, `Visitors stayed about the same, near ${vals[0]} hundred, throughout the period.`];
+      const sh = shuffle([0, 1, 2, 3]);
+      add('SAT', 'rw', d, 'Which choice most accurately describes data from the graph?', sh.map((k) => ch[k]), sh.indexOf(0), 'The line rises each month.', { passage: 'A park manager is summarizing visitor numbers for the first half of the year using the graph.', image_svg: svg });
+    }
+  }
+}
+/** Schedules / price tables as images for reading-comprehension sections */
+function tableReading(exam, section, count) {
+  for (let i = 0; i < count; i++) {
+    const rows = [], base = ri(7, 10);
+    for (let k = 0; k < 3; k++) { const dep = base * 60 + ri(0, 5) * 10 + k * 40, dur = ri(2, 9) * 5 + 10; rows.push({ name: `Bus ${['A', 'B', 'C'][k]}`, dep, arr: dep + dur, dur }); }
+    if (!uniq(rows.map((r) => r.dur))) continue;
+    const f = (m) => `${Math.floor(m / 60)}:${String(m % 60).padStart(2, '0')}`, short = rows.reduce((a, b) => (b.dur < a.dur ? b : a));
+    const svg = tableSvg({ title: 'School trip bus schedule (morning)', headers: ['Bus', 'Leaves', 'Arrives'], rows: rows.map((r) => [r.name, f(r.dep), f(r.arr)]) });
+    mcq(exam, section, 2 + (i % 3), 'Which bus takes the least time to reach the museum?', short.name, rows.filter((r) => r !== short).map((r) => r.name).concat(['They all take the same time']), `${short.name} takes ${short.dur} minutes, the shortest trip.`, { image_svg: svg });
+  }
+}
+
 /** Merge the hand-written banks that were authored by writers in scripts/bank/*.json */
 function mergeBanks() {
   const dir = new URL('./bank/', import.meta.url);
@@ -497,7 +589,9 @@ addWordMath('SSAT', 'quantitative', 12, 2); addGraph('SSAT', 'quantitative', GKI
 addQC('ISEE', 'quantitative', 12, 4); addWordMath('ISEE', 'math', 14, 2); addGraph('ISEE', 'math', GKINDS, 14, 2, 5);
 // ---- new exams ----
 seriesItems('COGAT', 'quantitative', 5); cogatQuant(30); figureSet('COGAT', 'nonverbal', 48);
-satMath(140);
+satMath(140); satRwChart(36);
+addGraph('CAT4', 'quantitative', ['hist', 'pict', 'venn', 'clock', 'fraction', 'gbar'], 14, 2, 4); addGraph('COGAT', 'quantitative', ['pict', 'venn', 'fraction', 'hist', 'clock'], 10, 2, 4);
+addGraph('WIDA', 'reading', ['bar', 'pie', 'table', 'pict', 'clock'], 8, 1, 3); addGraph('TOEFLJ', 'reading', ['table', 'bar', 'pict', 'line'], 8, 2, 4); tableReading('TOEFLJ', 'reading', 8);
 mergeBanks();
 
 /* ---------- sanity checks ---------- */

@@ -85,17 +85,17 @@ async function pageHome() {
     h('section', { class: 'hero' },
       h('div', {},
         h('span', { class: 'eyebrow' }, '★ U.S. admissions test prep'),
-        h('h1', {}, '집에서 치르는', h('br'), h('span', { class: 'hl' }, '실전'), ' 입시 모의고사', h('em', {}, 'MAP / CAT4 / SCAT / SSAT / ISEE / WIDA')),
+        h('h1', {}, 'Practice like', h('br'), 'it\'s ', h('span', { class: 'hl' }, 'test day'), '.', h('em', {}, 'MAP / CAT4 / CogAT / SCAT / SSAT / ISEE / SAT / TOEFL Junior / WIDA')),
         h('p', { class: 'lead' }, '실제 시험과 같은 형식, 같은 시간 압박. 결제하면 곧바로 응시할 수 있고, 끝나는 즉시 영역별 점수와 문항별 해설이 나옵니다.'),
-        h('div', { class: 'row' }, h('button', { class: 'btn lg', onclick: toExams }, '시험 둘러보기 →'), me ? h('a', { class: 'btn lg alt', href: '#/me' }, '내 시험') : h('a', { class: 'btn lg alt', href: '#/register' }, '회원가입')),
-        h('div', { class: 'chips' }, [['700+', '오리지널 문항'], ['6', '시험 유형'], ['0s', '채점 대기']].map(([b, t]) => h('div', {}, h('b', {}, b), t)))),
+        h('div', { class: 'row' }, h('button', { class: 'btn lg', onclick: toExams }, 'Browse tests →'), me ? h('a', { class: 'btn lg alt', href: '#/me' }, '내 시험') : h('a', { class: 'btn lg alt', href: '#/register' }, '회원가입')),
+        h('div', { class: 'chips' }, [['1,500+', 'original questions'], ['9', 'test types'], ['0s', 'wait for your score']].map(([b, t]) => h('div', {}, h('b', {}, b), t)))),
       h('div', { class: 'mock', 'aria-hidden': 'true' },
         h('div', { class: 'mrow' }, h('b', { style: 'font-weight:500' }, 'Verbal / 03'), h('span', {}, '08:42')),
         h('div', { class: 'mq' }, 'Author is to book as composer is to ___'),
         [['A', 'song', true], ['B', 'piano'], ['C', 'concert'], ['D', 'singer']].map(([l, t, sel]) => h('div', { class: 'mc' + (sel ? ' sel' : '') }, h('b', {}, l), t)),
         h('div', { class: 'mbar' }, h('i'))),
     ),
-    h('div', { id: 'exams' }), head('01', 'Exams', '시험 선택', '원하는 시험과 횟수권을 고르세요. 결제가 확인되면 이용권이 즉시 지급됩니다.'),
+    h('div', { id: 'exams' }), head('01', 'Exams', 'Choose your test', '원하는 시험과 횟수권을 고르세요. 결제가 확인되면 이용권이 즉시 지급됩니다.'),
     h('div', { class: 'index' }, Object.entries(EXAM_META).map(([type, m], i) => h('div', { class: 'exam-card', style: `--accent:${m.accent}` },
       h('div', { class: 'idx' }, h('span', {}, h('b', {}), `0${i + 1}`), h('span', {}, type)),
       h('h3', {}, m.name), h('div', { class: 'sub' }, m.sub),
@@ -104,13 +104,13 @@ async function pageHome() {
         h('div', {}, h('div', { class: 'pt' }, p.id === 'p-test' ? '관리자 결제 테스트' : `${p.attempts}회권`), h('div', { class: 'pd' }, `${p.valid_days}D · ${money(p.price_usd_cents, 'USD')}`)),
         h('div', { class: 'row', style: 'flex-wrap:nowrap;gap:14px' }, h('div', { class: 'price' }, money(p.price_krw, 'KRW')), h('button', { class: 'btn sm', onclick: () => buy(p, payment) }, '구매'))))),
     ))),
-    head('02', 'Process', '진행 방식', '가입부터 리포트까지, 군더더기 없이.'),
+    head('02', 'Process', 'How it works', '가입부터 리포트까지, 군더더기 없이.'),
     h('div', { class: 'steps' }, [['회원가입', '이메일로 가입하고 학년을 입력합니다.'], ['결제', '국내 카드·간편결제 또는 해외 카드. 결제 즉시 이용권 지급.'], ['응시', '영역별 타이머와 함께 실전처럼 응시합니다.'], ['리포트', '점수·해설·성장 추이를 확인하고 PDF로 저장합니다.']].map(([t, d]) => h('div', { class: 'step' }, h('h3', {}, t), h('p', {}, d)))),
-    head('03', 'Features', '기능'),
+    head('03', 'Features', 'What you get'),
     h('div', { class: 'features' }, [['실전형 출제', '서버가 한 문항씩 출제하고 정답은 노출되지 않습니다. 새로고침해도 이어서 풀 수 있습니다.'], ['성장 추이', '같은 시험을 반복 응시하면 점수 변화를 그래프로 보여줍니다.'], ['해설 리포트', '문항별 정답·내 답·해설과 영역별 강약점을 제공합니다.'], ['듣기 · 말하기', '듣기는 음성으로 재생하고, 말하기는 브라우저에서 바로 녹음합니다.'], ['안전한 결제', 'Stripe · 포트원. 서버에서 금액을 검증하고 웹훅으로 자동 지급합니다.'], ['PDF 저장', '리포트를 인쇄하거나 PDF로 저장해 상담에 활용하세요.']].map(([t, d], i) => h('div', { class: 'feature' }, h('div', { class: 'fi' }, `0${i + 1}`), h('div', {}, h('b', {}, t), h('span', {}, d))))),
-    head('04', 'FAQ', '자주 묻는 질문'),
+    head('04', 'FAQ', 'Questions, answered'),
     FAQ.map(([q, a]) => h('details', { class: 'faq' }, h('summary', {}, q), h('p', {}, a))),
-    h('div', { class: 'cta-band' }, h('div', {}, h('h2', {}, '지금 실력을 확인하세요.'), h('p', {}, '결제 후 바로 시작 · 결과는 즉시 확인')), h('button', { class: 'btn lg', onclick: toExams }, '시험 선택하기 →')),
+    h('div', { class: 'cta-band' }, h('div', {}, h('h2', {}, 'Ready for test day?'), h('p', {}, '결제 후 바로 시작 · 결과는 즉시 확인')), h('button', { class: 'btn lg', onclick: toExams }, 'Choose your test →')),
   );
 }
 
@@ -201,7 +201,7 @@ function authForm(kind) {
     h('p', { class: 'small' }, reg ? h('a', { href: '#/login' }, '이미 계정이 있나요?') : [h('a', { href: '#/register' }, '회원가입'), ' · ', h('a', { href: '#/forgot' }, '비밀번호 찾기')]),
   );
   return h('div', { class: 'auth' },
-    h('div', { class: 'side' }, h('span', { class: 'eyebrow' }, 'MockTest Lab'), h('div', {}, h('h2', {}, reg ? '실전처럼 연습하고, 바로 확인하세요.' : '다시 오신 걸 환영합니다.'), h('p', {}, 'MAP · CAT4 · SCAT · SSAT · ISEE · WIDA'))), f);
+    h('div', { class: 'side' }, h('span', { class: 'eyebrow' }, 'MockTest Lab'), h('div', {}, h('h2', {}, reg ? 'Practice. Score. Improve.' : 'Welcome back.'), h('p', {}, 'MAP · CAT4 · CogAT · SCAT · SSAT · ISEE · SAT · TOEFL Junior · WIDA'))), f);
 }
 function pageForgot() {
   const msg = h('p', { class: 'muted' });
