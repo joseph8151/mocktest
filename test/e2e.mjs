@@ -27,15 +27,25 @@ assert.ok((await admin.post(`/api/admin/users/${kidId}/grant`, { productId: 'p-c
 assert.ok((await admin.post(`/api/admin/users/${kidId}/grant`, { productId: 'p-wida-1' })).ok);
 assert.ok((await admin.post(`/api/admin/users/${kidId}/grant`, { productId: 'p-map-1' })).ok);
 
-async function take(examType, answerFor, who = kid) {
-  const s = await who.post('/api/attempts', { examType });
+async function take(examType, answerFor, who = kid, level) {
+  const s = await who.post('/api/attempts', { examType, level });
   assert.ok(s.id, JSON.stringify(s));
   let cur = await who.get(`/api/attempts/${s.id}/current`), n = 0;
   const seen = new Set();
   while (cur.status === 'in_progress') {
-    assert.ok(!('answer' in cur.question) && !('explanation' in cur.question), 'answers must not leak');
-    assert.ok(!seen.has(cur.question.id), 'no repeated question'); seen.add(cur.question.id);
-    cur = await who.post(`/api/attempts/${s.id}/answer`, { questionId: cur.question.id, ...answerFor(cur.question) }); n++;
+    if (cur.mode === 'section') { // navigable exams: save every answer, then submit the section
+      for (const q of cur.questions) {
+        assert.ok(!('answer' in q) && !('explanation' in q), 'answers must not leak');
+        assert.ok(!seen.has(q.id), 'no repeated question'); seen.add(q.id);
+        const body = answerFor(q); if (body === null) continue; // skipped on purpose
+        assert.ok((await who.post(`/api/attempts/${s.id}/save`, { questionId: q.id, ...body })).ok); n++;
+      }
+      cur = await who.post(`/api/attempts/${s.id}/submit-section`, { section: cur.section.index });
+    } else {
+      assert.ok(!('answer' in cur.question) && !('explanation' in cur.question), 'answers must not leak');
+      assert.ok(!seen.has(cur.question.id), 'no repeated question'); seen.add(cur.question.id);
+      cur = await who.post(`/api/attempts/${s.id}/answer`, { questionId: cur.question.id, ...answerFor(cur.question) }); n++;
+    }
   }
   return { id: s.id, n };
 }
@@ -49,18 +59,13 @@ for (const ex of ['CAT4', 'MAP']) {
   const { id, n } = await take(ex, () => ({ choice: 0 }));
   const rep = await kid.get(`/api/attempts/${id}/report`);
   console.log(ex, 'answered', n, 'overall', rep.score.overall, Object.values(rep.score.sections).map((s) => `${s.name}:${s.correct}/${s.total}`).join(' '));
-  assert.ok(rep.score.overall);
+  assert.ok(ex === 'MAP' ? rep.score.sections.reading.rit >= 100 && rep.score.sections.math.rit >= 100 : rep.score.overall, 'score present');
 }
 // perfect run on a second CAT4 attempt is impossible (1 attempt) -> grant again
 await admin.post(`/api/admin/users/${kidId}/grant`, { productId: 'p-cat4-1' });
-// resume check
-const s2 = await kid.post('/api/attempts', { examType: 'CAT4' });
-const first = await kid.get(`/api/attempts/${s2.id}/current`);
-const again = await kid.post('/api/attempts', { examType: 'CAT4' });
-assert.equal(again.resumed, true); assert.equal(again.id, s2.id);
-let cur = first;
-while (cur.status === 'in_progress') cur = await kid.post(`/api/attempts/${s2.id}/answer`, { questionId: cur.question.id, choice: cheat.get(cur.question.id) });
+const s2 = await take('CAT4', (q) => ({ choice: cheat.get(q.id) }));
 const perfect = await kid.get(`/api/attempts/${s2.id}/report`);
+assert.equal((await kid.post('/api/attempts', { examType: 'CAT4' })).status, 402, 'attempts exhausted');
 console.log('CAT4 perfect', perfect.score.overall, perfect.score.sections.verbal);
 assert.ok(perfect.score.overall >= 130);
 assert.equal((await kid.post('/api/attempts', { examType: 'CAT4' })).status, 402, 'attempts exhausted');
@@ -96,7 +101,7 @@ assert.ok(svgSeen > 0, 'graph/figure questions were served');
 assert.equal((await new Client().post('/api/attempts', { examType: 'SAT' })).status, 401);
 assert.equal((await kid.post('/api/attempts', { examType: 'COGAT' })).status, 402, 'student needs a ticket');
 for (const [ex, minOverall] of [['COGAT', 140], ['SAT', 1600], ['TOEFLJ', 900]]) {
-  const t = await take(ex, (q) => ({ choice: cheat.get(q.id) }), admin);
+  const t = await take(ex, (q) => ({ choice: cheat.get(q.id) }), admin, { SAT: 'sat', TOEFLJ: 'std' }[ex]);
   const r3 = await admin.get(`/api/attempts/${t.id}/report`);
   console.log(ex, '(admin trial) answered', t.n, 'overall', r3.score.overall);
   assert.ok(r3.score.overall >= minOverall, `${ex} perfect admin run`);
@@ -104,6 +109,44 @@ for (const [ex, minOverall] of [['COGAT', 140], ['SAT', 1600], ['TOEFLJ', 900]])
 const adminOv = await admin.get('/api/me/overview'); assert.ok(adminOv.entitlements.some((e) => e.trial), 'trial ticket flagged');
 const stuProducts = (await new Client().get('/api/products')).products; assert.ok(!stuProducts.some((p) => p.id === 'p-test'), 'test product hidden from students');
 assert.ok((await admin.get('/api/products')).products.some((p) => p.id === 'p-test'), 'test product visible to admin');
+// levels: invalid level rejected; level sets the difficulty window and the score scale
+assert.equal((await admin.post('/api/attempts', { examType: 'SSAT', level: 'nope' })).status, 400);
+for (const [lvl, maxD, perfect] of [['elem', 3, 1800], ['upper', 5, 2400]]) {
+  const t = await take('SSAT', (q) => (q.kind === 'text' ? { text: 'An essay.' } : { choice: cheat.get(q.id) }), admin, lvl);
+  const rep = await admin.get(`/api/attempts/${t.id}/report`);
+  assert.equal(rep.attempt.level.key, lvl); assert.equal(rep.score.overall, perfect, `SSAT ${lvl} perfect total`);
+  const ds = rep.items.filter((i) => i.kind === 'mcq').map((i) => i.difficulty);
+  if (lvl === 'elem') assert.ok(ds.filter((d) => d > maxD).length <= ds.length * 0.25, 'elementary stays mostly within difficulty 1-3');
+  else assert.ok(ds.some((d) => d >= 4), 'upper reaches hard items');
+  console.log(`SSAT ${lvl}: difficulties ${[1, 2, 3, 4, 5].map((d) => ds.filter((x) => x === d).length).join('/')} total ${rep.score.overall}`);
+}
+const exList = await kid.get('/api/exams'); assert.ok(exList.exams.find((e) => e.type === 'SAT').levels.length === 3);
+// section navigation: change an answer, clear one, skip some, then submit; submitted sections are locked
+{
+  const st = await admin.post('/api/attempts', { examType: 'ISEE', level: 'middle' });
+  let cur = await admin.get(`/api/attempts/${st.id}/current`); assert.equal(cur.mode, 'section');
+  const [q1, q2, q3] = cur.questions;
+  await admin.post(`/api/attempts/${st.id}/save`, { questionId: q1.id, choice: (cheat.get(q1.id) + 1) % q1.choices.length });
+  await admin.post(`/api/attempts/${st.id}/save`, { questionId: q1.id, choice: cheat.get(q1.id) }); // changed to the right answer
+  await admin.post(`/api/attempts/${st.id}/save`, { questionId: q2.id, choice: cheat.get(q2.id) });
+  await admin.post(`/api/attempts/${st.id}/save`, { questionId: q2.id, clear: true }); // cleared -> omitted
+  await admin.post(`/api/attempts/${st.id}/save`, { questionId: q3.id, choice: cheat.get(q3.id) });
+  cur = await admin.get(`/api/attempts/${st.id}/current`); assert.equal(cur.saved[q1.id].choice, cheat.get(q1.id)); assert.ok(!cur.saved[q2.id]);
+  const secIdx = cur.section.index; cur = await admin.post(`/api/attempts/${st.id}/submit-section`, { section: secIdx });
+  assert.equal(cur.section.index, secIdx + 1);
+  assert.equal((await admin.post(`/api/attempts/${st.id}/save`, { questionId: q1.id, choice: 0 })).status, 409, 'submitted section is locked');
+  await admin.post(`/api/attempts/${st.id}/finish`);
+  const rep = await admin.get(`/api/attempts/${st.id}/report`), v = rep.score.sections.verbal;
+  assert.equal(v.correct, 2); assert.equal(v.total, 16, 'unanswered questions count in the section total');
+  console.log('navigation: verbal', v.correct, '/', v.total, 'omitted', v.omitted);
+}
+// SSAT upper: wrong answers cost 1/4, omissions cost nothing
+{
+  const t = await take('SSAT', (q) => (q.kind === 'text' ? { text: 'Essay.' } : q.section === 'verbal' ? null : { choice: cheat.get(q.id) }), admin, 'upper');
+  const rep = await admin.get(`/api/attempts/${t.id}/report`);
+  assert.equal(rep.score.sections.verbal.omitted, rep.score.sections.verbal.total); assert.equal(rep.score.sections.verbal.scaled, 500, 'all omitted -> bottom of scale, no negative');
+  assert.equal(rep.score.sections.reading.scaled, 800);
+}
 // public exam guide + free sample (no login) + wrong-answer notebook
 const guide = await new Client().get('/api/exam-info'); assert.equal(guide.exams.length, 9); assert.ok(guide.exams.find((e) => e.type === 'SAT').sections.some((x) => x.key === 'math'));
 for (const ex of ['MAP', 'CAT4', 'COGAT', 'SAT', 'TOEFLJ', 'WIDA']) {

@@ -1,3 +1,4 @@
+import { computeScore } from './scoring.js';
 import { shuffle } from './util.js';
 
 /**
@@ -72,7 +73,7 @@ EXAMS.COGAT = {
   ],
 };
 EXAMS.SAT = {
-  title: 'SAT 스타일 모의고사', adaptive: true, scaled: { min: 200, max: 800, total: 'sum' },
+  title: 'SAT 스타일 모의고사', adaptive: false, scaled: { min: 200, max: 800, total: 'sum' },
   sections: [
     { key: 'rw', name: 'Reading and Writing', n: 27, minutes: 32 },
     { key: 'math', name: 'Math', n: 22, minutes: 35 },
@@ -87,16 +88,56 @@ EXAMS.TOEFLJ = {
   ],
 };
 
+/**
+ * Levels / grade bands. The bank is tagged by difficulty (1-5), not by grade, so a level selects a difficulty window
+ * (and, where the real test reports on a different scale per level, that scale). Windows widen automatically when a
+ * section would otherwise run out of questions.
+ */
+const L = (key, name, grades, dmin, dmax, extra = {}) => ({ key, name, grades, dmin, dmax, ...extra });
+const MAPW = [[1, 2], [1, 2], [1, 3], [1, 3], [2, 3], [2, 4], [2, 4], [3, 4], [3, 5], [3, 5], [4, 5], [4, 5], [4, 5]]; // K, G1..G12
+EXAMS.MAP.levels = MAPW.map(([lo, hi], g) => L(g === 0 ? 'k' : `g${g}`, g === 0 ? 'Kindergarten' : `Grade ${g}`, g === 0 ? '유치원(K)' : `${g}학년`, lo, hi));
+EXAMS.CAT4.levels = [L('a', 'Level Pre-A / A', '만 6–8세', 1, 3), L('bc', 'Level B / C', '만 9–11세', 1, 4), L('d', 'Level D', '만 12–13세', 2, 5), L('eg', 'Level E–G', '만 14세 이상', 3, 5)];
+EXAMS.COGAT.levels = [L('l78', 'Level 7–8', '1–2학년', 1, 3), L('l911', 'Level 9–11', '3–5학년', 1, 4), L('l1214', 'Level 12–14', '6–8학년', 2, 5), L('l1517', 'Level 15–17/18', '9–12학년', 3, 5)];
+EXAMS.SCAT.levels = [L('elem', 'Elementary', '2–3학년', 1, 3), L('inter', 'Intermediate', '4–5학년', 2, 4), L('adv', 'Advanced', '6학년 이상', 3, 5)];
+EXAMS.SSAT.levels = [L('elem', 'Elementary Level', '3–4학년', 1, 3, { scaled: { min: 300, max: 600, total: 'sum' } }), L('middle', 'Middle Level', '5–7학년', 2, 4, { scaled: { min: 440, max: 710, total: 'sum' } }), L('upper', 'Upper Level', '8–11학년', 3, 5, { scaled: { min: 500, max: 800, total: 'sum' } })];
+EXAMS.ISEE.levels = [L('lower', 'Lower Level', '4–5학년 지원', 1, 3), L('middle', 'Middle Level', '6–7학년 지원', 2, 4), L('upper', 'Upper Level', '8–12학년 지원', 3, 5)];
+EXAMS.SAT.levels = [L('psat89', 'PSAT 8/9', '8–9학년', 1, 3, { scaled: { min: 120, max: 720, total: 'sum' } }), L('psat10', 'PSAT/NMSQT · PSAT 10', '10–11학년', 2, 4, { scaled: { min: 160, max: 760, total: 'sum' } }), L('sat', 'SAT', '11–12학년', 2, 5, { scaled: { min: 200, max: 800, total: 'sum' } })];
+EXAMS.TOEFLJ.levels = [L('p1', 'TOEFL Primary Step 1', '초등 2–4학년 (CEFR Pre-A1–A1)', 1, 2, { scaled: { min: 100, max: 109, total: 'sum' } }), L('p2', 'TOEFL Primary Step 2', '초등 4–6학년 (CEFR A1–A2)', 1, 3, { scaled: { min: 104, max: 115, total: 'sum' } }), L('std', 'TOEFL Junior Standard', '만 11–15세 (CEFR A2–B2)', 2, 5, { scaled: { min: 200, max: 300, total: 'sum' } })];
+EXAMS.WIDA.levels = [L('g1', 'Grade 1', '1학년', 1, 2), L('g23', 'Grades 2–3', '2–3학년', 1, 3), L('g45', 'Grades 4–5', '4–5학년', 2, 4), L('g68', 'Grades 6–8', '6–8학년', 2, 5), L('g912', 'Grades 9–12', '9–12학년', 3, 5)];
+
+/** Resolve a level key (falls back to the middle level). */
+export function getLevel(examType, key) {
+  const lv = EXAMS[examType]?.levels || [];
+  return lv.find((l) => l.key === key) || lv[Math.floor((lv.length - 1) / 2)] || { key: 'all', name: 'All', dmin: 1, dmax: 5 };
+}
+/** Suggest a level from a free-text grade such as "G5", "5학년", "Grade 10", "K". */
+export function levelForGrade(examType, grade) {
+  const lv = EXAMS[examType]?.levels || [];
+  if (!lv.length || !grade) return null;
+  const g = /k/i.test(grade) ? 0 : parseInt(String(grade).replace(/[^0-9]/g, ''), 10);
+  if (Number.isNaN(g)) return null;
+  if (examType === 'MAP') return g === 0 ? 'k' : `g${Math.min(12, Math.max(1, g))}`;
+  const ranges = { CAT4: [2, 5, 7, 12], COGAT: [2, 5, 8, 12], SCAT: [3, 5, 12], SSAT: [4, 7, 12], ISEE: [4, 6, 12], SAT: [9, 10, 12], TOEFLJ: [4, 6, 12], WIDA: [1, 3, 5, 8, 12] }[examType] || [];
+  const i = ranges.findIndex((max) => g <= max);
+  return lv[i === -1 ? lv.length - 1 : i]?.key || null;
+}
+/** Questions in the level's difficulty window, widened one step at a time until the section can be filled. */
+export function levelBank(bank, level, need) {
+  let lo = level.dmin, hi = level.dmax, pool = bank.filter((q) => q.difficulty >= lo && q.difficulty <= hi);
+  while (pool.length < need && (lo > 1 || hi < 5)) { lo = Math.max(1, lo - 1); hi = Math.min(5, hi + 1); pool = bank.filter((q) => q.difficulty >= lo && q.difficulty <= hi); }
+  return { pool, lo, hi };
+}
+
 export const GRACE_MS = 5000;
 
 /** Build the initial attempt state. */
-export function initialState(examType, now) {
-  const ex = EXAMS[examType];
-  return { si: 0, qi: 0, deadline: now + ex.sections[0].minutes * 60000, diff: 3, served: [], current: null, shown: now, fixed: null };
+export function initialState(examType, now, levelKey) {
+  const ex = EXAMS[examType], lv = getLevel(examType, levelKey);
+  return { si: 0, qi: 0, deadline: now + ex.sections[0].minutes * 60000, diff: Math.round((lv.dmin + lv.dmax) / 2), served: [], current: null, shown: now, fixed: null, level: lv.key };
 }
 
 /** Choose next question id for the current section. `bank` = [{id,difficulty}] active in section. */
-export function pickNext(examType, st, bank, target = 10) {
+export function pickNext(examType, st, bank, target = 10, lo = 1, hi = 5) {
   const ex = EXAMS[examType];
   const sec = ex.sections[st.si];
   const used = new Set(st.served);
@@ -107,8 +148,8 @@ export function pickNext(examType, st, bank, target = 10) {
     const cands = pool.filter((q) => Math.abs(q.difficulty - st.diff) === best);
     return cands[Math.floor(Math.random() * cands.length)].id;
   }
-  // fixed forms: difficulty ramps 1→5 across the section; random among the closest matches
-  const want = 1 + (st.qi * 4) / Math.max(1, target - 1);
+  // fixed forms: difficulty ramps from the bottom to the top of the level window across the section
+  const want = lo + (st.qi * (hi - lo)) / Math.max(1, target - 1);
   const best = Math.min(...pool.map((q) => Math.abs(q.difficulty - want)));
   const cands = pool.filter((q) => Math.abs(q.difficulty - want) <= best + 0.5);
   return shuffle(cands)[0].id;
@@ -118,76 +159,16 @@ export function sectionTarget(examType, si, bankSize) {
   return Math.min(EXAMS[examType].sections[si].n, bankSize);
 }
 
-export function adaptDifficulty(diff, correct) {
-  return Math.max(1, Math.min(5, diff + (correct ? 1 : -1)));
+export function adaptDifficulty(diff, correct, lo = 1, hi = 5) {
+  return Math.max(lo, Math.min(hi, diff + (correct ? 1 : -1)));
 }
 
 /* ---------------- scoring ---------------- */
 const clamp = (x, lo, hi) => Math.max(lo, Math.min(hi, x));
 
-export function scoreAttempt(examType, answers) {
-  const ex = EXAMS[examType];
-  const sections = {};
-  for (const sec of ex.sections) {
-    const a = answers.filter((x) => x.section === sec.key);
-    const auto = a.filter((x) => x.correct !== null && x.correct !== undefined);
-    const correct = auto.filter((x) => x.correct === 1).length;
-    const total = auto.length;
-    const pct = total ? correct / total : 0;
-    const s = { name: sec.name, answered: a.length, correct, total, pct: Math.round(pct * 100) };
-    if (examType === 'MAP') {
-      const d = total ? auto.reduce((m, x) => m + x.difficulty, 0) / total + (pct - 0.5) * 2 : 0;
-      s.ability = Math.round(d * 100) / 100;
-      s.scaleScore = total ? Math.round(140 + clamp(d, 0, 6) * 18) : null; // RIT-like, estimated
-      s.band = d >= 4.2 ? 'Advanced' : d >= 3.2 ? 'Proficient' : d >= 2.2 ? 'Developing' : 'Beginning';
-    } else if (examType === 'CAT4' || ex.sas) {
-      const sd = ex.sas?.sd ?? 15;
-      const sas = Math.round(clamp(100 + sd * ((pct - 0.5) / 0.2), 100 - 4 * sd, 100 + 4 * sd));
-      s.sas = total ? sas : null;
-      s.stanine = total ? clamp(Math.round((sas - 100) / (sd / 2) + 5), 1, 9) : null;
-    } else if (ex.scaled) {
-      if (sec.manual) {
-        const scores = a.map((x) => x.manual_score).filter((x) => x != null);
-        s.graded = a.length === 0 || scores.length === a.length; // nothing submitted → nothing to wait for
-        s.level = scores.length ? Math.round((scores.reduce((m, x) => m + x, 0) / scores.length) * 10) / 10 : null;
-      } else {
-        s.scaled = total ? Math.round(ex.scaled.min + pct * (ex.scaled.max - ex.scaled.min)) : null;
-        if (ex.scaled.stanine) s.stanine = total ? clamp(Math.round(1 + pct * 8), 1, 9) : null;
-      }
-    } else if (examType === 'WIDA') {
-      if (sec.manual) {
-        const scores = a.map((x) => x.manual_score).filter((x) => x != null);
-        s.graded = scores.length === a.length && a.length > 0;
-        s.level = scores.length ? Math.round((scores.reduce((m, x) => m + x, 0) / scores.length) * 10) / 10 : null;
-      } else {
-        s.level = total ? levelFromPct(pct) : null;
-      }
-    }
-    sections[sec.key] = s;
-  }
-  const out = { sections };
-  if (examType === 'MAP') {
-    const v = Object.values(sections).filter((s) => s.scaleScore);
-    out.overall = v.length ? Math.round(v.reduce((m, s) => m + s.scaleScore, 0) / v.length) : null;
-  } else if (examType === 'CAT4' || ex.sas) {
-    const v = Object.values(sections).filter((s) => s.sas);
-    out.overall = v.length ? Math.round(v.reduce((m, s) => m + s.sas, 0) / v.length) : null;
-  } else if (ex.scaled) {
-    const v = Object.values(sections).filter((x) => x.scaled);
-    out.overall = v.length ? v.reduce((m, x) => m + x.scaled, 0) : null; // sum of section scaled scores
-    out.pendingManual = Object.entries(sections).some(([k, x]) => ex.sections.find((q) => q.key === k)?.manual && !x.graded);
-  } else if (examType === 'WIDA') {
-    const L = sections.listening.level, R = sections.reading.level, W = sections.writing.level, S = sections.speaking.level;
-    const f = (x) => (x == null ? null : x);
-    out.composites = {
-      oral: f(L != null && S != null ? (L + S) / 2 : null),
-      literacy: f(R != null && W != null ? (R + W) / 2 : null),
-      overall: L != null && S != null && R != null && W != null ? 0.15 * L + 0.15 * S + 0.35 * R + 0.35 * W : null,
-    };
-    for (const k of Object.keys(out.composites)) if (out.composites[k] != null) out.composites[k] = Math.round(out.composites[k] * 10) / 10;
-    out.pendingManual = !(sections.writing.graded && sections.speaking.graded);
-  }
-  return out;
+export function scoreAttempt(examType, answers, levelKey) {
+  const ex = EXAMS[examType], lv = ex.levels ? getLevel(examType, levelKey) : null;
+  return computeScore(examType, ex, lv, answers);
 }
 
 export function levelFromPct(p) {

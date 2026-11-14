@@ -247,7 +247,7 @@ app.post('/grading/:id', async (c) => {
   await c.env.DB.prepare('UPDATE answers SET manual_score=?, feedback=? WHERE id=?').bind(score, String(b.feedback || '').slice(0, 2000), ans.id).run();
   const att = await c.env.DB.prepare('SELECT * FROM attempts WHERE id=?').bind(ans.attempt_id).first();
   const { results } = await c.env.DB.prepare('SELECT * FROM answers WHERE attempt_id=?').bind(att.id).all();
-  const sc = scoreAttempt(att.exam_type, results);
+  const sc = scoreAttempt(att.exam_type, results, JSON.parse(att.state).level);
   const status = att.status === 'in_progress' ? 'in_progress' : sc.pendingManual ? 'submitted' : 'graded';
   await c.env.DB.prepare('UPDATE attempts SET score=?, status=? WHERE id=?').bind(JSON.stringify(sc), status, att.id).run();
   if (status === 'graded' && att.status === 'submitted') await notifyResult(c.env, att);

@@ -34,7 +34,7 @@ test('WIDA levels and composite weighting', () => {
   const s = scoreAttempt('WIDA', rows);
   assert.equal(s.sections.listening.level, 6);
   assert.equal(s.composites.overall, Math.round((0.15 * 6 + 0.15 * 2 + 0.35 * 6 + 0.35 * 4) * 10) / 10);
-  assert.equal(scoreAttempt('WIDA', rows.slice(0, 3)).pendingManual, true);
+  assert.equal(scoreAttempt('WIDA', [...rows.slice(0, 3), a('speaking', 'audio', null, null)]).pendingManual, true, 'submitted but ungraded speaking keeps the report pending');
 });
 
 test('CAT4 SAS / stanine', () => {

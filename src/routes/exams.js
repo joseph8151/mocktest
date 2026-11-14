@@ -1,7 +1,7 @@
 import { Hono } from 'hono';
 import { uid, now, bufToB64 } from '../lib/util.js';
 import { requireUser } from '../lib/auth.js';
-import { EXAMS, GRACE_MS, initialState, pickNext, sectionTarget, adaptDifficulty, scoreAttempt } from '../lib/exam.js';
+import { EXAMS, GRACE_MS, initialState, pickNext, sectionTarget, adaptDifficulty, scoreAttempt, getLevel, levelBank, levelForGrade } from '../lib/exam.js';
 import { sendMail, mailResult } from '../lib/email.js';
 
 const app = new Hono();
@@ -13,7 +13,7 @@ const publicQ = (q) => ({
 });
 
 app.get('/exams', (c) => c.json({
-  exams: Object.entries(EXAMS).map(([k, e]) => ({ type: k, title: e.title, sections: e.sections })),
+  exams: Object.entries(EXAMS).map(([k, e]) => ({ type: k, title: e.title, sections: e.sections, levels: e.levels || [], suggested: levelForGrade(k, c.get('user')?.grade) })),
 }));
 
 /** Wrong-answer notebook: the most recent wrong answer per question, with the explanation. */
@@ -36,7 +36,7 @@ app.get('/me/overview', async (c) => {
       `SELECT e.*, p.title FROM entitlements e JOIN products p ON p.id=e.product_id
        WHERE e.user_id=? AND e.revoked=0 ORDER BY e.created_at DESC`).bind(u.id).all(),
     c.env.DB.prepare(
-      `SELECT id,exam_type,status,started_at,finished_at,score FROM attempts WHERE user_id=? ORDER BY started_at DESC`).bind(u.id).all(),
+      `SELECT id,exam_type,status,started_at,finished_at,score,json_extract(state,'$.level') AS level FROM attempts WHERE user_id=? ORDER BY started_at DESC`).bind(u.id).all(),
   ]);
   return c.json({
     entitlements: ents.results.map((e) => ({ ...e, remaining: e.attempts_total - e.attempts_used, trial: e.order_id === null, expired: !!e.expires_at && e.expires_at < now() })),
@@ -47,8 +47,10 @@ app.get('/me/overview', async (c) => {
 /* ---- start / resume ---- */
 app.post('/attempts', async (c) => {
   const u = c.get('user');
-  const { examType } = await c.req.json().catch(() => ({}));
+  const { examType, level } = await c.req.json().catch(() => ({}));
   if (!EXAMS[examType]) return c.json({ error: '알 수 없는 시험입니다.' }, 400);
+  if (level && !(EXAMS[examType].levels || []).some((l) => l.key === level)) return c.json({ error: '레벨이 올바르지 않습니다.' }, 400);
+  const levelKey = level || levelForGrade(examType, u.grade) || getLevel(examType).key;
   const open = await c.env.DB.prepare(`SELECT id FROM attempts WHERE user_id=? AND exam_type=? AND status='in_progress'`).bind(u.id, examType).first();
   if (open) return c.json({ id: open.id, resumed: true });
 
@@ -68,7 +70,7 @@ app.post('/attempts', async (c) => {
   if (!claim.meta.changes) return c.json({ error: '이용권이 소진되었습니다.' }, 402);
   const id = uid();
   await c.env.DB.prepare('INSERT INTO attempts (id,user_id,entitlement_id,exam_type,state,started_at) VALUES (?,?,?,?,?,?)')
-    .bind(id, u.id, ent.id, examType, JSON.stringify(initialState(examType, now())), now()).run();
+    .bind(id, u.id, ent.id, examType, JSON.stringify(initialState(examType, now(), levelKey)), now()).run();
   return c.json({ id });
 });
 
@@ -81,7 +83,7 @@ async function loadAttempt(c) {
 
 async function finish(env, a, st) {
   const { results } = await env.DB.prepare('SELECT * FROM answers WHERE attempt_id=?').bind(a.id).all();
-  const score = scoreAttempt(a.exam_type, results);
+  const score = scoreAttempt(a.exam_type, results, st.level);
   const status = score.pendingManual ? 'submitted' : 'graded';
   await env.DB.prepare('UPDATE attempts SET status=?, score=?, state=?, finished_at=? WHERE id=?')
     .bind(status, JSON.stringify(score), JSON.stringify(st), now(), a.id).run();
@@ -95,7 +97,8 @@ export async function notifyResult(env, a) {
 /** Move to the section after st.si. Returns false if the exam is over. */
 function nextSection(a, st) {
   const ex = EXAMS[a.exam_type];
-  st.si += 1; st.qi = 0; st.served = []; st.current = null; st.diff = 3;
+  const lv = getLevel(a.exam_type, st.level);
+  st.si += 1; st.qi = 0; st.served = []; st.current = null; st.set = null; st.diff = Math.round((lv.dmin + lv.dmax) / 2);
   if (st.si >= ex.sections.length) return false;
   st.deadline = now() + ex.sections[st.si].minutes * 60000;
   return true;
@@ -111,10 +114,12 @@ async function ensureCurrent(env, a, st) {
     if (!st.current) {
       const { results: bank } = await env.DB.prepare(
         'SELECT id,difficulty FROM questions WHERE exam_type=? AND section=? AND active=1').bind(a.exam_type, sec.key).all();
-      const target = sectionTarget(a.exam_type, st.si, bank.length);
-      st.target = target;
+      const lv = getLevel(a.exam_type, st.level);
+      const { pool, lo, hi } = levelBank(bank, lv, sec.n);
+      const target = sectionTarget(a.exam_type, st.si, pool.length);
+      st.target = target; st.lo = lo; st.hi = hi;
       if (st.qi >= target) { nextSection(a, st); continue; }
-      const id = pickNext(a.exam_type, st, bank, target);
+      const id = pickNext(a.exam_type, st, pool, target, lo, hi);
       if (!id) { nextSection(a, st); continue; }
       st.current = id; st.shown = now();
     }
@@ -122,6 +127,55 @@ async function ensureCurrent(env, a, st) {
     return q;
   }
   return null;
+}
+
+
+/* ===== Section mode (every non-adaptive exam): the whole section is fixed up-front; students move freely,
+   change answers and skip; unanswered questions are recorded as omitted when the section is submitted. ===== */
+async function buildSectionSet(env, a, st) {
+  const sec = EXAMS[a.exam_type].sections[st.si];
+  const { results: bank } = await env.DB.prepare('SELECT id,difficulty FROM questions WHERE exam_type=? AND section=? AND active=1').bind(a.exam_type, sec.key).all();
+  const lv = getLevel(a.exam_type, st.level);
+  const { pool, lo, hi } = levelBank(bank, lv, sec.n);
+  const target = sectionTarget(a.exam_type, st.si, pool.length), ids = [], sim = { ...st, served: [], qi: 0 };
+  for (let i = 0; i < target; i++) { const id = pickNext(a.exam_type, sim, pool, target, lo, hi); if (!id) break; ids.push(id); sim.served.push(id); sim.qi++; }
+  st.set = { si: st.si, ids }; st.target = ids.length;
+}
+async function finalizeSection(env, a, st) { // unanswered -> omitted (choice NULL, correct 0) so they count in the score
+  if (!st.set || st.set.si !== st.si) return;
+  const { results: done } = await env.DB.prepare('SELECT question_id FROM answers WHERE attempt_id=?').bind(a.id).all();
+  const have = new Set(done.map((r) => r.question_id)), missing = st.set.ids.filter((id) => !have.has(id));
+  if (!missing.length) return;
+  const { results: qs } = await env.DB.prepare(`SELECT id,section,kind,difficulty FROM questions WHERE id IN (${missing.map(() => '?').join(',')})`).bind(...missing).all();
+  await env.DB.batch(qs.filter((q) => q.kind === 'mcq').map((q) => env.DB.prepare(
+    `INSERT OR IGNORE INTO answers (id,attempt_id,question_id,section,kind,difficulty,choice,correct,time_ms,created_at) VALUES (?,?,?,?,?,?,NULL,0,0,?)`).bind(uid(), a.id, q.id, q.section, q.kind, q.difficulty, now())));
+}
+/** Advance through expired sections, build the current section's set, or finish. Returns false when the attempt finished. */
+async function ensureSection(env, a, st) {
+  const ex = EXAMS[a.exam_type];
+  for (let guard = 0; guard < 20; guard++) {
+    if (st.si >= ex.sections.length) { await finish(env, a, st); return false; }
+    if (now() > st.deadline + GRACE_MS) { await finalizeSection(env, a, st); nextSection(a, st); continue; }
+    if (!st.set || st.set.si !== st.si) await buildSectionSet(env, a, st);
+    if (!st.set.ids.length) { nextSection(a, st); continue; }
+    return true;
+  }
+  return false;
+}
+async function sectionView(env, a, st) {
+  const ex = EXAMS[a.exam_type], sec = ex.sections[st.si];
+  const ids = st.set.ids;
+  const { results: qs } = await env.DB.prepare(`SELECT * FROM questions WHERE id IN (${ids.map(() => '?').join(',')})`).bind(...ids).all();
+  const byId = Object.fromEntries(qs.map((q) => [q.id, q]));
+  const { results: ans } = await env.DB.prepare(`SELECT question_id,choice,text,audio_key FROM answers WHERE attempt_id=? AND section=?`).bind(a.id, sec.key).all();
+  return {
+    status: 'in_progress', mode: 'section',
+    section: { index: st.si, key: sec.key, name: sec.name, total: ex.sections.length, deadline: st.deadline, manual: !!sec.manual },
+    questions: ids.map((id) => byId[id]).filter(Boolean).map(publicQ),
+    saved: Object.fromEntries(ans.map((r) => [r.question_id, { choice: r.choice, text: r.text, audio: !!r.audio_key }])),
+    penalty: a.exam_type === 'SSAT' && st.level !== 'elem',
+    serverNow: now(),
+  };
 }
 
 function view(a, st, q, newSection) {
@@ -141,9 +195,49 @@ app.get('/attempts/:id/current', async (c) => {
   if (!a) return c.json({ error: 'not found' }, 404);
   if (a.status !== 'in_progress') return c.json({ status: 'finished' });
   const st = JSON.parse(a.state);
+  if (!EXAMS[a.exam_type].adaptive) {
+    if (!(await ensureSection(c.env, a, st))) return c.json({ status: 'finished' });
+    await c.env.DB.prepare('UPDATE attempts SET state=? WHERE id=?').bind(JSON.stringify(st), a.id).run();
+    return c.json(await sectionView(c.env, a, st));
+  }
   const q = await ensureCurrent(c.env, a, st);
   if (q) await c.env.DB.prepare('UPDATE attempts SET state=? WHERE id=?').bind(JSON.stringify(st), a.id).run();
-  return c.json(view(a, st, q));
+  return c.json({ ...view(a, st, q), mode: 'adaptive' });
+});
+
+/** Save (or change, or clear) one answer inside the current section. */
+app.post('/attempts/:id/save', async (c) => {
+  const a = await loadAttempt(c);
+  if (!a || a.user_id !== c.get('user').id) return c.json({ error: 'not found' }, 404);
+  if (a.status !== 'in_progress' || EXAMS[a.exam_type].adaptive) return c.json({ error: '저장할 수 없는 상태입니다.' }, 409);
+  const b = await c.req.json().catch(() => ({}));
+  const st = JSON.parse(a.state);
+  if (!st.set || st.set.si !== st.si || !st.set.ids.includes(b.questionId)) return c.json({ error: '현재 영역의 문제가 아닙니다.' }, 409);
+  if (now() > st.deadline + GRACE_MS) return c.json({ error: '이 영역의 시간이 끝났습니다.', expired: true }, 409);
+  const q = await c.env.DB.prepare('SELECT * FROM questions WHERE id=?').bind(b.questionId).first();
+  if (b.clear) { await c.env.DB.prepare('DELETE FROM answers WHERE attempt_id=? AND question_id=?').bind(a.id, q.id).run(); return c.json({ ok: true }); }
+  let choice = null, text = null, audioKey = null, correct = null;
+  if (q.kind === 'mcq') { choice = Number.isInteger(b.choice) ? b.choice : null; correct = choice !== null && choice === q.answer ? 1 : 0; }
+  else if (q.kind === 'text') text = String(b.text || '').slice(0, 6000);
+  else if (q.kind === 'audio') audioKey = typeof b.audioKey === 'string' && b.audioKey.startsWith(`${a.id}/`) ? b.audioKey : null;
+  await c.env.DB.prepare(
+    `INSERT INTO answers (id,attempt_id,question_id,section,kind,difficulty,choice,text,audio_key,correct,time_ms,created_at) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)
+     ON CONFLICT(attempt_id, question_id) DO UPDATE SET choice=excluded.choice, text=excluded.text, audio_key=COALESCE(excluded.audio_key, answers.audio_key), correct=excluded.correct, time_ms=answers.time_ms+excluded.time_ms`
+  ).bind(uid(), a.id, q.id, q.section, q.kind, q.difficulty, choice, text, audioKey, correct, Math.max(0, Math.min(600000, +b.ms || 0)), now()).run();
+  return c.json({ ok: true });
+});
+
+/** Finish the current section (unanswered -> omitted) and open the next one. */
+app.post('/attempts/:id/submit-section', async (c) => {
+  const a = await loadAttempt(c);
+  if (!a || a.user_id !== c.get('user').id) return c.json({ error: 'not found' }, 404);
+  if (a.status !== 'in_progress') return c.json({ status: 'finished' });
+  const b = await c.req.json().catch(() => ({}));
+  const st = JSON.parse(a.state);
+  if (Number.isInteger(b.section) && b.section === st.si) { await finalizeSection(c.env, a, st); nextSection(a, st); }
+  if (!(await ensureSection(c.env, a, st))) return c.json({ status: 'finished' });
+  await c.env.DB.prepare('UPDATE attempts SET state=? WHERE id=?').bind(JSON.stringify(st), a.id).run();
+  return c.json(await sectionView(c.env, a, st));
 });
 
 app.post('/attempts/:id/answer', async (c) => {
@@ -153,6 +247,7 @@ app.post('/attempts/:id/answer', async (c) => {
   const b = await c.req.json().catch(() => ({}));
   const st = JSON.parse(a.state);
   const ex = EXAMS[a.exam_type];
+  if (!EXAMS[a.exam_type].adaptive) return c.json({ error: '이 시험은 영역 단위로 저장합니다.' }, 409);
   if (b.questionId !== st.current) return c.json({ error: '현재 문제가 아닙니다.' }, 409);
   const q = await c.env.DB.prepare('SELECT * FROM questions WHERE id=?').bind(st.current).first();
   const inTime = now() <= st.deadline + GRACE_MS;
@@ -172,7 +267,7 @@ app.post('/attempts/:id/answer', async (c) => {
        VALUES (?,?,?,?,?,?,?,?,?,?,?,?)`
     ).bind(uid(), a.id, q.id, q.section, q.kind, q.difficulty, choice, text, audioKey, correct, now() - st.shown, now()).run();
     st.served.push(q.id); st.qi += 1;
-    if (ex.adaptive && q.kind === 'mcq') st.diff = adaptDifficulty(st.diff, correct === 1);
+    if (ex.adaptive && q.kind === 'mcq') st.diff = adaptDifficulty(st.diff, correct === 1, st.lo || 1, st.hi || 5);
     st.current = null;
   } else {
     nextSection(a, st);
@@ -197,7 +292,7 @@ app.put('/attempts/:id/audio', async (c) => {
 app.post('/attempts/:id/finish', async (c) => {
   const a = await loadAttempt(c);
   if (!a || a.user_id !== c.get('user').id) return c.json({ error: 'not found' }, 404);
-  if (a.status === 'in_progress') await finish(c.env, a, JSON.parse(a.state));
+  if (a.status === 'in_progress') { const st = JSON.parse(a.state); if (!EXAMS[a.exam_type].adaptive) await finalizeSection(c.env, a, st); await finish(c.env, a, st); }
   return c.json({ ok: true });
 });
 
@@ -211,7 +306,7 @@ app.get('/attempts/:id/report', async (c) => {
      FROM answers a JOIN questions q ON q.id=a.question_id WHERE a.attempt_id=? ORDER BY a.created_at`).bind(a.id).all();
   const user = await c.env.DB.prepare('SELECT name,email,grade FROM users WHERE id=?').bind(a.user_id).first();
   return c.json({
-    attempt: { id: a.id, exam_type: a.exam_type, title: EXAMS[a.exam_type].title, status: a.status, started_at: a.started_at, finished_at: a.finished_at },
+    attempt: { id: a.id, exam_type: a.exam_type, title: EXAMS[a.exam_type].title, status: a.status, started_at: a.started_at, finished_at: a.finished_at, level: (() => { const lv = getLevel(a.exam_type, JSON.parse(a.state).level); return { key: lv.key, name: lv.name, grades: lv.grades }; })() },
     student: user,
     score: a.score ? JSON.parse(a.score) : null,
     items: results.map((r) => ({ ...r, choices: r.choices ? JSON.parse(r.choices) : null })),

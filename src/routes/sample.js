@@ -6,7 +6,7 @@ const app = new Hono();
 
 app.get('/exam-info', (c) => c.json({
   exams: Object.entries(EXAMS).map(([type, e]) => ({
-    type, title: e.title, adaptive: !!e.adaptive,
+    type, title: e.title, adaptive: !!e.adaptive, levels: e.levels || [],
     sections: e.sections.map((s) => ({ key: s.key, name: s.name, n: s.n, minutes: s.minutes, manual: !!s.manual })),
   })),
 }));

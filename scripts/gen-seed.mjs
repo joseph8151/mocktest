@@ -15,9 +15,19 @@ let dropIds = new Set(); try { dropIds = new Set(JSON.parse(readFileSync(new URL
 const hash = (str) => { let a = 0x811c9dc5, b = 0x1b873593; for (let i = 0; i < str.length; i++) { const c = str.charCodeAt(i); a = Math.imul(a ^ c, 16777619); b = Math.imul(b + c, 2246822519) ^ (b >>> 13); } return ((a >>> 0).toString(16).padStart(8, '0') + (b >>> 0).toString(16).padStart(8, '0')).slice(0, 12); };
 function add(exam_type, section, difficulty, stem, choices, answer, explanation, extra = {}) {
   const key = hash([exam_type, section, stem, extra.passage || '', extra.image_svg ? 'img' : '', [...choices].sort().join('|')].join('\u0001'));
+  const tkey = extra.image_svg || choices.some((c) => String(c).startsWith('svg:')) ? null : `t|${exam_type}|${section}|${extra.passage || ''}|${stem.trim().toLowerCase()}`;
+  if (tkey && seen.has(tkey)) return; if (tkey) seen.add(tkey);
   if (seen.has(key) || dropIds.has(`seed-${exam_type.toLowerCase()}-${section}-${key}`)) return; // identical generated item: keep one / reviewer-rejected
   seen.add(key);
   Q.push({ id: `seed-${exam_type.toLowerCase()}-${section}-${key}`, exam_type, section, kind: 'mcq', difficulty, stem, choices, answer, explanation, ...extra });
+}
+/** Explanation that quotes the sentence of the passage that best supports the answer. */
+function evidence(passage, answer) {
+  const words = String(answer).toLowerCase().match(/[a-z]{4,}/g) || [];
+  const sents = String(passage).split(/(?<=[.!?"])\s+/);
+  let best = sents[0], score = -1;
+  for (const t of sents) { const lw = t.toLowerCase(); const sc = words.filter((w) => lw.includes(w.slice(0, 5))).length; if (sc > score) { best = t; score = sc; } }
+  return `Key line: "${best.replace(/^"|"$/g, '').trim()}" So the answer is "${answer}".`;
 }
 /** Build a shuffled MCQ from a correct value and distractors. */
 function mcq(exam_type, section, difficulty, stem, correct, distractors, explanation, extra) {
@@ -152,7 +162,7 @@ const WL = [
   [4, 'Teacher: "Although the experiment failed, we learned that the metal expands when heated, which is useful information."', 'What did the class learn?', ['The experiment was perfect', 'Metal expands when heated', 'Metal melts at once', 'Heat is dangerous'], 1],
   [5, 'Speaker: "Contrary to popular belief, goldfish can remember things for months, not seconds, which is why they can be trained to recognize feeding times."', 'What is the speaker\'s main point?', ['Goldfish have poor memories', 'Goldfish can remember for months', 'Goldfish dislike feeding', 'Goldfish cannot be trained'], 1],
 ];
-for (const [d, script, stem, c, a] of WL) add('WIDA', 'listening', d, stem, c, a, 'Listen for the key detail.', { passage: script });
+for (const [d, script, stem, c, a] of WL) add('WIDA', 'listening', d, stem, c, a, evidence(script, c[a]), { passage: script });
 const WR = [
   [1, 'Tom has a red ball. He plays with it at the park every day after school.', 'Where does Tom play with his ball?', ['At school', 'At the park', 'At home', 'At the beach'], 1],
   [2, 'Rosa planted seeds in a small pot. She watered them every morning. After two weeks, tiny green leaves appeared.', 'What happened after two weeks?', ['The pot broke', 'Green leaves appeared', 'Rosa stopped watering', 'The seeds disappeared'], 1],
@@ -163,7 +173,7 @@ const WR = [
   [4, 'The word "transparent" means that light can pass through something so you can see clearly. Glass windows are usually transparent.', 'Which object is most likely transparent?', ['A wooden door', 'A glass window', 'A brick wall', 'A metal box'], 1],
   [5, 'Although the festival was small when it began, word of mouth gradually drew visitors from neighbouring towns, and within a decade it had become the region\'s most anticipated event.', 'What can be inferred about the festival?', ['It stopped after ten years', 'It grew because people told others', 'It was always large', 'It only had local visitors'], 1],
 ];
-for (const [d, p, stem, c, a] of WR) add('WIDA', 'reading', d, stem, c, a, 'Find the answer in the text.', { passage: p });
+for (const [d, p, stem, c, a] of WR) add('WIDA', 'reading', d, stem, c, a, evidence(p, c[a]), { passage: p });
 Q.push({ id: 'seed-wida-writing-1', exam_type: 'WIDA', section: 'writing', kind: 'text', difficulty: 2, stem: 'Write 4–6 sentences about your favorite place at school. Tell what it looks like and why you like it.', choices: null, answer: null });
 Q.push({ id: 'seed-wida-writing-2', exam_type: 'WIDA', section: 'writing', kind: 'text', difficulty: 4, stem: 'Some people think students should wear uniforms; others disagree. Write a paragraph giving your opinion with at least two reasons.', choices: null, answer: null });
 Q.push({ id: 'seed-wida-speaking-1', exam_type: 'WIDA', section: 'speaking', kind: 'audio', difficulty: 2, stem: 'Introduce yourself. Say your name, your age, and two things you like to do. (Record for about 30 seconds.)', choices: null, answer: null });
@@ -213,7 +223,7 @@ for (const [d, script, stem, c, a] of [
   [3, 'Principal: "The assembly will begin at ten, but students from Room 4 should arrive early to help set up chairs."', 'Who should come early?', ['All students', 'Teachers only', 'Students from Room 4', 'Parents'], 2],
   [4, 'Ranger: "Because the trail is muddy after the rain, we will take the lower path, which is longer but safer."', 'Why will the group take the lower path?', ['It is shorter', 'It is safer', 'It has a view', 'It is closed'], 1],
   [5, 'Lecturer: "Although electric cars produce no exhaust, their overall environmental benefit depends on how the electricity is generated."', 'What does the lecturer suggest?', ['Electric cars are always clean', 'Benefits depend on the electricity source', 'Exhaust is harmless', 'Electric cars are expensive'], 1],
-]) add('WIDA', 'listening', d, stem, c, a, 'Listen for the key detail.', { passage: script });
+]) add('WIDA', 'listening', d, stem, c, a, evidence(script, c[a]), { passage: script });
 for (const [d, p, stem, c, a] of [
   [1, 'Mia has a cat named Pepper. Pepper likes to sleep on the sofa and drink milk.', 'What does Pepper like to drink?', ['Water', 'Milk', 'Juice', 'Tea'], 1],
   [2, 'On Monday, the class started a garden. They planted beans, carrots, and corn. Each student has a job.', 'What did the class start on Monday?', ['A garden', 'A game', 'A play', 'A trip'], 0],
@@ -221,7 +231,7 @@ for (const [d, p, stem, c, a] of [
   [3, 'Rain forests are home to millions of species. Many of these plants and animals cannot live anywhere else on Earth.', 'Why are rain forests important?', ['They are cold', 'They shelter species found nowhere else', 'They have no animals', 'They are small'], 1],
   [4, 'The inventor tested hundreds of materials before finding one strong enough. "Every failure," she said, "taught me what not to do."', 'What does the inventor\'s statement show?', ['She gave up easily', 'She learned from failures', 'She disliked testing', 'She worked alone'], 1],
   [5, 'Economists note that when a product becomes scarce, its price typically rises unless demand falls at the same time.', 'What usually happens to the price of a scarce product?', ['It falls', 'It rises', 'It stays the same', 'It disappears'], 1],
-]) add('WIDA', 'reading', d, stem, c, a, 'Find the answer in the text.', { passage: p });
+]) add('WIDA', 'reading', d, stem, c, a, evidence(p, c[a]), { passage: p });
 Q.push({ id: 'seed-wida-writing-3', exam_type: 'WIDA', section: 'writing', kind: 'text', difficulty: 3, stem: 'Describe what you do on a typical weekend. Use at least five sentences and words like "first", "then", and "finally".', choices: null, answer: null });
 Q.push({ id: 'seed-wida-speaking-3', exam_type: 'WIDA', section: 'speaking', kind: 'audio', difficulty: 3, stem: 'Talk about your favorite food. What is it, how is it made, and why do you like it? (Record for about 45 seconds.)', choices: null, answer: null });
 
@@ -314,9 +324,9 @@ function graphItem(kind) {
     case 'venn': {
       const [A, B] = pick([['Soccer', 'Chess'], ['Choir', 'Band'], ['Math Club', 'Art Club']]), oa = ri(3, 14), bo = ri(2, 9), ob = ri(3, 14), out = ri(2, 10), t = ri(0, 2);
       const svg = venn({ title: 'Students in clubs', aLabel: A, bLabel: B, onlyA: oa, both: bo, onlyB: ob, outside: out });
-      if (t === 0) return { stem: `How many students are in exactly one of the two clubs?`, svg, correct: oa + ob, wrong: [oa + ob + bo, oa + bo + ob + out, bo, oa + bo], expl: `${oa} + ${ob}.` };
-      if (t === 1) return { stem: `How many students are in ${A}? (Include those in both clubs.)`, svg, correct: oa + bo, wrong: [oa, oa + bo + ob, bo, oa + ob], expl: `${oa} + ${bo}.` };
-      return { stem: 'How many students are shown in total, including the students outside both circles?', svg, correct: oa + bo + ob + out, wrong: [oa + bo + ob, oa + ob + out, oa + bo + ob + out + bo, bo + out], expl: `${oa} + ${bo} + ${ob} + ${out}.` };
+      if (t === 0) return { stem: `How many students are in exactly one of the two clubs?`, svg, correct: oa + ob, wrong: [oa + ob + bo, oa + bo + ob + out, bo, oa + bo], expl: `Exactly one club means ${A} only (${oa}) plus ${B} only (${ob}): ${oa} + ${ob} = ${oa + ob}. The ${bo} students in both are not counted.` };
+      if (t === 1) return { stem: `How many students are in ${A}? (Include those in both clubs.)`, svg, correct: oa + bo, wrong: [oa, oa + bo + ob, bo, oa + ob], expl: `Everyone inside the ${A} circle counts: ${oa} in ${A} only + ${bo} in both = ${oa + bo}.` };
+      return { stem: 'How many students are shown in total, including the students outside both circles?', svg, correct: oa + bo + ob + out, wrong: [oa + bo + ob, oa + ob + out, oa + bo + ob + out + bo, bo + out], expl: `Add every region: ${oa} + ${bo} + ${ob} + ${out} outside = ${oa + bo + ob + out}.` };
     }
     case 'clock': {
       const h = ri(1, 12), m = 5 * ri(0, 11), fmt = (hh, mm) => `${((hh + 11) % 12) + 1}:${String(mm).padStart(2, '0')}`;
@@ -330,7 +340,7 @@ function graphItem(kind) {
       const items = shuffle(['Notebook', 'Pencil', 'Ruler', 'Eraser', 'Marker']).slice(0, 3), price = items.map(() => ri(1, 6)), qty = items.map(() => ri(2, 6));
       const total = price.reduce((a, p, i) => a + p * qty[i], 0), k = ri(0, 2);
       if (ri(0, 1)) return { stem: 'Based on the table, what is the total cost of all the items?', svg: tableSvg({ title: 'School supplies', headers: ['Item', 'Price ($)', 'Qty'], rows: items.map((n, i) => [n, price[i], qty[i]]) }), correct: `$${total}`, wrong: [`$${total + 3}`, `$${total - 2}`, `$${price.reduce((a, b) => a + b, 0)}`, `$${qty.reduce((a, b) => a + b, 0)}`], expl: `Multiply price × quantity for each row and add.` };
-      return { stem: `Based on the table, how much do the ${items[k].toLowerCase()}s cost altogether?`, svg: tableSvg({ title: 'School supplies', headers: ['Item', 'Price ($)', 'Qty'], rows: items.map((n, i) => [n, price[i], qty[i]]) }), correct: `$${price[k] * qty[k]}`, wrong: [`$${price[k] + qty[k]}`, `$${price[k] * qty[k] + price[k]}`, `$${price[k]}`, `$${price[k] * qty[k] - qty[k]}`], expl: `${price[k]} × ${qty[k]}.` };
+      return { stem: `Based on the table, how much do the ${items[k].toLowerCase()}s cost altogether?`, svg: tableSvg({ title: 'School supplies', headers: ['Item', 'Price ($)', 'Qty'], rows: items.map((n, i) => [n, price[i], qty[i]]) }), correct: `$${price[k] * qty[k]}`, wrong: [`$${price[k] + qty[k]}`, `$${price[k] * qty[k] + price[k]}`, `$${price[k]}`, `$${price[k] * qty[k] - qty[k]}`], expl: `Cost = price × quantity = $${price[k]} × ${qty[k]} = $${price[k] * qty[k]}.` };
     }
     case 'reflect': {
       let x, y, pts; do { x = ri(1, 5) * pick([-1, 1]); y = ri(1, 5) * pick([-1, 1]); pts = [{ x, y, label: 'A' }, { x: x + pick([-2, 2]), y: y + pick([-2, 2]), label: 'B' }, { x: x + pick([-3, 3]), y, label: 'C' }]; } while (pts.some((p) => Math.abs(p.x) > 6 || Math.abs(p.y) > 6) || x === y || x === -y);
@@ -522,7 +532,7 @@ function satMath(count) {
     else if (t === 'prob') { const r = ri(2, 8), b = ri(2, 8), g = ri(2, 8), tot = r + b + g; const gcd = (x, y) => (y ? gcd(y, x % y) : x); const g1 = gcd(b, tot); st = `A bag contains ${r} red marbles, ${b} blue marbles, and ${g} green marbles. One marble is chosen at random. What is the probability that it is blue?`; cor = `${b / g1}/${tot / g1}`; wr = [`${r}/${tot}`, `${b}/${tot - b}`, `${g}/${tot}`, `${b}/${r + g + 1}`].filter((x) => x !== cor); ex = `${b} of ${tot} marbles are blue.`; d = 2; }
     else if (t === 'circ') { const h = ri(-5, 6), k = ri(-5, 6), r = ri(2, 9); st = `The equation of a circle in the xy-plane is (x ${h >= 0 ? '−' : '+'} ${Math.abs(h)})² + (y ${k >= 0 ? '−' : '+'} ${Math.abs(k)})² = ${r * r}. What is the radius of the circle?`; cor = r; wr = [r * r, r * 2, r + 1, Math.abs(h) + r]; ex = `r² = ${r * r}, so r = ${r}.`; d = 3; }
     else if (t === 'rate') { const base = ri(20, 60), per = ri(10, 35), hrs = ri(2, 6); st = `A technician charges a $${base} fee plus $${per} per hour. What is the total charge, in dollars, for a ${hrs}-hour job?`; cor = base + per * hrs; wr = [(base + per) * hrs, base * hrs + per, base + per + hrs, base + per * (hrs + 1)]; ex = `${base} + ${per} × ${hrs}.`; d = 1; }
-    else if (t === 'ineq') { const a = ri(2, 6), b = ri(1, 9), c = ri(10, 40); const x = Math.floor((c + b) / a) + 1; st = `What is the least integer x that satisfies ${a}x − ${b} > ${c}?`; cor = x; wr = [x - 1, x + 1, Math.floor((c + b) / a), Math.ceil((c - b) / a)]; ex = `x > ${(c + b) / a}.`; d = 3; }
+    else if (t === 'ineq') { const a = ri(2, 6), b = ri(1, 9), c = ri(10, 40); const x = Math.floor((c + b) / a) + 1; st = `What is the least integer x that satisfies ${a}x − ${b} > ${c}?`; cor = x; wr = [x - 1, x + 1, Math.floor((c + b) / a), Math.ceil((c - b) / a)]; ex = `Add ${b} and divide by ${a}: x > ${((c + b) / a).toFixed(2).replace(/\.?0+$/, '')}, so the least integer is ${x}.`; d = 3; }
     else if (t === 'abs') { const c = ri(1, 9), k = ri(2, 12); st = `What is the sum of the solutions to |x − ${c}| = ${k}?`; cor = 2 * c; wr = [c, 2 * k, c + k, 0]; ex = `x = ${c + k} or x = ${c - k}; the sum is ${2 * c}.`; d = 3; }
     else if (t === 'vol') { const r = ri(2, 7), h = ri(3, 12); st = `A right circular cylinder has radius ${r} and height ${h}. What is its volume?`; cor = `${r * r * h}π`; wr = [`${2 * r * h}π`, `${r * h}π`, `${r * r * h * 2}π`, `${r * r + h}π`]; ex = `V = πr²h = π(${r})²(${h}).`; d = 3; }
     else if (t === 'trig') { const [a, b, c] = pick([[3, 4, 5], [5, 12, 13], [8, 15, 17], [7, 24, 25]]); st = `In right triangle ABC, the right angle is at B, AB = ${a}, BC = ${b}, and AC = ${c}. What is sin A?`; cor = `${b}/${c}`; wr = [`${a}/${c}`, `${a}/${b}`, `${b}/${a}`, `${c}/${b}`]; ex = `sin A = opposite/hypotenuse = BC/AC.`; d = 4; }
@@ -626,6 +636,27 @@ addGraph('CAT4', 'quantitative', ['hist', 'pict', 'venn', 'clock', 'fraction', '
 addGraph('WIDA', 'reading', ['bar', 'pie', 'table', 'pict', 'clock'], 8, 1, 3); addGraph('TOEFLJ', 'reading', ['table', 'bar', 'pict', 'line'], 8, 2, 4); tableReading('TOEFLJ', 'reading', 8);
 mergeBanks();
 satMath2(72);
+
+/** Harder figure items for upper levels: two rules at once (sides + colour), and growing steps of dots. */
+function figureHard(exam, section, count) {
+  const q = (x) => 'svg:' + x, PAL2 = [['#0a3161', '#b31942'], ['#4f46e5', '#f59e0b'], ['#059669', '#ef4444'], ['#0ea5e9', '#8b5cf6']];
+  for (let i = 0; i < count; i++) {
+    if (i % 2 === 0) { // sides +1 each step AND colours alternate
+      const [c1, c2] = pick(PAL2), s0 = ri(3, 4), col = (j) => (j % 2 ? c2 : c1);
+      const shown = [0, 1, 2].map((j) => poly(s0 + j, 0, col(j))).concat(['<text x="30" y="42" font-size="36" text-anchor="middle">?</text>']);
+      const ans = { n: s0 + 3, c: col(3) }, cands = shuffle([ans, { n: s0 + 3, c: col(2) }, { n: s0 + 2, c: col(3) }, { n: s0 + 4, c: col(3) }]);
+      add(exam, section, 4 + (i % 4 === 0 ? 1 : 0), 'Two things change in this pattern. Which shape comes next?', cands.map((o) => q(svg(poly(o.n, 0, o.c)))), cands.indexOf(ans), `Each shape gains one side and the colour alternates, so the next has ${ans.n} sides in the colour of the first shape.`, { image_svg: strip(shown) });
+    } else { // dots grow by 1, 2, 3, ... (triangular numbers)
+      const col = pick(['#ef4444', '#0a3161', '#059669']), st = ri(1, 2), seq = [st, st + 1, st + 3], ans = st + 6;
+      const dots = (c) => Array.from({ length: c }, (_, j) => `<circle cx="${10 + (j % 5) * 10}" cy="${12 + Math.floor(j / 5) * 11}" r="3.8" fill="${col}"/>`).join('');
+      const shown = seq.map(dots).concat(['<text x="30" y="42" font-size="36" text-anchor="middle">?</text>']);
+      const opts = shuffle([ans, ans - 1, ans + 1, st + 5 === ans - 1 ? ans + 2 : st + 5]);
+      add(exam, section, 4, 'The number of dots grows by a changing amount. How many dots come next?', opts.map((o) => q(svg(dots(o)))), opts.indexOf(ans), `The increases are +1, +2, so the next increase is +3: ${seq[2]} + 3 = ${ans}.`, { image_svg: strip(shown) });
+    }
+  }
+}
+figureHard('CAT4', 'nonverbal', 16); figureHard('COGAT', 'nonverbal', 14);
+addQC('ISEE', 'quantitative', 20, 3); addQC('SCAT', 'quantitative', 16, 3);
 
 
 /* ---------- review export (REVIEW_DIR=...): sets for blind verification of generated questions ---------- */

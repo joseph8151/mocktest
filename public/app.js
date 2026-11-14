@@ -221,9 +221,9 @@ function pageReset(token) {
 
 async function pageMe() {
   if (!me) return (location.hash = '#/login');
-  const [ov, ord, exs] = await Promise.all([api('GET', '/me/overview'), api('GET', '/orders'), me.role === 'admin' ? api('GET', '/exams') : { exams: [] }]);
+  const [ov, ord, exs] = await Promise.all([api('GET', '/me/overview'), api('GET', '/orders'), api('GET', '/exams')]);
   const exams = exs.exams;
-  const start = guard(async (type) => { const r = await api('POST', '/attempts', { examType: type }); location.hash = `#/exam/${r.id}`; });
+  const start = (type) => chooseLevel(exams.find((x) => x.type === type), ov.attempts.some((a) => a.exam_type === type && a.status === 'in_progress'));
   const statusBadge = (s) => h('span', { class: 'badge ' + (s === 'graded' ? 'ok' : s === 'submitted' ? 'warn' : '') }, { in_progress: '진행 중', submitted: '채점 대기', graded: '완료' }[s] || s);
   const prof = h('form', { class: 'row', onsubmit: guard(async (e) => { e.preventDefault(); await api('PATCH', '/auth/me', { name: prof.name.value, grade: prof.grade.value, phone: prof.phone.value }); me.name = prof.name.value; renderNav(); toast('저장되었습니다.'); }) },
     h('input', { name: 'name', class: 'grow', value: me.name, required: true }), h('input', { name: 'grade', class: 'grow', value: me.grade || '', placeholder: '학년' }), h('input', { name: 'phone', class: 'grow', value: me.phone || '', placeholder: '연락처' }), h('button', { class: 'btn sm' }, '저장'));
@@ -245,11 +245,11 @@ async function pageMe() {
       ov.entitlements.map((e) => h('tr', {}, h('td', {}, e.title), h('td', {}, e.trial ? h('span', { class: 'badge' }, '관리자 체험') : `${e.remaining}/${e.attempts_total}`), h('td', {}, e.expired ? h('span', { class: 'badge bad' }, '만료') : date(e.expires_at)),
         h('td', {}, e.remaining > 0 && !e.expired ? h('button', { class: 'btn sm', onclick: () => start(e.exam_type) }, '시험 시작') : null)))) : h('p', { class: 'muted' }, '이용권이 없습니다. ', h('a', { href: '#/' }, '시험 상품 보러가기'))),
     ov.attempts.some((a) => a.status === 'in_progress') ? h('div', { class: 'card' }, h('b', {}, '진행 중인 시험이 있습니다. '), ov.attempts.filter((a) => a.status === 'in_progress').map((a) => h('a', { class: 'btn sm', href: `#/exam/${a.id}` }, `${a.exam_type} 이어서 풀기`))) : null,
-    h('div', { class: 'card' }, h('h3', {}, '응시 기록'), ov.attempts.length ? h('table', {}, ov.attempts.map((a) => h('tr', {}, h('td', {}, a.exam_type), h('td', {}, date(a.started_at)), h('td', {}, statusBadge(a.status)),
+    h('div', { class: 'card' }, h('h3', {}, '응시 기록'), ov.attempts.length ? h('table', {}, ov.attempts.map((a) => h('tr', {}, h('td', {}, a.exam_type, a.level ? h('div', { class: 'small muted' }, (exams.find((x) => x.type === a.exam_type)?.levels || []).find((l) => l.key === a.level)?.name || '') : null), h('td', {}, date(a.started_at)), h('td', {}, statusBadge(a.status)),
       h('td', {}, a.status !== 'in_progress' ? h('a', { href: `#/report/${a.id}` }, '리포트') : null)))) : h('p', { class: 'muted' }, '아직 응시 기록이 없습니다.')),
     h('div', { class: 'card' }, h('h3', {}, '결제 내역'), ord.orders.length ? h('table', {}, ord.orders.map((o) => h('tr', {}, h('td', {}, o.title), h('td', {}, money(o.amount, o.currency)), h('td', {}, date(o.paid_at || o.created_at)), h('td', {}, h('span', { class: 'badge ' + (o.status === 'paid' ? 'ok' : ['awaiting_deposit', 'pending'].includes(o.status) ? 'warn' : 'bad') }, { paid: '결제완료', refunded: '환불', failed: '실패', awaiting_deposit: '입금 대기', pending: '결제 진행중' }[o.status] || o.status)),
       h('td', {}, ['pending', 'awaiting_deposit'].includes(o.status) ? h('button', { class: 'btn sm alt', onclick: () => recheck(o) }, '결제 확인') : null, o.status === 'paid' && o.provider !== 'admin' ? (o.refund_status === 'pending' ? h('span', { class: 'badge warn' }, '환불 검토중') : o.refund_status === 'rejected' ? h('span', { class: 'badge' }, '환불 거절됨') : h('button', { class: 'btn sm alt', onclick: () => refund(o) }, '환불 요청')) : null)))) : h('p', { class: 'muted' }, '결제 내역이 없습니다.')),
-    me.role === 'admin' ? h('div', { class: 'card' }, h('div', { class: 'kicker' }, 'Admin'), h('h3', {}, '관리자 체험 응시'), h('p', { class: 'muted small' }, '결제 없이 모든 시험을 직접 풀어 볼 수 있습니다. (횟수 제한 없음)'), h('div', { class: 'row' }, exams.map((x) => h('button', { class: 'btn sm alt', onclick: () => start(x.type) }, x.type === 'TOEFLJ' ? 'TOEFL Jr' : x.type)))) : null,
+    me.role === 'admin' ? h('div', { class: 'card' }, h('div', { class: 'kicker' }, 'Admin'), h('h3', {}, '관리자 체험 응시'), h('p', { class: 'muted small' }, '결제 없이 모든 시험을 직접 풀어 볼 수 있습니다. (횟수 제한 없음)'), h('div', { class: 'row' }, exams.map((x) => h('button', { class: 'btn sm alt', onclick: () => chooseLevel(x, false) }, x.type === 'TOEFLJ' ? 'TOEFL Jr' : x.type)))) : null,
     charts.length ? h('div', { class: 'card' }, h('h3', {}, '성적 추이 (종합 추정 점수)'), h('div', { class: 'grid' }, charts)) : null,
     h('div', { class: 'card' }, h('h3', {}, '회원 정보'), prof, h('h3', {}, '비밀번호 변경'), pw),
     h('div', { class: 'card' }, h('h3', {}, '회원 탈퇴'), h('p', { class: 'muted small' }, '탈퇴하면 응시 기록·답안·녹음이 삭제되고 계정 정보가 익명화됩니다. 결제 기록은 법령에 따라 5년간 보관됩니다.'), del),
@@ -317,6 +317,7 @@ async function pageInfo(type) {
     h('p', { class: 'lead muted', style: 'max-width:42em' }, inf.about),
     h('div', { class: 'stats', style: 'margin:22px 0;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))' }, [['총 문항', `${totalQ}`], ['총 시간', `${totalMin}분`], ['영역', `${e.sections.length}개`], ['출제 방식', e.adaptive ? '적응형' : '고정형']].map(([l, v]) => h('div', { class: 'stat' }, h('div', { class: 'muted small' }, l), h('b', {}, v)))),
     h('div', { class: 'card' }, h('h3', {}, '시험 구성'), h('table', {}, h('tr', {}, ['영역', '문항', '시간', '채점'].map((x) => h('th', {}, x))), e.sections.map((s) => h('tr', {}, h('td', {}, s.name), h('td', {}, s.n), h('td', {}, `${s.minutes}분`), h('td', {}, s.manual ? '교사 채점' : '자동 채점'))))),
+    e.levels.length > 1 ? h('div', { class: 'card' }, h('h3', {}, '레벨 · 학년'), h('p', { class: 'muted small' }, '응시할 때 레벨을 고를 수 있습니다. 레벨에 따라 출제 난이도 구간(1~5)과 점수 척도가 달라집니다.'), h('table', {}, h('tr', {}, ['레벨', '대상', '난이도 구간', '점수 척도'].map((x) => h('th', {}, x))), e.levels.map((l) => h('tr', {}, h('td', {}, h('b', {}, l.name)), h('td', {}, l.grades), h('td', {}, `${l.dmin}–${l.dmax}`), h('td', {}, l.scaled ? `영역별 ${l.scaled.min}–${l.scaled.max}` : '공통'))))) : null,
     h('div', { class: 'grid', style: 'grid-template-columns:repeat(auto-fit,minmax(300px,1fr))' },
       h('div', { class: 'card' }, h('div', { class: 'kicker' }, 'Who takes it'), h('p', {}, inf.who)),
       h('div', { class: 'card' }, h('div', { class: 'kicker' }, 'Scoring'), h('p', {}, inf.score))),
@@ -355,10 +356,134 @@ async function pageMistakes(q = {}) {
       it.explanation ? h('p', { class: 'small' }, h('b', {}, '해설 '), it.explanation) : null)) : h('div', { class: 'card' }, h('p', { class: 'muted' }, '아직 오답이 없습니다. 시험을 응시하면 틀린 문제가 여기에 쌓입니다.')));
 }
 
+
+/** Level / grade picker shown before an exam starts (skipped when the exam has one level or an attempt is resumed). */
+function chooseLevel(exam, resuming) {
+  const go = guard(async (level) => { const r = await api('POST', '/attempts', { examType: exam.type, level }); location.hash = `#/exam/${r.id}`; });
+  if (!exam || resuming || (exam.levels || []).length <= 1) return go(exam?.levels?.[0]?.key);
+  let pick = exam.suggested || exam.levels[Math.floor((exam.levels.length - 1) / 2)].key;
+  const close = () => m.remove();
+  const opts = exam.levels.map((l) => h('button', { type: 'button', class: 'lvl' + (l.key === pick ? ' on' : ''), onclick: (e) => { pick = l.key; opts.forEach((b) => b.classList.toggle('on', b === e.currentTarget)); } },
+    h('b', {}, l.name), h('span', {}, l.grades), l.key === exam.suggested ? h('i', {}, '추천') : null));
+  const m = h('div', { class: 'modal', onclick: (e) => e.target === m && close() }, h('div', { class: 'card', style: 'max-width:520px' },
+    h('div', { class: 'kicker' }, 'Choose your level'), h('h3', {}, `${EXAM_META[exam.type]?.name || exam.type} · 레벨 선택`),
+    h('p', { class: 'muted small' }, '학년에 맞는 레벨을 고르세요. 레벨에 따라 문제 난이도 구간과 점수 척도가 달라집니다.' + (exam.suggested ? ' (회원 정보의 학년으로 추천했습니다)' : ' 회원 정보에 학년을 입력하면 자동으로 추천됩니다.')),
+    h('div', { class: 'lvls' }, opts),
+    h('div', { class: 'row', style: 'margin-top:18px' }, h('button', { class: 'btn', onclick: () => go(pick) }, '이 레벨로 시작 →'), h('button', { class: 'btn alt', onclick: close }, '취소'))));
+  document.body.append(m);
+}
+
 /* ---------- exam runner ---------- */
 async function pageExam(id) {
   if (!me) return (location.hash = '#/login');
-  let state = await api('GET', `/attempts/${id}/current`);
+  const state = await api('GET', `/attempts/${id}/current`);
+  if (state.mode === 'section') return pageExamSection(id, state);
+  return pageExamAdaptive(id, state);
+}
+
+/* Section mode: move freely inside a section, change or clear answers, flag for review, submit the section. */
+function pageExamSection(id, state) {
+  let lastSection = -1, offset = 0, cur = 0, rec = null, submitting = false, shownAt = Date.now(), textTimer = null;
+  const listens = {};
+  const flagsKey = () => `flags:${id}:${state.section.index}`;
+  const getFlags = () => { try { return new Set(JSON.parse(localStorage.getItem(flagsKey()) || '[]')); } catch { return new Set(); } };
+  const setFlags = (f) => { try { localStorage.setItem(flagsKey(), JSON.stringify([...f])); } catch {} };
+  const answered = (q) => { const v = state.saved[q.id]; return !!v && (q.kind === 'mcq' ? v.choice !== null && v.choice !== undefined : q.kind === 'text' ? !!(v.text || '').trim() : !!v.audio); };
+  const save = async (q, body) => {
+    const ms = Date.now() - shownAt; shownAt = Date.now();
+    try { await api('POST', `/attempts/${id}/save`, { questionId: q.id, ms, ...body }); }
+    catch (e) { if (e.data?.expired) return submitSection(true); toast(e.message); }
+  };
+  const submitSection = guard(async (auto) => {
+    if (submitting) return;
+    if (auto !== true) {
+      const un = state.questions.filter((q) => !answered(q)).length, fl = getFlags().size;
+      const msg = `이 영역을 제출할까요?${un ? `\n· 안 푼 문항 ${un}개는 ${state.penalty ? '무응답(0점)' : '오답'}으로 처리됩니다.` : ''}${fl ? `\n· 다시 보기로 표시한 문항 ${fl}개가 있습니다.` : ''}\n제출하면 이 영역으로 돌아올 수 없습니다.`;
+      if (!confirm(msg)) return;
+    }
+    submitting = true;
+    try { const r = await api('POST', `/attempts/${id}/submit-section`, { section: state.section.index }); if (r.status === 'finished') { location.hash = `#/report/${id}`; return; } state = r; cur = 0; render(); }
+    finally { submitting = false; }
+  });
+  const render = () => {
+    clearInterval(timerInt); speechSynthesis?.cancel?.();
+    offset = state.serverNow - Date.now();
+    const sec = state.section;
+    if (sec.index !== lastSection) {
+      lastSection = sec.index;
+      return mount(h('div', { class: 'card intro' }, h('div', { class: 'big' }, `Section ${sec.index + 1} / ${sec.total}`), h('h2', {}, sec.name),
+        h('p', {}, `${state.questions.length}문항 · 제한 시간 약 ${Math.max(1, Math.round((sec.deadline - state.serverNow) / 60000))}분`),
+        h('ul', { class: 'small', style: 'padding-left:1.1em;color:var(--ink-2)' },
+          h('li', {}, '이 영역 안에서는 이전·다음 문항으로 자유롭게 이동하고 답을 바꿀 수 있습니다.'),
+          h('li', {}, '모르는 문제는 건너뛰고 “다시 보기”로 표시해 두었다가 나중에 풀어도 됩니다.'),
+          h('li', {}, state.penalty ? '이 시험은 오답 −¼점, 무응답 0점입니다. 확신이 없으면 비워 두는 것도 전략입니다.' : '안 푼 문항은 오답으로 처리되니 시간이 남으면 모두 답하세요.'),
+          h('li', {}, '시간이 끝나면 이 영역은 자동으로 제출됩니다.')),
+        sec.manual ? h('p', { class: 'muted' }, '이 영역은 교사가 직접 채점합니다.') : null,
+        h('button', { class: 'btn lg', onclick: () => { shownAt = Date.now(); draw(); } }, '시작하기')));
+    }
+    draw();
+  };
+  const draw = () => {
+    clearInterval(timerInt); speechSynthesis?.cancel?.();
+    const sec = state.section, qs = state.questions, q = qs[cur], flags = getFlags();
+    const timer = h('span', { class: 'timer' });
+    const tick = () => { const left = Math.max(0, sec.deadline - (Date.now() + offset)); const m = Math.floor(left / 60000), s2 = Math.floor((left % 60000) / 1000); timer.textContent = `${m}:${String(s2).padStart(2, '0')}`; timer.classList.toggle('low', left < 60000); if (left <= 0) { clearInterval(timerInt); submitSection(true); } };
+    const go = (i) => { if (i < 0 || i >= qs.length) return; cur = i; shownAt = Date.now(); draw(); };
+    const doneCount = qs.filter(answered).length;
+    const palette = h('div', { class: 'palette' }, qs.map((x, i) => h('button', { type: 'button', class: 'pal' + (i === cur ? ' cur' : '') + (answered(x) ? ' done' : '') + (flags.has(x.id) ? ' flag' : ''), title: answered(x) ? '답함' : '안 품', onclick: () => go(i) }, i + 1)));
+    const body = [];
+    if (sec.key === 'listening' && q.passage) {
+      listens[q.id] ||= 0;
+      const play = h('button', { class: 'btn alt', onclick: () => { if (listens[q.id] >= 2) return toast('최대 2번까지 들을 수 있습니다.'); listens[q.id]++; speechSynthesis.cancel(); const u = new SpeechSynthesisUtterance(q.passage); u.lang = 'en-US'; u.rate = 0.9; speechSynthesis.speak(u); play.textContent = `▶ 다시 듣기 (${2 - listens[q.id]}회 남음)`; } }, listens[q.id] ? `▶ 다시 듣기 (${2 - listens[q.id]}회 남음)` : '▶ 듣기 (최대 2회)');
+      body.push(h('div', { class: 'passage' }, play));
+    } else if (q.passage) body.push(h('div', { class: 'passage' }, q.passage));
+    if (q.image_svg) body.push(h('img', { class: 'qimg', src: svgUri(q.image_svg), alt: '문제 그림' }));
+    body.push(h('h3', { class: 'stem' }, q.stem));
+    let kh = null;
+    if (q.kind === 'mcq') {
+      const pickC = (i) => { state.saved[q.id] = { choice: i }; boxes.forEach((b, j) => b.classList.toggle('sel', i === j)); palette.children[cur].classList.add('done'); counter.textContent = `${qs.filter(answered).length}/${qs.length} 답함`; save(q, { choice: i }); };
+      const boxes = q.choices.map((c, i) => h('label', { class: 'choice' + (state.saved[q.id]?.choice === i ? ' sel' : ''), onclick: () => pickC(i) }, h('b', {}, 'ABCDEFGH'[i]), choiceNode(c)));
+      body.push(...boxes);
+      kh = (e) => { if (e.target.closest?.('input,textarea')) return; const i = 'abcdefgh'.indexOf(e.key.toLowerCase()); if (e.key.length === 1 && i >= 0 && i < boxes.length) pickC(i); else if (e.key === 'ArrowRight') go(cur + 1); else if (e.key === 'ArrowLeft') go(cur - 1); };
+    } else if (q.kind === 'text') {
+      const ta = h('textarea', { rows: 10, maxlength: 6000, placeholder: 'Write your answer here…' }); ta.value = state.saved[q.id]?.text || '';
+      ta.addEventListener('input', () => { state.saved[q.id] = { text: ta.value }; clearTimeout(textTimer); textTimer = setTimeout(() => save(q, { text: ta.value }), 700); });
+      body.push(ta, h('p', { class: 'small muted' }, '자동 저장됩니다.'));
+    } else {
+      const stx = h('p', { class: 'muted' }, state.saved[q.id]?.audio ? '녹음이 저장되어 있습니다. 다시 녹음하면 바뀝니다.' : '녹음 버튼을 눌러 말해 보세요.');
+      const rb = h('button', { class: 'btn', onclick: guard(async () => {
+        if (rec) { rec.stop(); return; }
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true }); const chunks = [];
+        rec = new MediaRecorder(stream); rec.ondataavailable = (e) => chunks.push(e.data);
+        rec.onstop = guard(async () => { stream.getTracks().forEach((t) => t.stop()); const blob = new Blob(chunks, { type: rec.mimeType || 'audio/webm' }); rec = null; rb.textContent = '🎙 다시 녹음'; stx.textContent = '업로드 중…';
+          const r = await fetch(`/api/attempts/${id}/audio`, { method: 'PUT', headers: { 'content-type': blob.type || 'audio/webm' }, body: blob }); if (!r.ok) throw new Error((await r.json().catch(() => ({}))).error || '녹음 업로드 실패');
+          await save(q, { audioKey: (await r.json()).audioKey }); state.saved[q.id] = { audio: true }; stx.replaceChildren('녹음 저장됨 · ', h('audio', { controls: true, src: URL.createObjectURL(blob) })); palette.children[cur].classList.add('done'); });
+        rec.start(); rb.textContent = '⏹ 녹음 종료'; stx.textContent = '녹음 중… (최대 75초)'; setTimeout(() => rec && rec.state === 'recording' && rec.stop(), 75000);
+      }) }, state.saved[q.id]?.audio ? '🎙 다시 녹음' : '🎙 녹음 시작');
+      body.push(rb, stx);
+    }
+    const counter = h('span', { class: 'muted small' }, `${doneCount}/${qs.length} 답함`);
+    const flagBtn = h('button', { type: 'button', class: 'btn sm alt' + (flags.has(q.id) ? ' flagged' : ''), onclick: () => { const f = getFlags(); f.has(q.id) ? f.delete(q.id) : f.add(q.id); setFlags(f); draw(); } }, flags.has(q.id) ? '★ 다시 보기 해제' : '☆ 다시 보기');
+    const clearBtn = answered(q) && q.kind === 'mcq' ? h('button', { type: 'button', class: 'btn sm alt', onclick: guard(async () => { delete state.saved[q.id]; await api('POST', `/attempts/${id}/save`, { questionId: q.id, clear: true }); draw(); }) }, '답 지우기') : null;
+    const last = cur === qs.length - 1;
+    mount(h('div', { class: 'exam-shell' },
+      h('div', { class: 'exam-top' },
+        h('div', { class: 'exam-head' }, h('div', { class: 'sec-pill' }, sec.name, h('i', {}, `${sec.index + 1}/${sec.total}`)), counter, h('span', {}, '⏱ ', timer)),
+        palette),
+      h('div', { class: 'qcard' }, h('div', { class: 'qmeta' }, h('b', {}, `Question ${cur + 1}`), h('span', { class: 'row', style: 'gap:6px' }, clearBtn, flagBtn)), body,
+        h('div', { class: 'exam-foot' },
+          h('button', { class: 'btn alt', disabled: cur === 0, onclick: () => go(cur - 1) }, '← 이전'),
+          h('span', { class: 'kbd hide-sm' }, q.kind === 'mcq' ? 'A–D 선택 · ←/→ 이동' : ''),
+          last ? h('button', { class: 'btn', onclick: () => submitSection(false) }, '영역 제출') : h('button', { class: 'btn', onclick: () => go(cur + 1) }, answered(q) ? '다음 →' : '건너뛰기 →'))),
+      h('p', { style: 'text-align:center;margin-top:18px' }, h('button', { class: 'btn sm alt', onclick: () => submitSection(false) }, `이 영역 제출하기 (${doneCount}/${qs.length})`))));
+    if (kh) { window._kh = kh; document.addEventListener('keydown', kh); }
+    tick(); timerInt = setInterval(tick, 500);
+  };
+  render();
+}
+
+/* Adaptive mode (MAP): one question at a time, forward only — exactly like the real test. */
+async function pageExamAdaptive(id, state) {
   let lastSection = -1, offset = 0, listens = 0, rec = null;
   const render = () => {
     clearInterval(timerInt); speechSynthesis?.cancel?.();
@@ -472,7 +597,7 @@ async function pageReport(id) {
       : h('div', {}, it.text ? h('div', { class: 'passage' }, it.text) : h('p', { class: 'muted' }, '(녹음 응답)'), h('p', {}, it.manual_score ? `교사 점수: ${it.manual_score}/6` : '채점 대기 중', it.feedback ? ` · ${it.feedback}` : ''))));
   mount(
     h('div', { class: 'score-hero' },
-      h('div', {}, h('div', { class: 'muted small' }, `${r.student.name} · ${date(r.attempt.finished_at)}`), h('h2', {}, `${r.attempt.title} 결과`), comp,
+      h('div', {}, h('div', { class: 'muted small' }, `${r.student.name} · ${date(r.attempt.finished_at)}${r.attempt.level?.name && r.attempt.level.key !== 'all' ? ' · ' + r.attempt.level.name : ''}`), h('h2', {}, `${r.attempt.title} 결과`), comp,
         sc.pendingManual ? h('span', { class: 'badge warn' }, scaledT ? '에세이/라이팅은 교사 채점 후 표시됩니다 (합산 점수에는 포함되지 않음)' : '쓰기/말하기 채점 후 종합 점수가 표시됩니다') : null,
         h('p', { class: 'muted small noprint' }, h('button', { class: 'btn sm alt', onclick: () => window.print() }, '인쇄 / PDF 저장'))),
       h('div', { style: 'text-align:right' }, h('div', { class: 'muted small' }, overallLabel), h('div', { class: 'total' }, overallVal ?? '–'))),

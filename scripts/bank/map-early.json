@@ -1,0 +1,796 @@
+[
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "Ben has a little dog named Pip. Pip has brown spots and a short tail. Every morning, Ben gives Pip a bowl of food. Then they go for a walk in the park. Pip likes to chase red balls. At night, Pip sleeps in a soft bed next to Ben's bed.",
+  "stem": "What is the name of Ben's dog?",
+  "choices": [
+   "Spot",
+   "Max",
+   "Ben",
+   "Pip"
+  ],
+  "answer": 3,
+  "explanation": "The first sentence says Ben has a little dog named Pip."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "Ben has a little dog named Pip. Pip has brown spots and a short tail. Every morning, Ben gives Pip a bowl of food. Then they go for a walk in the park. Pip likes to chase red balls. At night, Pip sleeps in a soft bed next to Ben's bed.",
+  "stem": "What does Ben do first every morning?",
+  "choices": [
+   "He gives Pip a bowl of food.",
+   "He walks Pip in the park.",
+   "He throws a red ball.",
+   "He goes to bed."
+  ],
+  "answer": 0,
+  "explanation": "The passage says Ben feeds Pip every morning and then they go for a walk."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Ben has a little dog named Pip. Pip has brown spots and a short tail. Every morning, Ben gives Pip a bowl of food. Then they go for a walk in the park. Pip likes to chase red balls. At night, Pip sleeps in a soft bed next to Ben's bed.",
+  "stem": "Where does Pip sleep at night?",
+  "choices": [
+   "In the park",
+   "In a box outside",
+   "In a soft bed next to Ben's bed",
+   "On the kitchen floor"
+  ],
+  "answer": 2,
+  "explanation": "The last sentence says Pip sleeps in a soft bed next to Ben's bed."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "It was a cold day. Gray clouds filled the sky. Soon, white flakes began to fall. Mia put on her coat, hat, and mittens. She ran outside and made a big snowman. She gave it a carrot nose. Then her hands felt cold, so she went inside for hot cocoa.",
+  "stem": "What was falling from the sky?",
+  "choices": [
+   "Rain",
+   "Snow",
+   "Leaves",
+   "Sand"
+  ],
+  "answer": 1,
+  "explanation": "White flakes fell on a cold day and Mia made a snowman, so it was snow."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "It was a cold day. Gray clouds filled the sky. Soon, white flakes began to fall. Mia put on her coat, hat, and mittens. She ran outside and made a big snowman. She gave it a carrot nose. Then her hands felt cold, so she went inside for hot cocoa.",
+  "stem": "Why did Mia go inside?",
+  "choices": [
+   "She wanted a carrot.",
+   "It got dark.",
+   "Her snowman fell down.",
+   "Her hands felt cold."
+  ],
+  "answer": 3,
+  "explanation": "The passage says her hands felt cold, so she went inside."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "It was a cold day. Gray clouds filled the sky. Soon, white flakes began to fall. Mia put on her coat, hat, and mittens. She ran outside and made a big snowman. She gave it a carrot nose. Then her hands felt cold, so she went inside for hot cocoa.",
+  "stem": "What did Mia use for the snowman's nose?",
+  "choices": [
+   "A carrot",
+   "A rock",
+   "A button",
+   "A stick"
+  ],
+  "answer": 0,
+  "explanation": "The passage says she gave the snowman a carrot nose."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "A seed is very small. When you put a seed in soil and give it water, it starts to grow. First, a tiny root grows down. Next, a green stem pushes up. Then leaves open up to take in sunlight. Plants need water, soil, and sun to grow.",
+  "stem": "What grows first from the seed?",
+  "choices": [
+   "Leaves",
+   "A flower",
+   "A root",
+   "A stem"
+  ],
+  "answer": 2,
+  "explanation": "The passage says first a tiny root grows down."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "A seed is very small. When you put a seed in soil and give it water, it starts to grow. First, a tiny root grows down. Next, a green stem pushes up. Then leaves open up to take in sunlight. Plants need water, soil, and sun to grow.",
+  "stem": "What is this passage mostly about?",
+  "choices": [
+   "How to cook food",
+   "Why the sun is hot",
+   "How to dig a hole",
+   "How a seed grows into a plant"
+  ],
+  "answer": 3,
+  "explanation": "Every sentence tells about a seed growing a root, stem, and leaves."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "A seed is very small. When you put a seed in soil and give it water, it starts to grow. First, a tiny root grows down. Next, a green stem pushes up. Then leaves open up to take in sunlight. Plants need water, soil, and sun to grow.",
+  "stem": "Which three things do plants need to grow?",
+  "choices": [
+   "Water, soil, and sun",
+   "Milk, sand, and wind",
+   "Rocks, snow, and dark",
+   "Toys, cups, and books"
+  ],
+  "answer": 0,
+  "explanation": "The last sentence says plants need water, soil, and sun to grow."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "Grandpa came to visit on Saturday. He brought a kite shaped like a fish. Lily and Grandpa went to the hill behind the house. The wind was strong. Grandpa held the string, and Lily ran fast. The fish kite flew high over the trees. Lily laughed and said it was the best day ever.",
+  "stem": "On what day did Grandpa visit?",
+  "choices": [
+   "Monday",
+   "Saturday",
+   "Friday",
+   "Sunday"
+  ],
+  "answer": 1,
+  "explanation": "The first sentence says Grandpa came to visit on Saturday."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "Grandpa came to visit on Saturday. He brought a kite shaped like a fish. Lily and Grandpa went to the hill behind the house. The wind was strong. Grandpa held the string, and Lily ran fast. The fish kite flew high over the trees. Lily laughed and said it was the best day ever.",
+  "stem": "What shape was the kite?",
+  "choices": [
+   "A bird",
+   "A star",
+   "A fish",
+   "A boat"
+  ],
+  "answer": 2,
+  "explanation": "The passage says the kite was shaped like a fish."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Grandpa came to visit on Saturday. He brought a kite shaped like a fish. Lily and Grandpa went to the hill behind the house. The wind was strong. Grandpa held the string, and Lily ran fast. The fish kite flew high over the trees. Lily laughed and said it was the best day ever.",
+  "stem": "How did Lily most likely feel at the end?",
+  "choices": [
+   "Happy",
+   "Sad",
+   "Angry",
+   "Scared"
+  ],
+  "answer": 0,
+  "explanation": "Lily laughed and called it the best day ever, which shows she was happy."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "Today is library day for Mr. Lee's class. The children walk quietly down the hall. Each child may pick one book. Sam picks a book about sharks. Nora picks a book about trains. They will take the books home and bring them back next week.",
+  "stem": "Who picks a book about sharks?",
+  "choices": [
+   "Nora",
+   "Mr. Lee",
+   "Ava",
+   "Sam"
+  ],
+  "answer": 3,
+  "explanation": "The passage says Sam picks a book about sharks."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Today is library day for Mr. Lee's class. The children walk quietly down the hall. Each child may pick one book. Sam picks a book about sharks. Nora picks a book about trains. They will take the books home and bring them back next week.",
+  "stem": "The children walk quietly down the hall. What does \"quietly\" mean?",
+  "choices": [
+   "Very fast",
+   "Without making much noise",
+   "With loud steps",
+   "In a sad way"
+  ],
+  "answer": 1,
+  "explanation": "To walk quietly means to walk without making much noise."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "Today is library day for Mr. Lee's class. The children walk quietly down the hall. Each child may pick one book. Sam picks a book about sharks. Nora picks a book about trains. They will take the books home and bring them back next week.",
+  "stem": "When will the children bring the books back?",
+  "choices": [
+   "Tomorrow",
+   "Tonight",
+   "Next week",
+   "Next year"
+  ],
+  "answer": 2,
+  "explanation": "The last sentence says they will bring the books back next week."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "In fall, the air gets cooler. The leaves on many trees turn red, orange, and yellow. Then the leaves drop to the ground. Squirrels are busy. They gather nuts and hide them. The squirrels will eat the nuts in winter when food is hard to find.",
+  "stem": "What happens to many leaves in fall?",
+  "choices": [
+   "They grow bigger.",
+   "They turn blue.",
+   "They become flowers.",
+   "They change color and drop."
+  ],
+  "answer": 3,
+  "explanation": "The passage says leaves turn red, orange, and yellow and then drop to the ground."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "In fall, the air gets cooler. The leaves on many trees turn red, orange, and yellow. Then the leaves drop to the ground. Squirrels are busy. They gather nuts and hide them. The squirrels will eat the nuts in winter when food is hard to find.",
+  "stem": "Why do squirrels hide nuts?",
+  "choices": [
+   "To play a game",
+   "To plant new trees",
+   "To eat them in winter",
+   "To give them to birds"
+  ],
+  "answer": 2,
+  "explanation": "The passage says squirrels eat the nuts in winter when food is hard to find."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "In fall, the air gets cooler. The leaves on many trees turn red, orange, and yellow. Then the leaves drop to the ground. Squirrels are busy. They gather nuts and hide them. The squirrels will eat the nuts in winter when food is hard to find.",
+  "stem": "How does the air feel in fall?",
+  "choices": [
+   "Cooler",
+   "Hotter",
+   "Louder",
+   "Sweeter"
+  ],
+  "answer": 0,
+  "explanation": "The first sentence says the air gets cooler in fall."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "A frog starts life as a tiny egg in a pond. The egg hatches into a tadpole. A tadpole has a tail and lives in the water. Slowly, the tadpole grows legs. Its tail gets shorter and shorter. At last, it becomes a frog that can hop on land.",
+  "stem": "What does a frog egg hatch into?",
+  "choices": [
+   "A fish",
+   "A turtle",
+   "A tadpole",
+   "A bug"
+  ],
+  "answer": 2,
+  "explanation": "The passage says the egg hatches into a tadpole."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "A frog starts life as a tiny egg in a pond. The egg hatches into a tadpole. A tadpole has a tail and lives in the water. Slowly, the tadpole grows legs. Its tail gets shorter and shorter. At last, it becomes a frog that can hop on land.",
+  "stem": "What happens to the tadpole's tail as it grows?",
+  "choices": [
+   "It gets longer.",
+   "It gets shorter.",
+   "It turns red.",
+   "It splits in two."
+  ],
+  "answer": 1,
+  "explanation": "The passage says its tail gets shorter and shorter."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "A frog starts life as a tiny egg in a pond. The egg hatches into a tadpole. A tadpole has a tail and lives in the water. Slowly, the tadpole grows legs. Its tail gets shorter and shorter. At last, it becomes a frog that can hop on land.",
+  "stem": "Where does a frog egg start out?",
+  "choices": [
+   "In a tree",
+   "In a nest",
+   "In a pond",
+   "In the sand"
+  ],
+  "answer": 2,
+  "explanation": "The first sentence says a frog starts as a tiny egg in a pond."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "Ava saw that the class fish tank was dirty. She told her teacher, Ms. Hill. Together they took out the fish and put it in a bowl. They washed the rocks and filled the tank with clean water. Then they put the fish back. The fish swam happily.",
+  "stem": "Who did Ava tell about the dirty tank?",
+  "choices": [
+   "Ms. Hill",
+   "Her mom",
+   "Her friend",
+   "The principal"
+  ],
+  "answer": 0,
+  "explanation": "The passage says she told her teacher, Ms. Hill."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Ava saw that the class fish tank was dirty. She told her teacher, Ms. Hill. Together they took out the fish and put it in a bowl. They washed the rocks and filled the tank with clean water. Then they put the fish back. The fish swam happily.",
+  "stem": "What did they do after they washed the rocks?",
+  "choices": [
+   "Took out the fish",
+   "Filled the tank with clean water",
+   "Told the teacher",
+   "Bought a new fish"
+  ],
+  "answer": 1,
+  "explanation": "The passage says they washed the rocks and then filled the tank with clean water."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Ava saw that the class fish tank was dirty. She told her teacher, Ms. Hill. Together they took out the fish and put it in a bowl. They washed the rocks and filled the tank with clean water. Then they put the fish back. The fish swam happily.",
+  "stem": "What is the story mostly about?",
+  "choices": [
+   "Cleaning the class fish tank",
+   "Buying a new pet",
+   "Fishing at a lake",
+   "Feeding a cat"
+  ],
+  "answer": 0,
+  "explanation": "The whole story tells how Ava and Ms. Hill cleaned the fish tank."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 1,
+  "stem": "Which word rhymes with \"cat\"?",
+  "choices": [
+   "cup",
+   "dog",
+   "hat",
+   "sit"
+  ],
+  "answer": 2,
+  "explanation": "Cat and hat both end with the same sound, -at."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 2,
+  "stem": "Which word rhymes with \"light\"?",
+  "choices": [
+   "night",
+   "lamp",
+   "late",
+   "list"
+  ],
+  "answer": 0,
+  "explanation": "Light and night both end with the same sound, -ight."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 1,
+  "stem": "What is the opposite of \"big\"?",
+  "choices": [
+   "tall",
+   "round",
+   "small",
+   "long"
+  ],
+  "answer": 2,
+  "explanation": "Small means little, which is the opposite of big."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 1,
+  "stem": "What is the opposite of \"happy\"?",
+  "choices": [
+   "glad",
+   "funny",
+   "kind",
+   "sad"
+  ],
+  "answer": 3,
+  "explanation": "Sad is the feeling that is the opposite of happy."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 1,
+  "stem": "Which word best completes the sentence? \"I wear my ___ on my feet.\"",
+  "choices": [
+   "hat",
+   "shoes",
+   "gloves",
+   "scarf"
+  ],
+  "answer": 1,
+  "explanation": "Shoes are worn on the feet; the other things are worn on the head, hands, or neck."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 2,
+  "stem": "Which word means almost the same as \"fast\"?",
+  "choices": [
+   "slow",
+   "tall",
+   "quick",
+   "late"
+  ],
+  "answer": 2,
+  "explanation": "Quick and fast both mean moving with speed."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 2,
+  "stem": "Which word best completes the sentence? \"Please ___ the door so the cat cannot get out.\"",
+  "choices": [
+   "open",
+   "close",
+   "eat",
+   "sing"
+  ],
+  "answer": 1,
+  "explanation": "Closing the door keeps the cat from getting out."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "reading",
+  "difficulty": 2,
+  "stem": "Which word means the same as \"under\"?",
+  "choices": [
+   "below",
+   "above",
+   "over",
+   "near"
+  ],
+  "answer": 0,
+  "explanation": "Below and under both mean lower than something."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 1,
+  "stem": "Which word in this sentence needs a capital letter? \"My friend jake likes to swim.\"",
+  "choices": [
+   "friend",
+   "jake",
+   "likes",
+   "swim"
+  ],
+  "answer": 1,
+  "explanation": "Jake is a person's name, and names always begin with a capital letter."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 2,
+  "stem": "Which word in this sentence needs a capital letter? \"We will go to the zoo on friday.\"",
+  "choices": [
+   "zoo",
+   "will",
+   "go",
+   "friday"
+  ],
+  "answer": 3,
+  "explanation": "Friday is a day of the week, and days of the week begin with a capital letter."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 1,
+  "stem": "Which word should always start with a capital letter?",
+  "choices": [
+   "apple",
+   "Maria",
+   "table",
+   "happy"
+  ],
+  "answer": 1,
+  "explanation": "Maria is a person's name, so it always starts with a capital letter."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 2,
+  "stem": "Which words need capital letters? \"Our class went to lake park.\"",
+  "choices": [
+   "lake and park",
+   "class and went",
+   "went and to",
+   "class and lake"
+  ],
+  "answer": 0,
+  "explanation": "Lake Park is the name of a place, so both words need capital letters."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 2,
+  "stem": "Which word in this sentence needs a capital letter? \"My birthday is in july.\"",
+  "choices": [
+   "birthday",
+   "july",
+   "is",
+   "in"
+  ],
+  "answer": 1,
+  "explanation": "July is the name of a month, and months begin with a capital letter."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 1,
+  "stem": "Which mark should go at the end? \"Where is my red hat\"",
+  "choices": [
+   "a period (.)",
+   "a comma (,)",
+   "a question mark (?)",
+   "an apostrophe (')"
+  ],
+  "answer": 2,
+  "explanation": "The sentence asks a question, so it ends with a question mark."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 1,
+  "stem": "Which mark should go at the end? \"I like to eat apples\"",
+  "choices": [
+   "a question mark (?)",
+   "a period (.)",
+   "a comma (,)",
+   "an apostrophe (')"
+  ],
+  "answer": 1,
+  "explanation": "The sentence tells something, so it ends with a period."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 2,
+  "stem": "Which sentence ends with the correct mark?",
+  "choices": [
+   "Can you help me.",
+   "Can you help me,",
+   "Can you help me?",
+   "Can you help me"
+  ],
+  "answer": 2,
+  "explanation": "Can you help me asks a question, so it needs a question mark."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 2,
+  "stem": "Which sentence should end with an exclamation point (!)?",
+  "choices": [
+   "My shirt is blue",
+   "Do you have a pencil",
+   "We eat lunch at noon",
+   "Look out, a bee is coming"
+  ],
+  "answer": 3,
+  "explanation": "Look out, a bee is coming shows strong feeling and warns someone, so it ends with an exclamation point."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 1,
+  "stem": "Which word means more than one dog?",
+  "choices": [
+   "dogs",
+   "doges",
+   "dog",
+   "doggs"
+  ],
+  "answer": 0,
+  "explanation": "To make dog mean more than one, just add -s to get dogs."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 1,
+  "stem": "Which word best completes the sentence? \"I see three ___.\"",
+  "choices": [
+   "boxs",
+   "box",
+   "boxies",
+   "boxes"
+  ],
+  "answer": 3,
+  "explanation": "Words that end in x add -es to mean more than one, so box becomes boxes."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 2,
+  "stem": "Which word means more than one baby?",
+  "choices": [
+   "babies",
+   "babys",
+   "babyes",
+   "baby"
+  ],
+  "answer": 0,
+  "explanation": "For baby, change the y to i and add -es to get babies."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 2,
+  "stem": "Which word best completes the sentence? \"Many ___ ran across the yard.\"",
+  "choices": [
+   "mouses",
+   "mouse",
+   "mice",
+   "mices"
+  ],
+  "answer": 2,
+  "explanation": "The word for more than one mouse is mice."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 1,
+  "stem": "Which word best completes the sentence? \"The cats ___ sleeping.\"",
+  "choices": [
+   "is",
+   "are",
+   "am",
+   "be"
+  ],
+  "answer": 1,
+  "explanation": "Cats means more than one, so the sentence uses are."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 1,
+  "stem": "Which word best completes the sentence? \"She ___ my best friend.\"",
+  "choices": [
+   "are",
+   "am",
+   "were",
+   "is"
+  ],
+  "answer": 3,
+  "explanation": "She is one person, so the sentence uses is."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 2,
+  "stem": "Which word best completes the sentence? \"Yesterday, we ___ at the beach.\"",
+  "choices": [
+   "were",
+   "was",
+   "are",
+   "is"
+  ],
+  "answer": 0,
+  "explanation": "Yesterday tells about the past, and we goes with were."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 2,
+  "stem": "Which word best completes the sentence? \"Last night, the moon ___ very bright.\"",
+  "choices": [
+   "were",
+   "is",
+   "was",
+   "are"
+  ],
+  "answer": 2,
+  "explanation": "Last night tells about the past, and one moon goes with was."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 2,
+  "stem": "Which word best completes the sentence? \"Yesterday, Max ___ to the store.\"",
+  "choices": [
+   "walks",
+   "walking",
+   "will walk",
+   "walked"
+  ],
+  "answer": 3,
+  "explanation": "Yesterday tells about the past, so the verb needs -ed: walked."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 1,
+  "stem": "Which word comes first in ABC order?",
+  "choices": [
+   "bat",
+   "ant",
+   "cow",
+   "dog"
+  ],
+  "answer": 1,
+  "explanation": "Ant starts with a, which comes before b, c, and d."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 2,
+  "stem": "Which group of words is in ABC order?",
+  "choices": [
+   "hat, cup, sun",
+   "sun, hat, cup",
+   "cup, sun, hat",
+   "cup, hat, sun"
+  ],
+  "answer": 3,
+  "explanation": "C comes before h, and h comes before s, so cup, hat, sun is in ABC order."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 2,
+  "stem": "These words all start with b. Which one comes first in ABC order?",
+  "choices": [
+   "bed",
+   "bag",
+   "big",
+   "bus"
+  ],
+  "answer": 1,
+  "explanation": "All four words start with b, so look at the second letter: a comes before e, i, and u."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 1,
+  "stem": "Which sentence makes sense?",
+  "choices": [
+   "The bird sings in the tree.",
+   "The tree sings in the bird.",
+   "Sings the bird tree in.",
+   "The bird in sings tree the."
+  ],
+  "answer": 0,
+  "explanation": "Only The bird sings in the tree has its words in an order that makes sense."
+ },
+ {
+  "exam_type": "MAP",
+  "section": "language",
+  "difficulty": 2,
+  "stem": "Which is a complete sentence?",
+  "choices": [
+   "The girl the ball.",
+   "Kicked the ball the.",
+   "Ball girl the kicked.",
+   "The girl kicked the ball."
+  ],
+  "answer": 3,
+  "explanation": "The girl kicked the ball tells who did something and what she did."
+ }
+]
