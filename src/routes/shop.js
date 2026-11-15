@@ -10,11 +10,24 @@ import {
 
 const app = new Hono();
 
+// Per-isolate caches for values that change rarely (saves a D1 round trip on every page load).
+let readyCache = { at: 0, v: null }, noticeCache = { at: 0, v: undefined };
+async function readyExams(env) {
+  if (readyCache.v && Date.now() - readyCache.at < 60000) return readyCache.v;
+  const v = new Set((await env.DB.prepare(`SELECT exam_type FROM questions WHERE active=1 GROUP BY exam_type HAVING COUNT(*) >= 20`).all()).results.map((r) => r.exam_type));
+  readyCache = { at: Date.now(), v }; return v;
+}
+async function siteNotice(env) {
+  if (noticeCache.v !== undefined && Date.now() - noticeCache.at < 30000) return noticeCache.v;
+  const v = (await env.DB.prepare(`SELECT value FROM settings WHERE key='notice'`).first())?.value || null;
+  noticeCache = { at: Date.now(), v }; return v;
+}
+export const clearNoticeCache = () => { noticeCache = { at: 0, v: undefined }; };
 app.get('/config', async (c) => c.json({
   site: c.env.SITE_NAME,
   turnstile: c.env.TURNSTILE_SITE_KEY && c.env.TURNSTILE_SECRET ? c.env.TURNSTILE_SITE_KEY : null,
   kakao: !!c.env.KAKAO_REST_KEY,
-  notice: (await c.env.DB.prepare(`SELECT value FROM settings WHERE key='notice'`).first())?.value || null,
+  notice: await siteNotice(c.env),
   biz: { name: c.env.BIZ_NAME || '(상호명 입력)', owner: c.env.BIZ_OWNER || '(대표자명)', regNo: c.env.BIZ_REG_NO || '(사업자등록번호)', salesNo: c.env.BIZ_SALES_NO || '(통신판매업 신고번호)', address: c.env.BIZ_ADDRESS || '(사업장 주소)', contact: c.env.BIZ_CONTACT || '(고객센터 이메일/전화)' },
 }));
 
@@ -22,7 +35,7 @@ app.get('/products', async (c) => {
   const admin = (await loadUser(c))?.role === 'admin'; // the 1,000-won payment test product is only visible to admins
   const { results } = await c.env.DB.prepare(`SELECT * FROM products WHERE active=1 OR (?1 AND id='p-test') ORDER BY sort,price_krw`).bind(admin ? 1 : 0).all();
   // never sell an exam that has no questions yet (e.g. a new category whose bank is still being reviewed)
-  const ready = new Set((await c.env.DB.prepare(`SELECT exam_type FROM questions WHERE active=1 GROUP BY exam_type HAVING COUNT(*) >= 20`).all()).results.map((r) => r.exam_type));
+  const ready = await readyExams(c.env);
   return c.json({
     products: results.filter((p) => p.id === 'p-test' || ready.has(p.exam_type)),
     payment: { kcp: kcpEnabled(c.env), stripe: !!c.env.STRIPE_SECRET_KEY, portone: !!(c.env.PORTONE_STORE_ID && c.env.PORTONE_CHANNEL_KEY),

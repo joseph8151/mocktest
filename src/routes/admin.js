@@ -6,6 +6,7 @@ import { stripeRetrieveSession, stripeRefund, portoneCancel, recheckOrder, fulfi
 import { notifyResult } from './exams.js';
 import { kcpCancel, kcpEnabled, kcpConfig } from '../lib/kcp.js';
 import { audit, redact, logEvent } from '../lib/security.js';
+import { clearNoticeCache } from './shop.js';
 import { deliver, mailFrom, mailTest, sendMail, mailSupportReply } from '../lib/email.js';
 import { anonymizeUser } from './auth.js';
 import { hashPassword } from '../lib/auth.js';
@@ -437,6 +438,7 @@ app.post('/notice', async (c) => {
   const b = await c.req.json().catch(() => ({}));
   const text = String(b.text || '').trim().slice(0, 300);
   await c.env.DB.prepare(`INSERT INTO settings (key,value,updated_at) VALUES ('notice',?,?) ON CONFLICT(key) DO UPDATE SET value=excluded.value, updated_at=excluded.updated_at`).bind(text || null, now()).run();
+  clearNoticeCache();
   return c.json({ ok: true });
 });
 

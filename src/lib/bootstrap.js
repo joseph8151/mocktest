@@ -12,7 +12,7 @@ import m8 from '../../migrations/0008_security_features.sql';
 import m9 from '../../migrations/0009_records.sql';
 import m10 from '../../migrations/0010_family_and_more.sql';
 import m11 from '../../migrations/0011_kr_tests.sql';
-import seed from '../../seed/seed.json';
+import manifest from '../../seed/manifest.json'; // small: version + products. The question bank itself is a private static file.
 
 // [name, sql, a table that exists once this migration has been applied]
 const MIGRATIONS = [['0001_init', m1, 'users'], ['0002_safety', m2, 'login_attempts'], ['0003_audio', m3, 'audio_files']];
@@ -30,10 +30,19 @@ const statements = (sql) => {
 // One-time data updates, applied AFTER seeding (so a fresh database is not left with only these rows).
 const DATA_FIXES = [['0004_prices', m4], ['0005_admin_and_kcp', m5], ['0006_new_exams', m6], ['0007_integrity', m7], ['0008_security_features', m8], ['0009_records', m9], ['0010_family_and_more', m10], ['0011_kr_tests', m11]];
 
-let ready = null;
-export function ensureDb(env) {
+let ready = null, syncing = null;
+/**
+ * Schema migrations and small data fixes run before the first request is served (fast: a few queries per new isolate).
+ * The question-bank sync can take a while after a deploy, so it runs in the background (one isolate at a time) and
+ * requests are never kept waiting for it — except on a brand-new, empty database, where there is nothing to serve yet.
+ */
+export function ensureDb(env, ctx) {
   if (!ready) ready = run(env).catch((e) => { ready = null; throw e; });
-  return ready;
+  return ready.then((needSync) => {
+    if (!needSync || syncing) return;
+    syncing = syncSeed(env).catch((e) => console.error('seed sync', e)).finally(() => { syncing = null; });
+    try { ctx?.waitUntil(syncing); } catch {}
+  });
 }
 
 async function run(env) {
@@ -48,11 +57,43 @@ async function run(env) {
     if (tables.has(probe)) await mark.run();
     else await db.batch([...statements(sql).map((s) => db.prepare(s)), mark]);
   }
+  if ((await db.prepare('SELECT COUNT(*) n FROM products').first()).n === 0) {
+    await db.batch(manifest.products.map((p) => db.prepare(
+      'INSERT OR IGNORE INTO products (id,exam_type,title,description,price_krw,price_usd_cents,attempts,valid_days,active,sort) VALUES (?,?,?,?,?,?,?,?,?,?)').bind(...p)));
+  }
+  for (const [name, sql] of DATA_FIXES) {
+    if (done.has(name)) continue;
+    const stmts = [];
+    for (const x of statements(sql)) { // a database migrated with `wrangler d1 migrations apply` may already have the column
+      const m = x.match(/^ALTER TABLE (\w+) ADD COLUMN (\w+)/i);
+      if (m && (await db.prepare(`SELECT 1 FROM pragma_table_info('${m[1]}') WHERE name=?`).bind(m[2]).first())) continue;
+      stmts.push(db.prepare(x));
+    }
+    await db.batch([...stmts, db.prepare('INSERT OR IGNORE INTO _app_migrations (name,at) VALUES (?,?)').bind(name, Date.now())]);
+  }
+  if (done.has(`seed-${manifest.version}`)) return false;
+  // Empty database (fresh install): load the questions now, there is nothing to serve without them.
+  if (!(await db.prepare(`SELECT 1 FROM questions WHERE id LIKE 'seed-%' LIMIT 1`).first())) { await syncSeed(env, { force: true }); return false; }
+  return true;
+}
 
-  // Question bank sync. Ids are content hashes, so a new seed version only adds new questions and retires removed ones
-  // (answered questions are kept but deactivated so old reports still render). Admin-created questions (uuid ids) are never touched.
-  const seedMark = `seed-${seed.version}`;
-  if (!done.has(seedMark)) {
+/** Question bank sync. Ids are content hashes, so a new seed version only adds new questions and retires removed ones
+ * (answered questions are kept but deactivated so old reports still render). Admin-created questions (uuid ids) are never touched. */
+async function syncSeed(env, { force = false } = {}) {
+  const db = env.DB, seedMark = `seed-${manifest.version}`, lock = `seedlock-${manifest.version}`, t = Date.now();
+  if (await db.prepare('SELECT 1 FROM _app_migrations WHERE name=?').bind(seedMark).first()) return;
+  if (!force) { // one isolate at a time; a lock older than 5 minutes is considered abandoned
+    const got = await db.prepare('INSERT OR IGNORE INTO _app_migrations (name,at) VALUES (?,?)').bind(lock, t).run();
+    if (!got.meta.changes) {
+      const stolen = await db.prepare('UPDATE _app_migrations SET at=? WHERE name=? AND at<?').bind(t, lock, t - 300000).run();
+      if (!stolen.meta.changes) return;
+    }
+  }
+  const res = await env.ASSETS.fetch(new Request('https://assets.local/_seed/seed.json'));
+  if (!res.ok) throw new Error(`seed file missing (${res.status})`);
+  const seed = await res.json();
+  if (seed.version !== manifest.version) throw new Error('seed file and manifest disagree');
+  {
     const cur = (await db.prepare(`SELECT id,difficulty FROM questions WHERE id LIKE 'seed-%'`).all()).results;
     const have = new Set(cur.map((r) => r.id));
     // difficulty re-calibration of existing questions (ids are content hashes, difficulty is not part of them)
@@ -78,18 +119,5 @@ async function run(env) {
     for (let i = 0; i < batch.length; i += 25) await db.batch(batch.slice(i, i + 25));
     await db.prepare('INSERT OR IGNORE INTO _app_migrations (name,at) VALUES (?,?)').bind(seedMark, Date.now()).run();
   }
-  if ((await db.prepare('SELECT COUNT(*) n FROM products').first()).n === 0) {
-    await db.batch(seed.products.map((p) => db.prepare(
-      'INSERT OR IGNORE INTO products (id,exam_type,title,description,price_krw,price_usd_cents,attempts,valid_days,active,sort) VALUES (?,?,?,?,?,?,?,?,?,?)').bind(...p)));
-  }
-  for (const [name, sql] of DATA_FIXES) {
-    if (done.has(name)) continue;
-    const stmts = [];
-    for (const x of statements(sql)) { // a database migrated with `wrangler d1 migrations apply` may already have the column
-      const m = x.match(/^ALTER TABLE (\w+) ADD COLUMN (\w+)/i);
-      if (m && (await db.prepare(`SELECT 1 FROM pragma_table_info('${m[1]}') WHERE name=?`).bind(m[2]).first())) continue;
-      stmts.push(db.prepare(x));
-    }
-    await db.batch([...stmts, db.prepare('INSERT OR IGNORE INTO _app_migrations (name,at) VALUES (?,?)').bind(name, Date.now())]);
-  }
+  await db.prepare('DELETE FROM _app_migrations WHERE name=?').bind(lock).run();
 }

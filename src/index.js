@@ -15,7 +15,8 @@ const app = new Hono();
 // (webhooks are exempt: they are authenticated by signature).
 // Zero-config: create/seed the database on first use, and derive SITE_URL from the request when it is not configured.
 app.use('/api/*', async (c, next) => {
-  await ensureDb(c.env);
+  let ctx = null; try { ctx = c.executionCtx; } catch {}
+  await ensureDb(c.env, ctx);
   if (!c.env.SITE_URL || /localhost|127\.0\.0\.1/.test(c.env.SITE_URL)) {
     const u = new URL(c.req.url);
     if (!/localhost|127\.0\.0\.1/.test(u.hostname) || !c.env.SITE_URL) c.env = { ...c.env, SITE_URL: u.origin };
@@ -37,6 +38,9 @@ app.use('/api/*', async (c, next) => {
   c.header('Cache-Control', 'no-store');
   for (const [k, v] of Object.entries(API_HEADERS)) if (!c.res.headers.has(k)) c.header(k, v);
 });
+
+// The question bank file is for the Worker only (it contains the answers): never serve it to visitors.
+app.all('/_seed/*', (c) => c.text('Not found', 404));
 
 app.route('/api/auth', auth);
 app.route('/api/admin', admin);

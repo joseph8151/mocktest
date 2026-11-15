@@ -952,11 +952,17 @@ writeFileSync(new URL('../migrations/0004_prices.sql', import.meta.url), '-- gen
   `INSERT INTO products (id,exam_type,title,description,price_krw,price_usd_cents,attempts,valid_days,active,sort) VALUES (${[...p.slice(0, 8), 1, p[8]].map((v) => q(v)).join(',')}) ON CONFLICT(id) DO UPDATE SET price_krw=excluded.price_krw, price_usd_cents=excluded.price_usd_cents, sort=excluded.sort;`).join('\n') + '\n');
 for (const p of products) sql += `INSERT OR REPLACE INTO products (id,exam_type,title,description,price_krw,price_usd_cents,attempts,valid_days,active,sort) VALUES (${[...p.slice(0, 8), 1, p[8]].map((v) => q(v)).join(',')});\n`;
 writeFileSync(new URL('../seed/seed.sql', import.meta.url), sql);
-// JSON copy is bundled into the Worker so a fresh database can seed itself on first request.
-writeFileSync(new URL('../seed/seed.json', import.meta.url), JSON.stringify({
-  version: hash(Q.map((r) => r.id).join(',')),
-  questions: Q.map((r) => [r.id, r.exam_type, r.section, r.kind, r.difficulty, r.passage ?? null, r.stem, r.image_svg ?? null, r.choices ? JSON.stringify(r.choices) : null, r.answer ?? null, r.explanation ?? null]),
-  products: products.map((p) => [...p.slice(0, 8), 1, p[8]]),
-}));
+// The question bank is NOT bundled into the Worker (that made every cold start parse ~4 MB). It is shipped as a static
+// file that only the Worker can read (/_seed/* is blocked for visitors) and fetched once per new version.
+{
+  const seedJson = {
+    version: hash(Q.map((r) => `${r.id}:${r.difficulty}`).join(',')), // difficulty is part of the version so re-calibrations reach live databases
+    questions: Q.map((r) => [r.id, r.exam_type, r.section, r.kind, r.difficulty, r.passage ?? null, r.stem, r.image_svg ?? null, r.choices ? JSON.stringify(r.choices) : null, r.answer ?? null, r.explanation ?? null]),
+    products: products.map((p) => [...p.slice(0, 8), 1, p[8]]),
+  };
+  mkdirSync(new URL('../public/_seed/', import.meta.url), { recursive: true });
+  writeFileSync(new URL('../public/_seed/seed.json', import.meta.url), JSON.stringify(seedJson));
+  writeFileSync(new URL('../seed/manifest.json', import.meta.url), JSON.stringify({ version: seedJson.version, questions: seedJson.questions.length, products: seedJson.products }));
+}
 const by = {}; for (const r of Q) by[`${r.exam_type}/${r.section}`] = (by[`${r.exam_type}/${r.section}`] || 0) + 1;
 console.log(by);

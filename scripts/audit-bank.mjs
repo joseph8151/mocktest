@@ -2,7 +2,7 @@
 import { readFileSync } from 'node:fs';
 import { EXAMS, getLevel } from '../src/lib/exam.js';
 
-const seed = JSON.parse(readFileSync(new URL('../seed/seed.json', import.meta.url), 'utf8'));
+const seed = JSON.parse(readFileSync(new URL('../public/_seed/seed.json', import.meta.url), 'utf8'));
 const Q = seed.questions.map(([id, exam, section, kind, difficulty, passage, stem, image_svg, choices, answer, explanation]) => ({ id, exam, section, kind, difficulty, passage, stem, image_svg, choices: choices ? JSON.parse(choices) : null, answer, explanation }));
 const issues = [];
 const flag = (q, msg) => issues.push(`${q.exam}/${q.section} ${q.id}: ${msg} | ${q.stem.slice(0, 70).replace(/\n/g, ' ')}`);

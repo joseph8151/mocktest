@@ -1,4 +1,5 @@
 /* MockTest Lab SPA — no framework, no innerHTML with user data (everything goes through h()/text). */
+document.querySelectorAll('link[data-font]').forEach((l) => (l.media = 'all')); // fonts were fetched without blocking the first paint
 const $app = document.getElementById('app');
 const $nav = document.getElementById('nav');
 let me = null;
@@ -138,7 +139,7 @@ function examCard(type, m, i, products, payment) {
 const catTabs = (cur) => h('div', { class: 'cattabs', role: 'tablist' }, [['us', '#/', '미국 시험', 'MAP · SSAT · ISEE · SAT …'], ['kr', '#/kr', '국내 레테', '영어 · 국어 · 수학 레벨테스트']].map(([k, href, t, d]) => h('a', { href, class: k === cur ? 'on' : '', role: 'tab', 'aria-selected': k === cur ? 'true' : 'false' }, h('b', {}, t), h('span', {}, d))));
 
 async function pageKr() {
-  const { products, payment } = await api('GET', '/products');
+  const { products, payment } = await getProducts();
   const krTypes = Object.entries(EXAM_META).filter(([, m]) => m.kr);
   const head = (n, k, t, d) => h('div', { class: 'section-title' }, h('div', {}, h('div', { class: 'kicker' }, `${n} — ${k}`), h('h2', {}, t), d ? h('p', {}, d) : null));
   mount(
@@ -170,8 +171,10 @@ async function pageKr() {
   );
 }
 
+let prefetchProducts = null;
+const getProducts = async () => { const p = prefetchProducts; prefetchProducts = null; return (p && (await p)) || api('GET', '/products'); };
 async function pageHome() {
-  const { products, payment } = await api('GET', '/products');
+  const { products, payment } = await getProducts();
   const toExams = () => document.getElementById('exams')?.scrollIntoView({ behavior: 'smooth' });
   const head = (n, k, t, d) => h('div', { class: 'section-title' }, h('div', {}, h('div', { class: 'kicker' }, `${n} — ${k}`), h('h2', {}, t), d ? h('p', {}, d) : null));
   mount(
@@ -1375,8 +1378,12 @@ window.addEventListener('hashchange', route);
 document.addEventListener('click', (e) => { if (!e.target.closest('nav')) $nav.classList.remove('open'); });
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') document.querySelectorAll('.modal').forEach((m) => m.remove()); });
 (async () => {
-  try { me = (await api('GET', '/auth/me')).user; } catch {}
-  try { cfg = await api('GET', '/config'); const b = cfg.biz; document.getElementById('bizinfo').textContent = `${b.name} · 대표 ${b.owner} · 사업자등록번호 ${b.regNo} · 통신판매업 ${b.salesNo} · ${b.address} · ${b.contact}`; } catch {}
+  // one round trip instead of three: who am I, site config and (for the home pages) the product list load in parallel
+  const pMe = api('GET', '/auth/me').catch(() => ({})), pCfg = api('GET', '/config').catch(() => null);
+  if (/^#?\/?(kr)?$/.test(location.hash.replace(/^#/, '')) || !location.hash) prefetchProducts = api('GET', '/products').catch(() => null);
+  const [m0, c0] = await Promise.all([pMe, pCfg]);
+  me = m0.user || null;
+  try { cfg = c0 || cfg; const b = cfg.biz; document.getElementById('bizinfo').textContent = `${b.name} · 대표 ${b.owner} · 사업자등록번호 ${b.regNo} · 통신판매업 ${b.salesNo} · ${b.address} · ${b.contact}`; } catch {}
   renderNav(); showNotice();
   const po = new URLSearchParams(location.search).get('portone_order'); // mobile redirect return
   if (po) {

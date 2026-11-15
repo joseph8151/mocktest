@@ -3,7 +3,7 @@
 import fs from 'node:fs';
 import { EXAMS } from '../src/lib/exam.js';
 
-const seed = JSON.parse(fs.readFileSync(new URL('../seed/seed.json', import.meta.url)));
+const seed = JSON.parse(fs.readFileSync(new URL('../public/_seed/seed.json', import.meta.url)));
 const Q = seed.questions.map(([id, exam, section, kind, diff, passage, stem, svg, choices]) => ({ id, exam, section, kind, diff, passage, stem, svg, choices: choices ? JSON.parse(choices) : [] }))
   .filter((q) => !/[08]$/.test(q.id)); // paid pool only (ids ending 0/8 are the free sample pool)
 
