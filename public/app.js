@@ -35,7 +35,9 @@ const examName = { MAP: 'MAP', CAT4: 'CAT4', WIDA: 'WIDA' };
 const field = (label, input) => h('div', {}, h('label', {}, label), input);
 
 function renderNav() {
+  $nav.classList.remove('open');
   $nav.replaceChildren(...[
+    h('button', { class: 'menu-toggle', 'aria-label': '메뉴', onclick: (e) => { e.stopPropagation(); $nav.classList.toggle('open'); } }, h('span'), h('span'), h('span')),
     h('a', { href: '#/' }, '시험 상품'),
     ...(me ? [
       h('a', { class: 'keep', href: '#/me' }, '내 시험'),
@@ -96,11 +98,12 @@ async function pageHome() {
         [['A', 'song', true], ['B', 'piano'], ['C', 'concert'], ['D', 'singer']].map(([l, t, sel]) => h('div', { class: 'mc' + (sel ? ' sel' : '') }, h('b', {}, l), t)),
         h('div', { class: 'mbar' }, h('i'))),
     ),
+    h('div', { class: 'marquee', 'aria-hidden': 'true' }, h('div', {}, [0, 1].map(() => ['MAP Growth', 'CAT4', 'CogAT', 'SCAT', 'SSAT', 'ISEE', 'SAT · PSAT', 'TOEFL Primary · Junior', 'WIDA ACCESS'].map((x) => h('span', {}, x, h('i', {}, '★')))))),
     h('div', { id: 'exams' }), head('01', 'Exams', 'Choose your test', '원하는 시험과 횟수권을 고르세요. 결제가 확인되면 이용권이 즉시 지급됩니다.'),
     h('div', { class: 'index' }, Object.entries(EXAM_META).map(([type, m], i) => h('div', { class: 'exam-card', style: `--accent:${m.accent}` },
       h('div', { class: 'idx' }, h('span', {}, h('b', {}), `0${i + 1}`), h('span', {}, type)),
       h('h3', {}, m.name), h('div', { class: 'sub' }, m.sub),
-      h('div', { class: 'row small', style: 'margin:-6px 0 16px;gap:14px' }, h('a', { href: `#/info/${type}` }, '시험 안내'), h('a', { href: `#/sample/${type}` }, '무료 샘플 5문항')),
+      h('div', { class: 'row small', style: 'margin:-6px 0 16px;gap:14px' }, h('a', { href: `#/info/${type}` }, '시험 안내'), h('a', { href: `#/sample/${type}` }, '무료 샘플 5문항'), h('span', { class: 'muted' }, { MAP: 'K–G12 학년별', CAT4: '레벨 A–G', COGAT: 'Level 7–17/18', SCAT: '3개 레벨', SSAT: 'Elem · Middle · Upper', ISEE: 'Lower · Middle · Upper', SAT: 'PSAT 8/9 · PSAT 10 · SAT', TOEFLJ: 'Primary 1·2 · Junior', WIDA: '1–12학년' }[type] || '')),
       h('ul', {}, m.points.map((x) => h('li', {}, x))),
       h('div', { class: 'push' }, products.filter((p) => p.exam_type === type).map((p) => h('div', { class: 'plan' },
         h('div', {}, h('div', { class: 'pt' }, p.id === 'p-test' ? '관리자 결제 테스트' : `${p.attempts}회권`), h('div', { class: 'pd' }, `${p.valid_days}D · ${money(p.price_usd_cents, 'USD')}`)),
@@ -142,6 +145,7 @@ function buy(p, payment) {
 }
 async function payStripe(p) { const { url } = await api('POST', '/pay/stripe/checkout', { productId: p.id }); location.href = url; }
 async function payKcp(p, method) {
+  if (method === 'VIRTUAL_ACCOUNT') throw new Error('KCP 직접결제는 가상계좌를 지원하지 않습니다. 다른 결제 수단을 선택해 주세요.');
   const { form } = await api('POST', '/pay/kcp/register', { productId: p.id, payMethod: method });
   const f = h('form', { method: form.method, action: form.action, style: 'display:none' }, Object.entries(form.fields).map(([k, v]) => h('input', { type: 'hidden', name: k, value: v })));
   document.body.append(f); f.submit();
@@ -376,7 +380,8 @@ function chooseLevel(exam, resuming) {
 /* ---------- exam runner ---------- */
 async function pageExam(id) {
   if (!me) return (location.hash = '#/login');
-  const state = await api('GET', `/attempts/${id}/current`);
+  let state = await api('GET', `/attempts/${id}/current`);
+  for (let i = 0; state.status === 'retry' && i < 5; i++) { await new Promise((r) => setTimeout(r, 300)); state = await api('GET', `/attempts/${id}/current`); }
   if (state.mode === 'section') return pageExamSection(id, state);
   return pageExamAdaptive(id, state);
 }
@@ -654,6 +659,7 @@ async function adminOrders(b) {
   b.append(h('p', {}, h('a', { class: 'btn sm alt', href: '/api/admin/orders.csv' }, 'CSV 내보내기')), h('table', {}, h('tr', {}, ['일시', '회원', '상품', '수단', '금액', '상태', ''].map((x) => h('th', {}, x))), orders.map((o) => h('tr', {},
     h('td', {}, date(o.created_at)), h('td', {}, `${o.name} (${o.email})`), h('td', {}, o.title), h('td', {}, o.provider), h('td', {}, money(o.amount, o.currency)), h('td', {}, o.status),
     h('td', {}, o.refund_status === 'pending' ? h('div', { class: 'small' }, h('span', { class: 'badge warn' }, '환불요청'), ` ${o.refund_reason || ''} `, h('button', { class: 'btn sm alt', onclick: guard(async () => { await api('POST', `/admin/refund-requests/${o.refund_id}/reject`); pageAdmin('orders'); }) }, '거절')) : null,
+      ['pending', 'failed', 'awaiting_deposit'].includes(o.status) && o.provider !== 'admin' ? h('button', { class: 'btn sm alt', title: 'PG사 관리자 화면에서 결제를 확인한 경우에만', onclick: guard(async () => { const tno = prompt('PG사(KCP·포트원·Stripe) 관리자 화면에서 결제 완료를 확인했나요? 확인했다면 거래번호를 입력하세요 (선택).'); if (tno === null) return; await api('POST', `/admin/orders/${o.id}/mark-paid`, { tno }); toast('결제 확정 · 이용권 지급'); pageAdmin('orders'); }) }, '수동 확정') : null,
       ['pending', 'failed', 'awaiting_deposit'].includes(o.status) && o.provider !== 'admin' ? h('button', { class: 'btn sm alt', onclick: guard(async () => { const r = await api('POST', `/admin/orders/${o.id}/recheck`); toast(`결제사 확인 결과: ${r.status}${r.error ? ' (' + r.error + ')' : ''}`); pageAdmin('orders'); }) }, '재확인') : null,
       o.status === 'paid' && o.provider !== 'admin' ? h('button', { class: 'btn sm danger', onclick: guard(async () => { if (confirm('PG사에 환불을 요청하고 이용권을 회수합니다. 진행할까요?')) { await api('POST', `/admin/orders/${o.id}/refund`); toast('환불 완료'); pageAdmin('orders'); } }) }, '환불') : null)))));
 }
@@ -713,7 +719,7 @@ async function adminPayments(b) {
 async function adminGrading(b) {
   const { items } = await api('GET', '/admin/grading');
   if (!items.length) return b.append(h('p', { class: 'muted' }, '채점할 답안이 없습니다.'));
-  b.append(items.map((it) => {
+  b.append(...items.map((it) => {
     const f = h('form', { class: 'card', onsubmit: guard(async (e) => { e.preventDefault(); await api('POST', '/admin/grading/' + it.id, { score: f.score.value, feedback: f.fb.value }); toast('저장됨'); pageAdmin('grading'); }) },
       h('div', { class: 'small muted' }, `${it.name} (${it.email}) · ${it.section}`), h('b', {}, it.stem),
       it.kind === 'text' ? h('div', { class: 'passage' }, it.text || '(무응답)') : (it.audio_key ? h('audio', { controls: true, src: '/api/admin/audio/' + encodeURIComponent(it.audio_key) }) : h('p', { class: 'muted' }, '(녹음 없음)')),
@@ -762,6 +768,7 @@ function pageLegal(kind) {
 /* ---------- router ---------- */
 async function route() {
   document.querySelectorAll('.modal').forEach((m) => m.remove()); // never leave a dialog open across pages
+  $nav.classList.remove('open'); // close the phone menu after navigating
   const [path, qs] = (location.hash.slice(1) || '/').split('?'); const q = Object.fromEntries(new URLSearchParams(qs || ''));
   const seg = path.split('/').filter(Boolean);
   try {
@@ -790,6 +797,7 @@ async function route() {
   }
 }
 window.addEventListener('hashchange', route);
+document.addEventListener('click', (e) => { if (!e.target.closest('nav')) $nav.classList.remove('open'); });
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') document.querySelectorAll('.modal').forEach((m) => m.remove()); });
 (async () => {
   try { me = (await api('GET', '/auth/me')).user; } catch {}

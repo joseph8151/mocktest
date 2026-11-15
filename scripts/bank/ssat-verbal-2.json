@@ -1,0 +1,702 @@
+[
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Choose the word closest in meaning to HUGE.",
+  "choices": [
+   "small",
+   "enormous",
+   "quiet",
+   "round"
+  ],
+  "answer": 1,
+  "explanation": "Huge and enormous both mean very large."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Choose the word closest in meaning to GLAD.",
+  "choices": [
+   "happy",
+   "angry",
+   "sleepy",
+   "early"
+  ],
+  "answer": 0,
+  "explanation": "To be glad is to be happy or pleased."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Choose the word closest in meaning to SHOUT.",
+  "choices": [
+   "whisper",
+   "sing",
+   "yell",
+   "listen"
+  ],
+  "answer": 2,
+  "explanation": "To shout is to yell in a loud voice."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Choose the word closest in meaning to CHILLY.",
+  "choices": [
+   "warm",
+   "bright",
+   "noisy",
+   "cold"
+  ],
+  "answer": 3,
+  "explanation": "Chilly describes something unpleasantly cold."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Choose the word closest in meaning to FIX.",
+  "choices": [
+   "repair",
+   "break",
+   "lose",
+   "hide"
+  ],
+  "answer": 0,
+  "explanation": "To fix something is to repair it so it works again."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Choose the word closest in meaning to TIDY.",
+  "choices": [
+   "messy",
+   "neat",
+   "heavy",
+   "late"
+  ],
+  "answer": 1,
+  "explanation": "A tidy room is neat and well kept."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Choose the word closest in meaning to BRAVE.",
+  "choices": [
+   "fearless",
+   "gentle",
+   "clumsy",
+   "curious"
+  ],
+  "answer": 0,
+  "explanation": "A brave person acts without fear, so brave means fearless."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Choose the word closest in meaning to VANISH.",
+  "choices": [
+   "appear",
+   "travel",
+   "disappear",
+   "shine"
+  ],
+  "answer": 2,
+  "explanation": "To vanish is to disappear suddenly from sight."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Choose the word closest in meaning to GRIN.",
+  "choices": [
+   "frown",
+   "smile",
+   "stare",
+   "yawn"
+  ],
+  "answer": 1,
+  "explanation": "A grin is a broad smile."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Choose the word closest in meaning to FEEBLE.",
+  "choices": [
+   "loud",
+   "strange",
+   "angry",
+   "weak"
+  ],
+  "answer": 3,
+  "explanation": "Feeble means lacking strength, or weak."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Choose the word closest in meaning to ASSIST.",
+  "choices": [
+   "ignore",
+   "delay",
+   "help",
+   "blame"
+  ],
+  "answer": 2,
+  "explanation": "To assist someone is to help them."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Choose the word closest in meaning to DREADFUL.",
+  "choices": [
+   "wonderful",
+   "terrible",
+   "sudden",
+   "careful"
+  ],
+  "answer": 1,
+  "explanation": "Something dreadful is terrible or causes great fear."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Choose the word closest in meaning to HOSTILE.",
+  "choices": [
+   "cheerful",
+   "shy",
+   "unfriendly",
+   "patient"
+  ],
+  "answer": 2,
+  "explanation": "Hostile describes someone who is unfriendly or opposed to others."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Choose the word closest in meaning to OBSTACLE.",
+  "choices": [
+   "barrier",
+   "reward",
+   "journey",
+   "shortcut"
+  ],
+  "answer": 0,
+  "explanation": "An obstacle is a barrier that blocks progress."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Choose the word closest in meaning to VIVID.",
+  "choices": [
+   "faded",
+   "vibrant",
+   "brief",
+   "hidden"
+  ],
+  "answer": 1,
+  "explanation": "Vivid colors or memories are vibrant and strikingly clear."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Choose the word closest in meaning to CONSENT.",
+  "choices": [
+   "refuse",
+   "argue",
+   "forget",
+   "agree"
+  ],
+  "answer": 3,
+  "explanation": "To consent is to agree to or give permission for something."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Choose the word closest in meaning to TRIVIAL.",
+  "choices": [
+   "unimportant",
+   "difficult",
+   "mysterious",
+   "expensive"
+  ],
+  "answer": 0,
+  "explanation": "Something trivial is of little importance."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Choose the word closest in meaning to RIGID.",
+  "choices": [
+   "flexible",
+   "stiff",
+   "smooth",
+   "fragile"
+  ],
+  "answer": 1,
+  "explanation": "Rigid means stiff and unable to bend."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Choose the word closest in meaning to METICULOUS.",
+  "choices": [
+   "careless",
+   "hurried",
+   "painstaking",
+   "generous"
+  ],
+  "answer": 2,
+  "explanation": "A meticulous worker is painstaking, taking great care with every detail."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Choose the word closest in meaning to AMBIGUOUS.",
+  "choices": [
+   "unclear",
+   "obvious",
+   "hostile",
+   "ambitious"
+  ],
+  "answer": 0,
+  "explanation": "An ambiguous statement is unclear because it can be understood in more than one way."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Choose the word closest in meaning to DETER.",
+  "choices": [
+   "encourage",
+   "discourage",
+   "decide",
+   "deliver"
+  ],
+  "answer": 1,
+  "explanation": "To deter is to discourage someone from acting, often through fear of consequences."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Choose the word closest in meaning to FRUGAL.",
+  "choices": [
+   "grateful",
+   "wasteful",
+   "fragile",
+   "thrifty"
+  ],
+  "answer": 3,
+  "explanation": "A frugal person is thrifty, avoiding unnecessary spending."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Choose the word closest in meaning to INDIFFERENT.",
+  "choices": [
+   "enthusiastic",
+   "unconcerned",
+   "identical",
+   "angry"
+  ],
+  "answer": 1,
+  "explanation": "Indifferent means having no interest or concern, so unconcerned is closest."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Choose the word closest in meaning to ADVERSARY.",
+  "choices": [
+   "ally",
+   "advisor",
+   "spectator",
+   "opponent"
+  ],
+  "answer": 3,
+  "explanation": "An adversary is an opponent or enemy."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Choose the word closest in meaning to LACONIC.",
+  "choices": [
+   "lazy",
+   "cheerful",
+   "terse",
+   "talkative"
+  ],
+  "answer": 2,
+  "explanation": "A laconic speaker is terse, using very few words."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Choose the word closest in meaning to INTRANSIGENT.",
+  "choices": [
+   "uncompromising",
+   "temporary",
+   "transparent",
+   "cooperative"
+  ],
+  "answer": 0,
+  "explanation": "Intransigent describes someone who refuses to compromise or change their position."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Choose the word closest in meaning to SANGUINE.",
+  "choices": [
+   "pessimistic",
+   "optimistic",
+   "furious",
+   "pale"
+  ],
+  "answer": 1,
+  "explanation": "Sanguine means cheerfully optimistic, especially about an uncertain situation."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Choose the word closest in meaning to OBDURATE.",
+  "choices": [
+   "obedient",
+   "eloquent",
+   "fragile",
+   "stubborn"
+  ],
+  "answer": 3,
+  "explanation": "Obdurate means stubbornly refusing to change one's opinion or course of action."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Choose the word closest in meaning to ENERVATE.",
+  "choices": [
+   "weaken",
+   "energize",
+   "irritate",
+   "enlighten"
+  ],
+  "answer": 0,
+  "explanation": "To enervate is to drain of energy or weaken, despite its resemblance to energize."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Choose the word closest in meaning to PROSAIC.",
+  "choices": [
+   "poetic",
+   "wordy",
+   "ordinary",
+   "professional"
+  ],
+  "answer": 2,
+  "explanation": "Prosaic means dull and ordinary, lacking imagination or excitement."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Glove is to hand as sock is to ___",
+  "choices": [
+   "shoe",
+   "foot",
+   "leg",
+   "arm"
+  ],
+  "answer": 1,
+  "explanation": "A glove is worn on the hand just as a sock is worn on the foot."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Hot is to cold as up is to ___",
+  "choices": [
+   "high",
+   "top",
+   "down",
+   "over"
+  ],
+  "answer": 2,
+  "explanation": "Hot and cold are opposites, just as up and down are opposites."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Bread is to bakery as medicine is to ___",
+  "choices": [
+   "library",
+   "garage",
+   "doctor",
+   "pharmacy"
+  ],
+  "answer": 3,
+  "explanation": "Bread is sold at a bakery just as medicine is sold at a pharmacy."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Ear is to hear as nose is to ___",
+  "choices": [
+   "see",
+   "taste",
+   "smell",
+   "face"
+  ],
+  "answer": 2,
+  "explanation": "The ear is used to hear just as the nose is used to smell."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Petal is to flower as page is to ___",
+  "choices": [
+   "book",
+   "word",
+   "pen",
+   "read"
+  ],
+  "answer": 0,
+  "explanation": "A petal is part of a flower just as a page is part of a book."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Net is to fisherman as plow is to ___",
+  "choices": [
+   "field",
+   "farmer",
+   "horse",
+   "crop"
+  ],
+  "answer": 1,
+  "explanation": "A net is a tool used by a fisherman just as a plow is a tool used by a farmer."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Freeze is to ice as boil is to ___",
+  "choices": [
+   "kettle",
+   "cold",
+   "steam",
+   "water"
+  ],
+  "answer": 2,
+  "explanation": "Freezing water produces ice just as boiling water produces steam."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Thermometer is to temperature as scale is to ___",
+  "choices": [
+   "music",
+   "weight",
+   "fish",
+   "height"
+  ],
+  "answer": 1,
+  "explanation": "A thermometer measures temperature just as a scale measures weight."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Warm is to scorching as cool is to ___",
+  "choices": [
+   "mild",
+   "frigid",
+   "damp",
+   "breezy"
+  ],
+  "answer": 1,
+  "explanation": "Scorching is an extreme degree of warm just as frigid is an extreme degree of cool."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Carrot is to vegetable as oak is to ___",
+  "choices": [
+   "acorn",
+   "leaf",
+   "forest",
+   "tree"
+  ],
+  "answer": 3,
+  "explanation": "A carrot is a kind of vegetable just as an oak is a kind of tree."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Brittle is to shatter as elastic is to ___",
+  "choices": [
+   "stretch",
+   "snap",
+   "melt",
+   "harden"
+  ],
+  "answer": 0,
+  "explanation": "Something brittle tends to shatter just as something elastic tends to stretch."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Novel is to chapter as play is to ___",
+  "choices": [
+   "stage",
+   "actor",
+   "audience",
+   "act"
+  ],
+  "answer": 3,
+  "explanation": "A novel is divided into chapters just as a play is divided into acts."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Vaccine is to immunity as fertilizer is to ___",
+  "choices": [
+   "growth",
+   "soil",
+   "farmer",
+   "decay"
+  ],
+  "answer": 0,
+  "explanation": "A vaccine produces immunity just as fertilizer promotes plant growth."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Furious is to annoyed as ecstatic is to ___",
+  "choices": [
+   "pleased",
+   "angry",
+   "gloomy",
+   "curious"
+  ],
+  "answer": 0,
+  "explanation": "Furious is an intense form of annoyed just as ecstatic is an intense form of pleased."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Opaque is to transparent as verbose is to ___",
+  "choices": [
+   "wordy",
+   "loud",
+   "concise",
+   "clear"
+  ],
+  "answer": 2,
+  "explanation": "Opaque is the opposite of transparent just as verbose is the opposite of concise."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Cartographer is to map as lexicographer is to ___",
+  "choices": [
+   "atlas",
+   "novel",
+   "dictionary",
+   "language"
+  ],
+  "answer": 2,
+  "explanation": "A cartographer creates maps just as a lexicographer compiles dictionaries."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Drought is to parched as deluge is to ___",
+  "choices": [
+   "sodden",
+   "dusty",
+   "calm",
+   "frozen"
+  ],
+  "answer": 0,
+  "explanation": "A drought leaves land parched just as a deluge leaves it sodden."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Sycophant is to flatter as braggart is to ___",
+  "choices": [
+   "lie",
+   "boast",
+   "complain",
+   "steal"
+  ],
+  "answer": 1,
+  "explanation": "A sycophant is defined by flattering just as a braggart is defined by boasting."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Mollify is to anger as allay is to ___",
+  "choices": [
+   "joy",
+   "courage",
+   "fear",
+   "ally"
+  ],
+  "answer": 2,
+  "explanation": "To mollify is to soothe anger just as to allay is to calm fear."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Gregarious is to sociable as taciturn is to ___",
+  "choices": [
+   "talkative",
+   "tactful",
+   "angry",
+   "reserved"
+  ],
+  "answer": 3,
+  "explanation": "Gregarious means sociable just as taciturn means reserved and uncommunicative."
+ }
+]

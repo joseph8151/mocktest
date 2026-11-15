@@ -35,7 +35,7 @@ const coverage = [];
 for (const [exam, ex] of Object.entries(EXAMS)) {
   for (const lv of ex.levels || [getLevel(exam)]) {
     for (const sec of ex.sections.filter((s) => !s.manual)) {
-      const inWin = Q.filter((q) => q.exam === exam && q.section === sec.key && q.difficulty >= lv.dmin && q.difficulty <= lv.dmax).length;
+      const inWin = Q.filter((q) => q.exam === exam && q.section === sec.key && !/[08]$/.test(q.id) && q.difficulty >= lv.dmin && q.difficulty <= lv.dmax).length; // paid pool only
       if (inWin < sec.n * 1.5) coverage.push(`${exam} ${lv.name} / ${sec.name}: ${inWin} questions in difficulty ${lv.dmin}-${lv.dmax} for a ${sec.n}-question section${inWin < sec.n ? ' (window will widen)' : ' (thin: little variety on retakes)'}`);
     }
   }

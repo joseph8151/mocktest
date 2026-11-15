@@ -114,7 +114,7 @@ export function getLevel(examType, key) {
 export function levelForGrade(examType, grade) {
   const lv = EXAMS[examType]?.levels || [];
   if (!lv.length || !grade) return null;
-  const g = /k/i.test(grade) ? 0 : parseInt(String(grade).replace(/[^0-9]/g, ''), 10);
+  const g = /^\s*(k|kg|kinder(garten)?|유치원)\b/i.test(grade) ? 0 : parseInt(String(grade).replace(/[^0-9]/g, ''), 10);
   if (Number.isNaN(g)) return null;
   if (examType === 'MAP') return g === 0 ? 'k' : `g${Math.min(12, Math.max(1, g))}`;
   const ranges = { CAT4: [2, 5, 7, 12], COGAT: [2, 5, 8, 12], SCAT: [3, 5, 12], SSAT: [4, 7, 12], ISEE: [4, 6, 12], SAT: [9, 10, 12], TOEFLJ: [4, 6, 12], WIDA: [1, 3, 5, 8, 12] }[examType] || [];

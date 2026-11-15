@@ -199,7 +199,7 @@ details.faq p{color:var(--muted);padding:0 0 18px;margin:0;max-width:44em}
   .index{grid-template-columns:1fr}.features{grid-template-columns:1fr}
   .auth{grid-template-columns:1fr}.auth .side{display:none}
   .step{border-right:0;border-bottom:1px solid var(--rule)}.step:last-child{border-bottom:0}
-  nav a:not(.cta):not(.keep){display:none}
+
 }
 @media print{.top,.foot,.noprint,.toast{display:none!important}body{background:#fff;color:#000}.card,.ring-card{break-inside:avoid}.score-hero{color:#000;background:#fff;border:1px solid #000}.score-hero .total{color:#000}.score-hero .muted{color:#555;opacity:1}}
 
@@ -224,3 +224,56 @@ details.faq p{color:var(--muted);padding:0 0 18px;margin:0;max-width:44em}
 .extras>div{padding:14px 18px;border-right:1px solid var(--rule)}.extras b{font-size:1.25rem;letter-spacing:-.03em;font-family:var(--mono);font-weight:600}
 .score-hero .total.long{font-size:2.6rem;letter-spacing:-.04em}
 .hero-score{text-align:right}
+
+/* table-scroll: wide tables scroll sideways on small screens instead of overflowing the page */
+@media (max-width:760px){table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;white-space:nowrap}}
+
+/* ===================== polish & responsive ===================== */
+#app>*{animation:rise .32s cubic-bezier(.2,.7,.2,1) backwards} /* backwards, not both: a finished transform animation would trap position:fixed children */
+@keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){#app>*,.marquee>div{animation:none!important}}
+:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+/* marquee band */
+.marquee{overflow:hidden;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);background:var(--ink);color:var(--bg);margin:0 calc(-1 * clamp(16px,4vw,32px));padding:12px 0}
+.marquee>div{display:flex;gap:0;width:max-content;animation:marq 38s linear infinite}
+.marquee span{font-family:var(--serif);font-size:1.35rem;font-weight:700;letter-spacing:-.02em;padding:0 22px;white-space:nowrap;display:inline-flex;align-items:center;gap:22px}
+.marquee i{font-style:normal;color:var(--pop);font-size:.9rem}
+@keyframes marq{to{transform:translateX(-50%)}}
+/* footer */
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:28px;padding-bottom:18px;margin-bottom:14px;border-bottom:1px solid var(--rule)}
+.foot-grid .brand{margin-bottom:8px}
+.foot-links{display:flex;flex-wrap:wrap;gap:6px 14px;margin:8px 0 0}.foot-links a{color:var(--ink-2);text-decoration:none;font-size:.86rem}.foot-links a:hover{color:var(--brand)}
+/* hamburger (phones & small tablets) */
+.menu-toggle{display:none;width:40px;height:40px;padding:10px 9px;border:1px solid var(--ink);background:var(--surface);flex-direction:column;justify-content:space-between;cursor:pointer;border-radius:var(--r)}
+.menu-toggle span{display:block;height:2px;background:var(--ink);transition:transform .2s,opacity .2s}
+nav.open .menu-toggle span:nth-child(1){transform:translateY(8px) rotate(45deg)}nav.open .menu-toggle span:nth-child(2){opacity:0}nav.open .menu-toggle span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+@media (max-width:900px){
+  .menu-toggle{display:inline-flex}
+  nav>a:not(.cta),nav>button:not(.menu-toggle){display:none}
+  nav a.cta{padding:8px 12px}
+  nav.open{position:fixed;top:56px;left:0;right:0;bottom:0;flex-direction:column;align-items:stretch;gap:0;background:var(--bg);z-index:30;padding:6px 0 24px;overflow:auto;border-top:1px solid var(--ink)}
+  nav.open>a,nav.open>button:not(.menu-toggle){display:block;padding:16px 22px;border-bottom:1px solid var(--rule);font-size:1.05rem;text-align:left;border-radius:0;color:var(--ink)}
+  nav.open>a.cta{margin:14px 22px 0;text-align:center;border:0;color:var(--bg)}
+  nav.open .menu-toggle{position:fixed;top:8px;right:16px;z-index:31}
+  .foot-grid{grid-template-columns:1fr}
+  .marquee span{font-size:1.05rem;padding:0 14px;gap:14px}
+}
+/* tap targets */
+@media (pointer:coarse){.btn{min-height:44px}.btn.sm{min-height:36px}.pal{min-width:38px;height:36px}.choice{padding:15px 16px}}
+/* exam runner on phones: one-row scrollable palette, bottom action bar */
+@media (max-width:700px){
+  main{padding-top:20px}
+  .exam-top{top:61px;padding:10px 0 10px}
+  .exam-head{margin-bottom:8px;gap:6px}.sec-pill{font-size:.9rem}.timer{font-size:.95rem;padding:2px 9px}
+  .palette{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+  .qcard{padding:18px 16px 92px;border-left:0;border-right:0;margin:0 calc(-1 * clamp(16px,4vw,32px))}
+  .exam-foot{position:fixed;left:0;right:0;bottom:0;z-index:15;margin:0;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:var(--bg);border-top:1px solid var(--ink)}
+  .exam-foot .btn{flex:1}.hide-sm{display:none}
+  .qcard h3.stem{font-size:1.08rem}
+  .rings{grid-template-columns:1fr 1fr}.ring{width:96px;height:96px}.ring svg{width:96px;height:96px}.ring .c b{font-size:1.25rem}
+  .ring-card{padding:14px 8px}
+  .score-hero{padding:22px 18px}.score-hero .total{font-size:3.6rem}
+  .hero h1 em{font-size:.3em;line-height:1.7}
+  .section-title{margin-top:52px}
+  .steps{grid-template-columns:1fr}
+}

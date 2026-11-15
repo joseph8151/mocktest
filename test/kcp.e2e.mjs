@@ -20,8 +20,9 @@ const ret = (fields) => fetch(BASE + '/api/pay/kcp/return', { method: 'POST', re
 async function order(method = 'CARD') { const r = await admin.post('/api/pay/kcp/register', { productId: 'p-test', payMethod: method }); assert.ok(r.form, JSON.stringify(r)); return r; }
 
 // 1) happy path
-const a = await order('VIRTUAL_ACCOUNT');
-assert.equal(a.form.action, 'https://pay.example/kcp'); assert.equal(a.form.fields.good_mny, '1000'); assert.equal(a.form.fields.pay_method, '001000000000'); assert.ok(a.form.fields.Ret_URL.endsWith('/api/pay/kcp/return'));
+assert.equal((await admin.post('/api/pay/kcp/register', { productId: 'p-test', payMethod: 'VIRTUAL_ACCOUNT' })).status, 400, 'virtual accounts are not offered via KCP direct');
+const a = await order('CARD');
+assert.equal(a.form.action, 'https://pay.example/kcp'); assert.equal(a.form.fields.good_mny, '1000'); assert.equal(a.form.fields.pay_method, '100000000000'); assert.ok(a.form.fields.Ret_URL.endsWith('/api/pay/kcp/return'));
 let r = await ret({ res_cd: '0000', ordr_idxx: a.form.fields.ordr_idxx, tran_cd: '00100000', enc_data: 'OK', enc_info: 'x' });
 assert.equal(r.status, 303); assert.match(r.headers.get('location'), /pay\/success\?order=.*provider=kcp/);
 assert.equal((await admin.get(`/api/orders/${a.orderId}/status`)).status, 'paid');

@@ -2,7 +2,7 @@ import { Hono } from 'hono';
 import { uid, now } from '../lib/util.js';
 import { requireAdmin } from '../lib/auth.js';
 import { EXAMS, scoreAttempt } from '../lib/exam.js';
-import { stripeRetrieveSession, stripeRefund, portoneCancel, recheckOrder } from '../lib/payments.js';
+import { stripeRetrieveSession, stripeRefund, portoneCancel, recheckOrder, fulfillOrder } from '../lib/payments.js';
 import { notifyResult } from './exams.js';
 import { kcpCancel, kcpEnabled, kcpConfig } from '../lib/kcp.js';
 
@@ -57,6 +57,7 @@ app.patch('/users/:id', async (c) => {
   if (id === c.get('user').id && (b.role === 'student' || b.status === 'suspended')) return c.json({ error: '자기 자신은 변경할 수 없습니다.' }, 400);
   if (b.role && !['student', 'admin'].includes(b.role)) return c.json({ error: 'bad role' }, 400);
   if (b.status && !['active', 'suspended'].includes(b.status)) return c.json({ error: 'bad status' }, 400);
+  if ((b.role === 'student' || b.status === 'suspended') && (await c.env.DB.prepare(`SELECT role FROM users WHERE id=?`).bind(id).first())?.role === 'admin' && (await c.env.DB.prepare(`SELECT COUNT(*) n FROM users WHERE role='admin' AND status='active'`).first()).n <= 1) return c.json({ error: '마지막 관리자는 해제하거나 정지할 수 없습니다.' }, 400);
   await c.env.DB.prepare('UPDATE users SET role=COALESCE(?,role), status=COALESCE(?,status), name=COALESCE(?,name), grade=COALESCE(?,grade) WHERE id=?')
     .bind(b.role || null, b.status || null, b.name || null, b.grade ?? null, id).run();
   if (b.status === 'suspended') await c.env.DB.prepare('DELETE FROM sessions WHERE user_id=?').bind(id).run();
@@ -72,6 +73,7 @@ app.delete('/users/:id', async (c) => {
     c.env.DB.prepare('DELETE FROM answers WHERE attempt_id IN (SELECT id FROM attempts WHERE user_id=?)').bind(id),
     c.env.DB.prepare('DELETE FROM attempts WHERE user_id=?').bind(id),
     c.env.DB.prepare('DELETE FROM entitlements WHERE user_id=?').bind(id),
+    c.env.DB.prepare('DELETE FROM refund_requests WHERE user_id=?').bind(id),
     c.env.DB.prepare('DELETE FROM orders WHERE user_id=?').bind(id),
     c.env.DB.prepare('DELETE FROM users WHERE id=?').bind(id),
   ]);
@@ -99,6 +101,14 @@ app.get('/orders', async (c) => {
      LEFT JOIN refund_requests r ON r.order_id=o.id
      ORDER BY (r.status='pending') DESC, o.created_at DESC LIMIT 300`).all();
   return c.json({ orders: results });
+});
+app.post('/orders/:id/mark-paid', async (c) => {
+  const o = await c.env.DB.prepare('SELECT * FROM orders WHERE id=?').bind(c.req.param('id')).first();
+  if (!o || !['pending', 'failed', 'awaiting_deposit'].includes(o.status)) return c.json({ error: '확정할 수 없는 주문입니다.' }, 400);
+  const b = await c.req.json().catch(() => ({}));
+  if (b.tno) await c.env.DB.prepare('UPDATE orders SET meta=? WHERE id=?').bind(JSON.stringify({ ...JSON.parse(o.meta || '{}'), tno: String(b.tno).slice(0, 40), manual: true }), o.id).run();
+  await fulfillOrder(c.env, o.id, o.provider_ref);
+  return c.json({ ok: true });
 });
 app.post('/orders/:id/recheck', async (c) => {
   const o = await c.env.DB.prepare('SELECT * FROM orders WHERE id=?').bind(c.req.param('id')).first();
@@ -238,7 +248,8 @@ app.get('/audio/*', async (c) => {
   if (!o) return c.json({ error: 'not found' }, 404);
   const bin = atob(o.data), bytes = new Uint8Array(bin.length);
   for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
-  return new Response(bytes, { headers: { 'Content-Type': o.content_type || 'audio/webm' } });
+  const type = /^audio\/[a-z0-9.+-]+$/.test(o.content_type || '') ? o.content_type : 'audio/webm';
+  return new Response(bytes, { headers: { 'Content-Type': type, 'X-Content-Type-Options': 'nosniff', 'Content-Security-Policy': "default-src 'none'; media-src 'self'", 'Content-Disposition': 'inline; filename="answer.webm"' } });
 });
 app.post('/grading/:id', async (c) => {
   const b = await c.req.json();

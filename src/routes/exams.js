@@ -69,15 +69,28 @@ app.post('/attempts', async (c) => {
   const claim = await c.env.DB.prepare('UPDATE entitlements SET attempts_used=attempts_used+1 WHERE id=? AND attempts_used<attempts_total').bind(ent.id).run();
   if (!claim.meta.changes) return c.json({ error: '이용권이 소진되었습니다.' }, 402);
   const id = uid();
-  await c.env.DB.prepare('INSERT INTO attempts (id,user_id,entitlement_id,exam_type,state,started_at) VALUES (?,?,?,?,?,?)')
-    .bind(id, u.id, ent.id, examType, JSON.stringify(initialState(examType, now(), levelKey)), now()).run();
+  try {
+    await c.env.DB.prepare('INSERT INTO attempts (id,user_id,entitlement_id,exam_type,state,started_at) VALUES (?,?,?,?,?,?)')
+      .bind(id, u.id, ent.id, examType, JSON.stringify(initialState(examType, now(), levelKey)), now()).run();
+  } catch (e) { // a parallel request already opened one: return the ticket and resume that attempt
+    await c.env.DB.prepare('UPDATE entitlements SET attempts_used=attempts_used-1 WHERE id=? AND attempts_used>0').bind(ent.id).run();
+    const again = await c.env.DB.prepare(`SELECT id FROM attempts WHERE user_id=? AND exam_type=? AND status='in_progress'`).bind(u.id, examType).first();
+    if (again) return c.json({ id: again.id, resumed: true });
+    throw e;
+  }
   return c.json({ id });
 });
 
-async function loadAttempt(c) {
+async function loadAttempt(c, { live = false } = {}) {
   const a = await c.env.DB.prepare('SELECT * FROM attempts WHERE id=?').bind(c.req.param('id')).first();
   const u = c.get('user');
-  if (!a || (a.user_id !== u.id && u.role !== 'admin')) return null;
+  if (!a) return null;
+  if (live) { // taking the test: owner only, and only while the ticket is still valid
+    if (a.user_id !== u.id) return null;
+    if (a.status === 'in_progress' && (await c.env.DB.prepare('SELECT revoked FROM entitlements WHERE id=?').bind(a.entitlement_id).first())?.revoked) return null;
+    return a;
+  }
+  if (a.user_id !== u.id && u.role !== 'admin') return null;
   return a;
 }
 
@@ -113,7 +126,7 @@ async function ensureCurrent(env, a, st) {
     if (now() > st.deadline + GRACE_MS) { nextSection(a, st); continue; }
     if (!st.current) {
       const { results: bank } = await env.DB.prepare(
-        'SELECT id,difficulty FROM questions WHERE exam_type=? AND section=? AND active=1').bind(a.exam_type, sec.key).all();
+        `SELECT id,difficulty FROM questions WHERE exam_type=? AND section=? AND active=1 AND substr(id,-1) NOT IN ('0','8')`).bind(a.exam_type, sec.key).all(); // '0' = free-sample pool
       const lv = getLevel(a.exam_type, st.level);
       const { pool, lo, hi } = levelBank(bank, lv, sec.n);
       const target = sectionTarget(a.exam_type, st.si, pool.length);
@@ -134,7 +147,7 @@ async function ensureCurrent(env, a, st) {
    change answers and skip; unanswered questions are recorded as omitted when the section is submitted. ===== */
 async function buildSectionSet(env, a, st) {
   const sec = EXAMS[a.exam_type].sections[st.si];
-  const { results: bank } = await env.DB.prepare('SELECT id,difficulty FROM questions WHERE exam_type=? AND section=? AND active=1').bind(a.exam_type, sec.key).all();
+  const { results: bank } = await env.DB.prepare(`SELECT id,difficulty FROM questions WHERE exam_type=? AND section=? AND active=1 AND substr(id,-1) NOT IN ('0','8')`).bind(a.exam_type, sec.key).all(); // '0' = free-sample pool
   const lv = getLevel(a.exam_type, st.level);
   const { pool, lo, hi } = levelBank(bank, lv, sec.n);
   const target = sectionTarget(a.exam_type, st.si, pool.length), ids = [], sim = { ...st, served: [], qi: 0 };
@@ -192,13 +205,19 @@ function view(a, st, q, newSection) {
 }
 
 app.get('/attempts/:id/current', async (c) => {
-  const a = await loadAttempt(c);
+  const a = await loadAttempt(c, { live: true });
   if (!a) return c.json({ error: 'not found' }, 404);
   if (a.status !== 'in_progress') return c.json({ status: 'finished' });
   const st = JSON.parse(a.state);
   if (!EXAMS[a.exam_type].adaptive) {
     if (!(await ensureSection(c.env, a, st))) return c.json({ status: 'finished' });
-    await c.env.DB.prepare('UPDATE attempts SET state=? WHERE id=?').bind(JSON.stringify(st), a.id).run();
+    const w = await c.env.DB.prepare('UPDATE attempts SET state=? WHERE id=? AND state=?').bind(JSON.stringify(st), a.id, a.state).run();
+    if (!w.meta.changes) { // another request changed the state first (e.g. built this section's set): serve what was stored
+      const fresh = await c.env.DB.prepare('SELECT * FROM attempts WHERE id=?').bind(a.id).first();
+      const st2 = JSON.parse(fresh.state);
+      if (fresh.status !== 'in_progress' || !st2.set || st2.set.si !== st2.si) return c.json({ status: fresh.status === 'in_progress' ? 'retry' : 'finished' });
+      return c.json(await sectionView(c.env, fresh, st2));
+    }
     return c.json(await sectionView(c.env, a, st));
   }
   const q = await ensureCurrent(c.env, a, st);
@@ -208,8 +227,8 @@ app.get('/attempts/:id/current', async (c) => {
 
 /** Save (or change, or clear) one answer inside the current section. */
 app.post('/attempts/:id/save', async (c) => {
-  const a = await loadAttempt(c);
-  if (!a || a.user_id !== c.get('user').id) return c.json({ error: 'not found' }, 404);
+  const a = await loadAttempt(c, { live: true });
+  if (!a) return c.json({ error: 'not found' }, 404);
   if (a.status !== 'in_progress' || EXAMS[a.exam_type].adaptive) return c.json({ error: '저장할 수 없는 상태입니다.' }, 409);
   const b = await c.req.json().catch(() => ({}));
   const st = JSON.parse(a.state);
@@ -231,8 +250,8 @@ app.post('/attempts/:id/save', async (c) => {
 
 /** Finish the current section (unanswered -> omitted) and open the next one. */
 app.post('/attempts/:id/submit-section', async (c) => {
-  const a = await loadAttempt(c);
-  if (!a || a.user_id !== c.get('user').id) return c.json({ error: 'not found' }, 404);
+  const a = await loadAttempt(c, { live: true });
+  if (!a) return c.json({ error: 'not found' }, 404);
   if (a.status !== 'in_progress') return c.json({ status: 'finished' });
   const b = await c.req.json().catch(() => ({}));
   const st = JSON.parse(a.state);
@@ -243,8 +262,8 @@ app.post('/attempts/:id/submit-section', async (c) => {
 });
 
 app.post('/attempts/:id/answer', async (c) => {
-  const a = await loadAttempt(c);
-  if (!a || a.user_id !== c.get('user').id) return c.json({ error: 'not found' }, 404);
+  const a = await loadAttempt(c, { live: true });
+  if (!a) return c.json({ error: 'not found' }, 404);
   if (a.status !== 'in_progress') return c.json({ status: 'finished' });
   const b = await c.req.json().catch(() => ({}));
   const st = JSON.parse(a.state);
@@ -259,6 +278,8 @@ app.post('/attempts/:id/answer', async (c) => {
     if (q.kind === 'mcq') {
       choice = Number.isInteger(b.choice) ? b.choice : null;
       correct = choice !== null && choice === q.answer ? 1 : 0;
+    } else if (q.kind === 'num') {
+      text = String(b.text ?? '').slice(0, 20); correct = text.trim() && numEqual(text, JSON.parse(q.choices)) ? 1 : 0;
     } else if (q.kind === 'text') {
       text = String(b.text || '').slice(0, 6000);
     } else if (q.kind === 'audio') {
@@ -280,14 +301,17 @@ app.post('/attempts/:id/answer', async (c) => {
 });
 
 app.put('/attempts/:id/audio', async (c) => {
-  const a = await loadAttempt(c);
-  if (!a || a.user_id !== c.get('user').id || a.status !== 'in_progress') return c.json({ error: 'not found' }, 404);
+  const a = await loadAttempt(c, { live: true });
+  if (!a || a.status !== 'in_progress') return c.json({ error: 'not found' }, 404);
   const buf = await c.req.arrayBuffer();
   if (!buf.byteLength) return c.json({ error: '녹음 파일이 비어 있습니다.' }, 400);
+  const ctype = (c.req.header('content-type') || 'audio/webm').split(';')[0].trim().toLowerCase();
+  if (!/^audio\/(webm|ogg|mp4|mpeg|wav|x-m4a|aac)$/.test(ctype)) return c.json({ error: '오디오 파일만 업로드할 수 있습니다.' }, 415);
+  if ((await c.env.DB.prepare('SELECT COUNT(*) n FROM audio_files WHERE attempt_id=?').bind(a.id).first()).n >= 12) return c.json({ error: '녹음은 시험당 12개까지 저장할 수 있습니다.' }, 429);
   if (buf.byteLength > 1_200_000) return c.json({ error: '녹음이 너무 깁니다. 더 짧게 다시 녹음해 주세요. (약 1분 이내)' }, 413);
   const key = `${a.id}/${uid()}.webm`;
   await c.env.DB.prepare('INSERT INTO audio_files (key,attempt_id,content_type,data,created_at) VALUES (?,?,?,?,?)')
-    .bind(key, a.id, (c.req.header('content-type') || 'audio/webm').slice(0, 60), bufToB64(buf), now()).run();
+    .bind(key, a.id, ctype, bufToB64(buf), now()).run();
   return c.json({ audioKey: key });
 });
 

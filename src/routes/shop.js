@@ -124,6 +124,7 @@ app.post('/webhooks/portone', async (c) => {
 app.post('/pay/kcp/register', requireUser, async (c) => {
   if (!kcpEnabled(c.env)) return c.json({ error: 'KCP가 설정되지 않았습니다.' }, 503);
   const { productId, payMethod } = await c.req.json().catch(() => ({}));
+  if (payMethod === 'VIRTUAL_ACCOUNT') return c.json({ error: 'KCP 직접결제는 가상계좌를 지원하지 않습니다. 카드·계좌이체·휴대폰을 이용해 주세요.' }, 400); // would need KCP's deposit notification
   const { user, product, order } = await newOrder(c, productId, 'kcp');
   if (!product) return c.json({ error: '상품을 찾을 수 없습니다.' }, 404);
   const ordr = kcpOrderId(order.id), retUrl = `${c.env.SITE_URL}/api/pay/kcp/return`;
@@ -157,8 +158,9 @@ app.post('/pay/kcp/return', async (c) => {
     await fulfillOrder(c.env, o.id, o.provider_ref);
     return c.redirect(`${home}/#/pay/success?order=${o.id}&provider=kcp`, 303);
   } catch (e) {
-    console.error('kcp approve', e);
-    return c.redirect(`${home}/#/pay/cancel`, 303);
+    console.error('kcp approve', e); // e.g. timeout after KCP approved: flag for an admin to verify in the KCP console and confirm manually
+    await c.env.DB.prepare(`UPDATE orders SET meta=? WHERE id=?`).bind(JSON.stringify({ ...JSON.parse(o.meta || '{}'), error: 'approve-failed', at: Date.now() }), o.id).run();
+    return c.redirect(`${home}/#/pay/cancel?msg=${encodeURIComponent('결제 승인 확인이 지연되고 있습니다. 결제가 완료됐다면 고객센터로 알려 주세요.')}`, 303);
   }
 });
 

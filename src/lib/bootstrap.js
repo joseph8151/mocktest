@@ -7,6 +7,7 @@ import m3 from '../../migrations/0003_audio.sql';
 import m4 from '../../migrations/0004_prices.sql';
 import m5 from '../../migrations/0005_admin_and_kcp.sql';
 import m6 from '../../migrations/0006_new_exams.sql';
+import m7 from '../../migrations/0007_integrity.sql';
 import seed from '../../seed/seed.json';
 
 // [name, sql, a table that exists once this migration has been applied]
@@ -16,7 +17,7 @@ const statements = (sql) => sql.split('\n').map((l) => l.replace(/--.*$/, '')).j
   .map((x) => x.replace(/^CREATE TABLE /i, 'CREATE TABLE IF NOT EXISTS ').replace(/^CREATE INDEX /i, 'CREATE INDEX IF NOT EXISTS '));
 
 // One-time data updates, applied AFTER seeding (so a fresh database is not left with only these rows).
-const DATA_FIXES = [['0004_prices', m4], ['0005_admin_and_kcp', m5], ['0006_new_exams', m6]];
+const DATA_FIXES = [['0004_prices', m4], ['0005_admin_and_kcp', m5], ['0006_new_exams', m6], ['0007_integrity', m7]];
 
 let ready = null;
 export function ensureDb(env) {
@@ -67,6 +68,12 @@ async function run(env) {
   }
   for (const [name, sql] of DATA_FIXES) {
     if (done.has(name)) continue;
-    await db.batch([...statements(sql).map((x) => db.prepare(x)), db.prepare('INSERT OR IGNORE INTO _app_migrations (name,at) VALUES (?,?)').bind(name, Date.now())]);
+    const stmts = [];
+    for (const x of statements(sql)) { // a database migrated with `wrangler d1 migrations apply` may already have the column
+      const m = x.match(/^ALTER TABLE (\w+) ADD COLUMN (\w+)/i);
+      if (m && (await db.prepare(`SELECT 1 FROM pragma_table_info('${m[1]}') WHERE name=?`).bind(m[2]).first())) continue;
+      stmts.push(db.prepare(x));
+    }
+    await db.batch([...stmts, db.prepare('INSERT OR IGNORE INTO _app_migrations (name,at) VALUES (?,?)').bind(name, Date.now())]);
   }
 }

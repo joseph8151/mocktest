@@ -1,0 +1,1163 @@
+[
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Good morning, class. Please take out your blue notebook and a pencil. Open your notebook to page ten. We are going to draw a cat today.",
+  "stem": "What color is the notebook?",
+  "choices": [
+   "Red",
+   "Green",
+   "Blue",
+   "Yellow"
+  ],
+  "answer": 2,
+  "explanation": "The teacher says to take out the blue notebook."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Good morning, class. Please take out your blue notebook and a pencil. Open your notebook to page ten. We are going to draw a cat today.",
+  "stem": "What will the students draw?",
+  "choices": [
+   "A dog",
+   "A cat",
+   "A bird",
+   "A fish"
+  ],
+  "answer": 1,
+  "explanation": "The teacher says they are going to draw a cat today."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Good morning, class. Please take out your blue notebook and a pencil. Open your notebook to page ten. We are going to draw a cat today.",
+  "stem": "Which page should the students open to?",
+  "choices": [
+   "Page two",
+   "Page six",
+   "Page twelve",
+   "Page ten"
+  ],
+  "answer": 3,
+  "explanation": "The teacher says to open the notebook to page ten."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Tom: Hi, Anna. Do you want to play soccer after school?\nAnna: Sorry, Tom. I can't. I have a piano lesson today.\nTom: Okay. How about tomorrow?\nAnna: Yes! Tomorrow is good.",
+  "stem": "What does Tom want to do?",
+  "choices": [
+   "Play soccer",
+   "Play piano",
+   "Read a book",
+   "Go home"
+  ],
+  "answer": 0,
+  "explanation": "Tom asks Anna if she wants to play soccer after school."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Tom: Hi, Anna. Do you want to play soccer after school?\nAnna: Sorry, Tom. I can't. I have a piano lesson today.\nTom: Okay. How about tomorrow?\nAnna: Yes! Tomorrow is good.",
+  "stem": "Why can't Anna play today?",
+  "choices": [
+   "She is sick.",
+   "She has a piano lesson.",
+   "She has homework.",
+   "It is raining."
+  ],
+  "answer": 1,
+  "explanation": "Anna says she has a piano lesson today."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Tom: Hi, Anna. Do you want to play soccer after school?\nAnna: Sorry, Tom. I can't. I have a piano lesson today.\nTom: Okay. How about tomorrow?\nAnna: Yes! Tomorrow is good.",
+  "stem": "When will they play?",
+  "choices": [
+   "Today",
+   "Tonight",
+   "Tomorrow",
+   "On Sunday"
+  ],
+  "answer": 2,
+  "explanation": "Anna says tomorrow is good."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Hello, students. Our school library is closed on Wednesday. You can return your books on Thursday morning. On Friday, a writer will visit the library and read a new story to everyone.",
+  "stem": "When is the library closed?",
+  "choices": [
+   "Monday",
+   "Wednesday",
+   "Thursday",
+   "Friday"
+  ],
+  "answer": 1,
+  "explanation": "The speaker says the library is closed on Wednesday."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Hello, students. Our school library is closed on Wednesday. You can return your books on Thursday morning. On Friday, a writer will visit the library and read a new story to everyone.",
+  "stem": "What can students do on Thursday morning?",
+  "choices": [
+   "Buy books",
+   "Meet a writer",
+   "Return books",
+   "Write a story"
+  ],
+  "answer": 2,
+  "explanation": "The speaker says students can return their books on Thursday morning."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Hello, students. Our school library is closed on Wednesday. You can return your books on Thursday morning. On Friday, a writer will visit the library and read a new story to everyone.",
+  "stem": "Who will visit the library on Friday?",
+  "choices": [
+   "A writer",
+   "A doctor",
+   "A singer",
+   "A teacher"
+  ],
+  "answer": 0,
+  "explanation": "The speaker says a writer will visit on Friday and read a story."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Ms. Kim: Ben, where is your hat?\nBen: I don't know, Ms. Kim.\nMs. Kim: Look under your desk.\nBen: Oh, here it is! Thank you.",
+  "stem": "What is Ben looking for?",
+  "choices": [
+   "His book",
+   "His bag",
+   "His shoes",
+   "His hat"
+  ],
+  "answer": 3,
+  "explanation": "Ms. Kim asks Ben where his hat is."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Ms. Kim: Ben, where is your hat?\nBen: I don't know, Ms. Kim.\nMs. Kim: Look under your desk.\nBen: Oh, here it is! Thank you.",
+  "stem": "Where is Ben's hat?",
+  "choices": [
+   "On the desk",
+   "In the bag",
+   "Under the desk",
+   "By the door"
+  ],
+  "answer": 2,
+  "explanation": "Ms. Kim tells Ben to look under his desk, and he finds it there."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Mom: Lily, it's time for breakfast. Do you want eggs or pancakes?\nLily: Pancakes, please. And can I have some milk?\nMom: Sure. But hurry! The school bus comes at eight o'clock.",
+  "stem": "What does Lily want to eat?",
+  "choices": [
+   "Eggs",
+   "Toast",
+   "Pancakes",
+   "Rice"
+  ],
+  "answer": 2,
+  "explanation": "Lily answers \"Pancakes, please.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Mom: Lily, it's time for breakfast. Do you want eggs or pancakes?\nLily: Pancakes, please. And can I have some milk?\nMom: Sure. But hurry! The school bus comes at eight o'clock.",
+  "stem": "What does Lily want to drink?",
+  "choices": [
+   "Milk",
+   "Juice",
+   "Water",
+   "Tea"
+  ],
+  "answer": 0,
+  "explanation": "Lily asks if she can have some milk."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Mom: Lily, it's time for breakfast. Do you want eggs or pancakes?\nLily: Pancakes, please. And can I have some milk?\nMom: Sure. But hurry! The school bus comes at eight o'clock.",
+  "stem": "Why does Mom tell Lily to hurry?",
+  "choices": [
+   "Lily has a test.",
+   "The food is cold.",
+   "Breakfast is over.",
+   "The school bus comes at eight."
+  ],
+  "answer": 3,
+  "explanation": "Mom says the school bus comes at eight o'clock."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Everyone, please stand up. Now, put your hands on your head. Good! Now touch your toes. Great job! Please sit down and be quiet.",
+  "stem": "What should the students do first?",
+  "choices": [
+   "Sit down",
+   "Stand up",
+   "Touch their toes",
+   "Be quiet"
+  ],
+  "answer": 1,
+  "explanation": "The first thing the teacher says is \"please stand up.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Everyone, please stand up. Now, put your hands on your head. Good! Now touch your toes. Great job! Please sit down and be quiet.",
+  "stem": "Where do the students put their hands?",
+  "choices": [
+   "On their head",
+   "On their desk",
+   "On their knees",
+   "In their pockets"
+  ],
+  "answer": 0,
+  "explanation": "The teacher says to put their hands on their head."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Sam: Grandma, I made a card for your birthday.\nGrandma: Oh, thank you, Sam! It's beautiful. You drew three red flowers.\nSam: Yes, because red is your favorite color.\nGrandma: You remembered!",
+  "stem": "Why did Sam make a card?",
+  "choices": [
+   "For Grandma's birthday",
+   "For a school project",
+   "For his friend",
+   "For Mother's Day"
+  ],
+  "answer": 0,
+  "explanation": "Sam says he made the card for Grandma's birthday."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Sam: Grandma, I made a card for your birthday.\nGrandma: Oh, thank you, Sam! It's beautiful. You drew three red flowers.\nSam: Yes, because red is your favorite color.\nGrandma: You remembered!",
+  "stem": "How many flowers did Sam draw?",
+  "choices": [
+   "One",
+   "Two",
+   "Four",
+   "Three"
+  ],
+  "answer": 3,
+  "explanation": "Grandma says Sam drew three red flowers."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Sam: Grandma, I made a card for your birthday.\nGrandma: Oh, thank you, Sam! It's beautiful. You drew three red flowers.\nSam: Yes, because red is your favorite color.\nGrandma: You remembered!",
+  "stem": "What is Grandma's favorite color?",
+  "choices": [
+   "Blue",
+   "Red",
+   "Pink",
+   "Yellow"
+  ],
+  "answer": 1,
+  "explanation": "Sam says red is Grandma's favorite color."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Good afternoon, everyone. It is raining outside, so we will not go to the playground today. Lunch break will be in the gym. Please walk, don't run, in the hallway.",
+  "stem": "Why can't the students go to the playground?",
+  "choices": [
+   "It is snowing.",
+   "It is too hot.",
+   "It is raining.",
+   "It is closed."
+  ],
+  "answer": 2,
+  "explanation": "The speaker says it is raining outside."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Good afternoon, everyone. It is raining outside, so we will not go to the playground today. Lunch break will be in the gym. Please walk, don't run, in the hallway.",
+  "stem": "Where will lunch break be?",
+  "choices": [
+   "In the gym",
+   "In the classroom",
+   "In the library",
+   "On the playground"
+  ],
+  "answer": 0,
+  "explanation": "The speaker says lunch break will be in the gym."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Good afternoon, everyone. It is raining outside, so we will not go to the playground today. Lunch break will be in the gym. Please walk, don't run, in the hallway.",
+  "stem": "What should students do in the hallway?",
+  "choices": [
+   "Run fast",
+   "Walk",
+   "Sing",
+   "Eat"
+  ],
+  "answer": 1,
+  "explanation": "The speaker says \"Please walk, don't run, in the hallway.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Mia: What is your pet's name?\nJake: My dog's name is Max. He is small and brown.\nMia: Does he like to swim?\nJake: No, but he likes to run in the park.",
+  "stem": "What animal is Max?",
+  "choices": [
+   "A cat",
+   "A rabbit",
+   "A dog",
+   "A bird"
+  ],
+  "answer": 2,
+  "explanation": "Jake says \"My dog's name is Max.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Mia: What is your pet's name?\nJake: My dog's name is Max. He is small and brown.\nMia: Does he like to swim?\nJake: No, but he likes to run in the park.",
+  "stem": "What does Max like to do?",
+  "choices": [
+   "Swim",
+   "Run in the park",
+   "Sleep all day",
+   "Eat fish"
+  ],
+  "answer": 1,
+  "explanation": "Jake says Max likes to run in the park."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Mia: What is your pet's name?\nJake: My dog's name is Max. He is small and brown.\nMia: Does he like to swim?\nJake: No, but he likes to run in the park.",
+  "stem": "What color is Max?",
+  "choices": [
+   "Black",
+   "White",
+   "Gray",
+   "Brown"
+  ],
+  "answer": 3,
+  "explanation": "Jake says Max is small and brown."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Mr. Lopez: Class, tomorrow is our trip to the zoo. Please come to school at seven thirty. Bring a lunch and a water bottle. Don't forget to wear comfortable shoes!",
+  "stem": "Where is the class going tomorrow?",
+  "choices": [
+   "To the zoo",
+   "To the beach",
+   "To a museum",
+   "To a farm"
+  ],
+  "answer": 0,
+  "explanation": "Mr. Lopez says tomorrow is the trip to the zoo."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Mr. Lopez: Class, tomorrow is our trip to the zoo. Please come to school at seven thirty. Bring a lunch and a water bottle. Don't forget to wear comfortable shoes!",
+  "stem": "What time should the students come to school?",
+  "choices": [
+   "At seven",
+   "At seven thirty",
+   "At eight",
+   "At eight thirty"
+  ],
+  "answer": 1,
+  "explanation": "Mr. Lopez says to come to school at seven thirty."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Mr. Lopez: Class, tomorrow is our trip to the zoo. Please come to school at seven thirty. Bring a lunch and a water bottle. Don't forget to wear comfortable shoes!",
+  "stem": "What should the students bring?",
+  "choices": [
+   "A camera and a hat",
+   "A book and a pencil",
+   "A lunch and a water bottle",
+   "Money and a map"
+  ],
+  "answer": 2,
+  "explanation": "Mr. Lopez says to bring a lunch and a water bottle."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 1,
+  "stem": "I have ___ apple in my bag.",
+  "choices": [
+   "a",
+   "an",
+   "two",
+   "many"
+  ],
+  "answer": 1,
+  "explanation": "We use \"an\" before a word that starts with a vowel sound, like \"apple.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 1,
+  "stem": "There are three ___ on the table.",
+  "choices": [
+   "cup",
+   "cups",
+   "a cup",
+   "cupes"
+  ],
+  "answer": 1,
+  "explanation": "After \"three\" we need the plural noun \"cups.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 1,
+  "stem": "She ___ ten years old.",
+  "choices": [
+   "are",
+   "am",
+   "be",
+   "is"
+  ],
+  "answer": 3,
+  "explanation": "With \"she\" we use \"is.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 1,
+  "stem": "The cat is ___ the box. You can't see it because it is inside.",
+  "choices": [
+   "in",
+   "on",
+   "under",
+   "behind"
+  ],
+  "answer": 0,
+  "explanation": "\"Inside\" the box means the cat is \"in\" the box."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 1,
+  "stem": "Birds ___ fly, but fish cannot.",
+  "choices": [
+   "is",
+   "are",
+   "can't",
+   "can"
+  ],
+  "answer": 3,
+  "explanation": "\"But fish cannot\" shows the opposite, so birds \"can\" fly."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 1,
+  "stem": "This is my brother. ___ name is Leo.",
+  "choices": [
+   "She",
+   "He",
+   "Him",
+   "His"
+  ],
+  "answer": 3,
+  "explanation": "\"His\" shows the name belongs to a boy."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 1,
+  "stem": "We go to school ___ Monday.",
+  "choices": [
+   "in",
+   "at",
+   "on",
+   "to"
+  ],
+  "answer": 2,
+  "explanation": "We use \"on\" with days of the week."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 2,
+  "stem": "Yesterday, I ___ my grandmother.",
+  "choices": [
+   "visit",
+   "visits",
+   "visited",
+   "visiting"
+  ],
+  "answer": 2,
+  "explanation": "\"Yesterday\" means the past, so we use \"visited.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 1,
+  "stem": "My brother and I ___ hungry.",
+  "choices": [
+   "is",
+   "am",
+   "are",
+   "be"
+  ],
+  "answer": 2,
+  "explanation": "\"My brother and I\" means two people, so we use \"are.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 2,
+  "stem": "There ___ some milk in the glass.",
+  "choices": [
+   "is",
+   "are",
+   "am",
+   "be"
+  ],
+  "answer": 0,
+  "explanation": "\"Milk\" cannot be counted, so we say \"there is.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 2,
+  "stem": "Look! The dog ___ under the tree right now.",
+  "choices": [
+   "sleep",
+   "sleeps",
+   "is sleeping",
+   "sleeping"
+  ],
+  "answer": 2,
+  "explanation": "\"Look!\" and \"right now\" show an action happening now, so we use \"is sleeping.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 2,
+  "stem": "Ken ___ breakfast every morning at seven.",
+  "choices": [
+   "eat",
+   "eats",
+   "eating",
+   "are eating"
+  ],
+  "answer": 1,
+  "explanation": "For a habit with \"Ken\" (he), we add -s: \"eats.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 1,
+  "stem": "I wear a coat because it is ___ today.",
+  "choices": [
+   "hot",
+   "happy",
+   "warm",
+   "cold"
+  ],
+  "answer": 3,
+  "explanation": "People wear coats when the weather is cold."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 2,
+  "stem": "Please give the book to ___. I want to read it.",
+  "choices": [
+   "I",
+   "me",
+   "my",
+   "mine"
+  ],
+  "answer": 1,
+  "explanation": "After \"to\" we use the object pronoun \"me.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 2,
+  "stem": "The movie starts ___ six o'clock.",
+  "choices": [
+   "at",
+   "on",
+   "in",
+   "for"
+  ],
+  "answer": 0,
+  "explanation": "We use \"at\" with clock times."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 1,
+  "stem": "A ___ has long ears and likes carrots.",
+  "choices": [
+   "rabbit",
+   "fish",
+   "bird",
+   "snake"
+  ],
+  "answer": 0,
+  "explanation": "A rabbit has long ears and eats carrots."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 2,
+  "stem": "How ___ pencils do you have?",
+  "choices": [
+   "much",
+   "many",
+   "old",
+   "long"
+  ],
+  "answer": 1,
+  "explanation": "We use \"how many\" with nouns we can count, like \"pencils.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 2,
+  "stem": "Last summer we ___ to the beach.",
+  "choices": [
+   "go",
+   "goes",
+   "went",
+   "going"
+  ],
+  "answer": 2,
+  "explanation": "\"Last summer\" is the past, and the past of \"go\" is \"went.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 2,
+  "stem": "Three ___ are playing in the park.",
+  "choices": [
+   "child",
+   "childs",
+   "children",
+   "childrens"
+  ],
+  "answer": 2,
+  "explanation": "The plural of \"child\" is \"children.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 1,
+  "stem": "I brush my ___ every morning and night.",
+  "choices": [
+   "teeth",
+   "hands",
+   "feet",
+   "ears"
+  ],
+  "answer": 0,
+  "explanation": "We brush our teeth in the morning and at night."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 2,
+  "stem": "My sister doesn't ___ coffee.",
+  "choices": [
+   "likes",
+   "liking",
+   "like",
+   "liked"
+  ],
+  "answer": 2,
+  "explanation": "After \"doesn't\" we use the base verb \"like.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 2,
+  "stem": "The ball is ___ the chair, so I can't see it.",
+  "choices": [
+   "on",
+   "in front of",
+   "behind",
+   "next to"
+  ],
+  "answer": 2,
+  "explanation": "If the ball is behind the chair, the chair hides it."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 1,
+  "stem": "\"Is this your bag?\" \"Yes, it ___.\"",
+  "choices": [
+   "are",
+   "am",
+   "does",
+   "is"
+  ],
+  "answer": 3,
+  "explanation": "The short answer to \"Is this...?\" is \"Yes, it is.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 2,
+  "stem": "We were very tired, ___ we went to bed early.",
+  "choices": [
+   "but",
+   "so",
+   "or",
+   "because"
+  ],
+  "answer": 1,
+  "explanation": "\"So\" shows the result: being tired made us go to bed early."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "LIBRARY RULES. Please be quiet. No food or drinks. Return books in two weeks. Open Monday to Friday, 9:00 to 4:00.",
+  "stem": "Where would you see this sign?",
+  "choices": [
+   "In a library",
+   "In a kitchen",
+   "In a park",
+   "In a pool"
+  ],
+  "answer": 0,
+  "explanation": "The sign says \"LIBRARY RULES.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "LIBRARY RULES. Please be quiet. No food or drinks. Return books in two weeks. Open Monday to Friday, 9:00 to 4:00.",
+  "stem": "What can't you bring?",
+  "choices": [
+   "Books",
+   "Pencils",
+   "Food",
+   "Paper"
+  ],
+  "answer": 2,
+  "explanation": "The sign says \"No food or drinks.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "LIBRARY RULES. Please be quiet. No food or drinks. Return books in two weeks. Open Monday to Friday, 9:00 to 4:00.",
+  "stem": "When must you return books?",
+  "choices": [
+   "In one day",
+   "In two weeks",
+   "In one week",
+   "In one month"
+  ],
+  "answer": 1,
+  "explanation": "The sign says to return books in two weeks."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "Dear Mom, I am at Emma's house. We are doing our math homework together. Her dad will drive me home at five o'clock. Love, Jenny",
+  "stem": "Who wrote the note?",
+  "choices": [
+   "Mom",
+   "Emma",
+   "Jenny",
+   "Emma's dad"
+  ],
+  "answer": 2,
+  "explanation": "The note ends with \"Love, Jenny.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "Dear Mom, I am at Emma's house. We are doing our math homework together. Her dad will drive me home at five o'clock. Love, Jenny",
+  "stem": "What are the girls doing?",
+  "choices": [
+   "Watching TV",
+   "Doing math homework",
+   "Cooking dinner",
+   "Playing outside"
+  ],
+  "answer": 1,
+  "explanation": "Jenny writes that they are doing math homework together."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "Dear Mom, I am at Emma's house. We are doing our math homework together. Her dad will drive me home at five o'clock. Love, Jenny",
+  "stem": "How will Jenny get home?",
+  "choices": [
+   "She will walk.",
+   "She will take a bus.",
+   "Mom will get her.",
+   "Emma's dad will drive her."
+  ],
+  "answer": 3,
+  "explanation": "Jenny writes that Emma's dad will drive her home."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Sunny Cafe Lunch Menu. Sandwich: three dollars. Bowl of soup: two dollars. Fruit cup: one dollar. Orange juice: two dollars. Every Friday, kids get a free cookie with lunch.",
+  "stem": "Which food costs the most?",
+  "choices": [
+   "Soup",
+   "Sandwich",
+   "Fruit cup",
+   "Orange juice"
+  ],
+  "answer": 1,
+  "explanation": "The sandwich costs three dollars, more than anything else."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Sunny Cafe Lunch Menu. Sandwich: three dollars. Bowl of soup: two dollars. Fruit cup: one dollar. Orange juice: two dollars. Every Friday, kids get a free cookie with lunch.",
+  "stem": "How much are a sandwich and a fruit cup together?",
+  "choices": [
+   "Two dollars",
+   "Three dollars",
+   "Four dollars",
+   "Five dollars"
+  ],
+  "answer": 2,
+  "explanation": "Three dollars plus one dollar is four dollars."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Sunny Cafe Lunch Menu. Sandwich: three dollars. Bowl of soup: two dollars. Fruit cup: one dollar. Orange juice: two dollars. Every Friday, kids get a free cookie with lunch.",
+  "stem": "What do kids get on Fridays?",
+  "choices": [
+   "Free juice",
+   "Free soup",
+   "A free sandwich",
+   "A free cookie"
+  ],
+  "answer": 3,
+  "explanation": "The menu says kids get a free cookie every Friday."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Leo has a small garden behind his house. In spring, he planted tomato seeds. Every morning, he gave them water. In summer, the plants grew tall and the tomatoes turned red. Leo picked them and made a salad for his family. Everyone said it was delicious.",
+  "stem": "Where is Leo's garden?",
+  "choices": [
+   "In front of his house",
+   "Behind his house",
+   "At school",
+   "Next to the park"
+  ],
+  "answer": 1,
+  "explanation": "The story says the garden is behind his house."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Leo has a small garden behind his house. In spring, he planted tomato seeds. Every morning, he gave them water. In summer, the plants grew tall and the tomatoes turned red. Leo picked them and made a salad for his family. Everyone said it was delicious.",
+  "stem": "When did Leo plant the seeds?",
+  "choices": [
+   "In spring",
+   "In summer",
+   "In fall",
+   "In winter"
+  ],
+  "answer": 0,
+  "explanation": "The story says he planted tomato seeds in spring."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Leo has a small garden behind his house. In spring, he planted tomato seeds. Every morning, he gave them water. In summer, the plants grew tall and the tomatoes turned red. Leo picked them and made a salad for his family. Everyone said it was delicious.",
+  "stem": "What did Leo do every morning?",
+  "choices": [
+   "He picked tomatoes.",
+   "He made a salad.",
+   "He watered the plants.",
+   "He bought seeds."
+  ],
+  "answer": 2,
+  "explanation": "The story says he gave them water every morning."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Leo has a small garden behind his house. In spring, he planted tomato seeds. Every morning, he gave them water. In summer, the plants grew tall and the tomatoes turned red. Leo picked them and made a salad for his family. Everyone said it was delicious.",
+  "stem": "What did his family think of the salad?",
+  "choices": [
+   "It was too big.",
+   "It was cold.",
+   "It was strange.",
+   "It tasted very good."
+  ],
+  "answer": 3,
+  "explanation": "Everyone said the salad was delicious, which means it tasted very good."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Dear Sam, Greetings from the mountains! The weather is cool and sunny. Yesterday, my family went hiking and we saw a deer near the lake. Tomorrow we will ride horses. I miss you! See you next week. Your friend, Nora",
+  "stem": "Where is Nora now?",
+  "choices": [
+   "At the beach",
+   "In the mountains",
+   "In a city",
+   "At home"
+  ],
+  "answer": 1,
+  "explanation": "Nora writes \"Greetings from the mountains!\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Dear Sam, Greetings from the mountains! The weather is cool and sunny. Yesterday, my family went hiking and we saw a deer near the lake. Tomorrow we will ride horses. I miss you! See you next week. Your friend, Nora",
+  "stem": "What did Nora see yesterday?",
+  "choices": [
+   "A bear",
+   "A horse",
+   "A deer",
+   "A fox"
+  ],
+  "answer": 2,
+  "explanation": "Nora writes that they saw a deer near the lake."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Dear Sam, Greetings from the mountains! The weather is cool and sunny. Yesterday, my family went hiking and we saw a deer near the lake. Tomorrow we will ride horses. I miss you! See you next week. Your friend, Nora",
+  "stem": "What will Nora do tomorrow?",
+  "choices": [
+   "Ride horses",
+   "Go swimming",
+   "Go home",
+   "Go hiking"
+  ],
+  "answer": 0,
+  "explanation": "Nora writes \"Tomorrow we will ride horses.\" (They went hiking yesterday.)"
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Dear Sam, Greetings from the mountains! The weather is cool and sunny. Yesterday, my family went hiking and we saw a deer near the lake. Tomorrow we will ride horses. I miss you! See you next week. Your friend, Nora",
+  "stem": "How is the weather?",
+  "choices": [
+   "Hot and rainy",
+   "Cool and sunny",
+   "Cold and snowy",
+   "Warm and windy"
+  ],
+  "answer": 1,
+  "explanation": "Nora writes that the weather is cool and sunny."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "My name is Hana. I am nine years old. I have one sister and one brother. My sister is older than me. My brother is a baby. I like to draw pictures of animals.",
+  "stem": "How old is Hana?",
+  "choices": [
+   "Seven",
+   "Eight",
+   "Nine",
+   "Ten"
+  ],
+  "answer": 2,
+  "explanation": "Hana says she is nine years old."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "My name is Hana. I am nine years old. I have one sister and one brother. My sister is older than me. My brother is a baby. I like to draw pictures of animals.",
+  "stem": "How many brothers does Hana have?",
+  "choices": [
+   "One",
+   "Two",
+   "Three",
+   "None"
+  ],
+  "answer": 0,
+  "explanation": "Hana says she has one sister and one brother."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "My name is Hana. I am nine years old. I have one sister and one brother. My sister is older than me. My brother is a baby. I like to draw pictures of animals.",
+  "stem": "Who is the youngest?",
+  "choices": [
+   "Her brother",
+   "Hana",
+   "Her sister",
+   "Her friend"
+  ],
+  "answer": 0,
+  "explanation": "Hana's brother is a baby, so he is the youngest."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "My name is Hana. I am nine years old. I have one sister and one brother. My sister is older than me. My brother is a baby. I like to draw pictures of animals.",
+  "stem": "What does Hana like to draw?",
+  "choices": [
+   "Flowers",
+   "Cars",
+   "Houses",
+   "Animals"
+  ],
+  "answer": 3,
+  "explanation": "Hana says she likes to draw pictures of animals."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "SWIMMING POOL. Open every day from 10:00 to 6:00. Children under eight must swim with an adult. Please take a shower before you swim. No running!",
+  "stem": "When does the pool close?",
+  "choices": [
+   "At 10:00",
+   "At 8:00",
+   "At 6:00",
+   "At 4:00"
+  ],
+  "answer": 2,
+  "explanation": "The pool is open from 10:00 to 6:00, so it closes at 6:00."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "SWIMMING POOL. Open every day from 10:00 to 6:00. Children under eight must swim with an adult. Please take a shower before you swim. No running!",
+  "stem": "Who must swim with an adult?",
+  "choices": [
+   "All children",
+   "Children under eight",
+   "Children over eight",
+   "Teachers"
+  ],
+  "answer": 1,
+  "explanation": "The sign says children under eight must swim with an adult."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "SWIMMING POOL. Open every day from 10:00 to 6:00. Children under eight must swim with an adult. Please take a shower before you swim. No running!",
+  "stem": "What should you do before you swim?",
+  "choices": [
+   "Take a shower",
+   "Eat lunch",
+   "Run around",
+   "Buy a ticket"
+  ],
+  "answer": 0,
+  "explanation": "The sign says to take a shower before you swim."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "On Saturday, Max lost his red ball in the park. He looked under the benches and behind the trees, but he could not find it. Then he saw a small dog. The dog had the ball in its mouth! The dog dropped the ball, and Max threw it for the dog to catch.",
+  "stem": "What did Max lose?",
+  "choices": [
+   "His dog",
+   "His red ball",
+   "His hat",
+   "His bike"
+  ],
+  "answer": 1,
+  "explanation": "The story says Max lost his red ball in the park."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "On Saturday, Max lost his red ball in the park. He looked under the benches and behind the trees, but he could not find it. Then he saw a small dog. The dog had the ball in its mouth! The dog dropped the ball, and Max threw it for the dog to catch.",
+  "stem": "Who had the ball?",
+  "choices": [
+   "A boy",
+   "A cat",
+   "A small dog",
+   "A bird"
+  ],
+  "answer": 2,
+  "explanation": "The small dog had the ball in its mouth."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "On Saturday, Max lost his red ball in the park. He looked under the benches and behind the trees, but he could not find it. Then he saw a small dog. The dog had the ball in its mouth! The dog dropped the ball, and Max threw it for the dog to catch.",
+  "stem": "What did Max do at the end?",
+  "choices": [
+   "He went home.",
+   "He took the dog home.",
+   "He cried.",
+   "He threw the ball for the dog."
+  ],
+  "answer": 3,
+  "explanation": "At the end, Max threw the ball for the dog to catch."
+ }
+]

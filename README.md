@@ -5,21 +5,22 @@ Cloudflare Workers(Hono) + D1(SQLite) + 정적 SPA. 회원가입 → 결제(Stri
 ## 기능
 - **회원**: 가입/로그인(PBKDF2 해시, HttpOnly 세션 쿠키), 비밀번호 변경/재설정(이메일), 프로필, 응시·결제 내역
 - **결제**: Stripe Checkout(USD) + 포트원 V2(KRW). 웹훅 서명 검증 + 금액 서버 검증 + 멱등 처리 → 결제 즉시 이용권 지급. 관리자 환불(PG 취소 + 이용권 회수)
-- **시험**: 서버가 한 문항씩 출제(정답은 클라이언트에 전달되지 않음), 영역별 타이머(서버 검증), 새로고침/재접속 시 이어풀기
-  - **MAP 스타일**: 적응형(정답→어려워지고 오답→쉬워짐), RIT 유사 추정점수
-  - **CAT4 스타일**: 언어·수리·비언어·공간 4영역, SAS/스태나인 추정
-  - **SCAT 스타일**: Verbal(유추) · Quantitative(수량 비교), 영역별 척도 점수(200–300) 추정
-  - **SSAT 스타일**: Writing(교사 채점) · Quantitative · Reading · Verbal, 척도 점수(440–710) 합산
-  - **ISEE 스타일**: Verbal · Quantitative · Reading · Math · Essay, 척도 점수(760–940)·스태나인 추정
-  - **CogAT 스타일**: Verbal · Quantitative · Nonverbal (SAS 평균 100, 도형은 SVG)
-  - **SAT 스타일**: Reading & Writing(27) · Math(22, 적응형), 영역별 200–800 → 합산 400–1600 추정
-  - **TOEFL Junior 스타일**: Listening(TTS) · Language Form & Meaning · Reading, 영역별 200–300 → 합산 600–900 추정
-  - **WIDA 스타일**: Listening(TTS 2회) · Reading 자동채점, Writing · Speaking(녹음→R2) 교사 채점, 가중 종합 레벨
+- **시험**: 정답은 클라이언트에 전달되지 않음, 영역별 타이머(서버 검증), 새로고침/재접속 시 이어풀기. 응시 시작 시 **학년/레벨 선택**(학년을 입력해 두면 자동 추천)
+  - **MAP Growth 스타일**: K · G1 … G12 학년별, 적응형(한 문항씩, **뒤로 가기 없음**), Rasch 기반 RIT 추정 + 학년 규준 백분위
+  - **CAT4 스타일**: Level A · B/C · D · E–G, 언어·수리·비언어·공간 → SAS·백분위·스태나인, 언어–공간 성향(bias)
+  - **CogAT 스타일**: Level 7–8 · 9–11 · 12–14 · 15–17/18, Verbal · Quantitative · Nonverbal → SAS·스태나인 + 능력 프로필(예: 6B (V+))
+  - **SCAT 스타일**: Elementary · Intermediate · Advanced, Verbal · Quantitative, 레벨별 척도 점수
+  - **SSAT 스타일**: Elementary(300–600) · Middle(440–710) · Upper(500–800). Middle/Upper는 실제처럼 **정답 +1, 오답 −¼, 무응답 0** 공식 채점
+  - **ISEE 스타일**: Lower · Middle · Upper, Verbal · Quantitative · Reading · Math → 760–940 척도·스태나인, Essay는 점수 미포함
+  - **SAT 스타일**: PSAT 8/9(240–1440) · PSAT 10(320–1520) · SAT(400–1600), 10점 단위, Math에 **주관식(grid-in)** 포함, PSAT 선발지수
+  - **TOEFL 스타일**: Primary Step 1 · Step 2(100–115) · Junior Standard(200–300, 합산 600–900, CEFR)
+  - **WIDA 스타일**: 1 · 2–3 · 4–5 · 6–8 · 9–12학년, 1.0–6.0 레벨, Oral · Literacy · Comprehension · Overall 복합 점수
+  - **문항 이동**: 비적응형 시험은 실제 시험처럼 **현재 영역 안에서 자유 이동**(이전/다음, 문항 번호판, 표시하기, 답 지우기, 건너뛰기). 영역 제출 후에는 수정 불가, 남은 문항은 무응답 처리
 - **리포트**: 영역별 점수, 문항별 해설, 인쇄/PDF 저장, 결과 이메일
 - **안전/개인정보**: 로그인 무차별 대입 차단(15분에 8회), 회원 본인 탈퇴(답안·녹음 삭제, 결제기록은 익명화 후 5년 보관), 환불 요청 → 관리자 승인/거절, 성적 추이 그래프
 - **관리자**: 대시보드, 회원 관리(정지/삭제/권한/이용권 수동 지급), 주문·환불, 상품 CRUD, 문제은행 CRUD + JSON 대량등록, 쓰기/말하기 채점 큐, 환불요청 처리, 주문 CSV 내보내기
 
-> 문제는 형식만 참고해 새로 만든 **오리지널 샘플**(약 1,400문항. 그래프·도형은 SVG로 직접 생성: `scripts/svgcharts.mjs`, 독해·어휘 등은 `scripts/bank/*.json`에 작성 후 블라인드 검증)이며 NWEA/GL Assessment/WIDA와 무관합니다. 점수는 공식 점수가 아닌 추정치입니다. 실제 서비스 전에 문제은행을 확충하세요(관리자 > 문제 > JSON 대량 등록).
+> 문제는 형식만 참고해 새로 만든 **오리지널 샘플**(약 1,950문항. 그래프·도형은 SVG로 직접 생성: `scripts/svgcharts.mjs`, 독해·어휘 등은 `scripts/bank/*.json`에 작성 후 블라인드 검증)이며 NWEA/GL Assessment/WIDA와 무관합니다. 점수는 공식 점수가 아닌 추정치입니다. 실제 서비스 전에 문제은행을 확충하세요(관리자 > 문제 > JSON 대량 등록).
 
 ## 로컬 실행
 ```bash
@@ -31,7 +32,7 @@ npm run dev                      # http://localhost:8787
 npm test                         # 단위 테스트
 npm run test:e2e                 # dev 서버 켜 둔 상태에서 E2E (결제 웹훅 시뮬레이션 포함, .dev.vars에 STRIPE_WEBHOOK_SECRET=whsec_test 필요)
 ```
-`ADMIN_EMAIL`이 비어 있으면 **가장 먼저 가입한** 계정이 관리자가 됩니다.
+`ADMIN_EMAIL`이 비어 있으면 관리자가 **한 명도 없을 때 처음 가입한** 계정이 관리자가 됩니다.
 
 ## Cloudflare 배포 (설정 최소화)
 GitHub 연동(Workers Builds)이든 터미널이든 **배포 명령은 `npx wrangler deploy` 하나**입니다.
@@ -39,7 +40,7 @@ GitHub 연동(Workers Builds)이든 터미널이든 **배포 명령은 `npx wran
 - 필요한 리소스는 **D1 하나뿐**이며 `wrangler.jsonc`에 ID를 적지 않으면 **배포 시 자동 생성**됩니다(auto-provisioning). 말하기 녹음도 D1에 저장하므로 R2가 필요 없습니다(녹음 1건 약 1.2MB 이하).
 - 테이블과 샘플 문제/상품은 **첫 요청에서 Worker가 스스로 생성**합니다(`src/lib/bootstrap.js`). 수동 마이그레이션·시드가 필요 없습니다.
 - `SITE_URL`이 비어 있으면 접속 주소에서 자동으로 알아냅니다(커스텀 도메인 연결 후에도 그대로 동작).
-- **관리자**: `ADMIN_EMAIL`이 비어 있으면 **가장 먼저 가입한 계정이 관리자**가 됩니다 → 배포 직후 바로 본인 계정으로 가입하세요. 이후 `ADMIN_EMAIL`을 지정하면 그 이메일만 관리자 가입이 가능합니다.
+- **관리자**: `ADMIN_EMAIL`이 비어 있으면 관리자가 없을 때 **처음 가입한 계정이 관리자**가 됩니다 → 배포 직후 바로 본인 계정으로 가입하세요. `ADMIN_EMAIL`을 지정하면 관리자가 없을 때 그 이메일만 관리자가 될 수 있습니다. 마지막 관리자는 강등·정지할 수 없습니다.
 
 ```bash
 npx wrangler login
@@ -77,11 +78,11 @@ Cloudflare 대시보드 → Workers & Pages → Create → Connect to Git → �
 
 - 일반 고객에게는 원화 결제 수단이 **하나**(KCP 직접이 설정돼 있으면 KCP, 아니면 포트원)만 보이고, **관리자에게는 설정된 모든 수단**이 보입니다.
 - 관리자 > **결제설정** 탭에서 연동 상태와 웹훅/Ret_URL 주소를 확인하세요. 홈에서 관리자에게만 보이는 **“[관리자 전용] 결제 테스트 1,000원”** 상품으로 실제 결제·환불을 시험해 볼 수 있습니다.
-- KCP 직접 연동은 KCP 서버에 접근할 수 없는 환경에서 **자체 모의 서버**로만 검증했습니다(`npm run test:e2e`의 `kcp.e2e.mjs`). 계약 후 받는 공식 개발 가이드(developer.kcp.co.kr)와 KCP 테스트 몰(site_cd `T0000`)로 아래를 확인하세요: 거래등록/승인/취소 URL(`KCP_REGISTER_URL`·`KCP_APPROVE_URL`·`KCP_CANCEL_URL`로 덮어쓰기 가능), 요청·응답 필드명, `pay_method` 코드, 결제창 호출 방식(`kcpForm`), 가상계좌 입금 통보(공통통보) 처리.
+- KCP 직접 연동은 KCP 서버에 접근할 수 없는 환경에서 **자체 모의 서버**로만 검증했습니다(`npm run test:e2e`의 `kcp.e2e.mjs`). 계약 후 받는 공식 개발 가이드(developer.kcp.co.kr)와 KCP 테스트 몰(site_cd `T0000`)로 아래를 확인하세요: 거래등록/승인/취소 URL(`KCP_REGISTER_URL`·`KCP_APPROVE_URL`·`KCP_CANCEL_URL`로 덮어쓰기 가능), 요청·응답 필드명, `pay_method` 코드, 결제창 호출 방식(`kcpForm`). 입금 통보 처리가 검증되지 않아 **KCP 직접 연동에서는 가상계좌를 막아 두었습니다**(가상계좌는 포트원 경유로 사용).
 
 ## 학습 기능
 - **시험 안내 페이지**(`#/info/<시험>`): 구성·시간·채점 방식·점수 해석·준비 팁 (공개)
-- **무료 샘플 5문항**(`#/sample/<시험>`): 로그인 없이 풀고 해설 확인 (공개)
+- **무료 샘플 5문항**(`#/sample/<시험>`): 로그인 없이 풀고 해설 확인 (공개). 샘플 전용 문항(전체의 약 20%)은 유료 응시에 출제되지 않습니다
 - **오답노트**(`#/mistakes`): 틀린 문제를 모아 해설과 함께 복습
 - **결과 분석**: 난이도별 정답률, 영역별 풀이 시간, 보완 영역 안내, 점수 해석
 
@@ -103,6 +104,11 @@ npm run test:e2e         # wrangler dev 실행 후: 응시·결제·KCP·안전 
 - 손으로 쓴 문항(`scripts/bank/*.json`)과 코드로 생성한 문항(숫자·그래프·도형 SVG)은 **정답을 가린 채 별도 검수자가 직접 풀어** 정답과 대조했습니다(`scripts/blind-view.mjs`, `scripts/compare-blind.mjs`, `scripts/compare-review.mjs`).
 - 결함으로 판정된 문항은 `scripts/bank/*.drop.json` / `_generated.drop.json`으로 제외하고, 생성기 자체의 결함(모호한 수 유추, 부동소수점 잡음, 보이지 않는 회전 등)은 코드에서 고쳤습니다.
 - `REVIEW_DIR=<폴더> node scripts/gen-seed.mjs`로 검수용 세트(텍스트 JSON + 그림 갤러리)를 내보낼 수 있고, `REVIEW_SKIP=<id목록.json>`으로 이미 검수한 문항은 제외합니다.
+
+## 보안
+- 답안 저장·제출은 응시자 본인만, 회수(환불)된 이용권의 진행 중 응시는 차단. 진행 중 응시는 시험당 하나만(DB 유니크 인덱스, `migrations/0007_integrity.sql`)
+- 주관식 정답은 응시 중 화면으로 보내지 않음, 녹음 업로드는 audio 형식·응시당 12개 제한, 관리자 녹음 재생은 nosniff/CSP 적용
+- 비밀번호 변경 시 다른 기기 세션 로그아웃
 
 ## 관리자 체험
 관리자는 결제 없이 모든 시험을 응시할 수 있습니다(마이페이지 > 관리자 체험 응시, 횟수 제한 없음).

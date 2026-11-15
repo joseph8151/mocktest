@@ -1,5 +1,5 @@
 import { Hono } from 'hono';
-import { deleteCookie } from 'hono/cookie';
+import { deleteCookie, getCookie } from 'hono/cookie';
 import { uid, now, isEmail, randomToken, sha256hex } from '../lib/util.js';
 import { hashPassword, verifyPassword, createSession, destroySession, loadUser, requireUser } from '../lib/auth.js';
 import { sendMail, mailWelcome, mailReset } from '../lib/email.js';
@@ -23,8 +23,8 @@ app.post('/register', async (c) => {
   const adminEmail = (c.env.ADMIN_EMAIL || '').trim().toLowerCase();
   const configured = adminEmail && adminEmail !== 'admin@example.com';
   let role = 'student';
-  if (configured) { if (email === adminEmail) role = 'admin'; }
-  else if (!(await c.env.DB.prepare(`SELECT 1 FROM users WHERE role='admin' LIMIT 1`).first())) role = 'admin';
+  // Bootstrap only while no admin exists (the last admin cannot be removed), so the role can never be claimed later.
+  if (!(await c.env.DB.prepare(`SELECT 1 FROM users WHERE role='admin' LIMIT 1`).first())) role = configured ? (email === adminEmail ? 'admin' : 'student') : 'admin';
   await c.env.DB.prepare(
     'INSERT INTO users (id,email,password_hash,salt,name,role,grade,phone,created_at,last_login_at) VALUES (?,?,?,?,?,?,?,?,?,?)'
   ).bind(id, email, hash, salt, name, role, b.grade || null, b.phone || null, now(), now()).run();
@@ -73,6 +73,8 @@ app.post('/password', requireUser, async (c) => {
   if (String(b.next || '').length < 8) return c.json({ error: '새 비밀번호는 8자 이상이어야 합니다.' }, 400);
   const { hash, salt } = await hashPassword(b.next);
   await c.env.DB.prepare('UPDATE users SET password_hash=?, salt=? WHERE id=?').bind(hash, salt, u.id).run();
+  const cur = await sha256hex(getCookie(c, 'sid') || '');
+  await c.env.DB.prepare('DELETE FROM sessions WHERE user_id=? AND token_hash!=?').bind(u.id, cur).run(); // sign out other devices
   return c.json({ ok: true });
 });
 

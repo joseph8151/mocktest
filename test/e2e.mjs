@@ -148,6 +148,32 @@ const exList = await kid.get('/api/exams'); assert.ok(exList.exams.find((e) => e
   assert.equal(rep.score.sections.verbal.omitted, rep.score.sections.verbal.total); assert.equal(rep.score.sections.verbal.scaled, 500, 'all omitted -> bottom of scale, no negative');
   assert.equal(rep.score.sections.reading.scaled, 800);
 }
+// security regressions
+{
+  // the sample grader must not reveal answers of questions used in paid tests
+  const paidQ = qs.find((q) => q.kind === 'mcq' && !/[08]$/.test(q.id));
+  const g = await new Client().post('/api/sample/grade', { answers: [{ id: paidQ.id, choice: 0 }] });
+  assert.equal(g.results.length, 0, 'paid questions are not gradable through the sample');
+  const smp = await new Client().get('/api/sample/MAP'); assert.ok(smp.questions.every((q) => /[08]$/.test(q.id)), 'sample comes from the sample pool');
+  // paid sections never contain sample-pool questions
+  const st = await admin.post('/api/attempts', { examType: 'SCAT', level: 'adv' }); const cur = await admin.get(`/api/attempts/${st.id}/current`);
+  assert.ok(cur.questions.every((q) => !/[08]$/.test(q.id)), 'no sample questions in paid sections'); await admin.post(`/api/attempts/${st.id}/finish`);
+  // audio uploads must be audio
+  await admin.post(`/api/admin/users/${kidId}/grant`, { productId: 'p-wida-1' });
+  const w = await kid.post('/api/attempts', { examType: 'WIDA' });
+  const bad = await fetch(BASE + `/api/attempts/${w.id}/audio`, { method: 'PUT', headers: { cookie: kid.cookie, 'content-type': 'text/html' }, body: '<script>alert(1)</script>' });
+  assert.equal(bad.status, 415, 'non-audio upload rejected');
+  // an admin cannot open a student's live attempt (would mutate it) and strangers get 404
+  assert.equal((await admin.get(`/api/attempts/${w.id}/current`)).status, 404);
+  await kid.post(`/api/attempts/${w.id}/finish`);
+  // double start uses one ticket and returns the same attempt
+  await admin.post(`/api/admin/users/${kidId}/grant`, { productId: 'p-scat-1' });
+  const [r1, r2] = await Promise.all([kid.post('/api/attempts', { examType: 'SCAT' }), kid.post('/api/attempts', { examType: 'SCAT' })]);
+  assert.equal(r1.id, r2.id, 'parallel starts resume one attempt');
+  // the last admin cannot be demoted
+  const me2 = await admin.get('/api/auth/me');
+  assert.equal((await admin.req('PATCH', `/api/admin/users/${me2.user.id}`, { role: 'student' })).status, 400);
+}
 // public exam guide + free sample (no login) + wrong-answer notebook
 const guide = await new Client().get('/api/exam-info'); assert.equal(guide.exams.length, 9); assert.ok(guide.exams.find((e) => e.type === 'SAT').sections.some((x) => x.key === 'math'));
 for (const ex of ['MAP', 'CAT4', 'COGAT', 'SAT', 'TOEFLJ', 'WIDA']) {
