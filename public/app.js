@@ -925,7 +925,12 @@ async function adminPayments(b) {
     row('KCP 직접 연동', st.kcp.configured, [['모드', st.kcp.mode === 'prod' ? '운영(prod)' : '테스트(test)'], ['site_cd', st.kcp.siteCd || '(KCP_SITE_CD 필요)'], ['결과 수신(Ret_URL)', st.kcp.returnUrl], ['필요 시크릿', 'KCP_SITE_CD, KCP_CERT_INFO (운영 전환 시 KCP_MODE=prod)']]),
     row('포트원 (KCP 등 PG 채널)', st.portone.configured, [['웹훅 URL', st.portone.webhookUrl], ['웹훅 시크릿', st.portone.webhookSecret ? '설정됨' : '(PORTONE_WEBHOOK_SECRET 필요)'], ['필요 값', 'PORTONE_STORE_ID, PORTONE_CHANNEL_KEY, PORTONE_API_SECRET']]),
     row('Stripe (해외 카드)', st.stripe.configured, [['웹훅 URL', st.stripe.webhookUrl], ['웹훅 시크릿', st.stripe.webhookSecret ? '설정됨' : '(STRIPE_WEBHOOK_SECRET 필요)']]),
-    row('이메일 (Resend)', st.mail, [['필요 시크릿', 'RESEND_API_KEY']]));
+    (() => {
+      const out = h('p', { class: 'small' });
+      const card = row('이메일 (Resend)', st.mail.configured, [['보내는 주소', st.mail.from + (st.mail.testSender ? ' (Resend 테스트 주소: 본인 Resend 계정 이메일로만 발송됨)' : '')], ['필요 값', 'RESEND_API_KEY (Secret), MAIL_FROM (Text, 예: MockTest Lab <noreply@내도메인>)']]);
+      card.append(h('div', { class: 'row', style: 'margin-top:12px' }, h('button', { class: 'btn sm', onclick: guard(async () => { out.className = 'small'; out.textContent = '보내는 중…'; try { const r = await api('POST', '/admin/mail-test'); out.className = 'small ok-text'; out.textContent = `✓ ${r.to}로 테스트 메일을 보냈습니다. 받은편지함(스팸함 포함)을 확인하세요.`; } catch (e) { out.className = 'small err'; out.textContent = '발송 실패: ' + e.message; } }) }, '내 이메일로 테스트 메일 보내기')), out);
+      return card;
+    })());
 }
 async function adminGrading(b) {
   const { items } = await api('GET', '/admin/grading');

@@ -55,7 +55,7 @@ npx wrangler secret put PORTONE_API_SECRET
 npx wrangler secret put PORTONE_WEBHOOK_SECRET
 npx wrangler secret put RESEND_API_KEY
 ```
-`wrangler.jsonc`의 `MAIL_FROM`, `BIZ_*`(사업자 정보)를 채우세요. `PORTONE_STORE_ID`, `PORTONE_CHANNEL_KEY`, `KCP_SITE_CD` 같은 일반 값은 대시보드의 Variables에 **Text**로 넣으면 됩니다(`keep_vars: true`라 배포해도 지워지지 않음). API 시크릿은 **Secret**으로 넣으세요.
+`MAIL_FROM`, `BIZ_*`(사업자 정보)도 대시보드의 Variables에 Text로 넣으세요(`wrangler.jsonc`에 적으면 배포 때마다 대시보드 값을 덮어씁니다). `PORTONE_STORE_ID`, `PORTONE_CHANNEL_KEY`, `KCP_SITE_CD` 같은 일반 값은 대시보드의 Variables에 **Text**로 넣으면 됩니다(`keep_vars: true`라 배포해도 지워지지 않음). API 시크릿은 **Secret**으로 넣으세요.
 
 > 자동 생성이 권한 문제로 실패하면 수동으로 만들고 `wrangler.jsonc`의 D1 항목에 `database_id`를 적으면 됩니다: `npx wrangler d1 create mocktest`.
 > 기존 DB가 `wrangler d1 migrations apply`로 이미 만들어져 있어도 자동 구성 코드가 이를 감지해 충돌하지 않습니다.
@@ -68,6 +68,14 @@ npx wrangler secret put RESEND_API_KEY
 
 ### GitHub 자동 배포
 Cloudflare 대시보드 → Workers & Pages → Create → Connect to Git → 이 저장소 선택 (빌드 명령 없음, 배포 명령 `npx wrangler deploy`).
+
+## 이메일 (Resend)
+1. resend.com 가입 → Domains → 내 도메인 추가 → 안내된 DNS 레코드(SPF·DKIM)를 Cloudflare DNS에 추가 → Verified 확인
+2. API Keys → Create (Sending access) → Cloudflare 대시보드 Variables and Secrets에 `RESEND_API_KEY`(Secret)
+3. `MAIL_FROM`(Text) = `MockTest Lab <noreply@내도메인>`
+4. 관리자 > 결제설정 > 이메일 카드의 **테스트 메일 보내기**로 확인 (실패하면 Resend의 오류 메시지가 그대로 표시됨)
+
+도메인 인증 전에는 Resend 테스트 주소(onboarding@resend.dev)로 **Resend 계정 본인 이메일에만** 보낼 수 있습니다.
 
 ## 결제 (KCP · 포트원 · Stripe)
 | 방식 | 필요한 값 | 비고 |

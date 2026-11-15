@@ -6,6 +6,7 @@ import { stripeRetrieveSession, stripeRefund, portoneCancel, recheckOrder, fulfi
 import { notifyResult } from './exams.js';
 import { kcpCancel, kcpEnabled, kcpConfig } from '../lib/kcp.js';
 import { audit, redact, logEvent } from '../lib/security.js';
+import { deliver, mailFrom, mailTest } from '../lib/email.js';
 import { anonymizeUser } from './auth.js';
 import { hashPassword } from '../lib/auth.js';
 import { randomToken } from '../lib/util.js';
@@ -47,8 +48,13 @@ app.get('/payment-status', (c) => {
     stripe: { configured: !!e.STRIPE_SECRET_KEY, webhookSecret: !!e.STRIPE_WEBHOOK_SECRET, webhookUrl: `${site}/api/webhooks/stripe` },
     portone: { configured: !!(e.PORTONE_API_SECRET && e.PORTONE_STORE_ID && e.PORTONE_CHANNEL_KEY), webhookSecret: !!e.PORTONE_WEBHOOK_SECRET, webhookUrl: `${site}/api/webhooks/portone` },
     kcp: { configured: kcpEnabled(e), mode: kcpConfig(e).mode, siteCd: e.KCP_SITE_CD ? e.KCP_SITE_CD.slice(0, 2) + '***' : null, returnUrl: `${site}/api/pay/kcp/return` },
-    mail: !!e.RESEND_API_KEY,
+    mail: { configured: !!e.RESEND_API_KEY, from: mailFrom(e), testSender: !e.MAIL_FROM },
   });
+});
+
+app.post('/mail-test', async (c) => {
+  const r = await deliver(c.env, c.get('user').email, `[${c.env.SITE_NAME}] 이메일 연결 테스트`, mailTest(c.env));
+  return r.ok ? c.json({ ok: true, to: c.get('user').email }) : c.json({ error: r.error }, 502);
 });
 
 /* ---- members ---- */

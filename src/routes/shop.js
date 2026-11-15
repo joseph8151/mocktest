@@ -14,7 +14,7 @@ app.get('/config', async (c) => c.json({
   site: c.env.SITE_NAME,
   turnstile: c.env.TURNSTILE_SITE_KEY && c.env.TURNSTILE_SECRET ? c.env.TURNSTILE_SITE_KEY : null,
   notice: (await c.env.DB.prepare(`SELECT value FROM settings WHERE key='notice'`).first())?.value || null,
-  biz: { name: c.env.BIZ_NAME, owner: c.env.BIZ_OWNER, regNo: c.env.BIZ_REG_NO, salesNo: c.env.BIZ_SALES_NO, address: c.env.BIZ_ADDRESS, contact: c.env.BIZ_CONTACT },
+  biz: { name: c.env.BIZ_NAME || '(상호명 입력)', owner: c.env.BIZ_OWNER || '(대표자명)', regNo: c.env.BIZ_REG_NO || '(사업자등록번호)', salesNo: c.env.BIZ_SALES_NO || '(통신판매업 신고번호)', address: c.env.BIZ_ADDRESS || '(사업장 주소)', contact: c.env.BIZ_CONTACT || '(고객센터 이메일/전화)' },
 }));
 
 app.get('/products', async (c) => {
