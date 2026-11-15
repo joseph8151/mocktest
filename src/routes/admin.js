@@ -219,7 +219,7 @@ function validateQ(b) {
   }
   return null;
 }
-const qBind = (b) => [b.exam_type, b.section, b.kind || 'mcq', Math.max(1, Math.min(5, +b.difficulty || 3)), b.passage || null, b.stem,
+const qBind = (b) => [b.exam_type, b.section, b.kind || 'mcq', Math.max(1, Math.min(String(b.exam_type).startsWith('KR_') ? 6 : 5, +b.difficulty || 3)), b.passage || null, b.stem,
   b.image_svg || null, b.choices ? JSON.stringify(b.choices) : null, Number.isInteger(b.answer) ? b.answer : null, b.explanation || null, b.active === false ? 0 : 1];
 
 app.post('/questions', async (c) => {

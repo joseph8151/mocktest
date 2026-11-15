@@ -184,7 +184,7 @@ async function pageHome() {
         h('h1', {}, 'Practice like', h('br'), 'it\'s ', h('span', { class: 'hl' }, 'test day'), '.', h('em', {}, 'MAP / CAT4 / CogAT / SCAT / SSAT / ISEE / SAT / TOEFL Junior / WIDA')),
         h('p', { class: 'lead' }, '실제 시험과 같은 형식, 같은 시간 압박. 결제하면 곧바로 응시할 수 있고, 끝나는 즉시 영역별 점수와 문항별 해설이 나옵니다.'),
         h('div', { class: 'row' }, h('button', { class: 'btn lg', onclick: toExams }, 'Browse tests →'), me ? h('a', { class: 'btn lg alt', href: '#/me' }, '내 시험') : h('a', { class: 'btn lg alt', href: '#/register' }, '회원가입')),
-        h('div', { class: 'chips' }, [['1,950+', 'original questions'], ['9', 'test types'], ['0s', 'wait for your score']].map(([b, t]) => h('div', {}, h('b', {}, b), t)))),
+        h('div', { class: 'chips' }, [['3,300+', 'original questions'], ['9', 'test types'], ['0s', 'wait for your score']].map(([b, t]) => h('div', {}, h('b', {}, b), t)))),
       h('div', { class: 'mock', 'aria-hidden': 'true' },
         h('div', { class: 'mrow' }, h('b', { style: 'font-weight:500' }, 'Verbal / 03'), h('span', {}, '08:42')),
         h('div', { class: 'mq' }, 'Author is to book as composer is to ___'),
@@ -1229,7 +1229,7 @@ async function adminProducts(b) {
   };
   b.append(h('p', {}, h('button', { class: 'btn sm', onclick: () => edit() }, '+ 새 상품')), h('table', {}, products.map((p) => h('tr', {}, h('td', {}, p.exam_type), h('td', {}, p.title), h('td', {}, `${money(p.price_krw, 'KRW')} / ${money(p.price_usd_cents, 'USD')}`), h('td', {}, `${p.attempts}회/${p.valid_days}일`), h('td', {}, p.active ? '판매중' : '중지'), h('td', {}, h('button', { class: 'btn sm alt', onclick: () => edit(p) }, '수정'))))));
 }
-const SECTIONS = { MAP: ['reading', 'language', 'math'], CAT4: ['verbal', 'quantitative', 'nonverbal', 'spatial'], WIDA: ['listening', 'reading', 'writing', 'speaking'], SCAT: ['verbal', 'quantitative'], SSAT: ['writing', 'quantitative', 'reading', 'verbal'], ISEE: ['verbal', 'quantitative', 'reading', 'math', 'essay'], COGAT: ['verbal', 'quantitative', 'nonverbal'], SAT: ['rw', 'math'], TOEFLJ: ['listening', 'lfm', 'reading'] };
+const SECTIONS = { MAP: ['reading', 'language', 'math'], CAT4: ['verbal', 'quantitative', 'nonverbal', 'spatial'], WIDA: ['listening', 'reading', 'writing', 'speaking'], SCAT: ['verbal', 'quantitative'], SSAT: ['writing', 'quantitative', 'reading', 'verbal'], ISEE: ['verbal', 'quantitative', 'reading', 'math', 'essay'], COGAT: ['verbal', 'quantitative', 'nonverbal'], SAT: ['rw', 'math'], TOEFLJ: ['listening', 'lfm', 'reading'] , KR_ENG: ['reading', 'vocab', 'grammar', 'writing_creative', 'writing_expository'], KR_KOR: ['nonfiction', 'literature', 'vocab', 'writing'], KR_MATH: ['number', 'geometry', 'pattern', 'problem'] };
 async function adminQuestions(b) {
   const fe = h('select', {}, h('option', { value: '' }, '전체 시험'), ...Object.keys(SECTIONS).map((x) => h('option', {}, x)));
   const list = h('div', {});
@@ -1246,7 +1246,7 @@ async function adminQuestions(b) {
         choices: d.kind === 'mcq' || d.kind === 'num' ? d.choices.split('\n').map((x) => x.trim()).filter(Boolean) : null, answer: d.kind === 'mcq' ? (+d.answer) - 1 : null };
       await api(id ? 'PUT' : 'POST', '/admin/questions' + (id ? '/' + id : ''), body); toast('저장됨'); pageAdmin('questions');
     }) },
-      h('div', { class: 'row' }, field('시험', h('select', { name: 'exam_type' }, Object.keys(SECTIONS).map((x) => h('option', { selected: x === q.exam_type }, x)))), field('영역(section key)', h('input', { name: 'section', value: q.section })), field('유형', h('select', { name: 'kind' }, ['mcq', 'num', 'text', 'audio'].map((x) => h('option', { selected: x === q.kind }, x)))), field('난이도(1-5)', h('input', { name: 'difficulty', type: 'number', min: 1, max: 5, value: q.difficulty }))),
+      h('div', { class: 'row' }, field('시험', h('select', { name: 'exam_type' }, Object.keys(SECTIONS).map((x) => h('option', { selected: x === q.exam_type }, x)))), field('영역(section key)', h('input', { name: 'section', value: q.section })), field('유형', h('select', { name: 'kind' }, ['mcq', 'num', 'text', 'audio'].map((x) => h('option', { selected: x === q.kind }, x)))), field('난이도 (1–5 · 레테는 나이 단계 1–6)', h('input', { name: 'difficulty', type: 'number', min: 1, max: 6, value: q.difficulty }))),
       field('지문 (듣기는 읽어줄 스크립트)', h('textarea', { name: 'passage', rows: 3 }, q.passage || '')), field('문제', h('textarea', { name: 'stem', rows: 2, required: true }, q.stem)),
       field('보기 (한 줄에 하나, 그림은 svg:<svg ...>)', h('textarea', { name: 'choices', rows: 5 }, (q.choices || []).join('\n'))), field('정답 번호 (1부터)', h('input', { name: 'answer', type: 'number', min: 1, value: (q.answer ?? 0) + 1 })),
       field('문제 그림 SVG (선택)', h('textarea', { name: 'image_svg', rows: 3 }, q.image_svg || '')), field('해설', h('textarea', { name: 'explanation', rows: 2 }, q.explanation || '')),

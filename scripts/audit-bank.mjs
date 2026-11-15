@@ -11,7 +11,7 @@ const GENERIC = /^(think about the relationship|find the answer in the text|list
 const stemSeen = new Map();
 for (const q of Q) {
   if (!EXAMS[q.exam] || !EXAMS[q.exam].sections.some((s) => s.key === q.section)) flag(q, 'unknown exam/section');
-  if (!(q.difficulty >= 1 && q.difficulty <= 5)) flag(q, 'difficulty out of range');
+  if (!(q.difficulty >= 1 && q.difficulty <= (q.exam_type.startsWith('KR_') ? 6 : 5))) flag(q, 'difficulty out of range');
   if (q.kind !== 'mcq') continue;
   const c = q.choices || [];
   if (c.length < 3) flag(q, `only ${c.length} choices`);
