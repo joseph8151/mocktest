@@ -741,8 +741,9 @@ function chooseLevel(exam, resuming) {
   if (!exam || resuming || (exam.levels || []).length <= 1) return go(exam?.levels?.[0]?.key);
   let pick = exam.suggested || exam.levels[Math.floor((exam.levels.length - 1) / 2)].key;
   const close = () => m.remove();
-  const opts = exam.levels.map((l) => h('button', { type: 'button', class: 'lvl' + (l.key === pick ? ' on' : ''), onclick: (e) => { pick = l.key; opts.forEach((b) => b.classList.toggle('on', b === e.currentTarget)); } },
-    h('b', {}, l.name), h('span', {}, l.grades), l.key === exam.suggested ? h('i', {}, '추천') : null));
+  if (exam.levels.some((l) => l.ready === false) && exam.levels.find((l) => l.key === pick)?.ready === false) pick = exam.levels.find((l) => l.ready !== false)?.key;
+  const opts = exam.levels.map((l) => h('button', { type: 'button', disabled: l.ready === false, class: 'lvl' + (l.key === pick ? ' on' : ''), onclick: (e) => { pick = l.key; opts.forEach((b) => b.classList.toggle('on', b === e.currentTarget)); } },
+    h('b', {}, l.name), h('span', {}, l.grades), l.ready === false ? h('i', {}, '준비 중') : l.key === exam.suggested ? h('i', {}, '추천') : null));
   const m = h('div', { class: 'modal', onclick: (e) => e.target === m && close() }, h('div', { class: 'card', style: 'max-width:520px' },
     h('div', { class: 'kicker' }, 'Choose your level'), h('h3', {}, `${EXAM_META[exam.type]?.name || exam.type} · 레벨 선택`),
     h('p', { class: 'muted small' }, '학년에 맞는 레벨을 고르세요. 레벨에 따라 문제 난이도 구간과 점수 척도가 달라집니다.' + (exam.suggested ? ' (회원 정보의 학년으로 추천했습니다)' : ' 회원 정보에 학년을 입력하면 자동으로 추천됩니다.')),

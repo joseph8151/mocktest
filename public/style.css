@@ -403,3 +403,5 @@ svg.bars{display:block;width:100%;height:90px;margin-top:10px}svg.bars rect{fill
 .kr-tables{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.kr-tables .card{margin:0}
 @media (max-width:900px){.kr-index,.kr-tables{grid-template-columns:1fr}}
 @media (max-width:640px){.cattabs a{padding:12px}.cattabs a span{display:none}}
+
+.lvl:disabled{opacity:.45;cursor:not-allowed}

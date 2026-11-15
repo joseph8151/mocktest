@@ -15,8 +15,16 @@ const publicQ = (q) => ({
   choices: q.choices && q.kind !== 'num' ? JSON.parse(q.choices) : null,
 });
 
-app.get('/exams', (c) => c.json({
-  exams: Object.entries(EXAMS).map(([k, e]) => ({ type: k, title: e.title, sections: e.sections, levels: e.levels || [], suggested: levelForGrade(k, c.get('user')?.grade) })),
+/** 레테 levels are exact age bands: a level is offered only when every scored section has a full set at that age. */
+async function levelReady(env, examType) {
+  const ex = EXAMS[examType];
+  if (ex.category !== 'kr') return null;
+  const { results } = await env.DB.prepare(`SELECT section, difficulty, COUNT(*) n FROM questions WHERE exam_type=? AND active=1 AND substr(id,-1) NOT IN ('0','8') GROUP BY section, difficulty`).bind(examType).all();
+  const have = (sec, d) => results.find((r) => r.section === sec && r.difficulty === d)?.n || 0;
+  return Object.fromEntries(ex.levels.map((l) => [l.key, ex.sections.every((sec) => have(sec.key, l.dmin) >= (sec.manual ? 1 : sec.n))]));
+}
+app.get('/exams', async (c) => c.json({
+  exams: await Promise.all(Object.entries(EXAMS).map(async ([k, e]) => { const ready = await levelReady(c.env, k); return { type: k, title: e.title, category: e.category || 'us', sections: e.sections, levels: (e.levels || []).map((l) => (ready ? { ...l, ready: ready[l.key] } : l)), suggested: levelForGrade(k, c.get('user')?.grade) }; })),
 }));
 
 /** Wrong-answer notebook: the most recent wrong answer per question, with the explanation. */
@@ -54,6 +62,7 @@ app.post('/attempts', async (c) => {
   if (!EXAMS[examType]) return c.json({ error: '알 수 없는 시험입니다.' }, 400);
   if (level && !(EXAMS[examType].levels || []).some((l) => l.key === level)) return c.json({ error: '레벨이 올바르지 않습니다.' }, 400);
   const gate = accountGate(c.env, u); if (gate) return c.json(gate, 403);
+  if (level) { const ready = await levelReady(c.env, examType); if (ready && !ready[level]) return c.json({ error: '이 레벨은 문항을 준비 중입니다. 다른 레벨을 선택해 주세요.' }, 409); }
   const levelKey = level || levelForGrade(examType, u.grade) || getLevel(examType).key;
   const open = await c.env.DB.prepare(`SELECT id FROM attempts WHERE user_id=? AND exam_type=? AND status='in_progress'`).bind(u.id, examType).first();
   if (open) return c.json({ id: open.id, resumed: true });
