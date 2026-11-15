@@ -4420,6 +4420,781 @@ Organization (4): opening sentence that introduces the topic; ideas grouped in a
 Sentence variety (4): mixes simple and compound sentences; uses complex sentences with because, when, or if; avoids starting every sentence the same way.
 Grammar and spelling (4): correct verb tenses, subject-verb agreement, plurals, capitalization, commas in lists, and end marks; grade-3 words spelled correctly.
 Score guide: 14–16 strong grade-3 level; 10–13 on level with small errors; 6–9 developing (few details or many errors); 0–5 beginning (fewer than 5 sentences or off topic).',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-d07b373ca45c','KR_KOR','nonfiction','mcq',1,'개미는 땅속에 집을 짓고 여럿이 모여 살아요. 개미집 안에는 길이 여러 갈래로 나 있고, 방도 많아요. 개미집 입구는 아주 작아서 눈에 잘 띄지 않아요. 먹이를 모아 두는 방과 알을 돌보는 방이 따로 있어요.
+
+개미는 먹이를 찾으면 집으로 돌아가면서 땅에 냄새를 남겨요. 다른 개미들은 그 냄새를 따라가서 먹이를 찾아요. 그래서 개미들이 한 줄로 길게 걸어가는 모습을 볼 수 있어요. 개미는 더듬이로 냄새를 맡고, 친구와 더듬이를 맞대어 이야기를 나누기도 해요.
+
+개미는 몸집이 아주 작지만 힘이 세요. 자기 몸보다 훨씬 무거운 먹이도 들어 옮길 수 있어요. 아주 큰 먹이는 여러 마리가 힘을 모아 함께 옮겨요. 혼자 들기 힘든 과자 조각도 여럿이 함께 들면 거뜬히 옮길 수 있어요.
+
+이렇게 개미는 서로 도우며 부지런히 일하는 곤충이에요.','이 글은 무엇에 대해 알려 주는 글인가요?',NULL,'["개미가 사는 모습","개미를 잡는 방법","나비가 꿀을 먹는 모습","개미집을 만드는 장난감"]',0,'글 전체가 개미의 집, 먹이를 찾는 방법, 힘이 센 모습 등 개미가 사는 모습을 알려 주고 있어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-fa690b6477c1','KR_KOR','nonfiction','mcq',1,'개미는 땅속에 집을 짓고 여럿이 모여 살아요. 개미집 안에는 길이 여러 갈래로 나 있고, 방도 많아요. 개미집 입구는 아주 작아서 눈에 잘 띄지 않아요. 먹이를 모아 두는 방과 알을 돌보는 방이 따로 있어요.
+
+개미는 먹이를 찾으면 집으로 돌아가면서 땅에 냄새를 남겨요. 다른 개미들은 그 냄새를 따라가서 먹이를 찾아요. 그래서 개미들이 한 줄로 길게 걸어가는 모습을 볼 수 있어요. 개미는 더듬이로 냄새를 맡고, 친구와 더듬이를 맞대어 이야기를 나누기도 해요.
+
+개미는 몸집이 아주 작지만 힘이 세요. 자기 몸보다 훨씬 무거운 먹이도 들어 옮길 수 있어요. 아주 큰 먹이는 여러 마리가 힘을 모아 함께 옮겨요. 혼자 들기 힘든 과자 조각도 여럿이 함께 들면 거뜬히 옮길 수 있어요.
+
+이렇게 개미는 서로 도우며 부지런히 일하는 곤충이에요.','개미들이 한 줄로 길게 걸어가는 까닭은 무엇인가요?',NULL,'["앞이 잘 보이지 않아서","길이 아주 좁아서","먼저 간 개미가 남긴 냄새를 따라가서","줄 서기 놀이를 하고 있어서"]',2,'둘째 문단에서 개미들은 먹이를 찾은 개미가 땅에 남긴 냄새를 따라가서 한 줄로 걸어간다고 했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-c1f9e476eb93','KR_KOR','nonfiction','mcq',1,'개미는 땅속에 집을 짓고 여럿이 모여 살아요. 개미집 안에는 길이 여러 갈래로 나 있고, 방도 많아요. 개미집 입구는 아주 작아서 눈에 잘 띄지 않아요. 먹이를 모아 두는 방과 알을 돌보는 방이 따로 있어요.
+
+개미는 먹이를 찾으면 집으로 돌아가면서 땅에 냄새를 남겨요. 다른 개미들은 그 냄새를 따라가서 먹이를 찾아요. 그래서 개미들이 한 줄로 길게 걸어가는 모습을 볼 수 있어요. 개미는 더듬이로 냄새를 맡고, 친구와 더듬이를 맞대어 이야기를 나누기도 해요.
+
+개미는 몸집이 아주 작지만 힘이 세요. 자기 몸보다 훨씬 무거운 먹이도 들어 옮길 수 있어요. 아주 큰 먹이는 여러 마리가 힘을 모아 함께 옮겨요. 혼자 들기 힘든 과자 조각도 여럿이 함께 들면 거뜬히 옮길 수 있어요.
+
+이렇게 개미는 서로 도우며 부지런히 일하는 곤충이에요.','글의 내용과 다른 것은 무엇인가요?',NULL,'["아주 큰 먹이는 여러 마리가 함께 옮긴다.","개미는 나무 위에 집을 짓는다.","개미는 자기 몸보다 무거운 먹이를 옮길 수 있다.","개미집에는 방이 많다."]',1,'첫째 문단에서 개미는 ''땅속에'' 집을 짓는다고 했으므로 나무 위에 집을 짓는다는 말은 글과 달라요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-a3ca36657056','KR_KOR','nonfiction','mcq',1,'개미는 땅속에 집을 짓고 여럿이 모여 살아요. 개미집 안에는 길이 여러 갈래로 나 있고, 방도 많아요. 개미집 입구는 아주 작아서 눈에 잘 띄지 않아요. 먹이를 모아 두는 방과 알을 돌보는 방이 따로 있어요.
+
+개미는 먹이를 찾으면 집으로 돌아가면서 땅에 냄새를 남겨요. 다른 개미들은 그 냄새를 따라가서 먹이를 찾아요. 그래서 개미들이 한 줄로 길게 걸어가는 모습을 볼 수 있어요. 개미는 더듬이로 냄새를 맡고, 친구와 더듬이를 맞대어 이야기를 나누기도 해요.
+
+개미는 몸집이 아주 작지만 힘이 세요. 자기 몸보다 훨씬 무거운 먹이도 들어 옮길 수 있어요. 아주 큰 먹이는 여러 마리가 힘을 모아 함께 옮겨요. 혼자 들기 힘든 과자 조각도 여럿이 함께 들면 거뜬히 옮길 수 있어요.
+
+이렇게 개미는 서로 도우며 부지런히 일하는 곤충이에요.','''부지런히''와 뜻이 가장 비슷한 것은 무엇인가요?',NULL,'["아주 천천히","시끄럽게 떠들며","쉬지 않고 열심히","혼자서 몰래"]',2,'''부지런히''는 게으름을 피우지 않고 열심히 한다는 뜻이에요. 개미가 쉬지 않고 열심히 일한다는 말이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-81f5305804f7','KR_KOR','nonfiction','mcq',1,'겨울이 지나면 봄이 와요. 봄이 되면 날씨가 점점 따뜻해져요. 꽁꽁 얼었던 땅이 녹고, 시냇물도 졸졸 소리를 내며 다시 흘러요. 나뭇가지에는 작은 새싹이 돋아나요.
+
+봄에는 꽃이 많이 피어요. 노란 개나리와 분홍 진달래가 피고, 하얀 벚꽃도 활짝 피어요. 꽃이 피면 벌과 나비가 날아와 꿀을 먹어요. 산과 들이 알록달록 꽃 색깔로 물들어요.
+
+겨울잠을 자던 동물들도 깨어나요. 개구리는 땅속에서 나와 폴짝폴짝 뛰어다니고, 곰은 굴 밖으로 나와 먹이를 찾아요. 먼 곳에 갔던 제비도 다시 돌아와 처마 밑에 집을 지어요.
+
+봄에도 아침과 저녁에는 아직 쌀쌀할 때가 있어요. 또 바람이 많이 불고 날씨가 자주 바뀌어요. 그래서 밖에 나갈 때는 얇은 겉옷을 챙기는 것이 좋아요.','이 글은 무엇을 알려 주나요?',NULL,'["겨울에 눈이 오는 까닭","봄이 되면 달라지는 날씨와 자연의 모습","곰이 겨울잠을 자는 곳","꽃으로 꿀을 만드는 방법"]',1,'글은 봄이 되면 날씨가 따뜻해지고, 새싹이 돋고, 꽃이 피고, 동물들이 깨어나는 모습을 알려 주고 있어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-204a56629431','KR_KOR','nonfiction','mcq',1,'겨울이 지나면 봄이 와요. 봄이 되면 날씨가 점점 따뜻해져요. 꽁꽁 얼었던 땅이 녹고, 시냇물도 졸졸 소리를 내며 다시 흘러요. 나뭇가지에는 작은 새싹이 돋아나요.
+
+봄에는 꽃이 많이 피어요. 노란 개나리와 분홍 진달래가 피고, 하얀 벚꽃도 활짝 피어요. 꽃이 피면 벌과 나비가 날아와 꿀을 먹어요. 산과 들이 알록달록 꽃 색깔로 물들어요.
+
+겨울잠을 자던 동물들도 깨어나요. 개구리는 땅속에서 나와 폴짝폴짝 뛰어다니고, 곰은 굴 밖으로 나와 먹이를 찾아요. 먼 곳에 갔던 제비도 다시 돌아와 처마 밑에 집을 지어요.
+
+봄에도 아침과 저녁에는 아직 쌀쌀할 때가 있어요. 또 바람이 많이 불고 날씨가 자주 바뀌어요. 그래서 밖에 나갈 때는 얇은 겉옷을 챙기는 것이 좋아요.','글에 나오지 않은 꽃은 무엇인가요?',NULL,'["개나리","진달래","벚꽃","해바라기"]',3,'둘째 문단에는 개나리, 진달래, 벚꽃이 나오고 해바라기는 나오지 않아요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-6399cda0f5c7','KR_KOR','nonfiction','mcq',1,'겨울이 지나면 봄이 와요. 봄이 되면 날씨가 점점 따뜻해져요. 꽁꽁 얼었던 땅이 녹고, 시냇물도 졸졸 소리를 내며 다시 흘러요. 나뭇가지에는 작은 새싹이 돋아나요.
+
+봄에는 꽃이 많이 피어요. 노란 개나리와 분홍 진달래가 피고, 하얀 벚꽃도 활짝 피어요. 꽃이 피면 벌과 나비가 날아와 꿀을 먹어요. 산과 들이 알록달록 꽃 색깔로 물들어요.
+
+겨울잠을 자던 동물들도 깨어나요. 개구리는 땅속에서 나와 폴짝폴짝 뛰어다니고, 곰은 굴 밖으로 나와 먹이를 찾아요. 먼 곳에 갔던 제비도 다시 돌아와 처마 밑에 집을 지어요.
+
+봄에도 아침과 저녁에는 아직 쌀쌀할 때가 있어요. 또 바람이 많이 불고 날씨가 자주 바뀌어요. 그래서 밖에 나갈 때는 얇은 겉옷을 챙기는 것이 좋아요.','봄에 밖에 나갈 때 얇은 겉옷을 챙기면 좋은 까닭은 무엇인가요?',NULL,'["아침과 저녁에는 아직 쌀쌀할 때가 있어서","햇볕이 너무 뜨거워서","벌에 쏘이지 않으려고","봄에는 비가 많이 와서"]',0,'넷째 문단에서 봄에도 아침과 저녁에는 쌀쌀할 때가 있어서 얇은 겉옷을 챙기는 것이 좋다고 했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-4a49942de429','KR_KOR','nonfiction','mcq',1,'겨울이 지나면 봄이 와요. 봄이 되면 날씨가 점점 따뜻해져요. 꽁꽁 얼었던 땅이 녹고, 시냇물도 졸졸 소리를 내며 다시 흘러요. 나뭇가지에는 작은 새싹이 돋아나요.
+
+봄에는 꽃이 많이 피어요. 노란 개나리와 분홍 진달래가 피고, 하얀 벚꽃도 활짝 피어요. 꽃이 피면 벌과 나비가 날아와 꿀을 먹어요. 산과 들이 알록달록 꽃 색깔로 물들어요.
+
+겨울잠을 자던 동물들도 깨어나요. 개구리는 땅속에서 나와 폴짝폴짝 뛰어다니고, 곰은 굴 밖으로 나와 먹이를 찾아요. 먼 곳에 갔던 제비도 다시 돌아와 처마 밑에 집을 지어요.
+
+봄에도 아침과 저녁에는 아직 쌀쌀할 때가 있어요. 또 바람이 많이 불고 날씨가 자주 바뀌어요. 그래서 밖에 나갈 때는 얇은 겉옷을 챙기는 것이 좋아요.','''새싹이 돋아나요''에서 ''돋아나요''와 뜻이 가장 비슷한 것은 무엇인가요?',NULL,'["땅에 떨어져요","꽁꽁 얼어요","새로 생겨 나와요","말라서 시들어요"]',2,'''돋아나다''는 싹이나 잎이 새로 생겨 밖으로 나온다는 뜻이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-c061c9514cbf','KR_KOR','nonfiction','mcq',1,'우리 입속에는 이가 있어요. 이는 음식을 잘게 씹어 주어요. 음식을 잘 씹어야 배 속에서 소화가 잘돼요.
+
+음식을 먹고 나면 이 사이에 음식 찌꺼기가 남아요. 찌꺼기를 그대로 두면 세균이 생겨서 이가 썩을 수 있어요. 세균은 너무 작아서 눈에 보이지 않아요. 이가 썩으면 아프고, 음식을 먹기도 힘들어요.
+
+그래서 밥을 먹은 뒤에는 꼭 이를 닦아야 해요. 먼저 칫솔에 치약을 조금 묻혀요. 그다음 이를 위아래로 구석구석 닦아요. 혀도 살살 닦아 주면 좋아요. 이는 3분쯤 꼼꼼하게 닦는 것이 좋아요. 다 닦은 뒤에는 물로 입안을 깨끗이 헹궈요.
+
+달콤한 사탕이나 과자를 많이 먹으면 이가 썩기 쉬워요. 단 음식은 조금만 먹도록 해요. 일 년에 두 번쯤 치과에 가서 이를 검사받는 것도 좋아요.','글에서 말한 이가 하는 일은 무엇인가요?',NULL,'["소리를 듣게 해 준다.","음식을 잘게 씹어 준다.","냄새를 맡게 해 준다.","숨을 쉬게 해 준다."]',1,'첫째 문단에서 ''이는 음식을 잘게 씹어 주어요.''라고 했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-3ac067c482d3','KR_KOR','nonfiction','mcq',1,'우리 입속에는 이가 있어요. 이는 음식을 잘게 씹어 주어요. 음식을 잘 씹어야 배 속에서 소화가 잘돼요.
+
+음식을 먹고 나면 이 사이에 음식 찌꺼기가 남아요. 찌꺼기를 그대로 두면 세균이 생겨서 이가 썩을 수 있어요. 세균은 너무 작아서 눈에 보이지 않아요. 이가 썩으면 아프고, 음식을 먹기도 힘들어요.
+
+그래서 밥을 먹은 뒤에는 꼭 이를 닦아야 해요. 먼저 칫솔에 치약을 조금 묻혀요. 그다음 이를 위아래로 구석구석 닦아요. 혀도 살살 닦아 주면 좋아요. 이는 3분쯤 꼼꼼하게 닦는 것이 좋아요. 다 닦은 뒤에는 물로 입안을 깨끗이 헹궈요.
+
+달콤한 사탕이나 과자를 많이 먹으면 이가 썩기 쉬워요. 단 음식은 조금만 먹도록 해요. 일 년에 두 번쯤 치과에 가서 이를 검사받는 것도 좋아요.','밥을 먹은 뒤에 이를 닦아야 하는 까닭은 무엇인가요?',NULL,'["남은 음식 찌꺼기 때문에 이가 썩을 수 있어서","배가 빨리 고파지게 하려고","치약 맛이 달콤해서","이가 더 커지게 하려고"]',0,'둘째 문단에서 음식 찌꺼기를 그대로 두면 세균이 생겨 이가 썩을 수 있다고 했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-0fcdbf92dd57','KR_KOR','nonfiction','mcq',1,'우리 입속에는 이가 있어요. 이는 음식을 잘게 씹어 주어요. 음식을 잘 씹어야 배 속에서 소화가 잘돼요.
+
+음식을 먹고 나면 이 사이에 음식 찌꺼기가 남아요. 찌꺼기를 그대로 두면 세균이 생겨서 이가 썩을 수 있어요. 세균은 너무 작아서 눈에 보이지 않아요. 이가 썩으면 아프고, 음식을 먹기도 힘들어요.
+
+그래서 밥을 먹은 뒤에는 꼭 이를 닦아야 해요. 먼저 칫솔에 치약을 조금 묻혀요. 그다음 이를 위아래로 구석구석 닦아요. 혀도 살살 닦아 주면 좋아요. 이는 3분쯤 꼼꼼하게 닦는 것이 좋아요. 다 닦은 뒤에는 물로 입안을 깨끗이 헹궈요.
+
+달콤한 사탕이나 과자를 많이 먹으면 이가 썩기 쉬워요. 단 음식은 조금만 먹도록 해요. 일 년에 두 번쯤 치과에 가서 이를 검사받는 것도 좋아요.','글에 나온 이 닦는 차례로 알맞은 것은 무엇인가요?',NULL,'["치약 묻히기 → 구석구석 닦기 → 물로 헹구기","구석구석 닦기 → 치약 묻히기 → 물로 헹구기","물로 헹구기 → 치약 묻히기 → 구석구석 닦기","물로 헹구기 → 구석구석 닦기 → 치약 묻히기"]',0,'셋째 문단에서 ''먼저'' 치약을 묻히고, ''그다음'' 구석구석 닦고, 다 닦은 ''뒤에'' 물로 헹군다고 했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-cbc4bd3a77d7','KR_KOR','nonfiction','mcq',1,'우리 입속에는 이가 있어요. 이는 음식을 잘게 씹어 주어요. 음식을 잘 씹어야 배 속에서 소화가 잘돼요.
+
+음식을 먹고 나면 이 사이에 음식 찌꺼기가 남아요. 찌꺼기를 그대로 두면 세균이 생겨서 이가 썩을 수 있어요. 세균은 너무 작아서 눈에 보이지 않아요. 이가 썩으면 아프고, 음식을 먹기도 힘들어요.
+
+그래서 밥을 먹은 뒤에는 꼭 이를 닦아야 해요. 먼저 칫솔에 치약을 조금 묻혀요. 그다음 이를 위아래로 구석구석 닦아요. 혀도 살살 닦아 주면 좋아요. 이는 3분쯤 꼼꼼하게 닦는 것이 좋아요. 다 닦은 뒤에는 물로 입안을 깨끗이 헹궈요.
+
+달콤한 사탕이나 과자를 많이 먹으면 이가 썩기 쉬워요. 단 음식은 조금만 먹도록 해요. 일 년에 두 번쯤 치과에 가서 이를 검사받는 것도 좋아요.','이 글을 읽고 한 생각으로 알맞은 것은 무엇인가요?',NULL,'["혀는 절대로 닦으면 안 된다.","단 음식을 많이 먹을수록 이가 튼튼해진다.","이는 하루에 한 번만 닦으면 된다.","사탕을 먹은 뒤에는 이를 잘 닦아야겠다."]',3,'글에서 단 음식을 많이 먹으면 이가 썩기 쉽고, 먹은 뒤에는 꼭 이를 닦아야 한다고 했으므로 알맞은 생각이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-d4afb5afff66','KR_KOR','nonfiction','mcq',1,'제기차기는 옛날부터 우리 조상들이 즐겨 하던 놀이예요. 주로 추운 겨울에 밖에서 많이 했어요. 설날 같은 명절에는 동네 아이들이 모여 함께 즐겼어요.
+
+옛날에는 가운데에 구멍이 뚫린 옛날 돈을 얇은 종이로 싸서 제기를 만들었어요. 종이 끝을 가늘게 찢으면 꼬리가 달린 모양이 돼요. 요즘에는 비닐로 만든 제기도 있어요.
+
+제기차기는 제기를 발로 차서 땅에 떨어지지 않게 하는 놀이예요. 한 발로 제기를 계속 차올려요. 떨어뜨리지 않고 가장 많이 찬 사람이 이겨요. 여럿이 둥글게 서서 제기를 서로 주고받으며 차기도 해요. 익숙해지면 양발을 번갈아 가며 차기도 해요.
+
+제기를 차다 보면 몸에 땀이 나고 몸이 따뜻해져요. 그래서 추운 겨울에 하기 좋은 놀이였어요. 제기차기를 꾸준히 하면 다리 힘도 길러져요.','제기차기에서 이기는 사람은 누구인가요?',NULL,'["제기를 가장 높이 던진 사람","제기를 가장 빨리 만든 사람","제기를 가장 멀리 찬 사람","제기를 떨어뜨리지 않고 가장 많이 찬 사람"]',3,'셋째 문단에서 ''떨어뜨리지 않고 가장 많이 찬 사람이 이겨요.''라고 했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-26a9e151037f','KR_KOR','nonfiction','mcq',1,'제기차기는 옛날부터 우리 조상들이 즐겨 하던 놀이예요. 주로 추운 겨울에 밖에서 많이 했어요. 설날 같은 명절에는 동네 아이들이 모여 함께 즐겼어요.
+
+옛날에는 가운데에 구멍이 뚫린 옛날 돈을 얇은 종이로 싸서 제기를 만들었어요. 종이 끝을 가늘게 찢으면 꼬리가 달린 모양이 돼요. 요즘에는 비닐로 만든 제기도 있어요.
+
+제기차기는 제기를 발로 차서 땅에 떨어지지 않게 하는 놀이예요. 한 발로 제기를 계속 차올려요. 떨어뜨리지 않고 가장 많이 찬 사람이 이겨요. 여럿이 둥글게 서서 제기를 서로 주고받으며 차기도 해요. 익숙해지면 양발을 번갈아 가며 차기도 해요.
+
+제기를 차다 보면 몸에 땀이 나고 몸이 따뜻해져요. 그래서 추운 겨울에 하기 좋은 놀이였어요. 제기차기를 꾸준히 하면 다리 힘도 길러져요.','옛날 사람들이 제기차기를 겨울에 많이 한 까닭은 무엇인가요?',NULL,'["제기를 차면 땀이 나고 몸이 따뜻해져서","겨울에만 종이가 있어서","여름에는 제기가 녹아 버려서","눈 위에서만 제기를 찰 수 있어서"]',0,'넷째 문단에서 제기를 차면 땀이 나고 몸이 따뜻해져서 추운 겨울에 하기 좋은 놀이였다고 했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-11f958882011','KR_KOR','nonfiction','mcq',1,'제기차기는 옛날부터 우리 조상들이 즐겨 하던 놀이예요. 주로 추운 겨울에 밖에서 많이 했어요. 설날 같은 명절에는 동네 아이들이 모여 함께 즐겼어요.
+
+옛날에는 가운데에 구멍이 뚫린 옛날 돈을 얇은 종이로 싸서 제기를 만들었어요. 종이 끝을 가늘게 찢으면 꼬리가 달린 모양이 돼요. 요즘에는 비닐로 만든 제기도 있어요.
+
+제기차기는 제기를 발로 차서 땅에 떨어지지 않게 하는 놀이예요. 한 발로 제기를 계속 차올려요. 떨어뜨리지 않고 가장 많이 찬 사람이 이겨요. 여럿이 둥글게 서서 제기를 서로 주고받으며 차기도 해요. 익숙해지면 양발을 번갈아 가며 차기도 해요.
+
+제기를 차다 보면 몸에 땀이 나고 몸이 따뜻해져요. 그래서 추운 겨울에 하기 좋은 놀이였어요. 제기차기를 꾸준히 하면 다리 힘도 길러져요.','글의 내용과 같은 것은 무엇인가요?',NULL,'["제기차기는 혼자서만 할 수 있다.","제기차기는 요즘 새로 생긴 놀이다.","요즘에는 비닐로 만든 제기도 있다.","제기는 손으로 던지며 논다."]',2,'둘째 문단에서 ''요즘에는 비닐로 만든 제기도 있어요.''라고 했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-d92e818b5033','KR_KOR','nonfiction','mcq',1,'제기차기는 옛날부터 우리 조상들이 즐겨 하던 놀이예요. 주로 추운 겨울에 밖에서 많이 했어요. 설날 같은 명절에는 동네 아이들이 모여 함께 즐겼어요.
+
+옛날에는 가운데에 구멍이 뚫린 옛날 돈을 얇은 종이로 싸서 제기를 만들었어요. 종이 끝을 가늘게 찢으면 꼬리가 달린 모양이 돼요. 요즘에는 비닐로 만든 제기도 있어요.
+
+제기차기는 제기를 발로 차서 땅에 떨어지지 않게 하는 놀이예요. 한 발로 제기를 계속 차올려요. 떨어뜨리지 않고 가장 많이 찬 사람이 이겨요. 여럿이 둥글게 서서 제기를 서로 주고받으며 차기도 해요. 익숙해지면 양발을 번갈아 가며 차기도 해요.
+
+제기를 차다 보면 몸에 땀이 나고 몸이 따뜻해져요. 그래서 추운 겨울에 하기 좋은 놀이였어요. 제기차기를 꾸준히 하면 다리 힘도 길러져요.','제기를 만드는 방법은 몇째 문단에 나오나요?',NULL,'["둘째 문단","넷째 문단","셋째 문단","첫째 문단"]',0,'둘째 문단에 옛날 돈을 종이로 싸고 끝을 가늘게 찢어 제기를 만드는 방법이 나와요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-41faf4590873','KR_KOR','literature','mcq',1,'비가 주룩주룩 내리는 날이었어요. 아기 다람쥐 토리는 노란 우산을 쓰고 할머니 댁에 가고 있었어요.
+
+길가 큰 나무 아래에서 아기 토끼 하양이가 오들오들 떨고 있었어요.
+"하양아, 왜 여기 있어?"
+"우산이 없어서 집에 못 가고 있어."
+하양이의 귀가 축 늘어져 있었어요.
+
+토리는 잠깐 생각했어요. 우산이 작아서 둘이 쓰면 어깨가 젖을 것 같았어요. 하지만 토리는 우산을 하양이 쪽으로 내밀었어요.
+"같이 쓰고 가자. 너희 집이 먼저 나오잖아."
+
+둘은 꼭 붙어서 걸었어요. 토리의 한쪽 어깨가 흠뻑 젖었지만, 토리는 싱글벙글 웃었어요. 하양이도 깡충깡충 뛰며 말했어요.
+"토리야, 고마워! 다음에는 내가 너를 도와줄게."
+토리는 하양이를 집 앞까지 데려다주고 할머니 댁으로 향했어요. 발걸음이 무척 가벼웠어요.','하양이가 큰 나무 아래에 있었던 까닭은 무엇인가요?',NULL,'["비 구경을 하려고","우산이 없어서 집에 못 가서","토리를 기다리려고","나무 열매를 따려고"]',1,'하양이가 "우산이 없어서 집에 못 가고 있어."라고 말했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-cf9d75649093','KR_KOR','literature','mcq',1,'비가 주룩주룩 내리는 날이었어요. 아기 다람쥐 토리는 노란 우산을 쓰고 할머니 댁에 가고 있었어요.
+
+길가 큰 나무 아래에서 아기 토끼 하양이가 오들오들 떨고 있었어요.
+"하양아, 왜 여기 있어?"
+"우산이 없어서 집에 못 가고 있어."
+하양이의 귀가 축 늘어져 있었어요.
+
+토리는 잠깐 생각했어요. 우산이 작아서 둘이 쓰면 어깨가 젖을 것 같았어요. 하지만 토리는 우산을 하양이 쪽으로 내밀었어요.
+"같이 쓰고 가자. 너희 집이 먼저 나오잖아."
+
+둘은 꼭 붙어서 걸었어요. 토리의 한쪽 어깨가 흠뻑 젖었지만, 토리는 싱글벙글 웃었어요. 하양이도 깡충깡충 뛰며 말했어요.
+"토리야, 고마워! 다음에는 내가 너를 도와줄게."
+토리는 하양이를 집 앞까지 데려다주고 할머니 댁으로 향했어요. 발걸음이 무척 가벼웠어요.','토리를 만났을 때 하양이의 마음으로 알맞은 것은 무엇인가요?',NULL,'["자랑스럽다.","신나고 즐겁다.","졸리고 심심하다.","춥고 속상하다."]',3,'하양이는 오들오들 떨고 있었고 귀가 축 늘어져 있었으므로 춥고 속상한 마음이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-2df57cd876e7','KR_KOR','literature','mcq',1,'비가 주룩주룩 내리는 날이었어요. 아기 다람쥐 토리는 노란 우산을 쓰고 할머니 댁에 가고 있었어요.
+
+길가 큰 나무 아래에서 아기 토끼 하양이가 오들오들 떨고 있었어요.
+"하양아, 왜 여기 있어?"
+"우산이 없어서 집에 못 가고 있어."
+하양이의 귀가 축 늘어져 있었어요.
+
+토리는 잠깐 생각했어요. 우산이 작아서 둘이 쓰면 어깨가 젖을 것 같았어요. 하지만 토리는 우산을 하양이 쪽으로 내밀었어요.
+"같이 쓰고 가자. 너희 집이 먼저 나오잖아."
+
+둘은 꼭 붙어서 걸었어요. 토리의 한쪽 어깨가 흠뻑 젖었지만, 토리는 싱글벙글 웃었어요. 하양이도 깡충깡충 뛰며 말했어요.
+"토리야, 고마워! 다음에는 내가 너를 도와줄게."
+토리는 하양이를 집 앞까지 데려다주고 할머니 댁으로 향했어요. 발걸음이 무척 가벼웠어요.','토리가 기분이 좋아서 웃는 모습을 흉내 낸 말은 무엇인가요?',NULL,'["오들오들","주룩주룩","깡충깡충","싱글벙글"]',3,'''토리는 싱글벙글 웃었어요.''에서 ''싱글벙글''이 웃는 모습을 흉내 낸 말이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-ea7d7a0a23e0','KR_KOR','literature','mcq',1,'비가 주룩주룩 내리는 날이었어요. 아기 다람쥐 토리는 노란 우산을 쓰고 할머니 댁에 가고 있었어요.
+
+길가 큰 나무 아래에서 아기 토끼 하양이가 오들오들 떨고 있었어요.
+"하양아, 왜 여기 있어?"
+"우산이 없어서 집에 못 가고 있어."
+하양이의 귀가 축 늘어져 있었어요.
+
+토리는 잠깐 생각했어요. 우산이 작아서 둘이 쓰면 어깨가 젖을 것 같았어요. 하지만 토리는 우산을 하양이 쪽으로 내밀었어요.
+"같이 쓰고 가자. 너희 집이 먼저 나오잖아."
+
+둘은 꼭 붙어서 걸었어요. 토리의 한쪽 어깨가 흠뻑 젖었지만, 토리는 싱글벙글 웃었어요. 하양이도 깡충깡충 뛰며 말했어요.
+"토리야, 고마워! 다음에는 내가 너를 도와줄게."
+토리는 하양이를 집 앞까지 데려다주고 할머니 댁으로 향했어요. 발걸음이 무척 가벼웠어요.','이 이야기에서 배울 수 있는 것은 무엇인가요?',NULL,'["할머니 댁에 자주 가자.","비 오는 날에는 밖에 나가지 말자.","어려움에 처한 친구를 도와주자.","우산은 혼자서만 쓰자."]',2,'토리는 자기 어깨가 젖는데도 우산이 없는 하양이와 우산을 함께 썼어요. 어려운 친구를 돕는 마음을 배울 수 있어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-149921916a49','KR_KOR','literature','mcq',1,'연못가에 아기 오리 다섯 마리가 살았어요. 그중 막내 퐁퐁이는 물이 무서웠어요.
+
+어느 날 아침, 엄마 오리가 말했어요.
+"오늘은 다 같이 헤엄치는 연습을 하자."
+형과 누나 오리들은 차례차례 물에 첨벙 뛰어들었어요. 하지만 퐁퐁이는 연못가에 서서 발만 동동 굴렀어요. 물이 너무 깊어 보였거든요.
+
+엄마 오리가 퐁퐁이 곁으로 와서 다정하게 말했어요.
+"엄마가 바로 옆에 있을게. 발을 천천히 저어 보렴."
+퐁퐁이는 눈을 꼭 감고 물에 살며시 들어갔어요. 엄마 말대로 발을 저었더니 몸이 둥둥 떴어요.
+
+"와, 내가 물 위에 떠 있어!"
+퐁퐁이는 눈을 동그랗게 뜨고 연못을 한 바퀴 빙 돌았어요. 이제 퐁퐁이는 물이 하나도 무섭지 않았어요. 형과 누나 오리들이 꽥꽥 소리치며 퐁퐁이를 반겨 주었어요.
+"엄마, 내일도 또 헤엄칠래요!"','처음에 퐁퐁이가 연못가에 서 있기만 한 까닭은 무엇인가요?',NULL,'["엄마를 찾고 있어서","배가 고파서","너무 졸려서","물이 무서워서"]',3,'첫째 문단에서 ''막내 퐁퐁이는 물이 무서웠어요.''라고 했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-278d10846e8d','KR_KOR','literature','mcq',1,'연못가에 아기 오리 다섯 마리가 살았어요. 그중 막내 퐁퐁이는 물이 무서웠어요.
+
+어느 날 아침, 엄마 오리가 말했어요.
+"오늘은 다 같이 헤엄치는 연습을 하자."
+형과 누나 오리들은 차례차례 물에 첨벙 뛰어들었어요. 하지만 퐁퐁이는 연못가에 서서 발만 동동 굴렀어요. 물이 너무 깊어 보였거든요.
+
+엄마 오리가 퐁퐁이 곁으로 와서 다정하게 말했어요.
+"엄마가 바로 옆에 있을게. 발을 천천히 저어 보렴."
+퐁퐁이는 눈을 꼭 감고 물에 살며시 들어갔어요. 엄마 말대로 발을 저었더니 몸이 둥둥 떴어요.
+
+"와, 내가 물 위에 떠 있어!"
+퐁퐁이는 눈을 동그랗게 뜨고 연못을 한 바퀴 빙 돌았어요. 이제 퐁퐁이는 물이 하나도 무섭지 않았어요. 형과 누나 오리들이 꽥꽥 소리치며 퐁퐁이를 반겨 주었어요.
+"엄마, 내일도 또 헤엄칠래요!"','일이 일어난 차례로 알맞은 것은 무엇인가요?',NULL,'["퐁퐁이가 연못을 한 바퀴 돎 → 퐁퐁이가 물에 들어감 → 형과 누나가 물에 뛰어듦","형과 누나가 물에 뛰어듦 → 퐁퐁이가 물에 들어감 → 퐁퐁이가 연못을 한 바퀴 돎","형과 누나가 물에 뛰어듦 → 퐁퐁이가 연못을 한 바퀴 돎 → 퐁퐁이가 물에 들어감","퐁퐁이가 물에 들어감 → 형과 누나가 물에 뛰어듦 → 퐁퐁이가 연못을 한 바퀴 돎"]',1,'형과 누나가 먼저 물에 뛰어들고, 엄마의 말을 듣고 퐁퐁이가 물에 들어간 뒤, 마지막에 연못을 한 바퀴 돌았어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-7c707d61567d','KR_KOR','literature','mcq',1,'연못가에 아기 오리 다섯 마리가 살았어요. 그중 막내 퐁퐁이는 물이 무서웠어요.
+
+어느 날 아침, 엄마 오리가 말했어요.
+"오늘은 다 같이 헤엄치는 연습을 하자."
+형과 누나 오리들은 차례차례 물에 첨벙 뛰어들었어요. 하지만 퐁퐁이는 연못가에 서서 발만 동동 굴렀어요. 물이 너무 깊어 보였거든요.
+
+엄마 오리가 퐁퐁이 곁으로 와서 다정하게 말했어요.
+"엄마가 바로 옆에 있을게. 발을 천천히 저어 보렴."
+퐁퐁이는 눈을 꼭 감고 물에 살며시 들어갔어요. 엄마 말대로 발을 저었더니 몸이 둥둥 떴어요.
+
+"와, 내가 물 위에 떠 있어!"
+퐁퐁이는 눈을 동그랗게 뜨고 연못을 한 바퀴 빙 돌았어요. 이제 퐁퐁이는 물이 하나도 무섭지 않았어요. 형과 누나 오리들이 꽥꽥 소리치며 퐁퐁이를 반겨 주었어요.
+"엄마, 내일도 또 헤엄칠래요!"','이야기의 마지막 장면에서 퐁퐁이의 마음으로 알맞은 것은 무엇인가요?',NULL,'["기쁘고 뿌듯하다.","심심하고 지루하다.","미안하고 부끄럽다.","무섭고 떨린다."]',0,'퐁퐁이는 "와, 내가 물 위에 떠 있어!"라고 외치며 연못을 돌았고, 이제 물이 무섭지 않았으니 기쁘고 뿌듯한 마음이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-739598b294e5','KR_KOR','literature','mcq',1,'연못가에 아기 오리 다섯 마리가 살았어요. 그중 막내 퐁퐁이는 물이 무서웠어요.
+
+어느 날 아침, 엄마 오리가 말했어요.
+"오늘은 다 같이 헤엄치는 연습을 하자."
+형과 누나 오리들은 차례차례 물에 첨벙 뛰어들었어요. 하지만 퐁퐁이는 연못가에 서서 발만 동동 굴렀어요. 물이 너무 깊어 보였거든요.
+
+엄마 오리가 퐁퐁이 곁으로 와서 다정하게 말했어요.
+"엄마가 바로 옆에 있을게. 발을 천천히 저어 보렴."
+퐁퐁이는 눈을 꼭 감고 물에 살며시 들어갔어요. 엄마 말대로 발을 저었더니 몸이 둥둥 떴어요.
+
+"와, 내가 물 위에 떠 있어!"
+퐁퐁이는 눈을 동그랗게 뜨고 연못을 한 바퀴 빙 돌았어요. 이제 퐁퐁이는 물이 하나도 무섭지 않았어요. 형과 누나 오리들이 꽥꽥 소리치며 퐁퐁이를 반겨 주었어요.
+"엄마, 내일도 또 헤엄칠래요!"','엄마 오리가 퐁퐁이에게 한 일은 무엇인가요?',NULL,'["곁에 있겠다며 발을 천천히 저어 보라고 했다.","형과 누나를 먼저 집에 보냈다.","혼자 연습하라고 하고 집으로 갔다.","퐁퐁이를 등에 태우고 연못을 돌았다."]',0,'셋째 문단에서 엄마 오리는 "엄마가 바로 옆에 있을게. 발을 천천히 저어 보렴."이라고 다정하게 말했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-260ebcc760fb','KR_KOR','literature','mcq',1,'눈 오는 날
+
+하늘에서 솔솔
+하얀 가루 내려와요.
+
+지붕 위에 소복소복
+장독 위에 소복소복
+하얀 모자 썼어요.
+
+나도 나도
+눈사람 만들래요.
+데굴데굴 굴리면
+동글동글 커져요.
+
+눈사람아, 안녕!
+코끝이 빨개져도
+나는 참 좋아요.','이 시에서 두 번 되풀이되는 흉내 내는 말은 무엇인가요?',NULL,'["데굴데굴","솔솔","소복소복","동글동글"]',2,'''지붕 위에 소복소복 / 장독 위에 소복소복''에서 ''소복소복''이 두 번 나와요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-31b2a9960b92','KR_KOR','literature','mcq',1,'눈 오는 날
+
+하늘에서 솔솔
+하얀 가루 내려와요.
+
+지붕 위에 소복소복
+장독 위에 소복소복
+하얀 모자 썼어요.
+
+나도 나도
+눈사람 만들래요.
+데굴데굴 굴리면
+동글동글 커져요.
+
+눈사람아, 안녕!
+코끝이 빨개져도
+나는 참 좋아요.','''하얀 모자 썼어요''는 어떤 모습을 나타낸 말인가요?',NULL,'["사람이 하얀 모자를 쓴 모습","하늘에 구름이 낀 모습","하얀 꽃이 활짝 핀 모습","지붕과 장독 위에 눈이 쌓인 모습"]',3,'지붕과 장독 위에 눈이 소복소복 쌓인 모습을 하얀 모자를 쓴 것처럼 나타냈어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-5022bc41a797','KR_KOR','literature','mcq',1,'눈 오는 날
+
+하늘에서 솔솔
+하얀 가루 내려와요.
+
+지붕 위에 소복소복
+장독 위에 소복소복
+하얀 모자 썼어요.
+
+나도 나도
+눈사람 만들래요.
+데굴데굴 굴리면
+동글동글 커져요.
+
+눈사람아, 안녕!
+코끝이 빨개져도
+나는 참 좋아요.','이 시에서 말하는 이 ''나''가 하고 싶은 일은 무엇인가요?',NULL,'["장독 닦기","눈사람 만들기","방에서 낮잠 자기","썰매 타기"]',1,'셋째 연에서 ''나도 나도 / 눈사람 만들래요.''라고 했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-115edce5d353','KR_KOR','literature','mcq',1,'눈 오는 날
+
+하늘에서 솔솔
+하얀 가루 내려와요.
+
+지붕 위에 소복소복
+장독 위에 소복소복
+하얀 모자 썼어요.
+
+나도 나도
+눈사람 만들래요.
+데굴데굴 굴리면
+동글동글 커져요.
+
+눈사람아, 안녕!
+코끝이 빨개져도
+나는 참 좋아요.','''데굴데굴''은 어떤 모습을 흉내 낸 말인가요?',NULL,'["눈이 지붕에 쌓이는 모습","눈덩이가 굴러가는 모습","코끝이 빨개지는 모습","눈이 하늘에서 내리는 모습"]',1,'''데굴데굴 굴리면 / 동글동글 커져요.''는 눈사람을 만들려고 눈덩이를 굴리는 모습이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-1caf0972f322','KR_KOR','literature','mcq',1,'11월 3일 토요일, 날씨: 맑음
+
+오늘 아빠와 함께 동네 공원에 갔다. 나무에 달린 나뭇잎이 빨갛고 노랗게 물들어 있었다. 바닥에는 낙엽이 푹신하게 쌓여 있어서 밟을 때마다 바스락바스락 소리가 났다.
+
+바람이 불자 나뭇잎이 팔랑팔랑 떨어졌다. 나는 떨어지는 나뭇잎을 잡으려고 이리저리 뛰어다녔다. 숨이 차서 헉헉거렸지만 재미있었다. 아빠도 나를 따라 뛰다가 웃음을 터뜨리셨다. 처음에는 자꾸 놓쳤지만, 마지막에 빨간 단풍잎 하나를 잡았다.
+
+아빠가 "떨어지는 나뭇잎을 잡으면 소원이 이루어진대." 하고 말씀하셨다. 나는 동생의 감기가 빨리 낫게 해 달라고 소원을 빌었다.
+
+집에 와서 단풍잎을 동생에게 주었다. 동생이 활짝 웃어서 나도 기분이 좋았다. 다음 주에도 공원에 또 가고 싶다.','이 일기에 쓰인 일은 어느 계절에 있었던 일인가요?',NULL,'["가을","여름","겨울","봄"]',0,'나뭇잎이 빨갛고 노랗게 물들고 단풍잎이 떨어지는 때는 가을이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-2749796449ca','KR_KOR','literature','mcq',1,'11월 3일 토요일, 날씨: 맑음
+
+오늘 아빠와 함께 동네 공원에 갔다. 나무에 달린 나뭇잎이 빨갛고 노랗게 물들어 있었다. 바닥에는 낙엽이 푹신하게 쌓여 있어서 밟을 때마다 바스락바스락 소리가 났다.
+
+바람이 불자 나뭇잎이 팔랑팔랑 떨어졌다. 나는 떨어지는 나뭇잎을 잡으려고 이리저리 뛰어다녔다. 숨이 차서 헉헉거렸지만 재미있었다. 아빠도 나를 따라 뛰다가 웃음을 터뜨리셨다. 처음에는 자꾸 놓쳤지만, 마지막에 빨간 단풍잎 하나를 잡았다.
+
+아빠가 "떨어지는 나뭇잎을 잡으면 소원이 이루어진대." 하고 말씀하셨다. 나는 동생의 감기가 빨리 낫게 해 달라고 소원을 빌었다.
+
+집에 와서 단풍잎을 동생에게 주었다. 동생이 활짝 웃어서 나도 기분이 좋았다. 다음 주에도 공원에 또 가고 싶다.','글쓴이가 빈 소원은 무엇인가요?',NULL,'["새 장난감을 갖는 것","나뭇잎을 많이 잡는 것","공원에 매일 가는 것","동생의 감기가 빨리 낫는 것"]',3,'''나는 동생의 감기가 빨리 낫게 해 달라고 소원을 빌었다.''라고 썼어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-3456f561535b','KR_KOR','literature','mcq',1,'11월 3일 토요일, 날씨: 맑음
+
+오늘 아빠와 함께 동네 공원에 갔다. 나무에 달린 나뭇잎이 빨갛고 노랗게 물들어 있었다. 바닥에는 낙엽이 푹신하게 쌓여 있어서 밟을 때마다 바스락바스락 소리가 났다.
+
+바람이 불자 나뭇잎이 팔랑팔랑 떨어졌다. 나는 떨어지는 나뭇잎을 잡으려고 이리저리 뛰어다녔다. 숨이 차서 헉헉거렸지만 재미있었다. 아빠도 나를 따라 뛰다가 웃음을 터뜨리셨다. 처음에는 자꾸 놓쳤지만, 마지막에 빨간 단풍잎 하나를 잡았다.
+
+아빠가 "떨어지는 나뭇잎을 잡으면 소원이 이루어진대." 하고 말씀하셨다. 나는 동생의 감기가 빨리 낫게 해 달라고 소원을 빌었다.
+
+집에 와서 단풍잎을 동생에게 주었다. 동생이 활짝 웃어서 나도 기분이 좋았다. 다음 주에도 공원에 또 가고 싶다.','글쓴이가 한 일이 아닌 것은 무엇인가요?',NULL,'["동생과 함께 공원에 갔다.","떨어지는 나뭇잎을 잡으려고 뛰었다.","아빠와 공원에 갔다.","단풍잎을 동생에게 주었다."]',0,'글쓴이는 아빠와 공원에 갔고, 동생은 감기에 걸려 함께 가지 않았어요. 단풍잎은 집에 와서 동생에게 주었어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-cc5e74ce694c','KR_KOR','literature','mcq',1,'11월 3일 토요일, 날씨: 맑음
+
+오늘 아빠와 함께 동네 공원에 갔다. 나무에 달린 나뭇잎이 빨갛고 노랗게 물들어 있었다. 바닥에는 낙엽이 푹신하게 쌓여 있어서 밟을 때마다 바스락바스락 소리가 났다.
+
+바람이 불자 나뭇잎이 팔랑팔랑 떨어졌다. 나는 떨어지는 나뭇잎을 잡으려고 이리저리 뛰어다녔다. 숨이 차서 헉헉거렸지만 재미있었다. 아빠도 나를 따라 뛰다가 웃음을 터뜨리셨다. 처음에는 자꾸 놓쳤지만, 마지막에 빨간 단풍잎 하나를 잡았다.
+
+아빠가 "떨어지는 나뭇잎을 잡으면 소원이 이루어진대." 하고 말씀하셨다. 나는 동생의 감기가 빨리 낫게 해 달라고 소원을 빌었다.
+
+집에 와서 단풍잎을 동생에게 주었다. 동생이 활짝 웃어서 나도 기분이 좋았다. 다음 주에도 공원에 또 가고 싶다.','일기의 마지막 부분에서 글쓴이의 마음은 어떠한가요?',NULL,'["무섭다.","화가 난다.","슬프다.","기쁘다."]',3,'''동생이 활짝 웃어서 나도 기분이 좋았다.''라고 했으므로 기쁜 마음이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-660145ebe2f4','KR_KOR','vocab','mcq',1,NULL,'''크다''와 뜻이 반대인 말은 무엇인가요?',NULL,'["길다","높다","작다","많다"]',2,'''크다''의 반대말은 ''작다''예요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-acf31033afdb','KR_KOR','vocab','mcq',1,NULL,'''기쁘다''와 뜻이 비슷한 말은 무엇인가요?',NULL,'["즐겁다","아프다","무섭다","슬프다"]',0,'''기쁘다''와 ''즐겁다''는 모두 마음이 좋을 때 쓰는 비슷한 말이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-996b706f5950','KR_KOR','vocab','mcq',1,NULL,'바르게 쓴 것은 무엇인가요?',NULL,'["꼬치 피었어요.","꼳이 피었어요.","꼿이 피었어요.","꽃이 피었어요."]',3,'''꽃''은 받침이 ''ㅊ''이라서 ''꽃이''라고 써요. 소리는 [꼬치]로 나지만 글자는 ''꽃이''로 써요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-e31243c3a1dd','KR_KOR','vocab','mcq',1,NULL,'바르게 쓴 것은 무엇인가요?',NULL,'["밥을 머거요.","밥을 먹어요.","밥을 먹거요.","밥울 먹어요."]',1,'''먹다''는 받침 ''ㄱ''이 있어서 ''먹어요''라고 써요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-cdd13f700bd2','KR_KOR','vocab','mcq',1,NULL,'몸에 입는 것을 바르게 쓴 낱말은 무엇인가요?',NULL,'["옼","옺","옫","옷"]',3,'몸에 입는 것은 받침 ''ㅅ''을 써서 ''옷''이라고 써요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-0e850722c3c2','KR_KOR','vocab','mcq',1,NULL,'띄어쓰기를 바르게 한 것은 무엇인가요?',NULL,'["나는유치원에 가요.","나 는 유치원 에 가요.","나는 유치원에 가요.","나는 유치원에가요."]',2,'''나는'', ''유치원에'', ''가요''처럼 낱말 덩어리 사이를 띄어 써요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-42963858ad03','KR_KOR','vocab','mcq',1,NULL,'할머니께 드리는 말로 알맞은 것은 무엇인가요?',NULL,'["할머니, 진지 드세요.","할머니, 밥 먹자.","할머니, 밥 먹어라.","할머니, 밥 먹어."]',0,'웃어른께는 ''밥'' 대신 ''진지'', ''먹어'' 대신 ''드세요''라고 높여 말해요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-a15534eab899','KR_KOR','vocab','mcq',1,NULL,'''너는 어디에 가니( )''의 ( )에 들어갈 문장 부호는 무엇인가요?',NULL,'["물음표(?)","마침표(.)","쉼표(,)","느낌표(!)"]',0,'''어디에 가니''는 묻는 문장이라서 끝에 물음표를 써요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-4139eca8288f','KR_KOR','vocab','mcq',1,NULL,'''강아지가 ( ) 달려가요.''의 ( )에 들어갈 말로 알맞은 것은 무엇인가요?',NULL,'["빨간","작은","빨리","예쁜"]',2,'''달려가요''를 꾸며 줄 수 있는 말은 ''빨리''예요. ''빨간'', ''작은'', ''예쁜''은 ''강아지''처럼 이름을 나타내는 말 앞에 써요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-188c91214877','KR_KOR','vocab','mcq',1,NULL,'''배''가 먹는 과일이라는 뜻으로 쓰인 문장은 무엇인가요?',NULL,'["배를 타고 섬에 가요.","배가 아파서 누웠어요.","배가 고파요.","달콤한 배를 깎아 먹었어요."]',3,'''달콤한 배를 깎아 먹었어요.''의 ''배''는 과일이에요. 다른 문장의 ''배''는 몸의 배나 물에 뜨는 배예요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-d62b6c026705','KR_KOR','vocab','mcq',1,NULL,'''문을 열다''에서 ''열다''와 뜻이 반대인 말은 무엇인가요?',NULL,'["넣다","놓다","닫다","걷다"]',2,'문을 ''열다''의 반대말은 문을 ''닫다''예요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-7c3938289a25','KR_KOR','vocab','mcq',1,NULL,'다른 낱말들과 같은 무리가 아닌 것은 무엇인가요?',NULL,'["딸기","의자","사과","포도"]',1,'사과, 포도, 딸기는 과일이고, 의자는 과일이 아니에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-20cb1e3ee010','KR_KOR','vocab','mcq',1,NULL,'강아지가 짖는 소리를 흉내 낸 말은 무엇인가요?',NULL,'["야옹","꿀꿀","멍멍","음매"]',2,'강아지는 ''멍멍'' 하고 짖어요. ''야옹''은 고양이, ''꿀꿀''은 돼지, ''음매''는 소의 소리예요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-c65305256cfc','KR_KOR','vocab','mcq',1,NULL,'''예쁘다''와 뜻이 비슷한 말은 무엇인가요?',NULL,'["아름답다","시끄럽다","더럽다","무겁다"]',0,'''예쁘다''와 ''아름답다''는 보기에 좋다는 비슷한 뜻이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-214f15ff7efa','KR_KOR','vocab','mcq',1,NULL,'바르게 쓴 것은 무엇인가요?',NULL,'["연필이 이써요.","연필이 잇어요.","연필이 있어요.","연피리 있어요."]',2,'''있다''는 받침 ''ㅆ''을 써서 ''있어요''라고 쓰고, ''연필''은 받침 ''ㄹ''을 살려 ''연필이''라고 써요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-a318f87285a6','KR_KOR','vocab','mcq',1,NULL,'''아빠가 집에 왔어요.''를 높이는 말로 바르게 고친 것은 무엇인가요?',NULL,'["아빠가 집에 왔니?","아빠가 집에 왔다.","아빠가 집에 와.","아빠가 집에 오셨어요."]',3,'''왔어요''에 높이는 말 ''-시-''를 넣으면 ''오셨어요''가 돼요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-5b43702e1766','KR_KOR','vocab','mcq',1,NULL,'''와, 정말 멋지다( )''의 ( )에 들어갈 문장 부호는 무엇인가요?',NULL,'["물음표(?)","쉼표(,)","느낌표(!)","마침표(.)"]',2,'놀라거나 감탄하는 마음을 나타내는 문장 끝에는 느낌표를 써요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-eb5ec7568428','KR_KOR','vocab','mcq',1,NULL,'''세수''의 뜻으로 알맞은 것은 무엇인가요?',NULL,'["머리를 자르는 것","물로 얼굴을 씻는 것","이를 닦는 것","옷을 갈아입는 것"]',1,'''세수''는 물로 얼굴을 씻는 것을 말해요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-ca87404ca71c','KR_KOR','vocab','mcq',1,NULL,'''강아지 두 ( )''의 ( )에 알맞은 말은 무엇인가요?',NULL,'["그루","켤레","마리","자루"]',2,'동물을 셀 때는 ''마리''를 써요. ''그루''는 나무, ''자루''는 연필, ''켤레''는 신발을 셀 때 써요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-writing-fce6f74a7360','KR_KOR','writing','text',1,'민우는 놀이터에서 그네를 타고 싶었어요. 그런데 친구 지아가 그네를 아주 오래 타고 있었어요. 민우는 기다리다가 점점 속상해졌어요.','내가 민우라면 지아에게 어떻게 말하고 행동할지 2~3문장으로 써 보세요.',NULL,NULL,NULL,'채점 기준 — 내용(2점): 지아에게 차례를 바꾸자고 부드럽게 부탁하거나 함께 순서를 정하는 등 상황에 알맞은 말과 행동을 썼다(밀치기·떼쓰기 등은 0점). 문장(1점): 2~3문장으로 무엇을 할지 분명하게 썼다. 맞춤법(1점): 받침과 띄어쓰기가 대체로 바르다. 예시 답: "지아야, 나도 그네 타고 싶어. 열 번만 타고 바꿔 줄래? 그다음에 같이 미끄럼틀 타자."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-writing-5d9a2c123a5b','KR_KOR','writing','text',1,NULL,'내가 가장 좋아하는 계절은 무엇인가요? 좋아하는 까닭을 넣어 2~3문장으로 써 보세요.',NULL,NULL,NULL,'채점 기준 — 내용(2점): 좋아하는 계절 하나를 밝히고, 그 계절에 할 수 있는 일이나 날씨 등 알맞은 까닭을 썼다. 문장(1점): ''나는 ~을 좋아한다. 왜냐하면 ~ 때문이다.''처럼 2~3문장으로 이어지게 썼다. 맞춤법(1점): 받침과 문장 부호를 대체로 바르게 썼다. 예시 답: "나는 겨울이 좋아요. 왜냐하면 눈사람을 만들 수 있기 때문이에요."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-ca798c8f8d1e','KR_KOR','nonfiction','mcq',2,'식물은 동물처럼 걸어 다닐 수 없어요. 그래서 씨앗을 멀리 보내기 위해 여러 가지 방법을 써요. 씨앗이 엄마 식물 바로 밑에 떨어지면 햇빛과 물을 서로 나누어 써야 해서 잘 자라기 어렵기 때문이에요.
+
+민들레 씨앗에는 하얀 솜털이 달려 있어요. 이 솜털은 작은 낙하산처럼 바람을 타고 둥실둥실 날아가요. 솜털 덕분에 천천히 떨어지기 때문에 오랫동안 하늘을 떠다니며 아주 먼 곳까지 갈 수 있어요. 단풍나무 씨앗은 날개를 달고 있어서 바람이 불면 빙글빙글 돌면서 멀리 떨어져요.
+
+도깨비바늘의 씨앗에는 작은 갈고리 같은 가시가 있어요. 이 씨앗은 지나가는 동물의 털이나 사람의 옷에 착 달라붙어서 다른 곳으로 옮겨 가요. 도깨비라는 이름처럼 씨앗이 몰래 따라붙는 것 같지요? 산딸기처럼 맛있는 열매를 맺는 식물도 동물의 도움을 받아요. 새가 열매를 먹으면 씨앗은 소화되지 않고 똥과 함께 나와요. 새가 멀리 날아가서 똥을 누면 그곳에서 새싹이 돋아나지요.
+
+봉숭아는 씨앗 주머니가 다 익으면 톡 터지면서 씨앗을 멀리 튕겨 내요. 다 익은 씨앗 주머니를 손으로 살짝 건드리기만 해도 톡 하고 터지는 것을 볼 수 있어요. 콩도 꼬투리가 마르면 비틀어지며 터져서 씨앗이 밖으로 튀어 나가요. 바닷가에 사는 야자나무의 열매는 물에 둥둥 떠서 먼 곳까지 흘러가기도 해요.
+
+이처럼 식물은 바람이나 동물, 물을 이용하거나 스스로 힘을 내어 씨앗을 퍼뜨려요.','이 글의 중심 내용으로 알맞은 것은 무엇인가요?',NULL,'["민들레는 봄에 노란 꽃을 피운다.","식물은 여러 가지 방법으로 씨앗을 멀리 퍼뜨린다.","씨앗은 햇빛이 없어도 잘 자란다.","새는 맛있는 열매를 좋아한다."]',1,'마지막 문단에서 식물은 바람, 동물, 물을 이용하거나 스스로 힘을 내어 씨앗을 퍼뜨린다고 정리했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-02f80e9dd696','KR_KOR','nonfiction','mcq',2,'식물은 동물처럼 걸어 다닐 수 없어요. 그래서 씨앗을 멀리 보내기 위해 여러 가지 방법을 써요. 씨앗이 엄마 식물 바로 밑에 떨어지면 햇빛과 물을 서로 나누어 써야 해서 잘 자라기 어렵기 때문이에요.
+
+민들레 씨앗에는 하얀 솜털이 달려 있어요. 이 솜털은 작은 낙하산처럼 바람을 타고 둥실둥실 날아가요. 솜털 덕분에 천천히 떨어지기 때문에 오랫동안 하늘을 떠다니며 아주 먼 곳까지 갈 수 있어요. 단풍나무 씨앗은 날개를 달고 있어서 바람이 불면 빙글빙글 돌면서 멀리 떨어져요.
+
+도깨비바늘의 씨앗에는 작은 갈고리 같은 가시가 있어요. 이 씨앗은 지나가는 동물의 털이나 사람의 옷에 착 달라붙어서 다른 곳으로 옮겨 가요. 도깨비라는 이름처럼 씨앗이 몰래 따라붙는 것 같지요? 산딸기처럼 맛있는 열매를 맺는 식물도 동물의 도움을 받아요. 새가 열매를 먹으면 씨앗은 소화되지 않고 똥과 함께 나와요. 새가 멀리 날아가서 똥을 누면 그곳에서 새싹이 돋아나지요.
+
+봉숭아는 씨앗 주머니가 다 익으면 톡 터지면서 씨앗을 멀리 튕겨 내요. 다 익은 씨앗 주머니를 손으로 살짝 건드리기만 해도 톡 하고 터지는 것을 볼 수 있어요. 콩도 꼬투리가 마르면 비틀어지며 터져서 씨앗이 밖으로 튀어 나가요. 바닷가에 사는 야자나무의 열매는 물에 둥둥 떠서 먼 곳까지 흘러가기도 해요.
+
+이처럼 식물은 바람이나 동물, 물을 이용하거나 스스로 힘을 내어 씨앗을 퍼뜨려요.','식물이 씨앗을 멀리 보내려고 하는 까닭은 무엇인가요?',NULL,'["바람이 씨앗을 좋아해서","엄마 식물 밑에 떨어지면 햇빛과 물을 나누어 써야 해서 잘 자라기 어려우므로","씨앗이 엄마 식물을 싫어해서","씨앗이 너무 무거워서"]',1,'첫째 문단에서 씨앗이 엄마 식물 바로 밑에 떨어지면 햇빛과 물을 나누어 써야 해서 잘 자라기 어렵다고 했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-8a2b57cb6d68','KR_KOR','nonfiction','mcq',2,'식물은 동물처럼 걸어 다닐 수 없어요. 그래서 씨앗을 멀리 보내기 위해 여러 가지 방법을 써요. 씨앗이 엄마 식물 바로 밑에 떨어지면 햇빛과 물을 서로 나누어 써야 해서 잘 자라기 어렵기 때문이에요.
+
+민들레 씨앗에는 하얀 솜털이 달려 있어요. 이 솜털은 작은 낙하산처럼 바람을 타고 둥실둥실 날아가요. 솜털 덕분에 천천히 떨어지기 때문에 오랫동안 하늘을 떠다니며 아주 먼 곳까지 갈 수 있어요. 단풍나무 씨앗은 날개를 달고 있어서 바람이 불면 빙글빙글 돌면서 멀리 떨어져요.
+
+도깨비바늘의 씨앗에는 작은 갈고리 같은 가시가 있어요. 이 씨앗은 지나가는 동물의 털이나 사람의 옷에 착 달라붙어서 다른 곳으로 옮겨 가요. 도깨비라는 이름처럼 씨앗이 몰래 따라붙는 것 같지요? 산딸기처럼 맛있는 열매를 맺는 식물도 동물의 도움을 받아요. 새가 열매를 먹으면 씨앗은 소화되지 않고 똥과 함께 나와요. 새가 멀리 날아가서 똥을 누면 그곳에서 새싹이 돋아나지요.
+
+봉숭아는 씨앗 주머니가 다 익으면 톡 터지면서 씨앗을 멀리 튕겨 내요. 다 익은 씨앗 주머니를 손으로 살짝 건드리기만 해도 톡 하고 터지는 것을 볼 수 있어요. 콩도 꼬투리가 마르면 비틀어지며 터져서 씨앗이 밖으로 튀어 나가요. 바닷가에 사는 야자나무의 열매는 물에 둥둥 떠서 먼 곳까지 흘러가기도 해요.
+
+이처럼 식물은 바람이나 동물, 물을 이용하거나 스스로 힘을 내어 씨앗을 퍼뜨려요.','식물과 씨앗이 퍼지는 방법을 잘못 짝지은 것은 무엇인가요?',NULL,'["도깨비바늘 - 동물의 털에 달라붙는다.","봉숭아 - 씨앗 주머니가 터져 튕겨 나간다.","민들레 - 바람을 타고 날아간다.","산딸기 - 물에 떠서 흘러간다."]',3,'산딸기는 새가 열매를 먹고 똥을 누어 씨앗이 퍼진다고 했어요. 물에 떠서 흘러가는 것은 야자나무 열매예요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-06a401de1c6c','KR_KOR','nonfiction','mcq',2,'식물은 동물처럼 걸어 다닐 수 없어요. 그래서 씨앗을 멀리 보내기 위해 여러 가지 방법을 써요. 씨앗이 엄마 식물 바로 밑에 떨어지면 햇빛과 물을 서로 나누어 써야 해서 잘 자라기 어렵기 때문이에요.
+
+민들레 씨앗에는 하얀 솜털이 달려 있어요. 이 솜털은 작은 낙하산처럼 바람을 타고 둥실둥실 날아가요. 솜털 덕분에 천천히 떨어지기 때문에 오랫동안 하늘을 떠다니며 아주 먼 곳까지 갈 수 있어요. 단풍나무 씨앗은 날개를 달고 있어서 바람이 불면 빙글빙글 돌면서 멀리 떨어져요.
+
+도깨비바늘의 씨앗에는 작은 갈고리 같은 가시가 있어요. 이 씨앗은 지나가는 동물의 털이나 사람의 옷에 착 달라붙어서 다른 곳으로 옮겨 가요. 도깨비라는 이름처럼 씨앗이 몰래 따라붙는 것 같지요? 산딸기처럼 맛있는 열매를 맺는 식물도 동물의 도움을 받아요. 새가 열매를 먹으면 씨앗은 소화되지 않고 똥과 함께 나와요. 새가 멀리 날아가서 똥을 누면 그곳에서 새싹이 돋아나지요.
+
+봉숭아는 씨앗 주머니가 다 익으면 톡 터지면서 씨앗을 멀리 튕겨 내요. 다 익은 씨앗 주머니를 손으로 살짝 건드리기만 해도 톡 하고 터지는 것을 볼 수 있어요. 콩도 꼬투리가 마르면 비틀어지며 터져서 씨앗이 밖으로 튀어 나가요. 바닷가에 사는 야자나무의 열매는 물에 둥둥 떠서 먼 곳까지 흘러가기도 해요.
+
+이처럼 식물은 바람이나 동물, 물을 이용하거나 스스로 힘을 내어 씨앗을 퍼뜨려요.','풀밭에서 놀고 왔더니 바지에 작은 씨앗이 잔뜩 붙어 있었어요. 이 씨앗과 퍼지는 방법이 가장 비슷한 식물은 무엇인가요?',NULL,'["단풍나무","도깨비바늘","민들레","봉숭아"]',1,'셋째 문단에서 도깨비바늘 씨앗은 동물의 털이나 사람의 옷에 달라붙어 옮겨 간다고 했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-d2c438760caa','KR_KOR','nonfiction','mcq',2,'무더운 여름에는 바다나 계곡, 수영장에서 물놀이를 많이 해요. 물놀이는 시원하고 즐겁지만, 안전 규칙을 지키지 않으면 위험할 수 있어요. 해마다 여름이 되면 물놀이 사고 소식이 자주 들려와요. 사고를 막으려면 어떤 규칙을 지켜야 할까요?
+
+첫째, 물에 들어가기 전에는 꼭 준비 운동을 해야 해요. 갑자기 차가운 물에 들어가면 다리에 쥐가 날 수 있어요. 쥐가 나면 근육이 딱딱하게 굳어서 움직이기 어려워요. 팔다리를 쭉쭉 펴서 몸을 충분히 풀어 준 다음, 손과 발부터 천천히 물을 적셔요.
+
+둘째, 구명조끼를 꼭 입어야 해요. 구명조끼는 몸에 꼭 맞는 크기로 골라 끈을 단단히 채워요. 구명조끼를 입으면 몸이 물 위에 뜨기 때문에 깊은 곳에서도 위험을 줄일 수 있어요. 헤엄을 잘 치는 사람도 구명조끼를 입어야 해요.
+
+셋째, 어른과 함께 물놀이를 해야 해요. 어린이끼리만 물에 들어가면 사고가 났을 때 도와줄 사람이 없어요. 또 ''수영 금지''라고 쓰인 곳이나 물이 깊은 곳에는 들어가지 않아요. 물속은 밖에서 볼 때보다 훨씬 깊을 수 있으니 조심해야 해요.
+
+넷째, 물놀이를 오래 하면 입술이 파래지고 몸이 떨릴 수 있어요. 이럴 때는 물 밖으로 나와 수건으로 몸을 감싸고 쉬어야 해요. 몸이 차가워지면 힘이 빠져서 헤엄치기 어려워지기 때문이에요.
+
+안전 규칙을 잘 지키면 여름 물놀이를 더욱 즐겁게 할 수 있어요.','이 글을 쓴 까닭으로 알맞은 것은 무엇인가요?',NULL,'["헤엄을 빨리 치는 방법을 가르치려고","구명조끼를 만드는 방법을 알려 주려고","물놀이할 때 지켜야 할 안전 규칙을 알려 주려고","여름에 가기 좋은 바다를 소개하려고"]',2,'글은 ''첫째''부터 ''넷째''까지 물놀이할 때 지켜야 할 안전 규칙을 차례대로 알려 주고 있어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-2d272e4bcd82','KR_KOR','nonfiction','mcq',2,'무더운 여름에는 바다나 계곡, 수영장에서 물놀이를 많이 해요. 물놀이는 시원하고 즐겁지만, 안전 규칙을 지키지 않으면 위험할 수 있어요. 해마다 여름이 되면 물놀이 사고 소식이 자주 들려와요. 사고를 막으려면 어떤 규칙을 지켜야 할까요?
+
+첫째, 물에 들어가기 전에는 꼭 준비 운동을 해야 해요. 갑자기 차가운 물에 들어가면 다리에 쥐가 날 수 있어요. 쥐가 나면 근육이 딱딱하게 굳어서 움직이기 어려워요. 팔다리를 쭉쭉 펴서 몸을 충분히 풀어 준 다음, 손과 발부터 천천히 물을 적셔요.
+
+둘째, 구명조끼를 꼭 입어야 해요. 구명조끼는 몸에 꼭 맞는 크기로 골라 끈을 단단히 채워요. 구명조끼를 입으면 몸이 물 위에 뜨기 때문에 깊은 곳에서도 위험을 줄일 수 있어요. 헤엄을 잘 치는 사람도 구명조끼를 입어야 해요.
+
+셋째, 어른과 함께 물놀이를 해야 해요. 어린이끼리만 물에 들어가면 사고가 났을 때 도와줄 사람이 없어요. 또 ''수영 금지''라고 쓰인 곳이나 물이 깊은 곳에는 들어가지 않아요. 물속은 밖에서 볼 때보다 훨씬 깊을 수 있으니 조심해야 해요.
+
+넷째, 물놀이를 오래 하면 입술이 파래지고 몸이 떨릴 수 있어요. 이럴 때는 물 밖으로 나와 수건으로 몸을 감싸고 쉬어야 해요. 몸이 차가워지면 힘이 빠져서 헤엄치기 어려워지기 때문이에요.
+
+안전 규칙을 잘 지키면 여름 물놀이를 더욱 즐겁게 할 수 있어요.','이 글에서 ''다리에 쥐가 날 수 있어요''의 ''쥐가 나다''는 무슨 뜻인가요?',NULL,'["갑자기 배가 고파지다.","물속에서 쥐가 나타나다.","근육이 딱딱하게 굳어서 움직이기 어렵게 되다.","몸이 물 위에 둥둥 뜨다."]',2,'바로 뒤 문장에서 ''쥐가 나면 근육이 딱딱하게 굳어서 움직이기 어려워요.''라고 설명했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-ef47a40910a2','KR_KOR','nonfiction','mcq',2,'무더운 여름에는 바다나 계곡, 수영장에서 물놀이를 많이 해요. 물놀이는 시원하고 즐겁지만, 안전 규칙을 지키지 않으면 위험할 수 있어요. 해마다 여름이 되면 물놀이 사고 소식이 자주 들려와요. 사고를 막으려면 어떤 규칙을 지켜야 할까요?
+
+첫째, 물에 들어가기 전에는 꼭 준비 운동을 해야 해요. 갑자기 차가운 물에 들어가면 다리에 쥐가 날 수 있어요. 쥐가 나면 근육이 딱딱하게 굳어서 움직이기 어려워요. 팔다리를 쭉쭉 펴서 몸을 충분히 풀어 준 다음, 손과 발부터 천천히 물을 적셔요.
+
+둘째, 구명조끼를 꼭 입어야 해요. 구명조끼는 몸에 꼭 맞는 크기로 골라 끈을 단단히 채워요. 구명조끼를 입으면 몸이 물 위에 뜨기 때문에 깊은 곳에서도 위험을 줄일 수 있어요. 헤엄을 잘 치는 사람도 구명조끼를 입어야 해요.
+
+셋째, 어른과 함께 물놀이를 해야 해요. 어린이끼리만 물에 들어가면 사고가 났을 때 도와줄 사람이 없어요. 또 ''수영 금지''라고 쓰인 곳이나 물이 깊은 곳에는 들어가지 않아요. 물속은 밖에서 볼 때보다 훨씬 깊을 수 있으니 조심해야 해요.
+
+넷째, 물놀이를 오래 하면 입술이 파래지고 몸이 떨릴 수 있어요. 이럴 때는 물 밖으로 나와 수건으로 몸을 감싸고 쉬어야 해요. 몸이 차가워지면 힘이 빠져서 헤엄치기 어려워지기 때문이에요.
+
+안전 규칙을 잘 지키면 여름 물놀이를 더욱 즐겁게 할 수 있어요.','글의 내용과 다른 것은 무엇인가요?',NULL,'["준비 운동을 한 뒤 물에 들어간다.","어린이끼리만 물에 들어가지 않는다.","헤엄을 잘 치면 구명조끼를 입지 않아도 된다.","입술이 파래지면 물 밖으로 나와 쉰다."]',2,'둘째 규칙에서 ''헤엄을 잘 치는 사람도 구명조끼를 입어야 해요.''라고 했으므로 글과 달라요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-dc98f493991d','KR_KOR','nonfiction','mcq',2,'무더운 여름에는 바다나 계곡, 수영장에서 물놀이를 많이 해요. 물놀이는 시원하고 즐겁지만, 안전 규칙을 지키지 않으면 위험할 수 있어요. 해마다 여름이 되면 물놀이 사고 소식이 자주 들려와요. 사고를 막으려면 어떤 규칙을 지켜야 할까요?
+
+첫째, 물에 들어가기 전에는 꼭 준비 운동을 해야 해요. 갑자기 차가운 물에 들어가면 다리에 쥐가 날 수 있어요. 쥐가 나면 근육이 딱딱하게 굳어서 움직이기 어려워요. 팔다리를 쭉쭉 펴서 몸을 충분히 풀어 준 다음, 손과 발부터 천천히 물을 적셔요.
+
+둘째, 구명조끼를 꼭 입어야 해요. 구명조끼는 몸에 꼭 맞는 크기로 골라 끈을 단단히 채워요. 구명조끼를 입으면 몸이 물 위에 뜨기 때문에 깊은 곳에서도 위험을 줄일 수 있어요. 헤엄을 잘 치는 사람도 구명조끼를 입어야 해요.
+
+셋째, 어른과 함께 물놀이를 해야 해요. 어린이끼리만 물에 들어가면 사고가 났을 때 도와줄 사람이 없어요. 또 ''수영 금지''라고 쓰인 곳이나 물이 깊은 곳에는 들어가지 않아요. 물속은 밖에서 볼 때보다 훨씬 깊을 수 있으니 조심해야 해요.
+
+넷째, 물놀이를 오래 하면 입술이 파래지고 몸이 떨릴 수 있어요. 이럴 때는 물 밖으로 나와 수건으로 몸을 감싸고 쉬어야 해요. 몸이 차가워지면 힘이 빠져서 헤엄치기 어려워지기 때문이에요.
+
+안전 규칙을 잘 지키면 여름 물놀이를 더욱 즐겁게 할 수 있어요.','안전 규칙을 가장 잘 지킨 어린이는 누구인가요?',NULL,'["몸이 떨리는데도 계속 물놀이를 한 지호","준비 운동을 하고 구명조끼를 입은 뒤 엄마와 함께 물에 들어간 하준","친구들끼리만 계곡에 들어간 도윤","''수영 금지'' 팻말 너머로 헤엄쳐 간 서아"]',1,'하준이는 준비 운동, 구명조끼, 어른과 함께하기 규칙을 모두 지켰어요. 나머지 어린이는 셋째나 넷째 규칙을 어겼어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-4e9448250da2','KR_KOR','nonfiction','mcq',2,'편지는 어떻게 먼 곳에 사는 사람에게 갈까요? 편지가 가는 길을 따라가 보아요.
+
+먼저 편지 봉투에 받는 사람의 주소와 이름, 우편번호를 정확하게 써요. 우편번호는 다섯 자리 숫자예요. 보내는 사람의 주소도 함께 써야 편지가 잘못 갔을 때 다시 돌아올 수 있어요. 그다음 봉투에 우표를 붙이고 빨간 우체통에 넣거나 우체국에 가져가요.
+
+우체통에 들어간 편지는 집배원이 모아서 우체국으로 가져가요. 우체국에 모인 편지는 커다란 우편 집중국으로 보내져요. 이곳에서는 기계가 우편번호를 읽고 편지를 지역별로 빠르게 나누어요. 우편번호는 지역마다 정해진 숫자라서, 기계가 이 숫자를 보고 편지가 갈 곳을 알 수 있어요. 그래서 우편번호를 틀리게 쓰면 기계가 편지를 엉뚱한 곳으로 보낼 수도 있어요.
+
+나뉜 편지는 트럭에 실려 받는 사람이 사는 지역의 우체국으로 가요. 마지막으로 그 동네의 집배원이 편지를 집집마다 배달해요. 비가 오나 눈이 오나 집배원은 오토바이를 타고 골목골목을 다녀요. 보통 편지를 보내고 하루나 이틀이 지나면 받는 사람에게 도착해요.
+
+이렇게 편지 한 통이 도착하기까지는 많은 사람의 손길이 필요해요. 편지를 모으고 배달하는 집배원, 우편 집중국에서 일하는 분들, 트럭을 운전하는 분들 모두 고마운 분들이에요. 다음에 편지를 받으면 고마운 분들을 떠올려 보아요.','우체통에 넣은 편지가 가는 차례로 알맞은 것은 무엇인가요?',NULL,'["우편 집중국 → 우체국 → 받는 사람의 집 → 받는 사람 동네의 우체국","우체국 → 우편 집중국 → 받는 사람 동네의 우체국 → 받는 사람의 집","받는 사람 동네의 우체국 → 우편 집중국 → 우체국 → 받는 사람의 집","우체국 → 받는 사람 동네의 우체국 → 우편 집중국 → 받는 사람의 집"]',1,'셋째·넷째 문단에서 편지는 우체국에 모였다가 우편 집중국에서 나뉘고, 받는 사람 지역의 우체국으로 간 뒤 집배원이 집으로 배달한다고 했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-b53c2ce23057','KR_KOR','nonfiction','mcq',2,'편지는 어떻게 먼 곳에 사는 사람에게 갈까요? 편지가 가는 길을 따라가 보아요.
+
+먼저 편지 봉투에 받는 사람의 주소와 이름, 우편번호를 정확하게 써요. 우편번호는 다섯 자리 숫자예요. 보내는 사람의 주소도 함께 써야 편지가 잘못 갔을 때 다시 돌아올 수 있어요. 그다음 봉투에 우표를 붙이고 빨간 우체통에 넣거나 우체국에 가져가요.
+
+우체통에 들어간 편지는 집배원이 모아서 우체국으로 가져가요. 우체국에 모인 편지는 커다란 우편 집중국으로 보내져요. 이곳에서는 기계가 우편번호를 읽고 편지를 지역별로 빠르게 나누어요. 우편번호는 지역마다 정해진 숫자라서, 기계가 이 숫자를 보고 편지가 갈 곳을 알 수 있어요. 그래서 우편번호를 틀리게 쓰면 기계가 편지를 엉뚱한 곳으로 보낼 수도 있어요.
+
+나뉜 편지는 트럭에 실려 받는 사람이 사는 지역의 우체국으로 가요. 마지막으로 그 동네의 집배원이 편지를 집집마다 배달해요. 비가 오나 눈이 오나 집배원은 오토바이를 타고 골목골목을 다녀요. 보통 편지를 보내고 하루나 이틀이 지나면 받는 사람에게 도착해요.
+
+이렇게 편지 한 통이 도착하기까지는 많은 사람의 손길이 필요해요. 편지를 모으고 배달하는 집배원, 우편 집중국에서 일하는 분들, 트럭을 운전하는 분들 모두 고마운 분들이에요. 다음에 편지를 받으면 고마운 분들을 떠올려 보아요.','봉투에 보내는 사람의 주소도 써야 하는 까닭은 무엇인가요?',NULL,'["편지가 잘못 갔을 때 다시 돌아올 수 있도록","편지 봉투를 예쁘게 꾸미려고","집배원의 이름을 알리려고","우표 값을 아끼려고"]',0,'둘째 문단에서 ''보내는 사람의 주소도 함께 써야 편지가 잘못 갔을 때 다시 돌아올 수 있어요.''라고 했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-d8f43a10e34b','KR_KOR','nonfiction','mcq',2,'편지는 어떻게 먼 곳에 사는 사람에게 갈까요? 편지가 가는 길을 따라가 보아요.
+
+먼저 편지 봉투에 받는 사람의 주소와 이름, 우편번호를 정확하게 써요. 우편번호는 다섯 자리 숫자예요. 보내는 사람의 주소도 함께 써야 편지가 잘못 갔을 때 다시 돌아올 수 있어요. 그다음 봉투에 우표를 붙이고 빨간 우체통에 넣거나 우체국에 가져가요.
+
+우체통에 들어간 편지는 집배원이 모아서 우체국으로 가져가요. 우체국에 모인 편지는 커다란 우편 집중국으로 보내져요. 이곳에서는 기계가 우편번호를 읽고 편지를 지역별로 빠르게 나누어요. 우편번호는 지역마다 정해진 숫자라서, 기계가 이 숫자를 보고 편지가 갈 곳을 알 수 있어요. 그래서 우편번호를 틀리게 쓰면 기계가 편지를 엉뚱한 곳으로 보낼 수도 있어요.
+
+나뉜 편지는 트럭에 실려 받는 사람이 사는 지역의 우체국으로 가요. 마지막으로 그 동네의 집배원이 편지를 집집마다 배달해요. 비가 오나 눈이 오나 집배원은 오토바이를 타고 골목골목을 다녀요. 보통 편지를 보내고 하루나 이틀이 지나면 받는 사람에게 도착해요.
+
+이렇게 편지 한 통이 도착하기까지는 많은 사람의 손길이 필요해요. 편지를 모으고 배달하는 집배원, 우편 집중국에서 일하는 분들, 트럭을 운전하는 분들 모두 고마운 분들이에요. 다음에 편지를 받으면 고마운 분들을 떠올려 보아요.','우편 집중국에서 하는 일은 무엇인가요?',NULL,'["편지 봉투에 우표를 붙여 준다.","집배원이 집집마다 편지를 배달한다.","기계가 우편번호를 읽고 편지를 지역별로 나눈다.","편지를 대신 써 준다."]',2,'셋째 문단에서 우편 집중국에서는 기계가 우편번호를 읽고 편지를 지역별로 빠르게 나눈다고 했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-ec308e9d338d','KR_KOR','nonfiction','mcq',2,'편지는 어떻게 먼 곳에 사는 사람에게 갈까요? 편지가 가는 길을 따라가 보아요.
+
+먼저 편지 봉투에 받는 사람의 주소와 이름, 우편번호를 정확하게 써요. 우편번호는 다섯 자리 숫자예요. 보내는 사람의 주소도 함께 써야 편지가 잘못 갔을 때 다시 돌아올 수 있어요. 그다음 봉투에 우표를 붙이고 빨간 우체통에 넣거나 우체국에 가져가요.
+
+우체통에 들어간 편지는 집배원이 모아서 우체국으로 가져가요. 우체국에 모인 편지는 커다란 우편 집중국으로 보내져요. 이곳에서는 기계가 우편번호를 읽고 편지를 지역별로 빠르게 나누어요. 우편번호는 지역마다 정해진 숫자라서, 기계가 이 숫자를 보고 편지가 갈 곳을 알 수 있어요. 그래서 우편번호를 틀리게 쓰면 기계가 편지를 엉뚱한 곳으로 보낼 수도 있어요.
+
+나뉜 편지는 트럭에 실려 받는 사람이 사는 지역의 우체국으로 가요. 마지막으로 그 동네의 집배원이 편지를 집집마다 배달해요. 비가 오나 눈이 오나 집배원은 오토바이를 타고 골목골목을 다녀요. 보통 편지를 보내고 하루나 이틀이 지나면 받는 사람에게 도착해요.
+
+이렇게 편지 한 통이 도착하기까지는 많은 사람의 손길이 필요해요. 편지를 모으고 배달하는 집배원, 우편 집중국에서 일하는 분들, 트럭을 운전하는 분들 모두 고마운 분들이에요. 다음에 편지를 받으면 고마운 분들을 떠올려 보아요.','''많은 사람의 손길이 필요해요''에서 ''손길''의 뜻으로 알맞은 것은 무엇인가요?',NULL,'["손에 끼는 장갑","도와주거나 보살펴 주는 일","손바닥의 크기","손으로 그린 길"]',1,'여기서 ''손길''은 편지가 잘 가도록 여러 사람이 일하며 도와주는 것을 뜻해요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-c9c605e41714','KR_KOR','nonfiction','mcq',2,'사람은 하루 중 아주 많은 시간을 잠자며 보내요. 잠을 자는 동안 우리 몸은 그냥 쉬기만 하는 것이 아니라 아주 중요한 일을 해요. 잠을 제대로 자지 못하면 머리가 멍하고 무엇에 집중하기도 어려워요.
+
+먼저, 잠을 자는 동안 키가 자라요. 깊이 잠들었을 때 우리 몸에서는 뼈와 근육을 자라게 하는 성장 호르몬이 많이 나와요. 그래서 어린이가 잠을 푹 자야 키가 쑥쑥 자랄 수 있어요.
+
+또 잠은 낮에 배운 것을 기억하는 데 도움을 줘요. 우리 뇌는 잠자는 동안 낮에 보고 들은 것들을 정리해서 오래 기억할 수 있게 만들어요. 마치 어질러진 방을 깨끗이 정리하는 것과 비슷해요. 그래서 시험 전날 밤늦게까지 공부하는 것보다 푹 자는 것이 공부에 더 도움이 될 때가 많아요.
+
+잠은 몸을 튼튼하게 지켜 주기도 해요. 잠을 충분히 자면 병균을 물리치는 힘이 강해져서 감기에 잘 걸리지 않아요. 반대로 잠이 부족하면 쉽게 피곤해지고 자주 아플 수 있어요.
+
+그렇다면 잠을 잘 자려면 어떻게 해야 할까요? 매일 비슷한 시간에 잠자리에 들고, 자기 전에는 텔레비전이나 휴대 전화를 보지 않는 것이 좋아요. 화면의 밝은 빛이 뇌를 깨워서 잠들기 어렵게 만들기 때문이에요. 잠들기 전에 따뜻한 물로 씻거나 조용히 책을 읽는 것도 도움이 돼요. 초등학생은 하루에 9시간에서 11시간쯤 자는 것이 좋다고 해요.','이 글의 중심 내용으로 알맞은 것은 무엇인가요?',NULL,'["키가 크려면 우유를 많이 마셔야 한다.","감기에 걸리면 병원에 가야 한다.","텔레비전은 밤에 보아야 재미있다.","잠은 우리 몸에 여러 가지 도움을 주므로 잘 자야 한다."]',3,'글은 잠이 키를 자라게 하고, 기억을 돕고, 몸을 튼튼하게 해 준다고 설명하고 잘 자는 방법을 알려 주고 있어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-6c2416a8a056','KR_KOR','nonfiction','mcq',2,'사람은 하루 중 아주 많은 시간을 잠자며 보내요. 잠을 자는 동안 우리 몸은 그냥 쉬기만 하는 것이 아니라 아주 중요한 일을 해요. 잠을 제대로 자지 못하면 머리가 멍하고 무엇에 집중하기도 어려워요.
+
+먼저, 잠을 자는 동안 키가 자라요. 깊이 잠들었을 때 우리 몸에서는 뼈와 근육을 자라게 하는 성장 호르몬이 많이 나와요. 그래서 어린이가 잠을 푹 자야 키가 쑥쑥 자랄 수 있어요.
+
+또 잠은 낮에 배운 것을 기억하는 데 도움을 줘요. 우리 뇌는 잠자는 동안 낮에 보고 들은 것들을 정리해서 오래 기억할 수 있게 만들어요. 마치 어질러진 방을 깨끗이 정리하는 것과 비슷해요. 그래서 시험 전날 밤늦게까지 공부하는 것보다 푹 자는 것이 공부에 더 도움이 될 때가 많아요.
+
+잠은 몸을 튼튼하게 지켜 주기도 해요. 잠을 충분히 자면 병균을 물리치는 힘이 강해져서 감기에 잘 걸리지 않아요. 반대로 잠이 부족하면 쉽게 피곤해지고 자주 아플 수 있어요.
+
+그렇다면 잠을 잘 자려면 어떻게 해야 할까요? 매일 비슷한 시간에 잠자리에 들고, 자기 전에는 텔레비전이나 휴대 전화를 보지 않는 것이 좋아요. 화면의 밝은 빛이 뇌를 깨워서 잠들기 어렵게 만들기 때문이에요. 잠들기 전에 따뜻한 물로 씻거나 조용히 책을 읽는 것도 도움이 돼요. 초등학생은 하루에 9시간에서 11시간쯤 자는 것이 좋다고 해요.','글의 내용과 같은 것은 무엇인가요?',NULL,'["자기 전에 휴대 전화를 보면 잠이 잘 온다.","깊이 잠들었을 때 성장 호르몬이 많이 나온다.","초등학생은 5시간만 자도 충분하다.","잠을 많이 자면 감기에 잘 걸린다."]',1,'둘째 문단에서 깊이 잠들었을 때 성장 호르몬이 많이 나온다고 했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-9d4945147e10','KR_KOR','nonfiction','mcq',2,'사람은 하루 중 아주 많은 시간을 잠자며 보내요. 잠을 자는 동안 우리 몸은 그냥 쉬기만 하는 것이 아니라 아주 중요한 일을 해요. 잠을 제대로 자지 못하면 머리가 멍하고 무엇에 집중하기도 어려워요.
+
+먼저, 잠을 자는 동안 키가 자라요. 깊이 잠들었을 때 우리 몸에서는 뼈와 근육을 자라게 하는 성장 호르몬이 많이 나와요. 그래서 어린이가 잠을 푹 자야 키가 쑥쑥 자랄 수 있어요.
+
+또 잠은 낮에 배운 것을 기억하는 데 도움을 줘요. 우리 뇌는 잠자는 동안 낮에 보고 들은 것들을 정리해서 오래 기억할 수 있게 만들어요. 마치 어질러진 방을 깨끗이 정리하는 것과 비슷해요. 그래서 시험 전날 밤늦게까지 공부하는 것보다 푹 자는 것이 공부에 더 도움이 될 때가 많아요.
+
+잠은 몸을 튼튼하게 지켜 주기도 해요. 잠을 충분히 자면 병균을 물리치는 힘이 강해져서 감기에 잘 걸리지 않아요. 반대로 잠이 부족하면 쉽게 피곤해지고 자주 아플 수 있어요.
+
+그렇다면 잠을 잘 자려면 어떻게 해야 할까요? 매일 비슷한 시간에 잠자리에 들고, 자기 전에는 텔레비전이나 휴대 전화를 보지 않는 것이 좋아요. 화면의 밝은 빛이 뇌를 깨워서 잠들기 어렵게 만들기 때문이에요. 잠들기 전에 따뜻한 물로 씻거나 조용히 책을 읽는 것도 도움이 돼요. 초등학생은 하루에 9시간에서 11시간쯤 자는 것이 좋다고 해요.','''어질러진 방을 깨끗이 정리하는 것과 비슷해요''는 무엇을 설명하려고 쓴 표현인가요?',NULL,'["엄마가 방을 청소하는 일","뼈와 근육이 자라는 일","잠자리에 이불을 펴는 일","뇌가 잠자는 동안 낮에 보고 들은 것을 정리하는 일"]',3,'셋째 문단에서 뇌가 잠자는 동안 낮에 보고 들은 것을 정리하는 일을 방 정리에 빗대어 설명했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-9e243c17ce0f','KR_KOR','nonfiction','mcq',2,'사람은 하루 중 아주 많은 시간을 잠자며 보내요. 잠을 자는 동안 우리 몸은 그냥 쉬기만 하는 것이 아니라 아주 중요한 일을 해요. 잠을 제대로 자지 못하면 머리가 멍하고 무엇에 집중하기도 어려워요.
+
+먼저, 잠을 자는 동안 키가 자라요. 깊이 잠들었을 때 우리 몸에서는 뼈와 근육을 자라게 하는 성장 호르몬이 많이 나와요. 그래서 어린이가 잠을 푹 자야 키가 쑥쑥 자랄 수 있어요.
+
+또 잠은 낮에 배운 것을 기억하는 데 도움을 줘요. 우리 뇌는 잠자는 동안 낮에 보고 들은 것들을 정리해서 오래 기억할 수 있게 만들어요. 마치 어질러진 방을 깨끗이 정리하는 것과 비슷해요. 그래서 시험 전날 밤늦게까지 공부하는 것보다 푹 자는 것이 공부에 더 도움이 될 때가 많아요.
+
+잠은 몸을 튼튼하게 지켜 주기도 해요. 잠을 충분히 자면 병균을 물리치는 힘이 강해져서 감기에 잘 걸리지 않아요. 반대로 잠이 부족하면 쉽게 피곤해지고 자주 아플 수 있어요.
+
+그렇다면 잠을 잘 자려면 어떻게 해야 할까요? 매일 비슷한 시간에 잠자리에 들고, 자기 전에는 텔레비전이나 휴대 전화를 보지 않는 것이 좋아요. 화면의 밝은 빛이 뇌를 깨워서 잠들기 어렵게 만들기 때문이에요. 잠들기 전에 따뜻한 물로 씻거나 조용히 책을 읽는 것도 도움이 돼요. 초등학생은 하루에 9시간에서 11시간쯤 자는 것이 좋다고 해요.','글에서 자기 전에 텔레비전이나 휴대 전화를 보지 않는 것이 좋다고 한 까닭은 무엇인가요?',NULL,'["꿈을 꾸지 않기 위해서","화면의 밝은 빛이 뇌를 깨워 잠들기 어렵게 해서","다음 날 볼 것이 없어지기 때문에","전기를 아끼기 위해서"]',1,'다섯째 문단에서 ''화면의 밝은 빛이 뇌를 깨워서 잠들기 어렵게 만들기 때문이에요.''라고 했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-916e5c68eb9e','KR_KOR','literature','mcq',2,'숲속 마을에 우체부 달팽이 느릿이가 살았어요. 느릿이는 무엇이든 천천히 했어요. 동물들은 느릿이를 보며 쑥덕거렸어요. 어떤 동물은 ''느림보 우체부''라고 부르며 킥킥 웃었어요.
+"저렇게 느려서야 편지가 언제 도착하겠어?"
+그래서 동물들은 날쌘 제비에게만 편지를 맡겼어요.
+
+어느 날, 거센 바람이 휘몰아쳤어요. 제비는 바람 때문에 날 수가 없었어요. 그런데 그날 아기 다람쥐가 열이 펄펄 나서, 건너편 언덕에 사는 의사 부엉이에게 급히 편지를 보내야 했어요.
+"누가 이 편지를 전해 줄 수 있을까?"
+엄마 다람쥐는 발을 동동 굴렀어요.
+
+그때 느릿이가 말했어요.
+"제가 가 볼게요. 저는 땅에 몸을 딱 붙이고 다녀서 바람에 날아가지 않아요."
+느릿이는 밤새 한 걸음 한 걸음 쉬지 않고 기어갔어요. 가는 길에는 비탈길과 돌멩이가 많았지만 느릿이는 포기하지 않았어요. 바람이 아무리 세게 불어도 느릿이는 멈추지 않았어요.
+
+다음 날 아침, 편지를 받은 의사 부엉이가 다람쥐네 집으로 날아왔어요. 약을 먹은 아기 다람쥐는 금세 열이 내렸어요. 엄마 다람쥐는 느릿이에게 고개 숙여 인사했어요.
+"느릿아, 정말 고마워. 네가 아니었으면 큰일 날 뻔했어."
+
+그날 이후 숲속 동물들은 아무도 느릿이를 놀리지 않았어요. 느리지만 끝까지 해내는 느릿이를 모두 믿게 되었거든요. 이제 동물들은 맑은 날에는 제비에게, 비바람이 부는 날에는 느릿이에게 편지를 맡긴답니다.','처음에 동물들이 제비에게만 편지를 맡긴 까닭은 무엇인가요?',NULL,'["느릿이가 너무 느려서 편지가 늦게 도착할까 봐","느릿이가 편지를 자주 잃어버려서","제비가 편지를 공짜로 전해 주어서","느릿이가 바람을 무서워해서"]',0,'동물들은 "저렇게 느려서야 편지가 언제 도착하겠어?"라며 쑥덕거리고 제비에게만 편지를 맡겼어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-edd314a17e19','KR_KOR','literature','mcq',2,'숲속 마을에 우체부 달팽이 느릿이가 살았어요. 느릿이는 무엇이든 천천히 했어요. 동물들은 느릿이를 보며 쑥덕거렸어요. 어떤 동물은 ''느림보 우체부''라고 부르며 킥킥 웃었어요.
+"저렇게 느려서야 편지가 언제 도착하겠어?"
+그래서 동물들은 날쌘 제비에게만 편지를 맡겼어요.
+
+어느 날, 거센 바람이 휘몰아쳤어요. 제비는 바람 때문에 날 수가 없었어요. 그런데 그날 아기 다람쥐가 열이 펄펄 나서, 건너편 언덕에 사는 의사 부엉이에게 급히 편지를 보내야 했어요.
+"누가 이 편지를 전해 줄 수 있을까?"
+엄마 다람쥐는 발을 동동 굴렀어요.
+
+그때 느릿이가 말했어요.
+"제가 가 볼게요. 저는 땅에 몸을 딱 붙이고 다녀서 바람에 날아가지 않아요."
+느릿이는 밤새 한 걸음 한 걸음 쉬지 않고 기어갔어요. 가는 길에는 비탈길과 돌멩이가 많았지만 느릿이는 포기하지 않았어요. 바람이 아무리 세게 불어도 느릿이는 멈추지 않았어요.
+
+다음 날 아침, 편지를 받은 의사 부엉이가 다람쥐네 집으로 날아왔어요. 약을 먹은 아기 다람쥐는 금세 열이 내렸어요. 엄마 다람쥐는 느릿이에게 고개 숙여 인사했어요.
+"느릿아, 정말 고마워. 네가 아니었으면 큰일 날 뻔했어."
+
+그날 이후 숲속 동물들은 아무도 느릿이를 놀리지 않았어요. 느리지만 끝까지 해내는 느릿이를 모두 믿게 되었거든요. 이제 동물들은 맑은 날에는 제비에게, 비바람이 부는 날에는 느릿이에게 편지를 맡긴답니다.','느릿이가 바람이 거센 날에도 편지를 전할 수 있었던 까닭은 무엇인가요?',NULL,'["땅에 몸을 딱 붙이고 다녀서 바람에 날아가지 않아서","바람이 금세 멈추어서","제비가 등에 태워 주어서","지름길을 알고 있어서"]',0,'느릿이가 "저는 땅에 몸을 딱 붙이고 다녀서 바람에 날아가지 않아요."라고 말했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-409b6fb3edf2','KR_KOR','literature','mcq',2,'숲속 마을에 우체부 달팽이 느릿이가 살았어요. 느릿이는 무엇이든 천천히 했어요. 동물들은 느릿이를 보며 쑥덕거렸어요. 어떤 동물은 ''느림보 우체부''라고 부르며 킥킥 웃었어요.
+"저렇게 느려서야 편지가 언제 도착하겠어?"
+그래서 동물들은 날쌘 제비에게만 편지를 맡겼어요.
+
+어느 날, 거센 바람이 휘몰아쳤어요. 제비는 바람 때문에 날 수가 없었어요. 그런데 그날 아기 다람쥐가 열이 펄펄 나서, 건너편 언덕에 사는 의사 부엉이에게 급히 편지를 보내야 했어요.
+"누가 이 편지를 전해 줄 수 있을까?"
+엄마 다람쥐는 발을 동동 굴렀어요.
+
+그때 느릿이가 말했어요.
+"제가 가 볼게요. 저는 땅에 몸을 딱 붙이고 다녀서 바람에 날아가지 않아요."
+느릿이는 밤새 한 걸음 한 걸음 쉬지 않고 기어갔어요. 가는 길에는 비탈길과 돌멩이가 많았지만 느릿이는 포기하지 않았어요. 바람이 아무리 세게 불어도 느릿이는 멈추지 않았어요.
+
+다음 날 아침, 편지를 받은 의사 부엉이가 다람쥐네 집으로 날아왔어요. 약을 먹은 아기 다람쥐는 금세 열이 내렸어요. 엄마 다람쥐는 느릿이에게 고개 숙여 인사했어요.
+"느릿아, 정말 고마워. 네가 아니었으면 큰일 날 뻔했어."
+
+그날 이후 숲속 동물들은 아무도 느릿이를 놀리지 않았어요. 느리지만 끝까지 해내는 느릿이를 모두 믿게 되었거든요. 이제 동물들은 맑은 날에는 제비에게, 비바람이 부는 날에는 느릿이에게 편지를 맡긴답니다.','''엄마 다람쥐는 발을 동동 굴렀어요.''에서 알 수 있는 엄마 다람쥐의 마음은 무엇인가요?',NULL,'["부끄럽고 쑥스럽다.","졸리고 피곤하다.","몹시 걱정되고 조급하다.","신이 나고 즐겁다."]',2,'아기가 아픈데 편지를 전해 줄 동물이 없어서 엄마 다람쥐는 걱정되고 조급한 마음에 발을 동동 굴렀어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-49257ac8238e','KR_KOR','literature','mcq',2,'숲속 마을에 우체부 달팽이 느릿이가 살았어요. 느릿이는 무엇이든 천천히 했어요. 동물들은 느릿이를 보며 쑥덕거렸어요. 어떤 동물은 ''느림보 우체부''라고 부르며 킥킥 웃었어요.
+"저렇게 느려서야 편지가 언제 도착하겠어?"
+그래서 동물들은 날쌘 제비에게만 편지를 맡겼어요.
+
+어느 날, 거센 바람이 휘몰아쳤어요. 제비는 바람 때문에 날 수가 없었어요. 그런데 그날 아기 다람쥐가 열이 펄펄 나서, 건너편 언덕에 사는 의사 부엉이에게 급히 편지를 보내야 했어요.
+"누가 이 편지를 전해 줄 수 있을까?"
+엄마 다람쥐는 발을 동동 굴렀어요.
+
+그때 느릿이가 말했어요.
+"제가 가 볼게요. 저는 땅에 몸을 딱 붙이고 다녀서 바람에 날아가지 않아요."
+느릿이는 밤새 한 걸음 한 걸음 쉬지 않고 기어갔어요. 가는 길에는 비탈길과 돌멩이가 많았지만 느릿이는 포기하지 않았어요. 바람이 아무리 세게 불어도 느릿이는 멈추지 않았어요.
+
+다음 날 아침, 편지를 받은 의사 부엉이가 다람쥐네 집으로 날아왔어요. 약을 먹은 아기 다람쥐는 금세 열이 내렸어요. 엄마 다람쥐는 느릿이에게 고개 숙여 인사했어요.
+"느릿아, 정말 고마워. 네가 아니었으면 큰일 날 뻔했어."
+
+그날 이후 숲속 동물들은 아무도 느릿이를 놀리지 않았어요. 느리지만 끝까지 해내는 느릿이를 모두 믿게 되었거든요. 이제 동물들은 맑은 날에는 제비에게, 비바람이 부는 날에는 느릿이에게 편지를 맡긴답니다.','이 이야기가 전하려는 생각으로 가장 알맞은 것은 무엇인가요?',NULL,'["아플 때는 혼자서 꾹 참아야 한다.","바람 부는 날에는 집 안에만 있어야 한다.","느려도 끝까지 해내는 것은 소중하다.","무엇이든 빠른 것이 언제나 가장 좋다."]',2,'모두가 놀리던 느릿이가 쉬지 않고 끝까지 편지를 전해 믿음을 얻었어요. 느려도 끝까지 해내는 것이 소중하다는 것을 알려 줘요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-e88a23a8d5d0','KR_KOR','literature','mcq',2,'민서는 새로 산 지우개를 무척 아꼈어요. 딸기 냄새가 나는 분홍색 지우개였지요. 민서는 지우개에 이름을 쓰려다가 지우개가 더러워질까 봐 그냥 두었어요.
+
+수학 시간에 민서는 지우개가 사라진 것을 알았어요. 필통을 다 뒤져도 보이지 않았어요. 그때 짝꿍 준호가 분홍색 지우개로 공책을 지우고 있었어요.
+''내 지우개를 몰래 가져간 거야!''
+민서는 얼굴이 붉어졌어요. 쉬는 시간에 민서는 준호에게 쏘아붙였어요.
+"그거 내 지우개지? 왜 말도 안 하고 가져가?"
+준호는 깜짝 놀라 눈이 동그래졌어요.
+"아니야, 이건 어제 문구점에서 산 거야."
+준호가 지우개 종이 껍질을 보여 주었어요. 거기에는 삐뚤빼뚤한 글씨로 ''김준호''라고 쓰여 있었어요.
+
+그날 집에 돌아온 민서는 가방을 열다가 깜짝 놀랐어요. 가방 앞주머니에 분홍색 지우개가 쏙 들어 있었던 거예요. 아침에 급하게 넣어 놓고 잊어버렸던 거지요. 민서는 마음이 무거워 잠이 잘 오지 않았어요. 깜짝 놀라던 준호의 얼굴이 자꾸 떠올랐어요.
+
+다음 날 아침, 민서는 교실에 들어가자마자 준호에게 다가갔어요.
+"준호야, 어제는 미안해. 내가 확인도 안 하고 너를 의심했어."
+준호는 씩 웃으며 말했어요.
+"괜찮아. 우리 지우개가 똑같으니까 쌍둥이 지우개네!"
+민서도 그제야 활짝 웃었어요. 그날 쉬는 시간에 둘은 나란히 앉아 지우개 냄새를 맡으며 키득키득 웃었어요.','일이 일어난 차례로 알맞은 것은 무엇인가요?',NULL,'["지우개가 없어진 것을 앎 → 준호에게 따짐 → 가방에서 지우개를 찾음 → 준호에게 사과함","가방에서 지우개를 찾음 → 준호에게 따짐 → 지우개가 없어진 것을 앎 → 준호에게 사과함","준호에게 따짐 → 지우개가 없어진 것을 앎 → 준호에게 사과함 → 가방에서 지우개를 찾음","지우개가 없어진 것을 앎 → 가방에서 지우개를 찾음 → 준호에게 따짐 → 준호에게 사과함"]',0,'수학 시간에 지우개가 없어진 것을 알고, 쉬는 시간에 준호에게 따졌어요. 집에서 가방 속 지우개를 찾았고, 다음 날 사과했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-c7ee7f561dde','KR_KOR','literature','mcq',2,'민서는 새로 산 지우개를 무척 아꼈어요. 딸기 냄새가 나는 분홍색 지우개였지요. 민서는 지우개에 이름을 쓰려다가 지우개가 더러워질까 봐 그냥 두었어요.
+
+수학 시간에 민서는 지우개가 사라진 것을 알았어요. 필통을 다 뒤져도 보이지 않았어요. 그때 짝꿍 준호가 분홍색 지우개로 공책을 지우고 있었어요.
+''내 지우개를 몰래 가져간 거야!''
+민서는 얼굴이 붉어졌어요. 쉬는 시간에 민서는 준호에게 쏘아붙였어요.
+"그거 내 지우개지? 왜 말도 안 하고 가져가?"
+준호는 깜짝 놀라 눈이 동그래졌어요.
+"아니야, 이건 어제 문구점에서 산 거야."
+준호가 지우개 종이 껍질을 보여 주었어요. 거기에는 삐뚤빼뚤한 글씨로 ''김준호''라고 쓰여 있었어요.
+
+그날 집에 돌아온 민서는 가방을 열다가 깜짝 놀랐어요. 가방 앞주머니에 분홍색 지우개가 쏙 들어 있었던 거예요. 아침에 급하게 넣어 놓고 잊어버렸던 거지요. 민서는 마음이 무거워 잠이 잘 오지 않았어요. 깜짝 놀라던 준호의 얼굴이 자꾸 떠올랐어요.
+
+다음 날 아침, 민서는 교실에 들어가자마자 준호에게 다가갔어요.
+"준호야, 어제는 미안해. 내가 확인도 안 하고 너를 의심했어."
+준호는 씩 웃으며 말했어요.
+"괜찮아. 우리 지우개가 똑같으니까 쌍둥이 지우개네!"
+민서도 그제야 활짝 웃었어요. 그날 쉬는 시간에 둘은 나란히 앉아 지우개 냄새를 맡으며 키득키득 웃었어요.','민서가 준호를 의심한 까닭은 무엇인가요?',NULL,'["준호가 민서의 필통을 뒤지고 있어서","준호가 지우개를 가져갔다고 말해서","준호가 민서의 것과 똑같은 분홍색 지우개를 쓰고 있어서","준호가 지우개를 빌려 달라고 해서"]',2,'지우개가 사라졌을 때 짝꿍 준호가 분홍색 지우개로 공책을 지우고 있는 것을 보고 민서는 준호가 가져갔다고 생각했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-780cb3cc1904','KR_KOR','literature','mcq',2,'민서는 새로 산 지우개를 무척 아꼈어요. 딸기 냄새가 나는 분홍색 지우개였지요. 민서는 지우개에 이름을 쓰려다가 지우개가 더러워질까 봐 그냥 두었어요.
+
+수학 시간에 민서는 지우개가 사라진 것을 알았어요. 필통을 다 뒤져도 보이지 않았어요. 그때 짝꿍 준호가 분홍색 지우개로 공책을 지우고 있었어요.
+''내 지우개를 몰래 가져간 거야!''
+민서는 얼굴이 붉어졌어요. 쉬는 시간에 민서는 준호에게 쏘아붙였어요.
+"그거 내 지우개지? 왜 말도 안 하고 가져가?"
+준호는 깜짝 놀라 눈이 동그래졌어요.
+"아니야, 이건 어제 문구점에서 산 거야."
+준호가 지우개 종이 껍질을 보여 주었어요. 거기에는 삐뚤빼뚤한 글씨로 ''김준호''라고 쓰여 있었어요.
+
+그날 집에 돌아온 민서는 가방을 열다가 깜짝 놀랐어요. 가방 앞주머니에 분홍색 지우개가 쏙 들어 있었던 거예요. 아침에 급하게 넣어 놓고 잊어버렸던 거지요. 민서는 마음이 무거워 잠이 잘 오지 않았어요. 깜짝 놀라던 준호의 얼굴이 자꾸 떠올랐어요.
+
+다음 날 아침, 민서는 교실에 들어가자마자 준호에게 다가갔어요.
+"준호야, 어제는 미안해. 내가 확인도 안 하고 너를 의심했어."
+준호는 씩 웃으며 말했어요.
+"괜찮아. 우리 지우개가 똑같으니까 쌍둥이 지우개네!"
+민서도 그제야 활짝 웃었어요. 그날 쉬는 시간에 둘은 나란히 앉아 지우개 냄새를 맡으며 키득키득 웃었어요.','''민서는 마음이 무거워 잠이 잘 오지 않았어요.''에서 민서의 마음으로 알맞은 것은 무엇인가요?',NULL,'["지우개를 찾아서 신이 난다.","내일 볼 시험이 걱정된다.","준호에게 아직도 화가 난다.","준호를 의심한 것이 미안하다."]',3,'지우개가 자기 가방에 있었으니, 확인도 안 하고 준호를 의심한 일이 미안해서 마음이 무거웠어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-375f5663973a','KR_KOR','literature','mcq',2,'민서는 새로 산 지우개를 무척 아꼈어요. 딸기 냄새가 나는 분홍색 지우개였지요. 민서는 지우개에 이름을 쓰려다가 지우개가 더러워질까 봐 그냥 두었어요.
+
+수학 시간에 민서는 지우개가 사라진 것을 알았어요. 필통을 다 뒤져도 보이지 않았어요. 그때 짝꿍 준호가 분홍색 지우개로 공책을 지우고 있었어요.
+''내 지우개를 몰래 가져간 거야!''
+민서는 얼굴이 붉어졌어요. 쉬는 시간에 민서는 준호에게 쏘아붙였어요.
+"그거 내 지우개지? 왜 말도 안 하고 가져가?"
+준호는 깜짝 놀라 눈이 동그래졌어요.
+"아니야, 이건 어제 문구점에서 산 거야."
+준호가 지우개 종이 껍질을 보여 주었어요. 거기에는 삐뚤빼뚤한 글씨로 ''김준호''라고 쓰여 있었어요.
+
+그날 집에 돌아온 민서는 가방을 열다가 깜짝 놀랐어요. 가방 앞주머니에 분홍색 지우개가 쏙 들어 있었던 거예요. 아침에 급하게 넣어 놓고 잊어버렸던 거지요. 민서는 마음이 무거워 잠이 잘 오지 않았어요. 깜짝 놀라던 준호의 얼굴이 자꾸 떠올랐어요.
+
+다음 날 아침, 민서는 교실에 들어가자마자 준호에게 다가갔어요.
+"준호야, 어제는 미안해. 내가 확인도 안 하고 너를 의심했어."
+준호는 씩 웃으며 말했어요.
+"괜찮아. 우리 지우개가 똑같으니까 쌍둥이 지우개네!"
+민서도 그제야 활짝 웃었어요. 그날 쉬는 시간에 둘은 나란히 앉아 지우개 냄새를 맡으며 키득키득 웃었어요.','"우리 지우개가 똑같으니까 쌍둥이 지우개네!"라는 말에서 알 수 있는 준호의 모습은 어떠한가요?',NULL,'["민서를 놀리고 싶어 한다.","민서의 사과를 너그럽게 받아 준다.","아직도 민서에게 화가 나 있다.","민서의 지우개를 갖고 싶어 한다."]',1,'준호는 "괜찮아."라고 하며 씩 웃고 농담을 했어요. 민서의 사과를 너그럽게 받아 주는 모습이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-471adfecb1bb','KR_KOR','literature','mcq',2,'비 오는 날
+
+톡톡톡
+창문을 두드리는 빗방울
+"문 좀 열어 줘."
+나를 부르나 봐요.
+
+똑똑똑
+우산 위에 내려앉은 빗방울
+"나도 같이 가자."
+졸졸 따라오나 봐요.
+
+퐁당퐁당
+웅덩이에 뛰어든 빗방울
+동그라미 그리며
+노래를 부르나 봐요.
+
+비 그치면
+빗방울 친구들 다 어디 갔을까?
+하늘에 걸린 무지개
+일곱 빛깔 미끄럼틀 타러 갔나 봐요.','이 시에서 말하는 이는 빗방울을 무엇처럼 생각하나요?',NULL,'["무서운 괴물","말을 걸고 함께 노는 친구","귀찮은 손님","시끄러운 소음"]',1,'빗방울이 "문 좀 열어 줘.", "나도 같이 가자."라고 말하고, 마지막 연에서 ''빗방울 친구들''이라고 불렀어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-650ea60a9aa4','KR_KOR','literature','mcq',2,'비 오는 날
+
+톡톡톡
+창문을 두드리는 빗방울
+"문 좀 열어 줘."
+나를 부르나 봐요.
+
+똑똑똑
+우산 위에 내려앉은 빗방울
+"나도 같이 가자."
+졸졸 따라오나 봐요.
+
+퐁당퐁당
+웅덩이에 뛰어든 빗방울
+동그라미 그리며
+노래를 부르나 봐요.
+
+비 그치면
+빗방울 친구들 다 어디 갔을까?
+하늘에 걸린 무지개
+일곱 빛깔 미끄럼틀 타러 갔나 봐요.','시에서 빗방울이 나오는 곳의 차례로 알맞은 것은 무엇인가요?',NULL,'["창문 → 웅덩이 → 우산 → 무지개","창문 → 우산 → 웅덩이 → 무지개","우산 → 창문 → 무지개 → 웅덩이","웅덩이 → 우산 → 창문 → 무지개"]',1,'첫째 연은 창문, 둘째 연은 우산, 셋째 연은 웅덩이, 넷째 연은 무지개가 나와요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-d6c05df5568a','KR_KOR','literature','mcq',2,'비 오는 날
+
+톡톡톡
+창문을 두드리는 빗방울
+"문 좀 열어 줘."
+나를 부르나 봐요.
+
+똑똑똑
+우산 위에 내려앉은 빗방울
+"나도 같이 가자."
+졸졸 따라오나 봐요.
+
+퐁당퐁당
+웅덩이에 뛰어든 빗방울
+동그라미 그리며
+노래를 부르나 봐요.
+
+비 그치면
+빗방울 친구들 다 어디 갔을까?
+하늘에 걸린 무지개
+일곱 빛깔 미끄럼틀 타러 갔나 봐요.','''퐁당퐁당''은 무엇을 흉내 낸 말인가요?',NULL,'["무지개가 뜨는 모습","우산을 펴는 소리","빗방울이 창문을 두드리는 소리","빗방울이 웅덩이에 떨어지는 소리"]',3,'셋째 연의 ''퐁당퐁당 / 웅덩이에 뛰어든 빗방울''에서 빗방울이 웅덩이에 떨어지는 소리를 흉내 냈어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-bf3341845afb','KR_KOR','literature','mcq',2,'비 오는 날
+
+톡톡톡
+창문을 두드리는 빗방울
+"문 좀 열어 줘."
+나를 부르나 봐요.
+
+똑똑똑
+우산 위에 내려앉은 빗방울
+"나도 같이 가자."
+졸졸 따라오나 봐요.
+
+퐁당퐁당
+웅덩이에 뛰어든 빗방울
+동그라미 그리며
+노래를 부르나 봐요.
+
+비 그치면
+빗방울 친구들 다 어디 갔을까?
+하늘에 걸린 무지개
+일곱 빛깔 미끄럼틀 타러 갔나 봐요.','이 시의 각 연 마지막 줄 끝에 되풀이되는 말은 무엇인가요?',NULL,'["나 봐요","열어 줘","갔을까","같이 가자"]',0,'''부르나 봐요'', ''따라오나 봐요'', ''부르나 봐요'', ''갔나 봐요''처럼 모든 연의 마지막 줄이 ''나 봐요''로 끝나요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-7198cdc3bf9d','KR_KOR','literature','mcq',2,'5월 8일 금요일, 날씨: 구름 조금
+
+오늘은 어버이날이다. 나는 며칠 전부터 엄마 아빠께 무엇을 드릴지 고민했다. 용돈이 많지 않아서 비싼 선물은 살 수 없었다. 꽃집에 가 보니 카네이션 한 송이도 꽤 비쌌다. 그래서 직접 만든 카네이션과 편지를 드리기로 했다.
+
+어젯밤, 엄마 아빠가 주무신 뒤에 몰래 색종이를 꺼냈다. 동생이 깰까 봐 가위질도 살살 했다. 빨간 색종이를 접어 꽃잎을 만들고, 초록 색종이로 잎을 만들었다. 처음 만든 꽃은 꽃잎이 자꾸 풀려서 모양이 엉망이었다. 손이 아프고 졸렸지만 엄마 아빠가 기뻐하실 모습을 떠올리며 꾹 참았다. 세 번이나 다시 만든 끝에 겨우 예쁜 카네이션 두 송이를 완성했다.
+
+꽃을 다 만든 뒤에는 편지를 썼다. "엄마 아빠, 항상 맛있는 밥 해 주시고 책 읽어 주셔서 감사합니다. 앞으로 동생과 사이좋게 지낼게요." 글씨를 또박또박 쓰느라 팔이 조금 아팠다. 편지지 가장자리에는 하트와 꽃을 그려 꾸몄다.
+
+아침에 식탁 위에 카네이션과 편지를 올려놓았다. 편지를 읽으신 엄마는 눈가가 촉촉해지셨고, 아빠는 나를 꼭 안아 주셨다. 아빠는 카네이션을 휴대 전화로 사진까지 찍으셨다. 동생도 덩달아 신이 나서 "나도 내년엔 같이 만들래!" 하고 외쳤다.
+
+선물을 받으신 엄마 아빠보다 내가 더 행복한 것 같았다. 선물은 값보다 마음이 중요하다는 것을 알게 되었다. 내년에는 더 멋진 선물을 준비하고 싶다.','글쓴이가 카네이션을 직접 만들기로 한 까닭은 무엇인가요?',NULL,'["용돈이 많지 않아 비싼 선물을 살 수 없어서","엄마가 만들어 달라고 하셔서","꽃 가게가 문을 닫아서","학교 숙제로 만들어야 해서"]',0,'둘째 문단에서 ''용돈이 많지 않아서 비싼 선물은 살 수 없었다. 그래서 직접 만든 카네이션과 편지를 드리기로 했다.''라고 썼어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-182d7d5da1fe','KR_KOR','literature','mcq',2,'5월 8일 금요일, 날씨: 구름 조금
+
+오늘은 어버이날이다. 나는 며칠 전부터 엄마 아빠께 무엇을 드릴지 고민했다. 용돈이 많지 않아서 비싼 선물은 살 수 없었다. 꽃집에 가 보니 카네이션 한 송이도 꽤 비쌌다. 그래서 직접 만든 카네이션과 편지를 드리기로 했다.
+
+어젯밤, 엄마 아빠가 주무신 뒤에 몰래 색종이를 꺼냈다. 동생이 깰까 봐 가위질도 살살 했다. 빨간 색종이를 접어 꽃잎을 만들고, 초록 색종이로 잎을 만들었다. 처음 만든 꽃은 꽃잎이 자꾸 풀려서 모양이 엉망이었다. 손이 아프고 졸렸지만 엄마 아빠가 기뻐하실 모습을 떠올리며 꾹 참았다. 세 번이나 다시 만든 끝에 겨우 예쁜 카네이션 두 송이를 완성했다.
+
+꽃을 다 만든 뒤에는 편지를 썼다. "엄마 아빠, 항상 맛있는 밥 해 주시고 책 읽어 주셔서 감사합니다. 앞으로 동생과 사이좋게 지낼게요." 글씨를 또박또박 쓰느라 팔이 조금 아팠다. 편지지 가장자리에는 하트와 꽃을 그려 꾸몄다.
+
+아침에 식탁 위에 카네이션과 편지를 올려놓았다. 편지를 읽으신 엄마는 눈가가 촉촉해지셨고, 아빠는 나를 꼭 안아 주셨다. 아빠는 카네이션을 휴대 전화로 사진까지 찍으셨다. 동생도 덩달아 신이 나서 "나도 내년엔 같이 만들래!" 하고 외쳤다.
+
+선물을 받으신 엄마 아빠보다 내가 더 행복한 것 같았다. 선물은 값보다 마음이 중요하다는 것을 알게 되었다. 내년에는 더 멋진 선물을 준비하고 싶다.','글쓴이가 한 일이 아닌 것은 무엇인가요?',NULL,'["편지를 또박또박 썼다.","식탁 위에 선물을 올려놓았다.","색종이로 카네이션을 접었다.","카네이션을 휴대 전화로 찍었다."]',3,'카네이션 사진을 찍은 사람은 아빠예요. ''아빠는 카네이션을 휴대 전화로 사진까지 찍으셨다.''라고 했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-b75acd03ac89','KR_KOR','literature','mcq',2,'5월 8일 금요일, 날씨: 구름 조금
+
+오늘은 어버이날이다. 나는 며칠 전부터 엄마 아빠께 무엇을 드릴지 고민했다. 용돈이 많지 않아서 비싼 선물은 살 수 없었다. 꽃집에 가 보니 카네이션 한 송이도 꽤 비쌌다. 그래서 직접 만든 카네이션과 편지를 드리기로 했다.
+
+어젯밤, 엄마 아빠가 주무신 뒤에 몰래 색종이를 꺼냈다. 동생이 깰까 봐 가위질도 살살 했다. 빨간 색종이를 접어 꽃잎을 만들고, 초록 색종이로 잎을 만들었다. 처음 만든 꽃은 꽃잎이 자꾸 풀려서 모양이 엉망이었다. 손이 아프고 졸렸지만 엄마 아빠가 기뻐하실 모습을 떠올리며 꾹 참았다. 세 번이나 다시 만든 끝에 겨우 예쁜 카네이션 두 송이를 완성했다.
+
+꽃을 다 만든 뒤에는 편지를 썼다. "엄마 아빠, 항상 맛있는 밥 해 주시고 책 읽어 주셔서 감사합니다. 앞으로 동생과 사이좋게 지낼게요." 글씨를 또박또박 쓰느라 팔이 조금 아팠다. 편지지 가장자리에는 하트와 꽃을 그려 꾸몄다.
+
+아침에 식탁 위에 카네이션과 편지를 올려놓았다. 편지를 읽으신 엄마는 눈가가 촉촉해지셨고, 아빠는 나를 꼭 안아 주셨다. 아빠는 카네이션을 휴대 전화로 사진까지 찍으셨다. 동생도 덩달아 신이 나서 "나도 내년엔 같이 만들래!" 하고 외쳤다.
+
+선물을 받으신 엄마 아빠보다 내가 더 행복한 것 같았다. 선물은 값보다 마음이 중요하다는 것을 알게 되었다. 내년에는 더 멋진 선물을 준비하고 싶다.','''엄마는 눈가가 촉촉해지셨고''에서 알 수 있는 엄마의 마음은 무엇인가요?',NULL,'["지루하고 심심하다.","무섭고 놀랍다.","감동하여 고맙고 기쁘다.","속상하고 화가 난다."]',2,'아이가 직접 만든 꽃과 정성스러운 편지를 받고 감동해서 눈물이 날 것 같은 마음이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-4dabd846e18a','KR_KOR','literature','mcq',2,'5월 8일 금요일, 날씨: 구름 조금
+
+오늘은 어버이날이다. 나는 며칠 전부터 엄마 아빠께 무엇을 드릴지 고민했다. 용돈이 많지 않아서 비싼 선물은 살 수 없었다. 꽃집에 가 보니 카네이션 한 송이도 꽤 비쌌다. 그래서 직접 만든 카네이션과 편지를 드리기로 했다.
+
+어젯밤, 엄마 아빠가 주무신 뒤에 몰래 색종이를 꺼냈다. 동생이 깰까 봐 가위질도 살살 했다. 빨간 색종이를 접어 꽃잎을 만들고, 초록 색종이로 잎을 만들었다. 처음 만든 꽃은 꽃잎이 자꾸 풀려서 모양이 엉망이었다. 손이 아프고 졸렸지만 엄마 아빠가 기뻐하실 모습을 떠올리며 꾹 참았다. 세 번이나 다시 만든 끝에 겨우 예쁜 카네이션 두 송이를 완성했다.
+
+꽃을 다 만든 뒤에는 편지를 썼다. "엄마 아빠, 항상 맛있는 밥 해 주시고 책 읽어 주셔서 감사합니다. 앞으로 동생과 사이좋게 지낼게요." 글씨를 또박또박 쓰느라 팔이 조금 아팠다. 편지지 가장자리에는 하트와 꽃을 그려 꾸몄다.
+
+아침에 식탁 위에 카네이션과 편지를 올려놓았다. 편지를 읽으신 엄마는 눈가가 촉촉해지셨고, 아빠는 나를 꼭 안아 주셨다. 아빠는 카네이션을 휴대 전화로 사진까지 찍으셨다. 동생도 덩달아 신이 나서 "나도 내년엔 같이 만들래!" 하고 외쳤다.
+
+선물을 받으신 엄마 아빠보다 내가 더 행복한 것 같았다. 선물은 값보다 마음이 중요하다는 것을 알게 되었다. 내년에는 더 멋진 선물을 준비하고 싶다.','일이 일어난 차례로 알맞은 것은 무엇인가요?',NULL,'["편지를 씀 → 선물을 고민함 → 카네이션을 만듦 → 식탁에 선물을 올려놓음","선물을 고민함 → 식탁에 선물을 올려놓음 → 편지를 씀 → 카네이션을 만듦","카네이션을 만듦 → 선물을 고민함 → 식탁에 선물을 올려놓음 → 편지를 씀","선물을 고민함 → 카네이션을 만듦 → 편지를 씀 → 식탁에 선물을 올려놓음"]',3,'며칠 전부터 선물을 고민했고, 어젯밤 카네이션을 만든 뒤 편지를 썼으며, 오늘 아침 식탁에 올려놓았어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-8822321fd575','KR_KOR','vocab','mcq',2,NULL,'''가볍다''와 뜻이 반대인 말은 무엇인가요?',NULL,'["넓다","밝다","얇다","무겁다"]',3,'''가볍다''의 반대말은 ''무겁다''예요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-fe587615a6aa','KR_KOR','vocab','mcq',2,NULL,'''빠르다''와 뜻이 비슷한 말은 무엇인가요?',NULL,'["무디다","재빠르다","느리다","늦다"]',1,'''재빠르다''는 움직임이 아주 빠르다는 뜻으로 ''빠르다''와 비슷한 말이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-af2bd3b730f1','KR_KOR','vocab','mcq',2,NULL,'맞춤법에 맞게 쓴 문장은 무엇인가요?',NULL,'["손을 깨끗이 씼었다.","손을 깨끗이 씻었다.","손을 깨끄시 씻었다.","손을 깨끗히 씻었다."]',1,'''깨끗이''는 ''-이''로 쓰고, ''씻었다''는 받침 ''ㅅ''을 써요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-ebe33ba7398c','KR_KOR','vocab','mcq',2,NULL,'''동생에게 동화책을 ( ) 주었다.''의 ( )에 바르게 쓴 말은 무엇인가요?',NULL,'["잌어","일거","읽어","익어"]',2,'책을 소리 내어 보는 것은 ''읽다''이므로 겹받침 ''ㄺ''을 써서 ''읽어''라고 써요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-6674334a3a3e','KR_KOR','vocab','mcq',2,NULL,'띄어쓰기를 바르게 한 문장은 무엇인가요?',NULL,'["우리는공원에서 줄넘기를 했다.","우리는 공원에서 줄넘기를 했다.","우리는 공원에서 줄넘기를했다.","우리는 공원 에서 줄넘기를 했다."]',1,'''우리는/공원에서/줄넘기를/했다''처럼 낱말 덩어리마다 띄어 쓰고, ''에서'', ''를''은 앞말에 붙여 써요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-64aed3729c84','KR_KOR','vocab','mcq',2,NULL,'띄어쓰기를 바르게 한 것은 무엇인가요?',NULL,'["사과두 개를 샀다.","사과 두 개를샀다.","사과 두개를 샀다.","사과 두 개를 샀다."]',3,'수를 세는 말 ''개''는 앞의 ''두''와 띄어 써서 ''두 개''라고 써요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-8815dda88cbe','KR_KOR','vocab','mcq',2,NULL,'높임 표현을 바르게 쓴 문장은 무엇인가요?',NULL,'["할아버지가 밥을 먹는다.","할아버지께서 진지를 잡수신다.","할아버지가 진지를 먹었다.","할아버지께서 밥을 먹는다."]',1,'웃어른께는 ''가'' 대신 ''께서'', ''밥'' 대신 ''진지'', ''먹는다'' 대신 ''잡수신다''를 써서 높여요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-ccf6b5cab526','KR_KOR','vocab','mcq',2,NULL,'선생님께 궁금한 것을 여쭈어볼 때 알맞은 말은 무엇인가요?',NULL,'["선생님, 이거 뭐야?","선생님, 이거 뭐냐?","선생님, 이것 좀 봐 봐.","선생님, 이것은 무엇인가요?"]',3,'선생님께는 ''뭐야?'' 같은 반말 대신 ''무엇인가요?''처럼 높임말로 여쭈어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-6b184c4982e4','KR_KOR','vocab','mcq',2,NULL,'쉼표(,)를 바르게 쓴 문장은 무엇인가요?',NULL,'["시장에서 사과? 배? 포도를 샀다.","시장에서 사과. 배. 포도를 샀다.","시장에서 사과 배, 포도를 샀다.","시장에서 사과, 배, 포도를 샀다."]',3,'같은 무리의 낱말을 늘어놓을 때는 낱말 사이에 쉼표를 써요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-5aaf3ef95303','KR_KOR','vocab','mcq',2,NULL,'이야기에서 인물이 소리 내어 한 말을 나타낼 때 쓰는 문장 부호는 무엇인가요?',NULL,'["작은따옴표('' '')","마침표(.)","쉼표(,)","큰따옴표(\" \")"]',3,'소리 내어 한 말은 큰따옴표로 나타내요. 작은따옴표는 마음속으로 한 말에 써요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-ca0c2388fff3','KR_KOR','vocab','mcq',2,NULL,'''눈''이 몸의 한 부분이라는 뜻으로 쓰인 문장은 무엇인가요?',NULL,'["눈이 펑펑 내린다.","눈이 쌓여 길이 미끄럽다.","눈에 먼지가 들어가 따갑다.","눈사람을 만들었다."]',2,'''눈에 먼지가 들어가 따갑다.''의 ''눈''은 사물을 보는 몸의 눈이에요. 나머지는 하늘에서 내리는 눈이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-f0dc86bf706d','KR_KOR','vocab','mcq',2,NULL,'''귀여운 고양이가 소파에서 쿨쿨 잔다.''에서 ''고양이''를 꾸며 주는 말은 무엇인가요?',NULL,'["잔다","귀여운","쿨쿨","소파에서"]',1,'''귀여운''이 어떤 고양이인지 꾸며 주고 있어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-efa7be7b59f6','KR_KOR','vocab','mcq',2,NULL,'''무엇을 고를지 한참 망설였다.''에서 ''망설이다''의 뜻은 무엇인가요?',NULL,'["큰 소리로 웃다.","아주 빨리 달리다.","이렇게 할까 저렇게 할까 마음을 정하지 못하다.","물건을 잃어버리다."]',2,'''망설이다''는 마음을 정하지 못하고 머뭇거린다는 뜻이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-8392c541a9a7','KR_KOR','vocab','mcq',2,NULL,'''출발''과 뜻이 반대인 말은 무엇인가요?',NULL,'["출구","도착","운동","시작"]',1,'길을 떠나는 ''출발''의 반대말은 목적지에 다다르는 ''도착''이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-18c159706eb5','KR_KOR','vocab','mcq',2,NULL,'맞춤법에 맞게 쓴 문장은 무엇인가요?',NULL,'["어제 친구와 놀았따.","어제 친구와 놀앗다.","어제 친구와 놀았다.","어제 친구와 노랐다."]',2,'''놀다''에 ''-았다''가 붙으면 ''놀았다''라고 써요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-2d2bbca0b49e','KR_KOR','vocab','mcq',2,NULL,'''손가락으로 하늘을 ( ).''의 ( )에 알맞은 말은 무엇인가요?',NULL,'["가르쳤다","가르켰다","가리켰다","가리쳤다"]',2,'손가락으로 어느 쪽을 집어 보이는 것은 ''가리키다''예요. ''가르치다''는 지식을 알려 주는 것이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-34f31a07a856','KR_KOR','vocab','mcq',2,NULL,'''운동화 한 ( )''의 ( )에 알맞은 말은 무엇인가요?',NULL,'["마리","그루","장","켤레"]',3,'신발 두 짝을 한 벌로 셀 때는 ''켤레''를 써요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-e3536a074a5c','KR_KOR','vocab','mcq',2,NULL,'''걱정하다''와 뜻이 비슷한 말은 무엇인가요?',NULL,'["근심하다","자랑하다","기뻐하다","칭찬하다"]',0,'''근심하다''는 마음을 놓지 못하고 애태운다는 뜻으로 ''걱정하다''와 비슷해요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-0c3b099bdf78','KR_KOR','vocab','mcq',2,NULL,'''아기가 엄마를 보고 ( ) 웃는다.''의 ( )에 알맞은 흉내 내는 말은 무엇인가요?',NULL,'["펄럭펄럭","주룩주룩","쿵쾅쿵쾅","방긋방긋"]',3,'아기가 입을 살짝 벌리며 귀엽게 웃는 모습은 ''방긋방긋''이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-2920a3bca85c','KR_KOR','vocab','mcq',2,NULL,'''발표 차례가 다가오자 가슴이 조마조마했다.''에서 ''조마조마하다''의 뜻은 무엇인가요?',NULL,'["졸려서 눈이 감긴다.","배가 불러 편안하다.","기뻐서 신이 난다.","걱정이 되어 마음이 불안하다."]',3,'''조마조마하다''는 앞으로 닥칠 일이 걱정되어 마음이 놓이지 않는다는 뜻이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-writing-ed5917c10b1a','KR_KOR','writing','text',2,'우리 반은 교실에서 거북이 ''느림이''를 기르기로 했어요. 선생님께서 "느림이를 잘 돌보려면 우리 반에 어떤 약속이 필요할까요?" 하고 물으셨어요.','느림이를 잘 돌보기 위한 약속 두 가지를 정하고, 그 약속이 필요한 까닭을 넣어 3~4문장으로 써 보세요.',NULL,NULL,NULL,'채점 기준 — 내용(3점): 먹이 주기 당번 정하기, 물 갈아 주기, 함부로 만지거나 두드리지 않기 등 거북이를 돌보는 데 알맞은 약속 두 가지(각 1점)와 그 까닭(1점)을 썼다. 문장(1점): 3~4문장으로 ''첫째, 둘째''나 ''왜냐하면''처럼 이어 주는 말을 써서 자연스럽게 썼다. 맞춤법(1점): 받침·띄어쓰기·문장 부호가 대체로 바르다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-writing-f0a5756ac4df','KR_KOR','writing','text',2,NULL,'지난 주말에 있었던 일 가운데 가장 기억에 남는 일을 일기로 써 보세요. 언제, 어디서, 누구와, 무엇을 했는지와 그때의 마음이 드러나게 3~4문장으로 쓰세요.',NULL,NULL,NULL,'채점 기준 — 내용(3점): 겪은 일 한 가지를 골라 언제·어디서·누구와·무엇을 했는지 드러냈고(2점), 그때의 생각이나 마음을 썼다(1점). 문장(1점): 3~4문장을 일이 일어난 차례대로 이어지게 썼다. 맞춤법(1점): 받침·띄어쓰기·문장 부호가 대체로 바르다.',1,0);
 INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_math-number-0ed0c444bb7c','KR_MATH','number','mcq',5,NULL,'서로 다른 숫자 A, B가 있습니다. 두 자리 수 AB와 BA를 더하면 121이고, A는 B보다 3 큽니다. 두 자리 수 AB는 얼마입니까?',NULL,'["74","47","83","65"]',0,'AB + BA = (10×A + B) + (10×B + A) = 11×(A + B) = 121이므로 A + B = 11입니다. A − B = 3이므로 A = 7, B = 4입니다. 따라서 AB = 74입니다. (확인: 74 + 47 = 121)',1,0);
 INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_math-number-c174e48de6d4','KR_MATH','number','mcq',5,NULL,'세 자리 수 ABC에서 A, B, C는 서로 다른 숫자입니다. ABC − CBA = 396이고, A + B + C = 18, B = 6일 때 세 자리 수 ABC는 얼마입니까?',NULL,'["945","846","864","693"]',2,'ABC − CBA = 99×(A − C) = 396이므로 A − C = 4입니다. A + C = 18 − 6 = 12이므로 A = 8, C = 4입니다. 따라서 ABC = 864입니다. (확인: 864 − 468 = 396)',1,0);
 INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_math-number-f50e938b8989','KR_MATH','number','num',5,NULL,'1부터 100까지의 자연수 중에서 3의 배수도 아니고 4의 배수도 아닌 수는 모두 몇 개입니까?',NULL,'["50"]',NULL,'3의 배수는 33개, 4의 배수는 25개, 3과 4의 공배수(12의 배수)는 8개입니다. 3 또는 4의 배수는 33 + 25 − 8 = 50개이므로, 둘 다 아닌 수는 100 − 50 = 50개입니다.',1,0);
