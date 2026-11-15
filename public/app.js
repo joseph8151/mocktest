@@ -288,7 +288,7 @@ async function pageMe(q = {}) {
     h('div', { class: 'card' }, h('h3', {}, '내 이용권'), ov.entitlements.length ? h('table', {}, h('tr', {}, h('th', {}, '상품'), h('th', {}, '남은 횟수'), h('th', {}, '만료'), h('th', {})),
       ov.entitlements.map((e) => h('tr', {}, h('td', {}, e.title), h('td', {}, e.trial ? h('span', { class: 'badge' }, '관리자 체험') : `${e.remaining}/${e.attempts_total}`), h('td', {}, e.expired ? h('span', { class: 'badge bad' }, '만료') : date(e.expires_at)),
         h('td', {}, e.remaining > 0 && !e.expired ? h('button', { class: 'btn sm', onclick: () => start(e.exam_type) }, '시험 시작') : null)))) : h('p', { class: 'muted' }, '이용권이 없습니다. ', h('a', { href: '#/' }, '시험 상품 보러가기'))),
-    ov.attempts.some((a) => a.status === 'in_progress') ? h('div', { class: 'card' }, h('b', {}, '진행 중인 시험이 있습니다. '), ov.attempts.filter((a) => a.status === 'in_progress').map((a) => h('a', { class: 'btn sm', href: `#/exam/${a.id}` }, `${a.exam_type} 이어서 풀기`))) : null,
+    ov.attempts.some((a) => a.status === 'in_progress') ? h('div', { class: 'card' }, h('b', {}, '진행 중인 시험이 있습니다.'), h('div', { class: 'row', style: 'margin-top:10px' }, ov.attempts.filter((a) => a.status === 'in_progress').map((a) => h('a', { class: 'btn sm', href: `#/exam/${a.id}` }, `${a.exam_type} 이어서 풀기`)))) : null,
     h('div', { class: 'card' }, h('h3', {}, '응시 기록'), ov.attempts.length ? h('table', {}, ov.attempts.map((a) => h('tr', {}, h('td', {}, a.exam_type, a.level ? h('div', { class: 'small muted' }, (exams.find((x) => x.type === a.exam_type)?.levels || []).find((l) => l.key === a.level)?.name || '') : null), h('td', {}, date(a.started_at)), h('td', {}, statusBadge(a.status)),
       h('td', {}, a.status !== 'in_progress' ? h('a', { href: `#/report/${a.id}` }, '리포트') : null)))) : h('p', { class: 'muted' }, '아직 응시 기록이 없습니다.')),
     h('div', { class: 'card' }, h('h3', {}, '결제 내역'), ord.orders.length ? h('table', {}, ord.orders.map((o) => h('tr', {}, h('td', {}, o.title), h('td', {}, money(o.amount, o.currency)), h('td', {}, date(o.paid_at || o.created_at)), h('td', {}, h('span', { class: 'badge ' + (o.status === 'paid' ? 'ok' : ['awaiting_deposit', 'pending'].includes(o.status) ? 'warn' : 'bad') }, { paid: '결제완료', refunded: '환불', failed: '실패', awaiting_deposit: '입금 대기', pending: '결제 진행중' }[o.status] || o.status)),
@@ -657,7 +657,7 @@ async function pageExamAdaptive(id, state) {
       h('div', { class: 'exam-top' },
         h('div', { class: 'exam-head' }, h('div', { class: 'sec-pill' }, sec.name, h('i', {}, `${sec.index + 1}/${sec.total}`)), h('span', { class: 'muted small' }, `문항 ${state.progress.n} / ${tot}`), h('span', {}, '⏱ ', timer)),
         h('div', { class: 'bar' }, h('i', { style: `width:${Math.round(((state.progress.n - 1) / tot) * 100)}%` }))),
-      h('div', { class: 'qcard' }, body, h('div', { class: 'exam-foot' }, h('span', { class: 'kbd' }, q.kind === 'mcq' ? '키보드 A–D 선택 · Enter 다음' : ''), next))));
+      h('div', { class: 'qcard' }, body, h('div', { class: 'exam-foot' }, h('span', { class: 'kbd hide-touch' }, q.kind === 'mcq' ? '키보드 A–D 선택 · Enter 다음' : ''), next))));
     if (kh) { window._kh = kh; document.addEventListener('keydown', kh); } // after mount(), which clears the previous handler
     tick(); timerInt = setInterval(tick, 500);
   };
@@ -743,6 +743,8 @@ async function pageAdmin(tab = 'stats') {
   if (!me || me.role !== 'admin') return (location.hash = '#/');
   const body = h('div', {});
   mount(h('h2', {}, '관리자'), h('div', { class: 'tabs' }, ADMIN_TABS.map(([k, l]) => h('button', { class: k === tab ? 'on' : '', onclick: () => (location.hash = `#/admin/${k}`) }, l))), body);
+  document.querySelector('.tabs .on')?.scrollIntoView({ inline: 'center', block: 'nearest' }); // phones: keep the current tab visible
+  window.scrollTo(0, 0);
   await ({ stats: adminStats, users: adminUsers, orders: adminOrders, products: adminProducts, questions: adminQuestions, grading: adminGrading, payments: adminPayments, coupons: adminCoupons, security: adminSecurity }[tab] || adminStats)(body);
 }
 async function adminStats(b) {

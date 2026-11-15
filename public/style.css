@@ -226,7 +226,8 @@ details.faq p{color:var(--muted);padding:0 0 18px;margin:0;max-width:44em}
 .hero-score{text-align:right}
 
 /* table-scroll: wide tables scroll sideways on small screens instead of overflowing the page */
-@media (max-width:760px){table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;white-space:nowrap}}
+@media (max-width:1024px){table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}}
+td{overflow-wrap:anywhere}
 
 /* ===================== polish & responsive ===================== */
 #app>*{animation:rise .32s cubic-bezier(.2,.7,.2,1) backwards} /* backwards, not both: a finished transform animation would trap position:fixed children */
@@ -317,3 +318,33 @@ button.choice{width:100%;text-align:left;font:inherit;color:inherit;cursor:point
 
 .badge{white-space:nowrap}
 #security{scroll-margin-top:84px}
+
+/* ===================== phones: stacked tables, scrollable tabs, modals ===================== */
+@media (max-width:640px){
+  table{display:block;overflow:visible;white-space:normal;font-size:.9rem}
+  table>tbody,table>thead{display:block}
+  table tr{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px;padding:12px 0;border-bottom:1px solid var(--rule-2)}
+  table tr:last-child{border-bottom:0}
+  table td,table th{border:0;padding:0;min-width:0;overflow-wrap:anywhere}
+  table tr:has(>th+th){display:none} /* column-header rows: the cells explain themselves once stacked */
+  table td:first-child{flex-basis:100%;font-weight:600}
+  table td:empty{display:none}
+  table td:last-child:has(button,.btn){margin-left:auto}
+  table th:first-child{flex-basis:100%;text-transform:none;letter-spacing:0;font-size:.78rem;border:0}
+  .tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-left:calc(-1 * clamp(16px,4vw,32px));margin-right:calc(-1 * clamp(16px,4vw,32px));padding:0 clamp(16px,4vw,32px)}
+  .tabs::-webkit-scrollbar{display:none}.tabs button{flex:0 0 auto}
+  .modal{place-items:end center;padding:0}
+  .modal>.card{max-width:none;max-height:92vh;overflow:auto;box-shadow:none;border-left:0;border-right:0;border-bottom:0;padding:22px 18px calc(22px + env(safe-area-inset-bottom));animation:sheet .22s cubic-bezier(.2,.7,.2,1)}
+  .modal .paymethods .btn{flex:1 1 calc(50% - 8px)}
+  .modal .row>.btn:not(.sm){flex:1 1 100%}
+  .notice-bar{font-size:.84rem;padding:8px 12px}
+  .share-url{flex-direction:column}
+  .grid2{grid-template-columns:1fr}
+  input,select,textarea{font-size:16px} /* iOS: no zoom on focus */
+  .score-hero{flex-direction:column;align-items:flex-start;gap:16px}.hero-score{text-align:left}
+  .sticky-score{top:56px}
+}
+@keyframes sheet{from{transform:translateY(24px);opacity:.4}to{transform:none;opacity:1}}
+@media (pointer:coarse){.hide-touch{display:none}}
+@media (max-width:700px){.exam-foot .btn{flex:1}.exam-foot{gap:10px}}
+@media (max-width:400px){.btn.lg{white-space:normal;max-width:100%;padding-left:18px;padding-right:18px}}
