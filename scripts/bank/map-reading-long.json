@@ -1,0 +1,947 @@
+[
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 4,
+    "passage": "Nadia had promised herself she would not cry at the regional science fair, but when the judge walked past her table without stopping, her throat tightened anyway.\n\nHer project was a water filter constructed from sand, gravel, and activated charcoal packed into a carefully cut plastic bottle. It was not especially impressive to look at. Across the aisle, a boy named Theo had built a robotic arm that poured lemonade into paper cups, and an enthusiastic crowd of parents had gathered around it, laughing and applauding every time another cup filled.\n\nNadia looked down at her own table, where two jars sat side by side: one full of cloudy brown pond water, the other nearly transparent. She had spent three entire weekends testing different combinations of layers, recording every result in a notebook whose corners had grown soft from constant handling.\n\n\"Is this the one that cleans water?\"\n\nShe looked up to see a girl of about seven standing at the edge of the table, holding her grandmother's hand and pointing at the clear jar as if it were a magic trick.\n\n\"It doesn't make it safe to drink,\" Nadia explained quickly. \"But it removes most of the dirt, because the sand catches the larger particles and the charcoal traps substances you can't even see.\"\n\nThe girl's grandmother leaned closer. \"Where we lived before, we had to boil everything, every pot, every single morning,\" she said quietly. \"Does a filter like this cost very much?\"\n\n\"Almost nothing,\" Nadia replied. \"You only need a bottle and some inexpensive materials from a garden store.\"\n\nThe grandmother nodded thoughtfully and asked if she could copy the diagram. Nadia tore a clean page from the back of her notebook and drew it again, labeling each layer with careful, deliberate handwriting.\n\nWhen the judges announced the winners an hour later, Nadia's name was not called, but she applauded for Theo anyway. In her pocket, folded small, was the thank-you note the little girl had drawn for her: a bottle, a jar of clear water, and a lopsided, smiling sun.",
+    "stem": "Which statement best expresses a theme of the passage?",
+    "choices": [
+      "Winning an award is the only true measure of a good project.",
+      "The worth of our work can lie in how it helps others.",
+      "Flashy inventions are usually more useful than simple ones.",
+      "Younger children often understand science better than adults."
+    ],
+    "answer": 1,
+    "explanation": "Nadia does not win, yet the grandmother copies her diagram and the girl gives her a thank-you note, showing her project mattered in a real way."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 4,
+    "passage": "Nadia had promised herself she would not cry at the regional science fair, but when the judge walked past her table without stopping, her throat tightened anyway.\n\nHer project was a water filter constructed from sand, gravel, and activated charcoal packed into a carefully cut plastic bottle. It was not especially impressive to look at. Across the aisle, a boy named Theo had built a robotic arm that poured lemonade into paper cups, and an enthusiastic crowd of parents had gathered around it, laughing and applauding every time another cup filled.\n\nNadia looked down at her own table, where two jars sat side by side: one full of cloudy brown pond water, the other nearly transparent. She had spent three entire weekends testing different combinations of layers, recording every result in a notebook whose corners had grown soft from constant handling.\n\n\"Is this the one that cleans water?\"\n\nShe looked up to see a girl of about seven standing at the edge of the table, holding her grandmother's hand and pointing at the clear jar as if it were a magic trick.\n\n\"It doesn't make it safe to drink,\" Nadia explained quickly. \"But it removes most of the dirt, because the sand catches the larger particles and the charcoal traps substances you can't even see.\"\n\nThe girl's grandmother leaned closer. \"Where we lived before, we had to boil everything, every pot, every single morning,\" she said quietly. \"Does a filter like this cost very much?\"\n\n\"Almost nothing,\" Nadia replied. \"You only need a bottle and some inexpensive materials from a garden store.\"\n\nThe grandmother nodded thoughtfully and asked if she could copy the diagram. Nadia tore a clean page from the back of her notebook and drew it again, labeling each layer with careful, deliberate handwriting.\n\nWhen the judges announced the winners an hour later, Nadia's name was not called, but she applauded for Theo anyway. In her pocket, folded small, was the thank-you note the little girl had drawn for her: a bottle, a jar of clear water, and a lopsided, smiling sun.",
+    "stem": "Why does Nadia quickly tell the girl that the filter \"doesn't make it safe to drink\"?",
+    "choices": [
+      "She is embarrassed that her project is so simple.",
+      "She hopes the girl will move on to Theo's table.",
+      "She wants to be honest about what the filter can do.",
+      "She is not sure how her own filter really works."
+    ],
+    "answer": 2,
+    "explanation": "Nadia corrects the idea right away and then explains clearly how each layer works, showing she understands it and wants to be accurate."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 4,
+    "passage": "Nadia had promised herself she would not cry at the regional science fair, but when the judge walked past her table without stopping, her throat tightened anyway.\n\nHer project was a water filter constructed from sand, gravel, and activated charcoal packed into a carefully cut plastic bottle. It was not especially impressive to look at. Across the aisle, a boy named Theo had built a robotic arm that poured lemonade into paper cups, and an enthusiastic crowd of parents had gathered around it, laughing and applauding every time another cup filled.\n\nNadia looked down at her own table, where two jars sat side by side: one full of cloudy brown pond water, the other nearly transparent. She had spent three entire weekends testing different combinations of layers, recording every result in a notebook whose corners had grown soft from constant handling.\n\n\"Is this the one that cleans water?\"\n\nShe looked up to see a girl of about seven standing at the edge of the table, holding her grandmother's hand and pointing at the clear jar as if it were a magic trick.\n\n\"It doesn't make it safe to drink,\" Nadia explained quickly. \"But it removes most of the dirt, because the sand catches the larger particles and the charcoal traps substances you can't even see.\"\n\nThe girl's grandmother leaned closer. \"Where we lived before, we had to boil everything, every pot, every single morning,\" she said quietly. \"Does a filter like this cost very much?\"\n\n\"Almost nothing,\" Nadia replied. \"You only need a bottle and some inexpensive materials from a garden store.\"\n\nThe grandmother nodded thoughtfully and asked if she could copy the diagram. Nadia tore a clean page from the back of her notebook and drew it again, labeling each layer with careful, deliberate handwriting.\n\nWhen the judges announced the winners an hour later, Nadia's name was not called, but she applauded for Theo anyway. In her pocket, folded small, was the thank-you note the little girl had drawn for her: a bottle, a jar of clear water, and a lopsided, smiling sun.",
+    "stem": "Which sentence best shows that Nadia's project has practical value to the grandmother?",
+    "choices": [
+      "\"Across the aisle, a boy named Theo had built a robotic arm that poured lemonade into paper cups.\"",
+      "\"She had spent three entire weekends testing different combinations of layers.\"",
+      "\"'It doesn't make it safe to drink,' Nadia explained quickly.\"",
+      "\"The grandmother nodded thoughtfully and asked if she could copy the diagram.\""
+    ],
+    "answer": 3,
+    "explanation": "Asking to copy the diagram shows the grandmother wants to build and use the filter herself."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 4,
+    "passage": "Nadia had promised herself she would not cry at the regional science fair, but when the judge walked past her table without stopping, her throat tightened anyway.\n\nHer project was a water filter constructed from sand, gravel, and activated charcoal packed into a carefully cut plastic bottle. It was not especially impressive to look at. Across the aisle, a boy named Theo had built a robotic arm that poured lemonade into paper cups, and an enthusiastic crowd of parents had gathered around it, laughing and applauding every time another cup filled.\n\nNadia looked down at her own table, where two jars sat side by side: one full of cloudy brown pond water, the other nearly transparent. She had spent three entire weekends testing different combinations of layers, recording every result in a notebook whose corners had grown soft from constant handling.\n\n\"Is this the one that cleans water?\"\n\nShe looked up to see a girl of about seven standing at the edge of the table, holding her grandmother's hand and pointing at the clear jar as if it were a magic trick.\n\n\"It doesn't make it safe to drink,\" Nadia explained quickly. \"But it removes most of the dirt, because the sand catches the larger particles and the charcoal traps substances you can't even see.\"\n\nThe girl's grandmother leaned closer. \"Where we lived before, we had to boil everything, every pot, every single morning,\" she said quietly. \"Does a filter like this cost very much?\"\n\n\"Almost nothing,\" Nadia replied. \"You only need a bottle and some inexpensive materials from a garden store.\"\n\nThe grandmother nodded thoughtfully and asked if she could copy the diagram. Nadia tore a clean page from the back of her notebook and drew it again, labeling each layer with careful, deliberate handwriting.\n\nWhen the judges announced the winners an hour later, Nadia's name was not called, but she applauded for Theo anyway. In her pocket, folded small, was the thank-you note the little girl had drawn for her: a bottle, a jar of clear water, and a lopsided, smiling sun.",
+    "stem": "Why does the author describe Theo's robotic arm in paragraph 2?",
+    "choices": [
+      "To contrast Nadia's quiet project with one that draws a crowd",
+      "To explain how Theo helped Nadia build her water filter",
+      "To show that the judges did not like any of the projects",
+      "To suggest that Theo's project did not deserve to win"
+    ],
+    "answer": 0,
+    "explanation": "Right after saying Nadia's project \"was not especially impressive to look at,\" the author describes the crowd laughing and applauding around Theo's robot, setting up a contrast."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 4,
+    "passage": "The summer I turned twelve, my father decided I was finally old enough to work in his hardware store on Saturday mornings. I imagined myself operating the cash register with the confidence of a bank teller. Instead, he handed me a broom and pointed toward the storage room, where thirty years of sawdust had settled into every corner and crevice.\n\nFor the entire first month, I swept. I sorted loose screws into tiny drawers labeled in my father's cramped handwriting, and I discovered that a wood screw and a machine screw look nearly identical until you examine them side by side. I was thoroughly bored, and I made certain that everyone around me knew it.\n\nThen one Saturday in July, an elderly customer arrived holding a broken faucet handle. Because my father was occupied with a delivery, the man turned hopefully to me. I panicked, since I had no idea what the part was called, let alone where to locate it.\n\nBut as I turned the handle over in my hands, something clicked. I had sorted a hundred parts exactly like it. I walked confidently to the third aisle, pulled open the drawer second from the bottom, and found a perfect match. The man tested it right there at the counter, and it fit precisely.\n\n\"Your father certainly trained you well,\" he remarked.\n\nI wanted to explain that my father hadn't trained me at all, that I had only been sweeping and sorting. Then I realized that the sweeping and sorting had been exactly the training. Every tedious drawer had been a lesson I didn't know I was taking.\n\nMy father never admitted that he had planned it that way, and I never asked him. But the following Saturday, when he handed me the broom, I accepted it without complaining.",
+    "stem": "What is the central idea of this memoir?",
+    "choices": [
+      "Children should not be asked to work in a family business.",
+      "Simple, dull tasks can teach skills we don't notice learning.",
+      "Customers trust older workers more than younger ones.",
+      "A good store must keep its parts sorted in labeled drawers."
+    ],
+    "answer": 1,
+    "explanation": "The narrator realizes that the sweeping and sorting \"had been exactly the training\" and that every tedious drawer \"had been a lesson I didn't know I was taking.\""
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 4,
+    "passage": "The summer I turned twelve, my father decided I was finally old enough to work in his hardware store on Saturday mornings. I imagined myself operating the cash register with the confidence of a bank teller. Instead, he handed me a broom and pointed toward the storage room, where thirty years of sawdust had settled into every corner and crevice.\n\nFor the entire first month, I swept. I sorted loose screws into tiny drawers labeled in my father's cramped handwriting, and I discovered that a wood screw and a machine screw look nearly identical until you examine them side by side. I was thoroughly bored, and I made certain that everyone around me knew it.\n\nThen one Saturday in July, an elderly customer arrived holding a broken faucet handle. Because my father was occupied with a delivery, the man turned hopefully to me. I panicked, since I had no idea what the part was called, let alone where to locate it.\n\nBut as I turned the handle over in my hands, something clicked. I had sorted a hundred parts exactly like it. I walked confidently to the third aisle, pulled open the drawer second from the bottom, and found a perfect match. The man tested it right there at the counter, and it fit precisely.\n\n\"Your father certainly trained you well,\" he remarked.\n\nI wanted to explain that my father hadn't trained me at all, that I had only been sweeping and sorting. Then I realized that the sweeping and sorting had been exactly the training. Every tedious drawer had been a lesson I didn't know I was taking.\n\nMy father never admitted that he had planned it that way, and I never asked him. But the following Saturday, when he handed me the broom, I accepted it without complaining.",
+    "stem": "In paragraph 4, what does the phrase \"something clicked\" mean?",
+    "choices": [
+      "The narrator suddenly understood something.",
+      "The faucet handle snapped back into place.",
+      "A drawer in the third aisle locked shut.",
+      "The narrator began to feel more nervous."
+    ],
+    "answer": 0,
+    "explanation": "Right after \"something clicked,\" the narrator recognizes the part from sorting and knows where to find it, so the phrase means a sudden understanding."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 4,
+    "passage": "The summer I turned twelve, my father decided I was finally old enough to work in his hardware store on Saturday mornings. I imagined myself operating the cash register with the confidence of a bank teller. Instead, he handed me a broom and pointed toward the storage room, where thirty years of sawdust had settled into every corner and crevice.\n\nFor the entire first month, I swept. I sorted loose screws into tiny drawers labeled in my father's cramped handwriting, and I discovered that a wood screw and a machine screw look nearly identical until you examine them side by side. I was thoroughly bored, and I made certain that everyone around me knew it.\n\nThen one Saturday in July, an elderly customer arrived holding a broken faucet handle. Because my father was occupied with a delivery, the man turned hopefully to me. I panicked, since I had no idea what the part was called, let alone where to locate it.\n\nBut as I turned the handle over in my hands, something clicked. I had sorted a hundred parts exactly like it. I walked confidently to the third aisle, pulled open the drawer second from the bottom, and found a perfect match. The man tested it right there at the counter, and it fit precisely.\n\n\"Your father certainly trained you well,\" he remarked.\n\nI wanted to explain that my father hadn't trained me at all, that I had only been sweeping and sorting. Then I realized that the sweeping and sorting had been exactly the training. Every tedious drawer had been a lesson I didn't know I was taking.\n\nMy father never admitted that he had planned it that way, and I never asked him. But the following Saturday, when he handed me the broom, I accepted it without complaining.",
+    "stem": "Which sentence best shows that the narrator's attitude toward the work has changed?",
+    "choices": [
+      "\"I was thoroughly bored, and I made certain that everyone around me knew it.\"",
+      "\"I panicked, since I had no idea what the part was called, let alone where to locate it.\"",
+      "\"But the following Saturday, when he handed me the broom, I accepted it without complaining.\"",
+      "\"Because my father was occupied with a delivery, the man turned hopefully to me.\""
+    ],
+    "answer": 2,
+    "explanation": "Earlier the narrator complained openly; accepting the broom \"without complaining\" shows the new attitude."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 4,
+    "passage": "The summer I turned twelve, my father decided I was finally old enough to work in his hardware store on Saturday mornings. I imagined myself operating the cash register with the confidence of a bank teller. Instead, he handed me a broom and pointed toward the storage room, where thirty years of sawdust had settled into every corner and crevice.\n\nFor the entire first month, I swept. I sorted loose screws into tiny drawers labeled in my father's cramped handwriting, and I discovered that a wood screw and a machine screw look nearly identical until you examine them side by side. I was thoroughly bored, and I made certain that everyone around me knew it.\n\nThen one Saturday in July, an elderly customer arrived holding a broken faucet handle. Because my father was occupied with a delivery, the man turned hopefully to me. I panicked, since I had no idea what the part was called, let alone where to locate it.\n\nBut as I turned the handle over in my hands, something clicked. I had sorted a hundred parts exactly like it. I walked confidently to the third aisle, pulled open the drawer second from the bottom, and found a perfect match. The man tested it right there at the counter, and it fit precisely.\n\n\"Your father certainly trained you well,\" he remarked.\n\nI wanted to explain that my father hadn't trained me at all, that I had only been sweeping and sorting. Then I realized that the sweeping and sorting had been exactly the training. Every tedious drawer had been a lesson I didn't know I was taking.\n\nMy father never admitted that he had planned it that way, and I never asked him. But the following Saturday, when he handed me the broom, I accepted it without complaining.",
+    "stem": "How does the detail about the wood screw and the machine screw in paragraph 2 contribute to the passage?",
+    "choices": [
+      "It shows that the father's labels were hard to read.",
+      "It explains why the narrator wanted to quit the job.",
+      "It proves the store sold mostly screws and nails.",
+      "It shows the narrator was learning while sorting."
+    ],
+    "answer": 3,
+    "explanation": "Learning to tell similar parts apart is the knowledge that later lets the narrator match the faucet handle, so the detail shows learning was happening."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 4,
+    "passage": "Every autumn, forests across much of North America turn from green to brilliant shades of red, orange, and gold. Many people assume the leaves are changing into new colors. In fact, many of those colors were present all along.\n\nDuring spring and summer, leaves are packed with chlorophyll, a green pigment that plants use to capture energy from sunlight. Chlorophyll is so plentiful that it hides the other pigments in the leaf, much as a bright spotlight can wash out the glow of a candle. Among these hidden pigments are carotenoids, which produce yellow and orange. Carotenoids are the same substances that give carrots and corn their color.\n\nAs days grow shorter and nights grow cooler, trees prepare for winter. Many trees cannot keep their broad, thin leaves alive through freezing weather, so they begin to shut down food production. The tree stops making new chlorophyll, and the green pigment that remains breaks down. As the green fades, the yellows and oranges finally show through.\n\nReds and purples work differently. These colors come from pigments called anthocyanins, which many trees produce only in the fall. Scientists believe anthocyanins may act like a sunscreen, protecting the leaf while the tree pulls valuable nutrients out of it before it drops. Sunny days and cool nights tend to produce the most anthocyanins, which is why some autumns are far more colorful than others.\n\nEventually, a layer of cells forms where the leaf stem meets the branch. This layer slowly cuts the leaf off from the tree, and the leaf falls. The tree, now bare, will rest until spring, when the cycle begins again.",
+    "stem": "What is the main idea of the passage?",
+    "choices": [
+      "Fall colors appear as leaf pigments change while trees prepare for winter.",
+      "Carrots and corn get their color from the same pigments as fall leaves.",
+      "Trees lose their leaves because freezing weather damages their branches.",
+      "Scientists still do not know why leaves change color in the autumn."
+    ],
+    "answer": 0,
+    "explanation": "The passage explains how chlorophyll breaks down to reveal yellows and oranges and how anthocyanins add reds as trees get ready for winter."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 4,
+    "passage": "Every autumn, forests across much of North America turn from green to brilliant shades of red, orange, and gold. Many people assume the leaves are changing into new colors. In fact, many of those colors were present all along.\n\nDuring spring and summer, leaves are packed with chlorophyll, a green pigment that plants use to capture energy from sunlight. Chlorophyll is so plentiful that it hides the other pigments in the leaf, much as a bright spotlight can wash out the glow of a candle. Among these hidden pigments are carotenoids, which produce yellow and orange. Carotenoids are the same substances that give carrots and corn their color.\n\nAs days grow shorter and nights grow cooler, trees prepare for winter. Many trees cannot keep their broad, thin leaves alive through freezing weather, so they begin to shut down food production. The tree stops making new chlorophyll, and the green pigment that remains breaks down. As the green fades, the yellows and oranges finally show through.\n\nReds and purples work differently. These colors come from pigments called anthocyanins, which many trees produce only in the fall. Scientists believe anthocyanins may act like a sunscreen, protecting the leaf while the tree pulls valuable nutrients out of it before it drops. Sunny days and cool nights tend to produce the most anthocyanins, which is why some autumns are far more colorful than others.\n\nEventually, a layer of cells forms where the leaf stem meets the branch. This layer slowly cuts the leaf off from the tree, and the leaf falls. The tree, now bare, will rest until spring, when the cycle begins again.",
+    "stem": "As used in paragraph 2, the word \"plentiful\" most nearly means",
+    "choices": [
+      "bright in color",
+      "present in large amounts",
+      "hard to break down",
+      "found only in summer"
+    ],
+    "answer": 1,
+    "explanation": "Chlorophyll is so plentiful that it \"hides the other pigments,\" meaning there is a great deal of it."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 4,
+    "passage": "Every autumn, forests across much of North America turn from green to brilliant shades of red, orange, and gold. Many people assume the leaves are changing into new colors. In fact, many of those colors were present all along.\n\nDuring spring and summer, leaves are packed with chlorophyll, a green pigment that plants use to capture energy from sunlight. Chlorophyll is so plentiful that it hides the other pigments in the leaf, much as a bright spotlight can wash out the glow of a candle. Among these hidden pigments are carotenoids, which produce yellow and orange. Carotenoids are the same substances that give carrots and corn their color.\n\nAs days grow shorter and nights grow cooler, trees prepare for winter. Many trees cannot keep their broad, thin leaves alive through freezing weather, so they begin to shut down food production. The tree stops making new chlorophyll, and the green pigment that remains breaks down. As the green fades, the yellows and oranges finally show through.\n\nReds and purples work differently. These colors come from pigments called anthocyanins, which many trees produce only in the fall. Scientists believe anthocyanins may act like a sunscreen, protecting the leaf while the tree pulls valuable nutrients out of it before it drops. Sunny days and cool nights tend to produce the most anthocyanins, which is why some autumns are far more colorful than others.\n\nEventually, a layer of cells forms where the leaf stem meets the branch. This layer slowly cuts the leaf off from the tree, and the leaf falls. The tree, now bare, will rest until spring, when the cycle begins again.",
+    "stem": "Which sentence best supports the idea that yellow and orange colors are in the leaf during the summer?",
+    "choices": [
+      "\"Reds and purples work differently.\"",
+      "\"Sunny days and cool nights tend to produce the most anthocyanins.\"",
+      "\"Chlorophyll is so plentiful that it hides the other pigments in the leaf.\"",
+      "\"Eventually, a layer of cells forms where the leaf stem meets the branch.\""
+    ],
+    "answer": 2,
+    "explanation": "Saying chlorophyll \"hides\" the other pigments shows the yellow and orange carotenoids are already there, just covered up."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 4,
+    "passage": "Every autumn, forests across much of North America turn from green to brilliant shades of red, orange, and gold. Many people assume the leaves are changing into new colors. In fact, many of those colors were present all along.\n\nDuring spring and summer, leaves are packed with chlorophyll, a green pigment that plants use to capture energy from sunlight. Chlorophyll is so plentiful that it hides the other pigments in the leaf, much as a bright spotlight can wash out the glow of a candle. Among these hidden pigments are carotenoids, which produce yellow and orange. Carotenoids are the same substances that give carrots and corn their color.\n\nAs days grow shorter and nights grow cooler, trees prepare for winter. Many trees cannot keep their broad, thin leaves alive through freezing weather, so they begin to shut down food production. The tree stops making new chlorophyll, and the green pigment that remains breaks down. As the green fades, the yellows and oranges finally show through.\n\nReds and purples work differently. These colors come from pigments called anthocyanins, which many trees produce only in the fall. Scientists believe anthocyanins may act like a sunscreen, protecting the leaf while the tree pulls valuable nutrients out of it before it drops. Sunny days and cool nights tend to produce the most anthocyanins, which is why some autumns are far more colorful than others.\n\nEventually, a layer of cells forms where the leaf stem meets the branch. This layer slowly cuts the leaf off from the tree, and the leaf falls. The tree, now bare, will rest until spring, when the cycle begins again.",
+    "stem": "Based on the passage, a fall with mostly cloudy days and warm nights would most likely have",
+    "choices": [
+      "fewer bright red leaves than usual",
+      "leaves that stay green all winter long",
+      "more yellow leaves than any other year",
+      "trees that keep making new chlorophyll"
+    ],
+    "answer": 0,
+    "explanation": "The passage says sunny days and cool nights produce the most anthocyanins, the red pigments, so cloudy days and warm nights would likely mean less red."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 4,
+    "passage": "In the early 1800s, moving goods across New York State was slow and costly. Roads were rough dirt tracks that turned to mud in the rain, and a wagon loaded with grain might take weeks to travel from the Great Lakes to the Atlantic coast. Farmers in the western part of the state often found it cheaper to send their crops south than to ship them east.\n\nGovernor DeWitt Clinton believed the answer was a canal: a human-made waterway stretching more than 360 miles from Albany, on the Hudson River, to Buffalo, on Lake Erie. Many people thought the plan was foolish. Critics mocked it as \"Clinton's Ditch,\" and even President Thomas Jefferson reportedly called it \"little short of madness.\"\n\nConstruction began in 1817. Workers, many of them recent immigrants, dug the channel largely by hand, using shovels, horses, and simple machines. Engineers had little formal training, so they learned as they went. To carry boats over hills and valleys, they built a series of locks, which are chambers that raise or lower boats by filling or draining water.\n\nWhen the canal opened in 1825, the doubters were quickly proven wrong. Mule-drawn boats could now carry goods from Buffalo to New York City in a fraction of the time, and shipping costs dropped dramatically. Towns such as Rochester and Syracuse grew rapidly along the canal's banks. New York City became the busiest port in the nation, and settlers poured into the Midwest, knowing their crops could reach eastern markets.\n\nWithin a few decades, railroads began to replace canals as the fastest way to move freight. Yet the Erie Canal had already done its work. It had shown that a bold public project could reshape the economy of an entire region.",
+    "stem": "Which statement best expresses the central idea of the passage?",
+    "choices": [
+      "Railroads were a better invention than canals in the 1800s.",
+      "Building a canal by hand was dangerous work for immigrants.",
+      "Though many doubted it, the Erie Canal transformed trade and growth.",
+      "DeWitt Clinton was the most popular governor in New York history."
+    ],
+    "answer": 2,
+    "explanation": "The passage describes the doubts about the canal and then shows how it cut shipping costs, grew towns, and made New York City the busiest port."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 4,
+    "passage": "In the early 1800s, moving goods across New York State was slow and costly. Roads were rough dirt tracks that turned to mud in the rain, and a wagon loaded with grain might take weeks to travel from the Great Lakes to the Atlantic coast. Farmers in the western part of the state often found it cheaper to send their crops south than to ship them east.\n\nGovernor DeWitt Clinton believed the answer was a canal: a human-made waterway stretching more than 360 miles from Albany, on the Hudson River, to Buffalo, on Lake Erie. Many people thought the plan was foolish. Critics mocked it as \"Clinton's Ditch,\" and even President Thomas Jefferson reportedly called it \"little short of madness.\"\n\nConstruction began in 1817. Workers, many of them recent immigrants, dug the channel largely by hand, using shovels, horses, and simple machines. Engineers had little formal training, so they learned as they went. To carry boats over hills and valleys, they built a series of locks, which are chambers that raise or lower boats by filling or draining water.\n\nWhen the canal opened in 1825, the doubters were quickly proven wrong. Mule-drawn boats could now carry goods from Buffalo to New York City in a fraction of the time, and shipping costs dropped dramatically. Towns such as Rochester and Syracuse grew rapidly along the canal's banks. New York City became the busiest port in the nation, and settlers poured into the Midwest, knowing their crops could reach eastern markets.\n\nWithin a few decades, railroads began to replace canals as the fastest way to move freight. Yet the Erie Canal had already done its work. It had shown that a bold public project could reshape the economy of an entire region.",
+    "stem": "Why does the author include the nickname \"Clinton's Ditch\"?",
+    "choices": [
+      "To show that many people did not take the plan seriously",
+      "To explain how the canal was named after it was finished",
+      "To show that Clinton dug most of the canal by himself",
+      "To prove that the canal was too shallow to carry boats"
+    ],
+    "answer": 0,
+    "explanation": "The nickname appears right after \"Many people thought the plan was foolish\" and is described as something critics \"mocked\" it with."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 4,
+    "passage": "In the early 1800s, moving goods across New York State was slow and costly. Roads were rough dirt tracks that turned to mud in the rain, and a wagon loaded with grain might take weeks to travel from the Great Lakes to the Atlantic coast. Farmers in the western part of the state often found it cheaper to send their crops south than to ship them east.\n\nGovernor DeWitt Clinton believed the answer was a canal: a human-made waterway stretching more than 360 miles from Albany, on the Hudson River, to Buffalo, on Lake Erie. Many people thought the plan was foolish. Critics mocked it as \"Clinton's Ditch,\" and even President Thomas Jefferson reportedly called it \"little short of madness.\"\n\nConstruction began in 1817. Workers, many of them recent immigrants, dug the channel largely by hand, using shovels, horses, and simple machines. Engineers had little formal training, so they learned as they went. To carry boats over hills and valleys, they built a series of locks, which are chambers that raise or lower boats by filling or draining water.\n\nWhen the canal opened in 1825, the doubters were quickly proven wrong. Mule-drawn boats could now carry goods from Buffalo to New York City in a fraction of the time, and shipping costs dropped dramatically. Towns such as Rochester and Syracuse grew rapidly along the canal's banks. New York City became the busiest port in the nation, and settlers poured into the Midwest, knowing their crops could reach eastern markets.\n\nWithin a few decades, railroads began to replace canals as the fastest way to move freight. Yet the Erie Canal had already done its work. It had shown that a bold public project could reshape the economy of an entire region.",
+    "stem": "Which sentence best supports the idea that the canal made shipping more efficient?",
+    "choices": [
+      "\"Construction began in 1817.\"",
+      "\"Engineers had little formal training, so they learned as they went.\"",
+      "\"Within a few decades, railroads began to replace canals as the fastest way to move freight.\"",
+      "\"Mule-drawn boats could now carry goods from Buffalo to New York City in a fraction of the time, and shipping costs dropped dramatically.\""
+    ],
+    "answer": 3,
+    "explanation": "This sentence states that goods moved faster and more cheaply once the canal opened."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 4,
+    "passage": "In the early 1800s, moving goods across New York State was slow and costly. Roads were rough dirt tracks that turned to mud in the rain, and a wagon loaded with grain might take weeks to travel from the Great Lakes to the Atlantic coast. Farmers in the western part of the state often found it cheaper to send their crops south than to ship them east.\n\nGovernor DeWitt Clinton believed the answer was a canal: a human-made waterway stretching more than 360 miles from Albany, on the Hudson River, to Buffalo, on Lake Erie. Many people thought the plan was foolish. Critics mocked it as \"Clinton's Ditch,\" and even President Thomas Jefferson reportedly called it \"little short of madness.\"\n\nConstruction began in 1817. Workers, many of them recent immigrants, dug the channel largely by hand, using shovels, horses, and simple machines. Engineers had little formal training, so they learned as they went. To carry boats over hills and valleys, they built a series of locks, which are chambers that raise or lower boats by filling or draining water.\n\nWhen the canal opened in 1825, the doubters were quickly proven wrong. Mule-drawn boats could now carry goods from Buffalo to New York City in a fraction of the time, and shipping costs dropped dramatically. Towns such as Rochester and Syracuse grew rapidly along the canal's banks. New York City became the busiest port in the nation, and settlers poured into the Midwest, knowing their crops could reach eastern markets.\n\nWithin a few decades, railroads began to replace canals as the fastest way to move freight. Yet the Erie Canal had already done its work. It had shown that a bold public project could reshape the economy of an entire region.",
+    "stem": "As used in paragraph 4, the word \"doubters\" refers to people who",
+    "choices": [
+      "dug the canal using shovels and horses",
+      "believed the canal would not succeed",
+      "moved west to start new farms",
+      "built the locks along the canal"
+    ],
+    "answer": 1,
+    "explanation": "The doubters are the critics from paragraph 2 who thought the plan was foolish; they were \"proven wrong\" when the canal succeeded."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 5,
+    "passage": "The house had been sold in October, and by the second week of November only the study remained. Elena had deliberately left it for last, the way a student postpones the most difficult problem on an examination, hoping that by the time she reached it she would somehow have acquired a competence she had lacked at the beginning.\n\nHer father had worked as a land surveyor for forty years, and the room bore abundant evidence of his profession: rolled maps bound with rubber bands gone brittle, a brass compass whose needle still trembled faithfully toward the window, and shelf after shelf of field notebooks, each meticulously labeled with a county and a year. She had expected to feel grief here; what she had not anticipated was irritation. He had preserved everything, from receipts for pencils to weather reports clipped from newspapers that no longer existed, as if the world might someday require him to document precisely where he had been on any particular afternoon.\n\nShe opened a notebook at random. Columns of numbers, angles and distances, filled the pages in his small, upright handwriting, and then, in the margin beside a measurement from 1987, appeared a note in the same hand: Lena lost first tooth today; measured the creek bend twice and kept losing count.\n\nElena sat down slowly on the dusty floor, the notebook open across her knees.\n\nShe reached for another. Beside a boundary line in a neighboring county he had written: Lena said \"Dad\" on the telephone, not \"Daddy,\" noted. Beside a hillside elevation recorded years afterward: Drove Lena to the train station; instruments functioning properly, hands not steady.\n\nFor an hour she turned pages, and the precise columns gradually receded until she perceived only the margins, a second survey running alongside the first, charting a territory he had never once described aloud. She had always believed her father was a man who measured things because he was incapable of speaking about them. Now she understood that he had been speaking all along, in the only notation he trusted, to a reader he perhaps never expected to arrive.\n\nWhen the movers came the following morning, she had already packed the notebooks into her own car. The maps, the compass, and the receipts she allowed them to take.",
+    "stem": "Which statement best expresses a theme of the passage?",
+    "choices": [
+      "Careful record keeping is the most important part of any profession.",
+      "Love may be expressed in quiet ways that others discover only later.",
+      "Children rarely appreciate the careers their parents have chosen.",
+      "Grief is easier to bear when a person stays busy with practical tasks."
+    ],
+    "answer": 1,
+    "explanation": "Elena discovers her father's private notes about her life in the margins and realizes he \"had been speaking all along\" in his own quiet way."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 5,
+    "passage": "The house had been sold in October, and by the second week of November only the study remained. Elena had deliberately left it for last, the way a student postpones the most difficult problem on an examination, hoping that by the time she reached it she would somehow have acquired a competence she had lacked at the beginning.\n\nHer father had worked as a land surveyor for forty years, and the room bore abundant evidence of his profession: rolled maps bound with rubber bands gone brittle, a brass compass whose needle still trembled faithfully toward the window, and shelf after shelf of field notebooks, each meticulously labeled with a county and a year. She had expected to feel grief here; what she had not anticipated was irritation. He had preserved everything, from receipts for pencils to weather reports clipped from newspapers that no longer existed, as if the world might someday require him to document precisely where he had been on any particular afternoon.\n\nShe opened a notebook at random. Columns of numbers, angles and distances, filled the pages in his small, upright handwriting, and then, in the margin beside a measurement from 1987, appeared a note in the same hand: Lena lost first tooth today; measured the creek bend twice and kept losing count.\n\nElena sat down slowly on the dusty floor, the notebook open across her knees.\n\nShe reached for another. Beside a boundary line in a neighboring county he had written: Lena said \"Dad\" on the telephone, not \"Daddy,\" noted. Beside a hillside elevation recorded years afterward: Drove Lena to the train station; instruments functioning properly, hands not steady.\n\nFor an hour she turned pages, and the precise columns gradually receded until she perceived only the margins, a second survey running alongside the first, charting a territory he had never once described aloud. She had always believed her father was a man who measured things because he was incapable of speaking about them. Now she understood that he had been speaking all along, in the only notation he trusted, to a reader he perhaps never expected to arrive.\n\nWhen the movers came the following morning, she had already packed the notebooks into her own car. The maps, the compass, and the receipts she allowed them to take.",
+    "stem": "In paragraph 6, the phrase \"a second survey running alongside the first\" refers to",
+    "choices": [
+      "a set of maps her father drew of a neighboring county",
+      "measurements her father repeated to check his accuracy",
+      "her father's notes about Elena's life beside his work data",
+      "a survey Elena plans to complete in her father's place"
+    ],
+    "answer": 2,
+    "explanation": "The \"second survey\" is in the margins, where her father recorded moments from Elena's life next to his professional measurements."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 5,
+    "passage": "The house had been sold in October, and by the second week of November only the study remained. Elena had deliberately left it for last, the way a student postpones the most difficult problem on an examination, hoping that by the time she reached it she would somehow have acquired a competence she had lacked at the beginning.\n\nHer father had worked as a land surveyor for forty years, and the room bore abundant evidence of his profession: rolled maps bound with rubber bands gone brittle, a brass compass whose needle still trembled faithfully toward the window, and shelf after shelf of field notebooks, each meticulously labeled with a county and a year. She had expected to feel grief here; what she had not anticipated was irritation. He had preserved everything, from receipts for pencils to weather reports clipped from newspapers that no longer existed, as if the world might someday require him to document precisely where he had been on any particular afternoon.\n\nShe opened a notebook at random. Columns of numbers, angles and distances, filled the pages in his small, upright handwriting, and then, in the margin beside a measurement from 1987, appeared a note in the same hand: Lena lost first tooth today; measured the creek bend twice and kept losing count.\n\nElena sat down slowly on the dusty floor, the notebook open across her knees.\n\nShe reached for another. Beside a boundary line in a neighboring county he had written: Lena said \"Dad\" on the telephone, not \"Daddy,\" noted. Beside a hillside elevation recorded years afterward: Drove Lena to the train station; instruments functioning properly, hands not steady.\n\nFor an hour she turned pages, and the precise columns gradually receded until she perceived only the margins, a second survey running alongside the first, charting a territory he had never once described aloud. She had always believed her father was a man who measured things because he was incapable of speaking about them. Now she understood that he had been speaking all along, in the only notation he trusted, to a reader he perhaps never expected to arrive.\n\nWhen the movers came the following morning, she had already packed the notebooks into her own car. The maps, the compass, and the receipts she allowed them to take.",
+    "stem": "How does Elena's attitude toward her father change over the course of the passage?",
+    "choices": [
+      "She moves from irritation at his habits to understanding of his hidden feelings.",
+      "She moves from grief over his death to relief that the house has been sold.",
+      "She moves from admiration of his career to frustration with his secrecy.",
+      "She moves from curiosity about his notebooks to boredom with his numbers."
+    ],
+    "answer": 0,
+    "explanation": "She first feels \"irritation\" at all he kept, but after reading the margins she \"understood that he had been speaking all along.\""
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 5,
+    "passage": "The house had been sold in October, and by the second week of November only the study remained. Elena had deliberately left it for last, the way a student postpones the most difficult problem on an examination, hoping that by the time she reached it she would somehow have acquired a competence she had lacked at the beginning.\n\nHer father had worked as a land surveyor for forty years, and the room bore abundant evidence of his profession: rolled maps bound with rubber bands gone brittle, a brass compass whose needle still trembled faithfully toward the window, and shelf after shelf of field notebooks, each meticulously labeled with a county and a year. She had expected to feel grief here; what she had not anticipated was irritation. He had preserved everything, from receipts for pencils to weather reports clipped from newspapers that no longer existed, as if the world might someday require him to document precisely where he had been on any particular afternoon.\n\nShe opened a notebook at random. Columns of numbers, angles and distances, filled the pages in his small, upright handwriting, and then, in the margin beside a measurement from 1987, appeared a note in the same hand: Lena lost first tooth today; measured the creek bend twice and kept losing count.\n\nElena sat down slowly on the dusty floor, the notebook open across her knees.\n\nShe reached for another. Beside a boundary line in a neighboring county he had written: Lena said \"Dad\" on the telephone, not \"Daddy,\" noted. Beside a hillside elevation recorded years afterward: Drove Lena to the train station; instruments functioning properly, hands not steady.\n\nFor an hour she turned pages, and the precise columns gradually receded until she perceived only the margins, a second survey running alongside the first, charting a territory he had never once described aloud. She had always believed her father was a man who measured things because he was incapable of speaking about them. Now she understood that he had been speaking all along, in the only notation he trusted, to a reader he perhaps never expected to arrive.\n\nWhen the movers came the following morning, she had already packed the notebooks into her own car. The maps, the compass, and the receipts she allowed them to take.",
+    "stem": "What does Elena's decision at the end of the passage most strongly suggest?",
+    "choices": [
+      "She plans to become a surveyor and needs her father's records.",
+      "She believes the maps and compass are worth more money than the notebooks.",
+      "She wants to hide her father's notes from the movers out of embarrassment.",
+      "She treasures the notebooks for their personal record, not the work tools."
+    ],
+    "answer": 3,
+    "explanation": "She keeps only the notebooks, which hold the notes about her, and lets the movers take the professional maps, compass, and receipts."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 5,
+    "passage": "Winter Orchard\n\nThe orchard holds its breath in February,\neach branch a dark sentence left unfinished,\nwritten in a hand the frost keeps correcting,\nwhile snow has filed the hills down to a whisper.\n\nMy grandfather walked these rows for fifty years,\npruning with the deliberate patience of a man\nwho trusted what he could not see:\nthe sap asleep inside the bark like ink\ninside a capped pen, waiting.\n\nNow the ladders lean against the empty shed,\ntheir rungs gone silver with disuse,\nand crows convene on the fence posts\nlike a council that has misplaced its agenda.\n\nStill, I have learned to read the bark:\nbeneath each knot, a bud is clenched\nas tightly as a fist around a coin,\nand the coin is April.\n\nSo I walk the rows the way he walked them,\nnot to harvest anything,\nbut to keep the promise the trees are keeping,\nto stand in the cold and believe in green.",
+    "stem": "Which statement best expresses the central idea of the poem?",
+    "choices": [
+      "Farming is too difficult to continue in harsh winter climates.",
+      "The speaker inherits a patient faith in renewal from a grandfather.",
+      "Crows and frost slowly destroy an orchard that has been abandoned.",
+      "The speaker regrets never learning to prune trees in the old way."
+    ],
+    "answer": 1,
+    "explanation": "The speaker walks the rows \"the way he walked them\" to \"believe in green,\" echoing the grandfather who \"trusted what he could not see.\""
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 5,
+    "passage": "Winter Orchard\n\nThe orchard holds its breath in February,\neach branch a dark sentence left unfinished,\nwritten in a hand the frost keeps correcting,\nwhile snow has filed the hills down to a whisper.\n\nMy grandfather walked these rows for fifty years,\npruning with the deliberate patience of a man\nwho trusted what he could not see:\nthe sap asleep inside the bark like ink\ninside a capped pen, waiting.\n\nNow the ladders lean against the empty shed,\ntheir rungs gone silver with disuse,\nand crows convene on the fence posts\nlike a council that has misplaced its agenda.\n\nStill, I have learned to read the bark:\nbeneath each knot, a bud is clenched\nas tightly as a fist around a coin,\nand the coin is April.\n\nSo I walk the rows the way he walked them,\nnot to harvest anything,\nbut to keep the promise the trees are keeping,\nto stand in the cold and believe in green.",
+    "stem": "What do the lines \"a bud is clenched / as tightly as a fist around a coin, / and the coin is April\" suggest?",
+    "choices": [
+      "The buds hold the promise of spring growth that will come later.",
+      "The orchard will earn money for the speaker when it is sold in April.",
+      "The trees have been damaged by the cold and will not bloom again.",
+      "The speaker is angry that winter has lasted longer than expected."
+    ],
+    "answer": 0,
+    "explanation": "The bud is tightly holding something valuable, April, meaning the new growth of spring waits inside it."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 5,
+    "passage": "Winter Orchard\n\nThe orchard holds its breath in February,\neach branch a dark sentence left unfinished,\nwritten in a hand the frost keeps correcting,\nwhile snow has filed the hills down to a whisper.\n\nMy grandfather walked these rows for fifty years,\npruning with the deliberate patience of a man\nwho trusted what he could not see:\nthe sap asleep inside the bark like ink\ninside a capped pen, waiting.\n\nNow the ladders lean against the empty shed,\ntheir rungs gone silver with disuse,\nand crows convene on the fence posts\nlike a council that has misplaced its agenda.\n\nStill, I have learned to read the bark:\nbeneath each knot, a bud is clenched\nas tightly as a fist around a coin,\nand the coin is April.\n\nSo I walk the rows the way he walked them,\nnot to harvest anything,\nbut to keep the promise the trees are keeping,\nto stand in the cold and believe in green.",
+    "stem": "The comparison of the crows to \"a council that has misplaced its agenda\" mainly creates a sense that the orchard is",
+    "choices": [
+      "crowded and noisy with workers",
+      "idle and without its old purpose",
+      "threatened by dangerous animals",
+      "carefully managed by its owners"
+    ],
+    "answer": 1,
+    "explanation": "The stanza describes ladders unused and rungs \"silver with disuse\"; a council without an agenda gathers with nothing to do, suggesting idleness."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 5,
+    "passage": "Winter Orchard\n\nThe orchard holds its breath in February,\neach branch a dark sentence left unfinished,\nwritten in a hand the frost keeps correcting,\nwhile snow has filed the hills down to a whisper.\n\nMy grandfather walked these rows for fifty years,\npruning with the deliberate patience of a man\nwho trusted what he could not see:\nthe sap asleep inside the bark like ink\ninside a capped pen, waiting.\n\nNow the ladders lean against the empty shed,\ntheir rungs gone silver with disuse,\nand crows convene on the fence posts\nlike a council that has misplaced its agenda.\n\nStill, I have learned to read the bark:\nbeneath each knot, a bud is clenched\nas tightly as a fist around a coin,\nand the coin is April.\n\nSo I walk the rows the way he walked them,\nnot to harvest anything,\nbut to keep the promise the trees are keeping,\nto stand in the cold and believe in green.",
+    "stem": "Which line from the poem best connects to the speaker's choice in the final stanza?",
+    "choices": [
+      "\"while snow has filed the hills down to a whisper.\"",
+      "\"each branch a dark sentence left unfinished,\"",
+      "\"their rungs gone silver with disuse,\"",
+      "\"who trusted what he could not see:\""
+    ],
+    "answer": 3,
+    "explanation": "In the final stanza the speaker chooses to \"believe in green\" that is not yet visible, just as the grandfather \"trusted what he could not see.\""
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 5,
+    "passage": "In an age of disposable goods, the ability to fix things has quietly vanished from many households. When a toaster stops working or a chair wobbles, the most common response is not to open it up but to throw it away and order a replacement. Schools, which once routinely offered shop classes and home economics, have largely abandoned instruction in practical repair. This is a mistake, and it is one that schools should correct by making basic repair skills part of the standard curriculum.\n\nThe first argument for teaching repair is economic. Replacing an appliance often costs many times more than replacing the small part that failed. A student who can diagnose a broken hinge or a frayed cord gains a skill that will save money for the rest of his or her life, a lesson in financial independence more concrete than any worksheet on budgeting.\n\nThe second argument is environmental. Discarded electronics and furniture accumulate in landfills at an alarming rate, and the manufacture of each replacement consumes energy and raw materials. Every object that is repaired rather than replaced represents a small reduction in waste. Multiplied across millions of households, those small reductions become significant.\n\nCritics contend that the school day is already crowded and that time spent on repair would come at the expense of academic subjects. This objection, however, rests on a false distinction. Repairing a device requires reading technical diagrams, forming and testing hypotheses, and applying principles of physics and geometry. Far from distracting students from academic learning, repair puts that learning to work in a setting where mistakes have visible consequences and success is immediately apparent.\n\nFinally, repair cultivates a disposition that extends beyond any single object: the conviction that problems can be understood and solved through patient investigation. Students who learn that a silent radio can be coaxed back to life may approach other challenges, whether in science, in their communities, or in their own lives, with the same confidence.\n\nThe objects around us were designed by people, and they can be understood by people. Schools should ensure that every graduate leaves knowing it.",
+    "stem": "What is the author's central claim?",
+    "choices": [
+      "Families should stop buying cheap appliances that break easily.",
+      "Shop classes were more valuable than any academic subject taught today.",
+      "Schools should make basic repair skills part of the standard curriculum.",
+      "Landfills are the most serious environmental problem facing communities."
+    ],
+    "answer": 2,
+    "explanation": "The first paragraph ends by stating schools \"should correct\" the mistake \"by making basic repair skills part of the standard curriculum.\""
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 5,
+    "passage": "In an age of disposable goods, the ability to fix things has quietly vanished from many households. When a toaster stops working or a chair wobbles, the most common response is not to open it up but to throw it away and order a replacement. Schools, which once routinely offered shop classes and home economics, have largely abandoned instruction in practical repair. This is a mistake, and it is one that schools should correct by making basic repair skills part of the standard curriculum.\n\nThe first argument for teaching repair is economic. Replacing an appliance often costs many times more than replacing the small part that failed. A student who can diagnose a broken hinge or a frayed cord gains a skill that will save money for the rest of his or her life, a lesson in financial independence more concrete than any worksheet on budgeting.\n\nThe second argument is environmental. Discarded electronics and furniture accumulate in landfills at an alarming rate, and the manufacture of each replacement consumes energy and raw materials. Every object that is repaired rather than replaced represents a small reduction in waste. Multiplied across millions of households, those small reductions become significant.\n\nCritics contend that the school day is already crowded and that time spent on repair would come at the expense of academic subjects. This objection, however, rests on a false distinction. Repairing a device requires reading technical diagrams, forming and testing hypotheses, and applying principles of physics and geometry. Far from distracting students from academic learning, repair puts that learning to work in a setting where mistakes have visible consequences and success is immediately apparent.\n\nFinally, repair cultivates a disposition that extends beyond any single object: the conviction that problems can be understood and solved through patient investigation. Students who learn that a silent radio can be coaxed back to life may approach other challenges, whether in science, in their communities, or in their own lives, with the same confidence.\n\nThe objects around us were designed by people, and they can be understood by people. Schools should ensure that every graduate leaves knowing it.",
+    "stem": "Which sentence from the passage best supports the author's environmental argument?",
+    "choices": [
+      "\"Every object that is repaired rather than replaced represents a small reduction in waste.\"",
+      "\"Replacing an appliance often costs many times more than replacing the small part that failed.\"",
+      "\"Repairing a device requires reading technical diagrams, forming and testing hypotheses.\"",
+      "\"The objects around us were designed by people, and they can be understood by people.\""
+    ],
+    "answer": 0,
+    "explanation": "This sentence, from the paragraph that begins \"The second argument is environmental,\" directly links repair to reducing waste."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 5,
+    "passage": "In an age of disposable goods, the ability to fix things has quietly vanished from many households. When a toaster stops working or a chair wobbles, the most common response is not to open it up but to throw it away and order a replacement. Schools, which once routinely offered shop classes and home economics, have largely abandoned instruction in practical repair. This is a mistake, and it is one that schools should correct by making basic repair skills part of the standard curriculum.\n\nThe first argument for teaching repair is economic. Replacing an appliance often costs many times more than replacing the small part that failed. A student who can diagnose a broken hinge or a frayed cord gains a skill that will save money for the rest of his or her life, a lesson in financial independence more concrete than any worksheet on budgeting.\n\nThe second argument is environmental. Discarded electronics and furniture accumulate in landfills at an alarming rate, and the manufacture of each replacement consumes energy and raw materials. Every object that is repaired rather than replaced represents a small reduction in waste. Multiplied across millions of households, those small reductions become significant.\n\nCritics contend that the school day is already crowded and that time spent on repair would come at the expense of academic subjects. This objection, however, rests on a false distinction. Repairing a device requires reading technical diagrams, forming and testing hypotheses, and applying principles of physics and geometry. Far from distracting students from academic learning, repair puts that learning to work in a setting where mistakes have visible consequences and success is immediately apparent.\n\nFinally, repair cultivates a disposition that extends beyond any single object: the conviction that problems can be understood and solved through patient investigation. Students who learn that a silent radio can be coaxed back to life may approach other challenges, whether in science, in their communities, or in their own lives, with the same confidence.\n\nThe objects around us were designed by people, and they can be understood by people. Schools should ensure that every graduate leaves knowing it.",
+    "stem": "What is the main function of paragraph 4?",
+    "choices": [
+      "It introduces a new benefit of repair related to saving money.",
+      "It admits that repair classes would take too much time from school.",
+      "It describes the history of shop classes in American schools.",
+      "It presents an opposing view and then argues against it."
+    ],
+    "answer": 3,
+    "explanation": "The paragraph opens with what \"Critics contend\" and then calls this \"a false distinction,\" explaining why repair supports academic learning."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 5,
+    "passage": "In an age of disposable goods, the ability to fix things has quietly vanished from many households. When a toaster stops working or a chair wobbles, the most common response is not to open it up but to throw it away and order a replacement. Schools, which once routinely offered shop classes and home economics, have largely abandoned instruction in practical repair. This is a mistake, and it is one that schools should correct by making basic repair skills part of the standard curriculum.\n\nThe first argument for teaching repair is economic. Replacing an appliance often costs many times more than replacing the small part that failed. A student who can diagnose a broken hinge or a frayed cord gains a skill that will save money for the rest of his or her life, a lesson in financial independence more concrete than any worksheet on budgeting.\n\nThe second argument is environmental. Discarded electronics and furniture accumulate in landfills at an alarming rate, and the manufacture of each replacement consumes energy and raw materials. Every object that is repaired rather than replaced represents a small reduction in waste. Multiplied across millions of households, those small reductions become significant.\n\nCritics contend that the school day is already crowded and that time spent on repair would come at the expense of academic subjects. This objection, however, rests on a false distinction. Repairing a device requires reading technical diagrams, forming and testing hypotheses, and applying principles of physics and geometry. Far from distracting students from academic learning, repair puts that learning to work in a setting where mistakes have visible consequences and success is immediately apparent.\n\nFinally, repair cultivates a disposition that extends beyond any single object: the conviction that problems can be understood and solved through patient investigation. Students who learn that a silent radio can be coaxed back to life may approach other challenges, whether in science, in their communities, or in their own lives, with the same confidence.\n\nThe objects around us were designed by people, and they can be understood by people. Schools should ensure that every graduate leaves knowing it.",
+    "stem": "As used in paragraph 5, the word \"disposition\" most nearly means",
+    "choices": [
+      "a habitual attitude or way of thinking",
+      "a method of throwing objects away",
+      "a set of tools needed for repair",
+      "a formal agreement between people"
+    ],
+    "answer": 0,
+    "explanation": "The author defines the disposition as \"the conviction that problems can be understood and solved,\" which is a way of thinking that carries over to other challenges."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 5,
+    "passage": "On a summer afternoon, the downtown core of a large city can be several degrees warmer than the surrounding countryside, and after sunset the difference may grow even larger. Climate scientists call this phenomenon the urban heat island effect, and as cities expand and summers intensify, understanding it has become a matter of public health.\n\nThe effect arises primarily from the materials cities are built with. Asphalt, concrete, and dark roofing absorb a large fraction of incoming sunlight and store it as heat. Whereas vegetation releases moisture through its leaves, a process called evapotranspiration that cools the surrounding air much as perspiration cools the skin, paved surfaces offer no such relief. Tall buildings compound the problem by trapping warm air in narrow streets and by blocking breezes that would otherwise disperse it. Heat generated by vehicles, air conditioners, and industry adds still more.\n\nPerhaps counterintuitively, the heat island is often most pronounced at night. Throughout the day, dense urban materials accumulate thermal energy; after dark, they release it slowly, keeping city temperatures elevated long after rural areas have cooled. This nighttime warmth carries real consequences. The human body depends on cooler nighttime temperatures to recover from daytime heat, and during prolonged heat waves, the absence of that relief contributes to heat-related illness, particularly among elderly residents and those without air conditioning.\n\nFortunately, the factors that create heat islands also suggest remedies. Cities on several continents have experimented with \"cool roofs,\" coated with reflective materials that bounce sunlight back into the sky rather than absorbing it. Others have expanded tree canopies, converted vacant lots into parks, and replaced conventional pavement with lighter or more porous alternatives. Researchers caution that no single strategy is sufficient; the most effective approaches combine several interventions and prioritize the neighborhoods where residents are most vulnerable.\n\nThe urban heat island is, in a sense, a problem of design. Because people built the conditions that produce it, people can also rebuild them.",
+    "stem": "Which statement best summarizes the central idea of the article?",
+    "choices": [
+      "Rural areas are becoming hotter than cities because of climate change.",
+      "Air conditioning is the most effective way to protect people from heat.",
+      "Tall buildings are the only reason that cities are warmer than the countryside.",
+      "City design creates heat islands that harm health but can be redesigned."
+    ],
+    "answer": 3,
+    "explanation": "The article explains how urban materials and buildings cause extra heat, describes health risks, and ends by saying people \"can also rebuild\" these conditions."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 5,
+    "passage": "On a summer afternoon, the downtown core of a large city can be several degrees warmer than the surrounding countryside, and after sunset the difference may grow even larger. Climate scientists call this phenomenon the urban heat island effect, and as cities expand and summers intensify, understanding it has become a matter of public health.\n\nThe effect arises primarily from the materials cities are built with. Asphalt, concrete, and dark roofing absorb a large fraction of incoming sunlight and store it as heat. Whereas vegetation releases moisture through its leaves, a process called evapotranspiration that cools the surrounding air much as perspiration cools the skin, paved surfaces offer no such relief. Tall buildings compound the problem by trapping warm air in narrow streets and by blocking breezes that would otherwise disperse it. Heat generated by vehicles, air conditioners, and industry adds still more.\n\nPerhaps counterintuitively, the heat island is often most pronounced at night. Throughout the day, dense urban materials accumulate thermal energy; after dark, they release it slowly, keeping city temperatures elevated long after rural areas have cooled. This nighttime warmth carries real consequences. The human body depends on cooler nighttime temperatures to recover from daytime heat, and during prolonged heat waves, the absence of that relief contributes to heat-related illness, particularly among elderly residents and those without air conditioning.\n\nFortunately, the factors that create heat islands also suggest remedies. Cities on several continents have experimented with \"cool roofs,\" coated with reflective materials that bounce sunlight back into the sky rather than absorbing it. Others have expanded tree canopies, converted vacant lots into parks, and replaced conventional pavement with lighter or more porous alternatives. Researchers caution that no single strategy is sufficient; the most effective approaches combine several interventions and prioritize the neighborhoods where residents are most vulnerable.\n\nThe urban heat island is, in a sense, a problem of design. Because people built the conditions that produce it, people can also rebuild them.",
+    "stem": "As used in paragraph 2, the word \"compound\" most nearly means",
+    "choices": [
+      "worsen",
+      "measure",
+      "explain",
+      "prevent"
+    ],
+    "answer": 0,
+    "explanation": "Tall buildings \"compound the problem\" by trapping warm air and blocking breezes, which makes the heat worse."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 5,
+    "passage": "On a summer afternoon, the downtown core of a large city can be several degrees warmer than the surrounding countryside, and after sunset the difference may grow even larger. Climate scientists call this phenomenon the urban heat island effect, and as cities expand and summers intensify, understanding it has become a matter of public health.\n\nThe effect arises primarily from the materials cities are built with. Asphalt, concrete, and dark roofing absorb a large fraction of incoming sunlight and store it as heat. Whereas vegetation releases moisture through its leaves, a process called evapotranspiration that cools the surrounding air much as perspiration cools the skin, paved surfaces offer no such relief. Tall buildings compound the problem by trapping warm air in narrow streets and by blocking breezes that would otherwise disperse it. Heat generated by vehicles, air conditioners, and industry adds still more.\n\nPerhaps counterintuitively, the heat island is often most pronounced at night. Throughout the day, dense urban materials accumulate thermal energy; after dark, they release it slowly, keeping city temperatures elevated long after rural areas have cooled. This nighttime warmth carries real consequences. The human body depends on cooler nighttime temperatures to recover from daytime heat, and during prolonged heat waves, the absence of that relief contributes to heat-related illness, particularly among elderly residents and those without air conditioning.\n\nFortunately, the factors that create heat islands also suggest remedies. Cities on several continents have experimented with \"cool roofs,\" coated with reflective materials that bounce sunlight back into the sky rather than absorbing it. Others have expanded tree canopies, converted vacant lots into parks, and replaced conventional pavement with lighter or more porous alternatives. Researchers caution that no single strategy is sufficient; the most effective approaches combine several interventions and prioritize the neighborhoods where residents are most vulnerable.\n\nThe urban heat island is, in a sense, a problem of design. Because people built the conditions that produce it, people can also rebuild them.",
+    "stem": "Which sentence best explains why the heat island effect is often strongest at night?",
+    "choices": [
+      "\"Heat generated by vehicles, air conditioners, and industry adds still more.\"",
+      "\"Throughout the day, dense urban materials accumulate thermal energy; after dark, they release it slowly.\"",
+      "\"Researchers caution that no single strategy is sufficient.\"",
+      "\"Climate scientists call this phenomenon the urban heat island effect.\""
+    ],
+    "answer": 1,
+    "explanation": "This sentence explains that stored heat is released slowly after dark, keeping cities warm after rural areas cool."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 5,
+    "passage": "On a summer afternoon, the downtown core of a large city can be several degrees warmer than the surrounding countryside, and after sunset the difference may grow even larger. Climate scientists call this phenomenon the urban heat island effect, and as cities expand and summers intensify, understanding it has become a matter of public health.\n\nThe effect arises primarily from the materials cities are built with. Asphalt, concrete, and dark roofing absorb a large fraction of incoming sunlight and store it as heat. Whereas vegetation releases moisture through its leaves, a process called evapotranspiration that cools the surrounding air much as perspiration cools the skin, paved surfaces offer no such relief. Tall buildings compound the problem by trapping warm air in narrow streets and by blocking breezes that would otherwise disperse it. Heat generated by vehicles, air conditioners, and industry adds still more.\n\nPerhaps counterintuitively, the heat island is often most pronounced at night. Throughout the day, dense urban materials accumulate thermal energy; after dark, they release it slowly, keeping city temperatures elevated long after rural areas have cooled. This nighttime warmth carries real consequences. The human body depends on cooler nighttime temperatures to recover from daytime heat, and during prolonged heat waves, the absence of that relief contributes to heat-related illness, particularly among elderly residents and those without air conditioning.\n\nFortunately, the factors that create heat islands also suggest remedies. Cities on several continents have experimented with \"cool roofs,\" coated with reflective materials that bounce sunlight back into the sky rather than absorbing it. Others have expanded tree canopies, converted vacant lots into parks, and replaced conventional pavement with lighter or more porous alternatives. Researchers caution that no single strategy is sufficient; the most effective approaches combine several interventions and prioritize the neighborhoods where residents are most vulnerable.\n\nThe urban heat island is, in a sense, a problem of design. Because people built the conditions that produce it, people can also rebuild them.",
+    "stem": "Why does the author compare evapotranspiration to the way perspiration cools the skin?",
+    "choices": [
+      "To argue that plants and people need the same amount of water",
+      "To show that trees release more heat than paved surfaces do",
+      "To help readers grasp the process through a familiar experience",
+      "To suggest that people should spend more time outdoors in summer"
+    ],
+    "answer": 2,
+    "explanation": "Comparing an unfamiliar scientific process to sweating, which readers know, makes the cooling effect of plants easier to understand."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 5,
+    "passage": "The following is a fictional letter in the style of the 1880s, written by a young teacher on the Nebraska prairie to her sister in Ohio.\n\nOctober 14, 1883\n\nDearest Margaret,\n\nYou asked in your last letter whether I regret coming west, and I confess I have delayed my reply because I wished to answer honestly rather than merely cheerfully. The schoolhouse is constructed of sod, which is to say of the prairie itself, cut into rectangular blocks and stacked like bricks. Whenever it rains, the roof weeps mud upon the readers, and I have learned to arrange the benches according to the leaks rather than the ages of my pupils.\n\nI have nineteen scholars enrolled, though rarely all of them at once. During planting and harvest the older boys are required in the fields, and I cannot in good conscience scold them for their absence, since their families' survival depends upon the crop considerably more than upon the multiplication tables. Several of the children speak German or Norwegian at home and are acquiring English alongside their arithmetic. Last week little Anna Halvorsen read an entire page aloud without assistance, and her mother, who had come to fetch her, wept openly at the door; I own that I did as well.\n\nLoneliness is the most difficult trial of this existence. The nearest neighbor lives two miles distant, and in the evenings the wind across the grass produces a sound so continuous that one ceases to hear it until it stops, whereupon the silence becomes nearly unbearable. I reread your letters until the folds wear through.\n\nAnd yet, dear Margaret, I do not regret my decision. In Ohio I was merely one teacher among many, and I occasionally wondered whether my absence would be noticed at all. Here, if I do not open the door in the morning, there is simply no school. I have never before been so exhausted, nor so entirely certain that my labor mattered.\n\nPlease send more thread and, if you can possibly spare it, a geography book with good maps, for ours ends at the Mississippi.\n\nYour loving sister,\nClara",
+    "stem": "What is Clara's main message to her sister?",
+    "choices": [
+      "She plans to return to Ohio once the school year has ended.",
+      "Despite real hardships, she values the importance of her work.",
+      "Teaching on the prairie is far easier than teaching in Ohio.",
+      "Her students' families do not support the school or its teacher."
+    ],
+    "answer": 1,
+    "explanation": "Clara describes leaks and loneliness but concludes, \"I do not regret my decision,\" because she has never been \"so entirely certain that my labor mattered.\""
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 5,
+    "passage": "The following is a fictional letter in the style of the 1880s, written by a young teacher on the Nebraska prairie to her sister in Ohio.\n\nOctober 14, 1883\n\nDearest Margaret,\n\nYou asked in your last letter whether I regret coming west, and I confess I have delayed my reply because I wished to answer honestly rather than merely cheerfully. The schoolhouse is constructed of sod, which is to say of the prairie itself, cut into rectangular blocks and stacked like bricks. Whenever it rains, the roof weeps mud upon the readers, and I have learned to arrange the benches according to the leaks rather than the ages of my pupils.\n\nI have nineteen scholars enrolled, though rarely all of them at once. During planting and harvest the older boys are required in the fields, and I cannot in good conscience scold them for their absence, since their families' survival depends upon the crop considerably more than upon the multiplication tables. Several of the children speak German or Norwegian at home and are acquiring English alongside their arithmetic. Last week little Anna Halvorsen read an entire page aloud without assistance, and her mother, who had come to fetch her, wept openly at the door; I own that I did as well.\n\nLoneliness is the most difficult trial of this existence. The nearest neighbor lives two miles distant, and in the evenings the wind across the grass produces a sound so continuous that one ceases to hear it until it stops, whereupon the silence becomes nearly unbearable. I reread your letters until the folds wear through.\n\nAnd yet, dear Margaret, I do not regret my decision. In Ohio I was merely one teacher among many, and I occasionally wondered whether my absence would be noticed at all. Here, if I do not open the door in the morning, there is simply no school. I have never before been so exhausted, nor so entirely certain that my labor mattered.\n\nPlease send more thread and, if you can possibly spare it, a geography book with good maps, for ours ends at the Mississippi.\n\nYour loving sister,\nClara",
+    "stem": "In the letter, the phrase \"I own that I did as well\" means Clara",
+    "choices": [
+      "admits that she also cried",
+      "claims the book belongs to her",
+      "wishes she had a daughter too",
+      "read the page aloud herself"
+    ],
+    "answer": 0,
+    "explanation": "After describing the mother weeping, Clara says she \"did as well\"; here \"own\" means admit, so she confesses she also cried."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 5,
+    "passage": "The following is a fictional letter in the style of the 1880s, written by a young teacher on the Nebraska prairie to her sister in Ohio.\n\nOctober 14, 1883\n\nDearest Margaret,\n\nYou asked in your last letter whether I regret coming west, and I confess I have delayed my reply because I wished to answer honestly rather than merely cheerfully. The schoolhouse is constructed of sod, which is to say of the prairie itself, cut into rectangular blocks and stacked like bricks. Whenever it rains, the roof weeps mud upon the readers, and I have learned to arrange the benches according to the leaks rather than the ages of my pupils.\n\nI have nineteen scholars enrolled, though rarely all of them at once. During planting and harvest the older boys are required in the fields, and I cannot in good conscience scold them for their absence, since their families' survival depends upon the crop considerably more than upon the multiplication tables. Several of the children speak German or Norwegian at home and are acquiring English alongside their arithmetic. Last week little Anna Halvorsen read an entire page aloud without assistance, and her mother, who had come to fetch her, wept openly at the door; I own that I did as well.\n\nLoneliness is the most difficult trial of this existence. The nearest neighbor lives two miles distant, and in the evenings the wind across the grass produces a sound so continuous that one ceases to hear it until it stops, whereupon the silence becomes nearly unbearable. I reread your letters until the folds wear through.\n\nAnd yet, dear Margaret, I do not regret my decision. In Ohio I was merely one teacher among many, and I occasionally wondered whether my absence would be noticed at all. Here, if I do not open the door in the morning, there is simply no school. I have never before been so exhausted, nor so entirely certain that my labor mattered.\n\nPlease send more thread and, if you can possibly spare it, a geography book with good maps, for ours ends at the Mississippi.\n\nYour loving sister,\nClara",
+    "stem": "Which sentence best shows that Clara adapts to difficult conditions?",
+    "choices": [
+      "\"I reread your letters until the folds wear through.\"",
+      "\"The nearest neighbor lives two miles distant.\"",
+      "\"I have learned to arrange the benches according to the leaks rather than the ages of my pupils.\"",
+      "\"Several of the children speak German or Norwegian at home.\""
+    ],
+    "answer": 2,
+    "explanation": "Rearranging the benches around the leaking roof shows Clara adjusting her classroom to a hard situation."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 5,
+    "passage": "The following is a fictional letter in the style of the 1880s, written by a young teacher on the Nebraska prairie to her sister in Ohio.\n\nOctober 14, 1883\n\nDearest Margaret,\n\nYou asked in your last letter whether I regret coming west, and I confess I have delayed my reply because I wished to answer honestly rather than merely cheerfully. The schoolhouse is constructed of sod, which is to say of the prairie itself, cut into rectangular blocks and stacked like bricks. Whenever it rains, the roof weeps mud upon the readers, and I have learned to arrange the benches according to the leaks rather than the ages of my pupils.\n\nI have nineteen scholars enrolled, though rarely all of them at once. During planting and harvest the older boys are required in the fields, and I cannot in good conscience scold them for their absence, since their families' survival depends upon the crop considerably more than upon the multiplication tables. Several of the children speak German or Norwegian at home and are acquiring English alongside their arithmetic. Last week little Anna Halvorsen read an entire page aloud without assistance, and her mother, who had come to fetch her, wept openly at the door; I own that I did as well.\n\nLoneliness is the most difficult trial of this existence. The nearest neighbor lives two miles distant, and in the evenings the wind across the grass produces a sound so continuous that one ceases to hear it until it stops, whereupon the silence becomes nearly unbearable. I reread your letters until the folds wear through.\n\nAnd yet, dear Margaret, I do not regret my decision. In Ohio I was merely one teacher among many, and I occasionally wondered whether my absence would be noticed at all. Here, if I do not open the door in the morning, there is simply no school. I have never before been so exhausted, nor so entirely certain that my labor mattered.\n\nPlease send more thread and, if you can possibly spare it, a geography book with good maps, for ours ends at the Mississippi.\n\nYour loving sister,\nClara",
+    "stem": "What does Clara's remark that the school's geography book \"ends at the Mississippi\" suggest?",
+    "choices": [
+      "Her students are not interested in studying other countries.",
+      "The book was damaged by rain leaking through the sod roof.",
+      "She wants her sister to visit and see the river for herself.",
+      "The book lacks maps of the western region where they live."
+    ],
+    "answer": 3,
+    "explanation": "Clara has come west to Nebraska, so a book whose maps stop at the Mississippi does not show her students' own region, which is why she asks for one with good maps."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "Sam has a dog. The dog is named Bo. Bo likes to run.\n\nEvery day, Sam and Bo go to the park. Sam throws a ball far. Bo runs to get it. Bo brings the ball back.\n\nThen Bo is tired. He lies down in the grass. Sam pats his head. \"Good dog, Bo,\" says Sam.",
+    "stem": "What is the dog's name?",
+    "choices": [
+      "Sam",
+      "Bo",
+      "Max",
+      "Ben"
+    ],
+    "answer": 1,
+    "explanation": "The story says, \"The dog is named Bo.\""
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "Sam has a dog. The dog is named Bo. Bo likes to run.\n\nEvery day, Sam and Bo go to the park. Sam throws a ball far. Bo runs to get it. Bo brings the ball back.\n\nThen Bo is tired. He lies down in the grass. Sam pats his head. \"Good dog, Bo,\" says Sam.",
+    "stem": "Where do Sam and Bo go every day?",
+    "choices": [
+      "to the park",
+      "to the store",
+      "to the lake",
+      "to the school"
+    ],
+    "answer": 0,
+    "explanation": "The story says, \"Every day, Sam and Bo go to the park.\""
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "Sam has a dog. The dog is named Bo. Bo likes to run.\n\nEvery day, Sam and Bo go to the park. Sam throws a ball far. Bo runs to get it. Bo brings the ball back.\n\nThen Bo is tired. He lies down in the grass. Sam pats his head. \"Good dog, Bo,\" says Sam.",
+    "stem": "What does Bo do after he brings the ball back?",
+    "choices": [
+      "He runs home.",
+      "He eats food.",
+      "He lies down.",
+      "He digs a hole."
+    ],
+    "answer": 2,
+    "explanation": "After Bo brings the ball back, he is tired and \"lies down in the grass.\""
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "It is a rainy day. Gray clouds fill the sky.\n\nMia puts on her boots. She puts on her coat. Mia walks to school. She jumps in a big puddle. Splash! Her boots get wet, but her feet stay dry.\n\nAt school, Mia hangs up her coat. Now she is ready to learn.",
+    "stem": "What is the weather like?",
+    "choices": [
+      "sunny",
+      "snowy",
+      "windy",
+      "rainy"
+    ],
+    "answer": 3,
+    "explanation": "The story says, \"It is a rainy day.\""
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "It is a rainy day. Gray clouds fill the sky.\n\nMia puts on her boots. She puts on her coat. Mia walks to school. She jumps in a big puddle. Splash! Her boots get wet, but her feet stay dry.\n\nAt school, Mia hangs up her coat. Now she is ready to learn.",
+    "stem": "What does Mia put on first?",
+    "choices": [
+      "her boots",
+      "her coat",
+      "her hat",
+      "her socks"
+    ],
+    "answer": 0,
+    "explanation": "The first thing Mia does is put on her boots; then she puts on her coat."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "It is a rainy day. Gray clouds fill the sky.\n\nMia puts on her boots. She puts on her coat. Mia walks to school. She jumps in a big puddle. Splash! Her boots get wet, but her feet stay dry.\n\nAt school, Mia hangs up her coat. Now she is ready to learn.",
+    "stem": "Why do Mia's feet stay dry?",
+    "choices": [
+      "She stays home.",
+      "She wears boots.",
+      "The sun comes out.",
+      "She walks on grass."
+    ],
+    "answer": 1,
+    "explanation": "Mia's boots get wet but her feet stay dry, so the boots kept her feet dry."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "A frog starts as a tiny egg. The egg is in a pond.\n\nA tadpole comes out of the egg. It has a long tail. It swims like a fish.\n\nSoon the tadpole grows legs. Its tail gets small. Then it is a frog! A frog can hop on land. It can swim too.",
+    "stem": "Where is the frog egg?",
+    "choices": [
+      "in a tree",
+      "in a nest",
+      "in a pond",
+      "in the sand"
+    ],
+    "answer": 2,
+    "explanation": "The text says, \"The egg is in a pond.\""
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "A frog starts as a tiny egg. The egg is in a pond.\n\nA tadpole comes out of the egg. It has a long tail. It swims like a fish.\n\nSoon the tadpole grows legs. Its tail gets small. Then it is a frog! A frog can hop on land. It can swim too.",
+    "stem": "What happens after the tadpole grows legs?",
+    "choices": [
+      "It lays an egg.",
+      "Its tail gets small.",
+      "It grows a long tail.",
+      "It goes into an egg."
+    ],
+    "answer": 1,
+    "explanation": "The text says, \"Soon the tadpole grows legs. Its tail gets small.\""
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "A frog starts as a tiny egg. The egg is in a pond.\n\nA tadpole comes out of the egg. It has a long tail. It swims like a fish.\n\nSoon the tadpole grows legs. Its tail gets small. Then it is a frog! A frog can hop on land. It can swim too.",
+    "stem": "What is this text mostly about?",
+    "choices": [
+      "how a frog grows",
+      "where fish swim",
+      "what frogs eat",
+      "how ponds form"
+    ],
+    "answer": 0,
+    "explanation": "The text tells each step from egg to tadpole to frog."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "Grandma comes to visit. She has a big bag. In the bag is soft blue yarn.\n\nGrandma and Lee sit on the couch. Grandma makes a hat. Lee helps hold the yarn. The hat takes a long time.\n\nAt last it is done. Grandma puts the hat on Lee. It fits! Lee gives Grandma a big hug.",
+    "stem": "What color is the yarn?",
+    "choices": [
+      "red",
+      "green",
+      "pink",
+      "blue"
+    ],
+    "answer": 3,
+    "explanation": "The text says the bag has \"soft blue yarn.\""
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "Grandma comes to visit. She has a big bag. In the bag is soft blue yarn.\n\nGrandma and Lee sit on the couch. Grandma makes a hat. Lee helps hold the yarn. The hat takes a long time.\n\nAt last it is done. Grandma puts the hat on Lee. It fits! Lee gives Grandma a big hug.",
+    "stem": "What does Grandma make?",
+    "choices": [
+      "a hat",
+      "a bag",
+      "a coat",
+      "a bed"
+    ],
+    "answer": 0,
+    "explanation": "The text says, \"Grandma makes a hat.\""
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "Grandma comes to visit. She has a big bag. In the bag is soft blue yarn.\n\nGrandma and Lee sit on the couch. Grandma makes a hat. Lee helps hold the yarn. The hat takes a long time.\n\nAt last it is done. Grandma puts the hat on Lee. It fits! Lee gives Grandma a big hug.",
+    "stem": "How does Lee most likely feel at the end?",
+    "choices": [
+      "sad",
+      "happy",
+      "mad",
+      "sick"
+    ],
+    "answer": 1,
+    "explanation": "The hat fits and Lee gives Grandma a big hug, which shows Lee is happy."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "The class has a new fish! The fish is orange. It lives in a tank.\n\nMs. Park shows the class how to feed it. \"Just a little food,\" she says. \"Too much is bad for the fish.\"\n\nThe kids name the fish Sunny. Each day, one child will feed Sunny.",
+    "stem": "What do the kids name the fish?",
+    "choices": [
+      "Goldie",
+      "Bubbles",
+      "Sunny",
+      "Park"
+    ],
+    "answer": 2,
+    "explanation": "The text says, \"The kids name the fish Sunny.\""
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "The class has a new fish! The fish is orange. It lives in a tank.\n\nMs. Park shows the class how to feed it. \"Just a little food,\" she says. \"Too much is bad for the fish.\"\n\nThe kids name the fish Sunny. Each day, one child will feed Sunny.",
+    "stem": "Why does Ms. Park say to use just a little food?",
+    "choices": [
+      "The fish is not hungry.",
+      "The food costs a lot.",
+      "The tank is too small.",
+      "Too much is bad for it."
+    ],
+    "answer": 3,
+    "explanation": "Ms. Park says, \"Too much is bad for the fish.\""
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "The class has a new fish! The fish is orange. It lives in a tank.\n\nMs. Park shows the class how to feed it. \"Just a little food,\" she says. \"Too much is bad for the fish.\"\n\nThe kids name the fish Sunny. Each day, one child will feed Sunny.",
+    "stem": "Who will feed Sunny each day?",
+    "choices": [
+      "one child",
+      "Ms. Park",
+      "the whole class",
+      "a parent"
+    ],
+    "answer": 0,
+    "explanation": "The text says, \"Each day, one child will feed Sunny.\""
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "On a cold morning, Jada walked to the bus stop with her little brother, Eli. Eli wore the green mittens that Grandpa had made for him. When the bus came, Eli climbed on fast, and one mitten fell into the snow.\n\nAfter school, Eli looked very sad when he told Jada, \"I lost one of Grandpa's special mittens.\"\n\nJada had an idea. \"Let's look at the bus stop,\" she said. They walked back together and searched. They looked carefully under a wooden bench and behind a tall tree. At first they could see nothing but white snow everywhere.\n\nThen Jada spotted something green in a pile of snow. She pulled it out and shook it off. It was the mitten!\n\nEli smiled and hugged his sister. \"Thank you,\" he said. \"I will be more careful next time.\"",
+    "stem": "Where did Eli drop his mitten?",
+    "choices": [
+      "at the bus stop",
+      "inside the school",
+      "on the bus seat",
+      "at Grandpa's house"
+    ],
+    "answer": 0,
+    "explanation": "One mitten fell into the snow when Eli climbed onto the bus at the bus stop."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "On a cold morning, Jada walked to the bus stop with her little brother, Eli. Eli wore the green mittens that Grandpa had made for him. When the bus came, Eli climbed on fast, and one mitten fell into the snow.\n\nAfter school, Eli looked very sad when he told Jada, \"I lost one of Grandpa's special mittens.\"\n\nJada had an idea. \"Let's look at the bus stop,\" she said. They walked back together and searched. They looked carefully under a wooden bench and behind a tall tree. At first they could see nothing but white snow everywhere.\n\nThen Jada spotted something green in a pile of snow. She pulled it out and shook it off. It was the mitten!\n\nEli smiled and hugged his sister. \"Thank you,\" he said. \"I will be more careful next time.\"",
+    "stem": "Why was the mitten special to Eli?",
+    "choices": [
+      "It was his favorite color.",
+      "Grandpa made it for him.",
+      "Jada gave it to him.",
+      "It was brand new that day."
+    ],
+    "answer": 1,
+    "explanation": "The story says Eli wore \"the green mittens that Grandpa had made for him.\""
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "On a cold morning, Jada walked to the bus stop with her little brother, Eli. Eli wore the green mittens that Grandpa had made for him. When the bus came, Eli climbed on fast, and one mitten fell into the snow.\n\nAfter school, Eli looked very sad when he told Jada, \"I lost one of Grandpa's special mittens.\"\n\nJada had an idea. \"Let's look at the bus stop,\" she said. They walked back together and searched. They looked carefully under a wooden bench and behind a tall tree. At first they could see nothing but white snow everywhere.\n\nThen Jada spotted something green in a pile of snow. She pulled it out and shook it off. It was the mitten!\n\nEli smiled and hugged his sister. \"Thank you,\" he said. \"I will be more careful next time.\"",
+    "stem": "In the story, the word \"spotted\" means",
+    "choices": [
+      "painted",
+      "dropped",
+      "saw",
+      "lost"
+    ],
+    "answer": 2,
+    "explanation": "Jada \"spotted something green\" and then pulled it out, so spotted means saw."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "Honeybees live together in a home called a hive. One hive can hold thousands of bees, and each bee has a job to do.\n\nThe queen bee is the biggest bee in the hive. Her job is to lay eggs. Worker bees do almost everything else. They clean the hive, feed the baby bees, and build small wax rooms called cells.\n\nSome worker bees fly outside to find flowers. They drink a sweet juice from the flowers called nectar. Back at the hive, the bees turn the nectar into honey. They store the honey in the wax cells so the hive will have food in winter.\n\nBees also help plants. As they move from flower to flower, they carry a yellow dust called pollen. This helps plants make seeds and fruit.",
+    "stem": "What is the main idea of this text?",
+    "choices": [
+      "The queen bee is bigger than all the other bees.",
+      "Bees make honey only during the winter months.",
+      "Honeybees share jobs in a hive and help plants.",
+      "Flowers need wax cells to make seeds and fruit."
+    ],
+    "answer": 2,
+    "explanation": "The text explains the jobs bees do in the hive and how they help plants by carrying pollen."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "Honeybees live together in a home called a hive. One hive can hold thousands of bees, and each bee has a job to do.\n\nThe queen bee is the biggest bee in the hive. Her job is to lay eggs. Worker bees do almost everything else. They clean the hive, feed the baby bees, and build small wax rooms called cells.\n\nSome worker bees fly outside to find flowers. They drink a sweet juice from the flowers called nectar. Back at the hive, the bees turn the nectar into honey. They store the honey in the wax cells so the hive will have food in winter.\n\nBees also help plants. As they move from flower to flower, they carry a yellow dust called pollen. This helps plants make seeds and fruit.",
+    "stem": "What is nectar?",
+    "choices": [
+      "a yellow dust on flowers",
+      "a sweet juice from flowers",
+      "a small room made of wax",
+      "a baby bee in the hive"
+    ],
+    "answer": 1,
+    "explanation": "The text says bees \"drink a sweet juice from the flowers called nectar.\""
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "Honeybees live together in a home called a hive. One hive can hold thousands of bees, and each bee has a job to do.\n\nThe queen bee is the biggest bee in the hive. Her job is to lay eggs. Worker bees do almost everything else. They clean the hive, feed the baby bees, and build small wax rooms called cells.\n\nSome worker bees fly outside to find flowers. They drink a sweet juice from the flowers called nectar. Back at the hive, the bees turn the nectar into honey. They store the honey in the wax cells so the hive will have food in winter.\n\nBees also help plants. As they move from flower to flower, they carry a yellow dust called pollen. This helps plants make seeds and fruit.",
+    "stem": "Why do bees store honey in the cells?",
+    "choices": [
+      "to have food in winter",
+      "to feed the flowers",
+      "to make the hive warm",
+      "to help the queen fly"
+    ],
+    "answer": 0,
+    "explanation": "The text says they store honey \"so the hive will have food in winter.\""
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "Mr. Diaz's class wanted to grow beans. First, each student filled a paper cup with soil. Next, they pushed two bean seeds into the soil with their fingers. Then they gave the seeds a little water and set the cups on a sunny window.\n\nEvery morning, the students eagerly checked their cups, but for four long days nothing happened. Marco began to worry. \"Maybe my seeds are broken,\" he said.\n\n\"Be patient,\" said Mr. Diaz. \"Seeds need time to grow.\"\n\nOn the fifth day, Marco gasped. A tiny green sprout had pushed up through the soil! By the end of the week, every cup had a sprout. Marco drew a careful picture of his little plant in his science notebook. He could not wait to see how tall it would grow.",
+    "stem": "What did the students do right after they filled the cups with soil?",
+    "choices": [
+      "They gave the seeds water.",
+      "They pushed seeds into the soil.",
+      "They set the cups by a window.",
+      "They drew pictures of plants."
+    ],
+    "answer": 1,
+    "explanation": "The text says, \"First, each student filled a paper cup with soil. Next, they pushed two bean seeds into the soil.\""
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "Mr. Diaz's class wanted to grow beans. First, each student filled a paper cup with soil. Next, they pushed two bean seeds into the soil with their fingers. Then they gave the seeds a little water and set the cups on a sunny window.\n\nEvery morning, the students eagerly checked their cups, but for four long days nothing happened. Marco began to worry. \"Maybe my seeds are broken,\" he said.\n\n\"Be patient,\" said Mr. Diaz. \"Seeds need time to grow.\"\n\nOn the fifth day, Marco gasped. A tiny green sprout had pushed up through the soil! By the end of the week, every cup had a sprout. Marco drew a careful picture of his little plant in his science notebook. He could not wait to see how tall it would grow.",
+    "stem": "When Mr. Diaz says \"Be patient,\" he means Marco should",
+    "choices": [
+      "add more seeds",
+      "find a new cup",
+      "wait calmly",
+      "ask for help"
+    ],
+    "answer": 2,
+    "explanation": "Mr. Diaz explains that \"Seeds need time to grow,\" so Marco needs to wait."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "Mr. Diaz's class wanted to grow beans. First, each student filled a paper cup with soil. Next, they pushed two bean seeds into the soil with their fingers. Then they gave the seeds a little water and set the cups on a sunny window.\n\nEvery morning, the students eagerly checked their cups, but for four long days nothing happened. Marco began to worry. \"Maybe my seeds are broken,\" he said.\n\n\"Be patient,\" said Mr. Diaz. \"Seeds need time to grow.\"\n\nOn the fifth day, Marco gasped. A tiny green sprout had pushed up through the soil! By the end of the week, every cup had a sprout. Marco drew a careful picture of his little plant in his science notebook. He could not wait to see how tall it would grow.",
+    "stem": "How did Marco most likely feel on the fifth day?",
+    "choices": [
+      "worried and sad",
+      "tired and bored",
+      "angry and upset",
+      "surprised and glad"
+    ],
+    "answer": 3,
+    "explanation": "Marco gasped when he saw the sprout and could not wait to see it grow, showing surprise and happiness."
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "Emperor penguins live in Antarctica, one of the coldest places on Earth. These penguins have a special way of caring for their eggs.\n\nAfter a mother penguin lays an egg, she gives it to the father. Then she walks to the ocean to find food. The father keeps the egg on top of his feet. He covers it with a warm fold of skin so the egg does not freeze.\n\nFor about two months, the father does not eat. He stands with other fathers in a large group. They huddle close together to share warmth and block the icy wind.\n\nWhen the chick hatches, the mother comes back with food. She feeds the chick. Now the father can finally go to the sea to eat.",
+    "stem": "Where does the father penguin keep the egg?",
+    "choices": [
+      "in a nest of rocks",
+      "on top of his feet",
+      "under the snow",
+      "in the cold water"
+    ],
+    "answer": 1,
+    "explanation": "The text says, \"The father keeps the egg on top of his feet.\""
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "Emperor penguins live in Antarctica, one of the coldest places on Earth. These penguins have a special way of caring for their eggs.\n\nAfter a mother penguin lays an egg, she gives it to the father. Then she walks to the ocean to find food. The father keeps the egg on top of his feet. He covers it with a warm fold of skin so the egg does not freeze.\n\nFor about two months, the father does not eat. He stands with other fathers in a large group. They huddle close together to share warmth and block the icy wind.\n\nWhen the chick hatches, the mother comes back with food. She feeds the chick. Now the father can finally go to the sea to eat.",
+    "stem": "Why do the father penguins huddle close together?",
+    "choices": [
+      "to share warmth",
+      "to find food",
+      "to play games",
+      "to hide their eggs"
+    ],
+    "answer": 0,
+    "explanation": "The text says they huddle \"to share warmth and block the icy wind.\""
+  },
+  {
+    "exam_type": "MAP",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "Emperor penguins live in Antarctica, one of the coldest places on Earth. These penguins have a special way of caring for their eggs.\n\nAfter a mother penguin lays an egg, she gives it to the father. Then she walks to the ocean to find food. The father keeps the egg on top of his feet. He covers it with a warm fold of skin so the egg does not freeze.\n\nFor about two months, the father does not eat. He stands with other fathers in a large group. They huddle close together to share warmth and block the icy wind.\n\nWhen the chick hatches, the mother comes back with food. She feeds the chick. Now the father can finally go to the sea to eat.",
+    "stem": "What does the father do after the mother comes back?",
+    "choices": [
+      "He lays another egg.",
+      "He feeds the chick.",
+      "He builds a nest.",
+      "He goes to the sea to eat."
+    ],
+    "answer": 3,
+    "explanation": "After the mother returns and feeds the chick, \"the father can finally go to the sea to eat.\""
+  }
+]

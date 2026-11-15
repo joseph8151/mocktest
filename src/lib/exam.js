@@ -49,7 +49,7 @@ EXAMS.SSAT = {
   sections: [
     { key: 'writing', name: 'Writing Sample', n: 1, minutes: 25, manual: true },
     { key: 'quantitative', name: 'Quantitative (Math)', n: 20, minutes: 30 },
-    { key: 'reading', name: 'Reading', n: 12, minutes: 25 },
+    { key: 'reading', name: 'Reading', n: 16, minutes: 20 },
     { key: 'verbal', name: 'Verbal', n: 20, minutes: 20 },
   ],
 };
@@ -58,7 +58,7 @@ EXAMS.ISEE = {
   sections: [
     { key: 'verbal', name: 'Verbal Reasoning', n: 16, minutes: 20 },
     { key: 'quantitative', name: 'Quantitative Reasoning', n: 16, minutes: 35 },
-    { key: 'reading', name: 'Reading Comprehension', n: 12, minutes: 25 },
+    { key: 'reading', name: 'Reading Comprehension', n: 18, minutes: 22 },
     { key: 'math', name: 'Mathematics Achievement', n: 20, minutes: 35 },
     { key: 'essay', name: 'Essay', n: 1, minutes: 30, manual: true },
   ],
@@ -84,7 +84,7 @@ EXAMS.TOEFLJ = {
   sections: [
     { key: 'listening', name: 'Listening Comprehension', n: 20, minutes: 25 },
     { key: 'lfm', name: 'Language Form and Meaning', n: 20, minutes: 15 },
-    { key: 'reading', name: 'Reading Comprehension', n: 24, minutes: 30 },
+    { key: 'reading', name: 'Reading Comprehension', n: 24, minutes: 29 },
   ],
 };
 
@@ -153,6 +153,28 @@ export function pickNext(examType, st, bank, target = 10, lo = 1, hi = 5) {
   const best = Math.min(...pool.map((q) => Math.abs(q.difficulty - want)));
   const cands = pool.filter((q) => Math.abs(q.difficulty - want) <= best + 0.5);
   return shuffle(cands)[0].id;
+}
+
+/**
+ * Passage-based sections (reading, listening): pick whole passages and keep each passage's questions together,
+ * as on the real tests, instead of scattering single questions. Difficulty still ramps across the section.
+ * `pool` items carry `pk` (a passage key; null for stand-alone questions).
+ */
+export function pickGrouped(pool, target, lo, hi) {
+  const groups = new Map();
+  for (const q of shuffle(pool)) { const k = q.pk || `solo:${q.id}`; if (!groups.has(k)) groups.set(k, []); groups.get(k).push(q); }
+  const list = [...groups.values()].map((qs) => ({ qs: qs.sort((a, b) => a.difficulty - b.difficulty), d: qs.reduce((s, q) => s + q.difficulty, 0) / qs.length }));
+  const ids = [];
+  while (ids.length < target && list.length) {
+    const want = lo + (ids.length * (hi - lo)) / Math.max(1, target - 1), left = target - ids.length;
+    // prefer a passage that fits in the remaining slots, closest to the wanted difficulty
+    const fits = list.filter((g) => g.qs.length <= left);
+    const from = fits.length ? fits : list;
+    from.sort((a, b) => Math.abs(a.d - want) - Math.abs(b.d - want) || b.qs.length - a.qs.length);
+    const g = from[0]; list.splice(list.indexOf(g), 1);
+    ids.push(...g.qs.slice(0, left).map((q) => q.id));
+  }
+  return ids;
 }
 
 export function sectionTarget(examType, si, bankSize) {

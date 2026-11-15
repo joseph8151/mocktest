@@ -52,7 +52,12 @@ async function run(env) {
   // (answered questions are kept but deactivated so old reports still render). Admin-created questions (uuid ids) are never touched.
   const seedMark = `seed-${seed.version}`;
   if (!done.has(seedMark)) {
-    const have = new Set((await db.prepare(`SELECT id FROM questions WHERE id LIKE 'seed-%'`).all()).results.map((r) => r.id));
+    const cur = (await db.prepare(`SELECT id,difficulty FROM questions WHERE id LIKE 'seed-%'`).all()).results;
+    const have = new Set(cur.map((r) => r.id));
+    // difficulty re-calibration of existing questions (ids are content hashes, difficulty is not part of them)
+    const want0 = new Map(seed.questions.map((q) => [q[0], q[4]]));
+    const recal = cur.filter((r) => want0.has(r.id) && want0.get(r.id) !== r.difficulty).map((r) => db.prepare('UPDATE questions SET difficulty=? WHERE id=?').bind(want0.get(r.id), r.id));
+    for (let i = 0; i < recal.length; i += 50) await db.batch(recal.slice(i, i + 50));
     const want = new Set(seed.questions.map((q) => q[0]));
     const stale = [...have].filter((id) => !want.has(id));
     if (stale.length) {

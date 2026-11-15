@@ -784,7 +784,11 @@ function pageExamSection(id, state) {
       listens[q.id] ||= 0;
       const play = h('button', { class: 'btn alt', onclick: () => { if (listens[q.id] >= 2) return toast('최대 2번까지 들을 수 있습니다.'); listens[q.id]++; speechSynthesis.cancel(); const u = new SpeechSynthesisUtterance(q.passage); u.lang = 'en-US'; u.rate = 0.9; speechSynthesis.speak(u); play.textContent = `▶ 다시 듣기 (${2 - listens[q.id]}회 남음)`; } }, listens[q.id] ? `▶ 다시 듣기 (${2 - listens[q.id]}회 남음)` : '▶ 듣기 (최대 2회)');
       body.push(h('div', { class: 'passage' }, play));
-    } else if (q.passage) body.push(h('div', { class: 'passage' }, q.passage));
+    } else if (q.passage) {
+      const grp = qs.map((x, i) => (x.passage === q.passage ? i : -1)).filter((i) => i >= 0); // questions sharing this passage (kept together)
+      body.push(h('div', { class: 'passage' }, grp.length > 1 ? h('div', { class: 'pnote' }, `Questions ${grp[0] + 1}–${grp[grp.length - 1] + 1} refer to the following passage.`) : null, q.passage));
+    }
+    const longP = !!q.passage && sec.key !== 'listening' && q.passage.split(/\s+/).length >= 110;
     if (q.image_svg) body.push(h('img', { class: 'qimg', src: svgUri(q.image_svg), alt: '문제 그림' }));
     body.push(h('h3', { class: 'stem' }, q.stem));
     let kh = null;
@@ -822,7 +826,7 @@ function pageExamSection(id, state) {
       h('div', { class: 'exam-top' },
         h('div', { class: 'exam-head' }, h('div', { class: 'sec-pill' }, sec.name, h('i', {}, `${sec.index + 1}/${sec.total}`)), counter, fsButton(), h('span', {}, '⏱ ', timer)),
         palette),
-      h('div', { class: 'qcard' }, h('div', { class: 'qmeta' }, h('b', {}, `Question ${cur + 1}`), h('span', { class: 'row', style: 'gap:6px' }, clearBtn, flagBtn)), body,
+      h('div', { class: 'qcard' + (longP ? ' split' : '') }, h('div', { class: 'qmeta' }, h('b', {}, `Question ${cur + 1}`), h('span', { class: 'row', style: 'gap:6px' }, clearBtn, flagBtn)), longP ? h('div', { class: 'splitwrap' }, body[0], h('div', { class: 'qside' }, body.slice(1))) : body,
         h('div', { class: 'exam-foot' },
           h('button', { class: 'btn alt', disabled: cur === 0, onclick: () => go(cur - 1) }, '← 이전'),
           h('span', { class: 'kbd hide-sm' }, q.kind === 'mcq' ? 'A–D 선택 · ←/→ 이동' : ''),
@@ -867,6 +871,7 @@ async function pageExamAdaptive(id, state) {
       const play = h('button', { class: 'btn alt', onclick: () => { if (listens >= 2) return toast('최대 2번까지 들을 수 있습니다.'); listens++; speechSynthesis.cancel(); const u = new SpeechSynthesisUtterance(q.passage); u.lang = 'en-US'; u.rate = 0.9; speechSynthesis.speak(u); play.textContent = `▶ 다시 듣기 (${2 - listens}회 남음)`; } }, '▶ 듣기 (최대 2회)');
       body.push(h('div', { class: 'passage' }, play));
     } else if (q.passage) body.push(h('div', { class: 'passage' }, q.passage));
+    const longP = !!q.passage && sec.key !== 'listening' && q.passage.split(/\s+/).length >= 110;
     if (q.image_svg) body.push(h('img', { class: 'qimg', src: svgUri(q.image_svg), alt: '문제 그림' }));
     body.push(h('h3', { class: 'stem' }, q.stem));
     if (q.kind === 'mcq') {
@@ -893,7 +898,7 @@ async function pageExamAdaptive(id, state) {
       h('div', { class: 'exam-top' },
         h('div', { class: 'exam-head' }, h('div', { class: 'sec-pill' }, sec.name, h('i', {}, `${sec.index + 1}/${sec.total}`)), h('span', { class: 'muted small' }, `문항 ${state.progress.n} / ${tot}`), fsButton(), h('span', {}, '⏱ ', timer)),
         h('div', { class: 'bar' }, h('i', { style: `width:${Math.round(((state.progress.n - 1) / tot) * 100)}%` }))),
-      h('div', { class: 'qcard' }, body, h('div', { class: 'exam-foot' }, h('span', { class: 'kbd hide-touch' }, q.kind === 'mcq' ? '키보드 A–D 선택 · Enter 다음' : ''), next))));
+      h('div', { class: 'qcard' + (longP ? ' split' : '') }, longP ? h('div', { class: 'splitwrap' }, body[0], h('div', { class: 'qside' }, body.slice(1))) : body, h('div', { class: 'exam-foot' }, h('span', { class: 'kbd hide-touch' }, q.kind === 'mcq' ? '키보드 A–D 선택 · Enter 다음' : ''), next))));
     if (kh) { window._kh = kh; document.addEventListener('keydown', kh); } // after mount(), which clears the previous handler
     tick(); timerInt = setInterval(tick, 500);
   };

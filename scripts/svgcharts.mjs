@@ -109,7 +109,7 @@ export function scatterPlot({ title, points, xMax = 10, yMax = 10, step = 2, lin
   for (let v = 0; v <= yMax; v += step) s += `<line x1="${L}" y1="${Y(v)}" x2="${W - R}" y2="${Y(v)}" stroke="${GRID}"/>` + text(L - 6, Y(v) + 4, v, 'text-anchor="end" font-size="10"');
   for (let v = 0; v <= xMax; v += step) s += `<line x1="${X(v)}" y1="${T}" x2="${X(v)}" y2="${B}" stroke="${GRID}"/>` + text(X(v), B + 14, v, 'text-anchor="middle" font-size="10"');
   s += `<line x1="${L}" y1="${T}" x2="${L}" y2="${B}" stroke="${INK}"/><line x1="${L}" y1="${B}" x2="${W - R}" y2="${B}" stroke="${INK}"/>` + text(W / 2, H - 6, xLabel, 'text-anchor="middle" font-size="11"') + text(12, (T + B) / 2, yLabel, `text-anchor="middle" font-size="11" transform="rotate(-90 12 ${(T + B) / 2})"`);
-  if (line) s += `<line x1="${X(0)}" y1="${Y(line.b)}" x2="${X(xMax)}" y2="${Y(Math.min(yMax, line.m * xMax + line.b))}" stroke="#ef4444" stroke-width="2"/>`;
+  if (line) { const xe = line.m > 0 ? Math.min(xMax, (yMax - line.b) / line.m) : xMax; s += `<line x1="${X(0)}" y1="${Y(line.b)}" x2="${X(xe)}" y2="${Y(line.m * xe + line.b)}" stroke="#ef4444" stroke-width="2"/>`; } // clip at the top edge without bending the slope
   for (const [x, y] of points) s += `<circle cx="${X(x)}" cy="${Y(y)}" r="4" fill="${COLORS[0]}"/>`;
   return wrap(W, H, s);
 }
@@ -186,4 +186,49 @@ export function reflectGrid(points, { range = 6 } = {}) { // points [{x,y,label}
   const base = coordPlane(points, { range }), u = 100 / range, c = 120;
   const poly = `<polygon points="${points.map((p) => `${c + p.x * u},${c - p.y * u}`).join(' ')}" fill="#a5b4fc" fill-opacity=".45" stroke="${INK}" stroke-width="1.5"/>`;
   return base.replace(/<circle/, poly + '<circle');
+}
+
+/* ===================== round 3: SAT-style function graphs and geometry ===================== */
+/** xy-plane with gridlines, labelled axes and one or more plotted functions / points. fns: [{f, label}] ; pts: [{x,y,label}] */
+export function fnGraph({ fns = [], pts = [], xr = [-6, 6], yr = [-6, 6], step = 1, labelEvery = 2 }) {
+  const W = 300, H = 300, P = 24, X = (x) => P + ((W - 2 * P) * (x - xr[0])) / (xr[1] - xr[0]), Y = (y) => H - P - ((H - 2 * P) * (y - yr[0])) / (yr[1] - yr[0]);
+  let s = '';
+  for (let x = xr[0]; x <= xr[1]; x += step) s += `<line x1="${X(x)}" y1="${Y(yr[0])}" x2="${X(x)}" y2="${Y(yr[1])}" stroke="${GRID}"/>`;
+  for (let y = yr[0]; y <= yr[1]; y += step) s += `<line x1="${X(xr[0])}" y1="${Y(y)}" x2="${X(xr[1])}" y2="${Y(y)}" stroke="${GRID}"/>`;
+  s += `<line x1="${X(xr[0])}" y1="${Y(0)}" x2="${X(xr[1])}" y2="${Y(0)}" stroke="${INK}" stroke-width="1.5"/><line x1="${X(0)}" y1="${Y(yr[0])}" x2="${X(0)}" y2="${Y(yr[1])}" stroke="${INK}" stroke-width="1.5"/>`;
+  s += text(X(xr[1]) - 2, Y(0) - 6, 'x', 'text-anchor="end" font-style="italic" font-size="13"') + text(X(0) + 7, Y(yr[1]) + 12, 'y', 'font-style="italic" font-size="13"');
+  for (let x = xr[0]; x <= xr[1]; x += step) if (x && x % labelEvery === 0) s += text(X(x), Y(0) + 14, x, 'text-anchor="middle" font-size="10"');
+  for (let y = yr[0]; y <= yr[1]; y += step) if (y && y % labelEvery === 0) s += text(X(0) - 5, Y(y) + 4, y, 'text-anchor="end" font-size="10"');
+  s += text(X(0) - 5, Y(0) + 14, 'O', 'text-anchor="end" font-size="10"');
+  const COL = ['#1d4ed8', '#dc2626', '#059669'];
+  fns.forEach((fn, i) => { // plot only inside the window (split into segments) so lines never end in a flat stub
+    const segs = [[]];
+    for (let k = 0; k <= 480; k++) { const x = xr[0] + ((xr[1] - xr[0]) * k) / 480, y = fn.f(x); if (Number.isFinite(y) && y >= yr[0] && y <= yr[1]) segs[segs.length - 1].push(`${X(x).toFixed(1)},${Y(y).toFixed(1)}`); else if (segs[segs.length - 1].length) segs.push([]); }
+    for (const sgm of segs) if (sgm.length > 1) s += `<polyline points="${sgm.join(' ')}" fill="none" stroke="${COL[i % 3]}" stroke-width="2.4"/>`;
+  });
+  const named = fns.filter((f) => f.label); // legend box in the top-left corner instead of labels on the curves
+  if (named.length) {
+    s += `<rect x="${P + 4}" y="${P + 4}" width="${Math.max(...named.map((f) => f.label.length)) * 7 + 34}" height="${named.length * 18 + 8}" fill="#fff" stroke="${GRID}"/>`;
+    named.forEach((f) => { const i = fns.indexOf(f), y = P + 18 + named.indexOf(f) * 18; s += `<line x1="${P + 10}" y1="${y - 4}" x2="${P + 26}" y2="${y - 4}" stroke="${COL[i % 3]}" stroke-width="3"/>` + text(P + 31, y, f.label, `font-size="12" font-style="italic" fill="${COL[i % 3]}"`); });
+  }
+  for (const p of pts) s += `<circle cx="${X(p.x)}" cy="${Y(p.y)}" r="4" fill="${INK}"/>` + (p.label ? text(X(p.x) + (p.x < 0 ? -7 : 7), Y(p.y) + (p.y < 0 ? 18 : -9), p.label, `font-size="11" font-weight="600" stroke="#fff" stroke-width="3" paint-order="stroke" ${p.x < 0 ? 'text-anchor="end"' : ''}`) : '');
+  return wrap(W, H, s);
+}
+/** Circle with centre O, radius label and a shaded sector of `deg` degrees. */
+export function sectorFig(r, deg) {
+  const W = 240, H = 220, cx = 120, cy = 110, R = 80, a = (deg * Math.PI) / 180, x2 = cx + R * Math.cos(-a), y2 = cy + R * Math.sin(-a);
+  return wrap(W, H, `<circle cx="${cx}" cy="${cy}" r="${R}" fill="#fff" stroke="${INK}" stroke-width="2"/>` +
+    `<path d="M${cx} ${cy} L${cx + R} ${cy} A${R} ${R} 0 ${deg > 180 ? 1 : 0} 0 ${x2.toFixed(1)} ${y2.toFixed(1)} Z" fill="#fde68a" stroke="${INK}" stroke-width="2"/>` +
+    `<circle cx="${cx}" cy="${cy}" r="3" fill="${INK}"/>` + text(cx - 6, cy + 16, 'O', 'text-anchor="end" font-weight="700"') + text(cx + R / 2, cy + 16, r, 'text-anchor="middle"') +
+    text(cx + 22 * Math.cos(-a / 2), cy + 22 * Math.sin(-a / 2) + 4, `${deg}°`, 'font-size="11"'));
+}
+/** Right triangle ABC (right angle at C) with two labelled sides and the angle at A marked. */
+export function trigTriangle({ ac, bc, ab, show = ['ac', 'bc'] }) {
+  const W = 280, H = 210, k = Math.min(200 / ac, 140 / bc), C = [40, 180], A = [40 + ac * k, 180], B = [40, 180 - bc * k];
+  let s = `<polygon points="${A} ${B} ${C}" fill="#e0f2fe" stroke="${INK}" stroke-width="2"/><path d="M${C[0]} ${C[1] - 12} h12 v12" fill="none" stroke="${INK}"/>`;
+  s += text(A[0] + 6, A[1] + 4, 'A', 'font-weight="700"') + text(B[0] - 6, B[1], 'B', 'text-anchor="end" font-weight="700"') + text(C[0] - 6, C[1] + 6, 'C', 'text-anchor="end" font-weight="700"');
+  if (show.includes('ac')) s += text((A[0] + C[0]) / 2, C[1] + 18, ac, 'text-anchor="middle"');
+  if (show.includes('bc')) s += text(C[0] - 8, (B[1] + C[1]) / 2, bc, 'text-anchor="end"');
+  if (show.includes('ab')) s += text((A[0] + B[0]) / 2 + 8, (A[1] + B[1]) / 2 - 4, ab);
+  return wrap(W, H, s);
 }

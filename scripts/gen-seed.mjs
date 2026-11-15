@@ -1,6 +1,6 @@
 // Generates seed/seed.sql: products + ORIGINAL sample questions (format-inspired, not copied).
 import { writeFileSync } from 'node:fs';
-import { barChart, lineChart, pieChart, rectFig, rightTriangle, circleFig, coordPlane, angleFig, numberLine, gridShape, scatterPlot, groupedBar, histogram, pictograph, venn, clockFace, fractionShade, tableSvg, reflectGrid } from './svgcharts.mjs';
+import { barChart, lineChart, pieChart, rectFig, rightTriangle, circleFig, coordPlane, angleFig, numberLine, gridShape, scatterPlot, groupedBar, histogram, pictograph, venn, clockFace, fractionShade, tableSvg, reflectGrid, fnGraph, sectorFig, trigTriangle } from './svgcharts.mjs';
 
 let seedState = 12345;
 const rnd = () => ((seedState = (seedState * 1664525 + 1013904223) % 4294967296) / 4294967296);
@@ -604,23 +604,31 @@ function satMath2(count) {
   }
 }
 
+const LEGACY_BANKS = new Set(['cat4-scat-verbal.json', 'isee-verbal-reading.json', 'map-early.json', 'map-upper.json', 'map-verbal.json', 'sat-rw.json', 'ssat-verbal-2.json', 'ssat-verbal-reading.json', 'toefl-primary.json', 'toeflj-listening-lfm.json', 'toeflj-reading-cogat-verbal.json', 'wida-listening-reading.json']);
+function localShuffle(arr, h) { let st = parseInt(h.slice(0, 8), 16) || 1; const r = () => ((st = (st * 1664525 + 1013904223) % 4294967296) / 4294967296); const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
 /** Merge the hand-written banks that were authored by writers in scripts/bank/*.json */
 function mergeBanks() {
   const dir = new URL('./bank/', import.meta.url);
-  let files = []; try { files = readdirSync(dir).filter((f) => f.endsWith('.json') && !f.endsWith('.drop.json')).sort(); } catch {}
-  let total = 0;
+  const pending = new Set((process.env.BANK_PENDING || '').split(',').filter(Boolean)); // banks still awaiting blind verification
+  let files = []; try { files = readdirSync(dir).filter((f) => f.endsWith('.json') && !f.endsWith('.drop.json') && !pending.has(f)).sort(); } catch {}
+  let total = 0, shortSat = 0;
   for (const f of files) {
     let drop = new Set(); try { drop = new Set(JSON.parse(readFileSync(new URL(f.replace(/\.json$/, '.drop.json'), dir), 'utf8'))); } catch {} // items a blind verifier found wrong/ambiguous
     JSON.parse(readFileSync(new URL(f, dir), 'utf8')).forEach((it, i) => { if (drop.has(i)) return;
     // Writers tended to place the key in a rotating A-B-C-D pattern: shuffle choices (deterministically) unless an option refers to another option.
     let ch = it.choices.map(String), ans = it.answer;
     if (!ch.some((c) => /\b(all|none|both|neither|either)\b.*\b(above|these)\b|\b(A|B|C|D)\b\s*(and|&|or)\s*\b(A|B|C|D)\b|^(A|B|C|D)\)?$/i.test(c))) {
-      const idx = shuffle([0, 1, 2, 3]); ch = idx.map((k) => ch[k]); ans = idx.indexOf(it.answer);
+      // Banks added after the generated items were reviewed shuffle with their own per-item RNG, so they do not shift the
+      // shared random stream (which would re-roll every generated question that comes after this point).
+      const idx = LEGACY_BANKS.has(f) ? shuffle([0, 1, 2, 3]) : localShuffle([0, 1, 2, 3], hash(it.stem + '|' + (it.passage || '').slice(0, 200)));
+      ch = idx.map((k) => ch[k]); ans = idx.indexOf(it.answer);
     }
+    // Digital SAT: every R&W question has a 25–150-word text. Older one-sentence items are retired (after the shuffle, so the random stream is unchanged).
+    if (it.exam_type === 'SAT' && it.section === 'rw' && (String(it.passage || '').match(/[A-Za-z0-9'’-]+/g) || []).length < 25) { shortSat++; return; }
     add(it.exam_type, it.section, it.difficulty, it.stem, ch, ans, it.explanation, { ...(it.passage ? { passage: it.passage } : {}), _src: 'bank' }); total++;
     });
   }
-  console.log('merged', total, 'hand-written items from', files.length, 'files');
+  console.log('merged', total, 'hand-written items from', files.length, 'files; retired', shortSat, 'SAT R&W items with passages under 25 words');
 }
 
 // ---- volume boosts for existing exams ----
@@ -743,6 +751,122 @@ paperFold('CAT4', 'spatial', 16); paperFold('COGAT', 'nonverbal', 10);
 numberAnalogies('CAT4', 'quantitative', 14);
 satGridIn(48);
 
+/* ---------- SAT / PSAT math with figures: graphs of functions, systems, scatterplots, tables, circles, trigonometry ---------- */
+function satFigures(count) {
+  const kinds = ['slope', 'intercept', 'system', 'vertex', 'roots', 'expo', 'scatter', 'table', 'sector', 'trig', 'histo', 'shift'];
+  const frac = (n, d) => { const g = (a, b) => (b ? g(b, a % b) : a); const k = g(Math.abs(n), Math.abs(d)) || 1; const s = n * d < 0 ? '−' : ''; n = Math.abs(n) / k; d = Math.abs(d) / k; return d === 1 ? `${s}${n}` : `${s}${n}/${d}`; };
+  const sg = (v) => (v < 0 ? `− ${-v}` : `+ ${v}`);
+  let retries = 0;
+  for (let i = 0; i < count; i++) {
+    const t = kinds[i % kinds.length]; let st, cor, wr, ex, d, svg;
+    if (t === 'slope') { // line through two lattice points
+      let x1, y1, x2, y2; do { x1 = ri(-5, 0); y1 = ri(-4, 4); x2 = ri(1, 5); y2 = ri(-5, 5); } while (y2 === y1);
+      svg = fnGraph({ fns: [{ f: (x) => y1 + ((y2 - y1) / (x2 - x1)) * (x - x1) }], pts: [{ x: x1, y: y1, label: `(${x1}, ${y1})` }, { x: x2, y: y2, label: `(${x2}, ${y2})` }] });
+      st = 'The graph of a line in the xy-plane is shown. What is the slope of the line?'; cor = frac(y2 - y1, x2 - x1);
+      wr = [frac(x2 - x1, y2 - y1), frac(-(y2 - y1), x2 - x1), frac(y2 - y1 + (y2 > y1 ? 1 : -1), x2 - x1), `${y2 - y1}`];
+      ex = `Slope = (${y2} − ${y1 < 0 ? `(${y1})` : y1}) / (${x2} − ${x1 < 0 ? `(${x1})` : x1}) = ${cor}.`; d = 1 + (Math.abs(x2 - x1) > 1 && (y2 - y1) % (x2 - x1) !== 0 ? 1 : 0);
+    } else if (t === 'intercept') { // pick equation of the graphed line
+      const m = pick([-3, -2, -1, 1, 2, 3, 0.5, -0.5]), b = ri(-4, 4);
+      svg = fnGraph({ fns: [{ f: (x) => m * x + b }], pts: [{ x: 0, y: b }] });
+      const ms = m === 1 ? '' : m === -1 ? '−' : m === 0.5 ? '(1/2)' : m === -0.5 ? '−(1/2)' : `${m}`.replace('-', '−');
+      const eq = (mm, bb) => `y = ${mm}x ${bb === 0 ? '' : sg(bb)}`.trim();
+      st = 'Which equation defines the line shown in the xy-plane?'; cor = eq(ms, b);
+      wr = [eq(ms, b === 0 ? 2 : -b), eq(ms.startsWith('−') ? ms.slice(1) : '−' + ms, b), eq(m === 0.5 || m === -0.5 ? (m > 0 ? '2' : '−2') : `(1/${Math.abs(m)})`.replace('(1/1)', '2'), b), eq(ms, b + (b >= 0 ? 2 : -2))];
+      ex = `The line crosses the y-axis at (0, ${b}), and rises ${m} unit(s) for each unit to the right, so the slope is ${m} and the equation is ${cor}.`; d = 2;
+    } else if (t === 'system') { // two lines intersecting at a lattice point
+      const x0 = ri(-3, 3), y0 = ri(-3, 3); let m1 = pick([1, 2, -1, 3]), m2 = pick([-2, -1, 0.5, -3]); if (m1 === m2) m2 = -m1 - 1;
+      svg = fnGraph({ fns: [{ f: (x) => y0 + m1 * (x - x0), label: 'ℓ', lx: x0 + (m1 > 0 ? 2 : -2) }, { f: (x) => y0 + m2 * (x - x0), label: 'k', lx: x0 - (m1 > 0 ? 3 : -3) }] });
+      st = 'Lines ℓ and k are graphed in the xy-plane. If (x, y) is the solution to the system of equations represented by the two lines, what is the value of x + y?';
+      cor = x0 + y0; wr = [x0 - y0, x0 * y0 === x0 + y0 ? x0 + y0 + 2 : x0 * y0, x0 + y0 + 1, y0 - x0];
+      ex = `The lines intersect at (${x0}, ${y0}), so x + y = ${x0 + y0}.`; d = 3;
+    } else if (t === 'vertex') { // parabola, read min/max
+      const a = pick([1, -1, 0.5, -0.5]), h = ri(-3, 3), k = a > 0 ? ri(-5, 0) : ri(0, 5);
+      svg = fnGraph({ fns: [{ f: (x) => a * (x - h) ** 2 + k, label: 'y = f(x)', lx: h + 1.6 }] });
+      const mx = a > 0 ? 'minimum' : 'maximum';
+      st = `The graph of the quadratic function y = f(x) is shown. What is the ${mx} value of f?`; cor = k; wr = [h, k === 0 ? 1 : -k, a > 0 ? k + 1 : k - 1, h + k === k ? k + 2 : h + k];
+      ex = `The vertex of the parabola is (${h}, ${k}); its y-coordinate ${k} is the ${mx} value of f.`; d = 3;
+    } else if (t === 'roots') { // parabola with integer x-intercepts
+      const r1 = ri(-5, -1), r2 = ri(1, 5), a = pick([0.5, -0.5, 1, -1]); const f = (x) => a * (x - r1) * (x - r2);
+      const vy = f((r1 + r2) / 2); const span = Math.max(6, Math.ceil(Math.abs(vy)) + 1);
+      svg = fnGraph({ fns: [{ f }], xr: [-6, 6], yr: [-span, span], step: 1, labelEvery: span > 8 ? 4 : 2 });
+      st = 'The graph of y = f(x) is shown, where f is a quadratic function. Which of the following could define f?';
+      const fx = (p, q) => `f(x) = ${a < 0 ? '−' : ''}${Math.abs(a) === 0.5 ? '(1/2)' : ''}(x ${sg(-p)})(x ${sg(-q)})`;
+      cor = fx(r1, r2); wr = [fx(-r1, -r2), fx(r1, -r2), fx(-r1, r2)];
+      ex = `The graph crosses the x-axis at x = ${r1} and x = ${r2}, so (x ${sg(-r1)}) and (x ${sg(-r2)}) are factors of f(x); the graph opens ${a > 0 ? 'upward' : 'downward'}.`; d = 4;
+    } else if (t === 'expo') { // exponential through (0,a) and (1,ab)
+      const a0 = pick([1, 2, 3]), b = pick([2, 3]);
+      svg = fnGraph({ fns: [{ f: (x) => a0 * b ** x, label: 'y = f(x)', lx: 0.6 }], pts: [{ x: 0, y: a0, label: `(0, ${a0})` }, { x: 1, y: a0 * b, label: `(1, ${a0 * b})` }], xr: [-4, 4], yr: [-2, 10], step: 1 });
+      const ef = (a, base) => (a === 1 ? `f(x) = ${base}^x` : `f(x) = ${a}(${base})^x`);
+      st = 'The graph of the exponential function f is shown. Which equation could define f?'; cor = ef(a0, b);
+      wr = [`f(x) = ${b}^x + ${a0}`, ef(a0, b + 1), ef(a0 * b, b), `f(x) = ${a0}x^${b}`];
+      ex = `f(0) = ${a0} gives the initial value, and f(1)/f(0) = ${b} gives the growth factor: f(x) = ${a0}·${b}^x.`; d = 4;
+    } else if (t === 'scatter') { // line of best fit prediction
+      const m = pick([0.5, 1, 1.5, 2]), b = ri(1, 3), pts = Array.from({ length: 9 }, (_, k) => { const x = k + 1; return [x, Math.max(0.5, Math.min(19, Math.round((m * x + b + (rnd() - 0.5) * 2) * 2) / 2))]; });
+      const x0 = pick([4, 6, 8]); const yhat = m * x0 + b;
+      svg = scatterPlot({ title: 'Study time and quiz score points gained', points: pts, xMax: 10, yMax: 20, step: 2, line: { m, b }, xLabel: 'Hours of study', yLabel: 'Points gained' });
+      st = `The scatterplot shows 9 students and a line of best fit. Based on the line of best fit, what is the predicted number of points gained by a student who studies ${x0} hours?`;
+      cor = yhat; wr = [yhat + 2, yhat - 2, m * (x0 + 1) + b === yhat + 2 ? yhat + 3 : m * (x0 + 1) + b];
+      ex = `The line passes through (0, ${b}) with slope ${m}: ${m} × ${x0} + ${b} = ${yhat}.`; d = 2;
+    } else if (t === 'table') { // linear table → equation
+      const m = ri(2, 6), b = ri(-5, 9), xs = [1, 2, 3, 4];
+      svg = tableSvg({ title: 'Values of x and f(x)', headers: ['x', 'f(x)'], rows: xs.map((x) => [x, m * x + b]) });
+      const eq = (mm, bb) => `f(x) = ${mm}x ${bb === 0 ? '' : sg(bb)}`.trim();
+      st = 'The table shows four values of x and their corresponding values of the linear function f. Which equation defines f?'; cor = eq(m, b);
+      wr = [eq(m + b, 0), eq(b === 0 ? m + 1 : b, m), eq(m, m + b)].map((w) => (w === cor ? eq(m, b + 1) : w));
+      ex = `Each increase of 1 in x increases f(x) by ${m}, so the slope is ${m}; f(1) = ${m + b} gives the constant ${b}.`; d = 2;
+    } else if (t === 'sector') { // sector area in terms of pi
+      const r = pick([3, 4, 6, 9, 12]), deg = pick([30, 45, 60, 90, 120, 150]); const num = r * r * deg, den = 360;
+      svg = sectorFig(r, deg);
+      const piF = (n, dd) => { const f = frac(n, dd); return f === '1' ? 'π' : f.includes('/') ? `(${f})π` : `${f}π`; };
+      st = `In the circle with center O shown, the radius is ${r} and the shaded sector has a central angle of ${deg}°. What is the area of the shaded sector?`;
+      cor = piF(num, den); wr = [piF(2 * r * deg, den), piF(r * r * (360 - deg), den), piF(r * deg, den)];
+      ex = `Sector area = (${deg}/360) × π × ${r}² = ${cor}.`; d = 4 + (deg % 45 === 0 && deg !== 90 ? 0 : 0);
+    } else if (t === 'trig') { // right triangle trig
+      const [p, q, h] = pick([[3, 4, 5], [5, 12, 13], [8, 15, 17], [6, 8, 10], [7, 24, 25]]); const fn = pick(['sin', 'cos', 'tan']);
+      svg = trigTriangle({ ac: q, bc: p, ab: h, show: ['ac', 'bc', 'ab'] });
+      const val = { sin: [p, h], cos: [q, h], tan: [p, q] }[fn];
+      st = `In right triangle ABC shown, angle C is a right angle. What is the value of ${fn}(A)?`; cor = frac(...val);
+      wr = shuffle([[q, h], [p, h], [p, q], [q, p], [h, p], [h, q]].map((r) => frac(...r)).filter((w) => w !== cor)); // the other five side ratios
+      ex = `${fn}(A) = ${fn === 'sin' ? 'opposite/hypotenuse' : fn === 'cos' ? 'adjacent/hypotenuse' : 'opposite/adjacent'}. Side BC (${p}) is opposite A, AC (${q}) is adjacent, AB (${h}) is the hypotenuse, so ${fn}(A) = ${cor}.`; d = 3;
+    } else if (t === 'histo') { // mean from frequency bar chart
+      const base = ri(0, 3), vals = [0, 1, 2, 3, 4].map((v) => v + base), fr = vals.map((_, k) => ri(k < 2 ? 0 : 1, 7)); const n = fr.reduce((a, b) => a + b, 0), sum = vals.reduce((a, v, k) => a + v * fr[k], 0);
+      if (sum % n) { if (++retries < 200) { i--; continue; } } // keep integer means only
+      svg = barChart({ title: 'Number of books read in a month', labels: vals.map(String), values: fr, yMax: 8, yStep: 1, yLabel: 'Number of students' });
+      st = 'The bar graph shows how many books each student in a club read last month. What is the mean number of books read per student?';
+      cor = sum / n; wr = [n / 5, Math.max(...fr), sum / 5].map((w) => (w === cor ? cor + 1 : w));
+      ex = `Total books = ${vals.map((v, k) => `${v}×${fr[k]}`).join(' + ')} = ${sum}; students = ${n}; mean = ${sum}/${n} = ${cor}.`; d = 3;
+    } else { // shift: graph of f and translated g
+      const h = pick([-3, -2, 2, 3]), k = pick([-2, 1, 2, 3]), f = (x) => 0.5 * x * x - 2;
+      svg = fnGraph({ fns: [{ f, label: 'f', lx: -2.6 }, { f: (x) => f(x - h) + k, label: 'g', lx: h + 2.4 }] });
+      const gx = (hh, kk) => `g(x) = f(x ${hh === 0 ? '' : sg(-hh)})${kk === 0 ? '' : ' ' + sg(kk)}`.replace('f(x )', 'f(x)');
+      st = 'The graphs of y = f(x) and y = g(x) are shown in the xy-plane. The graph of g is the graph of f shifted. Which equation defines g?';
+      cor = gx(h, k); wr = [gx(-h, k), gx(h, -k), gx(-h, -k)];
+      ex = `The vertex moves from (0, −2) to (${h}, ${-2 + k}): ${Math.abs(h)} unit(s) ${h > 0 ? 'right' : 'left'} and ${Math.abs(k)} unit(s) ${k > 0 ? 'up' : 'down'}, so g(x) = ${cor.slice(7)}.`; d = 5;
+    }
+    const uniq = [...new Set(wr.map(String))].filter((w) => w !== String(cor));
+    if (uniq.length < 3) { if (++retries < 200) { i--; continue; } throw new Error(`satFigures: not enough distractors for ${t}`); }
+    mcq('SAT', 'math', d, st, cor, wr, ex, { image_svg: svg });
+  }
+}
+satFigures(72);
+
+
+/* ---------- reading calibration: a passage that reads above a level cannot be served at that level ----------
+   Flesch-Kincaid grade of the passage sets a minimum difficulty (only ever raises). Thresholds follow each exam's level windows. */
+function calibrateReading() {
+  const syl = (w) => { w = w.toLowerCase().replace(/[^a-z]/g, ''); if (w.length <= 3) return 1; w = w.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '').replace(/^y/, ''); return Math.max(1, (w.match(/[aeiouy]{1,2}/g) || []).length); };
+  const fk = (t) => { const ws = String(t).match(/[A-Za-z]+/g) || []; if (ws.length < 20) return 0; const se = Math.max(1, (String(t).match(/[.!?]+(["”’)]*)(\s|$)/g) || []).length); return 0.39 * (ws.length / se) + 11.8 * (ws.reduce((a, w) => a + syl(w), 0) / ws.length) - 15.59; };
+  // [FK grade, minimum difficulty] steps per exam
+  const STEPS = { MAP: [[3.5, 2], [6, 3], [8, 4], [10, 5]], SSAT: [[6.5, 2], [8.5, 3], [10, 4]], ISEE: [[6.5, 2], [8.5, 3], [10, 4]], TOEFLJ: [[5, 2], [6.5, 3], [8, 4]], WIDA: [[4.5, 2], [6.5, 3], [8.5, 4]] };
+  let moved = 0;
+  for (const q of Q) {
+    const steps = STEPS[q.exam_type]; if (!steps || !q.passage || !['reading'].includes(q.section)) continue;
+    const g = fk(q.passage); let min = 1; for (const [t, d] of steps) if (g >= t) min = d;
+    if (q.difficulty < min) { q.difficulty = min; moved++; }
+  }
+  console.log('reading calibration: raised difficulty of', moved, 'items');
+}
+calibrateReading();
 
 /* ---------- review export (REVIEW_DIR=...): sets for blind verification of generated questions ---------- */
 if (process.env.REVIEW_DIR) {

@@ -2,7 +2,7 @@ import { Hono } from 'hono';
 import { uid, now, bufToB64, numEqual, randomToken, sha256hex } from '../lib/util.js';
 import { requireUser, accountGate } from '../lib/auth.js';
 import { HTTPException } from 'hono/http-exception';
-import { EXAMS, GRACE_MS, initialState, pickNext, sectionTarget, adaptDifficulty, scoreAttempt, getLevel, levelBank, levelForGrade } from '../lib/exam.js';
+import { EXAMS, GRACE_MS, initialState, pickNext, pickGrouped, sectionTarget, adaptDifficulty, scoreAttempt, getLevel, levelBank, levelForGrade } from '../lib/exam.js';
 import { sendMail, mailResult } from '../lib/email.js';
 import { audit, logEvent } from '../lib/security.js';
 import { alimtalk, phoneFor } from '../lib/notify.js';
@@ -164,11 +164,13 @@ async function ensureCurrent(env, a, st) {
    change answers and skip; unanswered questions are recorded as omitted when the section is submitted. ===== */
 async function buildSectionSet(env, a, st) {
   const sec = EXAMS[a.exam_type].sections[st.si];
-  const { results: bank } = await env.DB.prepare(`SELECT id,difficulty FROM questions WHERE exam_type=? AND section=? AND active=1 AND substr(id,-1) NOT IN ('0','8')`).bind(a.exam_type, sec.key).all(); // '0' = free-sample pool
+  const { results: bank } = await env.DB.prepare(`SELECT id,difficulty,substr(passage,1,160) AS pk FROM questions WHERE exam_type=? AND section=? AND active=1 AND substr(id,-1) NOT IN ('0','8')`).bind(a.exam_type, sec.key).all(); // '0'/'8' = free-sample pool
   const lv = getLevel(a.exam_type, st.level);
   const { pool, lo, hi } = levelBank(bank, lv, sec.n);
-  const target = sectionTarget(a.exam_type, st.si, pool.length), ids = [], sim = { ...st, served: [], qi: 0 };
-  for (let i = 0; i < target; i++) { const id = pickNext(a.exam_type, sim, pool, target, lo, hi); if (!id) break; ids.push(id); sim.served.push(id); sim.qi++; }
+  const target = sectionTarget(a.exam_type, st.si, pool.length);
+  let ids = [];
+  if (pool.filter((q) => q.pk).length * 2 > pool.length) ids = pickGrouped(pool, target, lo, hi); // reading / listening: whole passages, kept together
+  else { const sim = { ...st, served: [], qi: 0 }; for (let i = 0; i < target; i++) { const id = pickNext(a.exam_type, sim, pool, target, lo, hi); if (!id) break; ids.push(id); sim.served.push(id); sim.qi++; } }
   st.set = { si: st.si, ids }; st.target = ids.length;
 }
 async function finalizeSection(env, a, st) { // unanswered -> omitted (choice NULL, correct 0) so they count in the score
