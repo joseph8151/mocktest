@@ -42,6 +42,7 @@ function sectionBase(sec, a) {
 const cefr = (score, cuts) => (score >= cuts[2] ? 'B2' : score >= cuts[1] ? 'B1' : score >= cuts[0] ? 'A2' : 'Below A2');
 const WIDA_LABEL = ['', 'Entering', 'Emerging', 'Developing', 'Expanding', 'Bridging', 'Reaching'];
 
+const KR_BAND = (p) => (p >= 0.9 ? '최상위' : p >= 0.75 ? '상위' : p >= 0.55 ? '중위' : p >= 0.35 ? '기본' : '기초');
 export function computeScore(examType, ex, lv, answers) {
   const sections = {}, out = { sections, level: lv ? { key: lv.key, name: lv.name, grades: lv.grades } : null, extras: [], notes: [] };
   const grade = lv && /^g(\d+)$/.test(lv.key) ? +lv.key.slice(1) : lv?.key === 'k' ? 0 : null;
@@ -71,6 +72,8 @@ export function computeScore(examType, ex, lv, answers) {
       const sas = Math.round(clamp(100 + sd * z, lo, hi)), perc = pr((sas - 100) / sd);
       Object.assign(s, { sas, percentile: perc, stanine: stanine(perc) });
       s.main = sas; s.sub = `${examType === 'CAT4' ? 'NPR' : 'PR'} ${perc} · 스태나인 ${s.stanine}`; s.ring = perc;
+    } else if (ex.category === 'kr') { // 레테: 100-point section scores with a placement band
+      s.score = Math.round(p * 100); s.main = s.score; s.sub = `${KR_BAND(p)} · ${s.correct}/${s.total}`; s.ring = s.score;
     } else if (examType === 'WIDA') {
       s.level = r1(clamp(1 + 5 * p, 1, 6)); s.main = s.level.toFixed(1); s.sub = WIDA_LABEL[Math.floor(s.level)]; s.ring = (s.level / 6) * 100;
     } else { // scaled-score tests
@@ -113,6 +116,24 @@ export function computeScore(examType, ex, lv, answers) {
       out.extras.push({ label: 'Ability Profile', value: out.profile });
       out.notes.push('Ability Profile: 숫자 = 세 배터리의 중앙 스태나인, A = 고른 분포, B = 한 영역이 두드러짐, C = 강점과 약점이 공존, E = 24점 이상의 극단적 차이.');
     } else { out.overall = null; out.headline = { label: 'Composite SAS', value: '–' }; }
+  } else if (ex.category === 'kr') {
+    const auto = ex.sections.filter((x) => !x.manual).map((x) => sections[x.key]).filter((x) => x.total);
+    const c = auto.reduce((m, x) => m + x.correct, 0), t = auto.reduce((m, x) => m + x.total, 0), p = t ? c / t : 0;
+    out.overall = t ? Math.round(p * 100) : null;
+    if (ex.kr === 'eng' && lv?.sr) {
+      const sr = r1(clamp(lv.sr + (p - 0.7) * 3, lv.sr - 1.5, lv.sr + 1));
+      out.headline = { label: '추정 리딩 레벨 (SR)', value: t ? sr.toFixed(1) : '–' };
+      out.extras.push({ label: '종합 점수 (객관식)', value: out.overall ?? '–' }, { label: `${lv.age}세 반 (SR ${lv.sr}) 판정`, value: !t ? '–' : p >= 0.85 ? '상위 반 추천' : p >= 0.7 ? '입학 기준 충족' : p >= 0.5 ? '보강 후 입학 권장' : '한 단계 아래 레벨 권장' });
+      out.notes.push(`SR(리딩 레벨)은 미국 학년 기준 독해 수준(예: 3.5 = 3학년 5개월)입니다. ${lv.age}세 레테의 기준은 SR ${lv.sr}이며, 정답률 70%를 입학 기준으로 봅니다.`);
+    } else {
+      out.headline = { label: '종합 점수', value: out.overall ?? '–' };
+      const band = KR_BAND(p);
+      out.extras.push({ label: '판정', value: t ? band : '–' }, { label: '추천 과정', value: !t ? '–' : { 최상위: '심화·영재 과정', 상위: '심화 과정', 중위: '정규 과정', 기본: '기본 과정', 기초: '한 단계 아래 과정' }[band] });
+      if (lv?.age) out.notes.push(`${lv.age}세 기준 문항으로 채점했습니다. 판정: 90점↑ 최상위 · 75↑ 상위 · 55↑ 중위 · 35↑ 기본 · 그 아래 기초.`);
+    }
+    const weak = auto.length ? Object.entries(sections).filter(([k, x]) => x.total && !ex.sections.find((y) => y.key === k)?.manual).sort((a, b) => a[1].correct / a[1].total - b[1].correct / b[1].total)[0] : null;
+    if (weak && t) out.extras.push({ label: '보완이 필요한 영역', value: ex.sections.find((y) => y.key === weak[0])?.name || weak[0] });
+    out.pendingManual = ex.sections.filter((x) => x.manual).some((x) => !sections[x.key].graded);
   } else if (examType === 'WIDA') {
     const L = sections.listening?.level, R = sections.reading?.level, W = sections.writing?.level, S = sections.speaking?.level;
     const f = (x) => (x === null || x === undefined ? null : r1(x));
@@ -138,6 +159,6 @@ export function computeScore(examType, ex, lv, answers) {
     const manual = ex.sections.filter((x) => x.manual).map((x) => sections[x.key]);
     out.pendingManual = manual.some((x) => !x.graded);
   }
-  out.notes.push('모든 점수는 실제 시험과 같은 척도로 환산한 추정치이며, 공식 환산표·규준과 다를 수 있습니다.');
+  out.notes.push(ex.category === 'kr' ? '레테 결과는 이 사이트 문항 기준의 진단이며, 학원별 실제 반 배정 기준과 다를 수 있습니다.' : '모든 점수는 실제 시험과 같은 척도로 환산한 추정치이며, 공식 환산표·규준과 다를 수 있습니다.');
   return out;
 }

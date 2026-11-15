@@ -21,8 +21,10 @@ app.get('/config', async (c) => c.json({
 app.get('/products', async (c) => {
   const admin = (await loadUser(c))?.role === 'admin'; // the 1,000-won payment test product is only visible to admins
   const { results } = await c.env.DB.prepare(`SELECT * FROM products WHERE active=1 OR (?1 AND id='p-test') ORDER BY sort,price_krw`).bind(admin ? 1 : 0).all();
+  // never sell an exam that has no questions yet (e.g. a new category whose bank is still being reviewed)
+  const ready = new Set((await c.env.DB.prepare(`SELECT exam_type FROM questions WHERE active=1 GROUP BY exam_type HAVING COUNT(*) >= 20`).all()).results.map((r) => r.exam_type));
   return c.json({
-    products: results,
+    products: results.filter((p) => p.id === 'p-test' || ready.has(p.exam_type)),
     payment: { kcp: kcpEnabled(c.env), stripe: !!c.env.STRIPE_SECRET_KEY, portone: !!(c.env.PORTONE_STORE_ID && c.env.PORTONE_CHANNEL_KEY),
       portoneStoreId: c.env.PORTONE_STORE_ID || null, portoneChannelKey: c.env.PORTONE_CHANNEL_KEY || null },
   });

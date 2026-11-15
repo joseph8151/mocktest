@@ -70,7 +70,8 @@ function renderNav() {
   $nav.classList.remove('open');
   $nav.replaceChildren(...[
     h('button', { class: 'menu-toggle', 'aria-label': '메뉴', onclick: (e) => { e.stopPropagation(); $nav.classList.toggle('open'); } }, h('span'), h('span'), h('span')),
-    h('a', { href: '#/' }, '시험 상품'),
+    h('a', { href: '#/' }, '미국 시험'),
+    h('a', { href: '#/kr' }, '레테'),
     ...(me ? [
       h('a', { class: 'keep', href: '#/me' }, me.isChild ? `내 시험 (${me.name})` : '내 시험'),
       h('a', { href: '#/practice' }, '연습'),
@@ -85,6 +86,12 @@ function renderNav() {
 
 /* ---------- pages ---------- */
 const EXAM_META = {
+  KR_ENG: { kr: true, name: '영어 레테', ico: 'E', accent: 'var(--brand)', sub: '입학 레벨테스트 · Reading / Vocabulary / Grammar / Writing',
+    points: ['9세 SR 3.5 · 10세 SR 4.5 · 11세 SR 5.5 · 12세 SR 6.5 기준 출제', '350–400단어 픽션·논픽션 지문 (미국 교과 기반)', 'Creative · Expository 라이팅을 선생님이 채점', '추정 SR과 반 배정 판정'] },
+  KR_KOR: { kr: true, name: '국어 문해력 레테', ico: '국', accent: 'var(--ink)', sub: '7–12세 · 비문학 / 문학 / 어휘·어법 / 서술형',
+    points: ['나이별로 길어지는 비문학·문학 지문', '중심 내용·추론·어휘·표현까지 문해력 전 영역', '서술형은 선생님이 채점', '최상위~기초 5단계 판정과 추천 과정'] },
+  KR_MATH: { kr: true, name: '수학 사고력 레테', ico: '수', accent: 'var(--navy-2)', sub: '7–12세 · 수 감각 / 도형·공간 / 규칙·추론 / 문제해결',
+    points: ['교과 진도를 넘어 생각하는 힘을 보는 사고력 문항', '도형·쌓기나무·전개도 그림 문항', '객관식 + 단답형', '최상위~기초 5단계 판정과 추천 과정'] },
   MAP: { name: 'MAP Growth', ico: 'M', accent: 'var(--map)', soft: 'var(--map-soft)', sub: '적응형 · Reading / Language Usage / Math',
     points: ['정답이면 어려워지고 오답이면 쉬워지는 적응형 출제', '영역별 RIT 유사 추정 점수와 성취 수준', '응시를 거듭할수록 보이는 성장 추이'] },
   CAT4: { name: 'CAT4', ico: 'C', accent: 'var(--cat4)', soft: 'var(--cat4-soft)', sub: '추론력 · Verbal / Quant / Non-verbal / Spatial',
@@ -115,6 +122,54 @@ const FAQ = [
   ['WIDA 쓰기·말하기 결과는 언제 나오나요?', '교사가 채점을 마치면 이메일로 알려드리고, 리포트에 종합 레벨이 표시됩니다.'],
   ['환불이 가능한가요?', '결제 후 7일 이내 미사용 이용권은 전액 환불됩니다. “내 시험 > 결제 내역”에서 환불을 요청하세요.'],
 ];
+function examCard(type, m, i, products, payment) {
+  return h('div', { class: 'exam-card', style: `--accent:${m.accent}` },
+      h('div', { class: 'idx' }, h('span', {}, h('b', {}), `0${i + 1}`), h('span', {}, m.kr ? '레테' : type)),
+      h('h3', {}, m.name), h('div', { class: 'sub' }, m.sub),
+      h('div', { class: 'row small', style: 'margin:-6px 0 16px;gap:14px' }, h('a', { href: `#/info/${type}` }, '시험 안내'), h('a', { href: `#/sample/${type}` }, '무료 샘플 5문항')),
+      h('div', { class: 'tags' }, ({ MAP: ['K–G12', '학년별 13단계'], CAT4: ['Level A', 'B/C', 'D', 'E–G'], COGAT: ['L7–8', 'L9–11', 'L12–14', 'L15–18'], SCAT: ['Elementary', 'Intermediate', 'Advanced'], SSAT: ['Elementary', 'Middle', 'Upper'], ISEE: ['Lower', 'Middle', 'Upper'], SAT: ['PSAT 8/9', 'PSAT 10', 'SAT'], KR_ENG: ['9세 SR3.5', '10세 SR4.5', '11세 SR5.5', '12세 SR6.5'], KR_KOR: ['7세', '8세', '9세', '10세', '11세', '12세'], KR_MATH: ['7세', '8세', '9세', '10세', '11세', '12세'], TOEFLJ: ['Primary 1', 'Primary 2', 'Junior'], WIDA: ['G1', 'G2–3', 'G4–5', 'G6–8', 'G9–12'] }[type] || []).map((x) => h('span', {}, x))),
+      h('ul', {}, m.points.map((x) => h('li', {}, x))),
+      h('div', { class: 'push' }, products.filter((p) => p.exam_type === type).map((p) => h('div', { class: 'plan' },
+        h('div', {}, h('div', { class: 'pt' }, p.id === 'p-test' ? '관리자 결제 테스트' : `${p.attempts}회권`, (() => { const one = products.find((x) => x.exam_type === type && x.attempts === 1); const off = one && p.attempts > 1 ? Math.round((1 - p.price_krw / (one.price_krw * p.attempts)) * 100) : 0; return off > 0 ? h('em', { class: 'save' }, `−${off}%`) : null; })()), h('div', { class: 'pd' }, `${p.valid_days}D · ${money(p.price_usd_cents, 'USD')}`)),
+        h('div', { class: 'row', style: 'flex-wrap:nowrap;gap:14px' }, h('div', { class: 'price' }, money(p.price_krw, 'KRW')), h('button', { class: 'btn sm', onclick: () => buy(p, payment) }, '구매'))))),
+    );
+}
+
+const catTabs = (cur) => h('div', { class: 'cattabs', role: 'tablist' }, [['us', '#/', '미국 시험', 'MAP · SSAT · ISEE · SAT …'], ['kr', '#/kr', '국내 레테', '영어 · 국어 · 수학 레벨테스트']].map(([k, href, t, d]) => h('a', { href, class: k === cur ? 'on' : '', role: 'tab', 'aria-selected': k === cur ? 'true' : 'false' }, h('b', {}, t), h('span', {}, d))));
+
+async function pageKr() {
+  const { products, payment } = await api('GET', '/products');
+  const krTypes = Object.entries(EXAM_META).filter(([, m]) => m.kr);
+  const head = (n, k, t, d) => h('div', { class: 'section-title' }, h('div', {}, h('div', { class: 'kicker' }, `${n} — ${k}`), h('h2', {}, t), d ? h('p', {}, d) : null));
+  mount(
+    h('section', { class: 'hero kr-hero' },
+      h('div', {},
+        h('span', { class: 'eyebrow' }, '★ 국내 학원 레벨테스트'),
+        h('h1', {}, '레테, ', h('span', { class: 'hl' }, '미리'), ' 보고 가세요.', h('em', {}, '영어 9–12세 · 국어 문해력 7–12세 · 수학 사고력 7–12세')),
+        h('p', { class: 'lead' }, '학원 입학 레벨테스트와 같은 구성과 시간으로 미리 풀어 보고, 나이별 기준에 맞춘 판정과 보완할 영역을 바로 확인하세요. 라이팅·서술형은 선생님이 채점합니다.'),
+        h('div', { class: 'row' }, h('a', { class: 'btn lg', href: '#kr-tests', onclick: (e) => { e.preventDefault(); document.getElementById('kr-tests')?.scrollIntoView({ behavior: 'smooth' }); } }, '레테 고르기 →'), me ? h('a', { class: 'btn lg alt', href: '#/me' }, '내 시험') : h('a', { class: 'btn lg alt', href: '#/register' }, '회원가입'))),
+      h('div', { class: 'kr-levels', 'aria-hidden': 'true' },
+        h('div', { class: 'kicker' }, '영어 레테 기준 리딩 레벨'),
+        [[9, '3.5'], [10, '4.5'], [11, '5.5'], [12, '6.5']].map(([a, sr], i) => h('div', { class: 'krl' }, h('b', {}, `${a}세`), h('span', { class: 'bar' }, h('i', { style: `width:${30 + i * 22}%` })), h('em', {}, `SR ${sr}`))),
+        h('p', { class: 'small muted' }, 'SR = 미국 학년 기준 독해 수준 (3.5 = 3학년 5개월)'))),
+    catTabs('kr'),
+    h('div', { id: 'kr-tests' }), head('01', 'Level tests', '레테 고르기', '시험을 시작할 때 아이 나이에 맞는 레벨을 고릅니다. 회원정보에 학년(예: 초3)이나 나이(예: 10세)를 적어 두면 자동으로 추천합니다.'),
+    h('div', { class: 'index kr-index' }, krTypes.map(([type, m], i) => examCard(type, m, i, products, payment))),
+    products.some((p) => krTypes.some(([t]) => t === p.exam_type)) ? null : h('p', { class: 'notice' }, '레테 문항을 검수하고 있습니다. 곧 구매하실 수 있습니다.'),
+    head('02', 'Structure', '구성과 시간'),
+    h('div', { class: 'kr-tables' },
+      h('div', { class: 'card' }, h('h3', {}, '영어 레테'), h('table', {}, [['Reading', '지문 3개 · 15문항', '30분'], ['Vocabulary', '15문항', '10분'], ['Grammar', '15문항', '12분'], ['Writing · Creative', '1편 (선생님 채점)', '15분'], ['Writing · Expository', '1편 (선생님 채점)', '15분']].map((r) => h('tr', {}, r.map((c) => h('td', {}, c))))),
+        h('p', { class: 'small muted' }, '나이별 기준: 9세 SR 3.5 · 10세 SR 4.5 · 11세 SR 5.5 · 12세 SR 6.5. 지문은 350–400단어, 픽션과 논픽션을 섞어 출제합니다.')),
+      h('div', { class: 'card' }, h('h3', {}, '국어 문해력 레테'), h('table', {}, [['비문학 독해', '지문 2개 · 8문항', '20분'], ['문학 독해', '지문 2개 · 8문항', '20분'], ['어휘·어법', '10문항', '10분'], ['서술형', '1문항 (선생님 채점)', '15분']].map((r) => h('tr', {}, r.map((c) => h('td', {}, c))))),
+        h('p', { class: 'small muted' }, '지문 길이: 7세 250–350자 → 12세 1,500–1,900자로 나이에 따라 길어집니다.')),
+      h('div', { class: 'card' }, h('h3', {}, '수학 사고력 레테'), h('table', {}, [['수·연산 감각', '6문항', '12분'], ['도형·공간', '6문항', '12분'], ['규칙·추론', '6문항', '12분'], ['문제해결', '6문항', '14분']].map((r) => h('tr', {}, r.map((c) => h('td', {}, c))))),
+        h('p', { class: 'small muted' }, '객관식과 단답형(숫자 입력)을 섞어 출제하며, 도형 문항은 그림으로 제시합니다.'))),
+    head('03', 'Result', '결과는 이렇게 나옵니다'),
+    h('div', { class: 'steps' }, [['영역별 점수', '영역마다 100점 환산 점수와 정답 수'], ['판정', '영어: 추정 SR과 반 판정 · 국어·수학: 최상위~기초 5단계'], ['보완 영역', '가장 약한 영역과 문항별 해설'], ['선생님 채점', '라이팅·서술형 점수와 코멘트 (채점 후 알림)']].map(([t, d]) => h('div', { class: 'step' }, h('h3', {}, t), h('p', {}, d)))),
+    h('p', { class: 'small muted', style: 'margin-top:18px' }, '※ 이 레테는 형식과 난이도를 참고해 새로 만든 연습용 시험이며 특정 학원과 무관합니다. 실제 반 배정 기준은 학원마다 다릅니다.'),
+  );
+}
+
 async function pageHome() {
   const { products, payment } = await api('GET', '/products');
   const toExams = () => document.getElementById('exams')?.scrollIntoView({ behavior: 'smooth' });
@@ -134,17 +189,8 @@ async function pageHome() {
         h('div', { class: 'mbar' }, h('i'))),
     ),
     h('div', { class: 'marquee', 'aria-hidden': 'true' }, h('div', {}, [0, 1].map(() => ['MAP Growth', 'CAT4', 'CogAT', 'SCAT', 'SSAT', 'ISEE', 'SAT · PSAT', 'TOEFL Primary · Junior', 'WIDA ACCESS'].map((x) => h('span', {}, x, h('i', {}, '★')))))),
-    h('div', { id: 'exams' }), head('01', 'Exams', 'Choose your test', '원하는 시험과 횟수권을 고르세요. 결제가 확인되면 이용권이 즉시 지급됩니다.'),
-    h('div', { class: 'index' }, Object.entries(EXAM_META).map(([type, m], i) => h('div', { class: 'exam-card', style: `--accent:${m.accent}` },
-      h('div', { class: 'idx' }, h('span', {}, h('b', {}), `0${i + 1}`), h('span', {}, type)),
-      h('h3', {}, m.name), h('div', { class: 'sub' }, m.sub),
-      h('div', { class: 'row small', style: 'margin:-6px 0 16px;gap:14px' }, h('a', { href: `#/info/${type}` }, '시험 안내'), h('a', { href: `#/sample/${type}` }, '무료 샘플 5문항')),
-      h('div', { class: 'tags' }, ({ MAP: ['K–G12', '학년별 13단계'], CAT4: ['Level A', 'B/C', 'D', 'E–G'], COGAT: ['L7–8', 'L9–11', 'L12–14', 'L15–18'], SCAT: ['Elementary', 'Intermediate', 'Advanced'], SSAT: ['Elementary', 'Middle', 'Upper'], ISEE: ['Lower', 'Middle', 'Upper'], SAT: ['PSAT 8/9', 'PSAT 10', 'SAT'], TOEFLJ: ['Primary 1', 'Primary 2', 'Junior'], WIDA: ['G1', 'G2–3', 'G4–5', 'G6–8', 'G9–12'] }[type] || []).map((x) => h('span', {}, x))),
-      h('ul', {}, m.points.map((x) => h('li', {}, x))),
-      h('div', { class: 'push' }, products.filter((p) => p.exam_type === type).map((p) => h('div', { class: 'plan' },
-        h('div', {}, h('div', { class: 'pt' }, p.id === 'p-test' ? '관리자 결제 테스트' : `${p.attempts}회권`, (() => { const one = products.find((x) => x.exam_type === type && x.attempts === 1); const off = one && p.attempts > 1 ? Math.round((1 - p.price_krw / (one.price_krw * p.attempts)) * 100) : 0; return off > 0 ? h('em', { class: 'save' }, `−${off}%`) : null; })()), h('div', { class: 'pd' }, `${p.valid_days}D · ${money(p.price_usd_cents, 'USD')}`)),
-        h('div', { class: 'row', style: 'flex-wrap:nowrap;gap:14px' }, h('div', { class: 'price' }, money(p.price_krw, 'KRW')), h('button', { class: 'btn sm', onclick: () => buy(p, payment) }, '구매'))))),
-    ))),
+    h('div', { id: 'exams' }), catTabs('us'), head('01', 'Exams', 'Choose your test', '원하는 시험과 횟수권을 고르세요. 결제가 확인되면 이용권이 즉시 지급됩니다.'),
+    h('div', { class: 'index' }, Object.entries(EXAM_META).filter(([, m]) => !m.kr).map(([type, m], i) => examCard(type, m, i, products, payment))),
     head('02', 'Process', 'How it works', '가입부터 리포트까지, 군더더기 없이.'),
     h('div', { class: 'steps' }, [['회원가입', '이메일로 가입하고 학년을 입력합니다.'], ['결제', '국내 카드·간편결제 또는 해외 카드. 결제 즉시 이용권 지급.'], ['응시', '영역별 타이머와 함께 실전처럼 응시합니다.'], ['리포트', '점수·해설·성장 추이를 확인하고 PDF로 저장합니다.']].map(([t, d]) => h('div', { class: 'step' }, h('h3', {}, t), h('p', {}, d)))),
     head('03', 'Features', 'What you get'),
@@ -328,7 +374,7 @@ async function pageMe(q = {}) {
       h('td', {}, a.status !== 'in_progress' ? h('a', { href: `#/report/${a.id}` }, '리포트') : null)))) : h('p', { class: 'muted' }, '아직 응시 기록이 없습니다.')),
     h('div', { class: 'card' }, h('h3', {}, '결제 내역'), ord.orders.length ? h('table', {}, ord.orders.map((o) => h('tr', {}, h('td', {}, o.title), h('td', {}, money(o.amount, o.currency)), h('td', {}, date(o.paid_at || o.created_at)), h('td', {}, h('span', { class: 'badge ' + (o.status === 'paid' ? 'ok' : ['awaiting_deposit', 'pending'].includes(o.status) ? 'warn' : 'bad') }, { paid: '결제완료', refunded: '환불', failed: '실패', awaiting_deposit: '입금 대기', pending: '결제 진행중' }[o.status] || o.status)),
       h('td', {}, ['pending', 'awaiting_deposit'].includes(o.status) ? h('button', { class: 'btn sm alt', onclick: () => recheck(o) }, '결제 확인') : null, o.status === 'paid' && o.provider !== 'admin' ? (o.refund_status === 'pending' ? h('span', { class: 'badge warn' }, '환불 검토중') : o.refund_status === 'rejected' ? h('span', { class: 'badge' }, '환불 거절됨') : h('button', { class: 'btn sm alt', onclick: () => refund(o) }, '환불 요청')) : null)))) : h('p', { class: 'muted' }, '결제 내역이 없습니다.')),
-    me.role === 'admin' ? h('div', { class: 'card' }, h('div', { class: 'kicker' }, 'Admin'), h('h3', {}, '관리자 체험 응시'), h('p', { class: 'muted small' }, '결제 없이 모든 시험을 직접 풀어 볼 수 있습니다. (횟수 제한 없음)'), h('div', { class: 'row' }, exams.map((x) => h('button', { class: 'btn sm alt', onclick: () => chooseLevel(x, false) }, x.type === 'TOEFLJ' ? 'TOEFL Jr' : x.type)))) : null,
+    me.role === 'admin' ? h('div', { class: 'card' }, h('div', { class: 'kicker' }, 'Admin'), h('h3', {}, '관리자 체험 응시'), h('p', { class: 'muted small' }, '결제 없이 모든 시험을 직접 풀어 볼 수 있습니다. (횟수 제한 없음)'), h('div', { class: 'row' }, exams.map((x) => h('button', { class: 'btn sm alt', onclick: () => chooseLevel(x, false) }, x.type === 'TOEFLJ' ? 'TOEFL Jr' : EXAM_META[x.type]?.kr ? EXAM_META[x.type].name : x.type)))) : null,
     charts.length ? h('div', { class: 'card' }, h('h3', {}, '성적 추이 (종합 추정 점수)'), h('div', { class: 'grid' }, charts)) : null,
     h('div', { class: 'card' }, h('h3', {}, '회원 정보'), prof, h('h3', {}, '비밀번호 변경'), pw),
     ...extra,
@@ -356,6 +402,12 @@ function growthChart(points, label) {
 
 /* ---------- exam guides, free sample, wrong-answer notebook ---------- */
 const EXAM_INFO = {
+  KR_ENG: { about: '영어학원 입학 레벨테스트(레테)를 실전처럼 준비하는 모의 레테입니다. 나이별 기준 리딩 레벨(SR, 미국 학년 기준 독해 수준)에 맞춘 Reading · Vocabulary · Grammar와 Creative · Expository Writing으로 구성됩니다. 모든 지문과 문항은 미국 초등 교과 과정(Common Core)을 바탕으로 새로 만들었습니다.', who: '영어학원 입학·반 이동 레테를 앞둔 9–12세', score: '객관식 정답률로 추정 SR과 판정(상위 반 추천 · 입학 기준 충족 · 보강 후 입학 권장 · 한 단계 아래 권장)을 보여 줍니다. 라이팅은 선생님이 1–6점으로 채점합니다.',
+    tips: ['Reading 지문은 350–400단어입니다. 문제를 먼저 보고 근거 문단을 찾아 읽으세요.', 'Vocabulary는 문장 속 뜻(문맥)을 묻는 문제가 많습니다. 앞뒤 문장을 단서로 쓰세요.', 'Grammar는 시제·주어-동사 일치·문장 부호를 순서대로 점검하세요.', 'Writing은 Creative는 시작-사건-마무리, Expository는 주제문-이유 2–3개-결론 틀을 지키세요.'] },
+  KR_KOR: { about: '독서·논술 학원의 문해력 레벨테스트처럼, 나이에 맞는 길이의 비문학(설명문·논설문)과 문학(동화·동시·소설·수필)을 읽고 이해·추론하는 힘을 봅니다. 모든 지문은 새로 쓴 창작 글입니다.', who: '독서·논술·국어 학원 레테를 앞둔 7–12세', score: '영역별 100점 환산 점수와 종합 점수, 최상위·상위·중위·기본·기초 5단계 판정, 추천 과정을 보여 줍니다. 서술형은 선생님이 채점합니다.',
+    tips: ['비문학은 문단마다 중심 문장에 표시하며 읽으세요.', '문학은 인물의 마음이 바뀌는 장면을 찾으세요.', '"까닭", "알 수 있는 것" 문제는 반드시 지문에서 근거를 찾으세요.', '서술형은 내 생각 + 까닭 + 예시 순서로 쓰세요.'] },
+  KR_MATH: { about: '사고력 수학 학원의 레벨테스트처럼 교과 계산을 넘어 수 감각, 도형·공간, 규칙·추론, 문제해결 능력을 봅니다. 모든 문항은 새로 만든 창작 문항입니다.', who: '사고력 수학 학원 레테를 앞둔 7–12세', score: '영역별 100점 환산 점수와 종합 점수, 5단계 판정, 추천 과정을 보여 줍니다.',
+    tips: ['그림을 그리거나 표를 만들어 경우를 빠짐없이 세어 보세요.', '규칙 문제는 차이 → 차이의 차이 → 곱 순서로 찾아보세요.', '쌓기나무는 층별로 나누어 세세요.', '답을 구한 뒤 문제 조건에 다시 넣어 확인하세요.'] },
   MAP: { about: 'NWEA가 만든 적응형 학업 진단. 정답이면 더 어려운 문제, 오답이면 더 쉬운 문제가 나와 실제 수준을 정밀하게 찾아갑니다.', who: '미국 초·중등 학생, 국제학교 입학·진급 평가(Reading · Language Usage · Math)', score: 'RIT 점수(대략 100~350)로 표시되며 같은 학생이 반복 응시해 성장 폭을 보는 데 적합합니다. 이 사이트의 점수는 RIT와 비슷한 척도로 환산한 추정치입니다.',
     tips: ['모르는 문제에 오래 머물지 마세요. 정확도가 난이도를 결정하므로 모르면 가장 그럴듯한 답을 고르고 넘어가는 편이 낫습니다.', '독해는 질문을 먼저 읽고 근거 문장을 찾아 확인하세요.', '수학은 계산 실수를 줄이려면 식을 한 줄씩 적어 보세요.'] },
   CAT4: { about: 'GL Assessment의 인지능력 검사. 학교에서 배운 지식이 아니라 추론하는 힘을 네 영역(언어·수리·비언어·공간)으로 측정합니다.', who: '영국계 국제학교 입학·배치(만 6~17세)', score: '표준연령점수(SAS) 평균 100, 표준편차 15. 스태나인 1~9에서 5가 평균이며 7 이상이면 상위권입니다. 이 사이트는 정답률을 SAS로 환산한 추정치를 보여 줍니다.',
@@ -376,6 +428,9 @@ const EXAM_INFO = {
     tips: ['듣기는 핵심어(누가·언제·어디)를 메모하듯 들으세요.', '말하기는 완전한 문장으로 이유와 예시를 덧붙여 말해 보세요.', '쓰기는 첫 문장에 주제를 쓰고 연결어(first, then, because)를 활용하세요.'] },
 };
 const SCORE_HELP = {
+  KR_ENG: '추정 SR은 객관식 정답률을 해당 나이 기준 SR에 맞춰 환산한 값입니다. 정답률 70% 이상이면 입학 기준 충족, 85% 이상이면 상위 반을 추천합니다.',
+  KR_KOR: '영역별 점수는 100점 환산입니다. 90점↑ 최상위 · 75↑ 상위 · 55↑ 중위 · 35↑ 기본 · 그 아래 기초로 판정합니다.',
+  KR_MATH: '영역별 점수는 100점 환산입니다. 90점↑ 최상위 · 75↑ 상위 · 55↑ 중위 · 35↑ 기본 · 그 아래 기초로 판정합니다.',
   MAP: '영역 점수는 난이도를 반영한 추정치이며 Beginning → Developing → Proficient → Advanced 순으로 성취 수준을 나눕니다. 같은 영역을 반복 응시해 변화를 보세요.',
   CAT4: 'SAS 100이 평균입니다. 85 미만이면 보완이 필요하고 115 이상이면 강점 영역입니다. 스태나인 5가 평균, 7 이상이 상위권입니다.',
   COGAT: 'SAS 100이 평균입니다(표준편차 16). 스태나인 7 이상이면 상위권이고 영재 프로그램 선발은 보통 상위 3~5% 이내를 봅니다.',
@@ -1287,6 +1342,7 @@ async function route() {
       case 'exam': return await pageExam(seg[1]);
       case 'report': return await pageReport(seg[1]);
       case 'shared': return await pageShared(seg[1]);
+      case 'kr': return await pageKr();
       case 'family': return await pageFamily();
       case 'classes': return await pageClasses(seg[1]);
       case 'practice': return await pagePractice(q);

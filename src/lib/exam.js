@@ -88,6 +88,36 @@ EXAMS.TOEFLJ = {
   ],
 };
 
+/* ---------- 국내 레벨테스트(레테): Korean academy entrance tests — a separate category, never mixed with the U.S. tests ---------- */
+EXAMS.KR_ENG = {
+  title: '영어 레테 (입학 레벨테스트)', category: 'kr', adaptive: false, kr: 'eng',
+  sections: [
+    { key: 'reading', name: 'Reading', n: 15, minutes: 30 },
+    { key: 'vocab', name: 'Vocabulary', n: 15, minutes: 10 },
+    { key: 'grammar', name: 'Grammar', n: 15, minutes: 12 },
+    { key: 'writing_creative', name: 'Writing · Creative', n: 1, minutes: 15, manual: true },
+    { key: 'writing_expository', name: 'Writing · Expository', n: 1, minutes: 15, manual: true },
+  ],
+};
+EXAMS.KR_KOR = {
+  title: '국어 문해력 레테', category: 'kr', adaptive: false, kr: 'kor',
+  sections: [
+    { key: 'nonfiction', name: '비문학 독해', n: 8, minutes: 20 },
+    { key: 'literature', name: '문학 독해', n: 8, minutes: 20 },
+    { key: 'vocab', name: '어휘·어법', n: 10, minutes: 10 },
+    { key: 'writing', name: '서술형', n: 1, minutes: 15, manual: true },
+  ],
+};
+EXAMS.KR_MATH = {
+  title: '수학 사고력 레테', category: 'kr', adaptive: false, kr: 'math',
+  sections: [
+    { key: 'number', name: '수·연산 감각', n: 6, minutes: 12 },
+    { key: 'geometry', name: '도형·공간', n: 6, minutes: 12 },
+    { key: 'pattern', name: '규칙·추론', n: 6, minutes: 12 },
+    { key: 'problem', name: '문제해결', n: 6, minutes: 14 },
+  ],
+};
+
 /**
  * Levels / grade bands. The bank is tagged by difficulty (1-5), not by grade, so a level selects a difficulty window
  * (and, where the real test reports on a different scale per level, that scale). Windows widen automatically when a
@@ -103,6 +133,11 @@ EXAMS.SSAT.levels = [L('elem', 'Elementary Level', '3–4학년', 1, 3, { scaled
 EXAMS.ISEE.levels = [L('lower', 'Lower Level', '4–5학년 지원', 1, 3), L('middle', 'Middle Level', '6–7학년 지원', 2, 4), L('upper', 'Upper Level', '8–12학년 지원', 3, 5)];
 EXAMS.SAT.levels = [L('psat89', 'PSAT 8/9', '8–9학년', 1, 3, { scaled: { min: 120, max: 720, total: 'sum' } }), L('psat10', 'PSAT/NMSQT · PSAT 10', '10–11학년', 2, 4, { scaled: { min: 160, max: 760, total: 'sum' } }), L('sat', 'SAT', '11–12학년', 2, 5, { scaled: { min: 200, max: 800, total: 'sum' } })];
 EXAMS.TOEFLJ.levels = [L('p1', 'TOEFL Primary Step 1', '초등 2–4학년 (CEFR Pre-A1–A1)', 1, 2, { scaled: { min: 100, max: 109, total: 'sum' } }), L('p2', 'TOEFL Primary Step 2', '초등 4–6학년 (CEFR A1–A2)', 1, 3, { scaled: { min: 104, max: 115, total: 'sum' } }), L('std', 'TOEFL Junior Standard', '만 11–15세 (CEFR A2–B2)', 2, 5, { scaled: { min: 200, max: 300, total: 'sum' } })];
+// 레테: one level per age; the bank's difficulty is the age band itself (ENG 9–12세 → 1–4, 국어·수학 7–12세 → 1–6).
+const KR_GRADE = { 7: '7세 (유치부)', 8: '8세 (초1)', 9: '9세 (초2)', 10: '10세 (초3)', 11: '11세 (초4)', 12: '12세 (초5)' };
+EXAMS.KR_ENG.levels = [[9, 3.5], [10, 4.5], [11, 5.5], [12, 6.5]].map(([age, sr], i) => L(`a${age}`, `${age}세 영어 레테`, `SR ${sr} · 미국 ${Math.floor(sr)}학년 수준`, i + 1, i + 1, { sr, age, cap: 4 }));
+EXAMS.KR_KOR.levels = [7, 8, 9, 10, 11, 12].map((age, i) => L(`a${age}`, `${age}세 국어 레테`, KR_GRADE[age], i + 1, i + 1, { age, cap: 6 }));
+EXAMS.KR_MATH.levels = [7, 8, 9, 10, 11, 12].map((age, i) => L(`a${age}`, `${age}세 수학 레테`, KR_GRADE[age], i + 1, i + 1, { age, cap: 6 }));
 EXAMS.WIDA.levels = [L('g1', 'Grade 1', '1학년', 1, 2), L('g23', 'Grades 2–3', '2–3학년', 1, 3), L('g45', 'Grades 4–5', '4–5학년', 2, 4), L('g68', 'Grades 6–8', '6–8학년', 2, 5), L('g912', 'Grades 9–12', '9–12학년', 3, 5)];
 
 /** Resolve a level key (falls back to the middle level). */
@@ -117,14 +152,20 @@ export function levelForGrade(examType, grade) {
   const g = /^\s*(k|kg|kinder(garten)?|유치원)\b/i.test(grade) ? 0 : parseInt(String(grade).replace(/[^0-9]/g, ''), 10);
   if (Number.isNaN(g)) return null;
   if (examType === 'MAP') return g === 0 ? 'k' : `g${Math.min(12, Math.max(1, g))}`;
+  if (EXAMS[examType]?.category === 'kr') { // "9세" → age 9; "초3"/"3학년"/"G3" → age grade+7 (Korean school age)
+    const age = /세/.test(grade) ? g : g === 0 ? 7 : g + 7;
+    const ok = lv.find((l) => l.age === age) || (age < lv[0].age ? lv[0] : lv[lv.length - 1]);
+    return ok.key;
+  }
   const ranges = { CAT4: [2, 5, 7, 12], COGAT: [2, 5, 8, 12], SCAT: [3, 5, 12], SSAT: [4, 7, 12], ISEE: [4, 6, 12], SAT: [9, 10, 12], TOEFLJ: [4, 6, 12], WIDA: [1, 3, 5, 8, 12] }[examType] || [];
   const i = ranges.findIndex((max) => g <= max);
   return lv[i === -1 ? lv.length - 1 : i]?.key || null;
 }
 /** Questions in the level's difficulty window, widened one step at a time until the section can be filled. */
 export function levelBank(bank, level, need) {
+  const cap = level.cap || 5;
   let lo = level.dmin, hi = level.dmax, pool = bank.filter((q) => q.difficulty >= lo && q.difficulty <= hi);
-  while (pool.length < need && (lo > 1 || hi < 5)) { lo = Math.max(1, lo - 1); hi = Math.min(5, hi + 1); pool = bank.filter((q) => q.difficulty >= lo && q.difficulty <= hi); }
+  while (pool.length < need && (lo > 1 || hi < cap)) { lo = Math.max(1, lo - 1); hi = Math.min(cap, hi + 1); pool = bank.filter((q) => q.difficulty >= lo && q.difficulty <= hi); }
   return { pool, lo, hi };
 }
 

@@ -386,3 +386,20 @@ svg.bars{display:block;width:100%;height:90px;margin-top:10px}svg.bars rect{fill
   .qcard.split .passage{margin:0;max-height:calc(100vh - 250px);overflow:auto;position:sticky;top:160px}
 }
 .qimg{height:auto}
+
+/* ===================== category switch + 레테 page ===================== */
+.cattabs{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--ink);margin:40px 0 0;background:var(--surface)}
+.cattabs a{display:flex;flex-direction:column;gap:2px;padding:14px 18px;text-decoration:none;color:var(--muted);border-bottom:3px solid transparent}
+.cattabs a+a{border-left:1px solid var(--ink)}
+.cattabs a b{font-size:1.05rem;color:var(--ink-2)}.cattabs a span{font-size:.8rem}
+.cattabs a.on{background:var(--ink);color:#c7d2e5}.cattabs a.on b{color:var(--bg)}
+.cattabs a:not(.on):hover{background:var(--bg)}
+.kr-hero h1 .hl{color:var(--brand)}
+.kr-levels{border:1px solid var(--ink);background:var(--surface);padding:22px 22px 16px;box-shadow:8px 8px 0 var(--ink);align-self:center}
+.krl{display:grid;grid-template-columns:48px 1fr 64px;gap:12px;align-items:center;margin:12px 0}
+.krl b{font-family:var(--serif)}.krl em{font:600 .9rem var(--mono);font-style:normal;color:var(--brand)}
+.krl .bar{height:10px;background:var(--rule-2)}.krl .bar i{display:block;height:100%;background:var(--ink)}
+.kr-index{grid-template-columns:repeat(3,1fr)}
+.kr-tables{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.kr-tables .card{margin:0}
+@media (max-width:900px){.kr-index,.kr-tables{grid-template-columns:1fr}}
+@media (max-width:640px){.cattabs a{padding:12px}.cattabs a span{display:none}}

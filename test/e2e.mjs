@@ -175,7 +175,7 @@ const exList = await kid.get('/api/exams'); assert.ok(exList.exams.find((e) => e
   assert.equal((await admin.req('PATCH', `/api/admin/users/${me2.user.id}`, { role: 'student' })).status, 400);
 }
 // public exam guide + free sample (no login) + wrong-answer notebook
-const guide = await new Client().get('/api/exam-info'); assert.equal(guide.exams.length, 9); assert.ok(guide.exams.find((e) => e.type === 'SAT').sections.some((x) => x.key === 'math'));
+const guide = await new Client().get('/api/exam-info'); assert.equal(guide.exams.length, 12); assert.equal(guide.exams.filter((e) => e.category === 'kr').length, 3, '레테 category'); assert.ok(!(await new Client().get('/api/products')).products.some((p) => /^KR_/.test(p.exam_type) && false)); assert.ok(guide.exams.find((e) => e.type === 'SAT').sections.some((x) => x.key === 'math'));
 for (const ex of ['MAP', 'CAT4', 'COGAT', 'SAT', 'TOEFLJ', 'WIDA']) {
   const smp = await new Client().get(`/api/sample/${ex}`); assert.equal(smp.questions.length, 5, `${ex} sample size`);
   assert.ok(smp.questions.every((q) => !('answer' in q) && !('explanation' in q) && q.choices.length >= 3), 'sample must not leak answers');
