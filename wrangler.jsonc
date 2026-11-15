@@ -12,13 +12,13 @@
   "d1_databases": [
     { "binding": "DB", "database_name": "mocktest", "migrations_dir": "migrations" }
   ],
+  // keep_vars: values added in the Cloudflare dashboard (e.g. PORTONE_STORE_ID, KCP_SITE_CD) survive every deploy
+  "keep_vars": true,
   "vars": {
     "SITE_NAME": "MockTest Lab",
     "SITE_URL": "",
     "ADMIN_EMAIL": "",
     "MAIL_FROM": "MockTest <noreply@example.com>",
-    "PORTONE_STORE_ID": "",
-    "PORTONE_CHANNEL_KEY": "",
     "BIZ_NAME": "(상호명 입력)",
     "BIZ_OWNER": "(대표자명)",
     "BIZ_REG_NO": "(사업자등록번호)",

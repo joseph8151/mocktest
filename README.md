@@ -55,7 +55,7 @@ npx wrangler secret put PORTONE_API_SECRET
 npx wrangler secret put PORTONE_WEBHOOK_SECRET
 npx wrangler secret put RESEND_API_KEY
 ```
-`wrangler.jsonc`의 `MAIL_FROM`, `PORTONE_STORE_ID`, `PORTONE_CHANNEL_KEY`, `BIZ_*`(사업자 정보)를 채우세요.
+`wrangler.jsonc`의 `MAIL_FROM`, `BIZ_*`(사업자 정보)를 채우세요. `PORTONE_STORE_ID`, `PORTONE_CHANNEL_KEY`, `KCP_SITE_CD` 같은 일반 값은 대시보드의 Variables에 **Text**로 넣으면 됩니다(`keep_vars: true`라 배포해도 지워지지 않음). API 시크릿은 **Secret**으로 넣으세요.
 
 > 자동 생성이 권한 문제로 실패하면 수동으로 만들고 `wrangler.jsonc`의 D1 항목에 `database_id`를 적으면 됩니다: `npx wrangler d1 create mocktest`.
 > 기존 DB가 `wrangler d1 migrations apply`로 이미 만들어져 있어도 자동 구성 코드가 이를 감지해 충돌하지 않습니다.
@@ -72,7 +72,7 @@ Cloudflare 대시보드 → Workers & Pages → Create → Connect to Git → �
 ## 결제 (KCP · 포트원 · Stripe)
 | 방식 | 필요한 값 | 비고 |
 |---|---|---|
-| **포트원 경유 KCP** (권장) | `PORTONE_STORE_ID`, `PORTONE_CHANNEL_KEY`(wrangler vars) + `PORTONE_API_SECRET`, `PORTONE_WEBHOOK_SECRET`(secret) | 포트원 콘솔에서 PG사를 **NHN KCP**로 채널 등록. 카드·가상계좌·계좌이체·휴대폰 지원, 가상계좌는 입금 웹훅으로 자동 지급 |
+| **포트원 경유 KCP** (권장) | `PORTONE_STORE_ID`, `PORTONE_CHANNEL_KEY`(대시보드 Text 변수) + `PORTONE_API_SECRET`, `PORTONE_WEBHOOK_SECRET`(secret) | 포트원 콘솔에서 PG사를 **NHN KCP**로 채널 등록. 카드·가상계좌·계좌이체·휴대폰 지원, 가상계좌는 입금 웹훅으로 자동 지급 |
 | **KCP 직접** | `KCP_SITE_CD`, `KCP_CERT_INFO`(secret), 운영 전환 시 `KCP_MODE=prod` | 코드는 `src/lib/kcp.js` 한 파일. **KCP 공식 가이드로 필드명/URL/pay_method 코드 검증 필요**(아래 참고) |
 | **Stripe** | `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET` | 해외 카드(USD) |
 
