@@ -13,10 +13,10 @@ class Client {
 const stamp = Date.now();
 const admin = new Client(), kid = new Client();
 const adminEmail = process.env.ADMIN_EMAIL || 'admin@example.com';
-let r = await admin.post('/api/auth/register', { email: adminEmail, name: 'Admin', password: 'password123', agree: true });
-if (r.status === 409) r = await admin.post('/api/auth/login', { email: adminEmail, password: 'password123' });
+let r = await admin.post('/api/auth/register', { email: adminEmail, name: 'Admin', password: 'Mock-test-2026', agree: true });
+if (r.status === 409) r = await admin.post('/api/auth/login', { email: adminEmail, password: 'Mock-test-2026' });
 assert.equal(r.user.role, 'admin', 'admin bootstrap');
-r = await kid.post('/api/auth/register', { email: `kid${stamp}@t.com`, name: 'Kid', password: 'password123', agree: true });
+r = await kid.post('/api/auth/register', { email: `kid${stamp}@t.com`, name: 'Kid', password: 'Mock-test-2026', agree: true });
 assert.equal(r.user.role, 'student');
 assert.equal((await kid.get('/api/admin/stats')).status, 403, 'student blocked from admin');
 assert.equal((await new Client().get('/api/me/overview')).status, 401);
@@ -187,7 +187,7 @@ const mist = await kid.get('/api/me/mistakes?exam=CAT4'); assert.ok(mist.items.l
 assert.equal(new Set(mist.items.map((i) => i.id)).size, mist.items.length, 'one entry per question');
 assert.equal((await new Client().get('/api/me/mistakes')).status, 401);
 // stranger cannot read someone else's report
-const other = new Client(); await other.post('/api/auth/register', { email: `o${stamp}@t.com`, name: 'O', password: 'password123', agree: true });
+const other = new Client(); await other.post('/api/auth/register', { email: `o${stamp}@t.com`, name: 'O', password: 'Mock-test-2026', agree: true });
 assert.equal((await other.get(`/api/attempts/${w.id}/report`)).status, 404);
 // webhook signature enforced
 assert.equal((await kid.post('/api/webhooks/stripe', { id: 'evt_x' })).status, 400);

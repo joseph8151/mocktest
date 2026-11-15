@@ -300,3 +300,20 @@ html{overflow-x:clip}
 .cta-band{position:relative;overflow:hidden}
 .cta-band::after{content:"★ ★ ★";position:absolute;right:28px;top:18px;font-size:.8rem;letter-spacing:.4em;color:var(--pop);opacity:.7}
 .step{transition:background .15s}.step:hover{background:var(--bg)}
+
+/* ===================== features: notice, coupon, share, security ===================== */
+.notice-bar{display:flex;align-items:center;gap:12px;max-width:calc(1140px - 2*clamp(16px,4vw,32px));margin:14px auto 0;padding:10px 14px;border:1px solid var(--ink);background:var(--surface);font-size:.9rem;width:calc(100% - 2*clamp(16px,4vw,32px))}
+.notice-bar>span{color:var(--brand)}.notice-bar p{margin:0;flex:1}.notice-bar button{border:0;background:none;font-size:1.3rem;line-height:1;cursor:pointer;color:var(--muted);padding:0 4px}
+.coupon{margin-top:14px}.coupon input{font-family:var(--mono);letter-spacing:.06em}
+.ok-text{color:#1c7c4a}
+.share-url{display:flex;gap:8px;margin-top:10px}.share-url input{flex:1;font:500 .82rem var(--mono)}
+.notice-inline{border-left:3px solid var(--brand);padding:6px 10px;background:var(--bg)}
+code.secret{font:600 .95rem var(--mono);letter-spacing:.06em;background:var(--bg);border:1px solid var(--rule);padding:3px 6px;word-break:break-all}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.sticky-score{position:sticky;top:64px;z-index:5;background:var(--bg);padding:8px 0;border-bottom:1px solid var(--rule)}
+button.choice{width:100%;text-align:left;font:inherit;color:inherit;cursor:pointer}button.choice:disabled{cursor:default;opacity:1}
+/* light deterrent against copying exam items */
+.exam-top~.qcard,.qcard{-webkit-user-select:none;user-select:none}.qcard textarea,.qcard input{-webkit-user-select:text;user-select:text}
+
+.badge{white-space:nowrap}
+#security{scroll-margin-top:84px}

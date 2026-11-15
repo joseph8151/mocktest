@@ -14,7 +14,7 @@ const mock = http.createServer((req, res) => {
   });
 }).listen(9099);
 class C { cookie = ''; async req(m, p, b) { const r = await fetch(BASE + p, { method: m, headers: { 'content-type': 'application/json', cookie: this.cookie }, body: b ? JSON.stringify(b) : undefined }); const sc = r.headers.get('set-cookie'); if (sc) this.cookie = sc.split(';')[0]; return { status: r.status, ...(await r.json().catch(() => ({}))) }; } get = (p) => this.req('GET', p); post = (p, b) => this.req('POST', p, b); }
-const admin = new C(); assert.ok((await admin.post('/api/auth/login', { email: process.env.ADMIN_EMAIL || 'admin@example.com', password: 'password123' })).user, 'admin login');
+const admin = new C(); assert.ok((await admin.post('/api/auth/login', { email: process.env.ADMIN_EMAIL || 'admin@example.com', password: 'Mock-test-2026' })).user, 'admin login');
 const products = (await admin.get('/api/products')); assert.equal(products.payment.kcp, true, 'kcp enabled');
 const ret = (fields) => fetch(BASE + '/api/pay/kcp/return', { method: 'POST', redirect: 'manual', headers: { origin: 'https://pay.example', 'content-type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(fields) });
 async function order(method = 'CARD') { const r = await admin.post('/api/pay/kcp/register', { productId: 'p-test', payMethod: method }); assert.ok(r.form, JSON.stringify(r)); return r; }

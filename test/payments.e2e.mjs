@@ -7,7 +7,7 @@ let cookie = '';
 const call = async (m, p, b, h = {}) => { const r = await fetch(BASE + p, { method: m, headers: { 'content-type': 'application/json', cookie, ...h }, body: typeof b === 'string' ? b : b ? JSON.stringify(b) : undefined }); const sc = r.headers.get('set-cookie'); if (sc) cookie = sc.split(';')[0]; return { status: r.status, ...(await r.json().catch(() => ({}))) }; };
 const sql = (q) => execFileSync('npx', ['wrangler', 'd1', 'execute', 'mocktest', '--local', '--command', q], { stdio: 'pipe' });
 const stamp = Date.now();
-const reg = await call('POST', '/api/auth/register', { email: `pay${stamp}@t.com`, name: 'Payer', password: 'password123', agree: true });
+const reg = await call('POST', '/api/auth/register', { email: `pay${stamp}@t.com`, name: 'Payer', password: 'Mock-test-2026', agree: true });
 const uid = reg.user.id;
 const mkOrder = (id, amount) => sql(`INSERT INTO orders (id,user_id,product_id,provider,provider_ref,amount,currency,status,created_at) VALUES ('${id}','${uid}','p-map-1','stripe','cs_${id}',${amount},'USD','pending',${stamp})`);
 const event = (evId, orderId, amount) => JSON.stringify({ id: evId, type: 'checkout.session.completed', data: { object: { id: 'cs_' + orderId, payment_status: 'paid', amount_total: amount, metadata: { order_id: orderId } } } });

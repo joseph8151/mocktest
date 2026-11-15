@@ -21,7 +21,7 @@ const mock = http.createServer((req, res) => {
 const set = (k, v) => fetch('http://localhost:9098/__set/' + encodeURIComponent(k), { method: 'POST', body: JSON.stringify(v) });
 class C { cookie = ''; async req(m, p, b, h = {}) { const r = await fetch(BASE + p, { method: m, headers: { 'content-type': 'application/json', cookie: this.cookie, ...h }, body: typeof b === 'string' ? b : b ? JSON.stringify(b) : undefined }); const sc = r.headers.get('set-cookie'); if (sc) this.cookie = sc.split(';')[0]; return { status: r.status, ...(await r.json().catch(() => ({}))) }; } get = (p) => this.req('GET', p); post = (p, b, h) => this.req('POST', p, b, h); }
 const u = new C(), stamp = Date.now();
-assert.ok((await u.post('/api/auth/register', { email: `pay2${stamp}@t.com`, name: 'P', password: 'password123', agree: true })).user);
+assert.ok((await u.post('/api/auth/register', { email: `pay2${stamp}@t.com`, name: 'P', password: 'Mock-test-2026', agree: true })).user);
 const ents = async () => (await u.get('/api/me/overview')).entitlements.length;
 const orderStatus = async (id) => (await u.get('/api/orders')).orders.find((o) => o.id === id)?.status ?? (await u.get(`/api/orders/${id}/status`)).status;
 
@@ -58,7 +58,7 @@ await fetch('http://localhost:9098/__fail', { method: 'POST', body: '{"on":false
 assert.equal((await pwebhook('Transaction.Paid', o.paymentId)).status, 200); assert.equal(await orderStatus(o.orderId), 'paid');
 
 // 5) another user cannot confirm / re-check someone else's order
-const other = new C(); await other.post('/api/auth/register', { email: `pay3${stamp}@t.com`, name: 'O', password: 'password123', agree: true });
+const other = new C(); await other.post('/api/auth/register', { email: `pay3${stamp}@t.com`, name: 'O', password: 'Mock-test-2026', agree: true });
 assert.equal((await other.post('/api/pay/portone/complete', { orderId: o.orderId })).status, 404); assert.equal((await other.post(`/api/orders/${o.orderId}/recheck`)).status, 404);
 
 // ---- Stripe ----

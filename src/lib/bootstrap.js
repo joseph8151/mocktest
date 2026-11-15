@@ -8,6 +8,7 @@ import m4 from '../../migrations/0004_prices.sql';
 import m5 from '../../migrations/0005_admin_and_kcp.sql';
 import m6 from '../../migrations/0006_new_exams.sql';
 import m7 from '../../migrations/0007_integrity.sql';
+import m8 from '../../migrations/0008_security_features.sql';
 import seed from '../../seed/seed.json';
 
 // [name, sql, a table that exists once this migration has been applied]
@@ -17,7 +18,7 @@ const statements = (sql) => sql.split('\n').map((l) => l.replace(/--.*$/, '')).j
   .map((x) => x.replace(/^CREATE TABLE /i, 'CREATE TABLE IF NOT EXISTS ').replace(/^CREATE INDEX /i, 'CREATE INDEX IF NOT EXISTS '));
 
 // One-time data updates, applied AFTER seeding (so a fresh database is not left with only these rows).
-const DATA_FIXES = [['0004_prices', m4], ['0005_admin_and_kcp', m5], ['0006_new_exams', m6], ['0007_integrity', m7]];
+const DATA_FIXES = [['0004_prices', m4], ['0005_admin_and_kcp', m5], ['0006_new_exams', m6], ['0007_integrity', m7], ['0008_security_features', m8]];
 
 let ready = null;
 export function ensureDb(env) {

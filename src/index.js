@@ -5,6 +5,7 @@ import exams from './routes/exams.js';
 import admin from './routes/admin.js';
 import sample from './routes/sample.js';
 import { ensureDb } from './lib/bootstrap.js';
+import { API_HEADERS } from './lib/security.js';
 
 const app = new Hono();
 
@@ -26,8 +27,13 @@ app.use('/api/*', async (c, next) => {
     const origin = c.req.header('origin');
     if (origin && new URL(origin).host !== new URL(c.req.url).host) return c.json({ error: 'forbidden origin' }, 403);
   }
+  // Request size caps (bytes): audio answers and bulk question import are the only large bodies.
+  const len = Number(c.req.header('content-length') || 0);
+  const cap = c.req.path.endsWith('/audio') ? 1_300_000 : c.req.path === '/api/admin/questions/import' ? 8_000_000 : 256_000;
+  if (len > cap) return c.json({ error: '요청이 너무 큽니다.' }, 413);
   await next();
   c.header('Cache-Control', 'no-store');
+  for (const [k, v] of Object.entries(API_HEADERS)) if (!c.res.headers.has(k)) c.header(k, v);
 });
 
 app.route('/api/auth', auth);

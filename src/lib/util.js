@@ -43,4 +43,4 @@ export function parseNum(v) {
   return null;
 }
 export const numEqual = (input, accepted) => { const x = parseNum(input); return x !== null && accepted.some((a) => { const y = parseNum(a); return y !== null && Math.abs(x - y) < 1e-6; }); };
-export const isEmail = (s) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(s || '');
+export const isEmail = (s) => /^[^\s@|<>"]+@[^\s@|<>"]+\.[^\s@|<>"]{2,}$/.test(s || '') && String(s).length <= 254;

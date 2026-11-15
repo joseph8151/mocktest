@@ -8,6 +8,7 @@ export async function fulfillOrder(env, orderId, providerRef) {
     `UPDATE orders SET status='paid', paid_at=?, provider_ref=COALESCE(?,provider_ref) WHERE id=? AND status IN ('pending','failed','awaiting_deposit')`
   ).bind(now(), providerRef || null, orderId).run();
   if (!upd.meta.changes) return false; // already fulfilled
+  await db.prepare('UPDATE coupons SET used=used+1 WHERE code=(SELECT coupon FROM orders WHERE id=?)').bind(orderId).run();
   const o = await db.prepare(
     `SELECT o.*, p.exam_type, p.attempts, p.valid_days, p.title, u.email, u.name
      FROM orders o JOIN products p ON p.id=o.product_id JOIN users u ON u.id=o.user_id WHERE o.id=?`

@@ -1,6 +1,9 @@
 // Public endpoints: exam structure (for the info pages) and a free 5-question sample test (no login).
 import { Hono } from 'hono';
 import { EXAMS } from '../lib/exam.js';
+import { buildReport } from './exams.js';
+import { sha256hex, now } from '../lib/util.js';
+import { clientIp, rateLimited, tooMany } from '../lib/security.js';
 
 const app = new Hono();
 
@@ -40,6 +43,17 @@ app.post('/sample/grade', async (c) => {
     if (q) out.push({ id: q.id, correct: Number.isInteger(a.choice) && a.choice === q.answer, answer: q.answer, explanation: q.explanation });
   }
   return c.json({ results: out, score: out.filter((x) => x.correct).length, total: out.length });
+});
+
+// Read-only report opened from a share link (parents / tutors). Token is stored hashed; expired or revoked links 404.
+app.get('/shared/:token', async (c) => {
+  if (await rateLimited(c.env, `shared|${clientIp(c)}`, 60, 600000)) return tooMany(c);
+  const token = c.req.param('token');
+  if (!/^[0-9a-f]{48}$/.test(token)) return c.json({ error: '링크가 만료되었거나 공유가 중지되었습니다.' }, 404);
+  const link = await c.env.DB.prepare('SELECT attempt_id FROM share_links WHERE token_hash=? AND expires_at>?').bind(await sha256hex(token), now()).first();
+  const a = link && (await c.env.DB.prepare(`SELECT * FROM attempts WHERE id=? AND status!='in_progress'`).bind(link.attempt_id).first());
+  if (!a) return c.json({ error: '링크가 만료되었거나 공유가 중지되었습니다.' }, 404);
+  return c.json(await buildReport(c.env, a, { shared: true }));
 });
 
 export default app;

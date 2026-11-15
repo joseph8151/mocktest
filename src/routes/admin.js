@@ -5,9 +5,19 @@ import { EXAMS, scoreAttempt } from '../lib/exam.js';
 import { stripeRetrieveSession, stripeRefund, portoneCancel, recheckOrder, fulfillOrder } from '../lib/payments.js';
 import { notifyResult } from './exams.js';
 import { kcpCancel, kcpEnabled, kcpConfig } from '../lib/kcp.js';
+import { audit } from '../lib/security.js';
 
 const app = new Hono();
 app.use('*', requireAdmin);
+// Audit trail: every admin change (and data export) is recorded with who, what, when and from where.
+app.use('*', async (c, next) => {
+  await next();
+  const m = c.req.method;
+  if (m !== 'GET' || c.req.path.endsWith('.csv')) {
+    const id = c.req.path.replace(/^\/api\/admin/, '');
+    await audit(c, `admin.${m.toLowerCase()}`, id.slice(0, 200), `HTTP ${c.res.status}`);
+  }
+});
 
 app.get('/stats', async (c) => {
   const q = (s) => c.env.DB.prepare(s).first();
@@ -37,7 +47,7 @@ app.get('/payment-status', (c) => {
 app.get('/users', async (c) => {
   const s = `%${c.req.query('q') || ''}%`;
   const { results } = await c.env.DB.prepare(
-    `SELECT id,email,name,role,status,grade,phone,created_at,last_login_at FROM users
+    `SELECT id,email,name,role,status,grade,phone,created_at,last_login_at,(totp_secret IS NOT NULL) AS twofa FROM users
      WHERE email LIKE ? OR name LIKE ? ORDER BY created_at DESC LIMIT 200`).bind(s, s).all();
   return c.json({ users: results });
 });
@@ -60,7 +70,7 @@ app.patch('/users/:id', async (c) => {
   if ((b.role === 'student' || b.status === 'suspended') && (await c.env.DB.prepare(`SELECT role FROM users WHERE id=?`).bind(id).first())?.role === 'admin' && (await c.env.DB.prepare(`SELECT COUNT(*) n FROM users WHERE role='admin' AND status='active'`).first()).n <= 1) return c.json({ error: '마지막 관리자는 해제하거나 정지할 수 없습니다.' }, 400);
   await c.env.DB.prepare('UPDATE users SET role=COALESCE(?,role), status=COALESCE(?,status), name=COALESCE(?,name), grade=COALESCE(?,grade) WHERE id=?')
     .bind(b.role || null, b.status || null, b.name || null, b.grade ?? null, id).run();
-  if (b.status === 'suspended') await c.env.DB.prepare('DELETE FROM sessions WHERE user_id=?').bind(id).run();
+  if (b.status === 'suspended' || b.role) await c.env.DB.prepare('DELETE FROM sessions WHERE user_id=?').bind(id).run(); // role change: sign in again (admin sessions are shorter)
   return c.json({ ok: true });
 });
 app.delete('/users/:id', async (c) => {
@@ -74,6 +84,9 @@ app.delete('/users/:id', async (c) => {
     c.env.DB.prepare('DELETE FROM attempts WHERE user_id=?').bind(id),
     c.env.DB.prepare('DELETE FROM entitlements WHERE user_id=?').bind(id),
     c.env.DB.prepare('DELETE FROM refund_requests WHERE user_id=?').bind(id),
+    c.env.DB.prepare('DELETE FROM share_links WHERE user_id=?').bind(id),
+    c.env.DB.prepare('DELETE FROM sessions WHERE user_id=?').bind(id),
+    c.env.DB.prepare('DELETE FROM reset_tokens WHERE user_id=?').bind(id),
     c.env.DB.prepare('DELETE FROM orders WHERE user_id=?').bind(id),
     c.env.DB.prepare('DELETE FROM users WHERE id=?').bind(id),
   ]);
@@ -265,6 +278,55 @@ app.post('/grading/:id', async (c) => {
   await c.env.DB.prepare('UPDATE attempts SET score=?, status=? WHERE id=?').bind(JSON.stringify(sc), status, att.id).run();
   if (status === 'graded' && att.status === 'submitted') await notifyResult(c.env, att);
   return c.json({ ok: true });
+});
+
+/* ---- coupons ---- */
+app.get('/coupons', async (c) => c.json({ coupons: (await c.env.DB.prepare('SELECT * FROM coupons ORDER BY created_at DESC LIMIT 300').all()).results }));
+app.post('/coupons', async (c) => {
+  const b = await c.req.json().catch(() => ({}));
+  const code = String(b.code || '').trim().toUpperCase();
+  if (!/^[A-Z0-9_-]{4,32}$/.test(code)) return c.json({ error: '쿠폰 코드는 영문 대문자·숫자 4–32자입니다.' }, 400);
+  if (!['percent', 'amount'].includes(b.kind)) return c.json({ error: '할인 방식이 올바르지 않습니다.' }, 400);
+  const value = Math.round(Number(b.value));
+  if (b.kind === 'percent' ? !(value >= 1 && value <= 90) : !(value >= 100 && value <= 1000000)) return c.json({ error: b.kind === 'percent' ? '할인율은 1–90%입니다.' : '할인 금액은 100원 이상입니다.' }, 400);
+  if (b.exam_type && !EXAMS[b.exam_type]) return c.json({ error: '시험 종류가 올바르지 않습니다.' }, 400);
+  const maxUses = b.max_uses ? Math.max(1, Math.round(Number(b.max_uses))) : null;
+  const exp = b.expires_at ? Number(b.expires_at) : null;
+  await c.env.DB.prepare(`INSERT INTO coupons (code,kind,value,exam_type,max_uses,expires_at,active,note,created_at) VALUES (?,?,?,?,?,?,1,?,?)
+    ON CONFLICT(code) DO UPDATE SET kind=excluded.kind,value=excluded.value,exam_type=excluded.exam_type,max_uses=excluded.max_uses,expires_at=excluded.expires_at,active=1,note=excluded.note`)
+    .bind(code, b.kind, value, b.exam_type || null, maxUses, exp, String(b.note || '').slice(0, 100), now()).run();
+  return c.json({ ok: true });
+});
+app.post('/coupons/:code/toggle', async (c) => {
+  await c.env.DB.prepare('UPDATE coupons SET active=1-active WHERE code=?').bind(c.req.param('code')).run();
+  return c.json({ ok: true });
+});
+
+/* ---- site notice banner ---- */
+app.post('/notice', async (c) => {
+  const b = await c.req.json().catch(() => ({}));
+  const text = String(b.text || '').trim().slice(0, 300);
+  await c.env.DB.prepare(`INSERT INTO settings (key,value,updated_at) VALUES ('notice',?,?) ON CONFLICT(key) DO UPDATE SET value=excluded.value, updated_at=excluded.updated_at`).bind(text || null, now()).run();
+  return c.json({ ok: true });
+});
+
+/* ---- security overview + audit log ---- */
+app.get('/security', async (c) => {
+  const q = (s, ...a) => c.env.DB.prepare(s).bind(...a).all();
+  const [admins, log, fails] = await Promise.all([
+    q(`SELECT id,email,name,last_login_at,(totp_secret IS NOT NULL) AS twofa FROM users WHERE role='admin' AND status='active'`),
+    q(`SELECT * FROM audit_log WHERE (?1='' OR action LIKE ?1 || '%') ORDER BY at DESC LIMIT 300`, String(c.req.query('action') || '')),
+    q(`SELECT substr(key, instr(key,'|')+1) AS ip, COUNT(*) n FROM login_attempts WHERE at>? GROUP BY ip ORDER BY n DESC LIMIT 10`, now() - 3600000),
+  ]);
+  return c.json({
+    admins: admins.results, log: log.results, failedLoginsByIp: fails.results,
+    checks: {
+      https: (c.env.SITE_URL || '').startsWith('https://'),
+      turnstile: !!(c.env.TURNSTILE_SITE_KEY && c.env.TURNSTILE_SECRET),
+      adminsWithout2fa: admins.results.filter((a) => !a.twofa).length,
+      webhookSecrets: { stripe: !c.env.STRIPE_SECRET_KEY || !!c.env.STRIPE_WEBHOOK_SECRET, portone: !c.env.PORTONE_API_SECRET || !!c.env.PORTONE_WEBHOOK_SECRET },
+    },
+  });
 });
 
 export default app;

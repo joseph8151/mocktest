@@ -1,5 +1,5 @@
 import { Hono } from 'hono';
-import { uid, now, bufToB64, numEqual } from '../lib/util.js';
+import { uid, now, bufToB64, numEqual, randomToken, sha256hex } from '../lib/util.js';
 import { requireUser } from '../lib/auth.js';
 import { EXAMS, GRACE_MS, initialState, pickNext, sectionTarget, adaptDifficulty, scoreAttempt, getLevel, levelBank, levelForGrade } from '../lib/exam.js';
 import { sendMail, mailResult } from '../lib/email.js';
@@ -322,21 +322,49 @@ app.post('/attempts/:id/finish', async (c) => {
   return c.json({ ok: true });
 });
 
+/** Report payload. `shared` = the read-only parent view: no e-mail, no internal ids. */
+export async function buildReport(env, a, { shared = false } = {}) {
+  const { results } = await env.DB.prepare(
+    `SELECT a.section,a.kind,a.difficulty,a.choice,a.text,a.correct,a.manual_score,a.feedback,a.time_ms,
+            q.stem,q.passage,q.image_svg,q.choices,q.answer,q.explanation
+     FROM answers a JOIN questions q ON q.id=a.question_id WHERE a.attempt_id=? ORDER BY a.created_at`).bind(a.id).all();
+  const user = await env.DB.prepare('SELECT name,email,grade FROM users WHERE id=?').bind(a.user_id).first();
+  const lv = getLevel(a.exam_type, JSON.parse(a.state).level);
+  return {
+    attempt: { id: shared ? null : a.id, exam_type: a.exam_type, title: EXAMS[a.exam_type].title, status: a.status, started_at: a.started_at, finished_at: a.finished_at, level: { key: lv.key, name: lv.name, grades: lv.grades } },
+    student: shared ? { name: user?.name, grade: user?.grade } : user,
+    score: a.score ? JSON.parse(a.score) : null,
+    items: results.map((r) => ({ ...r, choices: r.choices ? JSON.parse(r.choices) : null })),
+    shared,
+  };
+}
+
 app.get('/attempts/:id/report', async (c) => {
   const a = await loadAttempt(c);
   if (!a) return c.json({ error: 'not found' }, 404);
   if (a.status === 'in_progress') return c.json({ error: '아직 진행 중인 시험입니다.' }, 409);
-  const { results } = await c.env.DB.prepare(
-    `SELECT a.section,a.kind,a.difficulty,a.choice,a.text,a.correct,a.manual_score,a.feedback,a.time_ms,
-            q.stem,q.passage,q.image_svg,q.choices,q.answer,q.explanation
-     FROM answers a JOIN questions q ON q.id=a.question_id WHERE a.attempt_id=? ORDER BY a.created_at`).bind(a.id).all();
-  const user = await c.env.DB.prepare('SELECT name,email,grade FROM users WHERE id=?').bind(a.user_id).first();
-  return c.json({
-    attempt: { id: a.id, exam_type: a.exam_type, title: EXAMS[a.exam_type].title, status: a.status, started_at: a.started_at, finished_at: a.finished_at, level: (() => { const lv = getLevel(a.exam_type, JSON.parse(a.state).level); return { key: lv.key, name: lv.name, grades: lv.grades }; })() },
-    student: user,
-    score: a.score ? JSON.parse(a.score) : null,
-    items: results.map((r) => ({ ...r, choices: r.choices ? JSON.parse(r.choices) : null })),
-  });
+  const r = await buildReport(c.env, a);
+  if (a.user_id === c.get('user').id) r.shareCount = (await c.env.DB.prepare('SELECT COUNT(*) n FROM share_links WHERE attempt_id=? AND expires_at>?').bind(a.id, now()).first()).n;
+  return c.json(r);
+});
+
+/* ---- read-only report links for parents / tutors (14 days, revocable) ---- */
+app.post('/attempts/:id/share', async (c) => {
+  const a = await loadAttempt(c);
+  if (!a || a.user_id !== c.get('user').id) return c.json({ error: 'not found' }, 404);
+  if (a.status === 'in_progress') return c.json({ error: '시험을 마친 뒤 공유할 수 있습니다.' }, 409);
+  if ((await c.env.DB.prepare('SELECT COUNT(*) n FROM share_links WHERE user_id=? AND created_at>?').bind(a.user_id, now() - 86400000).first()).n >= 20)
+    return c.json({ error: '오늘은 더 이상 링크를 만들 수 없습니다.' }, 429);
+  const token = randomToken(24);
+  await c.env.DB.prepare('INSERT INTO share_links (token_hash,attempt_id,user_id,expires_at,created_at) VALUES (?,?,?,?,?)')
+    .bind(await sha256hex(token), a.id, a.user_id, now() + 14 * 86400000, now()).run();
+  return c.json({ url: `${c.env.SITE_URL}/#/shared/${token}`, expiresAt: now() + 14 * 86400000 });
+});
+app.delete('/attempts/:id/share', async (c) => {
+  const a = await loadAttempt(c);
+  if (!a || a.user_id !== c.get('user').id) return c.json({ error: 'not found' }, 404);
+  await c.env.DB.prepare('DELETE FROM share_links WHERE attempt_id=?').bind(a.id).run();
+  return c.json({ ok: true });
 });
 
 export default app;
