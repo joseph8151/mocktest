@@ -15,7 +15,7 @@ let dropIds = new Set(); try { dropIds = new Set(JSON.parse(readFileSync(new URL
 const hash = (str) => { let a = 0x811c9dc5, b = 0x1b873593; for (let i = 0; i < str.length; i++) { const c = str.charCodeAt(i); a = Math.imul(a ^ c, 16777619); b = Math.imul(b + c, 2246822519) ^ (b >>> 13); } return ((a >>> 0).toString(16).padStart(8, '0') + (b >>> 0).toString(16).padStart(8, '0')).slice(0, 12); };
 function add(exam_type, section, difficulty, stem, choices, answer, explanation, extra = {}) {
   const key = hash([exam_type, section, stem, extra.passage || '', extra.image_svg ? 'img' : '', [...choices].sort().join('|')].join('\u0001'));
-  const tkey = extra.image_svg || choices.some((c) => String(c).startsWith('svg:')) ? null : `t|${exam_type}|${section}|${extra.passage || ''}|${stem.trim().toLowerCase()}`;
+  const tkey = extra.image_svg || choices.some((c) => String(c).startsWith('svg:')) ? null : `t|${exam_type}|${section}|${extra.passage || ''}|${stem.trim().toLowerCase()}${extra._sameStemOk ? '|' + [...choices].sort().join('|') : ''}`; // newer banks reuse generic stems with different choices
   if (tkey && seen.has(tkey)) return; if (tkey) seen.add(tkey);
   if (seen.has(key) || dropIds.has(`seed-${exam_type.toLowerCase()}-${section}-${key}`)) return; // identical generated item: keep one / reviewer-rejected
   seen.add(key);
@@ -631,7 +631,7 @@ function mergeBanks() {
     }
     // Digital SAT: every R&W question has a 25–150-word text. Older one-sentence items are retired (after the shuffle, so the random stream is unchanged).
     if (it.exam_type === 'SAT' && it.section === 'rw' && (String(it.passage || '').match(/[A-Za-z0-9'’-]+/g) || []).length < 25) { shortSat++; return; }
-    add(it.exam_type, it.section, it.difficulty, it.stem, ch, ans, it.explanation, { ...(it.passage ? { passage: it.passage } : {}), ...(it.image_svg ? { image_svg: it.image_svg } : {}), _src: 'bank' }); total++;
+    add(it.exam_type, it.section, it.difficulty, it.stem, ch, ans, it.explanation, { ...(it.passage ? { passage: it.passage } : {}), ...(it.image_svg ? { image_svg: it.image_svg } : {}), _src: 'bank', ...(LEGACY_BANKS.has(f) ? {} : { _sameStemOk: true }) }); total++;
     });
   }
   console.log('merged', total, 'hand-written items from', files.length, 'files; retired', shortSat, 'SAT R&W items with passages under 25 words');

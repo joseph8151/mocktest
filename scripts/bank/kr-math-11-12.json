@@ -1,0 +1,1511 @@
+[
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 5,
+    "stem": "서로 다른 숫자 A, B가 있습니다. 두 자리 수 AB와 BA를 더하면 121이고, A는 B보다 3 큽니다. 두 자리 수 AB는 얼마입니까?",
+    "choices": [
+      "47",
+      "65",
+      "74",
+      "83"
+    ],
+    "answer": 2,
+    "explanation": "AB + BA = (10×A + B) + (10×B + A) = 11×(A + B) = 121이므로 A + B = 11입니다. A − B = 3이므로 A = 7, B = 4입니다. 따라서 AB = 74입니다. (확인: 74 + 47 = 121)"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 5,
+    "stem": "세 자리 수 ABC에서 A, B, C는 서로 다른 숫자입니다. ABC − CBA = 396이고, A + B + C = 18, B = 6일 때 세 자리 수 ABC는 얼마입니까?",
+    "choices": [
+      "864",
+      "846",
+      "945",
+      "693"
+    ],
+    "answer": 0,
+    "explanation": "ABC − CBA = 99×(A − C) = 396이므로 A − C = 4입니다. A + C = 18 − 6 = 12이므로 A = 8, C = 4입니다. 따라서 ABC = 864입니다. (확인: 864 − 468 = 396)"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 5,
+    "kind": "num",
+    "stem": "1부터 100까지의 자연수 중에서 3의 배수도 아니고 4의 배수도 아닌 수는 모두 몇 개입니까?",
+    "choices": [
+      "50"
+    ],
+    "explanation": "3의 배수는 33개, 4의 배수는 25개, 3과 4의 공배수(12의 배수)는 8개입니다. 3 또는 4의 배수는 33 + 25 − 8 = 50개이므로, 둘 다 아닌 수는 100 − 50 = 50개입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 5,
+    "stem": "어떤 자연수로 50을 나누어도 나머지가 2이고, 74를 나누어도 나머지가 2입니다. 이런 자연수 중에서 가장 큰 수는 얼마입니까?",
+    "choices": [
+      "12",
+      "24",
+      "8",
+      "48"
+    ],
+    "answer": 1,
+    "explanation": "어떤 수는 50 − 2 = 48과 74 − 2 = 72를 모두 나누어떨어지게 하는 수, 즉 48과 72의 공약수입니다. 가장 큰 공약수는 24이고, 24는 나머지 2보다 크므로 조건에 맞습니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 5,
+    "stem": "다음 중 가장 큰 수는 어느 것입니까?",
+    "choices": [
+      "5/6",
+      "7/9",
+      "11/12",
+      "0.9"
+    ],
+    "answer": 2,
+    "explanation": "1에서 뺀 값을 비교하면 5/6은 1/6, 7/9는 2/9, 11/12는 1/12, 0.9는 1/10만큼 1보다 작습니다. 1/12가 가장 작으므로 11/12가 가장 큽니다. (11/12 = 0.916…)"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 5,
+    "stem": "3/7 < □/14 < 5/6 을 만족하는 자연수 □는 모두 몇 개입니까?",
+    "choices": [
+      "4개",
+      "5개",
+      "6개",
+      "7개"
+    ],
+    "answer": 1,
+    "explanation": "3/7 = 6/14이므로 □는 6보다 커야 합니다. 5/6 = 0.833…이고 14 × 0.833… = 11.66…이므로 □는 11 이하입니다(12/14 = 0.857…은 5/6보다 큼). □ = 7, 8, 9, 10, 11로 5개입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 5,
+    "kind": "num",
+    "stem": "1부터 50까지의 자연수를 모두 썼습니다. 쓴 숫자들을 모두 더하면 얼마입니까? (예: 12는 1 + 2로 더합니다.)",
+    "choices": [
+      "330"
+    ],
+    "explanation": "1~9: 45. 10~49: 십의 자리 숫자의 합은 (1+2+3+4)×10 = 100, 일의 자리 숫자의 합은 45×4 = 180. 50: 5. 합계 45 + 100 + 180 + 5 = 330입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 5,
+    "stem": "1 + 3 + 5 + 7 + … + 39 의 값은 얼마입니까? (1부터 39까지의 홀수를 모두 더합니다.)",
+    "choices": [
+      "380",
+      "390",
+      "400",
+      "420"
+    ],
+    "answer": 2,
+    "explanation": "1부터 39까지 홀수는 20개입니다. 1+39, 3+37, …처럼 짝을 지으면 합이 40인 쌍이 10개이므로 40 × 10 = 400입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 5,
+    "stem": "2를 50번 곱한 수의 일의 자리 숫자는 무엇입니까?",
+    "choices": [
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
+    "answer": 1,
+    "explanation": "2를 곱할 때 일의 자리는 2, 4, 8, 6이 4개씩 반복됩니다. 50 ÷ 4 = 12 … 2이므로 반복의 2번째인 4입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 5,
+    "stem": "어떤 수를 6으로 나누었더니 몫이 13, 나머지가 5였습니다. 이 수를 8로 나누면 나머지는 얼마입니까?",
+    "choices": [
+      "1",
+      "5",
+      "7",
+      "3"
+    ],
+    "answer": 3,
+    "explanation": "어떤 수 = 6 × 13 + 5 = 83입니다. 83 ÷ 8 = 10 … 3이므로 나머지는 3입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 5,
+    "stem": "숫자 카드 3, 0, 7, 5, 1을 한 번씩 모두 사용하여 다섯 자리 수를 만들려고 합니다. 만들 수 있는 수 중에서 50000에 가장 가까운 수는 무엇입니까?",
+    "choices": [
+      "50137",
+      "50173",
+      "37510",
+      "51037"
+    ],
+    "answer": 0,
+    "explanation": "50000보다 크면서 가장 가까운 수는 5 다음에 남은 숫자 0, 1, 3, 7을 작은 순서로 놓은 50137(차 137)입니다. 50000보다 작으면서 가장 가까운 수는 37510(차 12490)입니다. 따라서 50137이 가장 가깝습니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 5,
+    "stem": "1이 2개, 0.1이 37개, 0.01이 125개인 수는 얼마입니까?",
+    "choices": [
+      "5.95",
+      "6.85",
+      "6.95",
+      "7.05"
+    ],
+    "answer": 2,
+    "explanation": "1이 2개 → 2, 0.1이 37개 → 3.7, 0.01이 125개 → 1.25입니다. 2 + 3.7 + 1.25 = 6.95입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 5,
+    "kind": "num",
+    "stem": "분모가 7인 진분수를 모두 더하면 얼마입니까?",
+    "choices": [
+      "3"
+    ],
+    "explanation": "분모가 7인 진분수는 1/7, 2/7, …, 6/7입니다. 분자의 합은 1+2+3+4+5+6 = 21이므로 21/7 = 3입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 5,
+    "stem": "1부터 50까지의 자연수 중에서 약수의 개수가 홀수인 수는 모두 몇 개입니까?",
+    "choices": [
+      "5개",
+      "6개",
+      "7개",
+      "8개"
+    ],
+    "answer": 2,
+    "explanation": "약수는 보통 짝(예: 12 = 1×12 = 2×6 = 3×4)을 이루므로 개수가 짝수이지만, 같은 수를 두 번 곱한 수(제곱수)는 짝이 하나 겹쳐 홀수가 됩니다. 1, 4, 9, 16, 25, 36, 49로 7개입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 5,
+    "stem": "시계가 3시 30분을 가리킬 때, 짧은바늘과 긴바늘이 이루는 작은 쪽의 각은 몇 도입니까?",
+    "choices": [
+      "60°",
+      "75°",
+      "85°",
+      "90°"
+    ],
+    "answer": 1,
+    "explanation": "긴바늘은 6을 가리키므로 12에서 180°입니다. 짧은바늘은 3에서 30분 동안 15°(1시간에 30°) 더 가서 90° + 15° = 105° 위치입니다. 180° − 105° = 75°입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 5,
+    "stem": "삼각형 ABC에서 각 A의 크기는 50°입니다. 각 B를 똑같이 둘로 나누는 선과 각 C를 똑같이 둘로 나누는 선이 점 P에서 만날 때, 각 BPC는 몇 도입니까?",
+    "choices": [
+      "105°",
+      "115°",
+      "125°",
+      "130°"
+    ],
+    "answer": 1,
+    "explanation": "각 B + 각 C = 180° − 50° = 130°이므로 그 절반의 합은 65°입니다. 삼각형 PBC에서 각 BPC = 180° − 65° = 115°입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 5,
+    "stem": "정팔각형의 한 각의 크기는 몇 도입니까?",
+    "choices": [
+      "120°",
+      "135°",
+      "140°",
+      "144°"
+    ],
+    "answer": 1,
+    "explanation": "팔각형은 한 꼭짓점에서 대각선을 그으면 삼각형 6개로 나뉘므로 각의 합은 180° × 6 = 1080°입니다. 정팔각형의 한 각은 1080° ÷ 8 = 135°입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 5,
+    "kind": "num",
+    "stem": "팔각형에 그을 수 있는 대각선은 모두 몇 개입니까?",
+    "choices": [
+      "20"
+    ],
+    "explanation": "한 꼭짓점에서 자기 자신과 이웃한 두 꼭짓점을 뺀 5개의 꼭짓점으로 대각선을 그을 수 있습니다. 8 × 5 = 40인데 각 대각선이 두 번씩 세어졌으므로 40 ÷ 2 = 20개입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 5,
+    "stem": "그림은 정사각형 6개를 붙여 만든 도형입니다. 그림에서 찾을 수 있는 크고 작은 사각형(정사각형과 직사각형 모두)은 모두 몇 개입니까?",
+    "choices": [
+      "12개",
+      "17개",
+      "18개",
+      "22개"
+    ],
+    "answer": 2,
+    "explanation": "세로선 4개 중 2개, 가로선 3개 중 2개를 고르면 사각형 하나가 정해집니다. (4개 중 2개 고르기 6가지) × (3개 중 2개 고르기 3가지) = 18개입니다.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 260 180\" width=\"260\" font-family=\"sans-serif\" font-size=\"16\"><line x1=\"10\" y1=\"10\" x2=\"10\" y2=\"170\" stroke=\"#000\" stroke-width=\"3\"/><line x1=\"90\" y1=\"10\" x2=\"90\" y2=\"170\" stroke=\"#000\" stroke-width=\"3\"/><line x1=\"170\" y1=\"10\" x2=\"170\" y2=\"170\" stroke=\"#000\" stroke-width=\"3\"/><line x1=\"250\" y1=\"10\" x2=\"250\" y2=\"170\" stroke=\"#000\" stroke-width=\"3\"/><line x1=\"10\" y1=\"10\" x2=\"250\" y2=\"10\" stroke=\"#000\" stroke-width=\"3\"/><line x1=\"10\" y1=\"90\" x2=\"250\" y2=\"90\" stroke=\"#000\" stroke-width=\"3\"/><line x1=\"10\" y1=\"170\" x2=\"250\" y2=\"170\" stroke=\"#000\" stroke-width=\"3\"/></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 5,
+    "kind": "num",
+    "stem": "그림은 가로, 세로 3칸씩인 정사각형 모양입니다. 그림에서 찾을 수 있는 크고 작은 정사각형은 모두 몇 개입니까?",
+    "choices": [
+      "14"
+    ],
+    "explanation": "한 칸짜리 9개, 2×2 크기 4개, 3×3 크기 1개로 9 + 4 + 1 = 14개입니다.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 230 230\" width=\"230\" font-family=\"sans-serif\" font-size=\"16\"><line x1=\"10\" y1=\"10\" x2=\"10\" y2=\"220\" stroke=\"#000\" stroke-width=\"3\"/><line x1=\"80\" y1=\"10\" x2=\"80\" y2=\"220\" stroke=\"#000\" stroke-width=\"3\"/><line x1=\"150\" y1=\"10\" x2=\"150\" y2=\"220\" stroke=\"#000\" stroke-width=\"3\"/><line x1=\"220\" y1=\"10\" x2=\"220\" y2=\"220\" stroke=\"#000\" stroke-width=\"3\"/><line x1=\"10\" y1=\"10\" x2=\"220\" y2=\"10\" stroke=\"#000\" stroke-width=\"3\"/><line x1=\"10\" y1=\"80\" x2=\"220\" y2=\"80\" stroke=\"#000\" stroke-width=\"3\"/><line x1=\"10\" y1=\"150\" x2=\"220\" y2=\"150\" stroke=\"#000\" stroke-width=\"3\"/><line x1=\"10\" y1=\"220\" x2=\"220\" y2=\"220\" stroke=\"#000\" stroke-width=\"3\"/></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 5,
+    "stem": "그림과 같이 삼각형의 위쪽 꼭짓점에서 밑변 위의 세 점으로 선분을 그었습니다. 그림에서 찾을 수 있는 크고 작은 삼각형은 모두 몇 개입니까?",
+    "choices": [
+      "6개",
+      "8개",
+      "10개",
+      "12개"
+    ],
+    "answer": 2,
+    "explanation": "모든 삼각형은 위쪽 꼭짓점을 포함하고 밑변 위의 점 2개를 고르면 정해집니다. 밑변 위의 점은 양 끝을 포함해 5개이므로 5개 중 2개를 고르는 방법은 4+3+2+1 = 10가지, 즉 10개입니다.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 200\" width=\"340\" font-family=\"sans-serif\" font-size=\"16\"><polygon points=\"170,15 20,185 320,185\" fill=\"none\" stroke=\"#000\" stroke-width=\"3\"/><line x1=\"170\" y1=\"15\" x2=\"95\" y2=\"185\" stroke=\"#000\" stroke-width=\"3\"/><line x1=\"170\" y1=\"15\" x2=\"170\" y2=\"185\" stroke=\"#000\" stroke-width=\"3\"/><line x1=\"170\" y1=\"15\" x2=\"245\" y2=\"185\" stroke=\"#000\" stroke-width=\"3\"/></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 5,
+    "stem": "어떤 도형을 시계 방향으로 90°만큼 5번 돌렸습니다. 이 결과는 처음 도형을 어떻게 움직인 것과 같습니까?",
+    "choices": [
+      "시계 방향으로 90°만큼 돌린 것",
+      "시계 반대 방향으로 90°만큼 돌린 것",
+      "180°만큼 돌린 것",
+      "움직이지 않은 것(처음과 같음)"
+    ],
+    "answer": 0,
+    "explanation": "시계 방향으로 90°씩 5번 돌리면 450°입니다. 360°는 한 바퀴이므로 450° − 360° = 90°, 즉 시계 방향으로 90°만큼 돌린 것과 같습니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 5,
+    "stem": "어떤 도형을 오른쪽으로 뒤집은 다음, 다시 아래쪽으로 뒤집었습니다. 이 결과는 처음 도형을 어떻게 움직인 것과 같습니까?",
+    "choices": [
+      "시계 방향으로 90°만큼 돌린 것",
+      "180°만큼 돌린 것",
+      "시계 반대 방향으로 90°만큼 돌린 것",
+      "움직이지 않은 것(처음과 같음)"
+    ],
+    "answer": 1,
+    "explanation": "오른쪽으로 뒤집으면 왼쪽과 오른쪽이 바뀌고, 아래쪽으로 뒤집으면 위와 아래가 바뀝니다. 좌우와 상하가 모두 바뀐 모양은 180°만큼 돌린 모양과 같습니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 5,
+    "stem": "가로 12cm, 세로 8cm인 직사각형의 오른쪽 위 귀퉁이에서 가로 4cm, 세로 3cm인 직사각형을 잘라 내어 그림과 같은 도형을 만들었습니다. 이 도형의 둘레는 몇 cm입니까?",
+    "choices": [
+      "33cm",
+      "34cm",
+      "40cm",
+      "47cm"
+    ],
+    "answer": 2,
+    "explanation": "잘라 낸 부분의 두 변(4cm, 3cm)을 바깥쪽으로 옮기면 처음 직사각형의 둘레와 같아집니다. (12 + 8) × 2 = 40cm입니다.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 250\" width=\"340\" font-family=\"sans-serif\" font-size=\"16\"><polygon points=\"30,20 210,20 210,95 310,95 310,220 30,220\" fill=\"#eee\" stroke=\"#000\" stroke-width=\"3\"/><polyline points=\"210,20 310,20 310,95\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\" stroke-dasharray=\"6,5\"/><text x=\"170\" y=\"242\" text-anchor=\"middle\">12cm</text><text x=\"20\" y=\"125\" text-anchor=\"end\" font-size=\"14\">8cm</text><text x=\"260\" y=\"15\" text-anchor=\"middle\" font-size=\"14\">4cm</text><text x=\"318\" y=\"62\" font-size=\"14\">3cm</text></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 5,
+    "stem": "네 변의 길이가 모두 자연수(cm)이고 둘레가 24cm인 직사각형(정사각형 포함) 중에서 넓이가 가장 큰 것의 넓이는 몇 cm²입니까?",
+    "choices": [
+      "24cm²",
+      "32cm²",
+      "35cm²",
+      "36cm²"
+    ],
+    "answer": 3,
+    "explanation": "가로 + 세로 = 12cm입니다. (1,11)=11, (2,10)=20, (3,9)=27, (4,8)=32, (5,7)=35, (6,6)=36이므로 가장 큰 넓이는 36cm²입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 5,
+    "stem": "그림과 같은 전개도를 접어 정육면체를 만들었습니다. 면 \"나\"와 마주 보는 면은 어느 것입니까?",
+    "choices": [
+      "다",
+      "라",
+      "마",
+      "바"
+    ],
+    "answer": 1,
+    "explanation": "가운데 한 줄로 이어진 네 면 \"나, 다, 라, 마\"는 정육면체의 옆면을 한 바퀴 둘러싸므로 한 칸 건너 있는 면끼리 마주 봅니다. 따라서 \"나\"와 \"라\", \"다\"와 \"마\"가 마주 보고, 위·아래에 붙은 \"가\"와 \"바\"가 마주 봅니다.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 260 200\" width=\"260\" font-family=\"sans-serif\" font-size=\"16\"><rect x=\"70\" y=\"10\" width=\"60\" height=\"60\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"3\"/><text x=\"100\" y=\"47\" text-anchor=\"middle\" font-size=\"20\">가</text><rect x=\"10\" y=\"70\" width=\"60\" height=\"60\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"3\"/><text x=\"40\" y=\"107\" text-anchor=\"middle\" font-size=\"20\">나</text><rect x=\"70\" y=\"70\" width=\"60\" height=\"60\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"3\"/><text x=\"100\" y=\"107\" text-anchor=\"middle\" font-size=\"20\">다</text><rect x=\"130\" y=\"70\" width=\"60\" height=\"60\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"3\"/><text x=\"160\" y=\"107\" text-anchor=\"middle\" font-size=\"20\">라</text><rect x=\"190\" y=\"70\" width=\"60\" height=\"60\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"3\"/><text x=\"220\" y=\"107\" text-anchor=\"middle\" font-size=\"20\">마</text><rect x=\"70\" y=\"130\" width=\"60\" height=\"60\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"3\"/><text x=\"100\" y=\"167\" text-anchor=\"middle\" font-size=\"20\">바</text></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 5,
+    "stem": "오각형의 다섯 각 중 네 각의 크기가 100°, 110°, 120°, 95°일 때, 나머지 한 각의 크기는 몇 도입니까?",
+    "choices": [
+      "105°",
+      "115°",
+      "125°",
+      "135°"
+    ],
+    "answer": 1,
+    "explanation": "오각형은 삼각형 3개로 나뉘므로 각의 합은 180° × 3 = 540°입니다. 540° − (100° + 110° + 120° + 95°) = 540° − 425° = 115°입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 5,
+    "stem": "다음 도형 중에서 대칭축(접었을 때 완전히 겹치게 하는 직선)의 개수가 가장 많은 것은 어느 것입니까?",
+    "choices": [
+      "정삼각형",
+      "직사각형(정사각형이 아님)",
+      "정오각형",
+      "정육각형"
+    ],
+    "answer": 3,
+    "explanation": "대칭축의 개수는 정삼각형 3개, 정사각형이 아닌 직사각형 2개, 정오각형 5개, 정육각형 6개입니다. 가장 많은 것은 정육각형입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 5,
+    "kind": "num",
+    "stem": "다음과 같은 규칙으로 수를 늘어놓았습니다. 20번째 수는 얼마입니까?\n3, 7, 11, 15, 19, …",
+    "choices": [
+      "79"
+    ],
+    "explanation": "4씩 커지는 규칙입니다. 20번째 수는 3에 4를 19번 더한 수이므로 3 + 4 × 19 = 79입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 5,
+    "stem": "다음 수의 배열에서 10번째 수는 얼마입니까?\n1, 2, 4, 7, 11, 16, …",
+    "choices": [
+      "37",
+      "45",
+      "46",
+      "56"
+    ],
+    "answer": 2,
+    "explanation": "이웃한 두 수의 차가 1, 2, 3, 4, 5, …로 1씩 커집니다. 10번째 수는 1 + (1 + 2 + … + 9) = 1 + 45 = 46입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 5,
+    "stem": "성냥개비로 정사각형을 옆으로 한 줄로 이어 붙여 만듭니다. 정사각형 1개는 성냥개비 4개, 2개는 7개, 3개는 10개가 필요합니다. 정사각형 10개를 만들려면 성냥개비가 몇 개 필요합니까?",
+    "choices": [
+      "30개",
+      "31개",
+      "33개",
+      "40개"
+    ],
+    "answer": 1,
+    "explanation": "처음 1개에 성냥개비 4개, 그 뒤로 정사각형 하나를 붙일 때마다 3개씩 더 필요합니다. 4 + 3 × 9 = 31개입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 5,
+    "stem": "바둑돌을 삼각형 모양으로 1개, 3개, 6개, 10개, …와 같이 늘어놓습니다. 7번째 모양에 놓이는 바둑돌은 몇 개입니까?",
+    "choices": [
+      "21개",
+      "28개",
+      "32개",
+      "36개"
+    ],
+    "answer": 1,
+    "explanation": "n번째 모양의 바둑돌 수는 1 + 2 + … + n입니다. 7번째는 1 + 2 + 3 + 4 + 5 + 6 + 7 = 28개입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 5,
+    "stem": "★, ◆, ●, ★, ◆, ●, …와 같은 순서로 모양을 계속 늘어놓을 때, 50번째에 놓이는 모양은 무엇입니까?",
+    "choices": [
+      "★",
+      "◆",
+      "●",
+      "알 수 없다"
+    ],
+    "answer": 1,
+    "explanation": "★, ◆, ● 세 개가 반복됩니다. 50 ÷ 3 = 16 … 2이므로 50번째는 반복의 2번째 모양인 ◆입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 5,
+    "stem": "민수, 지호, 서연이가 빨간색, 파란색, 노란색 모자를 하나씩 썼습니다(세 사람의 모자 색은 모두 다릅니다). 민수는 빨간색 모자를 쓰지 않았고, 지호는 빨간색 모자도 파란색 모자도 쓰지 않았습니다. 서연이가 쓴 모자는 무슨 색입니까?",
+    "choices": [
+      "빨간색",
+      "파란색",
+      "노란색",
+      "알 수 없다"
+    ],
+    "answer": 0,
+    "explanation": "지호는 빨간색도 파란색도 아니므로 노란색입니다. 민수는 빨간색이 아니고 노란색은 지호가 썼으므로 파란색입니다. 남은 빨간색이 서연이의 모자입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 5,
+    "stem": "A, B, C 세 사람 중 한 사람이 꽃병을 깼습니다. 세 사람의 말 중 참말은 하나뿐입니다.\nA: \"B가 깼어.\"\nB: \"나는 안 깼어.\"\nC: \"나는 안 깼어.\"\n꽃병을 깬 사람은 누구입니까?",
+    "choices": [
+      "A",
+      "B",
+      "C",
+      "알 수 없다"
+    ],
+    "answer": 2,
+    "explanation": "A가 깼다면 B, C의 말이 참이라 참말이 2개입니다. B가 깼다면 A, C의 말이 참이라 2개입니다. C가 깼다면 A 거짓, B 참, C 거짓으로 참말이 하나뿐입니다. 따라서 C입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 5,
+    "kind": "num",
+    "stem": "윗옷 3벌, 바지 4벌, 신발 2켤레가 있습니다. 윗옷, 바지, 신발을 하나씩 골라 입는 방법은 모두 몇 가지입니까?",
+    "choices": [
+      "24"
+    ],
+    "explanation": "윗옷 3가지 각각에 바지 4가지, 그 각각에 신발 2가지를 고를 수 있으므로 3 × 4 × 2 = 24가지입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 5,
+    "stem": "숫자 카드 1, 2, 3, 4 중에서 2장을 골라 두 자리 수를 만들 때, 만들 수 있는 짝수는 모두 몇 개입니까?",
+    "choices": [
+      "4개",
+      "6개",
+      "8개",
+      "12개"
+    ],
+    "answer": 1,
+    "explanation": "일의 자리가 2이면 십의 자리는 1, 3, 4 중 하나(3개), 일의 자리가 4이면 십의 자리는 1, 2, 3 중 하나(3개)입니다. 3 + 3 = 6개입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 5,
+    "stem": "계단 5칸을 한 번에 1칸 또는 2칸씩 올라가려고 합니다. 맨 위까지 올라가는 방법은 모두 몇 가지입니까?",
+    "choices": [
+      "5가지",
+      "8가지",
+      "10가지",
+      "13가지"
+    ],
+    "answer": 1,
+    "explanation": "1칸까지 1가지, 2칸까지 2가지이고, 어떤 칸까지의 방법 수는 바로 아래 두 칸까지의 방법 수의 합입니다. 3칸 3가지, 4칸 5가지, 5칸 8가지입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 5,
+    "stem": "상자 안에 빨간 공, 파란 공, 노란 공이 각각 10개씩 들어 있습니다. 눈을 감고 공을 꺼낼 때, 같은 색 공을 반드시 2개 이상 꺼내려면 적어도 몇 개를 꺼내야 합니까?",
+    "choices": [
+      "3개",
+      "4개",
+      "5개",
+      "11개"
+    ],
+    "answer": 1,
+    "explanation": "운이 나쁘면 3개를 꺼낼 때 세 가지 색이 하나씩 나올 수 있습니다. 4개를 꺼내면 색은 3가지뿐이므로 반드시 같은 색이 2개 이상 나옵니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 5,
+    "stem": "학생 30명이 있는 반에서 태어난 달이 같은 학생은 적어도 몇 명 이상 반드시 있습니까?",
+    "choices": [
+      "2명",
+      "3명",
+      "4명",
+      "5명"
+    ],
+    "answer": 1,
+    "explanation": "12달에 2명씩 고르게 나누어도 24명뿐이므로 30명이면 어떤 달에는 반드시 3명 이상이 있습니다. 30 = 12 × 2 + 6이므로 3명이 확실히 보장되고, 12 × 3 = 36 > 30이므로 4명은 보장되지 않습니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 5,
+    "stem": "자연수를 1부터 차례로 한 줄에 7개씩 씁니다. 첫째 줄은 1~7, 둘째 줄은 8~14, …입니다. 100은 몇째 줄의 몇째 칸에 있습니까?",
+    "choices": [
+      "14째 줄 2째 칸",
+      "15째 줄 2째 칸",
+      "15째 줄 3째 칸",
+      "14째 줄 7째 칸"
+    ],
+    "answer": 1,
+    "explanation": "100 ÷ 7 = 14 … 2이므로 14줄을 모두 채우고(98까지) 15째 줄의 2째 칸에 100이 있습니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 5,
+    "kind": "num",
+    "stem": "작은 정사각형 타일로 가로, 세로 각각 n개씩인 큰 정사각형을 만들고, 가장 바깥쪽 테두리에 있는 타일만 빨간색으로 칠합니다. n = 3이면 빨간 타일은 8개, n = 4이면 12개입니다. n = 10일 때 빨간 타일은 몇 개입니까?",
+    "choices": [
+      "36"
+    ],
+    "explanation": "전체 10 × 10 = 100개에서 안쪽 8 × 8 = 64개를 빼면 100 − 64 = 36개입니다. (또는 4 × 10 − 4 = 36)"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 5,
+    "stem": "지우는 수학 시험을 4번 보았는데 평균이 85점입니다. 5번째 시험을 보고 5번의 평균을 87점으로 만들려면 5번째 시험에서 몇 점을 받아야 합니까?",
+    "choices": [
+      "89점",
+      "91점",
+      "95점",
+      "97점"
+    ],
+    "answer": 2,
+    "explanation": "4번의 총점은 85 × 4 = 340점, 5번의 총점은 87 × 5 = 435점이어야 합니다. 435 − 340 = 95점입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 5,
+    "kind": "num",
+    "stem": "어떤 수에 3을 곱하고 7을 뺀 다음 2로 나누었더니 13이 되었습니다. 어떤 수는 얼마입니까?",
+    "choices": [
+      "11"
+    ],
+    "explanation": "거꾸로 계산합니다. 13 × 2 = 26, 26 + 7 = 33, 33 ÷ 3 = 11입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 5,
+    "stem": "하은이는 가지고 있던 사탕의 절반을 동생에게 주고, 남은 사탕 중 3개를 먹었습니다. 그다음 남은 사탕의 절반을 친구에게 주었더니 5개가 남았습니다. 하은이가 처음에 가지고 있던 사탕은 몇 개입니까?",
+    "choices": [
+      "22개",
+      "24개",
+      "26개",
+      "28개"
+    ],
+    "answer": 2,
+    "explanation": "거꾸로 풉니다. 친구에게 주기 전: 5 × 2 = 10개, 3개 먹기 전: 10 + 3 = 13개, 동생에게 주기 전: 13 × 2 = 26개입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 5,
+    "stem": "1분에 60m씩 걷는 사람이 2.4km를 걸으려면 몇 분이 걸립니까?",
+    "choices": [
+      "24분",
+      "36분",
+      "40분",
+      "48분"
+    ],
+    "answer": 2,
+    "explanation": "2.4km = 2400m입니다. 2400 ÷ 60 = 40분입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 5,
+    "stem": "오전 9시 45분에 출발한 기차가 3시간 50분 동안 달려 도착했습니다. 도착한 시각은 언제입니까?",
+    "choices": [
+      "오후 12시 35분",
+      "오후 1시 25분",
+      "오후 1시 35분",
+      "오후 1시 45분"
+    ],
+    "answer": 2,
+    "explanation": "9시 45분 + 3시간 = 12시 45분, 12시 45분 + 50분 = 13시 35분, 즉 오후 1시 35분입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 5,
+    "stem": "어느 해 3월 1일은 화요일입니다. 같은 해 3월 31일은 무슨 요일입니까?",
+    "choices": [
+      "수요일",
+      "목요일",
+      "금요일",
+      "토요일"
+    ],
+    "answer": 1,
+    "explanation": "3월 31일은 3월 1일의 30일 후입니다. 30 ÷ 7 = 4 … 2이므로 화요일에서 2일 뒤인 목요일입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 5,
+    "stem": "숫자 카드 2, 5, 7, 8, 0을 한 번씩 모두 사용하여 (세 자리 수) − (두 자리 수)를 만들려고 합니다. 계산 결과가 가장 클 때의 값은 얼마입니까?",
+    "choices": [
+      "830",
+      "845",
+      "853",
+      "855"
+    ],
+    "answer": 3,
+    "explanation": "세 자리 수는 가장 크게 875, 남은 카드 0, 2로 만든 가장 작은 두 자리 수는 20입니다. 875 − 20 = 855입니다. (870 − 25 = 845 등은 더 작습니다.)"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 5,
+    "stem": "길이가 100m인 길의 한쪽에 처음부터 끝까지 5m 간격으로 나무를 심으려고 합니다. 길의 처음과 끝에도 나무를 심는다면 나무는 모두 몇 그루 필요합니까?",
+    "choices": [
+      "19그루",
+      "20그루",
+      "21그루",
+      "22그루"
+    ],
+    "answer": 2,
+    "explanation": "간격의 수는 100 ÷ 5 = 20개입니다. 처음과 끝 모두 심으면 나무 수는 간격 수보다 1 많으므로 21그루입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 5,
+    "stem": "통나무 하나를 4도막으로 자르는 데 9분이 걸렸습니다. 같은 빠르기로 같은 통나무를 7도막으로 자르는 데는 몇 분이 걸립니까? (한 번 자르는 데 걸리는 시간은 항상 같습니다.)",
+    "choices": [
+      "15분",
+      "16분",
+      "18분",
+      "21분"
+    ],
+    "answer": 2,
+    "explanation": "4도막으로 자르려면 3번 잘라야 하므로 한 번에 9 ÷ 3 = 3분입니다. 7도막은 6번 잘라야 하므로 3 × 6 = 18분입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 5,
+    "stem": "레모네이드를 만들 때 레몬즙 1컵마다 물 4컵을 섞습니다. 같은 맛의 레모네이드를 2L 만들려면 레몬즙은 몇 mL가 필요합니까?",
+    "choices": [
+      "250mL",
+      "400mL",
+      "500mL",
+      "1600mL"
+    ],
+    "answer": 1,
+    "explanation": "레몬즙 1컵 + 물 4컵 = 5컵 중 레몬즙은 1컵이므로 전체의 1/5입니다. 2L = 2000mL의 1/5은 400mL입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 5,
+    "kind": "num",
+    "stem": "올해 아버지의 나이는 42세, 아들의 나이는 12세입니다. 몇 년 후에 아버지의 나이가 아들 나이의 2배가 됩니까?",
+    "choices": [
+      "18"
+    ],
+    "explanation": "두 사람의 나이 차이는 항상 30세입니다. 아버지가 아들의 2배일 때 아들 나이는 나이 차이와 같은 30세입니다. 30 − 12 = 18년 후입니다. (확인: 60 = 2 × 30)"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 5,
+    "stem": "닭과 토끼가 모두 15마리 있고, 다리 수를 세어 보니 46개였습니다. 토끼는 몇 마리입니까?",
+    "choices": [
+      "6마리",
+      "7마리",
+      "8마리",
+      "9마리"
+    ],
+    "answer": 2,
+    "explanation": "15마리가 모두 닭이라면 다리는 30개입니다. 토끼 한 마리는 닭보다 다리가 2개 많으므로 (46 − 30) ÷ 2 = 8마리가 토끼입니다. (확인: 닭 7 × 2 + 토끼 8 × 4 = 14 + 32 = 46)"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 5,
+    "kind": "num",
+    "stem": "사과 3개의 무게는 배 2개의 무게와 같고, 배 3개의 무게는 멜론 1개의 무게와 같습니다. 멜론 2개의 무게는 사과 몇 개의 무게와 같습니까? (같은 과일끼리는 무게가 같습니다.)",
+    "choices": [
+      "9"
+    ],
+    "explanation": "멜론 2개 = 배 6개입니다. 배 2개 = 사과 3개이므로 배 6개 = 사과 9개입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 5,
+    "stem": "500원짜리 동전과 100원짜리 동전이 합하여 12개 있고, 금액은 모두 3600원입니다. 500원짜리 동전은 몇 개입니까?",
+    "choices": [
+      "4개",
+      "5개",
+      "6개",
+      "7개"
+    ],
+    "answer": 2,
+    "explanation": "12개가 모두 100원짜리라면 1200원입니다. 500원짜리로 하나 바꿀 때마다 400원씩 늘어나므로 (3600 − 1200) ÷ 400 = 6개입니다. (확인: 3000 + 600 = 3600)"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 6,
+    "stem": "서로 다른 숫자 A, B, C로 만든 세 자리 수 ABC를 세 번 더했더니 세 자리가 모두 B인 수 BBB가 되었습니다. (ABC + ABC + ABC = BBB) 세 자리 수 ABC는 얼마입니까?",
+    "choices": [
+      "148",
+      "185",
+      "259",
+      "296"
+    ],
+    "answer": 0,
+    "explanation": "BBB = 111 × B이므로 ABC × 3 = 111 × B, 즉 ABC = 37 × B입니다. 37 × B의 십의 자리가 B인 것을 찾으면 B = 4일 때 148만 맞습니다(185, 259, 296은 십의 자리가 각각 8, 5, 9로 B와 다름). 148 × 3 = 444입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 6,
+    "stem": "가로 84cm, 세로 60cm인 직사각형 종이를 남는 부분 없이 크기가 같은 정사각형 여러 개로 자르려고 합니다. 정사각형을 가장 크게 자를 때, 정사각형은 모두 몇 개가 됩니까?",
+    "choices": [
+      "12개",
+      "20개",
+      "35개",
+      "70개"
+    ],
+    "answer": 2,
+    "explanation": "정사각형의 한 변은 84와 60의 최대공약수인 12cm입니다. 가로로 84 ÷ 12 = 7개, 세로로 60 ÷ 12 = 5개이므로 7 × 5 = 35개입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 6,
+    "kind": "num",
+    "stem": "2, 3, 4, 5, 6 중 어느 수로 나누어도 나머지가 1인 자연수 중에서 1보다 큰 가장 작은 수는 얼마입니까?",
+    "choices": [
+      "61"
+    ],
+    "explanation": "구하는 수에서 1을 빼면 2, 3, 4, 5, 6의 공배수입니다. 최소공배수는 60이므로 구하는 수는 60 + 1 = 61입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 6,
+    "stem": "한 정류장에서 A버스는 8분마다, B버스는 12분마다 출발합니다. 오전 7시에 두 버스가 동시에 출발했다면, 7시 이후 세 번째로 두 버스가 동시에 출발하는 시각은 언제입니까?",
+    "choices": [
+      "오전 7시 48분",
+      "오전 8시 12분",
+      "오전 8시 24분",
+      "오전 8시 36분"
+    ],
+    "answer": 1,
+    "explanation": "8과 12의 최소공배수는 24이므로 24분마다 동시에 출발합니다. 7시 24분, 7시 48분, 8시 12분이므로 세 번째는 오전 8시 12분입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 6,
+    "stem": "분모가 24인 진분수 중에서 더 이상 약분되지 않는 기약분수는 모두 몇 개입니까?",
+    "choices": [
+      "7개",
+      "8개",
+      "11개",
+      "12개"
+    ],
+    "answer": 1,
+    "explanation": "분자가 1~23 중 24와 공약수가 1뿐인 수, 즉 2의 배수도 3의 배수도 아닌 수를 찾습니다. 1, 5, 7, 11, 13, 17, 19, 23으로 8개입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 6,
+    "stem": "2/5 < 7/□ < 3/4 을 만족하는 자연수 □는 모두 몇 개입니까?",
+    "choices": [
+      "6개",
+      "7개",
+      "8개",
+      "9개"
+    ],
+    "answer": 2,
+    "explanation": "분자를 7로 맞추어 생각합니다. 7/□ > 2/5에서 2 × □ < 35이므로 □ ≤ 17, 7/□ < 3/4에서 3 × □ > 28이므로 □ ≥ 10입니다. □ = 10, 11, …, 17로 8개입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 6,
+    "kind": "num",
+    "stem": "다음을 계산하여 기약분수로 나타내시오.\n(1 − 1/2) × (1 − 1/3) × (1 − 1/4) × … × (1 − 1/10)",
+    "choices": [
+      "1/10"
+    ],
+    "explanation": "각 괄호를 계산하면 1/2 × 2/3 × 3/4 × … × 9/10입니다. 앞 분수의 분모와 뒤 분수의 분자가 차례로 약분되어 1/10만 남습니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 6,
+    "stem": "다음을 계산한 값은 얼마입니까?\n1/(1×2) + 1/(2×3) + 1/(3×4) + … + 1/(9×10)",
+    "choices": [
+      "1/10",
+      "8/9",
+      "9/10",
+      "10/11"
+    ],
+    "answer": 2,
+    "explanation": "1/(n×(n+1)) = 1/n − 1/(n+1)입니다. 따라서 (1 − 1/2) + (1/2 − 1/3) + … + (1/9 − 1/10) = 1 − 1/10 = 9/10입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 6,
+    "stem": "각 자리 숫자의 합이 10인 세 자리 수 중에서 가장 큰 수와 가장 작은 수의 차는 얼마입니까?",
+    "choices": [
+      "791",
+      "801",
+      "811",
+      "900"
+    ],
+    "answer": 1,
+    "explanation": "가장 작은 수는 백의 자리를 1로 하고 남은 9를 일의 자리에 놓은 109, 가장 큰 수는 백의 자리를 9로 하고 나머지 1을 십의 자리에 놓은 910입니다. 910 − 109 = 801입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 6,
+    "stem": "3을 100번 곱한 수의 일의 자리 숫자는 무엇입니까?",
+    "choices": [
+      "1",
+      "3",
+      "7",
+      "9"
+    ],
+    "answer": 0,
+    "explanation": "3을 곱할 때 일의 자리는 3, 9, 7, 1이 4개씩 반복됩니다. 100 ÷ 4 = 25로 나누어떨어지므로 반복의 마지막인 1입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 6,
+    "kind": "num",
+    "stem": "5로 나누면 나머지가 3이고, 7로 나누면 나머지가 5인 두 자리 자연수 중에서 가장 작은 수는 얼마입니까?",
+    "choices": [
+      "33"
+    ],
+    "explanation": "구하는 수에 2를 더하면 5로도 7로도 나누어떨어지므로 35의 배수입니다. 35 − 2 = 33은 두 자리 수입니다. (확인: 33 = 5 × 6 + 3 = 7 × 4 + 5)"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 6,
+    "stem": "다음 중 계산 결과가 가장 큰 것은 어느 것입니까?",
+    "choices": [
+      "2/3 × 9/10",
+      "0.7 × 0.8",
+      "5/8",
+      "1 − 3/7"
+    ],
+    "answer": 2,
+    "explanation": "2/3 × 9/10 = 3/5 = 0.6, 0.7 × 0.8 = 0.56, 5/8 = 0.625, 1 − 3/7 = 4/7 = 0.571…입니다. 가장 큰 것은 5/8입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 6,
+    "stem": "1부터 100까지의 자연수 중에서 약수가 정확히 3개인 수는 모두 몇 개입니까?",
+    "choices": [
+      "3개",
+      "4개",
+      "5개",
+      "6개"
+    ],
+    "answer": 1,
+    "explanation": "약수가 3개인 수는 (소수) × (같은 소수) 꼴입니다. 4 = 2×2, 9 = 3×3, 25 = 5×5, 49 = 7×7로 4개입니다(11 × 11 = 121은 100보다 큼)."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 6,
+    "stem": "네 자리 수 52□4가 3의 배수이면서 4의 배수일 때, □ 안에 들어갈 숫자는 무엇입니까?",
+    "choices": [
+      "1",
+      "4",
+      "6",
+      "7"
+    ],
+    "answer": 1,
+    "explanation": "4의 배수가 되려면 끝 두 자리 □4가 4의 배수여야 하므로 □는 0, 2, 4, 6, 8 중 하나입니다. 3의 배수가 되려면 5 + 2 + □ + 4 = 11 + □가 3의 배수여야 하므로 □는 1, 4, 7 중 하나입니다. 둘 다 만족하는 것은 4입니다(5244 = 12 × 437)."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 6,
+    "kind": "num",
+    "stem": "쌓기나무를 가로 3줄, 세로(앞뒤) 2줄로 놓인 6칸 위에 쌓았습니다. 6칸 모두에 쌓기나무가 1개 이상 있습니다. 앞에서 보면 왼쪽부터 각 세로줄의 가장 높은 층이 2층, 3층, 1층이고, 옆에서 보면 앞줄의 가장 높은 층이 3층, 뒷줄의 가장 높은 층이 2층입니다. 쌓기나무가 가장 많을 때는 몇 개입니까?",
+    "choices": [
+      "11"
+    ],
+    "explanation": "각 칸에는 (그 세로줄의 최고 층)과 (그 앞뒤 줄의 최고 층) 중 작은 수만큼 쌓을 수 있습니다. 앞줄: 2, 3, 1, 뒷줄: 2, 2, 1이므로 최대 2+3+1+2+2+1 = 11개입니다.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 330 190\" width=\"330\" font-family=\"sans-serif\" font-size=\"16\"><text x=\"10\" y=\"20\" font-size=\"14\">앞에서 본 모양</text><rect x=\"20\" y=\"110\" width=\"40\" height=\"40\" fill=\"#ddd\" stroke=\"#000\" stroke-width=\"3\"/><rect x=\"20\" y=\"70\" width=\"40\" height=\"40\" fill=\"#ddd\" stroke=\"#000\" stroke-width=\"3\"/><rect x=\"60\" y=\"110\" width=\"40\" height=\"40\" fill=\"#ddd\" stroke=\"#000\" stroke-width=\"3\"/><rect x=\"60\" y=\"70\" width=\"40\" height=\"40\" fill=\"#ddd\" stroke=\"#000\" stroke-width=\"3\"/><rect x=\"60\" y=\"30\" width=\"40\" height=\"40\" fill=\"#ddd\" stroke=\"#000\" stroke-width=\"3\"/><rect x=\"100\" y=\"110\" width=\"40\" height=\"40\" fill=\"#ddd\" stroke=\"#000\" stroke-width=\"3\"/><text x=\"200\" y=\"20\" font-size=\"14\">옆에서 본 모양</text><text x=\"210\" y=\"178\" font-size=\"13\">앞</text><text x=\"260\" y=\"178\" font-size=\"13\">뒤</text><rect x=\"200\" y=\"110\" width=\"40\" height=\"40\" fill=\"#ddd\" stroke=\"#000\" stroke-width=\"3\"/><rect x=\"200\" y=\"70\" width=\"40\" height=\"40\" fill=\"#ddd\" stroke=\"#000\" stroke-width=\"3\"/><rect x=\"200\" y=\"30\" width=\"40\" height=\"40\" fill=\"#ddd\" stroke=\"#000\" stroke-width=\"3\"/><rect x=\"240\" y=\"110\" width=\"40\" height=\"40\" fill=\"#ddd\" stroke=\"#000\" stroke-width=\"3\"/><rect x=\"240\" y=\"70\" width=\"40\" height=\"40\" fill=\"#ddd\" stroke=\"#000\" stroke-width=\"3\"/></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 6,
+    "kind": "num",
+    "stem": "쌓기나무를 가로 3줄, 세로(앞뒤) 2줄로 놓인 6칸 위에 쌓았습니다. 6칸 모두에 쌓기나무가 1개 이상 있습니다. 앞에서 보면 왼쪽부터 각 세로줄의 가장 높은 층이 2층, 3층, 1층이고, 옆에서 보면 앞줄의 가장 높은 층이 3층, 뒷줄의 가장 높은 층이 2층입니다. 쌓기나무가 가장 적을 때는 몇 개입니까?",
+    "choices": [
+      "9"
+    ],
+    "explanation": "가운데 세로줄의 3층은 뒷줄(최고 2층)에는 놓을 수 없으므로 앞줄 가운데가 3층입니다(앞줄 3층도 해결). 왼쪽 세로줄의 2층과 뒷줄의 2층은 뒷줄 왼쪽 칸 하나를 2층으로 하면 함께 해결됩니다. 나머지 4칸은 1개씩 놓으면 3 + 2 + 1 × 4 = 9개입니다.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 330 190\" width=\"330\" font-family=\"sans-serif\" font-size=\"16\"><text x=\"10\" y=\"20\" font-size=\"14\">앞에서 본 모양</text><rect x=\"20\" y=\"110\" width=\"40\" height=\"40\" fill=\"#ddd\" stroke=\"#000\" stroke-width=\"3\"/><rect x=\"20\" y=\"70\" width=\"40\" height=\"40\" fill=\"#ddd\" stroke=\"#000\" stroke-width=\"3\"/><rect x=\"60\" y=\"110\" width=\"40\" height=\"40\" fill=\"#ddd\" stroke=\"#000\" stroke-width=\"3\"/><rect x=\"60\" y=\"70\" width=\"40\" height=\"40\" fill=\"#ddd\" stroke=\"#000\" stroke-width=\"3\"/><rect x=\"60\" y=\"30\" width=\"40\" height=\"40\" fill=\"#ddd\" stroke=\"#000\" stroke-width=\"3\"/><rect x=\"100\" y=\"110\" width=\"40\" height=\"40\" fill=\"#ddd\" stroke=\"#000\" stroke-width=\"3\"/><text x=\"200\" y=\"20\" font-size=\"14\">옆에서 본 모양</text><text x=\"210\" y=\"178\" font-size=\"13\">앞</text><text x=\"260\" y=\"178\" font-size=\"13\">뒤</text><rect x=\"200\" y=\"110\" width=\"40\" height=\"40\" fill=\"#ddd\" stroke=\"#000\" stroke-width=\"3\"/><rect x=\"200\" y=\"70\" width=\"40\" height=\"40\" fill=\"#ddd\" stroke=\"#000\" stroke-width=\"3\"/><rect x=\"200\" y=\"30\" width=\"40\" height=\"40\" fill=\"#ddd\" stroke=\"#000\" stroke-width=\"3\"/><rect x=\"240\" y=\"110\" width=\"40\" height=\"40\" fill=\"#ddd\" stroke=\"#000\" stroke-width=\"3\"/><rect x=\"240\" y=\"70\" width=\"40\" height=\"40\" fill=\"#ddd\" stroke=\"#000\" stroke-width=\"3\"/></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 6,
+    "stem": "그림과 같은 전개도를 접어 정육면체를 만들었습니다. 면 \"나\"와 마주 보는 면은 어느 것입니까?",
+    "choices": [
+      "다",
+      "라",
+      "마",
+      "바"
+    ],
+    "answer": 2,
+    "explanation": "\"다\"를 바닥으로 놓고 접어 보면 \"나\"는 뒤쪽 옆면, \"라\"는 오른쪽 옆면, \"가\"는 왼쪽 옆면, \"마\"는 앞쪽 옆면, \"바\"는 윗면이 됩니다. 따라서 \"나\"와 \"마\", \"가\"와 \"라\", \"다\"와 \"바\"가 마주 봅니다.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 260 200\" width=\"260\" font-family=\"sans-serif\" font-size=\"16\"><rect x=\"10\" y=\"10\" width=\"60\" height=\"60\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"3\"/><text x=\"40\" y=\"47\" text-anchor=\"middle\" font-size=\"20\">가</text><rect x=\"70\" y=\"10\" width=\"60\" height=\"60\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"3\"/><text x=\"100\" y=\"47\" text-anchor=\"middle\" font-size=\"20\">나</text><rect x=\"70\" y=\"70\" width=\"60\" height=\"60\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"3\"/><text x=\"100\" y=\"107\" text-anchor=\"middle\" font-size=\"20\">다</text><rect x=\"130\" y=\"70\" width=\"60\" height=\"60\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"3\"/><text x=\"160\" y=\"107\" text-anchor=\"middle\" font-size=\"20\">라</text><rect x=\"130\" y=\"130\" width=\"60\" height=\"60\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"3\"/><text x=\"160\" y=\"167\" text-anchor=\"middle\" font-size=\"20\">마</text><rect x=\"190\" y=\"130\" width=\"60\" height=\"60\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"3\"/><text x=\"220\" y=\"167\" text-anchor=\"middle\" font-size=\"20\">바</text></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 6,
+    "stem": "별 모양(☆)처럼 한 번에 그린 오각별의 뾰족한 꼭짓점 5개에 있는 각의 크기를 모두 더하면 몇 도입니까?",
+    "choices": [
+      "180°",
+      "270°",
+      "360°",
+      "540°"
+    ],
+    "answer": 0,
+    "explanation": "오각별 안쪽의 오각형을 생각하면, 각 꼭짓점 삼각형의 바깥각 관계를 이용해 다섯 꼭짓점 각의 합이 삼각형 한 개의 세 각의 합과 같아집니다. (정오각별이면 한 꼭짓점 각이 36°이므로 36° × 5 = 180°)"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 6,
+    "stem": "마주 보는 면의 눈의 수의 합이 7인 주사위 3개를 바닥 위에 한 줄로 높이 쌓았습니다. 맨 위 주사위의 윗면 눈이 5일 때, 바닥에 닿은 면과 주사위끼리 맞닿아 보이지 않는 면들의 눈의 수를 모두 더하면 얼마입니까?",
+    "choices": [
+      "14",
+      "16",
+      "19",
+      "21"
+    ],
+    "answer": 1,
+    "explanation": "보이지 않는 면은 맨 아래 주사위의 아랫면·윗면(합 7), 가운데 주사위의 아랫면·윗면(합 7), 맨 위 주사위의 아랫면입니다. 맨 위 주사위의 아랫면은 7 − 5 = 2입니다. 7 + 7 + 2 = 16입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 6,
+    "stem": "정오각형 ABCDE에서 대각선 AC와 AD를 그었습니다. 각 CAD의 크기는 몇 도입니까?",
+    "choices": [
+      "36°",
+      "54°",
+      "72°",
+      "108°"
+    ],
+    "answer": 0,
+    "explanation": "정오각형의 한 각은 540° ÷ 5 = 108°입니다. 삼각형 ABC는 AB = BC인 이등변삼각형이므로 각 BAC = (180° − 108°) ÷ 2 = 36°이고, 같은 방법으로 각 EAD = 36°입니다. 각 CAD = 108° − 36° − 36° = 36°입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 6,
+    "stem": "시계가 8시 20분을 가리킬 때, 짧은바늘과 긴바늘이 이루는 작은 쪽의 각은 몇 도입니까?",
+    "choices": [
+      "110°",
+      "120°",
+      "130°",
+      "140°"
+    ],
+    "answer": 2,
+    "explanation": "긴바늘은 4를 가리키므로 12에서 120°입니다. 짧은바늘은 8에서 20분 동안 10° 더 가서 240° + 10° = 250° 위치입니다. 250° − 120° = 130°입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 6,
+    "stem": "삼각형 ABC와 삼각형 DEF는 서로 합동이고, 꼭짓점 A와 D, B와 E, C와 F가 각각 대응합니다. 각 A가 40°, 각 E가 65°일 때 각 F의 크기는 몇 도입니까?",
+    "choices": [
+      "40°",
+      "65°",
+      "75°",
+      "85°"
+    ],
+    "answer": 2,
+    "explanation": "대응각의 크기는 같으므로 각 D = 각 A = 40°입니다. 삼각형 DEF에서 각 F = 180° − 40° − 65° = 75°입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 6,
+    "stem": "한 모서리가 3cm인 정육면체의 겉면 전체에 페인트를 칠한 다음, 한 모서리가 1cm인 정육면체 27개로 잘랐습니다. 두 면에만 페인트가 칠해진 작은 정육면체는 몇 개입니까?",
+    "choices": [
+      "6개",
+      "8개",
+      "12개",
+      "24개"
+    ],
+    "answer": 2,
+    "explanation": "두 면만 칠해진 것은 꼭짓점이 아닌 모서리의 가운데에 있는 조각입니다. 정육면체의 모서리는 12개이고 각 모서리마다 1개씩이므로 12개입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 6,
+    "stem": "다음 중 선대칭도형이면서 동시에 점대칭도형인 것은 어느 것입니까?",
+    "choices": [
+      "정삼각형",
+      "평행사변형(직사각형, 마름모가 아님)",
+      "마름모",
+      "정오각형"
+    ],
+    "answer": 2,
+    "explanation": "정삼각형과 정오각형은 선대칭도형이지만 점대칭도형이 아닙니다. 직사각형도 마름모도 아닌 평행사변형은 점대칭도형이지만 선대칭도형이 아닙니다. 마름모는 두 대각선이 대칭축이고 대각선의 교점이 대칭의 중심이므로 둘 다에 해당합니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 6,
+    "kind": "num",
+    "stem": "직육면체의 가로는 세로보다 2cm 길고, 높이는 세로와 같습니다. 이 직육면체의 모든 모서리 길이의 합이 56cm일 때, 가로는 몇 cm입니까?",
+    "choices": [
+      "6"
+    ],
+    "explanation": "직육면체에는 가로, 세로, 높이가 각각 4개씩 있으므로 (가로 + 세로 + 높이) × 4 = 56, 가로 + 세로 + 높이 = 14입니다. 세로를 □라 하면 (□ + 2) + □ + □ = 14, □ = 4입니다. 가로는 4 + 2 = 6cm입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 6,
+    "stem": "한 변이 10cm인 정사각형의 네 변의 가운데 점을 이어 정사각형을 그리고, 그 정사각형의 네 변의 가운데 점을 다시 이어 정사각형을 그렸습니다. 가장 안쪽 정사각형의 넓이는 몇 cm²입니까?",
+    "choices": [
+      "12.5cm²",
+      "20cm²",
+      "25cm²",
+      "50cm²"
+    ],
+    "answer": 2,
+    "explanation": "가운데 점을 이어 만든 정사각형의 넓이는 바깥 정사각형 넓이의 절반입니다(바깥 정사각형을 반으로 접어 생각). 100 → 50 → 25이므로 25cm²입니다.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 240\" width=\"240\" font-family=\"sans-serif\" font-size=\"16\"><rect x=\"20\" y=\"20\" width=\"200\" height=\"200\" fill=\"none\" stroke=\"#000\" stroke-width=\"3\"/><polygon points=\"120,20 220,120 120,220 20,120\" fill=\"none\" stroke=\"#000\" stroke-width=\"3\"/><rect x=\"70\" y=\"70\" width=\"100\" height=\"100\" fill=\"#ddd\" stroke=\"#000\" stroke-width=\"3\"/><text x=\"120\" y=\"14\" text-anchor=\"middle\" font-size=\"13\">10cm</text></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 6,
+    "kind": "num",
+    "stem": "그림은 가로 4칸, 세로 2칸으로 나누어진 직사각형입니다. 그림에서 찾을 수 있는 크고 작은 사각형(정사각형과 직사각형 모두)은 모두 몇 개입니까?",
+    "choices": [
+      "30"
+    ],
+    "explanation": "세로선 5개 중 2개(10가지)와 가로선 3개 중 2개(3가지)를 고르면 사각형 하나가 정해집니다. 10 × 3 = 30개입니다.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 140\" width=\"340\" font-family=\"sans-serif\" font-size=\"16\"><line x1=\"10\" y1=\"10\" x2=\"10\" y2=\"130\" stroke=\"#000\" stroke-width=\"3\"/><line x1=\"90\" y1=\"10\" x2=\"90\" y2=\"130\" stroke=\"#000\" stroke-width=\"3\"/><line x1=\"170\" y1=\"10\" x2=\"170\" y2=\"130\" stroke=\"#000\" stroke-width=\"3\"/><line x1=\"250\" y1=\"10\" x2=\"250\" y2=\"130\" stroke=\"#000\" stroke-width=\"3\"/><line x1=\"330\" y1=\"10\" x2=\"330\" y2=\"130\" stroke=\"#000\" stroke-width=\"3\"/><line x1=\"10\" y1=\"10\" x2=\"330\" y2=\"10\" stroke=\"#000\" stroke-width=\"3\"/><line x1=\"10\" y1=\"70\" x2=\"330\" y2=\"70\" stroke=\"#000\" stroke-width=\"3\"/><line x1=\"10\" y1=\"130\" x2=\"330\" y2=\"130\" stroke=\"#000\" stroke-width=\"3\"/></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 6,
+    "stem": "어떤 도형을 시계 방향으로 90°만큼 7번 돌린 모양은, 처음 도형을 시계 반대 방향으로 몇 도만큼 한 번 돌린 모양과 같습니까?",
+    "choices": [
+      "90°",
+      "180°",
+      "270°",
+      "360°"
+    ],
+    "answer": 0,
+    "explanation": "시계 방향으로 90° × 7 = 630°이고, 630° − 360° = 270°이므로 시계 방향 270°와 같습니다. 시계 방향 270°는 시계 반대 방향 90°와 같습니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 6,
+    "kind": "num",
+    "stem": "5부터 시작하여 7씩 커지는 수를 차례로 늘어놓습니다. (5, 12, 19, 26, …) 이 중에서 200 이하인 수는 모두 몇 개입니까?",
+    "choices": [
+      "28"
+    ],
+    "explanation": "n번째 수는 5 + 7 × (n − 1)입니다. 5 + 7 × (n − 1) ≤ 200에서 7 × (n − 1) ≤ 195, n − 1 ≤ 27.8…이므로 n − 1은 최대 27, n은 최대 28입니다. (28번째 수 194, 29번째 수 201)"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 6,
+    "stem": "다음 수의 배열에서 15번째 수는 얼마입니까?\n2, 5, 10, 17, 26, …",
+    "choices": [
+      "197",
+      "225",
+      "226",
+      "257"
+    ],
+    "answer": 2,
+    "explanation": "각 수는 (순서 × 순서) + 1입니다(1×1+1, 2×2+1, 3×3+1, …). 15번째 수는 15 × 15 + 1 = 226입니다. (이웃한 수의 차가 3, 5, 7, 9, …로 2씩 커지는 것으로도 확인할 수 있습니다.)"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 6,
+    "stem": "성냥개비로 정육각형을 옆으로 한 줄로 이어 붙여 만듭니다(이웃한 정육각형은 한 변을 함께 씁니다). 정육각형 20개를 만들려면 성냥개비가 몇 개 필요합니까?",
+    "choices": [
+      "100개",
+      "101개",
+      "105개",
+      "120개"
+    ],
+    "answer": 1,
+    "explanation": "첫 정육각형에 6개, 하나 더 붙일 때마다 5개씩 더 필요합니다. 6 + 5 × 19 = 101개입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 6,
+    "stem": "바둑돌을 정사각형 모양으로 1개, 4개, 9개, 16개, …와 같이 늘어놓습니다. 바둑돌 수가 처음으로 200개를 넘는 것은 몇 번째 모양입니까?",
+    "choices": [
+      "13번째",
+      "14번째",
+      "15번째",
+      "16번째"
+    ],
+    "answer": 2,
+    "explanation": "n번째 모양의 바둑돌 수는 n × n입니다. 14 × 14 = 196(200 이하), 15 × 15 = 225이므로 15번째입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 6,
+    "stem": "다음과 같은 규칙으로 분수를 늘어놓았습니다(약분하지 않습니다). 50번째 분수는 무엇입니까?\n1/1, 1/2, 2/2, 1/3, 2/3, 3/3, 1/4, 2/4, 3/4, 4/4, …",
+    "choices": [
+      "4/10",
+      "5/9",
+      "5/10",
+      "6/10"
+    ],
+    "answer": 2,
+    "explanation": "분모가 n인 분수가 n개씩 있습니다. 분모 1~9까지의 분수는 1 + 2 + … + 9 = 45개이므로 50번째는 분모가 10인 분수 중 5번째인 5/10입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 6,
+    "stem": "가윤, 나래, 다솜, 라희는 수영, 축구, 농구, 탁구 중 서로 다른 운동을 한 가지씩 합니다.\n① 가윤이는 공을 사용하는 운동을 하지 않습니다.\n② 나래는 축구도 탁구도 하지 않습니다.\n③ 다솜이는 축구를 하지 않습니다.\n라희가 하는 운동은 무엇입니까?",
+    "choices": [
+      "수영",
+      "축구",
+      "농구",
+      "탁구"
+    ],
+    "answer": 1,
+    "explanation": "공을 쓰지 않는 운동은 수영뿐이므로 가윤이는 수영입니다. 나래는 축구, 탁구가 아니고 수영도 아니므로 농구입니다. 다솜이는 축구가 아니므로 탁구이고, 라희는 남은 축구입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 6,
+    "stem": "A, B, C, D 네 사람 중 한 사람이 창문을 깼습니다. 네 사람 중 정확히 한 사람만 거짓말을 했습니다.\nA: \"C가 깼어.\"\nB: \"나는 안 깼어.\"\nC: \"D가 깼어.\"\nD: \"C는 거짓말을 하고 있어.\"\n창문을 깬 사람은 누구입니까?",
+    "choices": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": 2,
+    "explanation": "C와 D의 말은 정반대이므로 둘 중 정확히 한 명이 거짓말쟁이이고, A와 B는 참말을 합니다. A의 말이 참이므로 C가 깼습니다. 이때 C의 말은 거짓, D의 말은 참이 되어 거짓말한 사람이 C 한 명뿐이므로 조건에 맞습니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 6,
+    "kind": "num",
+    "stem": "숫자 카드 0, 1, 2, 3, 4 중에서 3장을 골라 세 자리 수를 만들 때, 만들 수 있는 짝수는 모두 몇 개입니까? (같은 카드를 두 번 쓸 수 없습니다.)",
+    "choices": [
+      "30"
+    ],
+    "explanation": "일의 자리가 0이면 백의 자리 4가지, 십의 자리 3가지로 12개. 일의 자리가 2이면 백의 자리는 0과 2를 뺀 3가지, 십의 자리는 남은 3가지로 9개. 일의 자리가 4일 때도 9개. 12 + 9 + 9 = 30개입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 6,
+    "stem": "가로 4칸, 세로 3칸으로 된 바둑판 모양의 길이 있습니다. 왼쪽 아래 모퉁이에서 오른쪽 위 모퉁이까지 길을 따라 가장 짧은 거리로 가는 방법은 모두 몇 가지입니까?",
+    "choices": [
+      "12가지",
+      "21가지",
+      "35가지",
+      "70가지"
+    ],
+    "answer": 2,
+    "explanation": "오른쪽으로 4번, 위쪽으로 3번, 모두 7번 움직입니다. 7번 중 위쪽으로 갈 3번을 고르는 방법은 (7 × 6 × 5) ÷ (3 × 2 × 1) = 35가지입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 6,
+    "stem": "한 줄로 붙어 있는 4개의 칸을 빨강, 파랑, 노랑 3가지 색으로 칠하려고 합니다. 이웃한 칸은 서로 다른 색으로 칠해야 하고, 같은 색을 여러 번 써도 됩니다. 칠하는 방법은 모두 몇 가지입니까?",
+    "choices": [
+      "12가지",
+      "24가지",
+      "36가지",
+      "81가지"
+    ],
+    "answer": 1,
+    "explanation": "첫째 칸은 3가지, 둘째·셋째·넷째 칸은 바로 앞 칸과 다른 2가지씩이므로 3 × 2 × 2 × 2 = 24가지입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 6,
+    "stem": "1부터 20까지의 자연수 중에서 몇 개를 고를 때, 합이 21인 두 수가 반드시 포함되도록 하려면 적어도 몇 개를 골라야 합니까?",
+    "choices": [
+      "10개",
+      "11개",
+      "12개",
+      "20개"
+    ],
+    "answer": 1,
+    "explanation": "합이 21인 짝은 (1,20), (2,19), …, (10,11)의 10쌍입니다. 각 쌍에서 하나씩 10개를 고르면 합이 21인 두 수가 없을 수 있지만, 11개를 고르면 반드시 어떤 쌍에서 두 수를 모두 고르게 됩니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 6,
+    "kind": "num",
+    "stem": "어떤 모임에 있는 사람 중 같은 요일에 태어난 사람이 반드시 4명 이상 있으려면 사람은 적어도 몇 명이어야 합니까?",
+    "choices": [
+      "22"
+    ],
+    "explanation": "7개 요일에 3명씩 고르게 나누면 21명까지는 4명 이상인 요일이 없을 수 있습니다. 22명이면 반드시 어떤 요일에 4명 이상이 있습니다. 7 × 3 + 1 = 22명입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 6,
+    "stem": "8명이 모두 서로 한 번씩 악수를 했습니다. 악수는 모두 몇 번 했습니까?",
+    "choices": [
+      "28번",
+      "36번",
+      "56번",
+      "64번"
+    ],
+    "answer": 0,
+    "explanation": "한 사람은 다른 7명과 악수하므로 8 × 7 = 56인데, 한 번의 악수를 두 사람이 각각 셌으므로 56 ÷ 2 = 28번입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 6,
+    "stem": "홀수를 다음과 같이 늘어놓았습니다. 10째 줄의 맨 처음 수는 얼마입니까?\n1째 줄: 1\n2째 줄: 3, 5\n3째 줄: 7, 9, 11\n4째 줄: 13, 15, 17, 19\n…",
+    "choices": [
+      "89",
+      "91",
+      "93",
+      "101"
+    ],
+    "answer": 1,
+    "explanation": "n째 줄에는 홀수가 n개 있습니다. 9째 줄까지 1 + 2 + … + 9 = 45개이므로 10째 줄의 첫 수는 46번째 홀수, 2 × 46 − 1 = 91입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 6,
+    "kind": "num",
+    "stem": "5명의 평균 키가 140cm입니다. 한 명이 더 들어와서 6명의 평균 키가 142cm가 되었습니다. 새로 들어온 사람의 키는 몇 cm입니까?",
+    "choices": [
+      "152"
+    ],
+    "explanation": "5명의 키의 합은 140 × 5 = 700cm, 6명의 키의 합은 142 × 6 = 852cm입니다. 852 − 700 = 152cm입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 6,
+    "stem": "어떤 수 4개의 평균을 구하는데, 그중 18을 81로 잘못 보고 계산하여 평균이 42.75가 나왔습니다. 바르게 계산한 평균은 얼마입니까?",
+    "choices": [
+      "26.75",
+      "27",
+      "29",
+      "30"
+    ],
+    "answer": 1,
+    "explanation": "잘못 계산한 합은 42.75 × 4 = 171입니다. 81 − 18 = 63만큼 더 크게 계산했으므로 바른 합은 171 − 63 = 108, 바른 평균은 108 ÷ 4 = 27입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 6,
+    "stem": "어떤 일을 A가 혼자 하면 12일, B가 혼자 하면 6일이 걸립니다. 두 사람이 함께 하면 이 일을 며칠 만에 끝낼 수 있습니까? (두 사람이 하루에 하는 일의 양은 각각 일정합니다.)",
+    "choices": [
+      "3일",
+      "4일",
+      "6일",
+      "9일"
+    ],
+    "answer": 1,
+    "explanation": "하루에 A는 전체의 1/12, B는 1/6 = 2/12를 합니다. 함께 하면 하루에 3/12 = 1/4을 하므로 4일이 걸립니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 6,
+    "stem": "빈 물통을 A관으로 물을 넣으면 10분 만에 가득 차고, 가득 찬 물통의 물을 B관으로 빼면 15분 만에 모두 빠집니다. 빈 물통에 A관과 B관을 동시에 열어 두면 물통이 가득 차는 데 몇 분이 걸립니까?",
+    "choices": [
+      "5분",
+      "6분",
+      "25분",
+      "30분"
+    ],
+    "answer": 3,
+    "explanation": "1분에 A관은 물통의 1/10 = 3/30을 채우고 B관은 1/15 = 2/30을 뺍니다. 1분에 1/30씩 차므로 30분이 걸립니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 6,
+    "stem": "1.8km 떨어진 두 곳에서 지민이와 서준이가 서로를 향해 동시에 출발했습니다. 지민이는 1분에 70m, 서준이는 1분에 50m를 걷습니다. 두 사람은 출발한 지 몇 분 후에 만납니까?",
+    "choices": [
+      "12분",
+      "15분",
+      "18분",
+      "36분"
+    ],
+    "answer": 1,
+    "explanation": "1분에 두 사람 사이의 거리가 70 + 50 = 120m씩 줄어듭니다. 1.8km = 1800m이므로 1800 ÷ 120 = 15분 후에 만납니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 6,
+    "stem": "길이가 200m인 기차가 1초에 25m를 가는 빠르기로 길이 800m인 터널을 지나갑니다. 기차의 맨 앞이 터널에 들어가기 시작해서 기차 전체가 터널을 완전히 빠져나올 때까지 몇 초가 걸립니까?",
+    "choices": [
+      "24초",
+      "32초",
+      "36초",
+      "40초"
+    ],
+    "answer": 3,
+    "explanation": "기차의 맨 앞이 이동해야 하는 거리는 터널 길이 + 기차 길이 = 800 + 200 = 1000m입니다. 1000 ÷ 25 = 40초입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 6,
+    "stem": "준호는 가진 돈의 3/5으로 책을 사고, 남은 돈의 1/2로 간식을 샀더니 1200원이 남았습니다. 준호가 처음에 가진 돈은 얼마입니까?",
+    "choices": [
+      "4000원",
+      "5000원",
+      "6000원",
+      "7200원"
+    ],
+    "answer": 2,
+    "explanation": "간식을 사기 전의 돈은 1200 × 2 = 2400원입니다. 이것은 처음 돈의 1 − 3/5 = 2/5이므로 처음 돈은 2400 ÷ 2 × 5 = 6000원입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 6,
+    "kind": "num",
+    "stem": "어느 반에서 남학생 수는 반 전체 학생 수의 4/7이고, 여학생은 12명입니다. 이 반의 전체 학생은 몇 명입니까?",
+    "choices": [
+      "28"
+    ],
+    "explanation": "여학생은 전체의 1 − 4/7 = 3/7입니다. 전체의 3/7이 12명이므로 1/7은 4명, 전체는 4 × 7 = 28명입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 6,
+    "stem": "네 변의 길이가 모두 자연수(cm)이고 둘레가 36cm인 직사각형(정사각형 포함)을 만들려고 합니다. 넓이가 가장 넓을 때와 가장 좁을 때의 넓이의 차는 몇 cm²입니까?",
+    "choices": [
+      "63cm²",
+      "64cm²",
+      "72cm²",
+      "80cm²"
+    ],
+    "answer": 1,
+    "explanation": "가로 + 세로 = 18cm입니다. 넓이는 9 × 9 = 81cm²일 때 가장 넓고, 1 × 17 = 17cm²일 때 가장 좁습니다. 81 − 17 = 64cm²입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 6,
+    "stem": "2월이 28일까지 있는 어느 해의 1월 1일이 목요일이었습니다. 같은 해 5월 5일은 무슨 요일입니까?",
+    "choices": [
+      "월요일",
+      "화요일",
+      "수요일",
+      "목요일"
+    ],
+    "answer": 1,
+    "explanation": "1월 31일 + 2월 28일 + 3월 31일 + 4월 30일 = 120일이므로 5월 5일은 1월 1일의 120 + 4 = 124일 후입니다. 124 ÷ 7 = 17 … 5이므로 목요일에서 5일 뒤인 화요일입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 6,
+    "stem": "하루에 4분씩 일정하게 느려지는 시계가 있습니다. 월요일 오전 9시에 이 시계를 정확하게 맞추었습니다. 같은 주 목요일 오전 9시에 이 시계가 가리키는 시각은 언제입니까?",
+    "choices": [
+      "오전 8시 36분",
+      "오전 8시 48분",
+      "오전 8시 52분",
+      "오전 9시 12분"
+    ],
+    "answer": 1,
+    "explanation": "월요일 오전 9시부터 목요일 오전 9시까지는 3일입니다. 4 × 3 = 12분 느려지므로 9시 − 12분 = 오전 8시 48분을 가리킵니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 6,
+    "stem": "1부터 9까지의 수를 한 번씩 써서 3×3 칸에 넣었더니 가로, 세로, 두 대각선 위의 세 수의 합이 모두 15로 같아졌습니다. 가운데 칸의 수가 5이고 왼쪽 위 모서리 칸의 수가 2일 때, 오른쪽 아래 모서리 칸의 수는 무엇입니까?",
+    "choices": [
+      "4",
+      "6",
+      "8",
+      "9"
+    ],
+    "answer": 2,
+    "explanation": "왼쪽 위, 가운데, 오른쪽 아래는 한 대각선 위에 있으므로 2 + 5 + □ = 15, □ = 8입니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 6,
+    "stem": "모양이 똑같은 동전 9개 중 1개만 가짜이고, 가짜 동전은 진짜보다 가볍습니다. 양팔 저울을 사용하여 가짜 동전을 반드시 찾아내려면 저울을 적어도 몇 번 사용해야 합니까?",
+    "choices": [
+      "1번",
+      "2번",
+      "3번",
+      "4번"
+    ],
+    "answer": 1,
+    "explanation": "9개를 3개씩 세 묶음으로 나누어 두 묶음을 달면 가벼운 묶음(또는 기울지 않으면 남은 묶음)을 찾습니다. 그 3개 중 2개를 달면 가짜를 찾습니다. 2번이면 됩니다. 1번으로는 결과가 3가지뿐이라 9개 중 하나를 항상 가려낼 수 없습니다."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 6,
+    "stem": "학생들에게 공책을 4권씩 나누어 주면 7권이 남고, 6권씩 나누어 주면 9권이 모자랍니다. 공책은 모두 몇 권입니까?",
+    "choices": [
+      "37권",
+      "39권",
+      "41권",
+      "48권"
+    ],
+    "answer": 1,
+    "explanation": "한 사람당 2권씩 더 주려면 남는 7권과 모자라는 9권을 합한 16권이 더 필요하므로 학생은 16 ÷ 2 = 8명입니다. 공책은 4 × 8 + 7 = 39권입니다. (확인: 6 × 8 − 9 = 39)"
+  }
+]
