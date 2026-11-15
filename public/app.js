@@ -61,9 +61,9 @@ Object.assign(EXAM_META, {
   SCAT: { name: 'SCAT', ico: 'S', accent: 'var(--scat)', soft: 'var(--scat-soft)', sub: '영재 선발 · Verbal / Quantitative',
     points: ['유추(Analogy)와 수량 비교(Quantitative Comparison) 문항', '그래프·도형 문제는 SVG 그림으로 제공', '영역별 척도 점수 추정과 종합 점수'] },
   SSAT: { name: 'SSAT', ico: 'S', accent: 'var(--ssat)', soft: 'var(--ssat-soft)', sub: '사립학교 입시 · Writing / Quant / Reading / Verbal',
-    points: ['동의어·유추 어휘, 독해, 수학(그래프·도형 포함)', '라이팅 샘플은 교사 채점(1–6점)', '영역별 척도 점수(440–710) 추정'] },
+    points: ['동의어·유추 어휘, 독해, 수학(그래프·도형 포함)', '라이팅 샘플은 교사 채점(1–6점)', 'Middle·Upper는 오답 −¼ 공식 채점, 레벨별 척도 점수'] },
   ISEE: { name: 'ISEE', ico: 'I', accent: 'var(--isee)', soft: 'var(--isee-soft)', sub: '사립학교 입시 · Verbal / Quant / Reading / Math / Essay',
-    points: ['Sentence Completion · Synonym 어휘 문항', 'Quantitative Reasoning · Mathematics Achievement', '영역별 척도 점수(760–940)와 스태나인 추정'] },
+    points: ['Sentence Completion · Synonym 어휘 문항', 'Quantitative Reasoning · Mathematics Achievement', '영역별 척도 점수(760–940)·백분위·스태나인'] },
 });
 Object.assign(EXAM_META, {
   COGAT: { name: 'CogAT', ico: 'C', accent: 'var(--cogat)', sub: '인지능력 · Verbal / Quantitative / Nonverbal',
@@ -91,7 +91,7 @@ async function pageHome() {
         h('h1', {}, 'Practice like', h('br'), 'it\'s ', h('span', { class: 'hl' }, 'test day'), '.', h('em', {}, 'MAP / CAT4 / CogAT / SCAT / SSAT / ISEE / SAT / TOEFL Junior / WIDA')),
         h('p', { class: 'lead' }, '실제 시험과 같은 형식, 같은 시간 압박. 결제하면 곧바로 응시할 수 있고, 끝나는 즉시 영역별 점수와 문항별 해설이 나옵니다.'),
         h('div', { class: 'row' }, h('button', { class: 'btn lg', onclick: toExams }, 'Browse tests →'), me ? h('a', { class: 'btn lg alt', href: '#/me' }, '내 시험') : h('a', { class: 'btn lg alt', href: '#/register' }, '회원가입')),
-        h('div', { class: 'chips' }, [['1,500+', 'original questions'], ['9', 'test types'], ['0s', 'wait for your score']].map(([b, t]) => h('div', {}, h('b', {}, b), t)))),
+        h('div', { class: 'chips' }, [['1,950+', 'original questions'], ['9', 'test types'], ['0s', 'wait for your score']].map(([b, t]) => h('div', {}, h('b', {}, b), t)))),
       h('div', { class: 'mock', 'aria-hidden': 'true' },
         h('div', { class: 'mrow' }, h('b', { style: 'font-weight:500' }, 'Verbal / 03'), h('span', {}, '08:42')),
         h('div', { class: 'mq' }, 'Author is to book as composer is to ___'),
@@ -103,10 +103,11 @@ async function pageHome() {
     h('div', { class: 'index' }, Object.entries(EXAM_META).map(([type, m], i) => h('div', { class: 'exam-card', style: `--accent:${m.accent}` },
       h('div', { class: 'idx' }, h('span', {}, h('b', {}), `0${i + 1}`), h('span', {}, type)),
       h('h3', {}, m.name), h('div', { class: 'sub' }, m.sub),
-      h('div', { class: 'row small', style: 'margin:-6px 0 16px;gap:14px' }, h('a', { href: `#/info/${type}` }, '시험 안내'), h('a', { href: `#/sample/${type}` }, '무료 샘플 5문항'), h('span', { class: 'muted' }, { MAP: 'K–G12 학년별', CAT4: '레벨 A–G', COGAT: 'Level 7–17/18', SCAT: '3개 레벨', SSAT: 'Elem · Middle · Upper', ISEE: 'Lower · Middle · Upper', SAT: 'PSAT 8/9 · PSAT 10 · SAT', TOEFLJ: 'Primary 1·2 · Junior', WIDA: '1–12학년' }[type] || '')),
+      h('div', { class: 'row small', style: 'margin:-6px 0 16px;gap:14px' }, h('a', { href: `#/info/${type}` }, '시험 안내'), h('a', { href: `#/sample/${type}` }, '무료 샘플 5문항')),
+      h('div', { class: 'tags' }, ({ MAP: ['K–G12', '학년별 13단계'], CAT4: ['Level A', 'B/C', 'D', 'E–G'], COGAT: ['L7–8', 'L9–11', 'L12–14', 'L15–18'], SCAT: ['Elementary', 'Intermediate', 'Advanced'], SSAT: ['Elementary', 'Middle', 'Upper'], ISEE: ['Lower', 'Middle', 'Upper'], SAT: ['PSAT 8/9', 'PSAT 10', 'SAT'], TOEFLJ: ['Primary 1', 'Primary 2', 'Junior'], WIDA: ['G1', 'G2–3', 'G4–5', 'G6–8', 'G9–12'] }[type] || []).map((x) => h('span', {}, x))),
       h('ul', {}, m.points.map((x) => h('li', {}, x))),
       h('div', { class: 'push' }, products.filter((p) => p.exam_type === type).map((p) => h('div', { class: 'plan' },
-        h('div', {}, h('div', { class: 'pt' }, p.id === 'p-test' ? '관리자 결제 테스트' : `${p.attempts}회권`), h('div', { class: 'pd' }, `${p.valid_days}D · ${money(p.price_usd_cents, 'USD')}`)),
+        h('div', {}, h('div', { class: 'pt' }, p.id === 'p-test' ? '관리자 결제 테스트' : `${p.attempts}회권`, (() => { const one = products.find((x) => x.exam_type === type && x.attempts === 1); const off = one && p.attempts > 1 ? Math.round((1 - p.price_krw / (one.price_krw * p.attempts)) * 100) : 0; return off > 0 ? h('em', { class: 'save' }, `−${off}%`) : null; })()), h('div', { class: 'pd' }, `${p.valid_days}D · ${money(p.price_usd_cents, 'USD')}`)),
         h('div', { class: 'row', style: 'flex-wrap:nowrap;gap:14px' }, h('div', { class: 'price' }, money(p.price_krw, 'KRW')), h('button', { class: 'btn sm', onclick: () => buy(p, payment) }, '구매'))))),
     ))),
     head('02', 'Process', 'How it works', '가입부터 리포트까지, 군더더기 없이.'),
@@ -138,7 +139,9 @@ function buy(p, payment) {
       shown.map(([k, l]) => h('button', { class: 'btn', onclick: guard(once(() => (k === 'kcp' ? payKcp(p, method) : payPortone(p, close, method)))) }, `${me.role === 'admin' ? l + ' · ' : ''}${money(p.price_krw, 'KRW')}`)),
       payment.stripe ? h('button', { class: 'btn alt', onclick: guard(once(() => payStripe(p))) }, `International card · ${money(p.price_usd_cents, 'USD')}`) : null,
     ),
-    !shown.length && !payment.stripe ? h('p', { class: 'err' }, '결제 수단이 아직 설정되지 않았습니다.') : null,
+    !shown.length && !payment.stripe ? (me.role === 'admin'
+      ? h('div', { class: 'notice' }, h('b', {}, '결제 수단이 아직 연결되지 않았습니다.'), h('p', { class: 'small' }, 'PG사(포트원·KCP·Stripe)에서 받은 키를 Cloudflare 대시보드 → Workers → mocktest → Settings → Variables and Secrets에 넣으면 이 창에 결제 버튼이 나타납니다.'), h('a', { class: 'btn sm', href: '#/admin/payments', onclick: close }, '결제설정 보기 →'))
+      : h('p', { class: 'err' }, '지금은 결제를 받을 수 없습니다. 잠시 후 다시 시도하거나 고객센터로 문의해 주세요.')) : null,
     h('p', { style: 'margin-top:16px' }, h('button', { class: 'btn alt sm', onclick: close }, '닫기')),
   ));
   document.body.append(modal);

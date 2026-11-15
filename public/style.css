@@ -277,3 +277,26 @@ nav.open .menu-toggle span:nth-child(1){transform:translateY(8px) rotate(45deg)}
   .section-title{margin-top:52px}
   .steps{grid-template-columns:1fr}
 }
+
+/* ===================== refinement pass ===================== */
+html{overflow-x:clip}
+/* one cohesive palette for the index: navy markers, red on hover */
+.exam-card .idx b{background:var(--ink)}
+.exam-card li::before{color:var(--brand)}
+.exam-card::before{content:"";position:absolute;left:-1px;right:0;top:-1px;height:3px;background:var(--brand);transform:scaleX(0);transform-origin:left;transition:transform .25s cubic-bezier(.2,.7,.2,1)}
+.exam-card:hover::before{transform:scaleX(1)}
+.exam-card h3{transition:color .15s}.exam-card:hover h3{color:var(--brand)}
+.exam-card .tags{display:flex;flex-wrap:wrap;gap:5px;margin:0 0 18px}
+.exam-card .tags span{font:500 .68rem/1 var(--mono);letter-spacing:.04em;padding:5px 7px;border:1px solid var(--rule);color:var(--ink-2);background:var(--bg)}
+.plan .pt .save{font:600 .66rem/1 var(--mono);font-style:normal;color:var(--brand-ink);background:var(--brand);padding:3px 5px;margin-left:7px;vertical-align:2px;letter-spacing:.02em}
+/* full-bleed marquee, aligned footer rule */
+.marquee{margin-left:calc(50% - 50vw)!important;margin-right:calc(50% - 50vw)!important}
+.foot{border-top:0;background:linear-gradient(var(--ink),var(--ink)) top center/calc(100% - 2*clamp(16px,4vw,32px)) 1px no-repeat}
+/* checkout notice */
+.notice{border:1px solid var(--ink);border-left:4px solid var(--brand);padding:14px 16px;margin-top:18px;background:var(--bg)}
+.notice b{display:block;margin-bottom:4px}.notice p{margin:0 0 12px;color:var(--ink-2)}
+/* calmer stats + cta */
+.chips b{letter-spacing:-.05em}
+.cta-band{position:relative;overflow:hidden}
+.cta-band::after{content:"★ ★ ★";position:absolute;right:28px;top:18px;font-size:.8rem;letter-spacing:.4em;color:var(--pop);opacity:.7}
+.step{transition:background .15s}.step:hover{background:var(--bg)}
