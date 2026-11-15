@@ -609,8 +609,9 @@ function localShuffle(arr, h) { let st = parseInt(h.slice(0, 8), 16) || 1; const
 /** Merge the hand-written banks that were authored by writers in scripts/bank/*.json */
 function mergeBanks() {
   const dir = new URL('./bank/', import.meta.url);
-  const pending = new Set((process.env.BANK_PENDING || '').split(',').filter(Boolean)); // banks still awaiting blind verification
-  let files = []; try { files = readdirSync(dir).filter((f) => f.endsWith('.json') && !f.endsWith('.drop.json') && !pending.has(f)).sort(); } catch {}
+  let listed = []; try { listed = JSON.parse(readFileSync(new URL('_pending.json', dir), 'utf8')); } catch {}
+  const pending = new Set([...listed, ...(process.env.BANK_PENDING || '').split(',').filter(Boolean)]); // banks still awaiting blind verification (scripts/bank/_pending.json)
+  let files = []; try { files = readdirSync(dir).filter((f) => f.endsWith('.json') && !f.endsWith('.drop.json') && !f.startsWith('_') && !pending.has(f)).sort(); } catch {}
   let total = 0, shortSat = 0;
   for (const f of files) {
     let drop = new Set(); try { drop = new Set(JSON.parse(readFileSync(new URL(f.replace(/\.json$/, '.drop.json'), dir), 'utf8'))); } catch {} // items a blind verifier found wrong/ambiguous

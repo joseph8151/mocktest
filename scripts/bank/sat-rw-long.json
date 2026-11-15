@@ -1,0 +1,1082 @@
+[
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 1,
+    "passage": "When a honeybee discovers a rich patch of flowers, it returns to the hive and performs a special movement called a \"waggle dance.\" The direction and length of the dance ______ information about the location of the flowers, so other bees can fly directly to the food. Scientists who have learned to interpret these dances can predict where the bees will travel next.",
+    "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+    "choices": [
+      "hide",
+      "convey",
+      "ignore",
+      "delay"
+    ],
+    "answer": 1,
+    "explanation": "The dance lets other bees find the food, so it must communicate, or convey, information about the location."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 1,
+    "passage": "For many years, the empty lot on Pine Street collected nothing but garbage and broken glass. Then a group of neighbors decided to ______ it into a community garden. Together they cleared the ground, built wooden planting beds, and planted tomatoes, beans, and sunflowers. Today the lot provides fresh vegetables for dozens of families every summer.",
+    "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+    "choices": [
+      "forbid",
+      "measure",
+      "transform",
+      "borrow"
+    ],
+    "answer": 2,
+    "explanation": "The neighbors changed a trash-filled lot into a garden, so \"transform\" is the precise word."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 1,
+    "passage": "Sea otters often wrap themselves in long strands of kelp before they fall asleep at the surface. The kelp works like an anchor, preventing the otters from ______ away on ocean currents while they rest. Some otters even hold paws with one another for the same reason, forming floating groups called rafts.",
+    "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+    "choices": [
+      "diving",
+      "eating",
+      "growing",
+      "drifting"
+    ],
+    "answer": 3,
+    "explanation": "An anchor keeps something from floating away, so the kelp keeps otters from drifting."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 1,
+    "passage": "Many people think of deserts as empty, lifeless places. In fact, the Sonoran Desert of the southwestern United States and northern Mexico is home to about 2,000 kinds of plants. After spring rains, the ground can be covered in wildflowers, and animals such as bats, tortoises, and roadrunners find food and shelter among the cactuses.",
+    "stem": "Which choice best describes the main purpose of the text?",
+    "choices": [
+      "To challenge a common belief about deserts by describing the variety of life in one desert",
+      "To explain the process by which deserts form over time",
+      "To warn readers about the dangers of traveling in the Sonoran Desert",
+      "To argue that the Sonoran Desert receives more rain than other deserts"
+    ],
+    "answer": 0,
+    "explanation": "The text opens with the belief that deserts are lifeless and then lists the many plants and animals of the Sonoran Desert to show that belief is wrong."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 2,
+    "passage": "Architect Lena Osei is known for buildings that seem to ______ the laws of gravity. Her art museum in the harbor city of Port Aria includes a gallery that extends forty feet beyond its last support column, so it appears to float above the water. People walking past often stop on the sidewalk below just to stare up at it in surprise.",
+    "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+    "choices": [
+      "follow",
+      "defy",
+      "explain",
+      "measure"
+    ],
+    "answer": 1,
+    "explanation": "A gallery that seems to float without support appears to resist, or defy, gravity."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 2,
+    "passage": "Many early sound films were ______ by the technology of the time. Because the bulky microphones had to stay hidden and could not move, actors were often forced to stand close to potted plants or lamps while speaking, which made scenes feel stiff. Only after crews began hanging microphones from movable poles could performers walk around freely again.",
+    "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+    "choices": [
+      "celebrated",
+      "invented",
+      "constrained",
+      "shortened"
+    ],
+    "answer": 2,
+    "explanation": "The fixed microphones limited how actors could move, so the films were constrained by the technology."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 2,
+    "passage": "In the hot summer of 1858, the Thames River in London gave off an overwhelming stench. The river received much of the city's untreated sewage. Lawmakers in the Houses of Parliament, which stands beside the river, hung chemical-soaked curtains over their windows to block the smell. Within weeks, they approved money for a huge network of sewers. This system, designed by engineer Joseph Bazalgette, still carries much of London's waste today.",
+    "stem": "Which choice best describes the main purpose of the text?",
+    "choices": [
+      "To argue that Bazalgette's sewer system is now outdated",
+      "To compare London's sewer system with those of other large cities",
+      "To explain why Parliament chose to meet beside the Thames River",
+      "To describe how an unpleasant event led to a major public works project"
+    ],
+    "answer": 3,
+    "explanation": "The text tells how the 1858 stench pushed lawmakers to fund London's sewer network."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 2,
+    "passage": "During the 1800s, ships frequently crashed on rocky coastlines at night. Lighthouses helped, but in the darkness sailors could not always tell one lighthouse from another. To solve this problem, engineers gave each lighthouse its own distinctive pattern of light: one might flash twice every ten seconds, while another shone steadily. By observing the pattern, a captain could identify the lighthouse and calculate the ship's position.",
+    "stem": "Which choice best describes the overall structure of the text?",
+    "choices": [
+      "It describes the history of a single famous lighthouse from start to finish.",
+      "It identifies a problem that sailors faced and then explains how it was solved.",
+      "It compares two kinds of lighthouses and argues that one is better.",
+      "It presents a theory about shipwrecks and then gives evidence against it."
+    ],
+    "answer": 1,
+    "explanation": "The text first explains that sailors could not tell lighthouses apart and then describes the flash patterns that solved this problem."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 3,
+    "passage": "Economists studying small coffee farms in Colombia found that farmers who joined cooperatives earned steadier incomes than farmers who sold their beans on their own. The researchers caution, however, that this finding is ______: the farmers who chose to join may already have had larger plots or better connections, advantages that could explain much of the difference.",
+    "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+    "choices": [
+      "tentative",
+      "definitive",
+      "inconsequential",
+      "unprecedented"
+    ],
+    "answer": 0,
+    "explanation": "Because other factors might explain the result, the researchers treat the finding as uncertain, or tentative."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 3,
+    "passage": "Critics have long described novelist Mara Ellison's prose as ______. Her sentences rarely exceed a dozen words, she avoids adjectives whenever possible, and entire chapters pass without a single metaphor. Yet readers often report that this stripped-down style makes her characters' grief feel more intense, not less.",
+    "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+    "choices": [
+      "ornate",
+      "whimsical",
+      "austere",
+      "rambling"
+    ],
+    "answer": 2,
+    "explanation": "Short sentences with few adjectives and no metaphors describe a plain, severe style, which is \"austere.\""
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 3,
+    "passage": "Octopuses can change the color and texture of their skin in a fraction of a second. For decades, researchers assumed that this ability depended entirely on what the animals saw with their eyes. Yet octopus skin itself contains light-sensitive proteins called opsins, the same molecules that allow eyes to detect light. This discovery has led some biologists to propose that octopuses may partly sense light directly through their skin.",
+    "stem": "Which choice best describes the function of the third sentence (\"Yet octopus skin . . . detect light\") in the overall structure of the text?",
+    "choices": [
+      "It offers an example that supports the assumption described in the previous sentence.",
+      "It explains why researchers stopped studying octopus eyes.",
+      "It summarizes the main conclusion that researchers reached decades ago.",
+      "It presents a finding that complicates the assumption described in the previous sentence."
+    ],
+    "answer": 3,
+    "explanation": "Opsins in the skin suggest the skin itself may detect light, which challenges the assumption that color change depended only on the eyes."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 3,
+    "passage": "Text 1\nMany city planners argue that adding bike lanes reduces car traffic. When cycling feels safe, they say, more residents leave their cars at home, so each new lane takes some cars off the road.\n\nText 2\nA study of bike lanes in dozens of cities found that individual lanes, built here and there, did little to change how people traveled. Car trips dropped noticeably only in cities where lanes were linked into a connected network that let riders reach most destinations without sharing busy roads.",
+    "stem": "Based on the texts, how would the author of Text 2 most likely respond to the planners' claim in Text 1?",
+    "choices": [
+      "By arguing that bike lanes tend to increase car traffic",
+      "By suggesting that the claim holds only when lanes form a connected network",
+      "By agreeing that every new bike lane removes some cars from the road",
+      "By asserting that most residents prefer roads without bike lanes"
+    ],
+    "answer": 1,
+    "explanation": "Text 2 found that isolated lanes had little effect and that traffic fell only with connected networks, so it would limit the planners' claim to that case."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 4,
+    "passage": "The following text is from a poem in which the speaker reflects on a grandmother's kitchen and the cooking traditions she left behind.\nHer hands kept time the clock forgot:\nthe knead, the fold, the patient rise;\nshe measured nothing, yet she knew\nthe weight of flour by the skies.\nNow I keep her bowl, her spoon,\nher recipe in fading ink,\nyet every loaf comes out too soon;\nthe page holds less than hands could think.",
+    "stem": "Which choice best describes the overall structure of the text?",
+    "choices": [
+      "The speaker lists the steps of a recipe and then explains why each one matters.",
+      "The speaker criticizes a relative's methods and then defends the speaker's own.",
+      "The speaker describes a relative's instinctive skill and then contrasts it with the speaker's own failed efforts despite having her tools.",
+      "The speaker recalls a single family meal and then imagines meals that will happen in the future."
+    ],
+    "answer": 2,
+    "explanation": "The first half praises the grandmother's intuitive baking; the second half shows the speaker owning her bowl and recipe but still failing."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 4,
+    "passage": "Text 1\nSediment cores from lakes in the Maya lowlands show that the region suffered a series of severe droughts between about 800 and 1000 CE. Because many great southern Maya cities were abandoned during these same centuries, some researchers conclude that drought was the main cause of their decline.\n\nText 2\nThe droughts were real, but they cannot be the whole story. Several cities in the drier northern lowlands, such as Chichén Itzá, grew during the same period. Drought likely combined with warfare and political breakdown, which struck some regions far harder than others.",
+    "stem": "Based on the texts, how would the author of Text 2 most likely respond to the conclusion of the researchers in Text 1?",
+    "choices": [
+      "By arguing that drought may have contributed to the decline but cannot fully explain it, since some cities in drier areas thrived",
+      "By questioning whether the lake sediment cores show that any droughts occurred",
+      "By agreeing that drought alone explains why the southern cities were abandoned",
+      "By claiming that warfare in the region had no connection to environmental conditions"
+    ],
+    "answer": 0,
+    "explanation": "Text 2 accepts the droughts but notes that northern cities grew despite drier conditions, so drought cannot be the sole cause."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 4,
+    "passage": "When biologist Ana Ferreira announced that she had found a new species of tree frog, many experts doubted that the animal was truly distinct from known species. Her documentation, however, was painstaking. It included hundreds of photographs, genetic sequences from twelve specimens, and recordings of the frogs' unusual calls. In the end, this evidence ______ even her harshest critics' doubts.",
+    "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+    "choices": [
+      "compounded",
+      "articulated",
+      "dispelled",
+      "preceded"
+    ],
+    "answer": 2,
+    "explanation": "Thorough evidence would remove the critics' doubts, so \"dispelled\" is the logical choice."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 4,
+    "passage": "A widespread assumption holds that households save less when credit becomes easily available. Economist Priya Nand tested this assumption by tracking the finances of 3,000 households over six years. She found that households receiving new credit cards did increase their spending during the first several months. \"After about a year, however, their savings rates returned almost exactly to where they had been,\" Nand reports. Her results suggest that credit may primarily alter the timing of consumer spending rather than its total amount.",
+    "stem": "Which choice best describes the function of the quotation from Nand in the text as a whole?",
+    "choices": [
+      "It introduces the common belief that Nand set out to test.",
+      "It qualifies the finding in the previous sentence by indicating that the effect was temporary.",
+      "It shows that households saved more after receiving credit than they had before.",
+      "It describes the method Nand used to choose which households to study."
+    ],
+    "answer": 1,
+    "explanation": "The quotation shows that the higher spending faded after a year, limiting the earlier finding."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 4,
+    "passage": "The following text is adapted from a novel. Tomas has just returned to the village where he grew up.\nThe bakery was gone; in its place stood a shop selling telephones, its window bright with screens, and Tomas stood before it longer than he had intended. He could still smell, or believed he could, the caramelized sugar of the almond cakes his aunt had pressed into his hands every Sunday morning. A young clerk inside glanced up, smiled politely, and returned to her work, and Tomas understood that she had no reason to know there had ever been anything else on this corner.",
+    "stem": "Which choice best describes the function of the final sentence in the text as a whole?",
+    "choices": [
+      "It reveals that the clerk recognizes Tomas from his childhood.",
+      "It explains why the bakery was replaced by a telephone shop.",
+      "It suggests that Tomas intends to reopen his aunt's bakery.",
+      "It emphasizes that Tomas's memories of the place are not shared by the people there now."
+    ],
+    "answer": 3,
+    "explanation": "The clerk's polite indifference makes Tomas realize the bakery lives only in his own memory."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 5,
+    "passage": "Agnes Thorne, a nineteenth-century reformer, is often remembered as a fiery public speaker. In her private correspondence, however, she was remarkably ______. Her letters weigh opposing arguments at length and concede points to her adversaries. They rarely reach a conclusion without several careful qualifications.",
+    "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+    "choices": [
+      "strident",
+      "circumspect",
+      "laconic",
+      "credulous"
+    ],
+    "answer": 1,
+    "explanation": "Weighing arguments carefully and qualifying conclusions shows caution, which \"circumspect\" captures; \"laconic\" contradicts the lengthy letters."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 5,
+    "passage": "Text 1\nRussian has separate basic words for light blue (goluboy) and dark blue (siniy), while English uses one word, \"blue.\" In experiments, Russian speakers distinguished shades across that boundary faster than English speakers did. Some researchers take this as evidence that the language a person speaks shapes how that person perceives color.\n\nText 2\nThe speed advantage is real, but it vanished when Russian speakers were asked to silently repeat a string of numbers during the task, which kept them from using words. This suggests that language influences perception through the active use of words in the moment, not by permanently changing how speakers see.",
+    "stem": "Based on the texts, how would the author of Text 2 most likely characterize the experimental finding described in Text 1?",
+    "choices": [
+      "As the result of a flawed measurement that should be disregarded",
+      "As proof that language permanently alters the way people see colors",
+      "As genuine but better explained by speakers' use of words during the task than by a lasting change in perception",
+      "As irrelevant, because Russian and English speakers can see the same range of colors"
+    ],
+    "answer": 2,
+    "explanation": "Text 2 accepts the speed advantage but argues that it depends on using words in the moment, since it disappeared when verbal processing was blocked."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 5,
+    "passage": "Historians once portrayed the craft guilds of medieval Europe as essentially ______ institutions. In this view, guilds existed only to shield their members from competition and keep prices high. Recent archival work complicates that picture: guild records reveal extensive charitable activity, from paying for the funerals of poor members to supporting widows and orphans.",
+    "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+    "choices": [
+      "philanthropic",
+      "ephemeral",
+      "ceremonial",
+      "mercenary"
+    ],
+    "answer": 3,
+    "explanation": "Institutions concerned only with protecting their own profits are self-interested, or \"mercenary,\" a view the charity records complicate."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 1,
+    "passage": "Chess players may look as if they are sitting still, but their bodies are working hard. During long tournaments, top players' heart rates can rise as high as those of some athletes, and they breathe faster when a game becomes tense. Some players burn so much energy thinking and worrying that they lose weight over an event that lasts several days.",
+    "stem": "Which choice best states the main idea of the text?",
+    "choices": [
+      "Chess is more popular than many traditional sports.",
+      "Playing in chess tournaments can place real physical demands on players.",
+      "Chess players should exercise before every game.",
+      "Most chess players eat less during tournaments than at home."
+    ],
+    "answer": 1,
+    "explanation": "The text describes rising heart rates, faster breathing, and weight loss to show that tournament chess is physically demanding."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 1,
+    "passage": "Students at Lakeview Middle School set up a bird feeder in the courtyard. Each month, they counted the birds that came to it.\nMonth | Birds counted\nOctober | 42\nNovember | 58\nDecember | 75\nJanuary | 81\nThe students noted that from October to January, the number of birds ______",
+    "stem": "Which choice most effectively uses data from the table to complete the statement?",
+    "choices": [
+      "increased every month.",
+      "was highest in November.",
+      "decreased after December.",
+      "stayed about the same each month."
+    ],
+    "answer": 0,
+    "explanation": "The counts rise from 42 to 58 to 75 to 81, an increase every month."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 1,
+    "passage": "Rain gardens are shallow patches of ground planted with flowers and grasses that can handle wet soil. When it storms, water runs off roofs and driveways into the garden instead of rushing into storm drains. The plants' roots help the water soak slowly into the ground. Because of this, a town that builds many rain gardens can expect ______",
+    "stem": "Which choice most logically completes the text?",
+    "choices": [
+      "fewer flowers to grow in its public parks.",
+      "storms to happen less often than before.",
+      "less water to flow into its storm drains during heavy rain.",
+      "its roofs and driveways to stay dry during storms."
+    ],
+    "answer": 2,
+    "explanation": "Rain gardens catch runoff that would otherwise go into storm drains, so less water would reach the drains."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 1,
+    "passage": "Jun Park's short story \"The Long Walk Home\" follows two brothers as they walk home from school through a busy city on a rainy afternoon. In the story, the narrator's younger brother, Eli, is shown to be extremely curious about the world around him, even when his curiosity slows the brothers down.",
+    "stem": "Which quotation from the story most effectively illustrates the claim?",
+    "choices": [
+      "\"Eli pulled his hood tighter and complained that his sneakers were soaking wet.\"",
+      "\"By the time we reached our street, the rain had finally stopped.\"",
+      "\"Eli said he was hungry and hoped Mom had made soup for dinner.\"",
+      "\"Eli stopped at every storm drain to watch the leaves spin into the dark, asking where the water went and refusing to move until I guessed.\""
+    ],
+    "answer": 3,
+    "explanation": "Only this quotation shows Eli asking questions about what he sees and delaying the walk because of it."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 2,
+    "passage": "The Hadza are a group of hunter-gatherers in Tanzania. Researchers measured how much energy Hadza adults used each day. Because the Hadza walk long distances daily, the team expected them to burn far more calories than office workers in the United States and Europe. But once body size was taken into account, the Hadza burned about the same number of calories per day. The results suggest that the body may keep its total energy use within a set range, even when people are very active.",
+    "stem": "Which choice best states the main idea of the text?",
+    "choices": [
+      "A study found that very active people used about as much daily energy as less active people, suggesting the body limits total energy use.",
+      "The Hadza walk longer distances each day than any other group of people.",
+      "Office workers burn more calories than hunter-gatherers because they eat more food.",
+      "Researchers have developed a new way to measure differences in body size."
+    ],
+    "answer": 0,
+    "explanation": "The text centers on the surprising finding that the active Hadza burned similar calories, and what that suggests about the body."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 2,
+    "passage": "Scientists studied a lake in the north. They recorded its average water temperature in July. They also counted the days it was covered by ice each winter.\nDecade | July temperature (°C) | Days of ice cover\n1980s | 21.4 | 112\n1990s | 21.9 | 104\n2000s | 22.5 | 97\n2010s | 23.1 | 89\nThe scientists claim that as the lake has grown warmer in summer, its period of winter ice cover has become shorter.",
+    "stem": "Which choice best describes data from the table that support the scientists' claim?",
+    "choices": [
+      "In the 1990s, the July temperature was 21.9°C and there were 104 days of ice cover.",
+      "The lake had the most days of ice cover in the 1980s.",
+      "The July temperature rose from 21.4°C in the 1980s to 23.1°C in the 2010s, while days of ice cover fell from 112 to 89.",
+      "The July temperature was higher in the 2000s than in the 1990s."
+    ],
+    "answer": 2,
+    "explanation": "Only this choice shows both trends together: rising summer temperatures and fewer days of ice."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 2,
+    "passage": "Some kinds of fig trees can be pollinated by only one kind of tiny wasp. That wasp, in turn, can lay its eggs only inside the flowers of the same kind of fig. Neither partner can reproduce without the other. So if one of these wasps were to disappear from a forest, the matching fig trees in that forest would most likely ______",
+    "stem": "Which choice most logically completes the text?",
+    "choices": [
+      "begin to be pollinated by other kinds of insects.",
+      "be unable to produce new seeds.",
+      "grow more quickly than they did before.",
+      "attract a different wasp species to lay its eggs."
+    ],
+    "answer": 1,
+    "explanation": "Since each fig depends on a single wasp for pollination, losing the wasp would stop the fig from reproducing."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 2,
+    "passage": "Male house finches range in color from pale yellow to deep red, and females tend to prefer redder males. The red color comes from pigments called carotenoids, which the birds cannot make themselves and must get from foods such as certain berries and seeds. Finding enough of these foods takes skill and good health. Some biologists have therefore suggested that a female who chooses a red male ______",
+    "stem": "Which choice most logically completes the text?",
+    "choices": [
+      "is choosing a male that avoids eating berries and seeds.",
+      "cannot tell the difference between red and yellow males.",
+      "is choosing a male that will have yellow offspring.",
+      "may be choosing a mate that is good at finding food."
+    ],
+    "answer": 3,
+    "explanation": "Red color depends on finding pigment-rich foods, which takes skill and health, so a red male is likely a good forager."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 3,
+    "passage": "The following text is from a poem describing a fishing harbor during the quiet months of winter.\nThe boats are hauled and canvas-bound,\nthe gulls sit hunched along the pier;\nno engine breaks the frozen sound\nthat settles on the water here.\nYet coiled ropes still smell of tar,\nand nets hang stiff with August salt,\nand every hull, from keel to spar,\nremembers motion it was taught.",
+    "stem": "Which quotation from the poem most effectively illustrates the claim that the speaker finds traces of summer activity in the winter harbor?",
+    "choices": [
+      "\"The boats are hauled and canvas-bound,\"",
+      "\"the gulls sit hunched along the pier;\"",
+      "\"no engine breaks the frozen sound\"",
+      "\"and nets hang stiff with August salt,\""
+    ],
+    "answer": 3,
+    "explanation": "Salt left from August on the nets is a trace of summer fishing; the other lines describe only the winter stillness."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 3,
+    "passage": "Textile artist Amara Diallo builds large wall hangings from fabric scraps she collects from tailors' shops in Dakar, Senegal. Rather than hiding the scraps' origins, she preserves their frayed edges, chalk marks, and even the tailors' penciled measurements. Diallo has said that she wants viewers to sense the many unseen hands that shaped each piece before it reached her studio, so that a single artwork becomes a record of a whole community's labor.",
+    "stem": "Which choice best states the main idea of the text?",
+    "choices": [
+      "Diallo prefers new fabric but uses scraps because they cost less.",
+      "Diallo deliberately keeps traces of the fabrics' earlier use so that her works reflect the labor of the community that produced them.",
+      "Tailors in Dakar have begun creating wall hangings of their own.",
+      "Diallo removes all marks from her materials so viewers can focus on her designs."
+    ],
+    "answer": 1,
+    "explanation": "The text explains that Diallo preserves the tailors' marks to make each work a record of community labor."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 3,
+    "passage": "Researchers surveyed adults in four regions about how they usually travel to work.\nRegion | Drive alone (%) | Public transit (%) | Walk or bike (%)\nNorth | 62 | 21 | 17\nSouth | 78 | 9 | 13\nEast | 48 | 37 | 15\nWest | 70 | 12 | 18\nThe researchers concluded that the region with the highest share of public transit riders also had the lowest share of people who drive alone.",
+    "stem": "Which choice best describes data from the table that support the researchers' conclusion?",
+    "choices": [
+      "In the South, 78% of adults drive alone and 9% use public transit.",
+      "In the West, 18% of adults walk or bike, the highest share of any region.",
+      "In the North, 21% of adults use public transit and 62% drive alone.",
+      "In the East, 37% of adults use public transit, more than in any other region, and 48% drive alone, less than in any other region."
+    ],
+    "answer": 3,
+    "explanation": "The East has both the highest transit share (37%) and the lowest drive-alone share (48%)."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 3,
+    "passage": "Archaeologists excavating a 4,000-year-old settlement found grinding stones coated with residue from wild grasses. They found no residue from wheat or barley, although those crops were grown at other sites in the region during the same period. The settlement sat on rocky hillsides far from fertile river valleys, a location that would have made farming difficult. These findings suggest that the settlement's residents ______",
+    "stem": "Which choice most logically completes the text?",
+    "choices": [
+      "relied on gathering wild plants rather than on growing crops.",
+      "traded their grinding stones to farming communities in the valleys.",
+      "had never heard of wheat or barley.",
+      "grew wheat and barley but ground them somewhere else."
+    ],
+    "answer": 0,
+    "explanation": "Residue only from wild grasses, plus poor farmland, points to a diet based on gathered wild plants."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 4,
+    "passage": "The following text is adapted from a novel. Irene, a retired teacher, has agreed to tutor her neighbor's son.\nIrene had expected the boy to be sullen, and for the first twenty minutes he was, answering her questions in single syllables and staring past her at the window. Then she set the workbook aside and asked what he would build if he had all the lumber in the world, and for the first time, he looked directly at her. By the end of the hour, the margins of her carefully prepared lesson plan were crowded with his sketches of towers and bridges, and she had taught nothing she had planned.",
+    "stem": "Which choice best states the main idea of the text?",
+    "choices": [
+      "Irene decides that the boy has no interest in learning and gives up on tutoring him.",
+      "The boy teaches Irene how to design towers and bridges more skillfully.",
+      "By setting aside her plan, Irene finds a way to engage a reluctant student.",
+      "Irene regrets agreeing to tutor the boy because he remains sullen throughout the lesson."
+    ],
+    "answer": 2,
+    "explanation": "The boy becomes engaged only after Irene abandons the workbook and asks about his interests."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 4,
+    "passage": "A biologist hypothesized that a coastal plant grows taller in soil containing more nitrogen. She grew the plants in four soils and recorded their average heights.\nSoil nitrogen (mg/kg) | Average height (cm)\n10 | 18\n20 | 26\n40 | 33\n80 | 34\nShe concluded that adding nitrogen increases plant height only up to a point: ______",
+    "stem": "Which choice most effectively uses data from the table to complete the statement?",
+    "choices": [
+      "plants grown with 80 mg/kg of nitrogen were the tallest of all the groups.",
+      "plants grew 15 centimeters taller as nitrogen rose from 10 to 40 mg/kg, but only 1 centimeter taller when it doubled again to 80 mg/kg.",
+      "plants grown with 10 mg/kg of nitrogen reached an average height of 18 centimeters.",
+      "plants grew 8 centimeters taller as nitrogen rose from 10 to 20 mg/kg."
+    ],
+    "answer": 1,
+    "explanation": "Only this choice shows large gains at lower levels followed by almost no gain at the highest level, which is the limit the conclusion describes."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 4,
+    "passage": "Psychologists gave volunteers a list of words to learn. One group reread the list repeatedly; another group spent the same amount of time trying to recall the words without looking, then checked which ones they had missed. One week later, the second group remembered substantially more words, even though members of that group had predicted they would do worse than the rereaders. These results suggest that learners ______",
+    "stem": "Which choice most logically completes the text?",
+    "choices": [
+      "remember more when they reread material many times.",
+      "perform best when they correctly predict their own scores.",
+      "forget most information within a week no matter how they study.",
+      "may not accurately judge which study methods work best for them."
+    ],
+    "answer": 3,
+    "explanation": "The recall group did better despite predicting worse results, so learners misjudged the effectiveness of the methods."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 4,
+    "passage": "Coyotes now live in many large North American cities, including Chicago and Los Angeles. Some residents worry that the animals survive mainly by raiding garbage cans and pet food bowls, a habit that could make them bold around people. Wildlife ecologist Dana Ruiz argues instead that most urban coyotes have adapted by shifting their activity to avoid humans while continuing to hunt wild prey such as rodents and rabbits.",
+    "stem": "Which finding, if true, would most directly support Ruiz's argument?",
+    "choices": [
+      "Urban coyotes are, on average, slightly larger than coyotes in rural areas.",
+      "Many city residents report having seen coyotes near garbage cans.",
+      "Tracking collars show urban coyotes are active mostly between midnight and dawn, and their droppings contain mainly rodent and rabbit remains.",
+      "Coyotes living in cities produce smaller litters than those in the countryside."
+    ],
+    "answer": 2,
+    "explanation": "Nighttime activity shows avoidance of people, and the droppings show a diet of wild prey, matching both parts of Ruiz's argument."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 5,
+    "passage": "Historians of science have often portrayed France's adoption of the metric system as a triumph of Enlightenment reason over local custom. Yet records from the decades after 1795 show that many merchants and farmers kept using older units, and in 1812 the government even permitted \"usual measures\" that blended metric definitions with traditional names. The system became universal in France only after 1840, when its use was made compulsory.",
+    "stem": "Which choice best states the main idea of the text?",
+    "choices": [
+      "The metric system's eventual dominance in France depended more on government requirement than on the appeal of its logic.",
+      "French merchants rejected the metric system because traditional units were more accurate.",
+      "Historians have correctly described the metric system as being adopted quickly in France.",
+      "The \"usual measures\" of 1812 were intended to abolish the metric system entirely."
+    ],
+    "answer": 0,
+    "explanation": "The text shows that people resisted the system until it was made compulsory, undercutting the view that reason alone made it succeed."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 5,
+    "passage": "Researchers compared four methods of teaching fractions. They tested students immediately after instruction and again three months later.\nMethod | Average score right after | Average score after 3 months\nLecture | 78 | 52\nWorked examples | 74 | 61\nPeer discussion | 70 | 63\nHands-on models | 81 | 58\nOne researcher argues that the method producing the highest immediate scores is not necessarily the one producing the most lasting learning.",
+    "stem": "Which choice best describes data from the table that support the researcher's argument?",
+    "choices": [
+      "Every method's average score was lower after three months than right after instruction.",
+      "Hands-on models produced the highest average score right after instruction (81), but peer discussion produced the highest average score after three months (63).",
+      "Worked examples produced an average score of 74 right after instruction and 61 after three months.",
+      "Lecture produced an average score of 78 right after instruction, which was higher than that of worked examples."
+    ],
+    "answer": 1,
+    "explanation": "This choice shows that the method with the top immediate score was not the method with the top delayed score."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 5,
+    "passage": "Linguists have observed a pattern in how languages change. Languages spoken by very large populations, especially those widely learned by adults as second languages, tend to have simpler systems of word endings than languages of small, isolated communities. One explanation is that adult learners struggle to master complex endings. Over generations, their simplified usage spreads through the whole community. If this explanation is correct, then a language that ______",
+    "stem": "Which choice most logically completes the text?",
+    "choices": [
+      "is spoken by a small, isolated community should quickly simplify its word endings.",
+      "has complex word endings must be difficult for children to learn as a first language.",
+      "spreads rapidly among adult newcomers is likely to lose some of the complexity of its word endings over time.",
+      "is learned mostly by children is likely to borrow many words from other languages."
+    ],
+    "answer": 2,
+    "explanation": "The explanation links simplification to adult learners, so a language adopted by many adult newcomers should simplify."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 5,
+    "passage": "Some flowers turn to follow the sun across the sky. Biologist Mei Okafor hypothesizes that in the Arctic poppy, this sun-tracking benefits the plant mainly by warming the inside of the flower, which attracts insect pollinators seeking warmth in the cold climate, rather than by increasing photosynthesis in the plant's leaves.",
+    "stem": "Which finding, if true, would most directly support Okafor's hypothesis?",
+    "choices": [
+      "Arctic poppy leaves carry out more photosynthesis when the flowers track the sun.",
+      "Insects visit Arctic poppies more often on cloudy days than on sunny days.",
+      "Several other Arctic flowers also turn to follow the sun.",
+      "Arctic poppy flowers prevented from tracking the sun were cooler inside and received fewer insect visits, while their leaves photosynthesized at normal rates."
+    ],
+    "answer": 3,
+    "explanation": "This finding links sun-tracking to flower warmth and insect visits while ruling out a photosynthesis benefit, matching the hypothesis."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 1,
+    "passage": "The giant sequoias of California's Sierra Nevada are among the largest living things on Earth. A single tree can weigh more than two million pounds. The thick, spongy bark of these trees ______ them from many forest fires, which is one reason some sequoias have lived for more than 3,000 years.",
+    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": [
+      "protect",
+      "protects",
+      "are protecting",
+      "have protected"
+    ],
+    "answer": 1,
+    "explanation": "The singular subject \"bark\" requires the singular verb \"protects.\""
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 1,
+    "passage": "Every spring, the town of Millbrook holds a festival to celebrate ______ history as one of the first mill towns in the region. Visitors can tour the old stone mill, watch people spin wool by hand, and taste bread baked from flour ground on the original millstones.",
+    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": [
+      "it's",
+      "their",
+      "its",
+      "its'"
+    ],
+    "answer": 2,
+    "explanation": "\"Its\" is the singular possessive pronoun that refers to the town; \"it's\" means \"it is.\""
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 1,
+    "passage": "Wangari Maathai founded the Green Belt Movement in Kenya in 1977. The group encouraged women to plant trees in their ______ the following decades, members planted tens of millions of trees across the country, helping to restore forests and protect soil.",
+    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": [
+      "communities. Over",
+      "communities, over",
+      "communities over",
+      "communities, which over"
+    ],
+    "answer": 0,
+    "explanation": "Two complete sentences must be separated with a period; the other choices create a comma splice, a run-on, or an incomplete clause."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 2,
+    "passage": "In July 1969, the Apollo 11 lunar module landed on the Moon. About six and a half hours later, astronaut Neil Armstrong ______ down the ladder and became the first person to walk on the lunar surface. Millions of people around the world watched the historic moment on television.",
+    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": [
+      "climbs",
+      "will climb",
+      "has climbed",
+      "climbed"
+    ],
+    "answer": 3,
+    "explanation": "The event happened in the past and the sentence uses \"became\" and \"watched,\" so the simple past \"climbed\" is needed."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 2,
+    "passage": "During the 2010s, many cities replaced their old streetlights with LED fixtures. The ______ lower energy use allowed some cities to cut their lighting costs by more than half. The brighter, whiter light also helped security cameras record clearer images at night.",
+    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": [
+      "fixtures",
+      "fixture's",
+      "fixtures'",
+      "fixtures's"
+    ],
+    "answer": 2,
+    "explanation": "The energy use belongs to the plural \"fixtures,\" so the plural possessive \"fixtures'\" is correct."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 2,
+    "passage": "Marine biologist Rosa Linde spent three months living in an underwater research station off the coast of Florida. Each day, she watched the reef fish that gathered around its windows. She focused on one kind of fish in ______ the bluehead wrasse, a small fish that can change from female to male.",
+    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": [
+      "particular;",
+      "particular:",
+      "particular, and",
+      "particular. The"
+    ],
+    "answer": 1,
+    "explanation": "A colon correctly introduces the phrase naming the species; the other choices create a fragment or join a clause to a non-clause."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 3,
+    "passage": "The collection of letters, diaries, and photographs that historian Lucia Moreno discovered in an attic in Santa Fe ______ new insight into daily life in New Mexico during the 1880s. Moreno plans to post the materials online so that other researchers can study them.",
+    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": [
+      "offer",
+      "have offered",
+      "offers",
+      "are offering"
+    ],
+    "answer": 2,
+    "explanation": "The subject is the singular \"collection,\" not \"photographs,\" so the singular verb \"offers\" is required."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 3,
+    "passage": "The tardigrade, a microscopic animal sometimes called a \"water bear,\" is famously hard to kill. In laboratory tests, tardigrades have survived temperatures near absolute zero, intense radiation, and even exposure to the vacuum of space. Scientists study the ______ cells to learn how they protect themselves, research that could someday help preserve vaccines without refrigeration.",
+    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": [
+      "tardigrades",
+      "tardigrade's",
+      "tardigrades'",
+      "tardigrades's"
+    ],
+    "answer": 2,
+    "explanation": "The cells belong to the plural \"tardigrades\" discussed in the previous sentence, so the plural possessive \"tardigrades'\" is correct."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 3,
+    "passage": "When the members of the city council reviewed the proposal for a new public library, ______ were especially impressed by its plan to include a workshop with 3D printers and sewing machines. After a brief discussion, the council voted unanimously to fund the project.",
+    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": [
+      "it",
+      "they",
+      "he or she",
+      "one"
+    ],
+    "answer": 1,
+    "explanation": "The pronoun refers to the plural \"members\" and must agree with the plural verb \"were,\" so \"they\" is correct."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 3,
+    "passage": "Most meteorites that land on Earth come from the asteroid belt between Mars and Jupiter. A small number, however, have a far stranger ______ were blasted off the surface of Mars by ancient impacts. Scientists identify them by comparing gases trapped inside the rocks with measurements of the Martian atmosphere.",
+    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": [
+      "origin, they",
+      "origin they",
+      "origin: they",
+      "origin, and that they"
+    ],
+    "answer": 2,
+    "explanation": "A colon correctly joins the independent clause to a second clause that explains the \"stranger origin\"; the others create a comma splice, a run-on, or a faulty structure."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 4,
+    "passage": "In 1922, the poet and teacher Elena Vasquez founded a small press in her San Antonio home, ______ dozens of chapbooks by local writers over the next two decades. Many of those chapbooks, long thought lost, were recently rediscovered in the archives of a university library.",
+    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": [
+      "printing",
+      "printed",
+      "prints",
+      "she printed"
+    ],
+    "answer": 0,
+    "explanation": "The participle \"printing\" correctly introduces a modifying phrase; the other choices create a comma splice or an incorrectly joined verb."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 4,
+    "passage": "One of the most striking findings in urban ecology is that songbirds in noisy cities often sing at higher pitches than rural birds of the same species. Biologist Hans Slabbekoorn, who first documented this pattern in great tits, ______ that the higher notes help the birds' songs rise above the low rumble of traffic.",
+    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": [
+      "arguing",
+      "having argued",
+      "to argue",
+      "argues"
+    ],
+    "answer": 3,
+    "explanation": "The subject \"Hans Slabbekoorn\" needs a finite main verb, and only \"argues\" supplies one."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 4,
+    "passage": "A museum's new exhibit features artifacts from three ancient cities: Ur, in present-day ______ Mohenjo-daro, in present-day Pakistan; and Teotihuacan, in present-day Mexico. Curators selected these three sites because each was among the largest urban centers of its era, and together they show how differently early cities could develop.",
+    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": [
+      "Iraq,",
+      "Iraq;",
+      "Iraq",
+      "Iraq:"
+    ],
+    "answer": 1,
+    "explanation": "Because the list items already contain commas, semicolons must separate them, matching the semicolon after \"Pakistan.\""
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 5,
+    "passage": "Economist Elinor Ostrom spent decades studying communities that share resources such as fisheries and forests. Conventional theory predicted that such shared resources would inevitably be ______ Ostrom documented many cases in which local groups created their own rules. Some of these groups sustained their resources for centuries.",
+    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": [
+      "overused, however,",
+      "overused; however,",
+      "overused however",
+      "overused, however;"
+    ],
+    "answer": 1,
+    "explanation": "A semicolon is needed between the two independent clauses, and \"however\" belongs to the second clause, followed by a comma."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 5,
+    "passage": "Among the most impressive achievements of the Inca Empire ______ the road network known as the Qhapaq Ñan, which stretched for tens of thousands of kilometers through mountains, deserts, and rainforests. Relay runners called chasquis carried messages along these roads, covering as much as 240 kilometers in a single day.",
+    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": [
+      "were",
+      "have been",
+      "are",
+      "was"
+    ],
+    "answer": 3,
+    "explanation": "In this inverted sentence the subject is the singular \"road network,\" and the past-tense context calls for \"was.\""
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 5,
+    "passage": "Zora Neale Hurston's ______ Their Eyes Were Watching God received mixed reviews when it was published in 1937 and later fell out of print for years. Its reputation was revived in the 1970s, after the writer Alice Walker published an essay describing her search for Hurston's unmarked grave in Florida.",
+    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+    "choices": [
+      "novel,",
+      "novel—",
+      "novel",
+      "novel:"
+    ],
+    "answer": 2,
+    "explanation": "Hurston wrote several novels, so the title is essential information and takes no punctuation; a single comma or dash would also wrongly separate the subject from its verb."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 1,
+    "passage": "Penguins are birds, but unlike most other birds, they are unable to fly through the air. ______ their wings have evolved into stiff, flattened flippers that make them powerful and efficient swimmers. Emperor penguins can dive deeper than 500 meters to capture fish, squid, and other prey.",
+    "stem": "Which choice completes the text with the most logical transition?",
+    "choices": [
+      "For example,",
+      "Similarly,",
+      "Instead,",
+      "In other words,"
+    ],
+    "answer": 2,
+    "explanation": "The wings are used for swimming in place of flying, so \"Instead\" shows the contrast."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 1,
+    "passage": "Libraries today offer much more than books. Many of them lend laptops and Wi-Fi hotspots to people who do not have internet access at home. ______ some libraries let visitors borrow unusual items such as fishing rods, cake pans, and musical instruments.",
+    "stem": "Which choice completes the text with the most logical transition?",
+    "choices": [
+      "In addition,",
+      "However,",
+      "Therefore,",
+      "In contrast,"
+    ],
+    "answer": 0,
+    "explanation": "The last sentence adds another example of what libraries offer, so \"In addition\" fits."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 1,
+    "passage": "While researching a topic, a student has taken the following notes:\n• Bessie Coleman was born in Texas in 1892.\n• She wanted to become a pilot, but flight schools in the United States would not admit her because she was Black and a woman.\n• She learned French and traveled to France to attend a flight school there.\n• In 1921, she earned an international pilot's license.\n• She was the first African American woman to hold a pilot's license.",
+    "stem": "The student wants to emphasize how Coleman overcame an obstacle to reach her goal. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "choices": [
+      "Bessie Coleman, who was born in Texas in 1892, earned a pilot's license in 1921.",
+      "Although U.S. flight schools refused to admit her, Coleman learned French, trained in France, and earned her pilot's license in 1921.",
+      "Coleman learned French and traveled to France.",
+      "Coleman was born in Texas in 1892 and later became a pilot."
+    ],
+    "answer": 1,
+    "explanation": "This choice names the obstacle (being refused by U.S. schools) and how she got past it."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 2,
+    "passage": "The planet Venus is often called Earth's twin because the two planets are nearly the same size and mass. ______ the surface of Venus could hardly be less like Earth's: temperatures there reach about 465°C, which is hot enough to melt lead. The atmospheric pressure is also more than 90 times greater than on Earth.",
+    "stem": "Which choice completes the text with the most logical transition?",
+    "choices": [
+      "Likewise,",
+      "However,",
+      "For instance,",
+      "Consequently,"
+    ],
+    "answer": 1,
+    "explanation": "The sentence contrasts Venus's harsh surface with its similarity to Earth, so \"However\" is logical."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 2,
+    "passage": "While researching a topic, a student has taken the following notes:\n• Mangroves are salt-tolerant trees that grow along tropical coastlines.\n• Their tangled roots reduce the energy of waves during storms.\n• A 2020 study estimated that mangroves prevent more than $65 billion in flood damage worldwide every year.\n• Mangrove roots provide shelter for young fish.\n• Some mangrove species can filter salt from seawater.",
+    "stem": "The student wants to emphasize the economic value of mangroves. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "choices": [
+      "Mangroves are salt-tolerant trees, and some species can filter salt from seawater.",
+      "The roots of mangroves provide shelter for young fish and reduce the energy of waves.",
+      "By reducing the energy of storm waves, mangroves prevent an estimated $65 billion in flood damage worldwide every year.",
+      "Mangroves are trees that grow along tropical coastlines."
+    ],
+    "answer": 2,
+    "explanation": "Only this choice gives a dollar value, directly showing the economic importance of mangroves."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 2,
+    "passage": "In the early 1900s, electric lights were common in American cities. But running power lines to farms that were spread far apart cost a great deal of money, and power companies saw little profit in it. ______ by 1930, only about one in ten farm homes in the United States had electricity.",
+    "stem": "Which choice completes the text with the most logical transition?",
+    "choices": [
+      "Nevertheless,",
+      "For example,",
+      "As a result,",
+      "Meanwhile,"
+    ],
+    "answer": 2,
+    "explanation": "Few farms had power because extending lines was costly, so \"As a result\" shows the cause-and-effect relationship."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 3,
+    "passage": "For decades, many astronomers assumed that planets orbiting other stars would be arranged much like those in our own solar system, with giant planets far from their stars. ______ the first planet discovered orbiting a sunlike star, found in 1995, turned out to be a gas giant circling so close to its star that a year there lasts just over four days.",
+    "stem": "Which choice completes the text with the most logical transition?",
+    "choices": [
+      "Similarly,",
+      "In other words,",
+      "For this reason,",
+      "However,"
+    ],
+    "answer": 3,
+    "explanation": "The discovery contradicted the astronomers' assumption, so a contrasting transition is needed."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 3,
+    "passage": "While researching a topic, a student has taken the following notes:\n• The Svalbard Global Seed Vault is located on a remote Norwegian island in the Arctic.\n• It opened in 2008.\n• It preserves duplicate samples of seeds from agricultural gene banks around the world.\n• Because the vault is built deep inside a mountain, the seeds remain frozen even if electricity fails.\n• In 2015, researchers withdrew seeds from the vault to replace collections damaged during the Syrian civil war.",
+    "stem": "The student wants to emphasize that the vault's backup seeds have been put to practical use. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "choices": [
+      "The Svalbard Global Seed Vault, which opened in 2008, is located on a Norwegian island in the Arctic.",
+      "Because the vault is built inside a mountain, its seeds stay frozen even if the electricity fails.",
+      "The vault stores backup copies of seeds from gene banks around the world.",
+      "In 2015, researchers withdrew seeds from the Svalbard vault to replace gene bank collections damaged during the war in Syria."
+    ],
+    "answer": 3,
+    "explanation": "Only this choice describes the backup seeds actually being used to restore lost collections."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 3,
+    "passage": "While researching a topic, a student has taken the following notes:\n• Phillis Wheatley and Gwendolyn Brooks were both acclaimed Black American poets.\n• Wheatley's collection Poems on Various Subjects, Religious and Moral was published in London in 1773.\n• Wheatley often wrote in heroic couplets, a formal style popular in eighteenth-century England.\n• Brooks won the 1950 Pulitzer Prize for Poetry for her book Annie Allen.\n• Brooks often wrote about everyday life in the Bronzeville neighborhood of Chicago.",
+    "stem": "The student wants to introduce Brooks's major award to an audience already familiar with Wheatley. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "choices": [
+      "Gwendolyn Brooks and Phillis Wheatley were both acclaimed Black American poets.",
+      "Phillis Wheatley published Poems on Various Subjects, Religious and Moral in London in 1773.",
+      "Like Wheatley, whose 1773 collection brought her wide acclaim, Brooks earned great recognition, winning the 1950 Pulitzer Prize for Poetry for Annie Allen.",
+      "Wheatley often wrote in heroic couplets, a formal style popular in eighteenth-century England."
+    ],
+    "answer": 2,
+    "explanation": "This choice connects Brooks to the familiar figure of Wheatley and names Brooks's Pulitzer Prize."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 3,
+    "passage": "Some critics argue that a four-day workweek would reduce output, since employees would simply have fewer hours to finish their tasks. Results from actual trials, however, have challenged this prediction. ______ in a 2022 trial in the United Kingdom, most of the 61 participating companies reported that revenue stayed about the same, and the majority chose to keep the shorter schedule after the trial ended.",
+    "stem": "Which choice completes the text with the most logical transition?",
+    "choices": [
+      "Nevertheless,",
+      "For instance,",
+      "Similarly,",
+      "By contrast,"
+    ],
+    "answer": 1,
+    "explanation": "The UK trial is an example of a result that challenged the prediction, so \"For instance\" fits."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 4,
+    "passage": "Bioluminescence, the production of light by living things, is common in the deep ocean, where by some estimates three-quarters of animals can make their own light. ______ glowing species on land are relatively rare, limited mostly to fireflies, certain fungi, and a handful of other insects and worms. Scientists suspect the difference reflects the deep sea's darkness, where light is one of the few ways to send signals.",
+    "stem": "Which choice completes the text with the most logical transition?",
+    "choices": [
+      "Accordingly,",
+      "By contrast,",
+      "Similarly,",
+      "For example,"
+    ],
+    "answer": 1,
+    "explanation": "The rarity of glowing land species contrasts with how common they are in the deep sea."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 4,
+    "passage": "Early studies of the placebo effect reported that about a third of patients improved after receiving treatments with no active ingredients. Later researchers pointed out that many of these patients might have recovered anyway, since many illnesses fade on their own over time. ______ some apparent placebo effects may reflect the natural course of an illness rather than any response to the fake treatment.",
+    "stem": "Which choice completes the text with the most logical transition?",
+    "choices": [
+      "Even so,",
+      "By contrast,",
+      "Thus,",
+      "For example,"
+    ],
+    "answer": 2,
+    "explanation": "The final sentence draws a conclusion from the point that patients may have recovered naturally, so \"Thus\" is logical."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 4,
+    "passage": "While researching a topic, a student has taken the following notes:\n• Researchers investigated whether bumblebees could learn to roll a small ball to a target to obtain a sugar reward.\n• Some bees learned by observing a trained bee perform the task.\n• Other bees observed a hidden magnet moving the ball, with no demonstrator bee present.\n• Bees that observed a trained demonstrator learned faster than bees that observed the magnet.\n• Several observer bees adopted a more efficient strategy than the one that had been demonstrated.",
+    "stem": "The student wants to emphasize that the bees did not simply copy what they observed. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "choices": [
+      "Bees that watched a trained bee learned the task faster than bees that watched a magnet move the ball.",
+      "Researchers tested whether bumblebees could learn to roll a ball to a target for a sugar reward.",
+      "Some bees learned the task by watching a hidden magnet move the ball to the target.",
+      "Some bees solved the task with a more efficient approach than the one they had been shown, suggesting they were not merely imitating."
+    ],
+    "answer": 3,
+    "explanation": "Only this choice shows bees improving on the demonstration rather than copying it."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 4,
+    "passage": "While researching a topic, a student has taken the following notes:\n• In a 2019 experiment, researchers turned in more than 17,000 supposedly lost wallets in 355 cities across 40 countries.\n• Some wallets contained no money; others contained the equivalent of about $13.45.\n• Each wallet included a business card displaying an email address.\n• The researchers recorded how frequently each wallet was reported to that address.\n• In most countries, wallets containing money were reported more frequently than empty ones.",
+    "stem": "The student wants to describe the method of the study. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "choices": [
+      "In most of the 40 countries studied, wallets containing money were reported to their owners more often than empty wallets.",
+      "Researchers turned in over 17,000 wallets, some empty and some holding about $13.45, in 355 cities and recorded how often each was reported to an email address on an enclosed business card.",
+      "A 2019 study produced surprising results about honesty in countries around the world.",
+      "Researchers wanted to know whether people would return lost wallets."
+    ],
+    "answer": 1,
+    "explanation": "This choice explains what the researchers did and what they measured, which is the study's method; the first choice is a result."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 5,
+    "passage": "In 1608, the Dutch spectacle maker Hans Lipperhey asked the government of the Netherlands for a patent on a new device for \"seeing things far away as if they were nearby.\" Officials admired the instrument but declined to grant the patent. ______ they noted, the device was simple to copy, and at least two other craftsmen had already claimed to have built similar instruments.",
+    "stem": "Which choice completes the text with the most logical transition?",
+    "choices": [
+      "Nevertheless,",
+      "After all,",
+      "In contrast,",
+      "Subsequently,"
+    ],
+    "answer": 1,
+    "explanation": "The final sentence gives the reason for denying the patent, and \"After all\" introduces such a justification."
+  },
+  {
+    "exam_type": "SAT",
+    "section": "rw",
+    "difficulty": 5,
+    "passage": "While researching a topic, a student has taken the following notes:\n• Before 2021, the Norse settlement at L'Anse aux Meadows in Newfoundland could be dated only to roughly 1000 CE.\n• A burst of radiation from a solar storm in 993 CE left a spike of carbon-14 in tree rings worldwide.\n• By finding this spike in wood cut by Norse settlers and counting the rings that grew afterward, researchers determined that the wood was cut in 1021 CE.\n• Dendrochronology dates wood by matching patterns of wide and narrow tree rings.\n• Radiocarbon dating estimates age by measuring the decay of carbon-14.",
+    "stem": "The student wants to emphasize how the 2021 study improved on earlier dating of the settlement. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+    "choices": [
+      "Dendrochronology matches patterns of tree rings, while radiocarbon dating measures the decay of carbon-14.",
+      "A solar storm in 993 CE left a spike of carbon-14 that appears in tree rings around the world.",
+      "Whereas the Norse presence at L'Anse aux Meadows had been dated only to roughly 1000 CE, a 2021 study used a carbon-14 spike from 993 CE to show that settlers cut wood there in 1021 CE.",
+      "Researchers studied wood cut by Norse settlers at L'Anse aux Meadows, a site in Newfoundland."
+    ],
+    "answer": 2,
+    "explanation": "Only this choice contrasts the earlier rough date with the exact year the 2021 study established."
+  }
+]
