@@ -1046,10 +1046,10 @@
    "When Maria talked to Jenna, she was upset.",
    "Maria was upset when she talked to Jenna.",
    "When Maria talked to Jenna, Maria was upset.",
-   "Jenna listened while Maria explained why she was upset."
+   "Maria was upset, so she called her friend Jenna."
   ],
   "answer": 0,
-  "explanation": "In the first sentence, \"she\" could refer to either Maria or Jenna. In the others, the meaning is clear (in the last, Maria is the one explaining her own feelings)."
+  "explanation": "In the first sentence, \"she\" could refer to either Maria or Jenna. In the others, the meaning is clear (\"she\" can only refer to Maria, the subject who was upset)."
  },
  {
   "exam_type": "KR_ENG",
