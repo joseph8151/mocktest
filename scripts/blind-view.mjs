@@ -8,5 +8,8 @@ for (let i = +start; i < Math.min(items.length, +start + +count); i++) {
   console.log(`--- #${i} [${q.exam_type}/${q.section} d${q.difficulty}]`);
   if (q.passage) console.log('PASSAGE: ' + q.passage);
   console.log('Q: ' + q.stem);
-  q.choices.forEach((c, j) => console.log(`  ${'ABCD'[j]}) ${c}`));
+  if (q.image_svg) console.log('  [FIGURE: this item has an image — render its image_svg to look at it]');
+  if (q.kind === 'num') console.log('  (short answer: give a number — accepted answers are hidden)');
+  else if (q.kind === 'text') console.log('  (writing prompt — teacher-graded, nothing to solve)');
+  else q.choices.forEach((c, j) => console.log(`  ${'ABCD'[j]}) ${c}`));
 }
