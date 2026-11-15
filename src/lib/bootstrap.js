@@ -36,8 +36,20 @@ let ready = null, syncing = null;
  * The question-bank sync can take a while after a deploy, so it runs in the background (one isolate at a time) and
  * requests are never kept waiting for it — except on a brand-new, empty database, where there is nothing to serve yet.
  */
+// A new isolate normally needs 3+ queries just to confirm the schema is current. Once one isolate in this Cloudflare
+// location has confirmed it for this release, the others skip the check (marker in the edge cache, 1 day).
+const SCHEMA_KEY = () => new Request(`https://schema.internal/ok/${MIGRATIONS.length}-${DATA_FIXES.length}-${manifest.version}`);
+async function schemaKnownGood() { try { return !!(await globalThis.caches?.default?.match(SCHEMA_KEY())); } catch { return false; } }
+function markSchemaGood(ctx) {
+  try { const p = globalThis.caches?.default?.put(SCHEMA_KEY(), new Response('ok', { headers: { 'Cache-Control': 'public, max-age=86400' } })); if (p) ctx?.waitUntil(p.catch(() => {})); } catch {}
+}
 export function ensureDb(env, ctx) {
-  if (!ready) ready = run(env).catch((e) => { ready = null; throw e; });
+  if (!ready) ready = (async () => {
+    if (await schemaKnownGood()) return false;
+    const needSync = await run(env);
+    if (!needSync) markSchemaGood(ctx);
+    return needSync;
+  })().catch((e) => { ready = null; throw e; });
   return ready.then((needSync) => {
     if (!needSync || syncing) return;
     syncing = syncSeed(env).catch((e) => console.error('seed sync', e)).finally(() => { syncing = null; });

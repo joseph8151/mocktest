@@ -3,6 +3,10 @@
   "main": "src/index.js",
   "rules": [{ "type": "Text", "globs": ["**/*.sql"], "fallthrough": true }],
   "compatibility_date": "2025-09-01",
+  // Run the Worker close to the database: pages that need several D1 queries finish much faster for far-away visitors.
+  "placement": { "mode": "smart" },
+  // Stamps ?v=<hash> on app.js / style.css in index.html so browsers can cache them for a year.
+  "build": { "command": "node scripts/stamp-assets.mjs" },
   "assets": {
     "directory": "./public",
     "binding": "ASSETS",

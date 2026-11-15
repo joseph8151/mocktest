@@ -7,6 +7,7 @@ import { notifyResult } from './exams.js';
 import { kcpCancel, kcpEnabled, kcpConfig } from '../lib/kcp.js';
 import { audit, redact, logEvent } from '../lib/security.js';
 import { clearNoticeCache } from './shop.js';
+import { purgeEdge } from '../lib/edgecache.js';
 import { deliver, mailFrom, mailTest, sendMail, mailSupportReply } from '../lib/email.js';
 import { anonymizeUser } from './auth.js';
 import { hashPassword } from '../lib/auth.js';
@@ -17,12 +18,14 @@ app.use('*', requireAdmin);
 // Audit trail: every admin change (and data export) is recorded with who, what, when and from where.
 app.use('*', async (c, next) => {
   const m = c.req.method;
+  if (m !== 'GET' && /^\/api\/admin\/products/.test(c.req.path)) c.set('purgeProducts', true);
   let body = null;
   if (m !== 'GET' && /json/.test(c.req.header('content-type') || '')) { // what was changed (secrets redacted)
     const j = await c.req.json().catch(() => null);
     body = Array.isArray(j) ? { items: j.length } : redact(j);
   }
   await next();
+  if (c.get('purgeProducts')) await purgeEdge(c, ['/api/products']);
   if (m !== 'GET' || c.req.path.endsWith('.csv') || c.req.path.endsWith('/backup')) {
     const id = c.req.path.replace(/^\/api\/admin/, '');
     await audit(c, `admin.${m.toLowerCase()}`, id.slice(0, 200), { status: c.res.status, ...(body && Object.keys(body).length ? { body } : {}), ...(c.req.query() && Object.keys(c.req.query()).length ? { query: c.req.query() } : {}) });
@@ -438,7 +441,7 @@ app.post('/notice', async (c) => {
   const b = await c.req.json().catch(() => ({}));
   const text = String(b.text || '').trim().slice(0, 300);
   await c.env.DB.prepare(`INSERT INTO settings (key,value,updated_at) VALUES ('notice',?,?) ON CONFLICT(key) DO UPDATE SET value=excluded.value, updated_at=excluded.updated_at`).bind(text || null, now()).run();
-  clearNoticeCache();
+  clearNoticeCache(); await purgeEdge(c, ['/api/config']);
   return c.json({ ok: true });
 });
 

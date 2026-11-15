@@ -8,8 +8,30 @@ import sample from './routes/sample.js';
 import family from './routes/family.js';
 import { ensureDb } from './lib/bootstrap.js';
 import { API_HEADERS } from './lib/security.js';
+import { edgeKey } from './lib/edgecache.js';
 
 const app = new Hono();
+
+// Edge cache for public, user-independent GETs (home page data, exam guides, samples): served from the nearest
+// Cloudflare location for 60 s without touching the database. /api/products is cached only for visitors without a session.
+const EDGE = [/^\/api\/config$/, /^\/api\/exam-info$/, /^\/api\/products$/, /^\/api\/sample\/[A-Z0-9_]+$/];
+app.use('/api/*', async (c, next) => {
+  const cache = globalThis.caches?.default;
+  const signedIn = /(?:^|;\s*)sid=/.test(c.req.header('cookie') || '');
+  if (!cache || c.req.method !== 'GET' || !EDGE.some((r) => r.test(c.req.path)) || (signedIn && c.req.path === '/api/products')) return next();
+  const key = edgeKey(new URL(c.req.url).origin, c.req.path);
+  const hit = await cache.match(key).catch(() => null);
+  if (hit) {
+    const r = new Response(hit.body, { status: 200, headers: { 'Content-Type': hit.headers.get('Content-Type') || 'application/json', 'Cache-Control': 'no-store', 'X-Edge-Cache': 'HIT', ...API_HEADERS } });
+    return r;
+  }
+  await next();
+  if (c.res.status === 200) {
+    const body = await c.res.clone().text();
+    const put = cache.put(key, new Response(body, { headers: { 'Content-Type': c.res.headers.get('Content-Type') || 'application/json', 'Cache-Control': 'public, max-age=60' } })).catch(() => {});
+    try { c.executionCtx.waitUntil(put); } catch { await put; }
+  }
+});
 
 // CSRF defence: cookies are SameSite=Lax; additionally require same-origin on state-changing requests
 // (webhooks are exempt: they are authenticated by signature).
