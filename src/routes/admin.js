@@ -5,17 +5,25 @@ import { EXAMS, scoreAttempt } from '../lib/exam.js';
 import { stripeRetrieveSession, stripeRefund, portoneCancel, recheckOrder, fulfillOrder } from '../lib/payments.js';
 import { notifyResult } from './exams.js';
 import { kcpCancel, kcpEnabled, kcpConfig } from '../lib/kcp.js';
-import { audit } from '../lib/security.js';
+import { audit, redact, logEvent } from '../lib/security.js';
+import { anonymizeUser } from './auth.js';
+import { hashPassword } from '../lib/auth.js';
+import { randomToken } from '../lib/util.js';
 
 const app = new Hono();
 app.use('*', requireAdmin);
 // Audit trail: every admin change (and data export) is recorded with who, what, when and from where.
 app.use('*', async (c, next) => {
-  await next();
   const m = c.req.method;
+  let body = null;
+  if (m !== 'GET' && /json/.test(c.req.header('content-type') || '')) { // what was changed (secrets redacted)
+    const j = await c.req.json().catch(() => null);
+    body = Array.isArray(j) ? { items: j.length } : redact(j);
+  }
+  await next();
   if (m !== 'GET' || c.req.path.endsWith('.csv')) {
     const id = c.req.path.replace(/^\/api\/admin/, '');
-    await audit(c, `admin.${m.toLowerCase()}`, id.slice(0, 200), `HTTP ${c.res.status}`);
+    await audit(c, `admin.${m.toLowerCase()}`, id.slice(0, 200), { status: c.res.status, ...(body && Object.keys(body).length ? { body } : {}), ...(c.req.query() && Object.keys(c.req.query()).length ? { query: c.req.query() } : {}) });
   }
 });
 
@@ -59,7 +67,8 @@ app.get('/users/:id', async (c) => {
     c.env.DB.prepare('SELECT o.*,p.title FROM orders o JOIN products p ON p.id=o.product_id WHERE o.user_id=? ORDER BY o.created_at DESC').bind(id).all(),
     c.env.DB.prepare('SELECT id,exam_type,status,started_at,finished_at FROM attempts WHERE user_id=? ORDER BY started_at DESC').bind(id).all(),
   ]);
-  return c.json({ user, entitlements: ents.results, orders: orders.results, attempts: atts.results });
+  const log = await c.env.DB.prepare('SELECT action,target,detail,ip,at,actor_email FROM audit_log WHERE actor_id=?1 OR target=?1 ORDER BY at DESC LIMIT 100').bind(id).all();
+  return c.json({ user, entitlements: ents.results, orders: orders.results, attempts: atts.results, activity: log.results });
 });
 app.patch('/users/:id', async (c) => {
   const b = await c.req.json().catch(() => ({}));
@@ -74,22 +83,15 @@ app.patch('/users/:id', async (c) => {
   return c.json({ ok: true });
 });
 app.delete('/users/:id', async (c) => {
+  // Records are never destroyed: the account is de-identified like a self-withdrawal; results, orders and the log remain.
   const id = c.req.param('id');
   if (id === c.get('user').id) return c.json({ error: '자기 자신은 삭제할 수 없습니다.' }, 400);
-  const hasOrders = await c.env.DB.prepare(`SELECT 1 FROM orders WHERE user_id=? AND status='paid'`).bind(id).first();
-  if (hasOrders) return c.json({ error: '결제 내역이 있는 회원은 삭제 대신 정지하세요.' }, 400);
-  await c.env.DB.batch([
-    c.env.DB.prepare('DELETE FROM audio_files WHERE attempt_id IN (SELECT id FROM attempts WHERE user_id=?)').bind(id),
-    c.env.DB.prepare('DELETE FROM answers WHERE attempt_id IN (SELECT id FROM attempts WHERE user_id=?)').bind(id),
-    c.env.DB.prepare('DELETE FROM attempts WHERE user_id=?').bind(id),
-    c.env.DB.prepare('DELETE FROM entitlements WHERE user_id=?').bind(id),
-    c.env.DB.prepare('DELETE FROM refund_requests WHERE user_id=?').bind(id),
-    c.env.DB.prepare('DELETE FROM share_links WHERE user_id=?').bind(id),
-    c.env.DB.prepare('DELETE FROM sessions WHERE user_id=?').bind(id),
-    c.env.DB.prepare('DELETE FROM reset_tokens WHERE user_id=?').bind(id),
-    c.env.DB.prepare('DELETE FROM orders WHERE user_id=?').bind(id),
-    c.env.DB.prepare('DELETE FROM users WHERE id=?').bind(id),
-  ]);
+  const t = await c.env.DB.prepare('SELECT role FROM users WHERE id=?').bind(id).first();
+  if (!t) return c.json({ error: 'not found' }, 404);
+  if (t.role === 'admin') return c.json({ error: '관리자는 먼저 권한을 해제하세요.' }, 400);
+  const { hash, salt } = await hashPassword(randomToken());
+  await audit(c, 'account.delete', id, { by: 'admin' });
+  await c.env.DB.batch(anonymizeUser(c.env.DB, id, hash, salt));
   return c.json({ ok: true });
 });
 app.post('/users/:id/grant', async (c) => {
@@ -146,6 +148,8 @@ app.post('/orders/:id/refund', async (c) => {
     c.env.DB.prepare(`UPDATE entitlements SET revoked=1 WHERE order_id=?`).bind(o.id),
     c.env.DB.prepare(`UPDATE refund_requests SET status='done' WHERE order_id=?`).bind(o.id),
   ]);
+  const owner = await c.env.DB.prepare('SELECT id,email FROM users WHERE id=?').bind(o.user_id).first();
+  await logEvent(c.env, { actor: owner, action: 'order.refunded', target: o.id, detail: { provider: o.provider, amount: o.amount, currency: o.currency, by: c.get('user').email } });
   return c.json({ ok: true });
 });
 
@@ -278,6 +282,33 @@ app.post('/grading/:id', async (c) => {
   await c.env.DB.prepare('UPDATE attempts SET score=?, status=? WHERE id=?').bind(JSON.stringify(sc), status, att.id).run();
   if (status === 'graded' && att.status === 'submitted') await notifyResult(c.env, att);
   return c.json({ ok: true });
+});
+
+/* ---- activity log: search, page, export ---- */
+const CATS = { account: ['user.', 'login.', 'logout', 'password.', '2fa.', 'session.', 'profile.', 'account.'], exam: ['exam.', 'share.', 'shared.'], pay: ['order.', 'refund.'], admin: ['admin.'] };
+function logQuery(q) {
+  const where = [], args = [];
+  if (q.q) { where.push('(actor_email LIKE ? OR actor_id=? OR target LIKE ? OR ip=? OR detail LIKE ?)'); const like = `%${q.q}%`; args.push(like, q.q, like, q.q, like); }
+  if (CATS[q.cat]) { where.push('(' + CATS[q.cat].map(() => 'action LIKE ?').join(' OR ') + ')'); args.push(...CATS[q.cat].map((p) => p + '%')); }
+  if (q.action) { where.push('action=?'); args.push(q.action); }
+  if (q.from) { where.push('at>=?'); args.push(Date.parse(q.from + 'T00:00:00+09:00')); }
+  if (q.to) { where.push('at<?'); args.push(Date.parse(q.to + 'T00:00:00+09:00') + 86400000); }
+  if (q.before) { where.push('at<?'); args.push(+q.before); }
+  return { sql: where.length ? 'WHERE ' + where.join(' AND ') : '', args };
+}
+app.get('/logs', async (c) => {
+  const q = c.req.query(), lim = Math.min(200, +q.limit || 100);
+  const { sql, args } = logQuery(q);
+  const { results } = await c.env.DB.prepare(`SELECT * FROM audit_log ${sql} ORDER BY at DESC LIMIT ?`).bind(...args, lim + 1).all();
+  const total = (await c.env.DB.prepare('SELECT COUNT(*) n FROM audit_log').first()).n;
+  return c.json({ events: results.slice(0, lim), more: results.length > lim, total });
+});
+app.get('/logs.csv', async (c) => {
+  const { sql, args } = logQuery(c.req.query());
+  const { results } = await c.env.DB.prepare(`SELECT * FROM audit_log ${sql} ORDER BY at DESC LIMIT 50000`).bind(...args).all();
+  const esc = (v) => { let s = String(v ?? ''); if (/^[=+\-@]/.test(s)) s = "'" + s; return `"${s.replace(/"/g, '""')}"`; };
+  const rows = results.map((r) => [new Date(r.at).toISOString(), r.action, r.actor_email, r.actor_id, r.target, r.ip, r.detail].map(esc).join(','));
+  return new Response('﻿' + ['time,action,user,user_id,target,ip,detail', ...rows].join('\n'), { headers: { 'Content-Type': 'text/csv; charset=utf-8', 'Content-Disposition': `attachment; filename="activity-${new Date().toISOString().slice(0, 10)}.csv"` } });
 });
 
 /* ---- coupons ---- */

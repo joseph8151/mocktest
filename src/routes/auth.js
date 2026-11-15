@@ -3,9 +3,20 @@ import { deleteCookie, getCookie } from 'hono/cookie';
 import { uid, now, isEmail, randomToken, sha256hex } from '../lib/util.js';
 import { hashPassword, verifyPassword, createSession, destroySession, loadUser, requireUser } from '../lib/auth.js';
 import { sendMail, mailWelcome, mailReset } from '../lib/email.js';
-import { clientIp, rateLimited, tooMany, audit, passwordProblem, turnstileOk, newTotpSecret, totpVerify, otpauthUri } from '../lib/security.js';
+import { clientIp, rateLimited, tooMany, audit, maskEmail, passwordProblem, turnstileOk, newTotpSecret, totpVerify, otpauthUri } from '../lib/security.js';
 
 const app = new Hono();
+
+/** Statements that de-identify an account but keep its history (results, orders, activity log). Voice recordings are deleted. */
+export const anonymizeUser = (db, id, hash, salt) => [
+  db.prepare('DELETE FROM audio_files WHERE attempt_id IN (SELECT id FROM attempts WHERE user_id=?)').bind(id), // voice = personal data
+  db.prepare('DELETE FROM sessions WHERE user_id=?').bind(id),
+  db.prepare('DELETE FROM reset_tokens WHERE user_id=?').bind(id),
+  db.prepare('UPDATE share_links SET revoked_at=?, expires_at=? WHERE user_id=? AND revoked_at IS NULL').bind(now(), now(), id),
+  db.prepare(`UPDATE users SET email=?, name='탈퇴회원', phone=NULL, grade=NULL, status='suspended', deleted_at=?, totp_secret=NULL, totp_pending=NULL, password_hash=?, salt=? WHERE id=?`)
+    .bind(`deleted-${id}@deleted.invalid`, now(), hash, salt, id),
+  db.prepare(`UPDATE audit_log SET actor_email='(탈퇴회원)' WHERE actor_id=?`).bind(id),
+];
 
 app.post('/register', async (c) => {
   const b = await c.req.json().catch(() => ({}));
@@ -32,6 +43,7 @@ app.post('/register', async (c) => {
     'INSERT INTO users (id,email,password_hash,salt,name,role,grade,phone,created_at,last_login_at) VALUES (?,?,?,?,?,?,?,?,?,?)'
   ).bind(id, email, hash, salt, name, role, String(b.grade || '').slice(0, 20) || null, String(b.phone || '').slice(0, 30) || null, now(), now()).run();
   await createSession(c, id, role);
+  await audit(c, 'user.register', id, { role, grade: b.grade || null, ua: String(c.req.header('user-agent') || '').slice(0, 120) }, { id, email });
   if (role === 'admin') await audit(c, 'admin.bootstrap', id, 'first administrator account', { id, email });
   c.executionCtx.waitUntil(sendMail(c.env, email, `[${c.env.SITE_NAME}] 가입을 환영합니다`, mailWelcome(c.env, name)));
   return c.json({ user: { id, email, name, role } });
@@ -43,14 +55,15 @@ app.post('/login', async (c) => {
   const key = `${email}|${c.req.header('cf-connecting-ip') || 'local'}`;
   const since = now() - 15 * 60000;
   const fails = await c.env.DB.prepare('SELECT COUNT(*) n FROM login_attempts WHERE key=? AND at>?').bind(key, since).first();
-  if (fails.n >= 8) return c.json({ error: '로그인 시도가 너무 많습니다. 15분 후 다시 시도해 주세요.' }, 429);
+  if (fails.n >= 8) { await audit(c, 'login.fail', null, { email: maskEmail(email), reason: 'locked' }, null); return c.json({ error: '로그인 시도가 너무 많습니다. 15분 후 다시 시도해 주세요.' }, 429); }
   const u = await c.env.DB.prepare('SELECT * FROM users WHERE email=?').bind(email).first();
   if (!u || !(await verifyPassword(String(b.password || ''), u.password_hash, u.salt))) {
     await c.env.DB.prepare('INSERT INTO login_attempts (key,at) VALUES (?,?)').bind(key, now()).run();
-    c.executionCtx.waitUntil(c.env.DB.prepare('DELETE FROM login_attempts WHERE at<?').bind(now() - 3600000).run());
+    c.executionCtx.waitUntil(c.env.DB.prepare('DELETE FROM login_attempts WHERE at<?').bind(now() - 3600000).run()); // throttle counters only; the attempt itself is in the activity log
+    await audit(c, 'login.fail', u?.id || null, { email: maskEmail(email), reason: u ? 'bad_password' : 'unknown_email' }, u ? { id: u.id, email: u.email } : null);
     return c.json({ error: '이메일 또는 비밀번호가 올바르지 않습니다.' }, 401);
   }
-  if (u.status !== 'active') return c.json({ error: '정지된 계정입니다. 관리자에게 문의하세요.' }, 403);
+  if (u.status !== 'active') { await audit(c, 'login.fail', u.id, { reason: 'suspended' }, u); return c.json({ error: '정지된 계정입니다. 관리자에게 문의하세요.' }, 403); }
   if (u.totp_secret) { // second factor
     if (!b.code) return c.json({ error: '인증 앱의 6자리 코드를 입력하세요.', need2fa: true }, 401);
     const step = await totpVerify(u.totp_secret, b.code, u.totp_last);
@@ -63,12 +76,12 @@ app.post('/login', async (c) => {
   }
   await c.env.DB.prepare('DELETE FROM login_attempts WHERE key=?').bind(key).run();
   await createSession(c, u.id, u.role);
-  if (u.role === 'admin') await audit(c, 'admin.login', u.id, String(c.req.header('user-agent') || '').slice(0, 120), u);
+  await audit(c, u.role === 'admin' ? 'admin.login' : 'login.success', u.id, { twofa: !!u.totp_secret, ua: String(c.req.header('user-agent') || '').slice(0, 120) }, u);
   await c.env.DB.prepare('UPDATE users SET last_login_at=? WHERE id=?').bind(now(), u.id).run();
   return c.json({ user: { id: u.id, email: u.email, name: u.name, role: u.role } });
 });
 
-app.post('/logout', async (c) => { await destroySession(c); return c.json({ ok: true }); });
+app.post('/logout', async (c) => { const u = await loadUser(c); if (u) await audit(c, 'logout', u.id); await destroySession(c); return c.json({ ok: true }); });
 
 app.get('/me', async (c) => c.json({ user: await loadUser(c) }));
 
@@ -77,6 +90,7 @@ app.patch('/me', requireUser, async (c) => {
   const u = c.get('user');
   await c.env.DB.prepare('UPDATE users SET name=?, grade=?, phone=? WHERE id=?')
     .bind(String(b.name || u.name).slice(0, 60), String(b.grade ?? u.grade ?? '').slice(0, 20) || null, String(b.phone ?? u.phone ?? '').slice(0, 30) || null, u.id).run();
+  await audit(c, 'profile.update', u.id, { fields: ['name', 'grade', 'phone'].filter((k) => b[k] !== undefined && String(b[k] ?? '') !== String(u[k] ?? '')) });
   return c.json({ ok: true });
 });
 
@@ -101,16 +115,9 @@ app.post('/delete', requireUser, async (c) => {
   const row = await c.env.DB.prepare('SELECT * FROM users WHERE id=?').bind(u.id).first();
   if (!(await verifyPassword(String(b.password || ''), row.password_hash, row.salt))) return c.json({ error: '비밀번호가 올바르지 않습니다.' }, 400);
   const { hash, salt } = await hashPassword(randomToken());
-  // Personal data is erased; paid orders are kept (anonymised) for the 5-year commerce-law retention.
-  await c.env.DB.batch([
-    c.env.DB.prepare('DELETE FROM audio_files WHERE attempt_id IN (SELECT id FROM attempts WHERE user_id=?)').bind(u.id), // recorded voice answers
-    c.env.DB.prepare('DELETE FROM answers WHERE attempt_id IN (SELECT id FROM attempts WHERE user_id=?)').bind(u.id),
-    c.env.DB.prepare('DELETE FROM attempts WHERE user_id=?').bind(u.id),
-    c.env.DB.prepare('DELETE FROM sessions WHERE user_id=?').bind(u.id),
-    c.env.DB.prepare('DELETE FROM reset_tokens WHERE user_id=?').bind(u.id),
-    c.env.DB.prepare(`UPDATE users SET email=?, name='탈퇴회원', phone=NULL, grade=NULL, status='suspended', password_hash=?, salt=? WHERE id=?`)
-      .bind(`deleted-${u.id}@deleted.invalid`, hash, salt, u.id),
-  ]);
+  // Personal data is erased; exam results, orders and the activity log are kept de-identified (commerce-law retention: 5 years).
+  await audit(c, 'account.delete', u.id, { by: 'self' });
+  await c.env.DB.batch(anonymizeUser(c.env.DB, u.id, hash, salt));
   deleteCookie(c, 'sid', { path: '/' });
   return c.json({ ok: true });
 });
@@ -121,6 +128,7 @@ app.post('/forgot', async (c) => {
   if (!(await turnstileOk(c, b['cf-turnstile-response']))) return c.json({ error: '자동 요청 방지 확인에 실패했습니다.' }, 400);
   if (await rateLimited(c.env, `forgot|${clientIp(c)}`, 10, 3600000)) return tooMany(c);
   const u = await c.env.DB.prepare('SELECT id FROM users WHERE email=?').bind(email).first();
+  await audit(c, 'password.reset_request', u?.id || null, { email: maskEmail(email), known: !!u }, u ? { id: u.id, email } : null);
   if (u && !(await rateLimited(c.env, `forgot-mail|${email}`, 3, 3600000))) { // at most 3 mails/hour per address
     const token = randomToken();
     await c.env.DB.prepare('INSERT INTO reset_tokens (token_hash,user_id,expires_at) VALUES (?,?,?)')
@@ -147,6 +155,12 @@ app.post('/reset', async (c) => {
   ]);
   await audit(c, 'password.reset', t.user_id, null, owner);
   return c.json({ ok: true });
+});
+
+/* ---- my own activity (logins, payments, exams ...) ---- */
+app.get('/activity', requireUser, async (c) => {
+  const { results } = await c.env.DB.prepare('SELECT action,target,detail,ip,at FROM audit_log WHERE actor_id=? ORDER BY at DESC LIMIT 100').bind(c.get('user').id).all();
+  return c.json({ events: results });
 });
 
 /* ---- signed-in devices ---- */

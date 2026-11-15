@@ -109,4 +109,22 @@ assert.equal((await u.get('/api/admin/security')).status, 403);
 
 // ---- disable 2FA (needs password + a fresh code; a wrong code is refused) ----
 assert.equal((await u.post('/api/auth/2fa/disable', { password: PW, code: '000000' })).status, 400);
+// ---- records: every event is logged, and the log cannot be altered ----
+const mine = (await u.get('/api/auth/activity')).events.map((e) => e.action);
+for (const a of ['user.register', 'login.success', '2fa.enable', 'session.revoke', 'order.create', 'order.paid']) assert.ok(mine.includes(a), `own activity has ${a}`);
+const all = await admin.get('/api/admin/logs?cat=exam');
+assert.ok(all.events.some((e) => e.action === 'exam.start') && all.events.some((e) => e.action === 'exam.finish') && all.events.some((e) => e.action === 'shared.view'), 'exam + share events');
+assert.ok(all.events.every((e) => /^(exam|share|shared)\./.test(e.action)), 'category filter');
+const fails = await admin.get(`/api/admin/logs?action=login.fail&q=${encodeURIComponent('tf***')}`);
+assert.ok(fails.events.length >= 0);
+const byEmail = await admin.get(`/api/admin/logs?q=${encodeURIComponent(email)}`);
+assert.ok(byEmail.events.length >= 5, 'search by e-mail');
+const adminEdit = (await admin.get('/api/admin/logs?cat=admin')).events.find((e) => e.target?.startsWith('/coupons') && e.action === 'admin.post');
+assert.match(adminEdit.detail, /"value":20/, 'admin change records what was changed');
+const csv = await fetch(BASE + '/api/admin/logs.csv?cat=pay', { headers: { cookie: admin.cookie } });
+assert.equal(csv.status, 200); assert.match(await csv.text(), /order\.paid/);
+const { execFileSync } = await import('node:child_process');
+const tryDelete = () => execFileSync('npx', ['wrangler', 'd1', 'execute', 'mocktest', '--local', '--command', 'DELETE FROM audit_log'], { stdio: 'pipe' });
+assert.throws(tryDelete, /append-only/, 'audit_log rows cannot be deleted');
+assert.throws(() => execFileSync('npx', ['wrangler', 'd1', 'execute', 'mocktest', '--local', '--command', "UPDATE audit_log SET action='x'"], { stdio: 'pipe' }), /append-only/, 'audit_log rows cannot be edited');
 console.log('SECURITY FEATURES OK');

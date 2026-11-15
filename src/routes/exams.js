@@ -3,6 +3,7 @@ import { uid, now, bufToB64, numEqual, randomToken, sha256hex } from '../lib/uti
 import { requireUser } from '../lib/auth.js';
 import { EXAMS, GRACE_MS, initialState, pickNext, sectionTarget, adaptDifficulty, scoreAttempt, getLevel, levelBank, levelForGrade } from '../lib/exam.js';
 import { sendMail, mailResult } from '../lib/email.js';
+import { audit, logEvent } from '../lib/security.js';
 
 const app = new Hono();
 app.use('*', requireUser);
@@ -78,6 +79,7 @@ app.post('/attempts', async (c) => {
     if (again) return c.json({ id: again.id, resumed: true });
     throw e;
   }
+  await audit(c, 'exam.start', id, { exam: examType, level: levelKey, entitlement: ent.id, trial: !!ent.id && u.role === 'admin' });
   return c.json({ id });
 });
 
@@ -100,6 +102,8 @@ async function finish(env, a, st) {
   const status = score.pendingManual ? 'submitted' : 'graded';
   await env.DB.prepare('UPDATE attempts SET status=?, score=?, state=?, finished_at=? WHERE id=?')
     .bind(status, JSON.stringify(score), JSON.stringify(st), now(), a.id).run();
+  const u = await env.DB.prepare('SELECT id,email FROM users WHERE id=?').bind(a.user_id).first();
+  await logEvent(env, { actor: u, action: 'exam.finish', target: a.id, detail: { exam: a.exam_type, level: st.level, status, score: score.headline ? `${score.headline.label} ${score.headline.value}` : score.overall ?? null, answered: results.length } });
   if (status === 'graded') await notifyResult(env, a);
 }
 export async function notifyResult(env, a) {
@@ -255,7 +259,7 @@ app.post('/attempts/:id/submit-section', async (c) => {
   if (a.status !== 'in_progress') return c.json({ status: 'finished' });
   const b = await c.req.json().catch(() => ({}));
   const st = JSON.parse(a.state);
-  if (Number.isInteger(b.section) && b.section === st.si) { await finalizeSection(c.env, a, st); nextSection(a, st); }
+  if (Number.isInteger(b.section) && b.section === st.si) { await finalizeSection(c.env, a, st); await audit(c, 'exam.section_submit', a.id, { exam: a.exam_type, section: EXAMS[a.exam_type].sections[st.si]?.key }); nextSection(a, st); }
   if (!(await ensureSection(c.env, a, st))) return c.json({ status: 'finished' });
   await c.env.DB.prepare('UPDATE attempts SET state=? WHERE id=?').bind(JSON.stringify(st), a.id).run();
   return c.json(await sectionView(c.env, a, st));
@@ -312,6 +316,7 @@ app.put('/attempts/:id/audio', async (c) => {
   const key = `${a.id}/${uid()}.webm`;
   await c.env.DB.prepare('INSERT INTO audio_files (key,attempt_id,content_type,data,created_at) VALUES (?,?,?,?,?)')
     .bind(key, a.id, ctype, bufToB64(buf), now()).run();
+  await audit(c, 'exam.audio_upload', a.id, { bytes: buf.byteLength });
   return c.json({ audioKey: key });
 });
 
@@ -344,7 +349,7 @@ app.get('/attempts/:id/report', async (c) => {
   if (!a) return c.json({ error: 'not found' }, 404);
   if (a.status === 'in_progress') return c.json({ error: '아직 진행 중인 시험입니다.' }, 409);
   const r = await buildReport(c.env, a);
-  if (a.user_id === c.get('user').id) r.shareCount = (await c.env.DB.prepare('SELECT COUNT(*) n FROM share_links WHERE attempt_id=? AND expires_at>?').bind(a.id, now()).first()).n;
+  if (a.user_id === c.get('user').id) r.shareCount = (await c.env.DB.prepare('SELECT COUNT(*) n FROM share_links WHERE attempt_id=? AND expires_at>? AND revoked_at IS NULL').bind(a.id, now()).first()).n;
   return c.json(r);
 });
 
@@ -358,12 +363,14 @@ app.post('/attempts/:id/share', async (c) => {
   const token = randomToken(24);
   await c.env.DB.prepare('INSERT INTO share_links (token_hash,attempt_id,user_id,expires_at,created_at) VALUES (?,?,?,?,?)')
     .bind(await sha256hex(token), a.id, a.user_id, now() + 14 * 86400000, now()).run();
+  await audit(c, 'share.create', a.id, { exam: a.exam_type, days: 14 });
   return c.json({ url: `${c.env.SITE_URL}/#/shared/${token}`, expiresAt: now() + 14 * 86400000 });
 });
 app.delete('/attempts/:id/share', async (c) => {
   const a = await loadAttempt(c);
   if (!a || a.user_id !== c.get('user').id) return c.json({ error: 'not found' }, 404);
-  await c.env.DB.prepare('DELETE FROM share_links WHERE attempt_id=?').bind(a.id).run();
+  await c.env.DB.prepare('UPDATE share_links SET revoked_at=?, expires_at=? WHERE attempt_id=? AND revoked_at IS NULL').bind(now(), now(), a.id).run(); // kept, just closed
+  await audit(c, 'share.revoke', a.id);
   return c.json({ ok: true });
 });
 

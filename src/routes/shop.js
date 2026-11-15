@@ -1,11 +1,11 @@
 import { Hono } from 'hono';
 import { uid, now } from '../lib/util.js';
 import { requireUser, loadUser } from '../lib/auth.js';
-import { rateLimited, tooMany } from '../lib/security.js';
+import { rateLimited, tooMany, audit } from '../lib/security.js';
 import { kcpEnabled, kcpRegister, kcpForm, kcpApprove, kcpCancel, kcpOrderId } from '../lib/kcp.js';
 import {
   fulfillOrder, stripeCreateCheckout, stripeVerify, stripeRetrieveSession,
-  portoneVerifyAndFulfill, portoneGetPayment, portoneVerifyWebhook, recheckOrder,
+  portoneVerifyAndFulfill, portoneGetPayment, portoneVerifyWebhook, recheckOrder, failOrder,
 } from '../lib/payments.js';
 
 const app = new Hono();
@@ -56,9 +56,14 @@ async function newOrder(c, productId, provider, couponCode) {
   return { user, product, order };
 }
 const orderProblem = (c, r) => r.limited ? tooMany(c) : r.couponError ? c.json({ error: r.couponError }, 400) : !r.product ? c.json({ error: '상품을 찾을 수 없습니다.' }, 404) : null;
-const insertOrder = (c, order, providerRef) => c.env.DB.prepare(
-  `INSERT INTO orders (id,user_id,product_id,provider,provider_ref,amount,currency,status,created_at,coupon,list_amount) VALUES (?,?,?,?,?,?,?,'pending',?,?,?)`
-).bind(order.id, order.user_id, order.product_id, order.provider, providerRef, order.amount, order.currency, order.created_at, order.coupon || null, order.list_amount);
+const insertOrder = (c, order, providerRef) => ({
+  run: async () => {
+    await c.env.DB.prepare(
+      `INSERT INTO orders (id,user_id,product_id,provider,provider_ref,amount,currency,status,created_at,coupon,list_amount) VALUES (?,?,?,?,?,?,?,'pending',?,?,?)`
+    ).bind(order.id, order.user_id, order.product_id, order.provider, providerRef, order.amount, order.currency, order.created_at, order.coupon || null, order.list_amount).run();
+    await audit(c, 'order.create', order.id, { provider: order.provider, product: order.product_id, amount: order.amount, currency: order.currency, list: order.list_amount, coupon: order.coupon || null });
+  },
+});
 
 app.post('/coupons/check', requireUser, async (c) => {
   if (await rateLimited(c.env, `coupon|${c.get('user').id}`, 20, 600000)) return tooMany(c);
@@ -105,7 +110,7 @@ app.post('/webhooks/stripe', async (c) => {
   if (o && (ev.type === 'checkout.session.completed' || ev.type === 'checkout.session.async_payment_succeeded')) {
     if (obj.payment_status === 'paid' && obj.amount_total === o.amount) await fulfillOrder(c.env, o.id, obj.id);
   } else if (o && (ev.type === 'checkout.session.expired' || ev.type === 'checkout.session.async_payment_failed')) {
-    await c.env.DB.prepare(`UPDATE orders SET status='failed' WHERE id=? AND status='pending'`).bind(o.id).run();
+    await failOrder(c.env, `o.id=? AND o.status='pending'`, [o.id], ev.type);
   }
   // Record the event only after it was handled: if handling threw, Stripe's retry must not be treated as a duplicate.
   await c.env.DB.prepare('INSERT OR IGNORE INTO webhook_events (id,created_at) VALUES (?,?)').bind(ev.id, now()).run();
@@ -146,7 +151,7 @@ app.post('/webhooks/portone', async (c) => {
     if (o) { const r = await portoneVerifyAndFulfill(c.env, o.id); if (r.error === '결제 조회 실패') return c.json({ error: 'lookup failed, retry' }, 503); }
   }
   if (paymentId && /Transaction\.(Failed|Cancelled)/.test(ev.type || '')) {
-    await c.env.DB.prepare(`UPDATE orders SET status='failed' WHERE provider='portone' AND provider_ref=? AND status IN ('pending','awaiting_deposit')`).bind(paymentId).run();
+    await failOrder(c.env, `o.provider='portone' AND o.provider_ref=? AND o.status IN ('pending','awaiting_deposit')`, [paymentId], ev.type);
   }
   return c.json({ ok: true });
 });
@@ -173,14 +178,14 @@ app.post('/pay/kcp/return', async (c) => {
   if (!o) return c.redirect(`${home}/#/pay/cancel`, 303);
   if (o.status === 'paid') return c.redirect(`${home}/#/pay/success?order=${o.id}&provider=kcp`, 303);
   if (b.res_cd !== '0000') {
-    await c.env.DB.prepare(`UPDATE orders SET status='failed' WHERE id=? AND status='pending'`).bind(o.id).run();
+    await failOrder(c.env, `o.id=? AND o.status='pending'`, [o.id], `kcp ${String(b.res_cd || '').slice(0, 10)}`);
     return c.redirect(`${home}/#/pay/cancel`, 303);
   }
   try {
     const a = await kcpApprove(c.env, b);
     if (!a.ok) throw new Error('approval refused');
     if (a.amount !== o.amount) { // never grant on a mismatching amount; try to void what KCP just approved
-      await c.env.DB.prepare(`UPDATE orders SET status='failed' WHERE id=?`).bind(o.id).run();
+      await failOrder(c.env, 'o.id=?', [o.id], `amount mismatch ${a.amount}≠${o.amount}`);
       if (a.tno) await kcpCancel(c.env, { tno: a.tno, reason: '금액 불일치 자동취소' }).catch(() => {});
       return c.redirect(`${home}/#/pay/cancel`, 303);
     }
@@ -200,7 +205,7 @@ app.get('/orders/:id/status', requireUser, async (c) => {
 });
 
 app.get('/orders', requireUser, async (c) => {
-  await c.env.DB.prepare(`UPDATE orders SET status='failed' WHERE status='pending' AND created_at<?`).bind(now() - 3 * 86400000).run(); // abandoned checkouts
+  await failOrder(c.env, `o.status='pending' AND o.created_at<?`, [now() - 3 * 86400000], 'abandoned (3 days)'); // abandoned checkouts
   const { results } = await c.env.DB.prepare(
     `SELECT o.id,o.provider,o.amount,o.currency,o.status,o.created_at,o.paid_at,p.title,
             (SELECT status FROM refund_requests r WHERE r.order_id=o.id) AS refund_status
@@ -223,6 +228,7 @@ app.post('/orders/:id/request-refund', requireUser, async (c) => {
   const r = await c.env.DB.prepare('INSERT OR IGNORE INTO refund_requests (id,order_id,user_id,reason,created_at) VALUES (?,?,?,?,?)')
     .bind(uid(), o.id, c.get('user').id, String(reason || '').slice(0, 500), now()).run();
   if (!r.meta.changes) return c.json({ error: '이미 환불 요청이 접수되었습니다.' }, 409);
+  await audit(c, 'refund.request', o.id, { reason: String(reason || '').slice(0, 200) });
   return c.json({ ok: true });
 });
 

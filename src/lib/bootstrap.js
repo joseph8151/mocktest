@@ -9,16 +9,24 @@ import m5 from '../../migrations/0005_admin_and_kcp.sql';
 import m6 from '../../migrations/0006_new_exams.sql';
 import m7 from '../../migrations/0007_integrity.sql';
 import m8 from '../../migrations/0008_security_features.sql';
+import m9 from '../../migrations/0009_records.sql';
 import seed from '../../seed/seed.json';
 
 // [name, sql, a table that exists once this migration has been applied]
 const MIGRATIONS = [['0001_init', m1, 'users'], ['0002_safety', m2, 'login_attempts'], ['0003_audio', m3, 'audio_files']];
 
-const statements = (sql) => sql.split('\n').map((l) => l.replace(/--.*$/, '')).join('\n').split(';').map((x) => x.trim()).filter(Boolean)
-  .map((x) => x.replace(/^CREATE TABLE /i, 'CREATE TABLE IF NOT EXISTS ').replace(/^CREATE INDEX /i, 'CREATE INDEX IF NOT EXISTS '));
+const statements = (sql) => {
+  const parts = sql.split('\n').map((l) => l.replace(/--.*$/, '')).join('\n').split(';').map((x) => x.trim()).filter(Boolean);
+  const out = [];
+  for (const x of parts) { // a trigger body (BEGIN ...; END) was split on its inner ';' — glue it back together
+    const last = out[out.length - 1];
+    if (last && /^CREATE TRIGGER/i.test(last) && !/\bEND$/i.test(last)) out[out.length - 1] = `${last}; ${x}`; else out.push(x);
+  }
+  return out.map((x) => x.replace(/^CREATE TABLE /i, 'CREATE TABLE IF NOT EXISTS ').replace(/^CREATE INDEX /i, 'CREATE INDEX IF NOT EXISTS ').replace(/^CREATE TRIGGER /i, 'CREATE TRIGGER IF NOT EXISTS '));
+};
 
 // One-time data updates, applied AFTER seeding (so a fresh database is not left with only these rows).
-const DATA_FIXES = [['0004_prices', m4], ['0005_admin_and_kcp', m5], ['0006_new_exams', m6], ['0007_integrity', m7], ['0008_security_features', m8]];
+const DATA_FIXES = [['0004_prices', m4], ['0005_admin_and_kcp', m5], ['0006_new_exams', m6], ['0007_integrity', m7], ['0008_security_features', m8], ['0009_records', m9]];
 
 let ready = null;
 export function ensureDb(env) {

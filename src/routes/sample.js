@@ -3,7 +3,7 @@ import { Hono } from 'hono';
 import { EXAMS } from '../lib/exam.js';
 import { buildReport } from './exams.js';
 import { sha256hex, now } from '../lib/util.js';
-import { clientIp, rateLimited, tooMany } from '../lib/security.js';
+import { clientIp, rateLimited, tooMany, audit } from '../lib/security.js';
 
 const app = new Hono();
 
@@ -50,9 +50,10 @@ app.get('/shared/:token', async (c) => {
   if (await rateLimited(c.env, `shared|${clientIp(c)}`, 60, 600000)) return tooMany(c);
   const token = c.req.param('token');
   if (!/^[0-9a-f]{48}$/.test(token)) return c.json({ error: '링크가 만료되었거나 공유가 중지되었습니다.' }, 404);
-  const link = await c.env.DB.prepare('SELECT attempt_id FROM share_links WHERE token_hash=? AND expires_at>?').bind(await sha256hex(token), now()).first();
+  const link = await c.env.DB.prepare('SELECT attempt_id FROM share_links WHERE token_hash=? AND expires_at>? AND revoked_at IS NULL').bind(await sha256hex(token), now()).first();
   const a = link && (await c.env.DB.prepare(`SELECT * FROM attempts WHERE id=? AND status!='in_progress'`).bind(link.attempt_id).first());
   if (!a) return c.json({ error: '링크가 만료되었거나 공유가 중지되었습니다.' }, 404);
+  await audit(c, 'shared.view', a.id, { ua: String(c.req.header('user-agent') || '').slice(0, 100) }, null); // who opened a parent link, and when
   return c.json(await buildReport(c.env, a, { shared: true }));
 });
 

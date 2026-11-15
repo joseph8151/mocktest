@@ -43,6 +43,25 @@ function botCheck() {
   } else document.getElementById('ts-js').addEventListener('load', draw);
   return box;
 }
+const ACTION_KO = {
+  'user.register': '회원가입', 'login.success': '로그인', 'admin.login': '관리자 로그인', 'login.fail': '로그인 실패', 'login.2fa_failed': '2단계 인증 실패', logout: '로그아웃',
+  'password.change': '비밀번호 변경', 'password.reset_request': '비밀번호 찾기 요청', 'password.reset': '비밀번호 재설정', 'profile.update': '회원정보 수정',
+  'account.delete': '탈퇴·삭제(익명화)', '2fa.enable': '2단계 인증 켬', '2fa.disable': '2단계 인증 끔', 'session.revoke': '기기 로그아웃', 'admin.bootstrap': '첫 관리자 생성',
+  'exam.start': '시험 시작', 'exam.section_submit': '영역 제출', 'exam.finish': '시험 종료', 'exam.audio_upload': '녹음 제출', 'share.create': '리포트 공유', 'share.revoke': '공유 중지', 'shared.view': '공유 리포트 열람',
+  'order.create': '결제 시작', 'order.paid': '결제 완료', 'order.failed': '결제 실패·취소', 'order.refunded': '환불 완료', 'refund.request': '환불 요청',
+  'admin.post': '관리자 작업', 'admin.patch': '관리자 수정', 'admin.put': '관리자 수정', 'admin.delete': '관리자 삭제', 'admin.get': '데이터 내보내기',
+};
+const actionTone = (a) => (/fail|delete|disable|revoke|refund/.test(a) ? 'bad' : /^order\.paid|success|register|enable|finish/.test(a) ? 'ok' : /^admin/.test(a) ? 'warn' : '');
+const fmtDetail = (d) => {
+  if (!d) return '';
+  let o; try { o = JSON.parse(d); } catch { return d; }
+  if (!o || typeof o !== 'object') return String(o);
+  const flat = (v) => (v && typeof v === 'object' ? Object.entries(v).map(([k, x]) => `${k}=${typeof x === 'object' && x ? JSON.stringify(x) : x}`).join(', ') : String(v));
+  return Object.entries(o).filter(([, v]) => v !== null && v !== '' && v !== undefined).map(([k, v]) => `${k}: ${flat(v)}`).join(' · ');
+};
+const logRows = (events, { who = true } = {}) => h('table', { class: 'logtable' }, h('tr', {}, ['시각', '활동', who ? '사용자' : null, '대상', 'IP', '내용'].filter(Boolean).map((x) => h('th', {}, x))),
+  events.map((l) => h('tr', {}, h('td', { class: 'small nowrap' }, date(l.at)), h('td', {}, h('span', { class: 'badge ' + actionTone(l.action) }, ACTION_KO[l.action] || l.action)),
+    who ? h('td', { class: 'small' }, l.actor_email || '-') : null, h('td', { class: 'mono small' }, l.target || ''), h('td', { class: 'mono small' }, l.ip || ''), h('td', { class: 'small muted' }, fmtDetail(l.detail)))));
 const resetBotCheck = () => { try { window.turnstile?.reset(); } catch {} };
 const copyText = async (t) => { try { await navigator.clipboard.writeText(t); toast('복사되었습니다.'); } catch { prompt('아래 주소를 복사하세요', t); } };
 const uaName = (ua = '') => `${/iPhone|iPad/.test(ua) ? 'iOS' : /Android/.test(ua) ? 'Android' : /Mac OS/.test(ua) ? 'Mac' : /Windows/.test(ua) ? 'Windows' : /Linux/.test(ua) ? 'Linux' : '기기'} · ${/Edg\//.test(ua) ? 'Edge' : /Chrome\//.test(ua) ? 'Chrome' : /Safari\//.test(ua) ? 'Safari' : /Firefox\//.test(ua) ? 'Firefox' : '브라우저'}`;
@@ -297,7 +316,7 @@ async function pageMe(q = {}) {
     charts.length ? h('div', { class: 'card' }, h('h3', {}, '성적 추이 (종합 추정 점수)'), h('div', { class: 'grid' }, charts)) : null,
     h('div', { class: 'card' }, h('h3', {}, '회원 정보'), prof, h('h3', {}, '비밀번호 변경'), pw),
     securityCard(q),
-    h('div', { class: 'card' }, h('h3', {}, '회원 탈퇴'), h('p', { class: 'muted small' }, '탈퇴하면 응시 기록·답안·녹음이 삭제되고 계정 정보가 익명화됩니다. 결제 기록은 법령에 따라 5년간 보관됩니다.'), del),
+    h('div', { class: 'card' }, h('h3', {}, '회원 탈퇴'), h('p', { class: 'muted small' }, '탈퇴하면 이름·이메일·연락처와 말하기 녹음이 삭제되고, 응시 결과·결제·활동 기록은 누구인지 알 수 없게 익명화되어 보관됩니다(전자상거래법에 따라 결제 기록 5년).'), del),
   );
 }
 
@@ -380,7 +399,9 @@ function securityCard(q = {}) {
       sessions.length > 1 ? h('p', {}, h('button', { class: 'btn sm danger', onclick: guard(async () => { await api('POST', '/auth/sessions/revoke', { all: true }); toast('다른 기기에서 모두 로그아웃했습니다.'); loadDevs(); }) }, '다른 기기 모두 로그아웃')) : null);
   });
   drawTfa(); loadDevs();
-  box.append(h('h4', {}, '2단계 인증'), tfa, h('h4', {}, '로그인된 기기'), h('p', { class: 'muted small' }, '모르는 기기가 있으면 로그아웃하고 비밀번호를 바꾸세요.'), devs);
+  const mine = h('details', { class: 'mylog', ontoggle: guard(async (e) => { if (!e.target.open || mine.dataset.loaded) return; mine.dataset.loaded = 1; const { events } = await api('GET', '/auth/activity'); mine.append(events.length ? h('div', { class: 'logbox' }, logRows(events, { who: false })) : h('p', { class: 'muted small' }, '기록이 없습니다.')); }) },
+    h('summary', {}, '내 활동 기록 보기 (로그인·시험·결제, 최근 100건)'));
+  box.append(h('h4', {}, '2단계 인증'), tfa, h('h4', {}, '로그인된 기기'), h('p', { class: 'muted small' }, '모르는 기기가 있으면 로그아웃하고 비밀번호를 바꾸세요.'), devs, h('h4', {}, '활동 기록'), mine);
   if (q.secure) setTimeout(() => box.scrollIntoView({ behavior: 'smooth' }), 300);
   return box;
 }
@@ -738,14 +759,14 @@ function renderReport(r, id) {
 }
 
 /* ---------- admin ---------- */
-const ADMIN_TABS = [['stats', '대시보드'], ['users', '회원'], ['orders', '주문'], ['products', '상품'], ['coupons', '쿠폰'], ['questions', '문제'], ['grading', '채점'], ['payments', '결제설정'], ['security', '보안']];
+const ADMIN_TABS = [['stats', '대시보드'], ['users', '회원'], ['orders', '주문'], ['products', '상품'], ['coupons', '쿠폰'], ['questions', '문제'], ['grading', '채점'], ['payments', '결제설정'], ['logs', '기록'], ['security', '보안']];
 async function pageAdmin(tab = 'stats') {
   if (!me || me.role !== 'admin') return (location.hash = '#/');
   const body = h('div', {});
   mount(h('h2', {}, '관리자'), h('div', { class: 'tabs' }, ADMIN_TABS.map(([k, l]) => h('button', { class: k === tab ? 'on' : '', onclick: () => (location.hash = `#/admin/${k}`) }, l))), body);
   document.querySelector('.tabs .on')?.scrollIntoView({ inline: 'center', block: 'nearest' }); // phones: keep the current tab visible
   window.scrollTo(0, 0);
-  await ({ stats: adminStats, users: adminUsers, orders: adminOrders, products: adminProducts, questions: adminQuestions, grading: adminGrading, payments: adminPayments, coupons: adminCoupons, security: adminSecurity }[tab] || adminStats)(body);
+  await ({ stats: adminStats, users: adminUsers, orders: adminOrders, products: adminProducts, questions: adminQuestions, grading: adminGrading, payments: adminPayments, coupons: adminCoupons, security: adminSecurity, logs: adminLogs }[tab] || adminStats)(body);
 }
 async function adminStats(b) {
   const s = await api('GET', '/admin/stats');
@@ -775,10 +796,34 @@ async function adminCoupons(b) {
       h('td', {}, h('button', { class: 'btn sm ' + (c.active ? 'alt' : ''), onclick: guard(async () => { await api('POST', `/admin/coupons/${encodeURIComponent(c.code)}/toggle`); pageAdmin('coupons'); }) }, c.active ? '중지' : '다시 사용')))))
       : h('p', { class: 'muted' }, '아직 쿠폰이 없습니다.')));
 }
+async function adminLogs(b) {
+  const f = h('form', { class: 'logfilter' },
+    h('input', { name: 'q', placeholder: '이메일 · IP · 주문/응시 ID · 내용 검색', class: 'grow' }),
+    h('select', { name: 'cat' }, [['', '전체 활동'], ['account', '로그인·계정'], ['exam', '시험·리포트'], ['pay', '결제·환불'], ['admin', '관리자 작업']].map(([v, l]) => h('option', { value: v }, l))),
+    h('input', { name: 'from', type: 'date', 'aria-label': '시작일' }), h('input', { name: 'to', type: 'date', 'aria-label': '종료일' }),
+    h('button', { class: 'btn sm' }, '검색'));
+  const list = h('div', {}), info = h('p', { class: 'small muted' }), more = h('button', { class: 'btn sm alt', hidden: true }, '더 보기');
+  const csv = h('a', { class: 'btn sm alt' }, 'CSV 다운로드');
+  let before = null, rows = [];
+  const params = () => { const d = Object.fromEntries(new FormData(f)); return new URLSearchParams(Object.fromEntries(Object.entries(d).filter(([, v]) => v))); };
+  const load = guard(async (reset) => {
+    const qs = params(); if (!reset && before) qs.set('before', before);
+    const r = await api('GET', '/admin/logs?' + qs);
+    rows = reset ? r.events : rows.concat(r.events); before = rows.length ? rows[rows.length - 1].at : null;
+    list.replaceChildren(rows.length ? logRows(rows) : h('p', { class: 'muted' }, '조건에 맞는 기록이 없습니다.'));
+    info.textContent = `전체 ${r.total.toLocaleString()}건 중 ${rows.length.toLocaleString()}건 표시`; more.hidden = !r.more;
+    csv.href = '/api/admin/logs.csv?' + params();
+  });
+  f.addEventListener('submit', (e) => { e.preventDefault(); load(true); });
+  more.addEventListener('click', () => load(false));
+  b.append(h('div', { class: 'card' }, h('div', { class: 'kicker' }, 'Records'), h('h3', {}, '활동 기록'),
+    h('p', { class: 'muted small' }, '가입·로그인(실패 포함)·시험 시작/제출/종료·결제/실패/환불·리포트 공유와 열람·관리자의 모든 변경이 시간순으로 남습니다. 기록은 수정·삭제할 수 없게 데이터베이스에서 잠겨 있습니다.'),
+    f, h('div', { class: 'row', style: 'justify-content:space-between;margin:10px 0' }, info, csv), list, h('p', {}, more)));
+  await load(true);
+}
 async function adminSecurity(b) {
   const s = await api('GET', '/admin/security');
   const chk = (ok, label, fix) => h('tr', {}, h('td', {}, h('span', { class: 'badge ' + (ok ? 'ok' : 'warn') }, ok ? '정상' : '확인 필요')), h('td', {}, label), h('td', { class: 'small muted' }, ok ? '' : fix));
-  const actionName = { 'admin.login': '관리자 로그인', 'login.2fa_failed': '2단계 인증 실패', 'password.change': '비밀번호 변경', 'password.reset': '비밀번호 재설정', '2fa.enable': '2단계 인증 켬', '2fa.disable': '2단계 인증 끔', 'session.revoke': '기기 로그아웃', 'admin.bootstrap': '첫 관리자 생성', 'admin.post': '관리자 변경', 'admin.patch': '관리자 수정', 'admin.put': '관리자 수정', 'admin.delete': '관리자 삭제', 'admin.get': '데이터 내보내기' };
   b.append(
     h('div', { class: 'card' }, h('h3', {}, '보안 점검'), h('table', {},
       chk(s.checks.adminsWithout2fa === 0, '모든 관리자 2단계 인증', `${s.checks.adminsWithout2fa}명이 2단계 인증을 켜지 않았습니다. 각자 내 시험 → 로그인 보안에서 켜세요.`),
@@ -788,8 +833,8 @@ async function adminSecurity(b) {
       h('p', { class: 'small muted' }, '항상 켜져 있는 보호: 보안 헤더(CSP·HSTS·클릭재킹 차단), 동일 출처 확인(CSRF), 로그인·가입·쿠폰·결제 요청 횟수 제한, 흔한 비밀번호 차단, 관리자 세션 12시간 만료, 서버 금액 검증, 관리자 작업 기록.')),
     h('div', { class: 'card' }, h('h3', {}, '관리자 계정'), h('table', {}, s.admins.map((a) => h('tr', {}, h('td', {}, a.name), h('td', {}, a.email), h('td', {}, h('span', { class: 'badge ' + (a.twofa ? 'ok' : 'warn') }, a.twofa ? '2FA 사용' : '2FA 꺼짐')), h('td', {}, date(a.last_login_at)))))),
     s.failedLoginsByIp.length ? h('div', { class: 'card' }, h('h3', {}, '최근 1시간 로그인 실패 (IP별)'), h('table', {}, s.failedLoginsByIp.map((x) => h('tr', {}, h('td', { class: 'mono' }, x.ip), h('td', {}, `${x.n}회`))))) : null,
-    h('div', { class: 'card' }, h('h3', {}, '활동 기록'), h('p', { class: 'muted small' }, '관리자 변경 작업, 데이터 내보내기, 로그인·비밀번호·2단계 인증 관련 기록 (최근 300건).'),
-      h('table', {}, h('tr', {}, ['시각', '작업', '대상', '사용자', 'IP', '결과'].map((x) => h('th', {}, x))), s.log.map((l) => h('tr', {}, h('td', { class: 'small' }, date(l.at)), h('td', {}, actionName[l.action] || l.action), h('td', { class: 'mono small' }, l.target || ''), h('td', { class: 'small' }, l.actor_email || '-'), h('td', { class: 'mono small' }, l.ip || ''), h('td', { class: 'small' }, l.detail || ''))))));
+    h('div', { class: 'card' }, h('div', { class: 'row', style: 'justify-content:space-between' }, h('h3', {}, '최근 보안 관련 기록'), h('a', { class: 'btn sm alt', href: '#/admin/logs' }, '전체 기록 보기 →')),
+      logRows(s.log.filter((l) => /^(login|admin\.login|password|2fa|session|account)/.test(l.action)).slice(0, 30))));
 }
 async function adminUsers(b) {
   const q = h('input', { placeholder: '이메일/이름 검색', class: 'grow' }); const list = h('div', {});
@@ -811,10 +856,11 @@ async function userDetail(id) {
     h('div', { class: 'row' },
       h('button', { class: 'btn sm ' + (d.user.status === 'active' ? 'danger' : ''), onclick: guard(async () => { await api('PATCH', '/admin/users/' + id, { status: d.user.status === 'active' ? 'suspended' : 'active' }); close(); toast('변경됨'); pageAdmin('users'); }) }, d.user.status === 'active' ? '계정 정지' : '정지 해제'),
       h('button', { class: 'btn sm alt', onclick: guard(async () => { await api('PATCH', '/admin/users/' + id, { role: d.user.role === 'admin' ? 'student' : 'admin' }); close(); pageAdmin('users'); }) }, d.user.role === 'admin' ? '관리자 해제' : '관리자 지정'),
-      h('button', { class: 'btn sm danger', onclick: guard(async () => { if (confirm('이 회원과 모든 기록을 삭제할까요?')) { await api('DELETE', '/admin/users/' + id); close(); pageAdmin('users'); } }) }, '삭제')),
+      h('button', { class: 'btn sm danger', onclick: guard(async () => { if (confirm('이 회원의 개인정보(이름·이메일·연락처)를 지우고 탈퇴 처리할까요?\n응시 결과·결제·활동 기록은 익명으로 보존됩니다.')) { await api('DELETE', '/admin/users/' + id); close(); pageAdmin('users'); } }) }, '탈퇴 처리')),
     h('h4', {}, '이용권 수동 지급'), h('div', { class: 'row' }, sel, h('button', { class: 'btn sm', onclick: guard(async () => { await api('POST', `/admin/users/${id}/grant`, { productId: sel.value }); close(); userDetail(id); }) }, '지급')),
     h('h4', {}, '이용권'), h('table', {}, d.entitlements.map((e) => h('tr', {}, h('td', {}, e.exam_type), h('td', {}, `${e.attempts_used}/${e.attempts_total}`), h('td', {}, date(e.expires_at)), h('td', {}, e.revoked ? '회수됨' : '')))),
     h('h4', {}, '주문'), h('table', {}, d.orders.map((o) => h('tr', {}, h('td', {}, o.title), h('td', {}, o.provider), h('td', {}, money(o.amount, o.currency)), h('td', {}, o.status)))),
+    h('h4', {}, '활동 기록'), d.activity.length ? h('div', { class: 'logbox' }, logRows(d.activity, { who: false })) : h('p', { class: 'muted small' }, '기록 없음'),
     h('h4', {}, '응시'), h('table', {}, d.attempts.map((a) => h('tr', {}, h('td', {}, a.exam_type), h('td', {}, date(a.started_at)), h('td', {}, a.status), h('td', {}, h('a', { href: `#/report/${a.id}`, onclick: close }, '리포트'))))),
     h('p', {}, h('button', { class: 'btn alt sm', onclick: close }, '닫기'))));
   document.body.append(m);
@@ -910,7 +956,7 @@ const LEGAL = {
   privacy: ['개인정보처리방침', (c) => [
     ['1. 수집 항목', '필수: 이름, 이메일, 비밀번호(암호화 저장). 선택: 학년, 연락처. 서비스 이용 과정에서 응시 기록(답안, 소요 시간, 점수)과 결제 기록이 생성되며, 말하기 시험 시 음성 녹음이 수집됩니다.'],
     ['2. 이용 목적', '회원 관리, 이용권 제공, 시험 채점 및 결과 리포트 제공, 결제·환불 처리, 고객 문의 대응, 서비스 개선.'],
-    ['3. 보유 기간', '회원 탈퇴 시 지체 없이 파기합니다. 단, 전자상거래법에 따라 계약·결제 기록 5년, 소비자 불만·분쟁 기록 3년은 보관합니다.'],
+    ['3. 보유 기간', '회원 탈퇴 시 이름·이메일·연락처·말하기 녹음은 지체 없이 파기합니다. 응시 결과·답안과 서비스 이용 기록(접속·로그인·결제·시험 활동 기록, 접속 IP)은 개인을 알아볼 수 없게 익명화하여 서비스 운영·부정 이용 방지·분쟁 대응을 위해 보관합니다. 전자상거래법에 따라 계약·결제 기록 5년, 소비자 불만·분쟁 기록 3년은 반드시 보관합니다.'],
     ['4. 제3자 제공 및 처리위탁', '결제 처리를 위해 포트원 및 결제대행사, Stripe에 결제에 필요한 정보를 전달하며, 서버·저장소는 Cloudflare, 이메일 발송은 Resend를 통해 처리됩니다. 이 외에는 법령에 근거한 경우를 제외하고 동의 없이 제공하지 않습니다.'],
     ['5. 이용자의 권리', '회원은 언제든지 개인정보 열람·정정·삭제·처리정지를 요청할 수 있으며, 아래 문의처로 연락하면 지체 없이 처리합니다.'],
     ['6. 아동의 개인정보', '만 14세 미만 아동의 개인정보는 법정대리인의 동의를 받아 수집합니다.'],

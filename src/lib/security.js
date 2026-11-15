@@ -19,14 +19,34 @@ export async function rateLimited(env, key, max, windowMs) {
 }
 export const tooMany = (c, msg = '요청이 너무 많습니다. 잠시 후 다시 시도해 주세요.') => c.json({ error: msg }, 429);
 
-/** Append-only audit trail of security-relevant and admin actions. Never stores passwords or codes. */
-export async function audit(c, action, target = null, detail = null, actor = undefined) {
-  const u = actor === undefined ? c.get('user') : actor;
+/**
+ * Activity log (append-only, enforced by DB triggers). Every login, exam, payment and admin action lands here.
+ * detail may be a string or an object (stored as JSON, max 2,000 chars). Never pass passwords, codes or tokens.
+ */
+export async function logEvent(env, { actor = null, action, target = null, detail = null, ip = null }) {
   try {
-    await c.env.DB.prepare('INSERT INTO audit_log (id,actor_id,actor_email,action,target,detail,ip,at) VALUES (?,?,?,?,?,?,?,?)')
-      .bind(uid(), u?.id || null, u?.email || null, action, target, detail ? String(detail).slice(0, 500) : null, clientIp(c), now()).run();
-  } catch (e) { console.error('audit', e); }
+    const d = detail == null ? null : (typeof detail === 'string' ? detail : JSON.stringify(detail)).slice(0, 2000);
+    await env.DB.prepare('INSERT INTO audit_log (id,actor_id,actor_email,action,target,detail,ip,at) VALUES (?,?,?,?,?,?,?,?)')
+      .bind(uid(), actor?.id || null, actor?.email || null, action, target ? String(target).slice(0, 200) : null, d, ip, now()).run();
+  } catch (e) { console.error('logEvent', action, e); } // logging must never break the request
 }
+export function audit(c, action, target = null, detail = null, actor = undefined) {
+  const u = actor === undefined ? c.get('user') : actor;
+  return logEvent(c.env, { actor: u, action, target, detail, ip: clientIp(c) });
+}
+/** Strip secrets from a request body before it is written to the log. */
+export function redact(obj) {
+  if (!obj || typeof obj !== 'object') return obj;
+  const out = Array.isArray(obj) ? [] : {};
+  for (const [k, v] of Object.entries(obj)) {
+    if (/pass|secret|token|code|key|cert/i.test(k)) out[k] = '[redacted]';
+    else if (typeof v === 'string') out[k] = v.length > 200 ? v.slice(0, 200) + '…' : v;
+    else if (v && typeof v === 'object') out[k] = Array.isArray(v) ? `[${v.length} items]` : redact(v);
+    else out[k] = v;
+  }
+  return out;
+}
+export const maskEmail = (e) => { const [l, d] = String(e || '').split('@'); return d ? `${l.slice(0, 2)}***@${d}` : null; };
 
 /* ---------------- password policy ---------------- */
 const COMMON = new Set(['password', 'password1', 'password123', '12345678', '123456789', '1234567890', 'qwerty123', 'qwertyuiop', '11111111', '00000000', 'abcd1234', '1q2w3e4r', '1q2w3e4r5t', 'iloveyou', 'asdf1234', 'qwer1234', 'admin123', 'letmein1', 'zxcvbnm1', '87654321', 'aaaaaaaa']);

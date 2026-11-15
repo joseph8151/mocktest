@@ -1,5 +1,6 @@
 import { now, uid, b64, unb64, hmacSha256, timingSafeEqual, hex } from './util.js';
 import { sendMail, mailReceipt } from './email.js';
+import { logEvent } from './security.js';
 
 /** Idempotently mark an order paid and grant the entitlement. */
 export async function fulfillOrder(env, orderId, providerRef) {
@@ -17,8 +18,18 @@ export async function fulfillOrder(env, orderId, providerRef) {
     `INSERT OR IGNORE INTO entitlements (id,user_id,product_id,order_id,exam_type,attempts_total,expires_at,created_at)
      VALUES (?,?,?,?,?,?,?,?)`
   ).bind(uid(), o.user_id, o.product_id, o.id, o.exam_type, o.attempts, now() + o.valid_days * 86400000, now()).run();
+  await logEvent(env, { actor: { id: o.user_id, email: o.email }, action: 'order.paid', target: o.id, detail: { provider: o.provider, amount: o.amount, currency: o.currency, product: o.product_id, coupon: o.coupon || null } });
   await sendMail(env, o.email, `[${env.SITE_NAME}] 결제 완료`, mailReceipt(env, o.name, o.title, o.amount, o.currency));
   return true;
+}
+
+/** Mark an order failed and log why (webhooks have no signed-in user: the order's owner is recorded). */
+export async function failOrder(env, where, binds, reason, ip = null) {
+  const rows = (await env.DB.prepare(`SELECT o.id,o.user_id,u.email FROM orders o JOIN users u ON u.id=o.user_id WHERE ${where}`).bind(...binds).all()).results;
+  for (const o of rows) {
+    await env.DB.prepare(`UPDATE orders SET status='failed' WHERE id=?`).bind(o.id).run();
+    await logEvent(env, { actor: { id: o.user_id, email: o.email }, action: 'order.failed', target: o.id, detail: { reason }, ip });
+  }
 }
 
 const stripeBase = (env) => env.STRIPE_API_BASE || 'https://api.stripe.com';
@@ -122,7 +133,7 @@ export async function portoneVerifyAndFulfill(env, orderId) {
   }
   if (pay.status !== 'PAID') return { ok: false, error: `결제 상태: ${pay.status}` };
   if (pay.amount?.total !== order.amount || pay.currency !== order.currency) {
-    await env.DB.prepare(`UPDATE orders SET status='failed' WHERE id=?`).bind(order.id).run();
+    await failOrder(env, 'o.id=?', [order.id], `amount mismatch ${pay.amount?.total}≠${order.amount}`);
     await portoneCancel(env, order.provider_ref, '금액 불일치 자동취소').catch(() => {}); // never keep money we will not honour
     return { ok: false, error: '결제 금액이 일치하지 않습니다.' };
   }
@@ -139,12 +150,12 @@ export async function recheckOrder(env, order) {
       if (r.pending) return { status: 'awaiting_deposit', account: r.account };
       if (!r.ok && r.error?.startsWith('결제 상태: ')) {
         const st = r.error.slice(7);
-        if (['FAILED', 'CANCELLED', 'PARTIAL_CANCELLED'].includes(st)) await env.DB.prepare(`UPDATE orders SET status='failed' WHERE id=? AND status!='paid'`).bind(order.id).run();
+        if (['FAILED', 'CANCELLED', 'PARTIAL_CANCELLED'].includes(st)) await failOrder(env, `o.id=? AND o.status NOT IN ('paid','failed')`, [order.id], `portone ${st}`);
       }
     } else if (order.provider === 'stripe') {
       const s = await stripeRetrieveSession(env, order.provider_ref);
       if (s.payment_status === 'paid' && s.amount_total === order.amount) await fulfillOrder(env, order.id, order.provider_ref);
-      else if (s.status === 'expired') await env.DB.prepare(`UPDATE orders SET status='failed' WHERE id=? AND status='pending'`).bind(order.id).run();
+      else if (s.status === 'expired') await failOrder(env, `o.id=? AND o.status='pending'`, [order.id], 'stripe session expired');
     }
   } catch (e) { console.error('recheck failed', e); return { status: order.status, error: '결제사 조회에 실패했습니다. 잠시 후 다시 시도해 주세요.' }; }
   const fresh = await env.DB.prepare('SELECT status FROM orders WHERE id=?').bind(order.id).first();

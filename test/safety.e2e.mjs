@@ -47,4 +47,8 @@ assert.equal((await new C().post('/api/auth/login', { email: `deleted-${uid}@del
 const ord = (await admin.get('/api/admin/orders')).orders.find((x) => x.id === `rf${stamp}`);
 assert.ok(ord && !ord.email.includes(email.split('@')[0]), 'order kept, email anonymised');
 assert.equal((await admin.post('/api/auth/delete', { password: 'Mock-test-2026' })).status, 400, 'admin cannot self-delete');
+const gone = await admin.get('/api/admin/users/' + uid);
+assert.equal(gone.user.name, '탈퇴회원'); assert.ok(gone.attempts.length >= 1, 'exam results kept (de-identified)');
+assert.equal((await fetch(BASE + '/api/admin/audio/' + encodeURIComponent(audioKey), { headers: { cookie: admin.cookie } })).status, 404, 'voice recordings deleted');
+assert.ok(gone.activity.some((l) => l.action === 'account.delete') && gone.activity.every((l) => !l.actor_email || l.actor_email === '(탈퇴회원)' || l.actor_email.endsWith('@deleted.invalid') || l.actor_email.startsWith('admin')), 'log kept, e-mail masked');
 console.log('SAFETY OK');

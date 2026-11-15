@@ -348,3 +348,13 @@ button.choice{width:100%;text-align:left;font:inherit;color:inherit;cursor:point
 @media (pointer:coarse){.hide-touch{display:none}}
 @media (max-width:700px){.exam-foot .btn{flex:1}.exam-foot{gap:10px}}
 @media (max-width:400px){.btn.lg{white-space:normal;max-width:100%;padding-left:18px;padding-right:18px}}
+
+/* activity log */
+.logfilter{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.logfilter input[type=date]{width:auto}
+.logtable td{vertical-align:top}.logtable .nowrap{white-space:nowrap}
+.logbox{max-height:320px;overflow:auto;border:1px solid var(--rule)}
+details.mylog summary{cursor:pointer;font-weight:600;padding:6px 0}
+@media (max-width:640px){.logfilter>*{flex:1 1 100%}.logfilter input[type=date]{flex:1 1 calc(50% - 4px)}.logtable td:first-child{flex-basis:auto;font-weight:500}}
+.logfilter input.grow{flex:1 1 280px;width:auto;min-width:0}.logfilter select{flex:0 1 180px;width:auto}.logfilter input[type=date]{flex:0 1 160px;min-width:0}
+@media (min-width:641px){.logtable td:nth-child(5){white-space:nowrap}}
+@media (max-width:640px){.logfilter input.grow,.logfilter select,.logfilter .btn{flex:1 1 100%}.logfilter input[type=date]{flex:1 1 calc(50% - 4px)}}
