@@ -1,6 +1,6 @@
 import { Hono } from 'hono';
 import { uid, now } from '../lib/util.js';
-import { requireUser, loadUser } from '../lib/auth.js';
+import { requireUser, loadUser, accountGate } from '../lib/auth.js';
 import { rateLimited, tooMany, audit } from '../lib/security.js';
 import { kcpEnabled, kcpRegister, kcpForm, kcpApprove, kcpCancel, kcpOrderId } from '../lib/kcp.js';
 import {
@@ -13,6 +13,7 @@ const app = new Hono();
 app.get('/config', async (c) => c.json({
   site: c.env.SITE_NAME,
   turnstile: c.env.TURNSTILE_SITE_KEY && c.env.TURNSTILE_SECRET ? c.env.TURNSTILE_SITE_KEY : null,
+  kakao: !!c.env.KAKAO_REST_KEY,
   notice: (await c.env.DB.prepare(`SELECT value FROM settings WHERE key='notice'`).first())?.value || null,
   biz: { name: c.env.BIZ_NAME || '(상호명 입력)', owner: c.env.BIZ_OWNER || '(대표자명)', regNo: c.env.BIZ_REG_NO || '(사업자등록번호)', salesNo: c.env.BIZ_SALES_NO || '(통신판매업 신고번호)', address: c.env.BIZ_ADDRESS || '(사업장 주소)', contact: c.env.BIZ_CONTACT || '(고객센터 이메일/전화)' },
 }));
@@ -42,9 +43,10 @@ export async function applyCoupon(env, code, product) {
   return { coupon: cp.code, krw, usd, label: cp.kind === 'percent' ? `${cp.value}% 할인` : `${cp.value.toLocaleString()}원 할인` };
 }
 
-async function newOrder(c, productId, provider, couponCode) {
+async function newOrder(c, productId, provider, couponCode, gift = false) {
   const user = c.get('user');
   if (await rateLimited(c.env, `checkout|${user.id}`, 30, 600000)) return { limited: true };
+  const gate = accountGate(c.env, user); if (gate) return { gate };
   const product = await c.env.DB.prepare(`SELECT * FROM products WHERE id=?1 AND (active=1 OR (?2 AND id='p-test'))`).bind(productId, user.role === 'admin' ? 1 : 0).first();
   if (!product) return {};
   const price = await applyCoupon(c.env, couponCode, product);
@@ -52,16 +54,16 @@ async function newOrder(c, productId, provider, couponCode) {
   const currency = provider === 'stripe' ? 'USD' : 'KRW';
   const amount = provider === 'stripe' ? price.usd : price.krw;
   const list = provider === 'stripe' ? product.price_usd_cents : product.price_krw;
-  const order = { id: uid(), user_id: user.id, product_id: product.id, provider, amount, currency, created_at: now(), coupon: price.coupon, list_amount: list };
+  const order = { id: uid(), user_id: user.id, product_id: product.id, provider, amount, currency, created_at: now(), coupon: price.coupon, list_amount: list, gift: gift && product.id !== 'p-test' ? 1 : 0 };
   return { user, product, order };
 }
-const orderProblem = (c, r) => r.limited ? tooMany(c) : r.couponError ? c.json({ error: r.couponError }, 400) : !r.product ? c.json({ error: '상품을 찾을 수 없습니다.' }, 404) : null;
+const orderProblem = (c, r) => r.limited ? tooMany(c) : r.gate ? c.json(r.gate, 403) : r.couponError ? c.json({ error: r.couponError }, 400) : !r.product ? c.json({ error: '상품을 찾을 수 없습니다.' }, 404) : null;
 const insertOrder = (c, order, providerRef) => ({
   run: async () => {
     await c.env.DB.prepare(
-      `INSERT INTO orders (id,user_id,product_id,provider,provider_ref,amount,currency,status,created_at,coupon,list_amount) VALUES (?,?,?,?,?,?,?,'pending',?,?,?)`
-    ).bind(order.id, order.user_id, order.product_id, order.provider, providerRef, order.amount, order.currency, order.created_at, order.coupon || null, order.list_amount).run();
-    await audit(c, 'order.create', order.id, { provider: order.provider, product: order.product_id, amount: order.amount, currency: order.currency, list: order.list_amount, coupon: order.coupon || null });
+      `INSERT INTO orders (id,user_id,product_id,provider,provider_ref,amount,currency,status,created_at,coupon,list_amount,gift) VALUES (?,?,?,?,?,?,?,'pending',?,?,?,?)`
+    ).bind(order.id, order.user_id, order.product_id, order.provider, providerRef, order.amount, order.currency, order.created_at, order.coupon || null, order.list_amount, order.gift).run();
+    await audit(c, 'order.create', order.id, { provider: order.provider, product: order.product_id, amount: order.amount, currency: order.currency, list: order.list_amount, coupon: order.coupon || null, gift: !!order.gift });
   },
 });
 
@@ -77,8 +79,8 @@ app.post('/coupons/check', requireUser, async (c) => {
 /* ---- Stripe ---- */
 app.post('/pay/stripe/checkout', requireUser, async (c) => {
   if (!c.env.STRIPE_SECRET_KEY) return c.json({ error: 'Stripe가 설정되지 않았습니다.' }, 503);
-  const { productId, coupon } = await c.req.json().catch(() => ({}));
-  const r = await newOrder(c, productId, 'stripe', coupon); const bad = orderProblem(c, r); if (bad) return bad;
+  const { productId, coupon, gift } = await c.req.json().catch(() => ({}));
+  const r = await newOrder(c, productId, 'stripe', coupon, !!gift); const bad = orderProblem(c, r); if (bad) return bad;
   const { user, product, order } = r;
   const session = await stripeCreateCheckout(c.env, { order, product, user });
   await insertOrder(c, order, session.id).run();
@@ -120,8 +122,8 @@ app.post('/webhooks/stripe', async (c) => {
 /* ---- PortOne V2 ---- */
 app.post('/pay/portone/prepare', requireUser, async (c) => {
   if (!c.env.PORTONE_API_SECRET || !c.env.PORTONE_STORE_ID) return c.json({ error: '포트원이 설정되지 않았습니다.' }, 503);
-  const { productId, coupon } = await c.req.json().catch(() => ({}));
-  const r = await newOrder(c, productId, 'portone', coupon); const bad = orderProblem(c, r); if (bad) return bad;
+  const { productId, coupon, gift } = await c.req.json().catch(() => ({}));
+  const r = await newOrder(c, productId, 'portone', coupon, !!gift); const bad = orderProblem(c, r); if (bad) return bad;
   const { user, product, order } = r;
   const paymentId = `pay-${order.id}`;
   await insertOrder(c, order, paymentId).run();
@@ -159,9 +161,9 @@ app.post('/webhooks/portone', async (c) => {
 /* ---- KCP direct ("표준웹") ---- */
 app.post('/pay/kcp/register', requireUser, async (c) => {
   if (!kcpEnabled(c.env)) return c.json({ error: 'KCP가 설정되지 않았습니다.' }, 503);
-  const { productId, payMethod, coupon } = await c.req.json().catch(() => ({}));
+  const { productId, payMethod, coupon, gift } = await c.req.json().catch(() => ({}));
   if (payMethod === 'VIRTUAL_ACCOUNT') return c.json({ error: 'KCP 직접결제는 가상계좌를 지원하지 않습니다. 카드·계좌이체·휴대폰을 이용해 주세요.' }, 400); // would need KCP's deposit notification
-  const r = await newOrder(c, productId, 'kcp', coupon); const bad = orderProblem(c, r); if (bad) return bad;
+  const r = await newOrder(c, productId, 'kcp', coupon, !!gift); const bad = orderProblem(c, r); if (bad) return bad;
   const { product, order } = r;
   const ordr = kcpOrderId(order.id), retUrl = `${c.env.SITE_URL}/api/pay/kcp/return`;
   await insertOrder(c, order, ordr).run();

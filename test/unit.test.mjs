@@ -51,3 +51,13 @@ test('fixed-form selection ramps difficulty instead of taking only the easiest',
   assert.ok(Math.max(...diffs) >= 4, `hardest picked: ${Math.max(...diffs)}`);
   assert.ok(diffs[0] <= 2 && diffs[15] >= 4);
 });
+
+import { accountGate } from '../src/lib/auth.js';
+test('account gate: consent for under-14, e-mail verification only when mail is configured', () => {
+  const env = { RESEND_API_KEY: 'x' };
+  assert.equal(accountGate(env, { role: 'student', under14: 1, consent_at: null, email_verified_at: 1 }).code, 'guardian_consent');
+  assert.equal(accountGate(env, { role: 'student', under14: 0, email_verified_at: null }).code, 'verify_email');
+  assert.equal(accountGate({}, { role: 'student', under14: 0, email_verified_at: null }), null, 'no mail service: no verification gate');
+  assert.equal(accountGate(env, { role: 'admin', under14: 1 }), null);
+  assert.equal(accountGate(env, { role: 'student', parent_id: 'p', under14: 1 }), null, 'child profile: consent given by the parent account');
+});

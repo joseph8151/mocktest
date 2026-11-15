@@ -21,7 +21,7 @@ function h(tag, attrs, ...kids) {
 const api = async (method, path, body) => {
   const r = await fetch('/api' + path, { method, headers: body ? { 'content-type': 'application/json' } : {}, body: body ? JSON.stringify(body) : undefined });
   const j = await r.json().catch(() => ({}));
-  if (!r.ok) { const e = new Error(j.error || `오류 (${r.status})`); e.status = r.status; e.data = j; throw e; }
+  if (!r.ok) { const e = new Error(j.error || `오류 (${r.status})`); e.status = r.status; e.data = j; if (j.lockedElsewhere && location.hash.startsWith('#/exam/')) setTimeout(route, 30); throw e; }
   return j;
 };
 const toast = (m) => { const t = document.getElementById('toast'); t.textContent = m; t.hidden = false; clearTimeout(toast.t); toast.t = setTimeout(() => (t.hidden = true), 3000); };
@@ -72,8 +72,11 @@ function renderNav() {
     h('button', { class: 'menu-toggle', 'aria-label': '메뉴', onclick: (e) => { e.stopPropagation(); $nav.classList.toggle('open'); } }, h('span'), h('span'), h('span')),
     h('a', { href: '#/' }, '시험 상품'),
     ...(me ? [
-      h('a', { class: 'keep', href: '#/me' }, '내 시험'),
+      h('a', { class: 'keep', href: '#/me' }, me.isChild ? `내 시험 (${me.name})` : '내 시험'),
+      h('a', { href: '#/practice' }, '연습'),
       h('a', { href: '#/mistakes' }, '오답노트'),
+      me.role === 'teacher' ? h('a', { href: '#/classes' }, '내 반') : null,
+      me.isChild ? null : h('a', { href: '#/support' }, '문의'),
       me.role === 'admin' ? h('a', { href: '#/admin' }, '관리자') : null,
       h('button', { onclick: guard(async () => { await api('POST', '/auth/logout'); me = null; renderNav(); location.hash = '#/'; }) }, `로그아웃 (${me.name})`),
     ] : [h('a', { class: 'keep', href: '#/login' }, '로그인'), h('a', { class: 'cta', href: '#/register' }, '시작하기')]),
@@ -165,7 +168,7 @@ function buy(p, payment) {
   const methodBtns = PAY_METHODS.map(([k, l]) => h('button', { type: 'button', class: 'btn alt sm' + (k === method ? ' on' : ''), onclick: (e) => { method = k; methodBtns.forEach((b) => b.classList.toggle('sel', b === e.currentTarget)); } }, l));
   methodBtns[0].classList.add('sel');
   // Coupon: checked server-side, the discounted price is shown on the pay buttons and re-validated when the order is created.
-  let coupon = null;
+  let coupon = null, gift = false;
   const priceKs = [], priceU = h('span', {}, money(p.price_usd_cents, 'USD'));
   const newPriceK = () => { const x = h('span', {}, money(p.price_krw, 'KRW')); priceKs.push(x); return x; };
   const showPrice = (r) => { // r = coupon check result, or null for list price
@@ -185,9 +188,10 @@ function buy(p, payment) {
     h('div', { class: 'kicker' }, 'Checkout'), h('h3', {}, p.title), h('p', { class: 'muted small' }, `${p.attempts}회 응시 · ${p.valid_days}일 이내 사용`),
     shown.length ? h('div', {}, h('label', {}, '결제 수단'), h('div', { class: 'row paymethods' }, methodBtns)) : null,
     shown.length || payment.stripe ? cpBox : null,
+    (shown.length || payment.stripe) && p.id !== 'p-test' ? h('label', { class: 'giftchk' }, h('input', { type: 'checkbox', style: 'width:auto', onchange: (e) => (gift = e.target.checked) }), ' 선물하기 — 이용권 대신 ', h('b', {}, '선물 코드'), '를 이메일로 받습니다') : null,
     h('div', { class: 'row', style: 'margin-top:18px' },
-      shown.map(([k, l], i) => h('button', { class: 'btn', onclick: guard(once(() => (k === 'kcp' ? payKcp(p, method, coupon) : payPortone(p, close, method, coupon)))) }, me.role === 'admin' ? l + ' · ' : '', newPriceK())),
-      payment.stripe ? h('button', { class: 'btn alt', onclick: guard(once(() => payStripe(p, coupon))) }, 'International card · ', priceU) : null,
+      shown.map(([k, l], i) => h('button', { class: 'btn', onclick: guard(once(() => (k === 'kcp' ? payKcp(p, method, coupon, gift) : payPortone(p, close, method, coupon, gift)))) }, me.role === 'admin' ? l + ' · ' : '', newPriceK())),
+      payment.stripe ? h('button', { class: 'btn alt', onclick: guard(once(() => payStripe(p, coupon, gift))) }, 'International card · ', priceU) : null,
     ),
     !shown.length && !payment.stripe ? (me.role === 'admin'
       ? h('div', { class: 'notice' }, h('b', {}, '결제 수단이 아직 연결되지 않았습니다.'), h('p', { class: 'small' }, 'PG사(포트원·KCP·Stripe)에서 받은 키를 Cloudflare 대시보드 → Workers → mocktest → Settings → Variables and Secrets에 넣으면 이 창에 결제 버튼이 나타납니다.'), h('a', { class: 'btn sm', href: '#/admin/payments', onclick: close }, '결제설정 보기 →'))
@@ -196,15 +200,15 @@ function buy(p, payment) {
   ));
   document.body.append(modal);
 }
-async function payStripe(p, coupon) { const { url } = await api('POST', '/pay/stripe/checkout', { productId: p.id, coupon }); location.href = url; }
-async function payKcp(p, method, coupon) {
+async function payStripe(p, coupon, gift) { const { url } = await api('POST', '/pay/stripe/checkout', { productId: p.id, coupon, gift }); location.href = url; }
+async function payKcp(p, method, coupon, gift) {
   if (method === 'VIRTUAL_ACCOUNT') throw new Error('KCP 직접결제는 가상계좌를 지원하지 않습니다. 다른 결제 수단을 선택해 주세요.');
-  const { form } = await api('POST', '/pay/kcp/register', { productId: p.id, payMethod: method, coupon });
+  const { form } = await api('POST', '/pay/kcp/register', { productId: p.id, payMethod: method, coupon, gift });
   const f = h('form', { method: form.method, action: form.action, style: 'display:none' }, Object.entries(form.fields).map(([k, v]) => h('input', { type: 'hidden', name: k, value: v })));
   document.body.append(f); f.submit();
 }
-async function payPortone(p, close, method = 'CARD', coupon) {
-  const o = await api('POST', '/pay/portone/prepare', { productId: p.id, coupon });
+async function payPortone(p, close, method = 'CARD', coupon, gift) {
+  const o = await api('POST', '/pay/portone/prepare', { productId: p.id, coupon, gift });
   if (!window.PortOne) await new Promise((res, rej) => { const s = h('script', { src: 'https://cdn.portone.io/v2/browser-sdk.js' }); s.onload = res; s.onerror = () => rej(new Error('결제 모듈을 불러오지 못했습니다.')); document.head.append(s); });
   const req = {
     storeId: o.storeId, channelKey: o.channelKey, paymentId: o.paymentId, orderName: o.orderName, totalAmount: o.totalAmount,
@@ -241,9 +245,9 @@ async function pagePaySuccess(q) {
   mount(h('div', { class: 'card intro' }, h('h2', {}, '결제 처리 중'), h('p', {}, '결제 승인이 지연되고 있습니다. 잠시 후 “내 시험”에서 확인해 주세요.'), h('a', { class: 'btn', href: '#/me' }, '내 시험')));
 }
 
-function authForm(kind) {
+function authForm(kind, q = {}) {
   const reg = kind === 'register';
-  const err = h('div', { class: 'err' });
+  const err = h('div', { class: 'err' }, q.msg || '');
   const codeBox = h('div', { hidden: true }, field('2단계 인증 코드 (인증 앱의 6자리)', h('input', { name: 'code', inputmode: 'numeric', autocomplete: 'one-time-code', maxlength: 6, pattern: '[0-9]{6}' })));
   const f = h('form', { onsubmit: async (e) => {
     e.preventDefault(); err.textContent = '';
@@ -262,9 +266,16 @@ function authForm(kind) {
     field('이메일', h('input', { name: 'email', type: 'email', required: true, autocomplete: 'email' })),
     field('비밀번호' + (reg ? ' (8자 이상, 영문+숫자 섞어서)' : ''), h('input', { name: 'password', type: 'password', required: true, minlength: reg ? 8 : 1, autocomplete: reg ? 'new-password' : 'current-password' })),
     reg ? field('학년 (선택)', h('input', { name: 'grade', placeholder: '예: G5' })) : null,
+    reg ? (() => {
+      const g = h('div', { hidden: true }, field('보호자(부모님) 이메일', h('input', { name: 'guardian_email', type: 'email', placeholder: '동의 요청 메일을 보냅니다' })),
+        h('p', { class: 'small muted' }, '만 14세 미만은 법에 따라 보호자 동의가 필요합니다. 보호자가 메일의 링크에서 동의하면 결제·응시를 할 수 있습니다.'));
+      return h('div', { class: 'under14' }, h('label', {}, h('input', { type: 'checkbox', name: 'under14', style: 'width:auto', onchange: (e) => { g.hidden = !e.target.checked; g.querySelector('input').required = e.target.checked; } }), ' 만 14세 미만입니다'), g,
+        h('p', { class: 'small muted' }, '부모님이 자녀 여러 명을 관리하려면 부모님 이름으로 가입한 뒤 ', h('b', {}, '내 시험 → 자녀 프로필'), '에서 추가하세요. 자녀는 따로 가입할 필요가 없습니다.'));
+    })() : null,
     reg ? h('label', {}, h('input', { type: 'checkbox', name: 'agree', required: true, style: 'width:auto' }), ' ', h('a', { href: '#/terms', target: '_blank' }, '이용약관'), ' 및 ', h('a', { href: '#/privacy', target: '_blank' }, '개인정보처리방침'), '에 동의합니다. (만 14세 미만은 보호자 동의 필요)') : null,
     reg ? null : codeBox, reg ? botCheck() : null,
     err, h('button', { class: 'btn' }, reg ? '가입하기' : '로그인'),
+    cfg.kakao ? h('a', { class: 'btn kakao', href: '/api/auth/kakao/start' }, h('span', { class: 'kk' }, '●'), reg ? ' 카카오로 3초 만에 시작하기' : ' 카카오로 로그인') : null,
     h('p', { class: 'small' }, reg ? h('a', { href: '#/login' }, '이미 계정이 있나요?') : [h('a', { href: '#/register' }, '회원가입'), ' · ', h('a', { href: '#/forgot' }, '비밀번호 찾기')]),
   );
   return h('div', { class: 'auth' },
@@ -302,8 +313,13 @@ async function pageMe(q = {}) {
     pageMe();
   });
   const refund = guard(async (o) => { const reason = prompt('환불 사유를 입력해 주세요 (선택)') ; if (reason === null) return; await api('POST', `/orders/${o.id}/request-refund`, { reason }); toast('환불 요청이 접수되었습니다.'); pageMe(); });
+  const gateBox = gateBanner();
+  const extra = me.isChild ? [] : [giftCard(), joinClassCard()];
   mount(
+    me.isChild ? childBanner() : null,
+    gateBox,
     h('h2', {}, `안녕하세요, ${me.name}님`),
+    me.isChild ? null : h('div', { class: 'quicklinks' }, [['#/family', '👨‍👩‍👧', '자녀 프로필', '자녀별 이용권·성적 관리'], ['#/practice', '✎', '영역별 연습', '약한 유형만 집중 연습'], me.role === 'teacher' ? ['#/classes', '🏫', '내 반', '학생 성적·이용권 관리'] : ['#/support', '✉', '1:1 문의', '결제·시험·계정 문의']].map(([href, ic, t, d]) => h('a', { href, class: 'ql' }, h('i', {}, ic), h('b', {}, t), h('span', {}, d)))),
     h('div', { class: 'card' }, h('h3', {}, '내 이용권'), ov.entitlements.length ? h('table', {}, h('tr', {}, h('th', {}, '상품'), h('th', {}, '남은 횟수'), h('th', {}, '만료'), h('th', {})),
       ov.entitlements.map((e) => h('tr', {}, h('td', {}, e.title), h('td', {}, e.trial ? h('span', { class: 'badge' }, '관리자 체험') : `${e.remaining}/${e.attempts_total}`), h('td', {}, e.expired ? h('span', { class: 'badge bad' }, '만료') : date(e.expires_at)),
         h('td', {}, e.remaining > 0 && !e.expired ? h('button', { class: 'btn sm', onclick: () => start(e.exam_type) }, '시험 시작') : null)))) : h('p', { class: 'muted' }, '이용권이 없습니다. ', h('a', { href: '#/' }, '시험 상품 보러가기'))),
@@ -315,7 +331,8 @@ async function pageMe(q = {}) {
     me.role === 'admin' ? h('div', { class: 'card' }, h('div', { class: 'kicker' }, 'Admin'), h('h3', {}, '관리자 체험 응시'), h('p', { class: 'muted small' }, '결제 없이 모든 시험을 직접 풀어 볼 수 있습니다. (횟수 제한 없음)'), h('div', { class: 'row' }, exams.map((x) => h('button', { class: 'btn sm alt', onclick: () => chooseLevel(x, false) }, x.type === 'TOEFLJ' ? 'TOEFL Jr' : x.type)))) : null,
     charts.length ? h('div', { class: 'card' }, h('h3', {}, '성적 추이 (종합 추정 점수)'), h('div', { class: 'grid' }, charts)) : null,
     h('div', { class: 'card' }, h('h3', {}, '회원 정보'), prof, h('h3', {}, '비밀번호 변경'), pw),
-    securityCard(q),
+    ...extra,
+    me.isChild ? null : securityCard(q),
     h('div', { class: 'card' }, h('h3', {}, '회원 탈퇴'), h('p', { class: 'muted small' }, '탈퇴하면 이름·이메일·연락처와 말하기 녹음이 삭제되고, 응시 결과·결제·활동 기록은 누구인지 알 수 없게 익명화되어 보관됩니다(전자상거래법에 따라 결제 기록 5년).'), del),
   );
 }
@@ -370,6 +387,180 @@ const SCORE_HELP = {
   WIDA: 'Level 1(Entering) → 6(Reaching). 종합 레벨은 영역별 가중 평균입니다. 쓰기·말하기는 채점 후 표시됩니다.',
 };
 
+function gateBanner() {
+  if (me.gate === 'verify_email') {
+    const out = h('span', { class: 'small' });
+    return h('div', { class: 'notice' }, h('b', {}, '이메일 인증이 필요합니다.'), h('p', { class: 'small' }, `${me.email}로 보낸 인증 링크를 눌러 주세요. 인증 후 결제와 응시를 할 수 있습니다.`),
+      h('div', { class: 'row' }, h('button', { class: 'btn sm', onclick: guard(async () => { await api('POST', '/auth/verify/resend'); out.textContent = '인증 메일을 다시 보냈습니다. 스팸함도 확인해 주세요.'; }) }, '인증 메일 다시 받기'), out));
+  }
+  if (me.gate === 'guardian_consent') {
+    const g = h('input', { type: 'email', class: 'grow', placeholder: '보호자 이메일', value: '' });
+    const out = h('span', { class: 'small' });
+    return h('div', { class: 'notice' }, h('b', {}, '보호자 동의를 기다리고 있습니다.'), h('p', { class: 'small' }, `만 14세 미만 회원은 보호자 동의 후 결제·응시를 할 수 있습니다. ${me.guardianEmail ? `동의 요청을 ${me.guardianEmail}로 보냈습니다.` : ''} 메일이 오지 않았다면 다시 보내거나 다른 보호자 이메일을 입력하세요.`),
+      h('div', { class: 'row' }, g, h('button', { class: 'btn sm', onclick: guard(async () => { await api('POST', '/auth/consent/resend', { guardian_email: g.value || undefined }); out.textContent = '동의 요청 메일을 보냈습니다.'; }) }, '동의 요청 보내기'), out));
+  }
+  return null;
+}
+function childBanner() {
+  return h('div', { class: 'childbar' }, h('span', {}, '👧 ', h('b', {}, me.name), ' 프로필로 이용 중'),
+    me.actingParent ? h('button', { class: 'btn sm alt', onclick: guard(async () => {
+      const pw = prompt('보호자 계정 비밀번호를 입력하세요'); if (!pw) return;
+      await api('POST', '/family/switch-back', { password: pw }); me = (await api('GET', '/auth/me')).user; renderNav(); location.hash = '#/family';
+    }) }, '보호자 계정으로 돌아가기') : null);
+}
+function giftCard() {
+  const inp = h('input', { class: 'grow', placeholder: 'GIFT-XXXX-XXXX', style: 'text-transform:uppercase;font-family:var(--mono)' });
+  const mine = h('div', {});
+  api('GET', '/gift/mine').then(({ codes }) => { if (codes.length) mine.replaceChildren(h('h4', {}, '내가 산 선물 코드'), h('table', {}, codes.map((g) => h('tr', {}, h('td', { class: 'mono' }, g.code), h('td', {}, g.title),
+    h('td', {}, g.revoked ? h('span', { class: 'badge bad' }, '취소됨') : g.redeemed_at ? h('span', { class: 'badge ok' }, `사용됨${g.redeemed_name ? ' · ' + g.redeemed_name : ''}`) : h('span', { class: 'badge' }, '미사용')),
+    h('td', {}, !g.redeemed_at && !g.revoked ? h('button', { class: 'btn sm alt', onclick: () => copyText(g.code) }, '복사') : null))))); }).catch(() => {});
+  return h('div', { class: 'card' }, h('h3', {}, '선물 코드 등록'), h('p', { class: 'muted small' }, '선물 받은 코드를 입력하면 이용권이 바로 지급됩니다.'),
+    h('form', { class: 'row', onsubmit: guard(async (e) => { e.preventDefault(); const r = await api('POST', '/gift/redeem', { code: inp.value }); toast(`${r.title} 이용권이 지급되었습니다.`); pageMe(); }) }, inp, h('button', { class: 'btn sm' }, '등록')), mine);
+}
+function joinClassCard() {
+  const inp = h('input', { class: 'grow', placeholder: '반 코드 6자리', maxlength: 6, style: 'text-transform:uppercase;font-family:var(--mono)' });
+  const list = h('div', {});
+  api('GET', '/classes').then(({ joined }) => { if (joined.length) list.replaceChildren(h('table', {}, joined.map((k) => h('tr', {}, h('td', {}, k.name), h('td', { class: 'small muted' }, `${k.teacher} 선생님`),
+    h('td', {}, h('button', { class: 'btn sm alt', onclick: guard(async () => { if (!confirm(`${k.name} 반에서 나갈까요? 선생님이 더 이상 내 성적을 볼 수 없습니다.`)) return; await api('POST', `/classes/${k.id}/leave`); pageMe(); }) }, '나가기')))))); }).catch(() => {});
+  return h('div', { class: 'card' }, h('h3', {}, '학원·반 참여'), h('p', { class: 'muted small' }, '선생님께 받은 반 코드를 입력하면 선생님이 내 시험 결과를 보고 이용권을 나눠 줄 수 있습니다.'),
+    h('form', { class: 'row', onsubmit: guard(async (e) => { e.preventDefault(); const r = await api('POST', '/classes/join', { code: inp.value }); toast(`${r.name} 반에 참여했습니다.`); pageMe(); }) }, inp, h('button', { class: 'btn sm' }, '참여')), list);
+}
+
+/* ---------- family ---------- */
+async function pageFamily() {
+  if (!me) return (location.hash = '#/login');
+  if (me.isChild) return (location.hash = '#/me');
+  const [{ children }, { tickets }] = await Promise.all([api('GET', '/family'), api('GET', '/tickets/mine')]);
+  const add = h('form', { class: 'row', onsubmit: guard(async (e) => { e.preventDefault(); await api('POST', '/family/children', { name: add.n.value, grade: add.g.value }); toast('자녀 프로필을 추가했습니다.'); pageFamily(); }) },
+    h('input', { name: 'n', class: 'grow', placeholder: '자녀 이름', required: true, maxlength: 40 }), h('input', { name: 'g', class: 'grow', placeholder: '학년 (예: G4, K)' }), h('button', { class: 'btn sm' }, '자녀 추가'));
+  const giveForm = (kid) => {
+    if (!tickets.length) return h('p', { class: 'small muted' }, '나눠 줄 이용권이 없습니다. 시험 상품을 구매하면 자녀에게 나눠 줄 수 있습니다.');
+    const sel = h('select', {}, tickets.map((t) => h('option', { value: t.id }, `${t.title} (남은 ${t.left}회)`)));
+    const n = h('input', { type: 'number', min: 1, value: 1, style: 'width:80px' });
+    return h('div', { class: 'row' }, sel, n, h('button', { class: 'btn sm', onclick: guard(async () => { await api('POST', '/tickets/transfer', { entitlementId: sel.value, toUserId: kid.id, count: +n.value }); toast(`${kid.name}에게 이용권을 줬습니다.`); pageFamily(); }) }, '이용권 주기'));
+  };
+  mount(h('div', { class: 'kicker' }, 'Family'), h('h2', {}, '자녀 프로필'),
+    h('p', { class: 'muted' }, '부모님 계정 하나로 자녀 여러 명의 이용권과 성적을 관리합니다. 결제는 부모님 계정에서 하고, 이용권을 자녀에게 나눠 주세요. 자녀는 “이 프로필로 전환”을 눌러 직접 응시합니다.'),
+    h('div', { class: 'card' }, h('h3', {}, '자녀 추가'), add, h('p', { class: 'small muted' }, '자녀 프로필을 만들면 보호자 동의가 완료된 것으로 기록됩니다. 자녀 결과 메일은 부모님 이메일로 갑니다.')),
+    children.length ? children.map((k) => h('div', { class: 'card kid' },
+      h('div', { class: 'row', style: 'justify-content:space-between' }, h('h3', { style: 'margin:0' }, k.name, k.grade ? h('span', { class: 'muted small' }, ` · ${k.grade}`) : null),
+        h('button', { class: 'btn sm', onclick: guard(async () => { await api('POST', '/family/switch', { childId: k.id }); me = (await api('GET', '/auth/me')).user; renderNav(); location.hash = '#/me'; }) }, '이 프로필로 전환 →')),
+      h('h4', {}, '이용권'), k.tickets.length ? h('table', {}, k.tickets.map((t) => h('tr', {}, h('td', {}, t.title), h('td', {}, `${t.attempts_total - t.attempts_used}/${t.attempts_total}회 남음`), h('td', { class: 'small muted' }, `~${date(t.expires_at)}`)))) : h('p', { class: 'small muted' }, '이용권 없음'),
+      giveForm(k),
+      h('h4', {}, '최근 시험'), k.attempts.length ? h('table', {}, k.attempts.map((a) => h('tr', {}, h('td', {}, a.exam_type), h('td', {}, date(a.started_at)), h('td', {}, a.headline ?? (a.status === 'in_progress' ? '진행 중' : '-')), h('td', {}, a.status !== 'in_progress' ? h('a', { href: `#/report/${a.id}` }, '리포트') : null)))) : h('p', { class: 'small muted' }, '아직 응시 기록이 없습니다.'))) : h('div', { class: 'card' }, h('p', { class: 'muted' }, '등록된 자녀가 없습니다.')));
+}
+
+/* ---------- classes (teacher) ---------- */
+async function pageClasses(id) {
+  if (!me) return (location.hash = '#/login');
+  if (me.role !== 'teacher' && me.role !== 'admin') return mount(h('div', { class: 'card intro' }, h('div', { class: 'big' }, 'For schools'), h('h2', {}, '학원·기관 계정'), h('p', {}, '반을 만들고 학생 성적을 한눈에 보려면 선생님 계정이 필요합니다. 1:1 문의(기관·단체)로 신청해 주세요.'), h('a', { class: 'btn', href: '#/support?cat=기관·단체' }, '기관 계정 신청')));
+  if (id) return pageClassDetail(id);
+  const { teaching } = await api('GET', '/classes');
+  const f = h('form', { class: 'row', onsubmit: guard(async (e) => { e.preventDefault(); const r = await api('POST', '/classes', { name: f.n.value }); toast(`반을 만들었습니다. 코드: ${r.code}`); pageClasses(); }) }, h('input', { name: 'n', class: 'grow', placeholder: '반 이름 (예: 토요 SSAT 반)', required: true }), h('button', { class: 'btn sm' }, '반 만들기'));
+  mount(h('div', { class: 'kicker' }, 'Classes'), h('h2', {}, '내 반'), h('p', { class: 'muted' }, '학생에게 반 코드를 알려 주면 학생이 내 시험 → 학원·반 참여에서 입력합니다. 구매한 이용권을 학생에게 나눠 주고, 결과와 시험 중 화면 이탈 기록을 확인할 수 있습니다.'),
+    h('div', { class: 'card' }, f),
+    teaching.length ? h('div', { class: 'card' }, h('table', {}, h('tr', {}, ['반', '코드', '학생', ''].map((x) => h('th', {}, x))), teaching.map((k) => h('tr', { class: k.archived ? 'muted' : '' }, h('td', {}, h('a', { href: `#/classes/${k.id}` }, k.name), k.archived ? ' (보관됨)' : ''), h('td', { class: 'mono' }, k.code), h('td', {}, `${k.members}명`),
+      h('td', {}, h('button', { class: 'btn sm alt', onclick: guard(async () => { await api('POST', `/classes/${k.id}/archive`); pageClasses(); }) }, k.archived ? '다시 열기' : '보관')))))) : null);
+}
+async function pageClassDetail(id) {
+  const [{ class: k, members }, { tickets }] = await Promise.all([api('GET', `/classes/${id}`), api('GET', '/tickets/mine')]);
+  const pick = new Set();
+  const sel = h('select', {}, tickets.map((t) => h('option', { value: t.id }, `${t.title} (남은 ${t.left}회)`)));
+  const give = guard(async () => {
+    if (!pick.size) return toast('학생을 선택하세요.');
+    for (const uid of pick) await api('POST', '/tickets/transfer', { entitlementId: sel.value, toUserId: uid, count: 1 });
+    toast(`${pick.size}명에게 1회씩 나눠 줬습니다.`); pageClassDetail(id);
+  });
+  const flags = (a) => { const i = a.integrity ? JSON.parse(a.integrity) : {}; const n = (i.leave || 0) + (i.copy || 0) + (i.device_switch || 0); return n ? h('span', { class: 'badge warn', title: JSON.stringify(i) }, `이탈 ${n}`) : null; };
+  mount(h('a', { href: '#/classes', class: 'small' }, '← 내 반'), h('h2', {}, k.name), h('p', {}, '반 코드 ', h('b', { class: 'mono' }, k.code), ' ', h('button', { class: 'btn sm alt', onclick: () => copyText(k.code) }, '복사')),
+    tickets.length ? h('div', { class: 'card row' }, h('span', {}, '선택한 학생에게 1회씩:'), sel, h('button', { class: 'btn sm', onclick: give }, '이용권 나눠 주기')) : h('p', { class: 'small muted' }, '나눠 줄 이용권이 없습니다. 시험 상품을 구매하면 학생에게 나눠 줄 수 있습니다(대량 구매는 1:1 문의).'),
+    members.length ? h('div', { class: 'card' }, h('table', {}, h('tr', {}, ['', '학생', '남은 이용권', '최근 결과', ''].map((x) => h('th', {}, x))), members.map((m) => h('tr', {},
+      h('td', {}, h('input', { type: 'checkbox', style: 'width:auto', onchange: (e) => (e.target.checked ? pick.add(m.id) : pick.delete(m.id)) })),
+      h('td', {}, m.name, m.grade ? h('span', { class: 'small muted' }, ` · ${m.grade}`) : null),
+      h('td', { class: 'small' }, m.tickets.filter((t) => t.left > 0).map((t) => `${t.exam_type} ${t.left}`).join(' · ') || '-'),
+      h('td', { class: 'small' }, m.attempts.slice(0, 3).map((a) => h('div', {}, h('a', { href: `#/report/${a.id}` }, `${a.exam_type} ${a.headline ?? ''}`), ' ', h('span', { class: 'muted' }, date(a.finished_at)), ' ', flags(a)))),
+      h('td', {}, h('button', { class: 'btn sm alt', onclick: guard(async () => { if (!confirm(`${m.name} 학생을 반에서 뺄까요?`)) return; await api('POST', `/classes/${id}/remove`, { userId: m.id }); pageClassDetail(id); }) }, '빼기')))))) : h('div', { class: 'card' }, h('p', { class: 'muted' }, '아직 참여한 학생이 없습니다. 반 코드를 알려 주세요.')));
+}
+
+/* ---------- practice ---------- */
+async function pagePractice(q = {}) {
+  if (!me) return (location.hash = '#/login');
+  const { exams, stats } = await api('GET', '/practice/options');
+  if (!exams.length) return mount(h('div', { class: 'card intro' }, h('div', { class: 'big' }, 'Practice'), h('h2', {}, '영역별 연습'), h('p', {}, '구매(또는 선물·나눠 받은) 시험의 영역별 문제를 시간 제한 없이 풀고 바로 채점받는 연습 모드입니다.'), h('a', { class: 'btn', href: '#/' }, '시험 상품 보기')));
+  const ex = h('select', {}, exams.map((e) => h('option', { value: e.type, selected: e.type === q.exam }, e.title)));
+  const sec = h('select', {}); const diff = h('select', {}, [['0', '난이도 전체'], ['1', '1 (쉬움)'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5 (어려움)']].map(([v, l]) => h('option', { value: v }, l)));
+  const fill = () => sec.replaceChildren(...exams.find((e) => e.type === ex.value).sections.map((s) => h('option', { value: s.key, selected: s.key === q.section }, s.name)));
+  ex.addEventListener('change', fill); fill();
+  const area = h('div', {});
+  const stat = (e, sk) => { const r = stats.find((x) => x.exam_type === e && x.section === sk); return r ? `${r.ok}/${r.n} (${Math.round((r.ok / r.n) * 100)}%)` : '-'; };
+  const start = guard(async () => {
+    const { questions } = await api('GET', `/practice/questions?exam=${ex.value}&section=${sec.value}&diff=${diff.value}`);
+    let ok = 0, done = 0; const score = h('b', {}, '0 / 0');
+    area.replaceChildren(h('div', { class: 'row sticky-score' }, h('span', {}, '이번 세트 ', score), h('button', { class: 'btn sm alt', onclick: start }, '새 10문항')),
+      ...[].concat(questions.length ? questions.map((qq, i) => {
+        const expl = h('p', { class: 'small', hidden: true });
+        const box = h('div', { class: 'card' }, h('div', { class: 'small muted' }, `${i + 1}. 난이도 ${qq.difficulty}`), qq.passage ? h('div', { class: 'passage' }, qq.passage) : null, qq.image_svg ? h('img', { class: 'qimg', src: svgUri(qq.image_svg), alt: '' }) : null, h('b', {}, qq.stem));
+        const mark = (r) => { done++; if (r.correct) ok++; score.textContent = `${ok} / ${done}`; box.classList.add(r.correct ? 'good' : 'wrong'); expl.hidden = false; expl.replaceChildren(h('b', {}, r.correct ? '정답! ' : '오답 '), r.accepted ? `정답: ${r.accepted.join(' 또는 ')} · ` : '', r.explanation || ''); };
+        if (qq.kind === 'num') {
+          const inp = h('input', { class: 'gridin', inputmode: 'decimal' });
+          const go = h('button', { class: 'btn sm', onclick: guard(async () => { go.disabled = inp.disabled = true; mark(await api('POST', '/practice/check', { questionId: qq.id, text: inp.value })); }) }, '확인');
+          box.append(h('div', { class: 'row' }, inp, go), expl);
+        } else {
+          const opts = qq.choices.map((c, j) => h('button', { type: 'button', class: 'choice', onclick: guard(async () => {
+            if (box.dataset.done) return; box.dataset.done = 1; const r = await api('POST', '/practice/check', { questionId: qq.id, choice: j });
+            opts.forEach((o, k) => { o.disabled = true; if (k === r.answer) o.classList.add('right'); else if (k === j) o.classList.add('miss'); }); mark(r);
+          }) }, h('b', {}, 'ABCDEFGH'[j]), choiceNode(c)));
+          box.append(h('div', {}, opts), expl);
+        }
+        return box;
+      }) : h('p', { class: 'muted' }, '이 조건의 문제가 없습니다. 난이도를 바꿔 보세요.')));
+  });
+  mount(h('div', { class: 'kicker' }, 'Practice'), h('h2', {}, '영역별 연습'), h('p', { class: 'muted' }, '시간 제한 없이 한 영역만 10문항씩 풀고 바로 채점과 해설을 봅니다. 연습은 이용권을 차감하지 않습니다.'),
+    h('div', { class: 'card' }, h('div', { class: 'row' }, ex, sec, diff, h('button', { class: 'btn', onclick: start }, '연습 시작')),
+      stats.length ? h('p', { class: 'small muted', style: 'margin-top:10px' }, '지금까지: ', exams.flatMap((e) => e.sections.map((s) => [e.type, s])).filter(([t, s]) => stats.some((x) => x.exam_type === t && x.section === s.key)).map(([t, s]) => `${t} ${s.name} ${stat(t, s.key)}`).join(' · ')) : null),
+    area);
+  if (q.exam && q.section) start();
+}
+
+/* ---------- support ---------- */
+async function pageSupport(id, q = {}) {
+  if (!me) return (location.hash = '#/login');
+  if (id) {
+    const { ticket, messages } = await api('GET', `/support/${id}`);
+    const f = h('form', { onsubmit: guard(async (e) => { e.preventDefault(); await api('POST', `/support/${id}/reply`, { body: f.b.value }); pageSupport(id); }) }, h('textarea', { name: 'b', rows: 4, required: true, placeholder: '추가로 문의할 내용' }), h('button', { class: 'btn sm' }, '보내기'));
+    return mount(h('a', { href: '#/support', class: 'small' }, '← 문의 목록'), h('h2', {}, ticket.subject), h('p', { class: 'muted small' }, `${ticket.category} · ${date(ticket.created_at)} · `, supportBadge(ticket.status)),
+      messages.map((m) => h('div', { class: 'card msg ' + (m.staff ? 'staff' : '') }, h('div', { class: 'small muted' }, m.staff ? '답변 · 운영팀' : '나', ' · ', date(m.created_at)), h('div', { class: 'msgbody' }, m.body))),
+      ticket.status !== 'closed' ? h('div', { class: 'card' }, f) : h('p', { class: 'muted' }, '종료된 문의입니다.'));
+  }
+  const { tickets } = await api('GET', '/support');
+  const cats = ['결제·환불', '시험·채점', '계정', '기관·단체', '기타'];
+  const f = h('form', { class: 'card', onsubmit: guard(async (e) => { e.preventDefault(); const r = await api('POST', '/support', { category: f.c.value, subject: f.s.value, body: f.b.value }); toast('문의가 접수되었습니다. 답변이 등록되면 메일로 알려 드립니다.'); location.hash = `#/support/${r.id}`; }) },
+    h('h3', {}, '새 문의'), h('div', { class: 'row' }, h('select', { name: 'c' }, cats.map((c) => h('option', { selected: c === q.cat }, c))), h('input', { name: 's', class: 'grow', placeholder: '제목', required: true, maxlength: 120 })),
+    h('textarea', { name: 'b', rows: 6, required: true, placeholder: q.cat === '기관·단체' ? '기관명, 담당자 연락처, 예상 학생 수, 원하는 시험을 적어 주세요.' : '문의 내용을 자세히 적어 주세요. (주문번호·시험명 등)' }), h('button', { class: 'btn' }, '문의하기'));
+  mount(h('div', { class: 'kicker' }, 'Support'), h('h2', {}, '1:1 문의'), f,
+    h('div', { class: 'card' }, h('h3', {}, '내 문의'), tickets.length ? h('table', {}, tickets.map((t) => h('tr', {}, h('td', {}, h('a', { href: `#/support/${t.id}` }, t.subject)), h('td', { class: 'small muted' }, t.category), h('td', {}, supportBadge(t.status)), h('td', { class: 'small' }, date(t.updated_at))))) : h('p', { class: 'muted' }, '문의 내역이 없습니다.')));
+}
+const supportBadge = (s) => h('span', { class: 'badge ' + (s === 'answered' ? 'ok' : s === 'open' ? 'warn' : '') }, { open: '답변 대기', answered: '답변 완료', closed: '종료' }[s] || s);
+
+/* ---------- e-mail verification & guardian consent landing pages ---------- */
+async function pageVerify(token) {
+  try { await api('POST', '/auth/verify', { token }); if (me) me = (await api('GET', '/auth/me')).user;
+    mount(h('div', { class: 'card intro' }, h('div', { class: 'big' }, 'Verified'), h('h2', {}, '이메일 인증이 완료되었습니다.'), h('a', { class: 'btn', href: me ? '#/me' : '#/login' }, me ? '내 시험으로' : '로그인')));
+  } catch (e) { mount(h('div', { class: 'card intro' }, h('h2', { class: 'err' }, '인증하지 못했습니다'), h('p', {}, e.message), h('a', { class: 'btn alt', href: '#/me' }, '내 시험'))); }
+}
+async function pageConsent(token) {
+  let info;
+  try { info = await api('GET', `/auth/consent/${token}`); } catch (e) { return mount(h('div', { class: 'card intro' }, h('h2', {}, '열 수 없는 링크입니다'), h('p', { class: 'muted' }, e.message))); }
+  const f = h('form', { class: 'card narrow', onsubmit: guard(async (e) => { e.preventDefault(); await api('POST', '/auth/consent', { token, guardian_name: f.n.value, relation: f.r.value, agree: f.a.checked }); mount(h('div', { class: 'card intro' }, h('div', { class: 'big' }, 'Thank you'), h('h2', {}, '동의가 완료되었습니다.'), h('p', {}, `${info.child.name} 학생이 이제 결제와 응시를 할 수 있습니다.`))); }) },
+    h('div', { class: 'kicker' }, 'Guardian consent'), h('h2', {}, '법정대리인 동의'),
+    h('p', {}, h('b', {}, info.child.name), ' 학생', info.child.grade ? `(${info.child.grade})` : '', '이 가입하면서 보호자 이메일로 ', info.guardian, '을(를) 입력했습니다.'),
+    h('div', { class: 'passage small' }, h('b', {}, '수집·이용 항목: '), '이름, 이메일, 학년, 시험 응시 기록(답안·점수·말하기 녹음), 결제 기록', h('br'), h('b', {}, '목적: '), '회원 관리, 모의고사 응시·채점·결과 제공, 결제·환불', h('br'), h('b', {}, '보관: '), '탈퇴 시 개인정보 파기(법정 보관 기록 제외). 자세한 내용은 ', h('a', { href: '#/privacy', target: '_blank' }, '개인정보처리방침'), '을 확인하세요.'),
+    field('보호자 성함', h('input', { name: 'n', required: true, maxlength: 40 })), field('관계', h('select', { name: 'r' }, ['부', '모', '조부모', '기타 법정대리인'].map((x) => h('option', {}, x)))),
+    h('label', {}, h('input', { type: 'checkbox', name: 'a', required: true, style: 'width:auto' }), ' 위 내용을 확인했으며 자녀의 개인정보 수집·이용에 동의합니다.'),
+    h('div', { class: 'row' }, h('button', { class: 'btn' }, '동의합니다'), h('button', { type: 'button', class: 'btn alt', onclick: guard(async () => { if (!confirm('동의하지 않으면 학생 계정을 사용할 수 없습니다. 계속할까요?')) return; await api('POST', '/auth/consent', { token, guardian_name: f.n.value || '-', agree: true, decline: true }); mount(h('div', { class: 'card intro' }, h('h2', {}, '동의하지 않음으로 처리했습니다.'))); }) }, '동의하지 않음')));
+  mount(f);
+}
+
 function securityCard(q = {}) {
   const box = h('div', { class: 'card', id: 'security' }, h('div', { class: 'kicker' }, 'Security'), h('h3', {}, '로그인 보안'));
   const tfa = h('div', {}), devs = h('div', {});
@@ -377,7 +568,7 @@ function securityCard(q = {}) {
     if (me.twofa) return tfa.replaceChildren(h('p', {}, h('span', { class: 'badge ok' }, '2단계 인증 사용 중'), ' 로그인할 때 인증 앱의 코드가 필요합니다.'),
       h('form', { class: 'row', onsubmit: guard(async (e) => { e.preventDefault(); const f = e.target; await api('POST', '/auth/2fa/disable', { password: f.pw.value, code: f.code.value }); me.twofa = false; toast('2단계 인증을 해제했습니다.'); drawTfa(); }) },
         h('input', { name: 'pw', type: 'password', class: 'grow', placeholder: '비밀번호', required: true }), h('input', { name: 'code', class: 'grow', placeholder: '현재 6자리 코드', inputmode: 'numeric', required: true }), h('button', { class: 'btn sm alt' }, '해제')));
-    tfa.replaceChildren(
+    tfa.replaceChildren(...[
       me.role === 'admin' ? h('p', { class: 'notice-inline' }, '관리자 계정은 2단계 인증을 꼭 켜 두세요. 비밀번호가 유출돼도 계정을 지킬 수 있습니다.') : null,
       h('p', { class: 'muted small' }, 'Google Authenticator · Microsoft Authenticator 같은 인증 앱으로 로그인할 때 6자리 코드를 한 번 더 확인합니다.'),
       h('form', { class: 'row', onsubmit: guard(async (e) => {
@@ -389,14 +580,14 @@ function securityCard(q = {}) {
           h('li', {}, '휴대폰에서 이 화면을 보고 있다면 ', h('a', { href: s.uri }, '인증 앱으로 바로 열기'), '를 눌러도 됩니다.'),
           h('li', {}, '앱에 나온 6자리 코드를 입력해 확인합니다.')),
           h('form', { class: 'row', onsubmit: guard(async (ev) => { ev.preventDefault(); await api('POST', '/auth/2fa/enable', { code: code.value }); me.twofa = true; toast('2단계 인증이 켜졌습니다. 다른 기기는 로그아웃되었습니다.'); drawTfa(); loadDevs(); }) }, code, h('button', { class: 'btn sm' }, '확인하고 켜기')));
-      }) }, h('input', { name: 'pw', type: 'password', class: 'grow', placeholder: '비밀번호 확인', required: true }), h('button', { class: 'btn sm' }, '2단계 인증 켜기')));
+      }) }, h('input', { name: 'pw', type: 'password', class: 'grow', placeholder: '비밀번호 확인', required: true }), h('button', { class: 'btn sm' }, '2단계 인증 켜기'))].filter(Boolean));
   };
   const loadDevs = guard(async () => {
     const { sessions } = await api('GET', '/auth/sessions');
     devs.replaceChildren(h('table', {}, h('tr', {}, ['기기', 'IP', '마지막 사용', ''].map((x) => h('th', {}, x))), sessions.map((x) => h('tr', {},
       h('td', {}, uaName(x.ua), x.current ? h('span', { class: 'badge ok', style: 'margin-left:6px' }, '현재 기기') : null), h('td', { class: 'mono small' }, x.ip || '-'), h('td', {}, date(x.last_seen || x.created_at)),
       h('td', {}, x.current ? null : h('button', { class: 'btn sm alt', onclick: guard(async () => { await api('POST', '/auth/sessions/revoke', { id: x.id }); loadDevs(); }) }, '로그아웃'))))),
-      sessions.length > 1 ? h('p', {}, h('button', { class: 'btn sm danger', onclick: guard(async () => { await api('POST', '/auth/sessions/revoke', { all: true }); toast('다른 기기에서 모두 로그아웃했습니다.'); loadDevs(); }) }, '다른 기기 모두 로그아웃')) : null);
+      sessions.length > 1 ? h('p', {}, h('button', { class: 'btn sm danger', onclick: guard(async () => { await api('POST', '/auth/sessions/revoke', { all: true }); toast('다른 기기에서 모두 로그아웃했습니다.'); loadDevs(); }) }, '다른 기기 모두 로그아웃')) : '');
   });
   drawTfa(); loadDevs();
   const mine = h('details', { class: 'mylog', ontoggle: guard(async (e) => { if (!e.target.open || mine.dataset.loaded) return; mine.dataset.loaded = 1; const { events } = await api('GET', '/auth/activity'); mine.append(events.length ? h('div', { class: 'logbox' }, logRows(events, { who: false })) : h('p', { class: 'muted small' }, '기록이 없습니다.')); }) },
@@ -508,11 +699,35 @@ function chooseLevel(exam, resuming) {
 /* ---------- exam runner ---------- */
 async function pageExam(id) {
   if (!me) return (location.hash = '#/login');
-  let state = await api('GET', `/attempts/${id}/current`);
+  let state;
+  try { state = await api('GET', `/attempts/${id}/current`); } catch (e) {
+    if (!e.data?.lockedElsewhere) throw e;
+    return mount(h('div', { class: 'card intro' }, h('div', { class: 'big' }, 'One device'), h('h2', {}, '다른 기기에서 진행 중인 시험입니다.'),
+      h('p', {}, '시험은 한 번에 한 기기에서만 볼 수 있습니다. 이 기기에서 이어서 보면 다른 기기의 시험 화면은 멈추고, 기기 전환 기록이 리포트에 남습니다.'),
+      h('div', { class: 'row' }, h('button', { class: 'btn', onclick: guard(async () => { await api('POST', `/attempts/${id}/takeover`); pageExam(id); }) }, '이 기기에서 이어서 보기'), h('a', { class: 'btn alt', href: '#/me' }, '내 시험'))));
+  }
   for (let i = 0; state.status === 'retry' && i < 5; i++) { await new Promise((r) => setTimeout(r, 300)); state = await api('GET', `/attempts/${id}/current`); }
   if (state.mode === 'section') return pageExamSection(id, state);
   return pageExamAdaptive(id, state);
 }
+
+/* ---------- exam integrity: focus loss / copy / fullscreen exit are recorded and shown on the report ---------- */
+const fsOk = () => !!document.documentElement.requestFullscreen;
+const fsButton = () => (fsOk() ? h('button', { class: 'btn sm alt fs-btn', title: '전체 화면', onclick: () => (document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen().catch(() => {})) }, document.fullscreenElement ? '전체 화면 끄기' : '⛶ 전체 화면') : null);
+let integLast = 0, wasFull = false;
+function integrity(type) {
+  const m = location.hash.match(/^#\/exam\/([\w-]+)/);
+  if (!m || !document.querySelector('.qcard')) return;
+  const t = Date.now(); if (type === 'leave') { if (t - integLast < 2000) return; integLast = t; }
+  fetch(`/api/attempts/${m[1]}/integrity`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ type }) }).catch(() => {});
+  if (type === 'leave') toast('시험 화면을 벗어났습니다. 이탈 기록은 결과 리포트에 표시됩니다.');
+  if (type === 'copy') toast('시험 문제는 복사할 수 없습니다. 복사 시도는 기록됩니다.');
+}
+document.addEventListener('visibilitychange', () => { if (document.hidden) integrity('leave'); });
+window.addEventListener('blur', () => integrity('leave'));
+document.addEventListener('copy', (e) => { if (location.hash.startsWith('#/exam/') && !e.target.closest?.('textarea,input')) { e.preventDefault(); integrity('copy'); } });
+document.addEventListener('contextmenu', (e) => { if (location.hash.startsWith('#/exam/') && e.target.closest?.('.qcard') && !e.target.closest('textarea,input')) e.preventDefault(); });
+document.addEventListener('fullscreenchange', () => { if (wasFull && !document.fullscreenElement) integrity('fullscreen_exit'); wasFull = !!document.fullscreenElement; document.querySelectorAll('.fs-btn').forEach((b) => (b.textContent = document.fullscreenElement ? '전체 화면 끄기' : '⛶ 전체 화면')); });
 
 /* Section mode: move freely inside a section, change or clear answers, flag for review, submit the section. */
 function pageExamSection(id, state) {
@@ -605,7 +820,7 @@ function pageExamSection(id, state) {
     const last = cur === qs.length - 1;
     mount(h('div', { class: 'exam-shell' },
       h('div', { class: 'exam-top' },
-        h('div', { class: 'exam-head' }, h('div', { class: 'sec-pill' }, sec.name, h('i', {}, `${sec.index + 1}/${sec.total}`)), counter, h('span', {}, '⏱ ', timer)),
+        h('div', { class: 'exam-head' }, h('div', { class: 'sec-pill' }, sec.name, h('i', {}, `${sec.index + 1}/${sec.total}`)), counter, fsButton(), h('span', {}, '⏱ ', timer)),
         palette),
       h('div', { class: 'qcard' }, h('div', { class: 'qmeta' }, h('b', {}, `Question ${cur + 1}`), h('span', { class: 'row', style: 'gap:6px' }, clearBtn, flagBtn)), body,
         h('div', { class: 'exam-foot' },
@@ -676,7 +891,7 @@ async function pageExamAdaptive(id, state) {
     const tot = state.progress.total || state.progress.n;
     mount(h('div', { class: 'exam-shell' },
       h('div', { class: 'exam-top' },
-        h('div', { class: 'exam-head' }, h('div', { class: 'sec-pill' }, sec.name, h('i', {}, `${sec.index + 1}/${sec.total}`)), h('span', { class: 'muted small' }, `문항 ${state.progress.n} / ${tot}`), h('span', {}, '⏱ ', timer)),
+        h('div', { class: 'exam-head' }, h('div', { class: 'sec-pill' }, sec.name, h('i', {}, `${sec.index + 1}/${sec.total}`)), h('span', { class: 'muted small' }, `문항 ${state.progress.n} / ${tot}`), fsButton(), h('span', {}, '⏱ ', timer)),
         h('div', { class: 'bar' }, h('i', { style: `width:${Math.round(((state.progress.n - 1) / tot) * 100)}%` }))),
       h('div', { class: 'qcard' }, body, h('div', { class: 'exam-foot' }, h('span', { class: 'kbd hide-touch' }, q.kind === 'mcq' ? '키보드 A–D 선택 · Enter 다음' : ''), next))));
     if (kh) { window._kh = kh; document.addEventListener('keydown', kh); } // after mount(), which clears the previous handler
@@ -711,6 +926,12 @@ async function pageShared(token) {
   try { r = await api('GET', `/shared/${token}`); } catch (e) { return mount(h('div', { class: 'card intro' }, h('div', { class: 'big' }, 'Link expired'), h('h2', {}, '열 수 없는 링크입니다.'), h('p', { class: 'muted' }, e.message))); }
   renderReport(r, null);
 }
+function integrityNote(i) {
+  if (!i) return h('p', { class: 'small muted' }, '✓ 시험 중 화면 이탈·복사 기록 없음');
+  const parts = [['leave', '화면 이탈'], ['copy', '복사 시도'], ['paste', '붙여넣기'], ['fullscreen_exit', '전체 화면 해제'], ['device_switch', '기기 전환']].filter(([k]) => i[k]).map(([k, l]) => `${l} ${i[k]}회`);
+  return parts.length ? h('div', { class: 'notice integ' }, h('b', {}, '시험 중 기록: '), parts.join(' · '), h('p', { class: 'small muted', style: 'margin:4px 0 0' }, '다른 창으로 이동하거나 복사를 시도한 횟수입니다. 실제 시험에서는 허용되지 않는 행동입니다.')) : null;
+}
+const weakest = (sc) => { const e = Object.entries(sc.sections || {}).filter(([, s]) => s.total).sort((a, b) => a[1].correct / a[1].total - b[1].correct / b[1].total)[0]; return e ? e[0] : ''; };
 function shareBox(r, id) {
   const out = h('div', { class: 'small' });
   const make = guard(async () => { const s = await api('POST', `/attempts/${id}/share`); out.replaceChildren(h('div', { class: 'share-url' }, h('input', { value: s.url, readonly: true, onclick: (e) => e.target.select() }), h('button', { class: 'btn sm', onclick: () => copyText(s.url) }, '복사')), h('p', { class: 'muted' }, `${date(s.expiresAt)}까지 열람 가능 · 로그인 없이 보는 읽기 전용 리포트 (이메일은 표시되지 않음)`)); stop.hidden = false; });
@@ -730,11 +951,12 @@ function renderReport(r, id) {
   };
   const accent = { MAP: 'var(--map)', CAT4: 'var(--cat4)', WIDA: 'var(--wida)', SCAT: 'var(--scat)', SSAT: 'var(--ssat)', ISEE: 'var(--isee)', COGAT: 'var(--cogat)', SAT: 'var(--sat)', TOEFLJ: 'var(--toeflj)' }[t];
   // Each section arrives formatted the way the real test reports it (main value, sub line, optional chip).
-  const cards = Object.values(sc.sections).map((s) => h('div', { class: 'ring-card' }, h('div', { class: 'muted small' }, s.name),
+  const cards = Object.entries(sc.sections).map(([key, s]) => h('div', { class: 'ring-card' }, h('div', { class: 'muted small' }, s.name),
     ring(s.ring ?? s.pct ?? 0, s.main ?? '–', '', accent),
     h('div', { class: 'small', style: 'min-height:2.6em' }, s.sub || ''),
     s.total ? h('div', { class: 'small muted' }, `${s.correct}/${s.total} 정답${s.omitted ? ` · 무응답 ${s.omitted}` : ''}`) : null,
-    s.chip ? h('span', { class: 'badge' }, s.chip) : null));
+    s.chip ? h('span', { class: 'badge' }, s.chip) : null,
+    r.compare?.sections?.[key] ? h('div', { class: 'peer' }, `같은 레벨 ${r.compare.sections[key].n}명 중 `, h('b', {}, `상위 ${Math.max(1, 100 - r.compare.sections[key].pct)}%`)) : null));
   const head = sc.headline || { label: '종합', value: sc.overall ?? '–' };
   const items = r.items.map((it, i) => h('div', { class: 'card ' + (it.correct === 1 ? 'good' : it.correct === 0 ? 'wrong' : '') },
     h('div', { class: 'small muted' }, `#${i + 1} · ${it.section} · 난이도 ${it.difficulty}`),
@@ -753,27 +975,80 @@ function renderReport(r, id) {
     h('div', { class: 'rings' }, cards),
     (sc.extras || []).length ? h('div', { class: 'extras' }, sc.extras.map((x) => h('div', {}, h('div', { class: 'kicker' }, x.label), h('b', {}, x.value)))) : null,
     h('div', { class: 'small muted', style: 'margin:10px 0 18px' }, (sc.notes || ['※ 모의고사 결과는 공식 점수가 아닌 추정치이며 학습 참고용입니다.']).map((n) => h('p', { style: 'margin:3px 0' }, '※ ' + n))),
+    integrityNote(r.integrity),
+    r.compare && r.compare.n < 10 ? h('p', { class: 'small muted' }, `※ 같은 시험·레벨 응시자가 10명 이상 모이면 또래 비교(상위 %)가 표시됩니다. (현재 ${r.compare.n}명)`) : r.compare ? h('p', { class: 'small muted' }, '※ 또래 비교는 이 사이트 응시자 기준이며 공식 규준이 아닙니다.') : null,
     analytics(r, t),
-    id && !r.shared && r.student?.email === me?.email ? shareBox(r, id) : null,
+    !r.shared && id ? h('p', { class: 'noprint' }, h('a', { class: 'btn sm alt', href: `#/practice?exam=${t}&section=${weakest(sc)}` }, '약한 영역 연습하기 →')) : null,
+    id && !r.shared && (r.student?.email === me?.email || r.student?.email?.endsWith('@family.invalid')) ? shareBox(r, id) : null,
     h('h3', {}, '문항별 리뷰'), items);
 }
 
 /* ---------- admin ---------- */
-const ADMIN_TABS = [['stats', '대시보드'], ['users', '회원'], ['orders', '주문'], ['products', '상품'], ['coupons', '쿠폰'], ['questions', '문제'], ['grading', '채점'], ['payments', '결제설정'], ['logs', '기록'], ['security', '보안']];
+const ADMIN_TABS = [['stats', '대시보드'], ['users', '회원'], ['orders', '주문'], ['products', '상품'], ['coupons', '쿠폰'], ['gifts', '선물코드'], ['support', '문의'], ['questions', '문제'], ['grading', '채점'], ['payments', '결제설정'], ['logs', '기록'], ['security', '보안']];
 async function pageAdmin(tab = 'stats') {
   if (!me || me.role !== 'admin') return (location.hash = '#/');
   const body = h('div', {});
   mount(h('h2', {}, '관리자'), h('div', { class: 'tabs' }, ADMIN_TABS.map(([k, l]) => h('button', { class: k === tab ? 'on' : '', onclick: () => (location.hash = `#/admin/${k}`) }, l))), body);
   document.querySelector('.tabs .on')?.scrollIntoView({ inline: 'center', block: 'nearest' }); // phones: keep the current tab visible
   window.scrollTo(0, 0);
-  await ({ stats: adminStats, users: adminUsers, orders: adminOrders, products: adminProducts, questions: adminQuestions, grading: adminGrading, payments: adminPayments, coupons: adminCoupons, security: adminSecurity, logs: adminLogs }[tab] || adminStats)(body);
+  await ({ stats: adminStats, users: adminUsers, orders: adminOrders, products: adminProducts, questions: adminQuestions, grading: adminGrading, payments: adminPayments, coupons: adminCoupons, security: adminSecurity, logs: adminLogs, gifts: adminGifts, support: adminSupport }[tab] || adminStats)(body);
 }
 async function adminStats(b) {
   const s = await api('GET', '/admin/stats');
   const nt = h('textarea', { rows: 2, maxlength: 300, placeholder: '예: 추석 연휴(9/16–18) 고객센터 휴무 · 비워 두면 공지가 내려갑니다.' }); nt.value = cfg.notice || '';
   if (!me.twofa) b.append(h('div', { class: 'notice' }, h('b', {}, '관리자 계정에 2단계 인증이 꺼져 있습니다.'), h('p', { class: 'small' }, '비밀번호만으로 관리자 권한을 얻을 수 없도록 인증 앱 코드를 추가하세요.'), h('a', { class: 'btn sm', href: '#/me?secure=1' }, '지금 켜기 →')));
   b.append(h('div', { class: 'card' }, h('h3', {}, '사이트 공지 배너'), nt, h('div', { class: 'row' }, h('button', { class: 'btn sm', onclick: guard(async () => { await api('POST', '/admin/notice', { text: nt.value }); cfg.notice = nt.value.trim() || null; showNotice(); toast('공지가 저장되었습니다.'); }) }, '저장'))));
+  const charts = h('div', { class: 'charts' });
+  api('GET', '/admin/stats/series').then((x) => charts.replaceChildren(...dashCharts(x))).catch(() => {});
   b.append(h('div', { class: 'stats' }, [['회원', s.users], ['결제 주문', s.paidOrders], ['응시', s.attempts], ['채점 대기', s.pendingGrading], ['환불 요청', s.pendingRefunds], ['활성 문제', s.questions], ...s.revenue.map((r) => [`매출 ${r.currency}`, money(r.s, r.currency)])].map(([l, v]) => h('div', { class: 'stat' }, h('div', { class: 'muted small' }, l), h('b', {}, v)))));
+  b.append(charts);
+}
+function dashCharts(x) {
+  const days = [...Array(30)].map((_, i) => new Date(Date.now() - (29 - i) * 86400000 + 9 * 3600000).toISOString().slice(0, 10));
+  const series = (rows, key = 'n') => days.map((d) => +(rows.find((r) => r.d === d)?.[key] || 0));
+  const ns = 'http://www.w3.org/2000/svg';
+  const bars = (title, vals, fmt) => {
+    const max = Math.max(1, ...vals), W = 300, H = 90, bw = W / vals.length;
+    const svg = document.createElementNS(ns, 'svg'); svg.setAttribute('viewBox', `0 0 ${W} ${H}`); svg.setAttribute('class', 'bars'); svg.setAttribute('preserveAspectRatio', 'none');
+    vals.forEach((v, i) => { const r = document.createElementNS(ns, 'rect'); const hh = (v / max) * (H - 4); r.setAttribute('x', i * bw + 1); r.setAttribute('y', H - hh); r.setAttribute('width', bw - 2); r.setAttribute('height', Math.max(hh, v ? 1 : 0)); const tt = document.createElementNS(ns, 'title'); tt.textContent = `${days[i]}: ${fmt(v)}`; r.append(tt); svg.append(r); });
+    return h('div', { class: 'chart card' }, h('div', { class: 'kicker' }, title), h('b', {}, fmt(vals.reduce((a, c) => a + c, 0))), h('span', { class: 'small muted' }, ' · 최근 30일'), svg);
+  };
+  const f = x.funnel || {};
+  const pct = (a, b) => (b ? `${Math.round((a / b) * 100)}%` : '-');
+  return [
+    bars('매출 (원)', series(x.revenue, 'krw'), (v) => v.toLocaleString() + '원'),
+    bars('결제 건수', series(x.revenue), (v) => v + '건'),
+    bars('가입', series(x.signups), (v) => v + '명'),
+    bars('응시', series(x.attempts), (v) => v + '회'),
+    h('div', { class: 'chart card' }, h('div', { class: 'kicker' }, '전환'), h('table', {}, [['가입', f.users], ['이메일 인증', `${f.verified} (${pct(f.verified, f.users)})`], ['구매 회원', `${f.buyers} (${pct(f.buyers, f.users)})`], ['재구매 회원', `${f.repeat} (${pct(f.repeat, f.buyers)})`]].map(([k, v]) => h('tr', {}, h('td', {}, k), h('td', {}, v ?? 0))))),
+    h('div', { class: 'chart card' }, h('div', { class: 'kicker' }, '시험별 매출 (30일)'), x.byExam.length ? h('table', {}, x.byExam.map((e) => h('tr', {}, h('td', {}, e.exam_type), h('td', {}, `${e.n}건`), h('td', {}, money(e.krw || 0, 'KRW'))))) : h('p', { class: 'small muted' }, '아직 매출이 없습니다.')),
+  ];
+}
+async function adminGifts(b) {
+  const [{ codes }, { products }] = await Promise.all([api('GET', '/admin/gift-codes'), api('GET', '/admin/products')]);
+  const out = h('div', {});
+  const f = h('form', { class: 'row', onsubmit: guard(async (e) => { e.preventDefault(); const r = await api('POST', '/admin/gift-codes', { productId: f.p.value, count: +f.n.value, note: f.m.value, expires_at: f.x.value ? Date.parse(f.x.value + 'T23:59:59') : null });
+    out.replaceChildren(h('p', {}, `${r.codes.length}개 발급:`), h('textarea', { rows: Math.min(10, r.codes.length + 1), readonly: true }, r.codes.join('\n')), h('button', { type: 'button', class: 'btn sm alt', onclick: () => copyText(r.codes.join('\n')) }, '전체 복사')); }) },
+    h('select', { name: 'p' }, products.filter((p) => p.id !== 'p-test').map((p) => h('option', { value: p.id }, p.title))), h('input', { name: 'n', type: 'number', min: 1, max: 200, value: 1, style: 'width:90px' }),
+    h('input', { name: 'm', class: 'grow', placeholder: '메모 (예: 11월 설명회 경품)' }), h('input', { name: 'x', type: 'date', title: '만료일(선택)' }), h('button', { class: 'btn sm' }, '코드 발급'));
+  b.append(h('div', { class: 'card' }, h('h3', {}, '선물 코드 발급'), h('p', { class: 'muted small' }, '이벤트·제휴·경품용 코드입니다. 회원이 내 시험 → 선물 코드 등록에 입력하면 이용권이 지급됩니다. 고객이 “선물하기”로 결제한 코드도 아래 목록에 함께 표시됩니다.'), f, out),
+    h('div', { class: 'card' }, h('h3', {}, '코드 목록'), h('table', {}, h('tr', {}, ['코드', '상품', '출처', '상태', '메모', ''].map((x) => h('th', {}, x))), codes.map((g) => h('tr', {}, h('td', { class: 'mono' }, g.code), h('td', { class: 'small' }, g.title), h('td', { class: 'small' }, g.order_id ? '고객 선물 구매' : '관리자 발급'),
+      h('td', {}, g.revoked ? h('span', { class: 'badge bad' }, '취소') : g.redeemed_at ? h('span', { class: 'badge ok' }, `사용 · ${g.redeemed_email || ''}`) : h('span', { class: 'badge' }, '미사용')), h('td', { class: 'small muted' }, g.note || ''),
+      h('td', {}, !g.redeemed_at && !g.revoked && !g.order_id ? h('button', { class: 'btn sm alt', onclick: guard(async () => { if (!confirm('이 코드를 취소할까요?')) return; await api('POST', `/admin/gift-codes/${g.code}/revoke`); pageAdmin('gifts'); }) }, '취소') : null))))));
+}
+async function adminSupport(b) {
+  const st = new URLSearchParams(location.hash.split('?')[1] || '').get('status') || 'open';
+  const { tickets } = await api('GET', `/admin/support?status=${st}`);
+  const open = guard(async (t) => {
+    const d = await api('GET', `/admin/support/${t.id}`);
+    const close = () => m.remove();
+    const f = h('form', { onsubmit: guard(async (e) => { e.preventDefault(); await api('POST', `/admin/support/${t.id}/reply`, { body: f.b.value }); close(); toast('답변을 등록하고 메일로 알렸습니다.'); pageAdmin('support'); }) }, h('textarea', { name: 'b', rows: 5, required: true, placeholder: '답변' }), h('div', { class: 'row' }, h('button', { class: 'btn sm' }, '답변 보내기'), h('button', { type: 'button', class: 'btn sm alt', onclick: guard(async () => { await api('POST', `/admin/support/${t.id}/close`); close(); pageAdmin('support'); }) }, '종료'), h('button', { type: 'button', class: 'btn sm alt', onclick: close }, '닫기')));
+    const m = h('div', { class: 'modal', onclick: (e) => e.target === m && close() }, h('div', { class: 'card', style: 'max-width:640px;max-height:90vh;overflow:auto' }, h('h3', {}, d.ticket.subject), h('p', { class: 'small muted' }, `${d.ticket.name} (${d.ticket.email}) · ${d.ticket.category} · ${date(d.ticket.created_at)}`),
+      d.messages.map((x) => h('div', { class: 'msg ' + (x.staff ? 'staff' : '') }, h('div', { class: 'small muted' }, x.staff ? '운영팀' : '회원', ' · ', date(x.created_at)), h('div', { class: 'msgbody' }, x.body))), f));
+    document.body.append(m);
+  });
+  b.append(h('div', { class: 'row', style: 'margin-bottom:12px' }, [['open', '답변 대기'], ['answered', '답변 완료'], ['closed', '종료'], ['all', '전체']].map(([k, l]) => h('a', { class: 'btn sm ' + (k === st ? '' : 'alt'), href: `#/admin/support?status=${k}` }, l))),
+    tickets.length ? h('table', {}, tickets.map((t) => h('tr', {}, h('td', {}, h('a', { href: 'javascript:void 0', onclick: () => open(t) }, t.subject)), h('td', { class: 'small' }, `${t.name} · ${t.email}`), h('td', { class: 'small muted' }, t.category), h('td', {}, supportBadge(t.status)), h('td', { class: 'small' }, date(t.updated_at))))) : h('p', { class: 'muted' }, '문의가 없습니다.'));
 }
 async function adminCoupons(b) {
   const { coupons } = await api('GET', '/admin/coupons');
@@ -855,8 +1130,12 @@ async function userDetail(id) {
     h('h3', {}, `${d.user.name} (${d.user.email})`), h('p', { class: 'muted small' }, `${d.user.role} · ${d.user.status} · 학년 ${d.user.grade || '-'} · 연락처 ${d.user.phone || '-'}`),
     h('div', { class: 'row' },
       h('button', { class: 'btn sm ' + (d.user.status === 'active' ? 'danger' : ''), onclick: guard(async () => { await api('PATCH', '/admin/users/' + id, { status: d.user.status === 'active' ? 'suspended' : 'active' }); close(); toast('변경됨'); pageAdmin('users'); }) }, d.user.status === 'active' ? '계정 정지' : '정지 해제'),
-      h('button', { class: 'btn sm alt', onclick: guard(async () => { await api('PATCH', '/admin/users/' + id, { role: d.user.role === 'admin' ? 'student' : 'admin' }); close(); pageAdmin('users'); }) }, d.user.role === 'admin' ? '관리자 해제' : '관리자 지정'),
+      (() => { const r = h('select', {}, [['student', '학생·학부모'], ['teacher', '선생님(기관)'], ['admin', '관리자']].map(([v, l]) => h('option', { value: v, selected: v === d.user.role }, l)));
+        return h('span', { class: 'row', style: 'gap:6px' }, r, h('button', { class: 'btn sm alt', onclick: guard(async () => { if (r.value === d.user.role) return; if (!confirm(`권한을 ${r.selectedOptions[0].textContent}(으)로 바꿀까요? 해당 회원은 다시 로그인해야 합니다.`)) return; await api('PATCH', '/admin/users/' + id, { role: r.value }); close(); pageAdmin('users'); }) }, '권한 변경')); })(),
       h('button', { class: 'btn sm danger', onclick: guard(async () => { if (confirm('이 회원의 개인정보(이름·이메일·연락처)를 지우고 탈퇴 처리할까요?\n응시 결과·결제·활동 기록은 익명으로 보존됩니다.')) { await api('DELETE', '/admin/users/' + id); close(); pageAdmin('users'); } }) }, '탈퇴 처리')),
+    h('p', { class: 'small' }, d.user.parent_id ? h('span', { class: 'badge' }, '자녀 프로필') : null, ' ', d.user.kakao_id ? h('span', { class: 'badge' }, '카카오') : null, ' ',
+      d.user.email_verified_at ? h('span', { class: 'badge ok' }, '이메일 인증') : h('button', { class: 'btn sm alt', onclick: guard(async () => { await api('POST', `/admin/users/${id}/verify-email`); close(); userDetail(id); }) }, '이메일 인증 처리'), ' ',
+      d.user.under14 ? (d.user.consent_at ? h('span', { class: 'badge ok' }, `보호자 동의 ${date(d.user.consent_at)}`) : h('button', { class: 'btn sm alt', onclick: guard(async () => { const note = prompt('보호자 동의를 어떻게 확인했나요? (예: 보호자 전화 확인 2026-11-15)'); if (!note) return; await api('POST', `/admin/users/${id}/consent`, { note }); close(); userDetail(id); }) }, '보호자 동의 수동 확인')) : null),
     h('h4', {}, '이용권 수동 지급'), h('div', { class: 'row' }, sel, h('button', { class: 'btn sm', onclick: guard(async () => { await api('POST', `/admin/users/${id}/grant`, { productId: sel.value }); close(); userDetail(id); }) }, '지급')),
     h('h4', {}, '이용권'), h('table', {}, d.entitlements.map((e) => h('tr', {}, h('td', {}, e.exam_type), h('td', {}, `${e.attempts_used}/${e.attempts_total}`), h('td', {}, date(e.expires_at)), h('td', {}, e.revoked ? '회수됨' : '')))),
     h('h4', {}, '주문'), h('table', {}, d.orders.map((o) => h('tr', {}, h('td', {}, o.title), h('td', {}, o.provider), h('td', {}, money(o.amount, o.currency)), h('td', {}, o.status)))),
@@ -930,7 +1209,9 @@ async function adminPayments(b) {
       const card = row('이메일 (Resend)', st.mail.configured, [['보내는 주소', st.mail.from + (st.mail.testSender ? ' (Resend 테스트 주소: 본인 Resend 계정 이메일로만 발송됨)' : '')], ['필요 값', 'RESEND_API_KEY (Secret), MAIL_FROM (Text, 예: MockTest Lab <noreply@내도메인>)']]);
       card.append(h('div', { class: 'row', style: 'margin-top:12px' }, h('button', { class: 'btn sm', onclick: guard(async () => { out.className = 'small'; out.textContent = '보내는 중…'; try { const r = await api('POST', '/admin/mail-test'); out.className = 'small ok-text'; out.textContent = `✓ ${r.to}로 테스트 메일을 보냈습니다. 받은편지함(스팸함 포함)을 확인하세요.`; } catch (e) { out.className = 'small err'; out.textContent = '발송 실패: ' + e.message; } }) }, '내 이메일로 테스트 메일 보내기')), out);
       return card;
-    })());
+    })(),
+    row('카카오 로그인', st.kakao.login, [['Redirect URI', st.kakao.redirect], ['필요 값', 'KAKAO_REST_KEY (Text), KAKAO_CLIENT_SECRET (Secret, 선택) · 카카오 개발자 콘솔에서 이메일 동의항목 설정']]),
+    row('카카오 알림톡 (SOLAPI)', st.kakao.alimtalk, [['템플릿', `결과 알림 ${st.kakao.templates.result ? '✓' : '✗'} · 결제 알림 ${st.kakao.templates.paid ? '✓' : '✗'}`], ['필요 값', 'SOLAPI_API_KEY, SOLAPI_API_SECRET (Secret), SOLAPI_SENDER, KAKAO_PFID, ALIMTALK_TPL_RESULT, ALIMTALK_TPL_PAID']]));
 }
 async function adminGrading(b) {
   const { items } = await api('GET', '/admin/grading');
@@ -990,7 +1271,7 @@ async function route() {
   try {
     if (!seg.length) return await pageHome();
     switch (seg[0]) {
-      case 'login': return mount(authForm('login'));
+      case 'login': return mount(authForm('login', q));
       case 'register': return mount(authForm('register'));
       case 'forgot': return pageForgot();
       case 'reset': return pageReset(seg[1]);
@@ -1001,6 +1282,12 @@ async function route() {
       case 'exam': return await pageExam(seg[1]);
       case 'report': return await pageReport(seg[1]);
       case 'shared': return await pageShared(seg[1]);
+      case 'family': return await pageFamily();
+      case 'classes': return await pageClasses(seg[1]);
+      case 'practice': return await pagePractice(q);
+      case 'support': return await pageSupport(seg[1], q);
+      case 'verify': return await pageVerify(seg[1]);
+      case 'consent': return await pageConsent(seg[1]);
       case 'admin': return await pageAdmin(seg[1]);
       case 'terms': case 'privacy': case 'refund': return pageLegal(seg[0]);
       case 'pay': return seg[1] === 'success' ? await pagePaySuccess(q) : mount(h('div', { class: 'card intro' }, h('div', { class: 'big' }, 'Payment not completed'), h('h2', {}, '결제가 완료되지 않았습니다.'),

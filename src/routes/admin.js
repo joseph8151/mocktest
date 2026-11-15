@@ -2,11 +2,11 @@ import { Hono } from 'hono';
 import { uid, now } from '../lib/util.js';
 import { requireAdmin } from '../lib/auth.js';
 import { EXAMS, scoreAttempt } from '../lib/exam.js';
-import { stripeRetrieveSession, stripeRefund, portoneCancel, recheckOrder, fulfillOrder } from '../lib/payments.js';
+import { stripeRetrieveSession, stripeRefund, portoneCancel, recheckOrder, fulfillOrder, giftCode } from '../lib/payments.js';
 import { notifyResult } from './exams.js';
 import { kcpCancel, kcpEnabled, kcpConfig } from '../lib/kcp.js';
 import { audit, redact, logEvent } from '../lib/security.js';
-import { deliver, mailFrom, mailTest } from '../lib/email.js';
+import { deliver, mailFrom, mailTest, sendMail, mailSupportReply } from '../lib/email.js';
 import { anonymizeUser } from './auth.js';
 import { hashPassword } from '../lib/auth.js';
 import { randomToken } from '../lib/util.js';
@@ -22,7 +22,7 @@ app.use('*', async (c, next) => {
     body = Array.isArray(j) ? { items: j.length } : redact(j);
   }
   await next();
-  if (m !== 'GET' || c.req.path.endsWith('.csv')) {
+  if (m !== 'GET' || c.req.path.endsWith('.csv') || c.req.path.endsWith('/backup')) {
     const id = c.req.path.replace(/^\/api\/admin/, '');
     await audit(c, `admin.${m.toLowerCase()}`, id.slice(0, 200), { status: c.res.status, ...(body && Object.keys(body).length ? { body } : {}), ...(c.req.query() && Object.keys(c.req.query()).length ? { query: c.req.query() } : {}) });
   }
@@ -49,6 +49,7 @@ app.get('/payment-status', (c) => {
     portone: { configured: !!(e.PORTONE_API_SECRET && e.PORTONE_STORE_ID && e.PORTONE_CHANNEL_KEY), webhookSecret: !!e.PORTONE_WEBHOOK_SECRET, webhookUrl: `${site}/api/webhooks/portone` },
     kcp: { configured: kcpEnabled(e), mode: kcpConfig(e).mode, siteCd: e.KCP_SITE_CD ? e.KCP_SITE_CD.slice(0, 2) + '***' : null, returnUrl: `${site}/api/pay/kcp/return` },
     mail: { configured: !!e.RESEND_API_KEY, from: mailFrom(e), testSender: !e.MAIL_FROM },
+    kakao: { login: !!e.KAKAO_REST_KEY, redirect: `${site}/api/auth/kakao/callback`, alimtalk: !!(e.SOLAPI_API_KEY && e.SOLAPI_API_SECRET && e.SOLAPI_SENDER && e.KAKAO_PFID), templates: { result: !!e.ALIMTALK_TPL_RESULT, paid: !!e.ALIMTALK_TPL_PAID } },
   });
 });
 
@@ -68,7 +69,7 @@ app.get('/users', async (c) => {
 app.get('/users/:id', async (c) => {
   const id = c.req.param('id');
   const [user, ents, orders, atts] = await Promise.all([
-    c.env.DB.prepare('SELECT id,email,name,role,status,grade,phone,created_at,last_login_at FROM users WHERE id=?').bind(id).first(),
+    c.env.DB.prepare('SELECT id,email,name,role,status,grade,phone,created_at,last_login_at,email_verified_at,under14,guardian_email,consent_at,parent_id,kakao_id FROM users WHERE id=?').bind(id).first(),
     c.env.DB.prepare('SELECT * FROM entitlements WHERE user_id=? ORDER BY created_at DESC').bind(id).all(),
     c.env.DB.prepare('SELECT o.*,p.title FROM orders o JOIN products p ON p.id=o.product_id WHERE o.user_id=? ORDER BY o.created_at DESC').bind(id).all(),
     c.env.DB.prepare('SELECT id,exam_type,status,started_at,finished_at FROM attempts WHERE user_id=? ORDER BY started_at DESC').bind(id).all(),
@@ -80,7 +81,7 @@ app.patch('/users/:id', async (c) => {
   const b = await c.req.json().catch(() => ({}));
   const id = c.req.param('id');
   if (id === c.get('user').id && (b.role === 'student' || b.status === 'suspended')) return c.json({ error: '자기 자신은 변경할 수 없습니다.' }, 400);
-  if (b.role && !['student', 'admin'].includes(b.role)) return c.json({ error: 'bad role' }, 400);
+  if (b.role && !['student', 'teacher', 'admin'].includes(b.role)) return c.json({ error: 'bad role' }, 400);
   if (b.status && !['active', 'suspended'].includes(b.status)) return c.json({ error: 'bad status' }, 400);
   if ((b.role === 'student' || b.status === 'suspended') && (await c.env.DB.prepare(`SELECT role FROM users WHERE id=?`).bind(id).first())?.role === 'admin' && (await c.env.DB.prepare(`SELECT COUNT(*) n FROM users WHERE role='admin' AND status='active'`).first()).n <= 1) return c.json({ error: '마지막 관리자는 해제하거나 정지할 수 없습니다.' }, 400);
   await c.env.DB.prepare('UPDATE users SET role=COALESCE(?,role), status=COALESCE(?,status), name=COALESCE(?,name), grade=COALESCE(?,grade) WHERE id=?')
@@ -151,7 +152,8 @@ app.post('/orders/:id/refund', async (c) => {
   if (!ok) return c.json({ error: 'PG사 환불 처리에 실패했습니다.' }, 502);
   await c.env.DB.batch([
     c.env.DB.prepare(`UPDATE orders SET status='refunded' WHERE id=?`).bind(o.id),
-    c.env.DB.prepare(`UPDATE entitlements SET revoked=1 WHERE order_id=?`).bind(o.id),
+    c.env.DB.prepare(`UPDATE entitlements SET revoked=1 WHERE order_id=?1 OR origin_order_id=?1`).bind(o.id), // incl. tickets shared to children/students or redeemed gifts
+    c.env.DB.prepare(`UPDATE gift_codes SET revoked=1 WHERE order_id=?`).bind(o.id),
     c.env.DB.prepare(`UPDATE refund_requests SET status='done' WHERE order_id=?`).bind(o.id),
   ]);
   const owner = await c.env.DB.prepare('SELECT id,email FROM users WHERE id=?').bind(o.user_id).first();
@@ -290,6 +292,33 @@ app.post('/grading/:id', async (c) => {
   return c.json({ ok: true });
 });
 
+app.post('/users/:id/verify-email', async (c) => {
+  await c.env.DB.prepare('UPDATE users SET email_verified_at=COALESCE(email_verified_at,?) WHERE id=?').bind(now(), c.req.param('id')).run();
+  return c.json({ ok: true });
+});
+// Guardian consent confirmed outside the site (phone, signed form ...): record who confirmed it and how.
+app.post('/users/:id/consent', async (c) => {
+  const b = await c.req.json().catch(() => ({}));
+  const note = String(b.note || '').trim().slice(0, 200);
+  if (!note) return c.json({ error: '확인 방법(예: 보호자 전화 확인)을 적어 주세요.' }, 400);
+  const id = c.req.param('id');
+  await c.env.DB.batch([
+    c.env.DB.prepare('UPDATE users SET consent_at=COALESCE(consent_at,?) WHERE id=?').bind(now(), id),
+    c.env.DB.prepare('INSERT INTO guardian_consents (id,user_id,guardian_email,guardian_name,relation,method,ip,at) VALUES (?,?,(SELECT guardian_email FROM users WHERE id=?),?,?,?,?,?)')
+      .bind(uid(), id, id, String(b.guardian_name || '').slice(0, 40) || null, note, 'admin', c.req.header('cf-connecting-ip') || null, now()),
+  ]);
+  return c.json({ ok: true });
+});
+
+/* ---- full backup (JSON). Voice recordings excluded. Contains personal data: keep the file safe. ---- */
+app.get('/backup', async (c) => {
+  const tables = ['users', 'products', 'orders', 'entitlements', 'attempts', 'answers', 'refund_requests', 'coupons', 'gift_codes', 'classes', 'class_members',
+    'guardian_consents', 'share_links', 'support_tickets', 'support_messages', 'practice_log', 'settings', 'audit_log', 'questions'];
+  const out = { app: 'mocktest', at: new Date().toISOString(), tables: {} };
+  for (const t of tables) out.tables[t] = (await c.env.DB.prepare(`SELECT * FROM ${t}`).all()).results;
+  return new Response(JSON.stringify(out), { headers: { 'Content-Type': 'application/json', 'Content-Disposition': `attachment; filename="mocktest-backup-${out.at.slice(0, 10)}.json"` } });
+});
+
 /* ---- activity log: search, page, export ---- */
 const CATS = { account: ['user.', 'login.', 'logout', 'password.', '2fa.', 'session.', 'profile.', 'account.'], exam: ['exam.', 'share.', 'shared.'], pay: ['order.', 'refund.'], admin: ['admin.'] };
 function logQuery(q) {
@@ -315,6 +344,70 @@ app.get('/logs.csv', async (c) => {
   const esc = (v) => { let s = String(v ?? ''); if (/^[=+\-@]/.test(s)) s = "'" + s; return `"${s.replace(/"/g, '""')}"`; };
   const rows = results.map((r) => [new Date(r.at).toISOString(), r.action, r.actor_email, r.actor_id, r.target, r.ip, r.detail].map(esc).join(','));
   return new Response('﻿' + ['time,action,user,user_id,target,ip,detail', ...rows].join('\n'), { headers: { 'Content-Type': 'text/csv; charset=utf-8', 'Content-Disposition': `attachment; filename="activity-${new Date().toISOString().slice(0, 10)}.csv"` } });
+});
+
+/* ---- gift codes (events, partners, prizes) ---- */
+app.get('/gift-codes', async (c) => c.json({ codes: (await c.env.DB.prepare(`SELECT g.*,p.title,(SELECT email FROM users WHERE id=g.redeemed_by) AS redeemed_email FROM gift_codes g JOIN products p ON p.id=g.product_id ORDER BY g.created_at DESC LIMIT 500`).all()).results }));
+app.post('/gift-codes', async (c) => {
+  const b = await c.req.json().catch(() => ({}));
+  const p = await c.env.DB.prepare('SELECT id FROM products WHERE id=?').bind(b.productId).first();
+  const n = Math.round(Number(b.count) || 1);
+  if (!p || n < 1 || n > 200) return c.json({ error: '상품과 개수(1–200)를 확인하세요.' }, 400);
+  const codes = [];
+  for (let i = 0; i < n; i++) codes.push(giftCode());
+  await c.env.DB.batch(codes.map((code) => c.env.DB.prepare('INSERT INTO gift_codes (code,product_id,order_id,created_by,note,expires_at,created_at) VALUES (?,?,NULL,?,?,?,?)')
+    .bind(code, p.id, c.get('user').id, String(b.note || '').slice(0, 100), b.expires_at ? Number(b.expires_at) : null, now())));
+  return c.json({ ok: true, codes });
+});
+app.post('/gift-codes/:code/revoke', async (c) => {
+  await c.env.DB.prepare('UPDATE gift_codes SET revoked=1 WHERE code=? AND redeemed_by IS NULL').bind(c.req.param('code')).run();
+  return c.json({ ok: true });
+});
+
+/* ---- 1:1 support ---- */
+app.get('/support', async (c) => {
+  const st = c.req.query('status') || 'open';
+  const { results } = await c.env.DB.prepare(`SELECT t.*,u.email,u.name FROM support_tickets t JOIN users u ON u.id=t.user_id WHERE (?1='all' OR t.status=?1) ORDER BY t.updated_at DESC LIMIT 300`).bind(st).all();
+  return c.json({ tickets: results });
+});
+app.get('/support/:id', async (c) => {
+  const t = await c.env.DB.prepare('SELECT t.*,u.email,u.name FROM support_tickets t JOIN users u ON u.id=t.user_id WHERE t.id=?').bind(c.req.param('id')).first();
+  if (!t) return c.json({ error: 'not found' }, 404);
+  const { results } = await c.env.DB.prepare('SELECT staff,body,created_at FROM support_messages WHERE ticket_id=? ORDER BY created_at').bind(t.id).all();
+  return c.json({ ticket: t, messages: results });
+});
+app.post('/support/:id/reply', async (c) => {
+  const b = await c.req.json().catch(() => ({}));
+  const t = await c.env.DB.prepare('SELECT t.*,u.email,u.name FROM support_tickets t JOIN users u ON u.id=t.user_id WHERE t.id=?').bind(c.req.param('id')).first();
+  const body = String(b.body || '').trim().slice(0, 4000);
+  if (!t || !body) return c.json({ error: '내용을 입력하세요.' }, 400);
+  await c.env.DB.batch([
+    c.env.DB.prepare('INSERT INTO support_messages (id,ticket_id,user_id,staff,body,created_at) VALUES (?,?,?,1,?,?)').bind(uid(), t.id, c.get('user').id, body, now()),
+    c.env.DB.prepare(`UPDATE support_tickets SET status='answered', updated_at=? WHERE id=?`).bind(now(), t.id),
+  ]);
+  c.executionCtx.waitUntil(sendMail(c.env, t.email, `[${c.env.SITE_NAME}] 문의 답변`, mailSupportReply(c.env, t.name, t.subject, t.id)));
+  return c.json({ ok: true });
+});
+app.post('/support/:id/close', async (c) => {
+  await c.env.DB.prepare(`UPDATE support_tickets SET status='closed', updated_at=? WHERE id=?`).bind(now(), c.req.param('id')).run();
+  return c.json({ ok: true });
+});
+
+/* ---- charts: last 30 days (KST) ---- */
+app.get('/stats/series', async (c) => {
+  const since = now() - 30 * 86400000, day = `date((%s/1000)+32400,'unixepoch')`;
+  const q = (sql) => c.env.DB.prepare(sql).bind(since).all().then((r) => r.results);
+  const [rev, signups, atts, byExam, funnel] = await Promise.all([
+    q(`SELECT ${day.replace('%s', 'paid_at')} d, SUM(CASE WHEN currency='KRW' THEN amount ELSE 0 END) krw, SUM(CASE WHEN currency='USD' THEN amount ELSE 0 END) usd, COUNT(*) n FROM orders WHERE status='paid' AND provider!='admin' AND paid_at>=? GROUP BY d`),
+    q(`SELECT ${day.replace('%s', 'created_at')} d, COUNT(*) n FROM users WHERE created_at>=? AND parent_id IS NULL GROUP BY d`),
+    q(`SELECT ${day.replace('%s', 'started_at')} d, COUNT(*) n FROM attempts WHERE started_at>=? GROUP BY d`),
+    q(`SELECT p.exam_type, COUNT(*) n, SUM(CASE WHEN o.currency='KRW' THEN o.amount ELSE 0 END) krw FROM orders o JOIN products p ON p.id=o.product_id WHERE o.status='paid' AND o.provider!='admin' AND o.paid_at>=? GROUP BY p.exam_type ORDER BY krw DESC`),
+    c.env.DB.prepare(`SELECT (SELECT COUNT(*) FROM users WHERE parent_id IS NULL AND role!='admin') users,
+      (SELECT COUNT(*) FROM users WHERE parent_id IS NULL AND role!='admin' AND email_verified_at IS NOT NULL) verified,
+      (SELECT COUNT(DISTINCT user_id) FROM orders WHERE status='paid' AND provider!='admin') buyers,
+      (SELECT COUNT(*) FROM (SELECT user_id FROM orders WHERE status='paid' AND provider!='admin' GROUP BY user_id HAVING COUNT(*)>1)) repeat`).first(),
+  ]);
+  return c.json({ revenue: rev, signups, attempts: atts, byExam, funnel });
 });
 
 /* ---- coupons ---- */

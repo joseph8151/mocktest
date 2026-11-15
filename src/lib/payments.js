@@ -1,6 +1,14 @@
 import { now, uid, b64, unb64, hmacSha256, timingSafeEqual, hex } from './util.js';
-import { sendMail, mailReceipt } from './email.js';
+import { sendMail, mailReceipt, mailGift } from './email.js';
 import { logEvent } from './security.js';
+import { alimtalk, phoneFor } from './notify.js';
+
+/** Gift code like GIFT-7KQ2-M9XD (no 0/O/1/I to avoid misreading). */
+export function giftCode() {
+  const A = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789', r = crypto.getRandomValues(new Uint8Array(8));
+  const ch = [...r].map((b) => A[b % A.length]).join('');
+  return `GIFT-${ch.slice(0, 4)}-${ch.slice(4)}`;
+}
 
 /** Idempotently mark an order paid and grant the entitlement. */
 export async function fulfillOrder(env, orderId, providerRef) {
@@ -14,10 +22,18 @@ export async function fulfillOrder(env, orderId, providerRef) {
     `SELECT o.*, p.exam_type, p.attempts, p.valid_days, p.title, u.email, u.name
      FROM orders o JOIN products p ON p.id=o.product_id JOIN users u ON u.id=o.user_id WHERE o.id=?`
   ).bind(orderId).first();
-  await db.prepare(
-    `INSERT OR IGNORE INTO entitlements (id,user_id,product_id,order_id,exam_type,attempts_total,expires_at,created_at)
-     VALUES (?,?,?,?,?,?,?,?)`
-  ).bind(uid(), o.user_id, o.product_id, o.id, o.exam_type, o.attempts, now() + o.valid_days * 86400000, now()).run();
+  if (o.gift) { // gift purchase: issue a redeemable code instead of a ticket (one code per order, carries the whole product)
+    const code = giftCode();
+    await db.prepare('INSERT OR IGNORE INTO gift_codes (code,product_id,order_id,created_by,note,expires_at,created_at) VALUES (?,?,?,?,?,?,?)')
+      .bind(code, o.product_id, o.id, o.user_id, 'gift purchase', now() + 365 * 86400000, now()).run();
+    await sendMail(env, o.email, `[${env.SITE_NAME}] 선물 코드 발급`, mailGift(env, o.name, o.title, [code]));
+  } else {
+    await db.prepare(
+      `INSERT OR IGNORE INTO entitlements (id,user_id,product_id,order_id,exam_type,attempts_total,expires_at,created_at)
+       VALUES (?,?,?,?,?,?,?,?)`
+    ).bind(uid(), o.user_id, o.product_id, o.id, o.exam_type, o.attempts, now() + o.valid_days * 86400000, now()).run();
+  }
+  await alimtalk(env, await phoneFor(env, o.user_id), 'paid', { 이름: o.name, 상품: o.title, 금액: o.currency === 'USD' ? `$${(o.amount / 100).toFixed(2)}` : `${o.amount.toLocaleString()}원`, 링크: `${env.SITE_URL}/#/me` });
   await logEvent(env, { actor: { id: o.user_id, email: o.email }, action: 'order.paid', target: o.id, detail: { provider: o.provider, amount: o.amount, currency: o.currency, product: o.product_id, coupon: o.coupon || null } });
   await sendMail(env, o.email, `[${env.SITE_NAME}] 결제 완료`, mailReceipt(env, o.name, o.title, o.amount, o.currency));
   return true;

@@ -48,3 +48,13 @@ export const mailReset = (env, link) =>
 export const mailResult = (env, name, title, id) =>
   `<p><b>${esc(name)}</b>님, <b>${esc(title)}</b> 결과가 준비되었습니다.</p>${btn(`${env.SITE_URL}/#/report/${id}`, '결과 리포트 보기')}`;
 export const mailTest = (env) => `<p>이메일 연결이 정상입니다. 가입 환영, 결제 영수증, 시험 결과, 비밀번호 재설정 메일이 이 주소(<b>${esc(mailFrom(env))}</b>)로 발송됩니다.</p>`;
+export const mailVerify = (env, name, link) =>
+  `<p><b>${esc(name)}</b>님, 아래 버튼을 눌러 이메일 주소를 인증해 주세요. 인증 후 결제와 응시를 할 수 있습니다.</p>${btn(link, '이메일 인증하기')}<p style="font-size:13px;color:#6b7280">링크는 48시간 동안 유효합니다.</p>`;
+export const mailConsent = (env, child, link) =>
+  `<p>안녕하세요. <b>${esc(child)}</b> 학생이 ${esc(env.SITE_NAME)}에 가입하면서 보호자님의 이메일을 입력했습니다.</p>
+   <p>만 14세 미만 아동의 개인정보를 처리하려면 개인정보 보호법에 따라 법정대리인의 동의가 필요합니다. 수집 항목(이름·이메일·학년·응시 기록·결제 기록)과 이용 목적을 확인하신 뒤 동의해 주세요.</p>${btn(link, '내용 확인하고 동의하기')}
+   <p style="font-size:13px;color:#6b7280">링크는 7일 동안 유효합니다. 가입한 적이 없다면 이 메일을 무시하세요. 동의하지 않으면 계정을 사용할 수 없습니다.</p>`;
+export const mailSupportReply = (env, name, subject, id) =>
+  `<p><b>${esc(name)}</b>님, 문의하신 「${esc(subject)}」에 답변이 등록되었습니다.</p>${btn(`${env.SITE_URL}/#/support/${id}`, '답변 확인하기')}`;
+export const mailGift = (env, name, title, codes) =>
+  `<p><b>${esc(name)}</b>님, 선물용 이용권 코드가 발급되었습니다.</p><p>상품: ${esc(title)}</p>${codes.map((c) => `<p style="font:600 20px monospace;letter-spacing:2px;background:#f5f4ef;padding:10px 14px;display:inline-block">${esc(c)}</p>`).join('<br>')}<p>받는 분이 로그인 후 <b>내 시험 → 선물 코드 등록</b>에 입력하면 이용권이 지급됩니다.</p>`;

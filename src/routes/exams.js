@@ -1,9 +1,11 @@
 import { Hono } from 'hono';
 import { uid, now, bufToB64, numEqual, randomToken, sha256hex } from '../lib/util.js';
-import { requireUser } from '../lib/auth.js';
+import { requireUser, accountGate } from '../lib/auth.js';
+import { HTTPException } from 'hono/http-exception';
 import { EXAMS, GRACE_MS, initialState, pickNext, sectionTarget, adaptDifficulty, scoreAttempt, getLevel, levelBank, levelForGrade } from '../lib/exam.js';
 import { sendMail, mailResult } from '../lib/email.js';
 import { audit, logEvent } from '../lib/security.js';
+import { alimtalk, phoneFor } from '../lib/notify.js';
 
 const app = new Hono();
 app.use('*', requireUser);
@@ -51,6 +53,7 @@ app.post('/attempts', async (c) => {
   const { examType, level } = await c.req.json().catch(() => ({}));
   if (!EXAMS[examType]) return c.json({ error: '알 수 없는 시험입니다.' }, 400);
   if (level && !(EXAMS[examType].levels || []).some((l) => l.key === level)) return c.json({ error: '레벨이 올바르지 않습니다.' }, 400);
+  const gate = accountGate(c.env, u); if (gate) return c.json(gate, 403);
   const levelKey = level || levelForGrade(examType, u.grade) || getLevel(examType).key;
   const open = await c.env.DB.prepare(`SELECT id FROM attempts WHERE user_id=? AND exam_type=? AND status='in_progress'`).bind(u.id, examType).first();
   if (open) return c.json({ id: open.id, resumed: true });
@@ -71,8 +74,8 @@ app.post('/attempts', async (c) => {
   if (!claim.meta.changes) return c.json({ error: '이용권이 소진되었습니다.' }, 402);
   const id = uid();
   try {
-    await c.env.DB.prepare('INSERT INTO attempts (id,user_id,entitlement_id,exam_type,state,started_at) VALUES (?,?,?,?,?,?)')
-      .bind(id, u.id, ent.id, examType, JSON.stringify(initialState(examType, now(), levelKey)), now()).run();
+    await c.env.DB.prepare('INSERT INTO attempts (id,user_id,entitlement_id,exam_type,state,started_at,session_hash) VALUES (?,?,?,?,?,?,?)')
+      .bind(id, u.id, ent.id, examType, JSON.stringify(initialState(examType, now(), levelKey)), now(), c.get('sid') || null).run();
   } catch (e) { // a parallel request already opened one: return the ticket and resume that attempt
     await c.env.DB.prepare('UPDATE entitlements SET attempts_used=attempts_used-1 WHERE id=? AND attempts_used>0').bind(ent.id).run();
     const again = await c.env.DB.prepare(`SELECT id FROM attempts WHERE user_id=? AND exam_type=? AND status='in_progress'`).bind(u.id, examType).first();
@@ -89,11 +92,20 @@ async function loadAttempt(c, { live = false } = {}) {
   if (!a) return null;
   if (live) { // taking the test: owner only, and only while the ticket is still valid
     if (a.user_id !== u.id) return null;
+    if (a.status === 'in_progress' && a.session_hash && a.session_hash !== c.get('sid')) // one device at a time (no sharing one ticket)
+      throw new HTTPException(409, { res: c.json({ error: '이 시험은 다른 기기에서 진행 중입니다.', lockedElsewhere: true }, 409) });
     if (a.status === 'in_progress' && (await c.env.DB.prepare('SELECT revoked FROM entitlements WHERE id=?').bind(a.entitlement_id).first())?.revoked) return null;
     return a;
   }
-  if (a.user_id !== u.id && u.role !== 'admin') return null;
+  if (a.user_id !== u.id && u.role !== 'admin' && !(await canView(c.env, u, a.user_id))) return null;
   return a;
+}
+
+/** Parents can open their children's reports; teachers those of students in their (active) classes. */
+export async function canView(env, viewer, ownerId) {
+  if (await env.DB.prepare('SELECT 1 FROM users WHERE id=? AND parent_id=?').bind(ownerId, viewer.id).first()) return true;
+  if (viewer.role === 'teacher' && await env.DB.prepare(`SELECT 1 FROM class_members m JOIN classes k ON k.id=m.class_id WHERE m.user_id=? AND k.teacher_id=? AND m.left_at IS NULL`).bind(ownerId, viewer.id).first()) return true;
+  return false;
 }
 
 async function finish(env, a, st) {
@@ -105,9 +117,10 @@ async function finish(env, a, st) {
   const u = await env.DB.prepare('SELECT id,email FROM users WHERE id=?').bind(a.user_id).first();
   await logEvent(env, { actor: u, action: 'exam.finish', target: a.id, detail: { exam: a.exam_type, level: st.level, status, score: score.headline ? `${score.headline.label} ${score.headline.value}` : score.overall ?? null, answered: results.length } });
   if (status === 'graded') await notifyResult(env, a);
+  if (status === 'graded') await alimtalk(env, await phoneFor(env, a.user_id), 'result', { 이름: (await env.DB.prepare('SELECT name FROM users WHERE id=?').bind(a.user_id).first())?.name || '', 시험: EXAMS[a.exam_type].title, 링크: `${env.SITE_URL}/#/report/${a.id}` });
 }
-export async function notifyResult(env, a) {
-  const u = await env.DB.prepare('SELECT email,name FROM users WHERE id=?').bind(a.user_id).first();
+export async function notifyResult(env, a) { // child profiles: the parent receives the mail
+  const u = await env.DB.prepare(`SELECT COALESCE(p.email,c.email) AS email, c.name FROM users c LEFT JOIN users p ON p.id=c.parent_id WHERE c.id=?`).bind(a.user_id).first();
   if (u) await sendMail(env, u.email, `[${env.SITE_NAME}] 결과 리포트`, mailResult(env, u.name, EXAMS[a.exam_type].title, a.id));
 }
 
@@ -327,6 +340,53 @@ app.post('/attempts/:id/finish', async (c) => {
   return c.json({ ok: true });
 });
 
+/* ---- exam integrity: continue on this device; focus-loss / copy events ---- */
+app.post('/attempts/:id/takeover', async (c) => {
+  const a = await c.env.DB.prepare('SELECT * FROM attempts WHERE id=?').bind(c.req.param('id')).first();
+  if (!a || a.user_id !== c.get('user').id || a.status !== 'in_progress') return c.json({ error: 'not found' }, 404);
+  await c.env.DB.prepare('UPDATE attempts SET session_hash=? WHERE id=?').bind(c.get('sid'), a.id).run();
+  await bumpIntegrity(c.env, a, 'device_switch');
+  await audit(c, 'exam.takeover', a.id, { exam: a.exam_type });
+  return c.json({ ok: true });
+});
+const INTEGRITY = ['leave', 'copy', 'paste', 'fullscreen_exit', 'device_switch'];
+async function bumpIntegrity(env, a, type) {
+  const cur = JSON.parse(a.integrity || '{}');
+  cur[type] = Math.min(999, (cur[type] || 0) + 1);
+  await env.DB.prepare('UPDATE attempts SET integrity=? WHERE id=?').bind(JSON.stringify(cur), a.id).run();
+  return cur;
+}
+app.post('/attempts/:id/integrity', async (c) => {
+  const a = await loadAttempt(c, { live: true });
+  if (!a || a.status !== 'in_progress') return c.json({ ok: true });
+  const { type } = await c.req.json().catch(() => ({}));
+  if (!INTEGRITY.includes(type) || type === 'device_switch') return c.json({ error: 'bad type' }, 400);
+  return c.json({ ok: true, counts: await bumpIntegrity(c.env, a, type) });
+});
+
+/**
+ * Where this result sits among other members who took the same exam at the same level (site data, not official norms).
+ * Per section: share of attempts with a LOWER correct-rate (percentile). Shown only with at least 10 comparable attempts.
+ */
+async function peerCompare(env, a, levelKey) {
+  if (!a.score) return null;
+  const mine = JSON.parse(a.score).sections || {};
+  const { results } = await env.DB.prepare(`SELECT score FROM attempts WHERE exam_type=? AND status IN ('graded','submitted') AND json_extract(state,'$.level')=? AND id!=? AND score IS NOT NULL ORDER BY finished_at DESC LIMIT 3000`)
+    .bind(a.exam_type, levelKey, a.id).all();
+  const rate = (s) => (s && s.total ? s.correct / s.total : null);
+  const out = { n: results.length, sections: {} };
+  if (results.length < 10) return out;
+  const others = results.map((r) => JSON.parse(r.score).sections || {});
+  for (const [k, s] of Object.entries(mine)) {
+    const me = rate(s); if (me === null) continue;
+    const pool = others.map((o) => rate(o[k])).filter((x) => x !== null);
+    if (pool.length < 10) continue;
+    const below = pool.filter((x) => x < me).length, same = pool.filter((x) => x === me).length;
+    out.sections[k] = { pct: Math.round(((below + same / 2) / pool.length) * 100), n: pool.length };
+  }
+  return out;
+}
+
 /** Report payload. `shared` = the read-only parent view: no e-mail, no internal ids. */
 export async function buildReport(env, a, { shared = false } = {}) {
   const { results } = await env.DB.prepare(
@@ -339,6 +399,8 @@ export async function buildReport(env, a, { shared = false } = {}) {
     attempt: { id: shared ? null : a.id, exam_type: a.exam_type, title: EXAMS[a.exam_type].title, status: a.status, started_at: a.started_at, finished_at: a.finished_at, level: { key: lv.key, name: lv.name, grades: lv.grades } },
     student: shared ? { name: user?.name, grade: user?.grade } : user,
     score: a.score ? JSON.parse(a.score) : null,
+    integrity: a.integrity ? JSON.parse(a.integrity) : null,
+    compare: await peerCompare(env, a, lv.key),
     items: results.map((r) => ({ ...r, choices: r.choices ? JSON.parse(r.choices) : null })),
     shared,
   };

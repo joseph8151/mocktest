@@ -10,6 +10,7 @@ import m6 from '../../migrations/0006_new_exams.sql';
 import m7 from '../../migrations/0007_integrity.sql';
 import m8 from '../../migrations/0008_security_features.sql';
 import m9 from '../../migrations/0009_records.sql';
+import m10 from '../../migrations/0010_family_and_more.sql';
 import seed from '../../seed/seed.json';
 
 // [name, sql, a table that exists once this migration has been applied]
@@ -26,7 +27,7 @@ const statements = (sql) => {
 };
 
 // One-time data updates, applied AFTER seeding (so a fresh database is not left with only these rows).
-const DATA_FIXES = [['0004_prices', m4], ['0005_admin_and_kcp', m5], ['0006_new_exams', m6], ['0007_integrity', m7], ['0008_security_features', m8], ['0009_records', m9]];
+const DATA_FIXES = [['0004_prices', m4], ['0005_admin_and_kcp', m5], ['0006_new_exams', m6], ['0007_integrity', m7], ['0008_security_features', m8], ['0009_records', m9], ['0010_family_and_more', m10]];
 
 let ready = null;
 export function ensureDb(env) {

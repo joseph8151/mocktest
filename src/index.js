@@ -1,9 +1,11 @@
 import { Hono } from 'hono';
+import { HTTPException } from 'hono/http-exception';
 import auth from './routes/auth.js';
 import shop from './routes/shop.js';
 import exams from './routes/exams.js';
 import admin from './routes/admin.js';
 import sample from './routes/sample.js';
+import family from './routes/family.js';
 import { ensureDb } from './lib/bootstrap.js';
 import { API_HEADERS } from './lib/security.js';
 
@@ -41,9 +43,11 @@ app.route('/api/admin', admin);
 app.route('/api', sample);
 app.route('/api', shop);
 app.route('/api', exams);
+app.route('/api', family);
 
 app.notFound((c) => (c.req.path.startsWith('/api/') ? c.json({ error: 'not found' }, 404) : c.env.ASSETS.fetch(c.req.raw)));
 app.onError((err, c) => {
+  if (err instanceof HTTPException) return err.getResponse();
   console.error(err);
   return c.json({ error: '서버 오류가 발생했습니다.' }, 500);
 });

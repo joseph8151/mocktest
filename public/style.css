@@ -358,3 +358,22 @@ details.mylog summary{cursor:pointer;font-weight:600;padding:6px 0}
 .logfilter input.grow{flex:1 1 280px;width:auto;min-width:0}.logfilter select{flex:0 1 180px;width:auto}.logfilter input[type=date]{flex:0 1 160px;min-width:0}
 @media (min-width:641px){.logtable td:nth-child(5){white-space:nowrap}}
 @media (max-width:640px){.logfilter input.grow,.logfilter select,.logfilter .btn{flex:1 1 100%}.logfilter input[type=date]{flex:1 1 calc(50% - 4px)}}
+
+/* ===================== family, classes, practice, support, integrity ===================== */
+.quicklinks{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--ink);background:var(--surface);margin:0 0 18px}
+.quicklinks .ql{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;padding:16px 18px;text-decoration:none;color:var(--ink);border-right:1px solid var(--rule)}
+.quicklinks .ql:last-child{border-right:0}.quicklinks .ql:hover{background:var(--bg)}
+.quicklinks i{grid-row:span 2;font-style:normal;font-size:1.5rem;line-height:1.2}.quicklinks span{font-size:.8rem;color:var(--muted)}
+.childbar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;background:var(--ink);color:var(--bg);padding:10px 16px;margin-bottom:16px}.childbar .btn{background:var(--bg);color:var(--ink)}
+.under14{border:1px dashed var(--rule);padding:10px 12px;margin:4px 0 8px}
+.btn.kakao{display:flex;justify-content:center;align-items:center;background:#fee500;color:#191600;border-color:#fee500;margin-top:8px;text-decoration:none}.btn.kakao .kk{font-size:.7rem}
+.giftchk{display:block;margin-top:12px;font-size:.88rem}
+.peer{margin-top:6px;font-size:.8rem;color:var(--ink-2)}.peer b{color:var(--brand)}
+.notice.integ{margin:12px 0}
+.fs-btn{padding:4px 10px;font-size:.78rem}
+.msg{padding:12px 14px;border:1px solid var(--rule);margin:10px 0;background:var(--surface)}.msg.staff{border-left:4px solid var(--brand)}
+.msgbody{white-space:pre-wrap;margin-top:6px}
+.charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin:16px 0}
+.chart{margin:0}.chart b{font-size:1.3rem;font-family:var(--mono)}
+svg.bars{display:block;width:100%;height:90px;margin-top:10px}svg.bars rect{fill:var(--ink)}svg.bars rect:hover{fill:var(--brand)}
+@media (max-width:700px){.quicklinks{grid-template-columns:1fr}.quicklinks .ql{border-right:0;border-bottom:1px solid var(--rule)}.quicklinks .ql:last-child{border-bottom:0}}
