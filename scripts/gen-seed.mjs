@@ -787,7 +787,7 @@ function satFigures(count) {
       st = `The graph of the quadratic function y = f(x) is shown. What is the ${mx} value of f?`; cor = k; wr = [h, k === 0 ? 1 : -k, a > 0 ? k + 1 : k - 1, h + k === k ? k + 2 : h + k];
       ex = `The vertex of the parabola is (${h}, ${k}); its y-coordinate ${k} is the ${mx} value of f.`; d = 3;
     } else if (t === 'roots') { // parabola with integer x-intercepts
-      const r1 = ri(-5, -1), r2 = ri(1, 5), a = pick([0.5, -0.5, 1, -1]); const f = (x) => a * (x - r1) * (x - r2);
+      let r1 = ri(-5, -1), r2 = ri(1, 5); if (r1 === -r2) r2 = r2 === 5 ? 4 : r2 + 1; const a = pick([0.5, -0.5, 1, -1]); const f = (x) => a * (x - r1) * (x - r2); // symmetric roots would make the sign-flipped factors equivalent
       const vy = f((r1 + r2) / 2); const span = Math.max(6, Math.ceil(Math.abs(vy)) + 1);
       svg = fnGraph({ fns: [{ f }], xr: [-6, 6], yr: [-span, span], step: 1, labelEvery: span > 8 ? 4 : 2 });
       st = 'The graph of y = f(x) is shown, where f is a quadratic function. Which of the following could define f?';
@@ -811,7 +811,7 @@ function satFigures(count) {
     } else if (t === 'table') { // linear table → equation
       const m = ri(2, 6), b = ri(-5, 9), xs = [1, 2, 3, 4];
       svg = tableSvg({ title: 'Values of x and f(x)', headers: ['x', 'f(x)'], rows: xs.map((x) => [x, m * x + b]) });
-      const eq = (mm, bb) => `f(x) = ${mm}x ${bb === 0 ? '' : sg(bb)}`.trim();
+      const eq = (mm, bb) => { const t = mm === 0 ? '' : `${mm === 1 ? '' : mm === -1 ? '−' : String(mm).replace('-', '−')}x`; return t ? `f(x) = ${t}${bb === 0 ? '' : ' ' + sg(bb)}` : `f(x) = ${String(bb).replace('-', '−')}`; };
       st = 'The table shows four values of x and their corresponding values of the linear function f. Which equation defines f?'; cor = eq(m, b);
       wr = [eq(m + b, 0), eq(b === 0 ? m + 1 : b, m), eq(m, m + b)].map((w) => (w === cor ? eq(m, b + 1) : w));
       ex = `Each increase of 1 in x increases f(x) by ${m}, so the slope is ${m}; f(1) = ${m + b} gives the constant ${b}.`; d = 2;

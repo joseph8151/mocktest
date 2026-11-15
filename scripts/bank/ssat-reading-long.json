@@ -12,7 +12,7 @@
    "He rushed and did not measure first."
   ],
   "answer": 3,
-  "explanation": "Leo \"did not want to measure\" and \"wanted to build right away,\" so the nails went in crooked."
+  "explanation": "Leo \"did not want to measure anything, because he wanted to start building right away,\" so the nails went in crooked."
  },
  {
   "exam_type": "SSAT",
@@ -42,7 +42,7 @@
    "on the fence beside the garden"
   ],
   "answer": 1,
-  "explanation": "The passage says they \"hung it on the maple tree by the kitchen window.\" The crooked one went on a low branch."
+  "explanation": "The passage says they \"hung it on the maple tree beside the kitchen window.\" The crooked one went on a low branch."
  },
  {
   "exam_type": "SSAT",
@@ -87,7 +87,7 @@
    "He moves her stand inside the house."
   ],
   "answer": 2,
-  "explanation": "Dad asks, \"So what do people want on a cold, wet day?\" and Rosa then thinks of \"Something warm!\""
+  "explanation": "Dad asks, \"So what do people want on a cold, rainy day?\" and Rosa then answers, \"They want something warm!\""
  },
  {
   "exam_type": "SSAT",
@@ -102,7 +102,7 @@
    "so that the sign is easy to read"
   ],
   "answer": 1,
-  "explanation": "She puts the table \"under the porch roof, where it was dry.\""
+  "explanation": "She puts the table \"under the porch roof, where it would stay dry.\""
  },
  {
   "exam_type": "SSAT",
@@ -117,7 +117,7 @@
    "You should always check the weather first."
   ],
   "answer": 0,
-  "explanation": "Rain ruins the lemonade plan, but the hot cocoa idea sells out, and Rosa says rain \"is not so bad after all.\""
+  "explanation": "Rain ruins the lemonade plan, but the hot cocoa idea sells out, and Rosa says rainy days \"are not so bad after all.\""
  },
  {
   "exam_type": "SSAT",
@@ -162,7 +162,7 @@
    "to build a place to sleep"
   ],
   "answer": 1,
-  "explanation": "Otters \"bang the shells on the rock until the shells crack open.\""
+  "explanation": "Otters \"bang the shells against the rock until the shells crack open.\""
  },
  {
   "exam_type": "SSAT",
@@ -177,7 +177,7 @@
    "keeps the otter's fur clean"
   ],
   "answer": 0,
-  "explanation": "The next sentence explains: \"It keeps the otter in place while it naps on the waves.\""
+  "explanation": "The same sentence says the kelp \"keeps the otter in place while it naps on the waves.\""
  },
  {
   "exam_type": "SSAT",
@@ -252,7 +252,7 @@
    "The snowflakes melted before he could draw them."
   ],
   "answer": 3,
-  "explanation": "He \"tried to draw what he saw, but the flakes melted too fast,\" so he \"needed a better way.\""
+  "explanation": "He \"tried to draw what he saw, but the flakes melted too quickly,\" so he \"needed a better way.\""
  },
  {
   "exam_type": "SSAT",
@@ -267,7 +267,7 @@
    "lucky"
   ],
   "answer": 2,
-  "explanation": "He \"spent two winters failing\" but \"did not give up\" until he took a clear photo."
+  "explanation": "He \"spent two whole winters failing\" but \"did not give up\" until he took a clear photo."
  },
  {
   "exam_type": "SSAT",
@@ -277,12 +277,12 @@
   "stem": "What did Wilson find after taking thousands of snowflake photos?",
   "choices": [
    "Most flakes looked the same.",
-   "No two flakes were just alike.",
+   "No two flakes were exactly alike.",
    "Snowflakes were easy to keep from melting.",
    "Only some flakes could be photographed."
   ],
   "answer": 1,
-  "explanation": "The fourth paragraph says, \"He never found two flakes that were just alike.\""
+  "explanation": "The fourth paragraph says \"he never found two flakes that were exactly alike.\""
  },
  {
   "exam_type": "SSAT",
@@ -297,7 +297,7 @@
    "bored"
   ],
   "answer": 0,
-  "explanation": "The author calls snowflakes \"tiny work[s] of art\" in Wilson's eyes, praises his refusal to give up, and notes that scientists still study his photos."
+  "explanation": "The author shares Wilson's view of each snowflake as \"a tiny work of art,\" praises his refusal to give up, and notes that scientists still study his photos."
  },
  {
   "exam_type": "SSAT",
@@ -312,14 +312,14 @@
    "shows a reflection of the sky"
   ],
   "answer": 3,
-  "explanation": "The puddle also \"holds a face, and that face is me,\" which shows it is reflecting what is above it like a mirror."
+  "explanation": "The puddle also holds \"a smiling face that looks like me,\" which shows it is reflecting what is above it like a mirror."
  },
  {
   "exam_type": "SSAT",
   "section": "reading",
   "difficulty": 1,
   "passage": "After the Rain\n\nThe rain has gone, the clouds have run,\nand a puddle sits beside the sun.\nIt holds the sky and a tall green tree\nand a smiling face that looks like me.\n\nA robin hops down to take a sip,\nand a leaf sails by like a tiny ship.\nA beetle walking around the rim\nstops and wonders if it should swim.\n\nI jump right in, and the pictures shake!\nThe tree goes wiggly in my wake.\nBut if I stand still, I will soon see\nthe sky come back, and the tree, and me.\n\nBy noon the sun will drink it dry,\nand I will have to find the sky\nthe old way, high above my head,\nand not down at my feet instead.",
-  "stem": "Why does the poet call the leaf \"a tiny ship\"?",
+  "stem": "Why does the poet compare the leaf to \"a tiny ship\"?",
   "choices": [
    "The leaf has a sail on top.",
    "The leaf is shaped like a boat.",
@@ -342,7 +342,7 @@
    "The sun dries the puddle up."
   ],
   "answer": 1,
-  "explanation": "Right after \"I jump right in!\" the poem says \"The pictures shake\" and \"The tree goes wiggly.\""
+  "explanation": "The poem says \"I jump right in, and the pictures shake!\" and then \"The tree goes wiggly.\""
  },
  {
   "exam_type": "SSAT",
@@ -402,7 +402,7 @@
    "slipped off the keys because of the shoes"
   ],
   "answer": 1,
-  "explanation": "The fingers \"kept moving for a moment\" after the narrator's \"mind went completely blank,\" and \"then they stopped,\" like feet after a missed step."
+  "explanation": "The fingers \"continued moving for a moment\" after the narrator's \"mind went completely blank,\" and \"then they stopped,\" like feet after a missed step."
  },
  {
   "exam_type": "SSAT",
@@ -447,7 +447,7 @@
    "quit the chess club after this season"
   ],
   "answer": 2,
-  "explanation": "Theo is the club's best player and \"almost felt sorry\" for June, showing he expects an easy win."
+  "explanation": "Theo is the club's strongest player and \"almost felt sorry\" for June, showing he expects an easy win."
  },
  {
   "exam_type": "SSAT",
@@ -462,7 +462,7 @@
    "She takes risks with her queen, while he does not."
   ],
   "answer": 1,
-  "explanation": "Theo \"liked to attack early,\" while June calmly blocked his attacks and built her position \"pawn by pawn.\""
+  "explanation": "Theo \"preferred to attack early,\" while June calmly blocked his attacks and built her position \"pawn by pawn.\""
  },
  {
   "exam_type": "SSAT",
@@ -477,7 +477,7 @@
    "needs to copy her notes for a club report"
   ],
   "answer": 0,
-  "explanation": "Theo is tempted to say he \"had not really been trying,\" but \"instead\" takes a breath and asks to learn, then later studies the game at home."
+  "explanation": "Theo is tempted to explain that he \"had not really been trying,\" but \"instead\" takes a breath and asks to learn, then later studies the game at home."
  },
  {
   "exam_type": "SSAT",
@@ -492,7 +492,7 @@
    "set up a strong position before you start attacking"
   ],
   "answer": 3,
-  "explanation": "June won by building a solid position \"like a wall\" before acting, while Theo's early attack left his pieces \"scattered.\""
+  "explanation": "June won by building a solid position \"like a sturdy wall\" before acting, while Theo's early attack left his pieces \"scattered.\""
  },
  {
   "exam_type": "SSAT",
@@ -837,7 +837,7 @@
    "show that Ines finds the work in the shop tedious"
   ],
   "answer": 0,
-  "explanation": "It lists the skills Ines has learned and stresses that \"Mr. Halloran did nothing quickly,\" studying a crack \"for an entire morning.\""
+  "explanation": "It lists the skills Ines has learned and stresses that \"Mr. Halloran did nothing hurriedly,\" examining a single crack \"for an entire morning.\""
  },
  {
   "exam_type": "SSAT",
@@ -852,14 +852,14 @@
    "appreciative despite their imperfections"
   ],
   "answer": 3,
-  "explanation": "He admits the old mender \"was not as careful as he might have been\" but says \"he was careful enough. The violin kept singing,\" and his voice holds \"something close to gratitude.\""
+  "explanation": "He admits the old mender \"was not as careful as he might have been\" but says \"he was careful enough, and the violin kept singing,\" and his voice holds \"something remarkably close to gratitude.\""
  },
  {
   "exam_type": "SSAT",
   "section": "reading",
   "difficulty": 5,
   "passage": "The violin arrived in a cardboard box lined with crumpled newspaper, its neck snapped cleanly from the body and its delicate top split along the grain like a dry riverbed. Ines lifted it out with both hands, as if it might still feel pain, and laid it on the felt-covered bench where Mr. Halloran performed his most meticulous restorations.\n\nIn the eleven months she had served as his apprentice, she had learned to sharpen chisels until they could shave a translucent curl from the end grain of spruce, to warm animal glue in a double boiler that smelled faintly of a barn, and, above all, to wait. Mr. Halloran did nothing hurriedly: he would examine a single crack for an entire morning before touching it, rotating the instrument beneath the lamp and running a fingertip along its edge as though deciphering a sentence written in a language only he understood.\n\nWhen she finally asked whether it could be saved, he did not answer immediately; instead, he held the violin up to the window, and the afternoon light passed through the thin wood of the top, revealing a faint amber map of earlier repairs: a reinforcing cleat here, a patch there, the ghostly outline of a crack mended long before either of them was born.\n\n\"Look,\" he said, tracing the oldest of the patches with his finger. \"Someone has already rescued it, three times, perhaps four. Whoever did this was not as careful as he might have been, but he was careful enough, and the violin kept singing.\"\n\nInes had expected him to criticize the earlier workmanship, as he frequently criticized hers. Instead, his voice contained something remarkably close to gratitude. It occurred to her that he was speaking not only of the violin's previous menders but also of himself, and perhaps of her as well: of all the imperfect hands an instrument passes through on its long journey from one century to the next.\n\nThey labored over the violin for six weeks, and Mr. Halloran permitted her to fit the new cleats along the split, small diamonds of spruce positioned crosswise to the grain, and he did not correct her once, although she noticed him look twice at the third one. When at last the strings were tuned and he drew the bow across them, the sound that emerged was not flawless; it possessed a slight roughness in the lower register, like a voice that has lingered too long in the cold.\n\n\"There,\" he said, handing the instrument to her with unexpected ceremony. \"Now you are part of its history too.\"\n\nThat night, walking home through the darkening streets, Ines discovered that she was not thinking about the roughness at all. She was imagining some future apprentice, decades from now, holding the violin up to a window and discovering her small diamonds glowing in the light.",
-  "stem": "The statement that Mr. Halloran \"did not correct her once, though she saw him look twice at the third one\" most strongly suggests that he",
+  "stem": "The statement that Mr. Halloran \"did not correct her once, although she noticed him look twice at the third one\" most strongly suggests that he",
   "choices": [
    "did not notice any mistakes in her cleats",
    "planned to secretly redo the third cleat later",
@@ -882,7 +882,7 @@
    "believe her cleats are better than the older patches"
   ],
   "answer": 1,
-  "explanation": "She is \"not thinking about the roughness at all\" but imagines a future apprentice finding \"her small diamonds,\" echoing \"Now you are in its history too.\""
+  "explanation": "She is \"not thinking about the roughness at all\" but imagines a future apprentice finding \"her small diamonds,\" echoing \"Now you are part of its history too.\""
  },
  {
   "exam_type": "SSAT",
@@ -904,7 +904,7 @@
   "section": "reading",
   "difficulty": 4,
   "passage": "The Cartographer's Daughter\n\nMy father drew the coastlines of the world\nfrom other people's journeys, never his:\nthe jagged inlets sailors had reported,\nthe islands rumored, half-imagined, named\nfor patrons who would never see them either.\nHe worked by lamplight, patient as the tide,\ncorrecting capes by fractions of a degree.\n\nI asked him once if it unsettled him\nto chart a shoreline he could never verify.\nHe smiled and lifted up his finest pen.\n\"Each map,\" he said, \"is someone's best belief,\nrecorded honestly, and then revised.\nThe world is always larger than the paper;\nthe error is in thinking we are finished.\"\n\nNow, decades later, holding the exacting\nphotograph a satellite has taken,\nI find his careful coastline wandering\na mile too far into the open water.\nI do not mark it wrong; I trace it slowly,\nthe way one reads a treasured, faded letter,\nand recognize the honesty of distance,\nthe faith of someone drawing what he was told\nwho left a margin for the truth to enter.",
-  "stem": "The father's statement \"The error is in thinking we are finished\" suggests that he believes",
+  "stem": "The father's statement that \"the error is in thinking we are finished\" suggests that he believes",
   "choices": [
    "most maps are too full of mistakes to be useful",
    "mapmakers should stop working once a map is printed",
@@ -1114,7 +1114,7 @@
   "section": "reading",
   "difficulty": 4,
   "passage": "The following letter is an imagined account, written in the style of the period, of a young woman's first railway journey in the early 1840s.\n\nMy dear Margaret,\n\nYou made me promise to write the moment I arrived, and so I sit, still in my traveling cloak, at Aunt Harriet's writing desk, my hand not altogether steady—though whether from the motion of the carriage or from sheer astonishment I cannot say.\n\nI confess I approached the station this morning in a state of considerable dread. You will recall that Mr. Pell assured us at dinner last month that the human frame was never designed to travel at more than twenty miles in the hour, and that the rush of air at such velocities would certainly stop the breath. I half believed him, and when the engine came hissing alongside the platform, enormous and black and exhaling steam like some creature in a fable, I very nearly retreated to the coach office.\n\nI did not retreat, and I am exceedingly glad of it. For the first few minutes I gripped the edge of the seat and kept my eyes fixed upon my gloves; but curiosity is a more powerful force than fear, at least in my temperament, and presently I looked out. Margaret, the fields went by as if someone were drawing a painted ribbon past the window. Hedges, cottages, a church tower, a boy waving from a gate—each appeared and vanished before I could properly take it in. My breath, I assure you, continued perfectly well, whatever Mr. Pell's predictions.\n\nWhat struck me most was not the speed itself but what it does to distance. The journey that once cost Father two full days by coach, with a night at that miserable inn, I completed between breakfast and a late luncheon. It seems to me that the entire country has grown smaller since Tuesday. Aunt Harriet, who has lived her whole life in this town, says that the railway will bring London newspapers here on the very day they are printed, and that she hardly knows whether to be pleased or alarmed.\n\nI confess I share something of her uncertainty. There is a great deal of soot, and the noise is beyond description, and I could not help but feel for the coachmen standing idle in the yard as we passed. Yet I cannot wish the thing undone, for I have seen the future arriving, and it came in at forty miles an hour.\n\nDo tell Mother that I am entirely well, and that I wore my scarf exactly as she instructed; I shall write again on Sunday.\n\nYour affectionate sister,\nEleanor",
-  "stem": "Eleanor's account of Mr. Pell's warning in the second paragraph mainly serves to",
+  "stem": "Eleanor's account of Mr. Pell's warning at dinner mainly serves to",
   "choices": [
    "show that Eleanor trusts Mr. Pell's scientific knowledge",
    "explain the source of a fear that the journey later proves unfounded",

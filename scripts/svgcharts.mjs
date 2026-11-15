@@ -207,9 +207,13 @@ export function fnGraph({ fns = [], pts = [], xr = [-6, 6], yr = [-6, 6], step =
     for (const sgm of segs) if (sgm.length > 1) s += `<polyline points="${sgm.join(' ')}" fill="none" stroke="${COL[i % 3]}" stroke-width="2.4"/>`;
   });
   const named = fns.filter((f) => f.label); // legend box in the top-left corner instead of labels on the curves
-  if (named.length) {
-    s += `<rect x="${P + 4}" y="${P + 4}" width="${Math.max(...named.map((f) => f.label.length)) * 7 + 34}" height="${named.length * 18 + 8}" fill="#fff" stroke="${GRID}"/>`;
-    named.forEach((f) => { const i = fns.indexOf(f), y = P + 18 + named.indexOf(f) * 18; s += `<line x1="${P + 10}" y1="${y - 4}" x2="${P + 26}" y2="${y - 4}" stroke="${COL[i % 3]}" stroke-width="3"/>` + text(P + 31, y, f.label, `font-size="12" font-style="italic" fill="${COL[i % 3]}"`); });
+  if (named.length) { // legend in whichever corner the curves (and points) touch least
+    const lw = Math.max(...named.map((f) => f.label.length)) * 7 + 34, lh = named.length * 18 + 8;
+    const corners = [[P + 4, P + 4], [W - P - 4 - lw, P + 4], [P + 4, H - P - 4 - lh], [W - P - 4 - lw, H - P - 4 - lh]];
+    const hits = ([cx, cy]) => { let n = 0; for (const fn of fns) for (let k = 0; k <= 200; k++) { const x = xr[0] + ((xr[1] - xr[0]) * k) / 200, y = fn.f(x); if (Number.isFinite(y) && X(x) >= cx - 6 && X(x) <= cx + lw + 6 && Y(y) >= cy - 6 && Y(y) <= cy + lh + 6) n++; } for (const p of pts) if (X(p.x) >= cx - 40 && X(p.x) <= cx + lw + 40 && Y(p.y) >= cy - 20 && Y(p.y) <= cy + lh + 20) n += 50; return n; };
+    const [lx, ly] = corners.map((c) => [c, hits(c)]).sort((a, b) => a[1] - b[1])[0][0];
+    s += `<rect x="${lx}" y="${ly}" width="${lw}" height="${lh}" fill="#fff" stroke="${GRID}"/>`;
+    named.forEach((f) => { const i = fns.indexOf(f), y = ly + 14 + named.indexOf(f) * 18; s += `<line x1="${lx + 6}" y1="${y - 4}" x2="${lx + 22}" y2="${y - 4}" stroke="${COL[i % 3]}" stroke-width="3"/>` + text(lx + 27, y, f.label, `font-size="12" font-style="italic" fill="${COL[i % 3]}"`); });
   }
   for (const p of pts) s += `<circle cx="${X(p.x)}" cy="${Y(p.y)}" r="4" fill="${INK}"/>` + (p.label ? text(X(p.x) + (p.x < 0 ? -7 : 7), Y(p.y) + (p.y < 0 ? 18 : -9), p.label, `font-size="11" font-weight="600" stroke="#fff" stroke-width="3" paint-order="stroke" ${p.x < 0 ? 'text-anchor="end"' : ''}`) : '');
   return wrap(W, H, s);
