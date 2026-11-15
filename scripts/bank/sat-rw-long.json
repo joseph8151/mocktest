@@ -66,12 +66,12 @@
     "passage": "Architect Lena Osei is known for buildings that seem to ______ the laws of gravity. Her art museum in the harbor city of Port Aria includes a gallery that extends forty feet beyond its last support column, so it appears to float above the water. People walking past often stop on the sidewalk below just to stare up at it in surprise.",
     "stem": "Which choice completes the text with the most logical and precise word or phrase?",
     "choices": [
-      "follow",
       "defy",
+      "follow",
       "explain",
       "measure"
     ],
-    "answer": 1,
+    "answer": 0,
     "explanation": "A gallery that seems to float without support appears to resist, or defy, gravity."
   },
   {
@@ -141,12 +141,12 @@
     "passage": "Critics have long described novelist Mara Ellison's prose as ______. Her sentences rarely exceed a dozen words, she avoids adjectives whenever possible, and entire chapters pass without a single metaphor. Yet readers often report that this stripped-down style makes her characters' grief feel more intense, not less.",
     "stem": "Which choice completes the text with the most logical and precise word or phrase?",
     "choices": [
-      "ornate",
-      "whimsical",
       "austere",
+      "whimsical",
+      "ornate",
       "rambling"
     ],
-    "answer": 2,
+    "answer": 0,
     "explanation": "Short sentences with few adjectives and no metaphors describe a plain, severe style, which is \"austere.\""
   },
   {
@@ -243,7 +243,7 @@
     "exam_type": "SAT",
     "section": "rw",
     "difficulty": 4,
-    "passage": "The following text is adapted from a novel. Tomas has just returned to the village where he grew up.\nThe bakery was gone; in its place stood a shop selling telephones, its window bright with screens, and Tomas stood before it longer than he had intended. He could still smell, or believed he could, the caramelized sugar of the almond cakes his aunt had pressed into his hands every Sunday morning. A young clerk inside glanced up, smiled politely, and returned to her work, and Tomas understood that she had no reason to know there had ever been anything else on this corner.",
+    "passage": "The following text is adapted from a novel. Tomas has just returned to the coastal village where he spent his childhood.\nThe bakery was gone; in its place stood a shop selling telephones, its window bright with screens, and Tomas stood before it longer than he had intended. He could still smell, or believed he could, the caramelized sugar of the almond cakes his aunt had pressed into his hands every Sunday morning. A young clerk inside glanced up, smiled politely, and returned to her work, and Tomas understood that she had no reason to suspect there had ever been anything else on this particular corner.",
     "stem": "Which choice best describes the function of the final sentence in the text as a whole?",
     "choices": [
       "It reveals that the clerk recognizes Tomas from his childhood.",
@@ -261,12 +261,12 @@
     "passage": "Agnes Thorne, a nineteenth-century reformer, is often remembered as a fiery public speaker. In her private correspondence, however, she was remarkably ______. Her letters weigh opposing arguments at length and concede points to her adversaries. They rarely reach a conclusion without several careful qualifications.",
     "stem": "Which choice completes the text with the most logical and precise word or phrase?",
     "choices": [
-      "strident",
       "circumspect",
+      "strident",
       "laconic",
       "credulous"
     ],
-    "answer": 1,
+    "answer": 0,
     "explanation": "Weighing arguments carefully and qualifying conclusions shows caution, which \"circumspect\" captures; \"laconic\" contradicts the lengthy letters."
   },
   {
@@ -318,7 +318,7 @@
     "exam_type": "SAT",
     "section": "rw",
     "difficulty": 1,
-    "passage": "Students at Lakeview Middle School set up a bird feeder in the courtyard. Each month, they counted the birds that came to it.\nMonth | Birds counted\nOctober | 42\nNovember | 58\nDecember | 75\nJanuary | 81\nThe students noted that from October to January, the number of birds ______",
+    "passage": "Students at Lakeview Middle School set up a bird feeder in the yard. Each month, they counted the birds that came to it.\nMonth | Birds counted\nOctober | 42\nNovember | 58\nDecember | 75\nJanuary | 81\nThe students noted that from October to January, the number of birds ______",
     "stem": "Which choice most effectively uses data from the table to complete the statement?",
     "choices": [
       "increased every month.",
@@ -348,7 +348,7 @@
     "exam_type": "SAT",
     "section": "rw",
     "difficulty": 1,
-    "passage": "Jun Park's short story \"The Long Walk Home\" follows two brothers as they walk home from school through a busy city on a rainy afternoon. In the story, the narrator's younger brother, Eli, is shown to be extremely curious about the world around him, even when his curiosity slows the brothers down.",
+    "passage": "Jun Park's short story \"The Long Walk Home\" follows two brothers as they walk home from school on a rainy afternoon. In the story, the narrator's younger brother, Eli, is very curious about the world around him. His curiosity often slows the brothers down.",
     "stem": "Which quotation from the story most effectively illustrates the claim?",
     "choices": [
       "\"Eli pulled his hood tighter and complained that his sneakers were soaking wet.\"",
@@ -423,7 +423,7 @@
     "exam_type": "SAT",
     "section": "rw",
     "difficulty": 3,
-    "passage": "The following text is from a poem describing a fishing harbor during the quiet months of winter.\nThe boats are hauled and canvas-bound,\nthe gulls sit hunched along the pier;\nno engine breaks the frozen sound\nthat settles on the water here.\nYet coiled ropes still smell of tar,\nand nets hang stiff with August salt,\nand every hull, from keel to spar,\nremembers motion it was taught.",
+    "passage": "The following text is from a poem describing a small fishing harbor during the long, quiet months of winter, when the boats remain ashore.\nThe boats are hauled and canvas-bound,\nthe gulls sit hunched along the pier;\nno engine breaks the frozen sound\nthat settles on the water here.\nYet coiled ropes still smell of tar,\nand nets hang stiff with August salt,\nand every hull, from keel to spar,\nremembers motion it was taught.",
     "stem": "Which quotation from the poem most effectively illustrates the claim that the speaker finds traces of summer activity in the winter harbor?",
     "choices": [
       "\"The boats are hauled and canvas-bound,\"",
@@ -483,7 +483,7 @@
     "exam_type": "SAT",
     "section": "rw",
     "difficulty": 4,
-    "passage": "The following text is adapted from a novel. Irene, a retired teacher, has agreed to tutor her neighbor's son.\nIrene had expected the boy to be sullen, and for the first twenty minutes he was, answering her questions in single syllables and staring past her at the window. Then she set the workbook aside and asked what he would build if he had all the lumber in the world, and for the first time, he looked directly at her. By the end of the hour, the margins of her carefully prepared lesson plan were crowded with his sketches of towers and bridges, and she had taught nothing she had planned.",
+    "passage": "The following text is adapted from a novel. Irene, a retired schoolteacher, has reluctantly agreed to tutor her neighbor's teenage son.\nIrene had expected the boy to be sullen, and for the first twenty minutes he was, answering her questions in single syllables and staring past her at the window. Then she set the workbook aside and asked what he would build if he had all the lumber in the world, and for the first time, he looked directly at her. By the end of the hour, the margins of her carefully prepared lesson plan were crowded with his sketches of towers and bridges, and she had taught nothing she had planned.",
     "stem": "Which choice best states the main idea of the text?",
     "choices": [
       "Irene decides that the boy has no interest in learning and gives up on tutoring him.",
@@ -606,12 +606,12 @@
     "passage": "The giant sequoias of California's Sierra Nevada are among the largest living things on Earth. A single tree can weigh more than two million pounds. The thick, spongy bark of these trees ______ them from many forest fires, which is one reason some sequoias have lived for more than 3,000 years.",
     "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
     "choices": [
-      "protect",
       "protects",
+      "protect",
       "are protecting",
       "have protected"
     ],
-    "answer": 1,
+    "answer": 0,
     "explanation": "The singular subject \"bark\" requires the singular verb \"protects.\""
   },
   {
@@ -708,16 +708,16 @@
     "exam_type": "SAT",
     "section": "rw",
     "difficulty": 3,
-    "passage": "The tardigrade, a microscopic animal sometimes called a \"water bear,\" is famously hard to kill. In laboratory tests, tardigrades have survived temperatures near absolute zero, intense radiation, and even exposure to the vacuum of space. Scientists study the ______ cells to learn how they protect themselves, research that could someday help preserve vaccines without refrigeration.",
+    "passage": "The tardigrade, a microscopic animal sometimes called a \"water bear,\" is famously hard to kill. In laboratory tests, tardigrades have survived temperatures near absolute zero, intense radiation, and even exposure to the vacuum of space. Scientists who study these tiny creatures ______ to learn how their cells resist damage, research that could someday help preserve vaccines without refrigeration.",
     "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
     "choices": [
-      "tardigrades",
-      "tardigrade's",
-      "tardigrades'",
-      "tardigrades's"
+      "hope",
+      "hopes",
+      "is hoping",
+      "has hoped"
     ],
-    "answer": 2,
-    "explanation": "The cells belong to the plural \"tardigrades\" discussed in the previous sentence, so the plural possessive \"tardigrades'\" is correct."
+    "answer": 0,
+    "explanation": "The subject is the plural \"Scientists,\" not \"creatures,\" so the plural verb \"hope\" is required."
   },
   {
     "exam_type": "SAT",
@@ -783,7 +783,7 @@
     "exam_type": "SAT",
     "section": "rw",
     "difficulty": 4,
-    "passage": "A museum's new exhibit features artifacts from three ancient cities: Ur, in present-day ______ Mohenjo-daro, in present-day Pakistan; and Teotihuacan, in present-day Mexico. Curators selected these three sites because each was among the largest urban centers of its era, and together they show how differently early cities could develop.",
+    "passage": "A museum's new exhibit features artifacts from three ancient cities: Ur, in present-day ______ Mohenjo-daro, in present-day Pakistan; and Teotihuacan, in present-day Mexico. Curators selected these three sites because each was among the largest urban centers of its era. Together, they show how differently early cities could develop.",
     "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
     "choices": [
       "Iraq,",
@@ -921,12 +921,12 @@
     "passage": "In the early 1900s, electric lights were common in American cities. But running power lines to farms that were spread far apart cost a great deal of money, and power companies saw little profit in it. ______ by 1930, only about one in ten farm homes in the United States had electricity.",
     "stem": "Which choice completes the text with the most logical transition?",
     "choices": [
-      "Nevertheless,",
-      "For example,",
       "As a result,",
+      "For example,",
+      "Nevertheless,",
       "Meanwhile,"
     ],
-    "answer": 2,
+    "answer": 0,
     "explanation": "Few farms had power because extending lines was costly, so \"As a result\" shows the cause-and-effect relationship."
   },
   {
@@ -966,12 +966,12 @@
     "passage": "While researching a topic, a student has taken the following notes:\n• Phillis Wheatley and Gwendolyn Brooks were both acclaimed Black American poets.\n• Wheatley's collection Poems on Various Subjects, Religious and Moral was published in London in 1773.\n• Wheatley often wrote in heroic couplets, a formal style popular in eighteenth-century England.\n• Brooks won the 1950 Pulitzer Prize for Poetry for her book Annie Allen.\n• Brooks often wrote about everyday life in the Bronzeville neighborhood of Chicago.",
     "stem": "The student wants to introduce Brooks's major award to an audience already familiar with Wheatley. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "choices": [
-      "Gwendolyn Brooks and Phillis Wheatley were both acclaimed Black American poets.",
-      "Phillis Wheatley published Poems on Various Subjects, Religious and Moral in London in 1773.",
       "Like Wheatley, whose 1773 collection brought her wide acclaim, Brooks earned great recognition, winning the 1950 Pulitzer Prize for Poetry for Annie Allen.",
+      "Phillis Wheatley published Poems on Various Subjects, Religious and Moral in London in 1773.",
+      "Gwendolyn Brooks and Phillis Wheatley were both acclaimed Black American poets.",
       "Wheatley often wrote in heroic couplets, a formal style popular in eighteenth-century England."
     ],
-    "answer": 2,
+    "answer": 0,
     "explanation": "This choice connects Brooks to the familiar figure of Wheatley and names Brooks's Pulitzer Prize."
   },
   {
@@ -981,12 +981,12 @@
     "passage": "Some critics argue that a four-day workweek would reduce output, since employees would simply have fewer hours to finish their tasks. Results from actual trials, however, have challenged this prediction. ______ in a 2022 trial in the United Kingdom, most of the 61 participating companies reported that revenue stayed about the same, and the majority chose to keep the shorter schedule after the trial ended.",
     "stem": "Which choice completes the text with the most logical transition?",
     "choices": [
-      "Nevertheless,",
       "For instance,",
+      "Nevertheless,",
       "Similarly,",
       "By contrast,"
     ],
-    "answer": 1,
+    "answer": 0,
     "explanation": "The UK trial is an example of a result that challenged the prediction, so \"For instance\" fits."
   },
   {
