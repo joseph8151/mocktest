@@ -858,7 +858,7 @@ function calibrateReading() {
   const syl = (w) => { w = w.toLowerCase().replace(/[^a-z]/g, ''); if (w.length <= 3) return 1; w = w.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '').replace(/^y/, ''); return Math.max(1, (w.match(/[aeiouy]{1,2}/g) || []).length); };
   const fk = (t) => { const ws = String(t).match(/[A-Za-z]+/g) || []; if (ws.length < 20) return 0; const se = Math.max(1, (String(t).match(/[.!?]+(["”’)]*)(\s|$)/g) || []).length); return 0.39 * (ws.length / se) + 11.8 * (ws.reduce((a, w) => a + syl(w), 0) / ws.length) - 15.59; };
   // [FK grade, minimum difficulty] steps per exam
-  const STEPS = { MAP: [[3.5, 2], [6, 3], [8, 4], [10, 5]], SSAT: [[6.5, 2], [8.5, 3], [10, 4]], ISEE: [[6.5, 2], [8.5, 3], [10, 4]], TOEFLJ: [[5, 2], [6.5, 3], [8, 4]], WIDA: [[4.5, 2], [6.5, 3], [8.5, 4]] };
+  const STEPS = { MAP: [[3.5, 2], [6, 3], [8, 4], [10, 5]], SSAT: [[5.5, 2], [7, 3], [8.5, 4], [10.5, 5]], ISEE: [[6, 2], [7.5, 3], [9, 4], [11, 5]], TOEFLJ: [[5, 2], [6.5, 3], [8, 4]], WIDA: [[4.5, 2], [6.5, 3], [8.5, 4]] };
   let moved = 0;
   for (const q of Q) {
     const steps = STEPS[q.exam_type]; if (!steps || !q.passage || !['reading'].includes(q.section)) continue;
