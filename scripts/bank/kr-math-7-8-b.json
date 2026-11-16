@@ -1,0 +1,1289 @@
+[
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 1,
+    "stem": "그림은 쌓기나무 10개를 길게 붙인 막대 1개와 낱개 쌓기나무 몇 개예요. 쌓기나무는 모두 몇 개일까요?",
+    "choices": [
+      "7",
+      "15",
+      "16",
+      "61"
+    ],
+    "answer": 2,
+    "explanation": "막대 1개는 10개예요. 10에 낱개 6개를 더 세면 11, 12, 13, 14, 15, 16이므로 모두 16개예요. 막대를 1개로 세면 7이 되는 함정에 주의해요.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 330 70\" width=\"330\" height=\"70\" font-family=\"sans-serif\"><rect x=\"10\" y=\"20\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"30\" y=\"20\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"50\" y=\"20\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"70\" y=\"20\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"90\" y=\"20\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"110\" y=\"20\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"130\" y=\"20\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"150\" y=\"20\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"170\" y=\"20\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"190\" y=\"20\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"240\" y=\"10\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"268\" y=\"10\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"296\" y=\"10\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"240\" y=\"38\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"268\" y=\"38\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"296\" y=\"38\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 1,
+    "stem": "8 ○ 3 ○ 2 = 7 이 되도록 ○ 안에 + 또는 - 를 차례대로 넣으려고 해요. 알맞은 것은 무엇일까요?",
+    "choices": [
+      "-, +",
+      "+, +",
+      "+, -",
+      "-, -"
+    ],
+    "answer": 0,
+    "explanation": "8 - 3 = 5, 5 + 2 = 7이에요. 다른 경우는 8 + 3 + 2 = 13, 8 + 3 - 2 = 9, 8 - 3 - 2 = 3이라서 7이 되지 않아요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 1,
+    "kind": "num",
+    "stem": "똑같은 수 두 개를 더했더니 12가 되었어요. 더한 수는 무엇일까요?",
+    "choices": [
+      "6"
+    ],
+    "explanation": "6 + 6 = 12예요. 5 + 5 = 10, 7 + 7 = 14이므로 똑같은 수는 6이에요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 1,
+    "stem": "계산한 값이 가장 큰 것은 무엇일까요?",
+    "choices": [
+      "9 + 8",
+      "10 + 6",
+      "7 + 7",
+      "12 + 3"
+    ],
+    "answer": 0,
+    "explanation": "9 + 8 = 17, 10 + 6 = 16, 7 + 7 = 14, 12 + 3 = 15예요. 가장 큰 값은 17이에요. 큰 수(12)가 들어 있다고 합이 꼭 가장 큰 것은 아니에요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 1,
+    "stem": "수 카드 2, 5, 8, 6 중에서 2장을 골라 두 수를 더하려고 해요. 나올 수 있는 가장 큰 합은 얼마일까요?",
+    "choices": [
+      "10",
+      "11",
+      "13",
+      "14"
+    ],
+    "answer": 3,
+    "explanation": "가장 큰 두 수 8과 6을 골라야 해요. 8 + 6 = 14예요. 8 + 5 = 13처럼 다른 두 장을 고르면 합이 더 작아요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 1,
+    "stem": "둘씩 짝을 지었을 때 남는 것이 없는 수는 무엇일까요?",
+    "choices": [
+      "7",
+      "9",
+      "11",
+      "12"
+    ],
+    "answer": 3,
+    "explanation": "12는 둘씩 짝을 지으면 6쌍이 되고 남는 것이 없어요. 7, 9, 11은 둘씩 짝을 지으면 하나가 남아요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 1,
+    "kind": "num",
+    "stem": "수직선에서 눈금 한 칸은 1이에요. 12와 18의 한가운데에 있는 수는 무엇일까요?",
+    "choices": [
+      "15"
+    ],
+    "explanation": "12에서 18까지는 6칸이에요. 한가운데는 양쪽에서 3칸씩 떨어진 곳이므로 12 + 3 = 15예요. 18 - 3 = 15로도 확인할 수 있어요.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 440 95\" width=\"440\" height=\"95\" font-family=\"sans-serif\"><line x1=\"20\" y1=\"50\" x2=\"420\" y2=\"50\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"20\" y1=\"42\" x2=\"20\" y2=\"58\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"60\" y1=\"42\" x2=\"60\" y2=\"58\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"100\" y1=\"42\" x2=\"100\" y2=\"58\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"140\" y1=\"42\" x2=\"140\" y2=\"58\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"180\" y1=\"42\" x2=\"180\" y2=\"58\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"220\" y1=\"42\" x2=\"220\" y2=\"58\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"260\" y1=\"42\" x2=\"260\" y2=\"58\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"300\" y1=\"42\" x2=\"300\" y2=\"58\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"340\" y1=\"42\" x2=\"340\" y2=\"58\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"380\" y1=\"42\" x2=\"380\" y2=\"58\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"420\" y1=\"42\" x2=\"420\" y2=\"58\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"20\" y=\"82\" font-size=\"16\" text-anchor=\"middle\" fill=\"#111111\">10</text><text x=\"420\" y=\"82\" font-size=\"16\" text-anchor=\"middle\" fill=\"#111111\">20</text><circle cx=\"100\" cy=\"50\" r=\"7\" fill=\"#b31942\" stroke=\"#b31942\" stroke-width=\"2\"/><text x=\"100\" y=\"30\" font-size=\"16\" text-anchor=\"middle\" fill=\"#b31942\">12</text><circle cx=\"340\" cy=\"50\" r=\"7\" fill=\"#b31942\" stroke=\"#b31942\" stroke-width=\"2\"/><text x=\"340\" y=\"30\" font-size=\"16\" text-anchor=\"middle\" fill=\"#b31942\">18</text></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 1,
+    "stem": "더해서 10이 되는 두 수끼리 짝을 지었어요. 잘못 짝을 지은 것은 무엇일까요?",
+    "choices": [
+      "1과 9",
+      "3과 7",
+      "4와 5",
+      "2와 8"
+    ],
+    "answer": 2,
+    "explanation": "4 + 5 = 9라서 10이 되지 않아요. 4와 짝이 되는 수는 6이에요. 1 + 9, 3 + 7, 2 + 8은 모두 10이에요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 1,
+    "kind": "num",
+    "stem": "4 + 9 + 6 은 얼마일까요? (더해서 10이 되는 두 수를 먼저 더해 보세요.)",
+    "choices": [
+      "19"
+    ],
+    "explanation": "4와 6을 먼저 더하면 10이에요. 10 + 9 = 19예요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 1,
+    "stem": "16에서 어떤 수를 뺐더니 9가 되었어요. 어떤 수는 무엇일까요?",
+    "choices": [
+      "5",
+      "6",
+      "7",
+      "25"
+    ],
+    "answer": 2,
+    "explanation": "16 - □ = 9에서 □ = 16 - 9 = 7이에요. 16 - 7 = 9로 확인할 수 있어요. 16과 9를 더한 25는 함정이에요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 1,
+    "stem": "두 수의 차가 3인 것은 무엇일까요?",
+    "choices": [
+      "9와 5",
+      "12와 9",
+      "15와 11",
+      "7과 3"
+    ],
+    "answer": 1,
+    "explanation": "12 - 9 = 3이에요. 9 - 5 = 4, 15 - 11 = 4, 7 - 3 = 4라서 나머지는 차가 4예요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 1,
+    "kind": "num",
+    "stem": "8 + □ 의 값이 15보다 작아요. □에 들어갈 수 있는 수 중에서 가장 큰 수는 무엇일까요?",
+    "choices": [
+      "6"
+    ],
+    "explanation": "8 + 7 = 15라서 7은 15보다 작지 않아요. 8 + 6 = 14는 15보다 작으므로 가장 큰 수는 6이에요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 1,
+    "kind": "num",
+    "stem": "그림에서 찾을 수 있는 크고 작은 네모는 모두 몇 개일까요?",
+    "choices": [
+      "3"
+    ],
+    "explanation": "작은 네모 2개와 두 개를 합친 큰 네모 1개가 있어요. 2 + 1 = 3개예요.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 260 120\" width=\"260\" height=\"120\" font-family=\"sans-serif\"><rect x=\"10\" y=\"10\" width=\"240\" height=\"100\" fill=\"#eeeeee\" stroke=\"#111111\" stroke-width=\"3\"/><line x1=\"130\" y1=\"10\" x2=\"130\" y2=\"110\" stroke=\"#111111\" stroke-width=\"3\"/></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 1,
+    "stem": "여러 가지 모양으로 로봇을 만들었어요. 로봇을 만드는 데 쓴 네모 모양은 모두 몇 개일까요?",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answer": 3,
+    "explanation": "머리 1개, 몸통 1개, 팔 2개, 다리 2개가 네모 모양이에요. 1 + 1 + 2 + 2 = 6개예요. 모자는 세모, 눈은 동그라미예요.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 235\" width=\"200\" height=\"235\" font-family=\"sans-serif\"><polygon points=\"100,8 75,40 125,40\" fill=\"#b31942\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"75\" y=\"40\" width=\"50\" height=\"45\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><circle cx=\"90\" cy=\"58\" r=\"6\" fill=\"#111111\" stroke=\"#111111\" stroke-width=\"2\"/><circle cx=\"110\" cy=\"58\" r=\"6\" fill=\"#111111\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"60\" y=\"90\" width=\"80\" height=\"80\" fill=\"#eeeeee\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"25\" y=\"95\" width=\"30\" height=\"60\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"145\" y=\"95\" width=\"30\" height=\"60\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"70\" y=\"175\" width=\"22\" height=\"50\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"108\" y=\"175\" width=\"22\" height=\"50\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 1,
+    "kind": "num",
+    "stem": "쌓기나무를 계단 모양으로 쌓았어요. 쌓은 쌓기나무는 모두 몇 개일까요?",
+    "choices": [
+      "6"
+    ],
+    "explanation": "왼쪽부터 3층, 2층, 1층으로 쌓았어요. 3 + 2 + 1 = 6개예요.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 124 170\" width=\"124\" height=\"170\" font-family=\"sans-serif\"><polygon points=\"36,70 62,85 36,100 10,85\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"10,115 36,130 36,100 10,85\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"62,115 36,130 36,100 62,85\" fill=\"#888888\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"62,85 87.9,100 62,115 36,100\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"36,130 62,145 62,115 36,100\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"87.9,130 62,145 62,115 87.9,100\" fill=\"#888888\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"36,40 62,55 36,70 10,55\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"10,85 36,100 36,70 10,55\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"62,85 36,100 36,70 62,55\" fill=\"#888888\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"87.9,100 113.9,115 87.9,130 62,115\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"62,145 87.9,160 87.9,130 62,115\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"113.9,145 87.9,160 87.9,130 113.9,115\" fill=\"#888888\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"62,55 87.9,70 62,85 36,70\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"36,100 62,115 62,85 36,70\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"87.9,100 62,115 62,85 87.9,70\" fill=\"#888888\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"36,10 62,25 36,40 10,25\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"10,55 36,70 36,40 10,25\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"62,55 36,70 36,40 62,25\" fill=\"#888888\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 1,
+    "stem": "별이 있는 칸의 바로 아래 칸으로 간 다음, 그 칸의 바로 오른쪽 칸으로 갔어요. 그 칸에 있는 모양은 무엇일까요?",
+    "choices": [
+      "검은 세모",
+      "빨간 네모",
+      "검은 동그라미",
+      "검은 네모"
+    ],
+    "answer": 0,
+    "explanation": "별의 바로 아래 칸에는 빨간 네모가 있어요. 그 칸의 바로 오른쪽 칸에는 검은 세모가 있어요. 빨간 네모는 한 번만 움직였을 때의 답이라 함정이에요.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 230 230\" width=\"230\" height=\"230\" font-family=\"sans-serif\"><rect x=\"10\" y=\"10\" width=\"70\" height=\"70\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><polygon points=\"45,23 21,65 69,65\" fill=\"#b31942\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"80\" y=\"10\" width=\"70\" height=\"70\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><polygon points=\"115,19 121.5,36.1 139.7,37 125.5,48.4 130.3,66 115,56 99.7,66 104.5,48.4 90.3,37 108.5,36.1\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"150\" y=\"10\" width=\"70\" height=\"70\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"164\" y=\"24\" width=\"42\" height=\"42\" fill=\"#111111\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"10\" y=\"80\" width=\"70\" height=\"70\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><circle cx=\"45\" cy=\"115\" r=\"22\" fill=\"#111111\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"80\" y=\"80\" width=\"70\" height=\"70\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"94\" y=\"94\" width=\"42\" height=\"42\" fill=\"#b31942\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"150\" y=\"80\" width=\"70\" height=\"70\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><polygon points=\"185,93 161,135 209,135\" fill=\"#111111\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"10\" y=\"150\" width=\"70\" height=\"70\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><circle cx=\"45\" cy=\"185\" r=\"22\" fill=\"#b31942\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"80\" y=\"150\" width=\"70\" height=\"70\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"94\" y=\"164\" width=\"42\" height=\"42\" fill=\"#111111\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"150\" y=\"150\" width=\"70\" height=\"70\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><polygon points=\"185,163 161,205 209,205\" fill=\"#b31942\" stroke=\"#111111\" stroke-width=\"2\"/></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 1,
+    "stem": "깃발의 오른쪽에 거울을 세웠어요. 거울에 비친 깃발의 모양은 무엇일까요?",
+    "choices": [
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 120\" width=\"160\" height=\"120\" font-family=\"sans-serif\"><line x1=\"110\" y1=\"15\" x2=\"110\" y2=\"105\" stroke=\"#111111\" stroke-width=\"4\"/><polygon points=\"110,20 110,60 55,40\" fill=\"#b31942\" stroke=\"#111111\" stroke-width=\"2\"/></svg>",
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 120\" width=\"160\" height=\"120\" font-family=\"sans-serif\"><line x1=\"50\" y1=\"15\" x2=\"50\" y2=\"105\" stroke=\"#111111\" stroke-width=\"4\"/><polygon points=\"50,20 50,60 105,40\" fill=\"#b31942\" stroke=\"#111111\" stroke-width=\"2\"/></svg>",
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 120\" width=\"160\" height=\"120\" font-family=\"sans-serif\"><line x1=\"50\" y1=\"15\" x2=\"50\" y2=\"105\" stroke=\"#111111\" stroke-width=\"4\"/><polygon points=\"50,60 50,100 105,80\" fill=\"#b31942\" stroke=\"#111111\" stroke-width=\"2\"/></svg>",
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 120\" width=\"160\" height=\"120\" font-family=\"sans-serif\"><line x1=\"110\" y1=\"15\" x2=\"110\" y2=\"105\" stroke=\"#111111\" stroke-width=\"4\"/><polygon points=\"110,60 110,100 55,80\" fill=\"#b31942\" stroke=\"#111111\" stroke-width=\"2\"/></svg>"
+    ],
+    "answer": 0,
+    "explanation": "거울에 비치면 왼쪽과 오른쪽이 바뀌어요. 깃대는 오른쪽으로, 깃발은 왼쪽을 향하게 돼요. 위와 아래는 바뀌지 않으므로 깃발은 여전히 위쪽에 있어요.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 135\" width=\"200\" height=\"135\" font-family=\"sans-serif\"><line x1=\"40\" y1=\"15\" x2=\"40\" y2=\"105\" stroke=\"#111111\" stroke-width=\"4\"/><polygon points=\"40,20 40,60 95,40\" fill=\"#b31942\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"150\" y=\"8\" width=\"12\" height=\"104\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"156\" y=\"128\" font-size=\"14\" text-anchor=\"middle\" fill=\"#111111\">거울</text></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 1,
+    "stem": "빨간 점선을 따라 반으로 접었을 때 양쪽이 꼭 겹치는 것은 무엇일까요?",
+    "choices": [
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 120\" width=\"160\" height=\"120\" font-family=\"sans-serif\"><path d=\"M80,105 C30,70 25,30 55,25 C70,22 78,35 80,42 C82,35 90,22 105,25 C135,30 130,70 80,105 Z\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"80\" y1=\"10\" x2=\"80\" y2=\"112\" stroke=\"#b31942\" stroke-width=\"2\" stroke-dasharray=\"6 5\"/></svg>",
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 120\" width=\"160\" height=\"120\" font-family=\"sans-serif\"><rect x=\"20\" y=\"30\" width=\"120\" height=\"60\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"20\" y1=\"30\" x2=\"140\" y2=\"90\" stroke=\"#b31942\" stroke-width=\"2\" stroke-dasharray=\"6 5\"/></svg>",
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 120\" width=\"160\" height=\"120\" font-family=\"sans-serif\"><polygon points=\"30,100 130,100 30,20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"80\" y1=\"10\" x2=\"80\" y2=\"110\" stroke=\"#b31942\" stroke-width=\"2\" stroke-dasharray=\"6 5\"/></svg>",
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 120\" width=\"160\" height=\"120\" font-family=\"sans-serif\"><circle cx=\"80\" cy=\"60\" r=\"45\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"55\" y1=\"10\" x2=\"55\" y2=\"110\" stroke=\"#b31942\" stroke-width=\"2\" stroke-dasharray=\"6 5\"/></svg>"
+    ],
+    "answer": 0,
+    "explanation": "하트는 가운데 점선의 왼쪽과 오른쪽 모양이 똑같아서 접으면 꼭 겹쳐요. 긴 네모를 대각선으로 접거나, 직각 세모를 가운데 세로선으로 접거나, 동그라미를 가운데가 아닌 선으로 접으면 꼭 겹치지 않아요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 1,
+    "stem": "네모 모양 색종이에 그림처럼 점선을 그었어요. 점선을 따라 모두 자르면 몇 조각이 될까요?",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answer": 3,
+    "explanation": "세로 점선 2개로 자르면 3조각이 되고, 가로 점선으로 그 3조각을 각각 다시 자르면 위에 3조각, 아래에 3조각이 생겨요. 3 + 3 = 6조각이에요.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 140\" width=\"200\" height=\"140\" font-family=\"sans-serif\"><rect x=\"10\" y=\"10\" width=\"180\" height=\"120\" fill=\"#eeeeee\" stroke=\"#111111\" stroke-width=\"3\"/><line x1=\"70\" y1=\"10\" x2=\"70\" y2=\"130\" stroke=\"#111111\" stroke-width=\"2\" stroke-dasharray=\"6 5\"/><line x1=\"130\" y1=\"10\" x2=\"130\" y2=\"130\" stroke=\"#111111\" stroke-width=\"2\" stroke-dasharray=\"6 5\"/><line x1=\"10\" y1=\"70\" x2=\"190\" y2=\"70\" stroke=\"#111111\" stroke-width=\"2\" stroke-dasharray=\"6 5\"/></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 1,
+    "stem": "왼쪽의 큰 네모를 오른쪽 세모 조각으로 겹치지 않게 빈틈없이 채우려고 해요. 세모 조각은 몇 개 필요할까요? (세모 조각은 점선으로 나눈 작은 네모를 반으로 자른 크기예요.)",
+    "choices": [
+      "4",
+      "6",
+      "8",
+      "10"
+    ],
+    "answer": 2,
+    "explanation": "큰 네모 안에는 작은 네모가 4개 있어요. 작은 네모 1개를 채우려면 세모 조각이 2개 필요하므로 4 + 4 = 8개가 필요해요.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 260 145\" width=\"260\" height=\"145\" font-family=\"sans-serif\"><rect x=\"10\" y=\"10\" width=\"120\" height=\"120\" fill=\"#eeeeee\" stroke=\"#111111\" stroke-width=\"3\"/><line x1=\"70\" y1=\"10\" x2=\"70\" y2=\"130\" stroke=\"#888888\" stroke-width=\"2\" stroke-dasharray=\"6 5\"/><line x1=\"10\" y1=\"70\" x2=\"130\" y2=\"70\" stroke=\"#888888\" stroke-width=\"2\" stroke-dasharray=\"6 5\"/><polygon points=\"180,50 180,110 240,110\" fill=\"#b31942\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"210\" y=\"135\" font-size=\"14\" text-anchor=\"middle\" fill=\"#111111\">조각</text></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 1,
+    "stem": "모눈 위에 빨간 선 가, 나, 다, 라를 그렸어요. 선의 길이가 가장 긴 것은 무엇일까요? (모눈 한 칸의 길이는 모두 같아요.)",
+    "choices": [
+      "가",
+      "나",
+      "다",
+      "라"
+    ],
+    "answer": 1,
+    "explanation": "모눈 칸 수로 길이를 세어요. 가는 5칸, 나는 6칸, 다는 4칸, 라는 5칸이에요. 나는 구불구불해서 짧아 보이지만 가장 길어요.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 390 240\" width=\"390\" height=\"240\" font-family=\"sans-serif\"><line x1=\"15\" y1=\"15\" x2=\"15\" y2=\"225\" stroke=\"#cccccc\" stroke-width=\"2\"/><line x1=\"45\" y1=\"15\" x2=\"45\" y2=\"225\" stroke=\"#cccccc\" stroke-width=\"2\"/><line x1=\"75\" y1=\"15\" x2=\"75\" y2=\"225\" stroke=\"#cccccc\" stroke-width=\"2\"/><line x1=\"105\" y1=\"15\" x2=\"105\" y2=\"225\" stroke=\"#cccccc\" stroke-width=\"2\"/><line x1=\"135\" y1=\"15\" x2=\"135\" y2=\"225\" stroke=\"#cccccc\" stroke-width=\"2\"/><line x1=\"165\" y1=\"15\" x2=\"165\" y2=\"225\" stroke=\"#cccccc\" stroke-width=\"2\"/><line x1=\"195\" y1=\"15\" x2=\"195\" y2=\"225\" stroke=\"#cccccc\" stroke-width=\"2\"/><line x1=\"225\" y1=\"15\" x2=\"225\" y2=\"225\" stroke=\"#cccccc\" stroke-width=\"2\"/><line x1=\"255\" y1=\"15\" x2=\"255\" y2=\"225\" stroke=\"#cccccc\" stroke-width=\"2\"/><line x1=\"285\" y1=\"15\" x2=\"285\" y2=\"225\" stroke=\"#cccccc\" stroke-width=\"2\"/><line x1=\"315\" y1=\"15\" x2=\"315\" y2=\"225\" stroke=\"#cccccc\" stroke-width=\"2\"/><line x1=\"345\" y1=\"15\" x2=\"345\" y2=\"225\" stroke=\"#cccccc\" stroke-width=\"2\"/><line x1=\"375\" y1=\"15\" x2=\"375\" y2=\"225\" stroke=\"#cccccc\" stroke-width=\"2\"/><line x1=\"15\" y1=\"15\" x2=\"375\" y2=\"15\" stroke=\"#cccccc\" stroke-width=\"2\"/><line x1=\"15\" y1=\"45\" x2=\"375\" y2=\"45\" stroke=\"#cccccc\" stroke-width=\"2\"/><line x1=\"15\" y1=\"75\" x2=\"375\" y2=\"75\" stroke=\"#cccccc\" stroke-width=\"2\"/><line x1=\"15\" y1=\"105\" x2=\"375\" y2=\"105\" stroke=\"#cccccc\" stroke-width=\"2\"/><line x1=\"15\" y1=\"135\" x2=\"375\" y2=\"135\" stroke=\"#cccccc\" stroke-width=\"2\"/><line x1=\"15\" y1=\"165\" x2=\"375\" y2=\"165\" stroke=\"#cccccc\" stroke-width=\"2\"/><line x1=\"15\" y1=\"195\" x2=\"375\" y2=\"195\" stroke=\"#cccccc\" stroke-width=\"2\"/><line x1=\"15\" y1=\"225\" x2=\"375\" y2=\"225\" stroke=\"#cccccc\" stroke-width=\"2\"/><polyline points=\"45,45 195,45\" fill=\"none\" stroke=\"#b31942\" stroke-width=\"4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"33\" y=\"39\" font-size=\"15\" text-anchor=\"middle\" fill=\"#111111\" font-weight=\"bold\">가</text><polyline points=\"255,45 285,45 285,75 315,75 315,105 345,105 345,135\" fill=\"none\" stroke=\"#b31942\" stroke-width=\"4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"243\" y=\"39\" font-size=\"15\" text-anchor=\"middle\" fill=\"#111111\" font-weight=\"bold\">나</text><polyline points=\"45,105 45,165 105,165\" fill=\"none\" stroke=\"#b31942\" stroke-width=\"4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"33\" y=\"99\" font-size=\"15\" text-anchor=\"middle\" fill=\"#111111\" font-weight=\"bold\">다</text><polyline points=\"165,105 165,195 225,195\" fill=\"none\" stroke=\"#b31942\" stroke-width=\"4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"153\" y=\"99\" font-size=\"15\" text-anchor=\"middle\" fill=\"#111111\" font-weight=\"bold\">라</text></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 1,
+    "stem": "큰 세모 안에 가로로 곧은 선을 하나 그었어요. 그림에서 찾을 수 있는 크고 작은 세모는 모두 몇 개일까요?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": 1,
+    "explanation": "위쪽의 작은 세모 1개와 전체 큰 세모 1개가 있어요. 아래쪽 부분은 뾰족한 곳이 4개라서 세모가 아니에요. 모두 2개예요.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 190\" width=\"200\" height=\"190\" font-family=\"sans-serif\"><polygon points=\"100,15 15,175 185,175\" fill=\"#eeeeee\" stroke=\"#111111\" stroke-width=\"3\"/><line x1=\"68.1\" y1=\"75\" x2=\"131.9\" y2=\"75\" stroke=\"#111111\" stroke-width=\"3\"/></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 1,
+    "stem": "평평한 부분과 둥근 부분이 모두 있는 물건은 무엇일까요?",
+    "choices": [
+      "음료수 캔",
+      "축구공",
+      "주사위",
+      "책"
+    ],
+    "answer": 0,
+    "explanation": "음료수 캔은 위와 아래가 평평하고 옆은 둥글어요. 축구공은 둥근 부분만, 주사위와 책은 평평한 부분만 있어요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 1,
+    "kind": "num",
+    "stem": "세모 2개와 네모 1개가 있어요. 세 도형의 뾰족한 곳(꼭짓점)은 모두 몇 개일까요?",
+    "choices": [
+      "10"
+    ],
+    "explanation": "세모 1개에는 뾰족한 곳이 3개, 네모 1개에는 4개 있어요. 3 + 3 + 4 = 10개예요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 1,
+    "stem": "규칙에 따라 빨간 점이 움직이고 있어요. ?에 알맞은 모양은 무엇일까요?",
+    "choices": [
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 80 80\" width=\"80\" height=\"80\" font-family=\"sans-serif\"><rect x=\"10\" y=\"10\" width=\"60\" height=\"60\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><circle cx=\"22\" cy=\"22\" r=\"7\" fill=\"#b31942\" stroke=\"#b31942\" stroke-width=\"2\"/></svg>",
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 80 80\" width=\"80\" height=\"80\" font-family=\"sans-serif\"><rect x=\"10\" y=\"10\" width=\"60\" height=\"60\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><circle cx=\"58\" cy=\"58\" r=\"7\" fill=\"#b31942\" stroke=\"#b31942\" stroke-width=\"2\"/></svg>",
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 80 80\" width=\"80\" height=\"80\" font-family=\"sans-serif\"><rect x=\"10\" y=\"10\" width=\"60\" height=\"60\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><circle cx=\"22\" cy=\"58\" r=\"7\" fill=\"#b31942\" stroke=\"#b31942\" stroke-width=\"2\"/></svg>",
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 80 80\" width=\"80\" height=\"80\" font-family=\"sans-serif\"><rect x=\"10\" y=\"10\" width=\"60\" height=\"60\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><circle cx=\"58\" cy=\"22\" r=\"7\" fill=\"#b31942\" stroke=\"#b31942\" stroke-width=\"2\"/></svg>"
+    ],
+    "answer": 3,
+    "explanation": "빨간 점은 왼쪽 위 → 오른쪽 위 → 오른쪽 아래 → 왼쪽 아래 → 왼쪽 위 순서로 시계 방향을 따라 한 칸씩 움직여요. 그래서 다음은 오른쪽 위예요.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 70\" width=\"400\" height=\"70\" font-family=\"sans-serif\"><rect x=\"10\" y=\"10\" width=\"50\" height=\"50\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><circle cx=\"22\" cy=\"22\" r=\"7\" fill=\"#b31942\" stroke=\"#b31942\" stroke-width=\"2\"/><rect x=\"75\" y=\"10\" width=\"50\" height=\"50\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><circle cx=\"113\" cy=\"22\" r=\"7\" fill=\"#b31942\" stroke=\"#b31942\" stroke-width=\"2\"/><rect x=\"140\" y=\"10\" width=\"50\" height=\"50\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><circle cx=\"178\" cy=\"48\" r=\"7\" fill=\"#b31942\" stroke=\"#b31942\" stroke-width=\"2\"/><rect x=\"205\" y=\"10\" width=\"50\" height=\"50\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><circle cx=\"217\" cy=\"48\" r=\"7\" fill=\"#b31942\" stroke=\"#b31942\" stroke-width=\"2\"/><rect x=\"270\" y=\"10\" width=\"50\" height=\"50\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><circle cx=\"282\" cy=\"22\" r=\"7\" fill=\"#b31942\" stroke=\"#b31942\" stroke-width=\"2\"/><rect x=\"335\" y=\"10\" width=\"50\" height=\"50\" fill=\"#eeeeee\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"360\" y=\"42\" font-size=\"22\" text-anchor=\"middle\" fill=\"#111111\">?</text></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 1,
+    "kind": "num",
+    "stem": "규칙에 따라 네모를 V 모양으로 늘어놓고 있어요. 5번째 모양을 만들려면 네모가 몇 개 필요할까요?",
+    "choices": [
+      "9"
+    ],
+    "explanation": "네모가 1개, 3개, 5개로 2개씩 늘어나요. 4번째는 7개, 5번째는 9개예요.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 244 105\" width=\"244\" height=\"105\" font-family=\"sans-serif\"><rect x=\"10\" y=\"52\" width=\"16\" height=\"16\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"18\" y=\"95\" font-size=\"13\" text-anchor=\"middle\" fill=\"#111111\">1번째</text><rect x=\"72\" y=\"52\" width=\"16\" height=\"16\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"56\" y=\"36\" width=\"16\" height=\"16\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"88\" y=\"36\" width=\"16\" height=\"16\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"80\" y=\"95\" font-size=\"13\" text-anchor=\"middle\" fill=\"#111111\">2번째</text><rect x=\"166\" y=\"52\" width=\"16\" height=\"16\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"150\" y=\"36\" width=\"16\" height=\"16\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"182\" y=\"36\" width=\"16\" height=\"16\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"134\" y=\"20\" width=\"16\" height=\"16\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"198\" y=\"20\" width=\"16\" height=\"16\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"174\" y=\"95\" font-size=\"13\" text-anchor=\"middle\" fill=\"#111111\">3번째</text></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 1,
+    "stem": "1부터 20까지의 수를 규칙에 따라 차례대로 썼는데, 몇 칸이 가려졌어요. ★ 칸에 알맞은 수는 무엇일까요?",
+    "choices": [
+      "8",
+      "12",
+      "13",
+      "14"
+    ],
+    "answer": 2,
+    "explanation": "한 줄에 5개씩 쓰여 있어서 바로 아래 칸은 5만큼 커요. ★ 바로 아래 칸이 18이므로 ★은 18 - 5 = 13이에요. 같은 줄의 11 다음 다음 칸이라고 세어도 13이에요.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 260 212\" width=\"260\" height=\"212\" font-family=\"sans-serif\"><rect x=\"10\" y=\"10\" width=\"48\" height=\"48\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"34\" y=\"40\" font-size=\"17\" text-anchor=\"middle\" fill=\"#111111\">1</text><rect x=\"58\" y=\"10\" width=\"48\" height=\"48\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"82\" y=\"40\" font-size=\"17\" text-anchor=\"middle\" fill=\"#111111\">2</text><rect x=\"106\" y=\"10\" width=\"48\" height=\"48\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"130\" y=\"40\" font-size=\"17\" text-anchor=\"middle\" fill=\"#111111\">3</text><rect x=\"154\" y=\"10\" width=\"48\" height=\"48\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"178\" y=\"40\" font-size=\"17\" text-anchor=\"middle\" fill=\"#111111\">4</text><rect x=\"202\" y=\"10\" width=\"48\" height=\"48\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"226\" y=\"40\" font-size=\"17\" text-anchor=\"middle\" fill=\"#111111\">5</text><rect x=\"10\" y=\"58\" width=\"48\" height=\"48\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"34\" y=\"88\" font-size=\"17\" text-anchor=\"middle\" fill=\"#111111\">6</text><rect x=\"58\" y=\"58\" width=\"48\" height=\"48\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"82\" y=\"88\" font-size=\"17\" text-anchor=\"middle\" fill=\"#111111\">7</text><rect x=\"106\" y=\"58\" width=\"48\" height=\"48\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"154\" y=\"58\" width=\"48\" height=\"48\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"178\" y=\"88\" font-size=\"17\" text-anchor=\"middle\" fill=\"#111111\">9</text><rect x=\"202\" y=\"58\" width=\"48\" height=\"48\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"226\" y=\"88\" font-size=\"17\" text-anchor=\"middle\" fill=\"#111111\">10</text><rect x=\"10\" y=\"106\" width=\"48\" height=\"48\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"34\" y=\"136\" font-size=\"17\" text-anchor=\"middle\" fill=\"#111111\">11</text><rect x=\"58\" y=\"106\" width=\"48\" height=\"48\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"106\" y=\"106\" width=\"48\" height=\"48\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><polygon points=\"130,112 134.7,123.5 147.1,124.4 137.6,132.5 140.6,144.6 130,138 119.4,144.6 122.4,132.5 112.9,124.4 125.3,123.5\" fill=\"#b31942\" stroke=\"#b31942\" stroke-width=\"2\"/><rect x=\"154\" y=\"106\" width=\"48\" height=\"48\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"202\" y=\"106\" width=\"48\" height=\"48\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"226\" y=\"136\" font-size=\"17\" text-anchor=\"middle\" fill=\"#111111\">15</text><rect x=\"10\" y=\"154\" width=\"48\" height=\"48\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"34\" y=\"184\" font-size=\"17\" text-anchor=\"middle\" fill=\"#111111\">16</text><rect x=\"58\" y=\"154\" width=\"48\" height=\"48\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"82\" y=\"184\" font-size=\"17\" text-anchor=\"middle\" fill=\"#111111\">17</text><rect x=\"106\" y=\"154\" width=\"48\" height=\"48\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"130\" y=\"184\" font-size=\"17\" text-anchor=\"middle\" fill=\"#111111\">18</text><rect x=\"154\" y=\"154\" width=\"48\" height=\"48\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"178\" y=\"184\" font-size=\"17\" text-anchor=\"middle\" fill=\"#111111\">19</text><rect x=\"202\" y=\"154\" width=\"48\" height=\"48\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"226\" y=\"184\" font-size=\"17\" text-anchor=\"middle\" fill=\"#111111\">20</text></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 1,
+    "stem": "위의 두 그림 사이의 규칙과 같은 규칙으로 바뀌도록 ?에 알맞은 그림을 고르세요.",
+    "choices": [
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 90 90\" width=\"90\" height=\"90\" font-family=\"sans-serif\"><polygon points=\"45,7.6 54.6,31.8 80.6,33.4 60.5,50 67,75.3 45,61.3 23,75.3 29.5,50 9.4,33.4 35.4,31.8\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"34.8\" y=\"38.8\" width=\"20.4\" height=\"20.4\" fill=\"#b31942\" stroke=\"#111111\" stroke-width=\"2\"/></svg>",
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 90 90\" width=\"90\" height=\"90\" font-family=\"sans-serif\"><rect x=\"16.1\" y=\"16.1\" width=\"57.8\" height=\"57.8\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><polygon points=\"45,35.8 48.4,44.3 57.6,44.9 50.5,50.8 52.8,59.7 45,54.8 37.2,59.7 39.5,50.8 32.4,44.9 41.6,44.3\" fill=\"#b31942\" stroke=\"#111111\" stroke-width=\"2\"/></svg>",
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 90 90\" width=\"90\" height=\"90\" font-family=\"sans-serif\"><polygon points=\"45,7.6 54.6,31.8 80.6,33.4 60.5,50 67,75.3 45,61.3 23,75.3 29.5,50 9.4,33.4 35.4,31.8\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><polygon points=\"45,35.8 48.4,44.3 57.6,44.9 50.5,50.8 52.8,59.7 45,54.8 37.2,59.7 39.5,50.8 32.4,44.9 41.6,44.3\" fill=\"#b31942\" stroke=\"#111111\" stroke-width=\"2\"/></svg>",
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 90 90\" width=\"90\" height=\"90\" font-family=\"sans-serif\"><circle cx=\"45\" cy=\"45\" r=\"34\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"34.8\" y=\"38.8\" width=\"20.4\" height=\"20.4\" fill=\"#b31942\" stroke=\"#111111\" stroke-width=\"2\"/></svg>"
+    ],
+    "answer": 0,
+    "explanation": "바깥의 큰 모양과 안쪽의 작은 모양이 서로 자리를 바꾸는 규칙이에요. 큰 네모 안의 작은 별은 큰 별 안의 작은 네모로 바뀌어요.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 190\" width=\"240\" height=\"190\" font-family=\"sans-serif\"><polygon points=\"40,8 4.3,69.2 75.7,69.2\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><circle cx=\"40\" cy=\"46\" r=\"12\" fill=\"#b31942\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"110\" y=\"50\" font-size=\"24\" text-anchor=\"middle\" fill=\"#111111\">→</text><circle cx=\"180\" cy=\"42\" r=\"34\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><polygon points=\"180,38 167.4,59.6 192.6,59.6\" fill=\"#b31942\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"11.1\" y=\"113.1\" width=\"57.8\" height=\"57.8\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><polygon points=\"40,132.8 43.4,141.3 52.6,141.9 45.5,147.8 47.8,156.7 40,151.8 32.2,156.7 34.5,147.8 27.4,141.9 36.6,141.3\" fill=\"#b31942\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"110\" y=\"150\" font-size=\"24\" text-anchor=\"middle\" fill=\"#111111\">→</text><rect x=\"150\" y=\"108\" width=\"70\" height=\"70\" fill=\"#eeeeee\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"185\" y=\"152\" font-size=\"24\" text-anchor=\"middle\" fill=\"#111111\">?</text></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 1,
+    "kind": "num",
+    "stem": "규칙을 찾아 □에 알맞은 수를 쓰세요. 20, 18, 16, □, 12",
+    "choices": [
+      "14"
+    ],
+    "explanation": "20부터 2씩 작아지는 규칙이에요. 16 - 2 = 14, 14 - 2 = 12로 맞아요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 1,
+    "stem": "규칙을 찾아 □에 알맞은 수를 고르세요. 1, 1, 2, 2, 3, 3, 4, □",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "8"
+    ],
+    "answer": 1,
+    "explanation": "같은 수를 두 번씩 쓰고 1씩 커지는 규칙이에요. 4를 한 번 썼으니 한 번 더 4를 써요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 1,
+    "stem": "서아, 도윤, 지호가 사과, 배, 귤 중에서 서로 다른 과일을 하나씩 골랐어요. 서아는 사과도 배도 고르지 않았어요. 도윤이는 사과를 고르지 않았어요. 배를 고른 사람은 누구일까요?",
+    "choices": [
+      "도윤",
+      "서아",
+      "지호",
+      "알 수 없어요"
+    ],
+    "answer": 0,
+    "explanation": "서아는 사과도 배도 아니므로 귤을 골랐어요. 남은 사과와 배 중에서 도윤이는 사과가 아니므로 배를 골랐고, 지호는 사과를 골랐어요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 1,
+    "stem": "오늘은 금요일이에요. 4일 뒤는 무슨 요일일까요?",
+    "choices": [
+      "일요일",
+      "월요일",
+      "화요일",
+      "수요일"
+    ],
+    "answer": 2,
+    "explanation": "금요일에서 하루씩 세면 토요일(1일 뒤), 일요일(2일 뒤), 월요일(3일 뒤), 화요일(4일 뒤)이에요. 일요일 다음에는 다시 월요일이 와요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 1,
+    "kind": "num",
+    "stem": "1, 2, 3, 1, 2, 3, 1, … 처럼 규칙에 따라 수를 써요. 14번째에 쓰는 수는 무엇일까요?",
+    "choices": [
+      "2"
+    ],
+    "explanation": "1, 2, 3이 되풀이돼요. 3번째, 6번째, 9번째, 12번째에 3을 쓰므로 13번째는 1, 14번째는 2예요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 1,
+    "stem": "주머니에 빨간 공 3개와 파란 공 1개가 들어 있어요. 보지 않고 공 2개를 꺼낼 때, 언제나 맞는 말은 무엇일까요?",
+    "choices": [
+      "파란 공이 꼭 나와요.",
+      "두 공은 모두 빨간색이에요.",
+      "두 공이 모두 파란색일 수도 있어요.",
+      "빨간 공이 적어도 1개는 나와요."
+    ],
+    "answer": 3,
+    "explanation": "파란 공은 1개뿐이라서 2개를 꺼내면 적어도 1개는 빨간 공이에요. 빨간 공만 2개 나올 수도 있으니 파란 공이 꼭 나오지는 않고, 파란 공 2개는 나올 수 없어요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 1,
+    "kind": "num",
+    "stem": "규칙을 찾아 □에 알맞은 수를 쓰세요. 1, 2, 3, 4, 5, 4, 3, □, 1",
+    "choices": [
+      "2"
+    ],
+    "explanation": "1부터 5까지 1씩 커지다가 5에서부터 다시 1씩 작아지는 규칙이에요. 5, 4, 3 다음은 2, 그다음은 1이에요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 1,
+    "stem": "책꽂이에 빨강, 파랑, 노랑, 초록 책 4권을 한 줄로 꽂았어요. 빨간 책은 맨 왼쪽에 있어요. 파란 책은 노란 책의 바로 오른쪽에 있어요. 초록 책은 맨 오른쪽에 있지 않아요. 맨 오른쪽에 있는 책은 무슨 색일까요?",
+    "choices": [
+      "빨강",
+      "노랑",
+      "초록",
+      "파랑"
+    ],
+    "answer": 3,
+    "explanation": "빨간 책이 맨 왼쪽이고, 노란 책과 파란 책은 붙어 있어요. 초록 책이 맨 오른쪽이 아니므로 왼쪽부터 빨강, 초록, 노랑, 파랑 순서예요. 맨 오른쪽은 파란 책이에요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 1,
+    "kind": "num",
+    "stem": "구슬을 동생에게 3개 주고, 친구에게 2개를 받았더니 6개가 되었어요. 처음에 구슬은 몇 개 있었을까요?",
+    "choices": [
+      "7"
+    ],
+    "explanation": "거꾸로 생각해요. 친구에게 받기 전에는 6 - 2 = 4개, 동생에게 주기 전에는 4 + 3 = 7개였어요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 1,
+    "stem": "수아, 민준, 하린이가 한 줄로 서서 사진을 찍으려고 해요. 세 사람이 줄을 서는 방법은 모두 몇 가지일까요?",
+    "choices": [
+      "3",
+      "4",
+      "6",
+      "9"
+    ],
+    "answer": 2,
+    "explanation": "맨 앞에 수아가 서면 (수아, 민준, 하린), (수아, 하린, 민준) 2가지예요. 민준이나 하린이가 맨 앞에 서도 각각 2가지씩이므로 2 + 2 + 2 = 6가지예요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 1,
+    "stem": "마당에 닭과 토끼가 모두 3마리 있어요. 다리를 세어 보니 모두 10개예요. 토끼는 몇 마리일까요?",
+    "choices": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "answer": 2,
+    "explanation": "닭은 다리가 2개, 토끼는 4개예요. 토끼 2마리와 닭 1마리이면 4 + 4 + 2 = 10개예요. 토끼가 1마리이면 4 + 2 + 2 = 8개, 3마리이면 12개라서 맞지 않아요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 1,
+    "stem": "쿠키 9개를 한 사람에게 2개씩 나누어 주려고 해요. 몇 명에게 줄 수 있고, 몇 개가 남을까요?",
+    "choices": [
+      "3명, 3개 남아요",
+      "4명, 1개 남아요",
+      "4명, 남지 않아요",
+      "5명, 1개 남아요"
+    ],
+    "answer": 1,
+    "explanation": "2개씩 4명에게 주면 2 + 2 + 2 + 2 = 8개를 주고 9 - 8 = 1개가 남아요. 남은 1개로는 한 사람에게 2개를 줄 수 없어요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 1,
+    "stem": "민수는 구슬 8개, 지아는 구슬 4개를 가지고 있어요. 민수가 지아에게 구슬 몇 개를 주면 두 사람의 구슬 수가 같아질까요?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": 1,
+    "explanation": "두 사람의 구슬은 모두 12개이므로 같아지면 6개씩이에요. 민수가 2개를 주면 민수 6개, 지아 6개가 돼요. 차이인 4개를 다 주면 민수 4개, 지아 8개가 되어 함정이에요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 1,
+    "kind": "num",
+    "stem": "나는 줄넘기를 9번 했어요. 동생은 나보다 3번 적게 했고, 언니는 동생보다 5번 많이 했어요. 언니는 줄넘기를 몇 번 했을까요?",
+    "choices": [
+      "11"
+    ],
+    "explanation": "동생은 9 - 3 = 6번, 언니는 6 + 5 = 11번 했어요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 1,
+    "stem": "어떤 수는 10보다 크고 20보다 작아요. 이 수를 쓸 때 쓰는 두 숫자를 더하면 5예요. 어떤 수는 무엇일까요?",
+    "choices": [
+      "13",
+      "14",
+      "15",
+      "41"
+    ],
+    "answer": 1,
+    "explanation": "10보다 크고 20보다 작은 수는 앞 숫자가 1이에요. 1 + 4 = 5이므로 뒤 숫자는 4이고, 어떤 수는 14예요. 41도 두 숫자의 합이 5이지만 20보다 커요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 1,
+    "kind": "num",
+    "stem": "수 카드 3, 8, 5, 1 중에서 2장을 골라 두 수를 더해요. 나올 수 있는 가장 큰 합과 가장 작은 합의 차는 얼마일까요?",
+    "choices": [
+      "9"
+    ],
+    "explanation": "가장 큰 합은 8 + 5 = 13, 가장 작은 합은 1 + 3 = 4예요. 13 - 4 = 9예요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 1,
+    "stem": "50원짜리 동전과 10원짜리 동전이 많이 있어요. 동전을 가장 적게 써서 60원을 내려면 동전이 몇 개 필요할까요?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "6"
+    ],
+    "answer": 1,
+    "explanation": "50원짜리 1개와 10원짜리 1개를 내면 60원이에요. 동전은 2개예요. 10원짜리만 쓰면 6개가 필요해요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 1,
+    "stem": "나는 7살이고 동생은 4살이에요. 동생이 7살이 되면 나는 몇 살이 될까요?",
+    "choices": [
+      "3",
+      "7",
+      "9",
+      "10"
+    ],
+    "answer": 3,
+    "explanation": "동생이 7살이 되려면 7 - 4 = 3년이 지나야 해요. 나도 3살을 더 먹으므로 7 + 3 = 10살이 돼요. 두 사람의 나이 차이 3살은 언제나 그대로예요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 1,
+    "stem": "네모난 탁자 1개에는 한 변에 1명씩 4명이 앉을 수 있어요. 탁자 2개를 그림처럼 붙여 놓으면 몇 명이 앉을 수 있을까요? (탁자의 한 변에는 1명만 앉아요.)",
+    "choices": [
+      "4",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 1,
+    "explanation": "탁자를 붙이면 맞닿은 두 변에는 앉을 수 없어요. 위에 2명, 아래에 2명, 왼쪽에 1명, 오른쪽에 1명이 앉으므로 6명이에요. 4 + 4 = 8은 함정이에요.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 122\" width=\"200\" height=\"122\" font-family=\"sans-serif\"><rect x=\"20\" y=\"20\" width=\"70\" height=\"70\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"3\"/><rect x=\"90\" y=\"20\" width=\"70\" height=\"70\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"3\"/><text x=\"90\" y=\"112\" font-size=\"13\" text-anchor=\"middle\" fill=\"#111111\">탁자 2개를 붙인 모양</text></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 1,
+    "kind": "num",
+    "stem": "수 카드 1, 2, 3, 4 중에서 3장을 골라 더했더니 8이 되었어요. 고르지 않은 카드의 수는 무엇일까요?",
+    "choices": [
+      "2"
+    ],
+    "explanation": "네 장을 모두 더하면 1 + 2 + 3 + 4 = 10이에요. 3장의 합이 8이므로 빠진 카드는 10 - 8 = 2예요. 1 + 3 + 4 = 8로 확인할 수 있어요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 2,
+    "stem": "20 ○ 8 ○ 5 ○ 3 = 14 가 되도록 ○ 안에 + 또는 - 를 차례대로 넣으려고 해요. 알맞은 것은 무엇일까요?",
+    "choices": [
+      "+, -, -",
+      "-, -, +",
+      "-, +, -",
+      "+, -, +"
+    ],
+    "answer": 2,
+    "explanation": "20 - 8 = 12, 12 + 5 = 17, 17 - 3 = 14예요. 다른 보기는 20 + 8 - 5 - 3 = 20, 20 - 8 - 5 + 3 = 10, 20 + 8 - 5 + 3 = 26이에요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 2,
+    "stem": "숫자 7이 나타내는 값이 가장 큰 수는 무엇일까요?",
+    "choices": [
+      "47",
+      "172",
+      "718",
+      "507"
+    ],
+    "answer": 2,
+    "explanation": "47과 507에서 7은 일의 자리라서 7, 172에서는 십의 자리라서 70, 718에서는 백의 자리라서 700을 나타내요. 가장 큰 값은 718의 7이에요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 2,
+    "stem": "계산한 값이 100보다 큰 것은 무엇일까요? (먼저 어림해 보세요.)",
+    "choices": [
+      "56 + 45",
+      "48 + 47",
+      "39 + 59",
+      "27 + 69"
+    ],
+    "answer": 0,
+    "explanation": "어림하면 56 + 45는 55 + 45 = 100보다 1 더 커요. 정확히 계산하면 101이에요. 48 + 47 = 95, 39 + 59 = 98, 27 + 69 = 96은 모두 100보다 작아요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 2,
+    "kind": "num",
+    "stem": "19 + 26 + 1 + 4 는 얼마일까요? (계산하기 쉽게 더하는 순서를 바꾸어 보세요.)",
+    "choices": [
+      "50"
+    ],
+    "explanation": "19 + 1 = 20, 26 + 4 = 30을 먼저 계산하면 20 + 30 = 50이에요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 2,
+    "stem": "수 카드 4, 0, 6, 9 중에서 3장을 골라 세 자리 수를 만들려고 해요. 만들 수 있는 가장 작은 수는 무엇일까요?",
+    "choices": [
+      "46",
+      "406",
+      "409",
+      "460"
+    ],
+    "answer": 1,
+    "explanation": "0은 맨 앞(백의 자리)에 올 수 없어요. 백의 자리에는 0이 아닌 가장 작은 수 4, 십의 자리에는 0, 일의 자리에는 남은 수 중 가장 작은 6을 놓으면 406이에요. 046은 세 자리 수가 아니에요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 2,
+    "kind": "num",
+    "stem": "수 카드 2, 7, 4, 9 중에서 2장을 골라 두 자리 수를 만들어요. 만들 수 있는 가장 큰 수와 가장 작은 수의 차는 얼마일까요?",
+    "choices": [
+      "73"
+    ],
+    "explanation": "가장 큰 수는 97, 가장 작은 수는 24예요. 97 - 24 = 73이에요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 2,
+    "stem": "구슬을 2개씩 6묶음으로 묶었어요. 이 구슬을 다시 3개씩 묶으면 몇 묶음이 될까요?",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answer": 1,
+    "explanation": "2개씩 6묶음은 2 + 2 + 2 + 2 + 2 + 2 = 12개예요. 12개를 3개씩 묶으면 3, 6, 9, 12로 4묶음이에요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 2,
+    "stem": "1부터 10까지의 수 중에서 홀수만 모두 더하면 얼마일까요?",
+    "choices": [
+      "20",
+      "25",
+      "30",
+      "55"
+    ],
+    "answer": 1,
+    "explanation": "홀수는 1, 3, 5, 7, 9예요. 1 + 9 = 10, 3 + 7 = 10이고 5가 남으므로 10 + 10 + 5 = 25예요. 55는 1부터 10까지 모두 더한 값이에요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 2,
+    "kind": "num",
+    "stem": "36 + □ 의 값이 50보다 크고 55보다 작아요. □에 들어갈 수 있는 수(1, 2, 3, … 중에서)는 모두 몇 개일까요?",
+    "choices": [
+      "4"
+    ],
+    "explanation": "36 + □가 51, 52, 53, 54가 되어야 해요. □는 15, 16, 17, 18이므로 4개예요. 50과 55는 들어가지 않아요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 2,
+    "stem": "어떤 두 자리 수의 두 숫자를 더하면 5예요. 이 수의 십의 자리 숫자와 일의 자리 숫자를 바꾸면 처음 수보다 27만큼 커져요. 처음 수는 무엇일까요?",
+    "choices": [
+      "14",
+      "23",
+      "32",
+      "41"
+    ],
+    "answer": 0,
+    "explanation": "두 숫자의 합이 5인 수는 14, 23, 32, 41, 50이에요. 숫자를 바꾸어 커지려면 일의 자리 숫자가 더 커야 해요. 14 → 41은 27, 23 → 32는 9만큼 커지므로 처음 수는 14예요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 2,
+    "kind": "num",
+    "stem": "1부터 50까지의 수를 차례대로 쓸 때, 숫자 3은 모두 몇 번 쓰게 될까요?",
+    "choices": [
+      "15"
+    ],
+    "explanation": "일의 자리에 3을 쓰는 수는 3, 13, 23, 33, 43으로 5번이에요. 십의 자리에 3을 쓰는 수는 30부터 39까지 10번이에요. 33에서는 3을 두 번 쓰므로 모두 5 + 10 = 15번이에요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "number",
+    "difficulty": 2,
+    "stem": "□7 + 2□ = 64 에서 두 □에 알맞은 수를 각각 찾아 더하면 얼마일까요?",
+    "choices": [
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "answer": 1,
+    "explanation": "일의 자리에서 7 + □의 일의 자리 숫자가 4가 되려면 7 + 7 = 14여야 해요. 10을 받아올림하면 십의 자리는 □ + 2 + 1 = 6이므로 □는 3이에요. 37 + 27 = 64이고, 3 + 7 = 10이에요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 2,
+    "stem": "긴 네모를 그림처럼 똑같이 4칸으로 나누었어요. 그림에서 찾을 수 있는 크고 작은 네모는 모두 몇 개일까요?",
+    "choices": [
+      "4",
+      "7",
+      "9",
+      "10"
+    ],
+    "answer": 3,
+    "explanation": "1칸짜리 4개, 2칸짜리 3개, 3칸짜리 2개, 4칸짜리 1개예요. 4 + 3 + 2 + 1 = 10개예요.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 90\" width=\"340\" height=\"90\" font-family=\"sans-serif\"><rect x=\"10\" y=\"10\" width=\"320\" height=\"70\" fill=\"#eeeeee\" stroke=\"#111111\" stroke-width=\"3\"/><line x1=\"90\" y1=\"10\" x2=\"90\" y2=\"80\" stroke=\"#111111\" stroke-width=\"3\"/><line x1=\"170\" y1=\"10\" x2=\"170\" y2=\"80\" stroke=\"#111111\" stroke-width=\"3\"/><line x1=\"250\" y1=\"10\" x2=\"250\" y2=\"80\" stroke=\"#111111\" stroke-width=\"3\"/></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 2,
+    "stem": "정사각형에 대각선 2개를 그었어요. 그림에서 찾을 수 있는 크고 작은 세모는 모두 몇 개일까요?",
+    "choices": [
+      "4",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 3,
+    "explanation": "작은 세모가 4개 있어요. 작은 세모 2개를 붙인 큰 세모는 위쪽 반, 아래쪽 반, 왼쪽 반, 오른쪽 반으로 4개예요. 4 + 4 = 8개예요.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 180 180\" width=\"180\" height=\"180\" font-family=\"sans-serif\"><rect x=\"10\" y=\"10\" width=\"160\" height=\"160\" fill=\"#eeeeee\" stroke=\"#111111\" stroke-width=\"3\"/><line x1=\"10\" y1=\"10\" x2=\"170\" y2=\"170\" stroke=\"#111111\" stroke-width=\"3\"/><line x1=\"170\" y1=\"10\" x2=\"10\" y2=\"170\" stroke=\"#111111\" stroke-width=\"3\"/></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 2,
+    "kind": "num",
+    "stem": "쌓기나무로 쌓은 모양이에요. 쌓기나무는 모두 몇 개일까요? (위에 놓인 쌓기나무 아래에는 보이지 않아도 쌓기나무가 있어요.)",
+    "choices": [
+      "9"
+    ],
+    "explanation": "뒷줄은 왼쪽부터 3층, 2층, 1층이고 앞줄은 왼쪽부터 2층, 1층이에요. 3 + 2 + 1 + 2 + 1 = 9개예요. 앞줄에 가려진 뒷줄 아래쪽 쌓기나무도 세어야 해요.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 150 170\" width=\"150\" height=\"170\" font-family=\"sans-serif\"><polygon points=\"62,70 87.9,85 62,100 36,85\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"36,115 62,130 62,100 36,85\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"87.9,115 62,130 62,100 87.9,85\" fill=\"#888888\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"87.9,85 113.9,100 87.9,115 62,100\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"62,130 87.9,145 87.9,115 62,100\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"113.9,130 87.9,145 87.9,115 113.9,100\" fill=\"#888888\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"36,85 62,100 36,115 10,100\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"10,130 36,145 36,115 10,100\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"62,130 36,145 36,115 62,100\" fill=\"#888888\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"62,40 87.9,55 62,70 36,55\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"36,85 62,100 62,70 36,55\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"87.9,85 62,100 62,70 87.9,55\" fill=\"#888888\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"113.9,100 139.9,115 113.9,130 87.9,115\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"87.9,145 113.9,160 113.9,130 87.9,115\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"139.9,145 113.9,160 113.9,130 139.9,115\" fill=\"#888888\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"62,100 87.9,115 62,130 36,115\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"36,145 62,160 62,130 36,115\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"87.9,145 62,160 62,130 87.9,115\" fill=\"#888888\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"87.9,55 113.9,70 87.9,85 62,70\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"62,100 87.9,115 87.9,85 62,70\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"113.9,100 87.9,115 87.9,85 113.9,70\" fill=\"#888888\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"36,55 62,70 36,85 10,70\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"10,100 36,115 36,85 10,70\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"62,100 36,115 36,85 62,70\" fill=\"#888888\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"62,10 87.9,25 62,40 36,25\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"36,55 62,70 62,40 36,25\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"87.9,55 62,70 62,40 87.9,25\" fill=\"#888888\" stroke=\"#111111\" stroke-width=\"2\" stroke-linejoin=\"round\"/></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 2,
+    "stem": "쌓기나무를 쌓고 위에서 본 모양이에요. 칸에 적힌 수는 그 자리에 쌓은 쌓기나무 개수예요. 화살표 쪽(앞)에서 본 모양은 무엇일까요?",
+    "choices": [
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 110 80\" width=\"110\" height=\"80\" font-family=\"sans-serif\"><rect x=\"25\" y=\"56\" width=\"18\" height=\"18\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"43\" y=\"56\" width=\"18\" height=\"18\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"43\" y=\"38\" width=\"18\" height=\"18\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"43\" y=\"20\" width=\"18\" height=\"18\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"61\" y=\"56\" width=\"18\" height=\"18\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"61\" y=\"38\" width=\"18\" height=\"18\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/></svg>",
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 110 80\" width=\"110\" height=\"80\" font-family=\"sans-serif\"><rect x=\"25\" y=\"56\" width=\"18\" height=\"18\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"25\" y=\"38\" width=\"18\" height=\"18\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"43\" y=\"56\" width=\"18\" height=\"18\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"61\" y=\"56\" width=\"18\" height=\"18\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/></svg>",
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 110 80\" width=\"110\" height=\"80\" font-family=\"sans-serif\"><rect x=\"25\" y=\"56\" width=\"18\" height=\"18\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"25\" y=\"38\" width=\"18\" height=\"18\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"43\" y=\"56\" width=\"18\" height=\"18\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"43\" y=\"38\" width=\"18\" height=\"18\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"43\" y=\"20\" width=\"18\" height=\"18\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"61\" y=\"56\" width=\"18\" height=\"18\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"61\" y=\"38\" width=\"18\" height=\"18\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/></svg>",
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 110 80\" width=\"110\" height=\"80\" font-family=\"sans-serif\"><rect x=\"25\" y=\"56\" width=\"18\" height=\"18\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"25\" y=\"38\" width=\"18\" height=\"18\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"25\" y=\"20\" width=\"18\" height=\"18\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"43\" y=\"56\" width=\"18\" height=\"18\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"43\" y=\"38\" width=\"18\" height=\"18\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"43\" y=\"20\" width=\"18\" height=\"18\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"61\" y=\"56\" width=\"18\" height=\"18\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"61\" y=\"38\" width=\"18\" height=\"18\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/></svg>"
+    ],
+    "answer": 2,
+    "explanation": "앞에서 보면 각 세로줄에서 가장 높은 층만큼 보여요. 왼쪽 줄은 1과 2 중 2층, 가운데 줄은 3과 1 중 3층, 오른쪽 줄은 2와 1 중 2층이에요. 그래서 2층, 3층, 2층 모양이에요.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 190 170\" width=\"190\" height=\"170\" font-family=\"sans-serif\"><rect x=\"20\" y=\"10\" width=\"50\" height=\"50\" fill=\"#eeeeee\" stroke=\"#111111\" stroke-width=\"3\"/><text x=\"45\" y=\"43\" font-size=\"22\" text-anchor=\"middle\" fill=\"#111111\" font-weight=\"bold\">1</text><rect x=\"70\" y=\"10\" width=\"50\" height=\"50\" fill=\"#eeeeee\" stroke=\"#111111\" stroke-width=\"3\"/><text x=\"95\" y=\"43\" font-size=\"22\" text-anchor=\"middle\" fill=\"#111111\" font-weight=\"bold\">3</text><rect x=\"120\" y=\"10\" width=\"50\" height=\"50\" fill=\"#eeeeee\" stroke=\"#111111\" stroke-width=\"3\"/><text x=\"145\" y=\"43\" font-size=\"22\" text-anchor=\"middle\" fill=\"#111111\" font-weight=\"bold\">2</text><rect x=\"20\" y=\"60\" width=\"50\" height=\"50\" fill=\"#eeeeee\" stroke=\"#111111\" stroke-width=\"3\"/><text x=\"45\" y=\"93\" font-size=\"22\" text-anchor=\"middle\" fill=\"#111111\" font-weight=\"bold\">2</text><rect x=\"70\" y=\"60\" width=\"50\" height=\"50\" fill=\"#eeeeee\" stroke=\"#111111\" stroke-width=\"3\"/><text x=\"95\" y=\"93\" font-size=\"22\" text-anchor=\"middle\" fill=\"#111111\" font-weight=\"bold\">1</text><rect x=\"120\" y=\"60\" width=\"50\" height=\"50\" fill=\"#eeeeee\" stroke=\"#111111\" stroke-width=\"3\"/><text x=\"145\" y=\"93\" font-size=\"22\" text-anchor=\"middle\" fill=\"#111111\" font-weight=\"bold\">1</text><text x=\"95\" y=\"162\" font-size=\"16\" text-anchor=\"middle\" fill=\"#b31942\" font-weight=\"bold\">앞</text><line x1=\"95\" y1=\"145\" x2=\"95\" y2=\"122\" stroke=\"#b31942\" stroke-width=\"2\"/><polygon points=\"95,116 89,126 101,126\" fill=\"#b31942\" stroke=\"#b31942\" stroke-width=\"2\"/></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 2,
+    "stem": "왼쪽 모양 조각을 뒤집지 않고 돌리기만 했어요. 나올 수 없는 모양은 무엇일까요?",
+    "choices": [
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 110 110\" width=\"110\" height=\"110\" font-family=\"sans-serif\"><rect x=\"22\" y=\"33\" width=\"22\" height=\"22\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"44\" y=\"33\" width=\"22\" height=\"22\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"66\" y=\"33\" width=\"22\" height=\"22\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"22\" y=\"55\" width=\"22\" height=\"22\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/></svg>",
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 110 110\" width=\"110\" height=\"110\" font-family=\"sans-serif\"><rect x=\"33\" y=\"22\" width=\"22\" height=\"22\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"55\" y=\"22\" width=\"22\" height=\"22\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"55\" y=\"44\" width=\"22\" height=\"22\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"55\" y=\"66\" width=\"22\" height=\"22\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/></svg>",
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 110 110\" width=\"110\" height=\"110\" font-family=\"sans-serif\"><rect x=\"22\" y=\"33\" width=\"22\" height=\"22\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"22\" y=\"55\" width=\"22\" height=\"22\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"44\" y=\"55\" width=\"22\" height=\"22\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"66\" y=\"55\" width=\"22\" height=\"22\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/></svg>",
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 110 110\" width=\"110\" height=\"110\" font-family=\"sans-serif\"><rect x=\"66\" y=\"33\" width=\"22\" height=\"22\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"22\" y=\"55\" width=\"22\" height=\"22\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"44\" y=\"55\" width=\"22\" height=\"22\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"66\" y=\"55\" width=\"22\" height=\"22\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/></svg>"
+    ],
+    "answer": 2,
+    "explanation": "조각을 돌리기만 하면 긴 막대의 한쪽 끝에 붙은 칸의 방향이 바뀌지 않아요. 세 번째 모양은 조각을 뒤집어야(거울에 비춘 것처럼) 만들 수 있어서 돌리기만 해서는 나올 수 없어요.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 80 110\" width=\"80\" height=\"110\" font-family=\"sans-serif\"><rect x=\"10\" y=\"10\" width=\"30\" height=\"30\" fill=\"#b31942\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"10\" y=\"40\" width=\"30\" height=\"30\" fill=\"#b31942\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"10\" y=\"70\" width=\"30\" height=\"30\" fill=\"#b31942\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"40\" y=\"70\" width=\"30\" height=\"30\" fill=\"#b31942\" stroke=\"#111111\" stroke-width=\"2\"/></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 2,
+    "stem": "시계가 가리키는 시각은 몇 시 몇 분일까요? (짧은바늘은 빨간색이에요.)",
+    "choices": [
+      "4시 45분",
+      "5시 45분",
+      "9시 20분",
+      "4시 9분"
+    ],
+    "answer": 0,
+    "explanation": "긴바늘이 9를 가리키면 45분이에요. 짧은바늘은 4와 5 사이에 있으므로 아직 5시가 되지 않은 4시예요. 그래서 4시 45분이에요. 짧은바늘이 5에 가깝다고 5시로 읽으면 안 돼요.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 180 180\" width=\"180\" height=\"180\" font-family=\"sans-serif\"><circle cx=\"90\" cy=\"90\" r=\"82\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"3\"/><text x=\"121\" y=\"41.3\" font-size=\"15\" text-anchor=\"middle\" fill=\"#111111\">1</text><text x=\"143.7\" y=\"64\" font-size=\"15\" text-anchor=\"middle\" fill=\"#111111\">2</text><text x=\"152\" y=\"95\" font-size=\"15\" text-anchor=\"middle\" fill=\"#111111\">3</text><text x=\"143.7\" y=\"126\" font-size=\"15\" text-anchor=\"middle\" fill=\"#111111\">4</text><text x=\"121\" y=\"148.7\" font-size=\"15\" text-anchor=\"middle\" fill=\"#111111\">5</text><text x=\"90\" y=\"157\" font-size=\"15\" text-anchor=\"middle\" fill=\"#111111\">6</text><text x=\"59\" y=\"148.7\" font-size=\"15\" text-anchor=\"middle\" fill=\"#111111\">7</text><text x=\"36.3\" y=\"126\" font-size=\"15\" text-anchor=\"middle\" fill=\"#111111\">8</text><text x=\"28\" y=\"95\" font-size=\"15\" text-anchor=\"middle\" fill=\"#111111\">9</text><text x=\"36.3\" y=\"64\" font-size=\"15\" text-anchor=\"middle\" fill=\"#111111\">10</text><text x=\"59\" y=\"41.3\" font-size=\"15\" text-anchor=\"middle\" fill=\"#111111\">11</text><text x=\"90\" y=\"33\" font-size=\"15\" text-anchor=\"middle\" fill=\"#111111\">12</text><line x1=\"90\" y1=\"16\" x2=\"90\" y2=\"8\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"98.2\" y1=\"12.4\" x2=\"98.6\" y2=\"8.4\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"106.2\" y1=\"13.7\" x2=\"107\" y2=\"9.8\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"114.1\" y1=\"15.8\" x2=\"115.3\" y2=\"12\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"121.7\" y1=\"18.7\" x2=\"123.4\" y2=\"15.1\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"127\" y1=\"25.9\" x2=\"131\" y2=\"19\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"135.8\" y1=\"26.9\" x2=\"138.2\" y2=\"23.7\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"142.2\" y1=\"32\" x2=\"144.9\" y2=\"29.1\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"148\" y1=\"37.8\" x2=\"150.9\" y2=\"35.1\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"153.1\" y1=\"44.2\" x2=\"156.3\" y2=\"41.8\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"154.1\" y1=\"53\" x2=\"161\" y2=\"49\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"161.3\" y1=\"58.3\" x2=\"164.9\" y2=\"56.6\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"164.2\" y1=\"65.9\" x2=\"168\" y2=\"64.7\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"166.3\" y1=\"73.8\" x2=\"170.2\" y2=\"73\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"167.6\" y1=\"81.8\" x2=\"171.6\" y2=\"81.4\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"164\" y1=\"90\" x2=\"172\" y2=\"90\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"167.6\" y1=\"98.2\" x2=\"171.6\" y2=\"98.6\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"166.3\" y1=\"106.2\" x2=\"170.2\" y2=\"107\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"164.2\" y1=\"114.1\" x2=\"168\" y2=\"115.3\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"161.3\" y1=\"121.7\" x2=\"164.9\" y2=\"123.4\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"154.1\" y1=\"127\" x2=\"161\" y2=\"131\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"153.1\" y1=\"135.8\" x2=\"156.3\" y2=\"138.2\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"148\" y1=\"142.2\" x2=\"150.9\" y2=\"144.9\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"142.2\" y1=\"148\" x2=\"144.9\" y2=\"150.9\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"135.8\" y1=\"153.1\" x2=\"138.2\" y2=\"156.3\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"127\" y1=\"154.1\" x2=\"131\" y2=\"161\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"121.7\" y1=\"161.3\" x2=\"123.4\" y2=\"164.9\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"114.1\" y1=\"164.2\" x2=\"115.3\" y2=\"168\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"106.2\" y1=\"166.3\" x2=\"107\" y2=\"170.2\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"98.2\" y1=\"167.6\" x2=\"98.6\" y2=\"171.6\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"90\" y1=\"164\" x2=\"90\" y2=\"172\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"81.8\" y1=\"167.6\" x2=\"81.4\" y2=\"171.6\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"73.8\" y1=\"166.3\" x2=\"73\" y2=\"170.2\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"65.9\" y1=\"164.2\" x2=\"64.7\" y2=\"168\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"58.3\" y1=\"161.3\" x2=\"56.6\" y2=\"164.9\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"53\" y1=\"154.1\" x2=\"49\" y2=\"161\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"44.2\" y1=\"153.1\" x2=\"41.8\" y2=\"156.3\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"37.8\" y1=\"148\" x2=\"35.1\" y2=\"150.9\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"32\" y1=\"142.2\" x2=\"29.1\" y2=\"144.9\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"26.9\" y1=\"135.8\" x2=\"23.7\" y2=\"138.2\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"25.9\" y1=\"127\" x2=\"19\" y2=\"131\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"18.7\" y1=\"121.7\" x2=\"15.1\" y2=\"123.4\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"15.8\" y1=\"114.1\" x2=\"12\" y2=\"115.3\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"13.7\" y1=\"106.2\" x2=\"9.8\" y2=\"107\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"12.4\" y1=\"98.2\" x2=\"8.4\" y2=\"98.6\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"16\" y1=\"90\" x2=\"8\" y2=\"90\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"12.4\" y1=\"81.8\" x2=\"8.4\" y2=\"81.4\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"13.7\" y1=\"73.8\" x2=\"9.8\" y2=\"73\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"15.8\" y1=\"65.9\" x2=\"12\" y2=\"64.7\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"18.7\" y1=\"58.3\" x2=\"15.1\" y2=\"56.6\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"25.9\" y1=\"53\" x2=\"19\" y2=\"49\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"26.9\" y1=\"44.2\" x2=\"23.7\" y2=\"41.8\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"32\" y1=\"37.8\" x2=\"29.1\" y2=\"35.1\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"37.8\" y1=\"32\" x2=\"35.1\" y2=\"29.1\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"44.2\" y1=\"26.9\" x2=\"41.8\" y2=\"23.7\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"53\" y1=\"25.9\" x2=\"49\" y2=\"19\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"58.3\" y1=\"18.7\" x2=\"56.6\" y2=\"15.1\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"65.9\" y1=\"15.8\" x2=\"64.7\" y2=\"12\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"73.8\" y1=\"13.7\" x2=\"73\" y2=\"9.8\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"81.8\" y1=\"12.4\" x2=\"81.4\" y2=\"8.4\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"90\" y1=\"90\" x2=\"115\" y2=\"122.5\" stroke=\"#b31942\" stroke-width=\"6\" stroke-linecap=\"round\"/><line x1=\"90\" y1=\"90\" x2=\"35.9\" y2=\"90\" stroke=\"#111111\" stroke-width=\"3\" stroke-linecap=\"round\"/><circle cx=\"90\" cy=\"90\" r=\"4\" fill=\"#111111\" stroke=\"#111111\" stroke-width=\"2\"/></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 2,
+    "kind": "num",
+    "stem": "주사위는 마주 보는 두 면의 눈의 수를 더하면 7이에요. 주사위 2개를 위아래로 쌓았더니 맨 위 면의 눈은 3, 탁자에 닿은 맨 아래 면의 눈은 6이었어요. 두 주사위가 서로 맞닿은 두 면의 눈의 수를 더하면 얼마일까요?",
+    "choices": [
+      "5"
+    ],
+    "explanation": "위 주사위의 윗면이 3이므로 아랫면(맞닿은 면)은 7 - 3 = 4예요. 아래 주사위의 아랫면이 6이므로 윗면(맞닿은 면)은 7 - 6 = 1이에요. 4 + 1 = 5예요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 2,
+    "stem": "정사각형 9칸을 두 조각으로 나누었어요. 빨간 조각이 그림과 같을 때, 나머지 흰 조각의 모양은 무엇일까요?",
+    "choices": [
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 110 110\" width=\"110\" height=\"110\" font-family=\"sans-serif\"><rect x=\"35\" y=\"25\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"55\" y=\"25\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"35\" y=\"45\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"55\" y=\"45\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"35\" y=\"65\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/></svg>",
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 110 110\" width=\"110\" height=\"110\" font-family=\"sans-serif\"><rect x=\"35\" y=\"15\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"35\" y=\"35\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"35\" y=\"55\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"35\" y=\"75\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"55\" y=\"75\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/></svg>",
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 110 110\" width=\"110\" height=\"110\" font-family=\"sans-serif\"><rect x=\"25\" y=\"35\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"65\" y=\"35\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"25\" y=\"55\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"45\" y=\"55\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"65\" y=\"55\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/></svg>",
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 110 110\" width=\"110\" height=\"110\" font-family=\"sans-serif\"><rect x=\"25\" y=\"25\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"45\" y=\"25\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"65\" y=\"25\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"45\" y=\"45\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"45\" y=\"65\" width=\"20\" height=\"20\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/></svg>"
+    ],
+    "answer": 2,
+    "explanation": "빨간 조각은 4칸이므로 흰 조각은 9 - 4 = 5칸이에요. 흰 칸은 가운데 줄의 양 끝 2칸과 맨 아래 줄 3칸이에요. 이 5칸을 이으면 위쪽이 열린 U자 모양이 돼요. 다른 보기는 모두 5칸이지만 모양이 달라요.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 140 140\" width=\"140\" height=\"140\" font-family=\"sans-serif\"><rect x=\"10\" y=\"10\" width=\"40\" height=\"40\" fill=\"#b31942\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"50\" y=\"10\" width=\"40\" height=\"40\" fill=\"#b31942\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"90\" y=\"10\" width=\"40\" height=\"40\" fill=\"#b31942\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"10\" y=\"50\" width=\"40\" height=\"40\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"50\" y=\"50\" width=\"40\" height=\"40\" fill=\"#b31942\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"90\" y=\"50\" width=\"40\" height=\"40\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"10\" y=\"90\" width=\"40\" height=\"40\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"50\" y=\"90\" width=\"40\" height=\"40\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"90\" y=\"90\" width=\"40\" height=\"40\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"10\" y=\"10\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#111111\" stroke-width=\"4\"/></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 2,
+    "stem": "점 9개가 같은 간격으로 놓여 있어요. 점 4개를 골라 이어서 만들 수 있는 정사각형은 모두 몇 개일까요? (기울어진 정사각형도 세어요.)",
+    "choices": [
+      "4",
+      "6",
+      "8",
+      "9"
+    ],
+    "answer": 1,
+    "explanation": "작은 정사각형 4개, 가장 큰 정사각형 1개가 있어요. 그리고 각 변의 가운데 점 4개를 이으면 기울어진 정사각형 1개가 생겨요. 4 + 1 + 1 = 6개예요.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 170 170\" width=\"170\" height=\"170\" font-family=\"sans-serif\"><circle cx=\"25\" cy=\"25\" r=\"7\" fill=\"#111111\" stroke=\"#111111\" stroke-width=\"2\"/><circle cx=\"25\" cy=\"85\" r=\"7\" fill=\"#111111\" stroke=\"#111111\" stroke-width=\"2\"/><circle cx=\"25\" cy=\"145\" r=\"7\" fill=\"#111111\" stroke=\"#111111\" stroke-width=\"2\"/><circle cx=\"85\" cy=\"25\" r=\"7\" fill=\"#111111\" stroke=\"#111111\" stroke-width=\"2\"/><circle cx=\"85\" cy=\"85\" r=\"7\" fill=\"#111111\" stroke=\"#111111\" stroke-width=\"2\"/><circle cx=\"85\" cy=\"145\" r=\"7\" fill=\"#111111\" stroke=\"#111111\" stroke-width=\"2\"/><circle cx=\"145\" cy=\"25\" r=\"7\" fill=\"#111111\" stroke=\"#111111\" stroke-width=\"2\"/><circle cx=\"145\" cy=\"85\" r=\"7\" fill=\"#111111\" stroke=\"#111111\" stroke-width=\"2\"/><circle cx=\"145\" cy=\"145\" r=\"7\" fill=\"#111111\" stroke=\"#111111\" stroke-width=\"2\"/></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 2,
+    "kind": "num",
+    "stem": "성냥개비 12개로 작은 정사각형 4개를 그림처럼 만들었어요. 같은 방법으로 작은 정사각형을 위아래 2줄, 옆으로 3칸이 되게 이어 붙여 만들려면 성냥개비는 모두 몇 개 필요할까요?",
+    "choices": [
+      "17"
+    ],
+    "explanation": "가로로 놓인 성냥개비는 3줄에 3개씩 9개, 세로로 놓인 성냥개비는 2줄에 4개씩 8개예요. 9 + 8 = 17개예요. 그림에 한 칸(세로줄 하나)을 더 붙이면 12 + 5 = 17개라고 생각해도 돼요.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 130 130\" width=\"130\" height=\"130\" font-family=\"sans-serif\"><line x1=\"22\" y1=\"15\" x2=\"58\" y2=\"15\" stroke=\"#111111\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"56\" cy=\"15\" r=\"3\" fill=\"#b31942\" stroke=\"#b31942\" stroke-width=\"2\"/><line x1=\"22\" y1=\"65\" x2=\"58\" y2=\"65\" stroke=\"#111111\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"56\" cy=\"65\" r=\"3\" fill=\"#b31942\" stroke=\"#b31942\" stroke-width=\"2\"/><line x1=\"15\" y1=\"22\" x2=\"15\" y2=\"58\" stroke=\"#111111\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"15\" cy=\"24\" r=\"3\" fill=\"#b31942\" stroke=\"#b31942\" stroke-width=\"2\"/><line x1=\"65\" y1=\"22\" x2=\"65\" y2=\"58\" stroke=\"#111111\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"65\" cy=\"24\" r=\"3\" fill=\"#b31942\" stroke=\"#b31942\" stroke-width=\"2\"/><line x1=\"72\" y1=\"15\" x2=\"108\" y2=\"15\" stroke=\"#111111\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"106\" cy=\"15\" r=\"3\" fill=\"#b31942\" stroke=\"#b31942\" stroke-width=\"2\"/><line x1=\"72\" y1=\"65\" x2=\"108\" y2=\"65\" stroke=\"#111111\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"106\" cy=\"65\" r=\"3\" fill=\"#b31942\" stroke=\"#b31942\" stroke-width=\"2\"/><line x1=\"115\" y1=\"22\" x2=\"115\" y2=\"58\" stroke=\"#111111\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"115\" cy=\"24\" r=\"3\" fill=\"#b31942\" stroke=\"#b31942\" stroke-width=\"2\"/><line x1=\"22\" y1=\"115\" x2=\"58\" y2=\"115\" stroke=\"#111111\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"56\" cy=\"115\" r=\"3\" fill=\"#b31942\" stroke=\"#b31942\" stroke-width=\"2\"/><line x1=\"15\" y1=\"72\" x2=\"15\" y2=\"108\" stroke=\"#111111\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"15\" cy=\"74\" r=\"3\" fill=\"#b31942\" stroke=\"#b31942\" stroke-width=\"2\"/><line x1=\"65\" y1=\"72\" x2=\"65\" y2=\"108\" stroke=\"#111111\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"65\" cy=\"74\" r=\"3\" fill=\"#b31942\" stroke=\"#b31942\" stroke-width=\"2\"/><line x1=\"72\" y1=\"115\" x2=\"108\" y2=\"115\" stroke=\"#111111\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"106\" cy=\"115\" r=\"3\" fill=\"#b31942\" stroke=\"#b31942\" stroke-width=\"2\"/><line x1=\"115\" y1=\"72\" x2=\"115\" y2=\"108\" stroke=\"#111111\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"115\" cy=\"74\" r=\"3\" fill=\"#b31942\" stroke=\"#b31942\" stroke-width=\"2\"/></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 2,
+    "stem": "모눈 한 칸의 한 변은 1 cm예요. 빨간 선으로 그린 계단 모양 도형의 둘레는 몇 cm일까요?",
+    "choices": [
+      "6",
+      "8",
+      "10",
+      "12"
+    ],
+    "answer": 3,
+    "explanation": "계단의 가로로 된 선을 모두 모으면 위쪽이 1 + 1 + 1 = 3 cm, 아래쪽이 3 cm예요. 세로로 된 선도 오른쪽이 1 + 1 + 1 = 3 cm, 왼쪽이 3 cm예요. 3 + 3 + 3 + 3 = 12 cm예요.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 180 180\" width=\"180\" height=\"180\" font-family=\"sans-serif\"><line x1=\"15\" y1=\"15\" x2=\"15\" y2=\"165\" stroke=\"#cccccc\" stroke-width=\"2\"/><line x1=\"45\" y1=\"15\" x2=\"45\" y2=\"165\" stroke=\"#cccccc\" stroke-width=\"2\"/><line x1=\"75\" y1=\"15\" x2=\"75\" y2=\"165\" stroke=\"#cccccc\" stroke-width=\"2\"/><line x1=\"105\" y1=\"15\" x2=\"105\" y2=\"165\" stroke=\"#cccccc\" stroke-width=\"2\"/><line x1=\"135\" y1=\"15\" x2=\"135\" y2=\"165\" stroke=\"#cccccc\" stroke-width=\"2\"/><line x1=\"165\" y1=\"15\" x2=\"165\" y2=\"165\" stroke=\"#cccccc\" stroke-width=\"2\"/><line x1=\"15\" y1=\"15\" x2=\"165\" y2=\"15\" stroke=\"#cccccc\" stroke-width=\"2\"/><line x1=\"15\" y1=\"45\" x2=\"165\" y2=\"45\" stroke=\"#cccccc\" stroke-width=\"2\"/><line x1=\"15\" y1=\"75\" x2=\"165\" y2=\"75\" stroke=\"#cccccc\" stroke-width=\"2\"/><line x1=\"15\" y1=\"105\" x2=\"165\" y2=\"105\" stroke=\"#cccccc\" stroke-width=\"2\"/><line x1=\"15\" y1=\"135\" x2=\"165\" y2=\"135\" stroke=\"#cccccc\" stroke-width=\"2\"/><line x1=\"15\" y1=\"165\" x2=\"165\" y2=\"165\" stroke=\"#cccccc\" stroke-width=\"2\"/><rect x=\"45\" y=\"105\" width=\"30\" height=\"30\" fill=\"#eeeeee\"/><rect x=\"75\" y=\"105\" width=\"30\" height=\"30\" fill=\"#eeeeee\"/><rect x=\"105\" y=\"105\" width=\"30\" height=\"30\" fill=\"#eeeeee\"/><rect x=\"45\" y=\"75\" width=\"30\" height=\"30\" fill=\"#eeeeee\"/><rect x=\"75\" y=\"75\" width=\"30\" height=\"30\" fill=\"#eeeeee\"/><rect x=\"45\" y=\"45\" width=\"30\" height=\"30\" fill=\"#eeeeee\"/><polyline points=\"45,45 75,45 75,75 105,75 105,105 135,105 135,135 45,135 45,45\" fill=\"none\" stroke=\"#b31942\" stroke-width=\"4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "geometry",
+    "difficulty": 2,
+    "stem": "종이를 반으로 접은 다음, 접힌 선 쪽을 그림처럼 반원 모양으로 잘라 냈어요. 종이를 다시 펼치면 어떤 모양일까요?",
+    "choices": [
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 120\" width=\"160\" height=\"120\" font-family=\"sans-serif\"><rect x=\"20\" y=\"10\" width=\"120\" height=\"100\" fill=\"#eeeeee\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"80\" y1=\"10\" x2=\"80\" y2=\"110\" stroke=\"#888888\" stroke-width=\"2\" stroke-dasharray=\"6 5\"/><circle cx=\"80\" cy=\"60\" r=\"16\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/></svg>",
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 120\" width=\"160\" height=\"120\" font-family=\"sans-serif\"><rect x=\"20\" y=\"10\" width=\"120\" height=\"100\" fill=\"#eeeeee\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"80\" y1=\"10\" x2=\"80\" y2=\"110\" stroke=\"#888888\" stroke-width=\"2\" stroke-dasharray=\"6 5\"/><path d=\"M20,44 A16,16 0 0 1 20,76\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/></svg>",
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 120\" width=\"160\" height=\"120\" font-family=\"sans-serif\"><rect x=\"20\" y=\"10\" width=\"120\" height=\"100\" fill=\"#eeeeee\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"80\" y1=\"10\" x2=\"80\" y2=\"110\" stroke=\"#888888\" stroke-width=\"2\" stroke-dasharray=\"6 5\"/><path d=\"M20,44 A16,16 0 0 1 20,76\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><path d=\"M140,44 A16,16 0 0 0 140,76\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/></svg>",
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 120\" width=\"160\" height=\"120\" font-family=\"sans-serif\"><rect x=\"20\" y=\"10\" width=\"120\" height=\"100\" fill=\"#eeeeee\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"80\" y1=\"10\" x2=\"80\" y2=\"110\" stroke=\"#888888\" stroke-width=\"2\" stroke-dasharray=\"6 5\"/><circle cx=\"50\" cy=\"60\" r=\"14\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><circle cx=\"110\" cy=\"60\" r=\"14\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/></svg>"
+    ],
+    "answer": 0,
+    "explanation": "접힌 선에 붙은 반원을 잘라 냈으므로, 펼치면 접힌 선을 가운데로 양쪽 반원이 합쳐져 가운데에 동그란 구멍 1개가 생겨요.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 170 160\" width=\"170\" height=\"160\" font-family=\"sans-serif\"><rect x=\"60\" y=\"15\" width=\"90\" height=\"120\" fill=\"#eeeeee\" stroke=\"#111111\" stroke-width=\"2\"/><line x1=\"60\" y1=\"15\" x2=\"60\" y2=\"135\" stroke=\"#b31942\" stroke-width=\"4\"/><path d=\"M60,55 A20,20 0 0 1 60,95\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"60\" y=\"152\" font-size=\"13\" text-anchor=\"middle\" fill=\"#b31942\">접힌 선</text><line x1=\"20\" y1=\"75\" x2=\"52\" y2=\"75\" stroke=\"#111111\" stroke-width=\"2\"/><polygon points=\"56,75 46,70 46,80\" fill=\"#111111\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"28\" y=\"66\" font-size=\"13\" text-anchor=\"middle\" fill=\"#111111\">자름</text></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 2,
+    "kind": "num",
+    "stem": "성냥개비로 세모를 한 줄로 이어 붙여 만들고 있어요. 세모 1개에는 3개, 세모 2개에는 5개, 세모 3개에는 7개가 필요해요. 같은 방법으로 세모 6개를 만들려면 성냥개비는 몇 개 필요할까요?",
+    "choices": [
+      "13"
+    ],
+    "explanation": "세모가 1개 늘 때마다 성냥개비는 2개씩 늘어요. 3, 5, 7, 9, 11, 13이므로 세모 6개에는 13개가 필요해요.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 90\" width=\"340\" height=\"90\" font-family=\"sans-serif\"><line x1=\"10\" y1=\"53\" x2=\"60\" y2=\"53\" stroke=\"#111111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"35\" y1=\"10\" x2=\"60\" y2=\"53\" stroke=\"#111111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"10\" y1=\"53\" x2=\"35\" y2=\"10\" stroke=\"#111111\" stroke-width=\"4\" stroke-linecap=\"round\"/><text x=\"35\" y=\"80\" font-size=\"13\" text-anchor=\"middle\" fill=\"#111111\">세모 1개</text><line x1=\"95\" y1=\"53\" x2=\"145\" y2=\"53\" stroke=\"#111111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"120\" y1=\"10\" x2=\"145\" y2=\"53\" stroke=\"#111111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"95\" y1=\"53\" x2=\"120\" y2=\"10\" stroke=\"#111111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"120\" y1=\"10\" x2=\"170\" y2=\"10\" stroke=\"#111111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"145\" y1=\"53\" x2=\"170\" y2=\"10\" stroke=\"#111111\" stroke-width=\"4\" stroke-linecap=\"round\"/><text x=\"132.5\" y=\"80\" font-size=\"13\" text-anchor=\"middle\" fill=\"#111111\">세모 2개</text><line x1=\"205\" y1=\"53\" x2=\"255\" y2=\"53\" stroke=\"#111111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"230\" y1=\"10\" x2=\"255\" y2=\"53\" stroke=\"#111111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"205\" y1=\"53\" x2=\"230\" y2=\"10\" stroke=\"#111111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"230\" y1=\"10\" x2=\"280\" y2=\"10\" stroke=\"#111111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"255\" y1=\"53\" x2=\"280\" y2=\"10\" stroke=\"#111111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"255\" y1=\"53\" x2=\"305\" y2=\"53\" stroke=\"#111111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"280\" y1=\"10\" x2=\"305\" y2=\"53\" stroke=\"#111111\" stroke-width=\"4\" stroke-linecap=\"round\"/><text x=\"255\" y=\"80\" font-size=\"13\" text-anchor=\"middle\" fill=\"#111111\">세모 3개</text></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 2,
+    "stem": "규칙에 따라 화살표를 늘어놓았어요. ?에 알맞은 것은 무엇일까요?",
+    "choices": [
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 80 80\" width=\"80\" height=\"80\" font-family=\"sans-serif\"><g transform=\"translate(10 10)\"><rect x=\"0\" y=\"0\" width=\"60\" height=\"60\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><g transform=\"rotate(0 30 30)\"><polygon points=\"9,24 33,24 33,13.2 52.8,30 33,46.8 33,36 9,36\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/></g></g></svg>",
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 80 80\" width=\"80\" height=\"80\" font-family=\"sans-serif\"><g transform=\"translate(10 10)\"><rect x=\"0\" y=\"0\" width=\"60\" height=\"60\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><g transform=\"rotate(270 30 30)\"><polygon points=\"9,24 33,24 33,13.2 52.8,30 33,46.8 33,36 9,36\" fill=\"#111111\" stroke=\"#111111\" stroke-width=\"2\"/></g></g></svg>",
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 80 80\" width=\"80\" height=\"80\" font-family=\"sans-serif\"><g transform=\"translate(10 10)\"><rect x=\"0\" y=\"0\" width=\"60\" height=\"60\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><g transform=\"rotate(0 30 30)\"><polygon points=\"9,24 33,24 33,13.2 52.8,30 33,46.8 33,36 9,36\" fill=\"#111111\" stroke=\"#111111\" stroke-width=\"2\"/></g></g></svg>",
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 80 80\" width=\"80\" height=\"80\" font-family=\"sans-serif\"><g transform=\"translate(10 10)\"><rect x=\"0\" y=\"0\" width=\"60\" height=\"60\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><g transform=\"rotate(90 30 30)\"><polygon points=\"9,24 33,24 33,13.2 52.8,30 33,46.8 33,36 9,36\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/></g></g></svg>"
+    ],
+    "answer": 2,
+    "explanation": "화살표는 시계 방향으로 직각만큼씩 돌아가요(오른쪽 → 아래 → 왼쪽 → 위). 다음은 다시 오른쪽이에요. 색은 검은색과 회색이 번갈아 나오므로 5번째는 검은색이에요.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 385 80\" width=\"385\" height=\"80\" font-family=\"sans-serif\"><g transform=\"translate(10 10)\"><rect x=\"0\" y=\"0\" width=\"60\" height=\"60\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><g transform=\"rotate(0 30 30)\"><polygon points=\"9,24 33,24 33,13.2 52.8,30 33,46.8 33,36 9,36\" fill=\"#111111\" stroke=\"#111111\" stroke-width=\"2\"/></g></g><g transform=\"translate(85 10)\"><rect x=\"0\" y=\"0\" width=\"60\" height=\"60\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><g transform=\"rotate(90 30 30)\"><polygon points=\"9,24 33,24 33,13.2 52.8,30 33,46.8 33,36 9,36\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/></g></g><g transform=\"translate(160 10)\"><rect x=\"0\" y=\"0\" width=\"60\" height=\"60\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><g transform=\"rotate(180 30 30)\"><polygon points=\"9,24 33,24 33,13.2 52.8,30 33,46.8 33,36 9,36\" fill=\"#111111\" stroke=\"#111111\" stroke-width=\"2\"/></g></g><g transform=\"translate(235 10)\"><rect x=\"0\" y=\"0\" width=\"60\" height=\"60\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><g transform=\"rotate(270 30 30)\"><polygon points=\"9,24 33,24 33,13.2 52.8,30 33,46.8 33,36 9,36\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/></g></g><g transform=\"translate(310 10)\"><rect x=\"0\" y=\"0\" width=\"60\" height=\"60\" fill=\"#eeeeee\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"30\" y=\"38\" font-size=\"22\" text-anchor=\"middle\" fill=\"#111111\">?</text></g></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 2,
+    "kind": "num",
+    "stem": "아래 칸의 이웃한 두 수를 더해서 바로 위 칸에 써요. 맨 위 칸의 수가 20일 때, □에 알맞은 수는 무엇일까요?",
+    "choices": [
+      "5"
+    ],
+    "explanation": "가운데 줄은 4 + □와 □ + 6이에요. 맨 위는 이 둘을 더한 4 + □ + □ + 6 = 20이므로 □ + □ = 10, □ = 5예요. 확인: 9와 11을 더하면 20이에요.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 220 175\" width=\"220\" height=\"175\" font-family=\"sans-serif\"><rect x=\"12\" y=\"123\" width=\"56\" height=\"44\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"40\" y=\"152\" font-size=\"20\" text-anchor=\"middle\" fill=\"#111111\" font-weight=\"bold\">4</text><rect x=\"82\" y=\"123\" width=\"56\" height=\"44\" fill=\"#eeeeee\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"110\" y=\"152\" font-size=\"20\" text-anchor=\"middle\" fill=\"#b31942\" font-weight=\"bold\">□</text><rect x=\"152\" y=\"123\" width=\"56\" height=\"44\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"180\" y=\"152\" font-size=\"20\" text-anchor=\"middle\" fill=\"#111111\" font-weight=\"bold\">6</text><rect x=\"47\" y=\"68\" width=\"56\" height=\"44\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"75\" y=\"97\" font-size=\"20\" text-anchor=\"middle\" fill=\"#111111\" font-weight=\"bold\"></text><rect x=\"117\" y=\"68\" width=\"56\" height=\"44\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"145\" y=\"97\" font-size=\"20\" text-anchor=\"middle\" fill=\"#111111\" font-weight=\"bold\"></text><rect x=\"82\" y=\"13\" width=\"56\" height=\"44\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"110\" y=\"42\" font-size=\"20\" text-anchor=\"middle\" fill=\"#111111\" font-weight=\"bold\">20</text></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 2,
+    "stem": "어느 달의 달력이 찢어져 첫째 주 날짜만 보여요. ★이 있는 날은 며칠일까요?",
+    "choices": [
+      "12",
+      "17",
+      "19",
+      "26"
+    ],
+    "answer": 2,
+    "explanation": "달력에서 바로 아래 칸은 7일 뒤예요. 첫째 주 금요일은 5일이므로 둘째 주 금요일은 12일, 셋째 주 금요일은 19일이에요.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 330 210\" width=\"330\" height=\"210\" font-family=\"sans-serif\"><rect x=\"10\" y=\"10\" width=\"44\" height=\"30\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"32\" y=\"31\" font-size=\"15\" text-anchor=\"middle\" fill=\"#b31942\">일</text><rect x=\"54\" y=\"10\" width=\"44\" height=\"30\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"76\" y=\"31\" font-size=\"15\" text-anchor=\"middle\" fill=\"#111111\">월</text><rect x=\"98\" y=\"10\" width=\"44\" height=\"30\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"120\" y=\"31\" font-size=\"15\" text-anchor=\"middle\" fill=\"#111111\">화</text><rect x=\"142\" y=\"10\" width=\"44\" height=\"30\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"164\" y=\"31\" font-size=\"15\" text-anchor=\"middle\" fill=\"#111111\">수</text><rect x=\"186\" y=\"10\" width=\"44\" height=\"30\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"208\" y=\"31\" font-size=\"15\" text-anchor=\"middle\" fill=\"#111111\">목</text><rect x=\"230\" y=\"10\" width=\"44\" height=\"30\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"252\" y=\"31\" font-size=\"15\" text-anchor=\"middle\" fill=\"#111111\">금</text><rect x=\"274\" y=\"10\" width=\"44\" height=\"30\" fill=\"#cccccc\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"296\" y=\"31\" font-size=\"15\" text-anchor=\"middle\" fill=\"#111111\">토</text><rect x=\"10\" y=\"40\" width=\"44\" height=\"40\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"54\" y=\"40\" width=\"44\" height=\"40\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"76\" y=\"67\" font-size=\"16\" text-anchor=\"middle\" fill=\"#111111\">1</text><rect x=\"98\" y=\"40\" width=\"44\" height=\"40\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"120\" y=\"67\" font-size=\"16\" text-anchor=\"middle\" fill=\"#111111\">2</text><rect x=\"142\" y=\"40\" width=\"44\" height=\"40\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"164\" y=\"67\" font-size=\"16\" text-anchor=\"middle\" fill=\"#111111\">3</text><rect x=\"186\" y=\"40\" width=\"44\" height=\"40\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"208\" y=\"67\" font-size=\"16\" text-anchor=\"middle\" fill=\"#111111\">4</text><rect x=\"230\" y=\"40\" width=\"44\" height=\"40\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"252\" y=\"67\" font-size=\"16\" text-anchor=\"middle\" fill=\"#111111\">5</text><rect x=\"274\" y=\"40\" width=\"44\" height=\"40\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"296\" y=\"67\" font-size=\"16\" text-anchor=\"middle\" fill=\"#111111\">6</text><rect x=\"10\" y=\"80\" width=\"44\" height=\"40\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"54\" y=\"80\" width=\"44\" height=\"40\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"98\" y=\"80\" width=\"44\" height=\"40\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"142\" y=\"80\" width=\"44\" height=\"40\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"186\" y=\"80\" width=\"44\" height=\"40\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"230\" y=\"80\" width=\"44\" height=\"40\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"274\" y=\"80\" width=\"44\" height=\"40\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"10\" y=\"120\" width=\"44\" height=\"40\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"54\" y=\"120\" width=\"44\" height=\"40\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"98\" y=\"120\" width=\"44\" height=\"40\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"142\" y=\"120\" width=\"44\" height=\"40\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"186\" y=\"120\" width=\"44\" height=\"40\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"230\" y=\"120\" width=\"44\" height=\"40\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><polygon points=\"252,126 255.5,135.1 265.3,135.7 257.7,141.9 260.2,151.3 252,146 243.8,151.3 246.3,141.9 238.7,135.7 248.5,135.1\" fill=\"#b31942\" stroke=\"#b31942\" stroke-width=\"2\"/><rect x=\"274\" y=\"120\" width=\"44\" height=\"40\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"10\" y=\"160\" width=\"44\" height=\"40\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"54\" y=\"160\" width=\"44\" height=\"40\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"98\" y=\"160\" width=\"44\" height=\"40\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"142\" y=\"160\" width=\"44\" height=\"40\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"186\" y=\"160\" width=\"44\" height=\"40\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"230\" y=\"160\" width=\"44\" height=\"40\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><rect x=\"274\" y=\"160\" width=\"44\" height=\"40\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 2,
+    "stem": "규칙을 찾아 □에 알맞은 수를 고르세요. 1, 4, 9, 16, □",
+    "choices": [
+      "20",
+      "25",
+      "30",
+      "36"
+    ],
+    "answer": 1,
+    "explanation": "수가 3, 5, 7, 9씩 커져요. 16 + 9 = 25예요. (1 = 1 × 1, 4 = 2 × 2, 9 = 3 × 3, 16 = 4 × 4이므로 다음은 5 × 5 = 25라고 볼 수도 있어요.)"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 2,
+    "stem": "규칙을 찾아 □에 알맞은 수를 고르세요. 1, 10, 2, 20, 3, 30, □, 40",
+    "choices": [
+      "4",
+      "31",
+      "33",
+      "40"
+    ],
+    "answer": 0,
+    "explanation": "홀수 번째 수는 1, 2, 3, …으로 1씩, 짝수 번째 수는 10, 20, 30, …으로 10씩 커져요. □는 7번째(홀수 번째)이므로 4예요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 2,
+    "stem": "상자 가, 나, 다 중 한 상자에만 보물이 들어 있어요. 상자 가: \"보물은 이 상자에 있어요.\" 상자 나: \"보물은 가 상자에 없어요.\" 상자 다: \"보물은 나 상자에 없어요.\" 세 상자의 말 중 하나만 참말일 때, 보물이 든 상자는 무엇일까요?",
+    "choices": [
+      "가",
+      "나",
+      "다",
+      "알 수 없어요"
+    ],
+    "answer": 1,
+    "explanation": "보물이 가에 있으면 가와 다의 말이 참이라서 참말이 2개예요. 다에 있으면 나와 다의 말이 참이라서 2개예요. 나에 있으면 나의 말만 참이므로 보물은 나 상자에 있어요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 2,
+    "kind": "num",
+    "stem": "같은 모양은 같은 수를 나타내요. ♥ + ♥ = 10, ♥ + ★ = 12, ★ + ◆ = 15 일 때, ◆가 나타내는 수는 무엇일까요?",
+    "choices": [
+      "8"
+    ],
+    "explanation": "♥ + ♥ = 10이므로 ♥ = 5예요. 5 + ★ = 12이므로 ★ = 7이에요. 7 + ◆ = 15이므로 ◆ = 8이에요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 2,
+    "stem": "100, 95, 90, 85, … 처럼 5씩 작아지는 규칙으로 수를 써요. 처음으로 50보다 작은 수가 나오는 것은 몇 번째일까요?",
+    "choices": [
+      "10",
+      "11",
+      "12",
+      "13"
+    ],
+    "answer": 2,
+    "explanation": "1번째 100, 2번째 95, … 로 세면 11번째가 50이에요. 50은 50보다 작지 않으므로 처음으로 50보다 작은 수는 12번째 45예요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 2,
+    "stem": "위의 두 그림 사이의 규칙과 같은 규칙으로 바뀌도록 ?에 알맞은 그림을 고르세요.",
+    "choices": [
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 90 90\" width=\"90\" height=\"90\" font-family=\"sans-serif\"><polygon points=\"45,81 7,15 83,15\" fill=\"#111111\" stroke=\"#111111\" stroke-width=\"2\"/><circle cx=\"25\" cy=\"27\" r=\"7\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/></svg>",
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 90 90\" width=\"90\" height=\"90\" font-family=\"sans-serif\"><polygon points=\"45,81 7,15 83,15\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><circle cx=\"65\" cy=\"27\" r=\"7\" fill=\"#111111\" stroke=\"#111111\" stroke-width=\"2\"/></svg>",
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 90 90\" width=\"90\" height=\"90\" font-family=\"sans-serif\"><polygon points=\"45,9 7,75 83,75\" fill=\"#111111\" stroke=\"#111111\" stroke-width=\"2\"/><circle cx=\"65\" cy=\"63\" r=\"7\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/></svg>",
+      "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 90 90\" width=\"90\" height=\"90\" font-family=\"sans-serif\"><polygon points=\"45,81 7,15 83,15\" fill=\"#111111\" stroke=\"#111111\" stroke-width=\"2\"/><circle cx=\"65\" cy=\"27\" r=\"7\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/></svg>"
+    ],
+    "answer": 3,
+    "explanation": "위 그림에서 검은 네모가 흰 네모로, 흰 점이 검은 점으로 색이 서로 바뀌었고, 왼쪽 위에 있던 점이 오른쪽 아래로 갔어요. 그림을 반 바퀴 돌린 거예요. 흰 세모를 반 바퀴 돌리면 꼭짓점이 아래를 향하고, 왼쪽 아래 점은 오른쪽 위로 가요. 색을 바꾸면 검은 세모에 흰 점이에요.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 230 195\" width=\"230\" height=\"195\" font-family=\"sans-serif\"><rect x=\"13\" y=\"13\" width=\"64\" height=\"64\" fill=\"#111111\" stroke=\"#111111\" stroke-width=\"2\"/><circle cx=\"27\" cy=\"27\" r=\"7\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"110\" y=\"52\" font-size=\"24\" text-anchor=\"middle\" fill=\"#111111\">→</text><rect x=\"143\" y=\"13\" width=\"64\" height=\"64\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><circle cx=\"193\" cy=\"63\" r=\"7\" fill=\"#111111\" stroke=\"#111111\" stroke-width=\"2\"/><polygon points=\"45,109 7,175 83,175\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><circle cx=\"25\" cy=\"163\" r=\"7\" fill=\"#111111\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"110\" y=\"152\" font-size=\"24\" text-anchor=\"middle\" fill=\"#111111\">→</text><rect x=\"140\" y=\"110\" width=\"70\" height=\"70\" fill=\"#eeeeee\" stroke=\"#111111\" stroke-width=\"2\"/><text x=\"175\" y=\"154\" font-size=\"24\" text-anchor=\"middle\" fill=\"#111111\">?</text></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 2,
+    "stem": "5월 5일은 월요일이에요. 같은 달 5월 28일은 무슨 요일일까요?",
+    "choices": [
+      "화요일",
+      "수요일",
+      "목요일",
+      "금요일"
+    ],
+    "answer": 1,
+    "explanation": "7일마다 같은 요일이 돌아와요. 5일, 12일, 19일, 26일이 월요일이므로 27일은 화요일, 28일은 수요일이에요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "pattern",
+    "difficulty": 2,
+    "kind": "num",
+    "stem": "첫째 줄에 1, 둘째 줄에 2, 3, 셋째 줄에 4, 5, 6, 넷째 줄에 7, 8, 9, 10 … 처럼 줄마다 수를 하나씩 더 많이 차례대로 써요. 여섯째 줄의 첫 번째 수는 무엇일까요?",
+    "choices": [
+      "16"
+    ],
+    "explanation": "각 줄의 첫 번째 수는 1, 2, 4, 7, …로 1, 2, 3, …씩 커져요. 다섯째 줄의 첫 수는 7 + 4 = 11, 여섯째 줄의 첫 수는 11 + 5 = 16이에요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 2,
+    "kind": "num",
+    "stem": "어떤 수에 7을 더해야 하는데 잘못하여 7을 뺐더니 18이 되었어요. 바르게 계산하면 얼마일까요?",
+    "choices": [
+      "32"
+    ],
+    "explanation": "어떤 수는 18 + 7 = 25예요. 바르게 계산하면 25 + 7 = 32예요. 어떤 수 25를 답으로 쓰지 않도록 주의해요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 2,
+    "stem": "나는 8살, 동생은 5살이에요. 두 사람의 나이를 더한 값이 25살이 되는 것은 몇 년 뒤일까요?",
+    "choices": [
+      "6년 뒤",
+      "7년 뒤",
+      "12년 뒤",
+      "13년 뒤"
+    ],
+    "answer": 0,
+    "explanation": "지금 나이의 합은 13살이에요. 1년이 지날 때마다 두 사람이 한 살씩 먹으므로 합은 2살씩 늘어요. 25 - 13 = 12이므로 12 ÷ 2 = 6년 뒤예요. 12년 뒤는 함정이에요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 2,
+    "stem": "수 카드 0, 2, 5를 한 번씩 모두 써서 세 자리 수를 만들려고 해요. 만들 수 있는 세 자리 수는 모두 몇 개일까요?",
+    "choices": [
+      "3",
+      "4",
+      "6",
+      "9"
+    ],
+    "answer": 1,
+    "explanation": "맨 앞에 0은 올 수 없어요. 2로 시작하면 205, 250, 5로 시작하면 502, 520이에요. 모두 4개예요. 0을 생각하지 않으면 6개라고 착각하기 쉬워요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 2,
+    "stem": "형과 동생이 가진 구슬을 합하면 20개예요. 형은 동생보다 구슬을 6개 더 많이 가지고 있어요. 형의 구슬은 몇 개일까요?",
+    "choices": [
+      "7",
+      "10",
+      "12",
+      "13"
+    ],
+    "answer": 3,
+    "explanation": "형이 더 가진 6개를 빼면 20 - 6 = 14개를 둘이 똑같이 나누어 가진 셈이라 동생은 7개예요. 형은 7 + 6 = 13개예요. 확인: 13 + 7 = 20, 13 - 7 = 6."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 2,
+    "stem": "수 카드 2, 5, 7, 9를 한 번씩 모두 써서 두 자리 수 2개를 만들어 더하려고 해요. 합이 가장 클 때의 값은 얼마일까요?",
+    "choices": [
+      "149",
+      "158",
+      "161",
+      "167"
+    ],
+    "answer": 3,
+    "explanation": "합을 크게 하려면 큰 수 9와 7을 십의 자리에 놓아야 해요. 95 + 72 = 167(또는 92 + 75 = 167)이에요. 가장 큰 수 97을 먼저 만들면 97 + 52 = 149로 더 작아요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 2,
+    "stem": "1층에서 3층까지 계단으로 걸어 올라가는 데 6분이 걸려요. 같은 빠르기로 1층에서 7층까지 올라가면 몇 분이 걸릴까요?",
+    "choices": [
+      "9분",
+      "12분",
+      "14분",
+      "18분"
+    ],
+    "answer": 3,
+    "explanation": "1층에서 3층까지는 2개 층을 올라가므로 한 층에 3분씩 걸려요. 1층에서 7층까지는 6개 층이므로 3 × 6 = 18분이에요. 7층이니 3분씩 7번(21분)이라고 하면 틀려요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 2,
+    "stem": "영화가 1시 40분에 시작해서 50분 동안 상영해요. 영화가 끝나는 시각은 언제일까요?",
+    "choices": [
+      "2시 30분",
+      "2시 20분",
+      "1시 90분",
+      "3시 30분"
+    ],
+    "answer": 0,
+    "explanation": "1시 40분에서 20분이 지나면 2시예요. 남은 30분이 더 지나면 2시 30분이에요. 60분은 1시간이므로 1시 90분이라고 쓰지 않아요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 2,
+    "kind": "num",
+    "stem": "세모의 꼭짓점과 변의 가운데에 있는 동그라미 6개에 1부터 6까지의 수를 한 번씩 넣어서, 각 변에 놓인 세 수의 합이 모두 9가 되게 하려고 해요. 세 꼭짓점(빨간 동그라미)에 넣은 수의 합은 얼마일까요?",
+    "choices": [
+      "6"
+    ],
+    "explanation": "세 변의 합을 모두 더하면 9 + 9 + 9 = 27이에요. 이때 꼭짓점의 수는 두 변에 겹쳐서 두 번 더해져요. 1부터 6까지의 합은 21이므로 꼭짓점 세 수의 합은 27 - 21 = 6이에요. 예를 들어 꼭짓점에 1, 2, 3을 넣고 변의 가운데에 6, 4, 5를 넣으면 돼요.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 220 195\" width=\"220\" height=\"195\" font-family=\"sans-serif\"><polygon points=\"110,20 20,175 200,175\" fill=\"none\" stroke=\"#111111\" stroke-width=\"2\"/><circle cx=\"110\" cy=\"20\" r=\"17\" fill=\"#eeeeee\" stroke=\"#b31942\" stroke-width=\"3\"/><circle cx=\"20\" cy=\"175\" r=\"17\" fill=\"#eeeeee\" stroke=\"#b31942\" stroke-width=\"3\"/><circle cx=\"200\" cy=\"175\" r=\"17\" fill=\"#eeeeee\" stroke=\"#b31942\" stroke-width=\"3\"/><circle cx=\"65\" cy=\"97.5\" r=\"17\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><circle cx=\"110\" cy=\"175\" r=\"17\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/><circle cx=\"155\" cy=\"97.5\" r=\"17\" fill=\"#ffffff\" stroke=\"#111111\" stroke-width=\"2\"/></svg>"
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 2,
+    "kind": "num",
+    "stem": "가진 돈의 반으로 책을 사고, 남은 돈에서 500원으로 과자를 샀더니 1000원이 남았어요. 처음에 가진 돈은 얼마일까요? (숫자만 쓰세요.)",
+    "choices": [
+      "3000"
+    ],
+    "explanation": "거꾸로 생각해요. 과자를 사기 전에는 1000 + 500 = 1500원이 있었어요. 이것은 책을 사고 남은 반이므로 처음 돈은 1500 + 1500 = 3000원이에요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 2,
+    "stem": "십의 자리 숫자가 일의 자리 숫자보다 2 크고, 두 숫자를 더하면 12인 두 자리 수는 무엇일까요?",
+    "choices": [
+      "48",
+      "57",
+      "66",
+      "75"
+    ],
+    "answer": 3,
+    "explanation": "두 숫자의 합이 12인 수 중에서 십의 자리 숫자가 2 더 큰 것을 찾아요. 7 + 5 = 12이고 7은 5보다 2 커요. 그래서 75예요. 57은 일의 자리 숫자가 더 크고, 84는 차가 4예요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 2,
+    "stem": "사탕을 4명에게 5개씩 나누어 주었더니 3개가 남았어요. 이 사탕을 모두 모아서 4명에게 6개씩 나누어 주려면 사탕이 몇 개 모자랄까요?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "5"
+    ],
+    "answer": 0,
+    "explanation": "사탕은 5 × 4 + 3 = 23개예요. 4명에게 6개씩 주려면 24개가 필요하므로 24 - 23 = 1개가 모자라요."
+  },
+  {
+    "exam_type": "KR_MATH",
+    "section": "problem",
+    "difficulty": 2,
+    "kind": "num",
+    "stem": "우리 반 학생 20명에게 물었더니 강아지를 좋아하는 학생은 12명, 고양이를 좋아하는 학생은 10명, 둘 다 좋아하는 학생은 5명이었어요. 강아지와 고양이를 둘 다 좋아하지 않는 학생은 몇 명일까요?",
+    "choices": [
+      "3"
+    ],
+    "explanation": "12 + 10 = 22명에는 둘 다 좋아하는 5명이 두 번 세어졌어요. 하나라도 좋아하는 학생은 22 - 5 = 17명이에요. 둘 다 좋아하지 않는 학생은 20 - 17 = 3명이에요."
+  }
+]
