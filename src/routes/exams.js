@@ -189,7 +189,8 @@ async function ensureCurrent(env, a, st) {
       const target = sectionTarget(a.exam_type, st.si, pool.length);
       st.target = target; st.lo = lo; st.hi = hi;
       if (st.qi >= target) { nextSection(a, st); continue; }
-      const id = pickNext(a.exam_type, st, pool, target, lo, hi);
+      const seen = await seenIds(env, a, sec.key), fresh = pool.filter((q) => !seen.has(q.id));
+      const id = pickNext(a.exam_type, st, fresh, target, lo, hi) || pickNext(a.exam_type, st, pool, target, lo, hi); // adaptive: unseen first
       if (!id) { nextSection(a, st); continue; }
       st.current = id; st.shown = now();
     }
@@ -202,6 +203,12 @@ async function ensureCurrent(env, a, st) {
 
 /* ===== Section mode (every non-adaptive exam): the whole section is fixed up-front; students move freely,
    change answers and skip; unanswered questions are recorded as omitted when the section is submitted. ===== */
+/** Questions this student already got in earlier attempts of the same exam section: new attempts avoid them while the pool allows. */
+async function seenIds(env, a, section) {
+  const { results } = await env.DB.prepare(`SELECT DISTINCT x.question_id AS id FROM answers x JOIN attempts t ON t.id=x.attempt_id
+     WHERE t.user_id=? AND t.exam_type=? AND x.section=? AND t.id!=?`).bind(a.user_id, a.exam_type, section, a.id).all();
+  return new Set(results.map((r) => r.id));
+}
 async function buildSectionSet(env, a, st) {
   const sec = EXAMS[a.exam_type].sections[st.si];
   const { results: bank } = await env.DB.prepare(`SELECT id,difficulty,substr(passage,1,160) AS pk FROM questions WHERE exam_type=? AND section=? AND active=1 AND substr(id,-1) NOT IN ('0','8')`).bind(a.exam_type, sec.key).all(); // '0'/'8' = free-sample pool
@@ -209,8 +216,17 @@ async function buildSectionSet(env, a, st) {
   const { pool, lo, hi } = levelBank(bank, lv, sec.n);
   const target = sectionTarget(a.exam_type, st.si, pool.length);
   let ids = [];
-  if (pool.filter((q) => q.pk).length * 2 > pool.length) ids = pickGrouped(pool, target, lo, hi); // reading / listening: whole passages, kept together
-  else { const sim = { ...st, served: [], qi: 0 }; for (let i = 0; i < target; i++) { const id = pickNext(a.exam_type, sim, pool, target, lo, hi); if (!id) break; ids.push(id); sim.served.push(id); sim.qi++; } }
+  const seen = await seenIds(env, a, sec.key);
+  const pick = (from, want) => { // reading / listening: whole passages, kept together; otherwise spread over the difficulty band
+    if (want <= 0 || !from.length) return [];
+    if (from.filter((q) => q.pk).length * 2 > from.length) return pickGrouped(from, want, lo, hi);
+    const out = [], sim = { ...st, served: [], qi: 0 }; for (let i = 0; i < want; i++) { const id = pickNext(a.exam_type, sim, from, want, lo, hi); if (!id) break; out.push(id); sim.served.push(id); sim.qi++; }
+    return out;
+  };
+  // fresh questions first; questions from earlier attempts only fill what the pool cannot cover
+  const fresh = pool.filter((q) => !seen.has(q.id) && !(q.pk && pool.some((x) => x.pk === q.pk && seen.has(x.id))));
+  ids = pick(fresh, target);
+  if (ids.length < target) { const used = new Set(ids); ids.push(...pick(pool.filter((q) => !used.has(q.id)), target - ids.length)); }
   st.set = { si: st.si, ids }; st.target = ids.length;
 }
 async function finalizeSection(env, a, st) { // unanswered -> omitted (choice NULL, correct 0) so they count in the score
