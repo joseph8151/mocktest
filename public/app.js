@@ -33,12 +33,21 @@ const api = async (method, path, body, tries = method === 'GET' ? 2 : 1) => {
   if (!r.ok) { const e = new Error(j.error || `오류 (${r.status})`); e.status = r.status; e.data = j; if (j.lockedElsewhere && location.hash.startsWith('#/exam/')) setTimeout(route, 30); throw e; }
   return j;
 };
+// Android WebView (KakaoTalk / Naver / Instagram in-app browsers) has no speech synthesis or clipboard API:
+// always go through these helpers, never the bare globals (a bare undeclared global throws and blanks the page).
+const inApp = /KAKAOTALK|NAVER\(inapp|Instagram|FBAN|FBAV|Line\/|; wv\)/i.test(navigator.userAgent);
+const canSpeak = () => !!(window.speechSynthesis && window.SpeechSynthesisUtterance);
+const stopSpeech = () => { try { window.speechSynthesis?.cancel(); } catch {} };
+const speak = (text) => { stopSpeech(); const u = new window.SpeechSynthesisUtterance(text); u.lang = 'en-US'; u.rate = 0.9; window.speechSynthesis.speak(u); };
+const openExternal = () => { const url = location.href; if (/KAKAOTALK/i.test(navigator.userAgent)) location.href = 'kakaotalk://web/openExternal?url=' + encodeURIComponent(url); else window.open(url, '_blank'); };
+const noSpeech = () => { if (confirm('이 앱 안의 브라우저는 듣기 음성을 재생할 수 없습니다.\n크롬·사파리 같은 기본 브라우저로 열까요? (로그인 후 이어서 응시할 수 있습니다)')) openExternal(); };
+const noRecord = () => { if (confirm('이 브라우저에서는 녹음을 할 수 없습니다.\n크롬·사파리 같은 기본 브라우저로 열까요? (로그인 후 이어서 응시할 수 있습니다)')) openExternal(); };
 const toast = (m) => { const t = document.getElementById('toast'); t.textContent = m; t.hidden = false; clearTimeout(toast.t); toast.t = setTimeout(() => (t.hidden = true), 3000); };
 const money = (n, cur) => (cur === 'USD' ? `$${(n / 100).toFixed(2)}` : `${n.toLocaleString()}원`);
 const date = (ms) => (ms ? new Date(ms).toLocaleString('ko-KR', { dateStyle: 'medium', timeStyle: 'short' }) : '-');
 const svgUri = (s) => 'data:image/svg+xml;utf8,' + encodeURIComponent(s);
 const choiceNode = (c) => (c.startsWith('svg:') ? h('img', { src: svgUri(c.slice(4)), alt: 'option' }) : h('span', {}, c));
-const mount = (...n) => { clearInterval(timerInt); if (window._kh) { document.removeEventListener('keydown', window._kh); window._kh = null; } speechSynthesis?.cancel?.(); $app.replaceChildren(...n.flat(Infinity).filter((x) => x != null && x !== false)); window.scrollTo(0, 0); };
+const mount = (...n) => { clearInterval(timerInt); if (window._kh) { document.removeEventListener('keydown', window._kh); window._kh = null; } stopSpeech(); $app.replaceChildren(...n.flat(Infinity).filter((x) => x != null && x !== false)); window.scrollTo(0, 0); };
 const guard = (fn) => async (...a) => { try { await fn(...a); } catch (e) { toast(e.message); } };
 const examName = { MAP: 'MAP', CAT4: 'CAT4', WIDA: 'WIDA' };
 const field = (label, input) => h('div', {}, h('label', {}, label), input);
@@ -311,7 +320,7 @@ async function payPortone(p, close, method = 'CARD', coupon, gift) {
 async function pagePayBank(q) {
   const v = await api('GET', `/pay/bank/${encodeURIComponent(q.order || '')}`);
   const a = v.account || {};
-  const copy = (t) => h('button', { class: 'btn sm alt', onclick: () => navigator.clipboard?.writeText(t).then(() => toast('복사했습니다.')) }, '복사');
+  const copy = (t) => h('button', { class: 'btn sm alt', onclick: () => copyText(t) }, '복사');
   const head = { awaiting_deposit: ['Awaiting deposit', '입금을 기다리고 있습니다.'], paid: ['Payment complete', '입금이 확인되었습니다.'], failed: ['Cancelled', '취소된 주문입니다.'], refunded: ['Refunded', '환불된 주문입니다.'] }[v.status] || ['Order', v.status];
   mount(h('div', { class: 'card intro' }, h('div', { class: 'big' }, head[0]), h('h2', {}, head[1]),
     v.status === 'awaiting_deposit' ? h('p', {}, '아래 계좌로 입금해 주시면 확인 후 이용권을 지급하고 이메일로 알려 드립니다. 같은 내용을 이메일로도 보내 드렸습니다.') : null,
@@ -865,7 +874,7 @@ function pageExamSection(id, state) {
     finally { submitting = false; }
   });
   const render = () => {
-    clearInterval(timerInt); speechSynthesis?.cancel?.();
+    clearInterval(timerInt); stopSpeech();
     offset = state.serverNow - Date.now();
     const sec = state.section;
     if (sec.index !== lastSection) {
@@ -883,7 +892,7 @@ function pageExamSection(id, state) {
     draw();
   };
   const draw = () => {
-    clearInterval(timerInt); speechSynthesis?.cancel?.();
+    clearInterval(timerInt); stopSpeech();
     const sec = state.section, qs = state.questions, q = qs[cur], flags = getFlags();
     const timer = h('span', { class: 'timer' });
     const tick = () => { const left = Math.max(0, sec.deadline - (Date.now() + offset)); const m = Math.floor(left / 60000), s2 = Math.floor((left % 60000) / 1000); timer.textContent = `${m}:${String(s2).padStart(2, '0')}`; timer.classList.toggle('low', left < 60000); if (left <= 0) { clearInterval(timerInt); submitSection(true); } };
@@ -893,7 +902,7 @@ function pageExamSection(id, state) {
     const body = [];
     if (sec.key === 'listening' && q.passage) {
       listens[q.id] ||= 0;
-      const play = h('button', { class: 'btn alt', onclick: () => { if (listens[q.id] >= 2) return toast('최대 2번까지 들을 수 있습니다.'); listens[q.id]++; speechSynthesis.cancel(); const u = new SpeechSynthesisUtterance(q.passage); u.lang = 'en-US'; u.rate = 0.9; speechSynthesis.speak(u); play.textContent = `▶ 다시 듣기 (${2 - listens[q.id]}회 남음)`; } }, listens[q.id] ? `▶ 다시 듣기 (${2 - listens[q.id]}회 남음)` : '▶ 듣기 (최대 2회)');
+      const play = h('button', { class: 'btn alt', onclick: () => { if (!canSpeak()) return noSpeech(); if (listens[q.id] >= 2) return toast('최대 2번까지 들을 수 있습니다.'); listens[q.id]++; speak(q.passage); play.textContent = `▶ 다시 듣기 (${2 - listens[q.id]}회 남음)`; } }, listens[q.id] ? `▶ 다시 듣기 (${2 - listens[q.id]}회 남음)` : '▶ 듣기 (최대 2회)');
       body.push(h('div', { class: 'passage' }, play));
     } else if (q.passage) {
       const grp = qs.map((x, i) => (x.passage === q.passage ? i : -1)).filter((i) => i >= 0); // questions sharing this passage (kept together)
@@ -920,6 +929,7 @@ function pageExamSection(id, state) {
       const stx = h('p', { class: 'muted' }, state.saved[q.id]?.audio ? '녹음이 저장되어 있습니다. 다시 녹음하면 바뀝니다.' : '녹음 버튼을 눌러 말해 보세요.');
       const rb = h('button', { class: 'btn', onclick: guard(async () => {
         if (rec) { rec.stop(); return; }
+        if (!window.MediaRecorder || !navigator.mediaDevices?.getUserMedia) return noRecord();
         const stream = await navigator.mediaDevices.getUserMedia({ audio: true }); const chunks = [];
         rec = new MediaRecorder(stream); rec.ondataavailable = (e) => chunks.push(e.data);
         rec.onstop = guard(async () => { stream.getTracks().forEach((t) => t.stop()); const blob = new Blob(chunks, { type: rec.mimeType || 'audio/webm' }); rec = null; rb.textContent = '🎙 다시 녹음'; stx.textContent = '업로드 중…';
@@ -953,7 +963,7 @@ function pageExamSection(id, state) {
 async function pageExamAdaptive(id, state) {
   let lastSection = -1, offset = 0, listens = 0, rec = null;
   const render = () => {
-    clearInterval(timerInt); speechSynthesis?.cancel?.();
+    clearInterval(timerInt); stopSpeech();
     if (state.status === 'finished') { location.hash = `#/report/${id}`; return; }
     offset = state.serverNow - Date.now();
     const q = state.question, sec = state.section;
@@ -979,7 +989,7 @@ async function pageExamAdaptive(id, state) {
     });
     const body = [];
     if (q.kind === 'mcq' && sec.key === 'listening') {
-      const play = h('button', { class: 'btn alt', onclick: () => { if (listens >= 2) return toast('최대 2번까지 들을 수 있습니다.'); listens++; speechSynthesis.cancel(); const u = new SpeechSynthesisUtterance(q.passage); u.lang = 'en-US'; u.rate = 0.9; speechSynthesis.speak(u); play.textContent = `▶ 다시 듣기 (${2 - listens}회 남음)`; } }, '▶ 듣기 (최대 2회)');
+      const play = h('button', { class: 'btn alt', onclick: () => { if (!canSpeak()) return noSpeech(); if (listens >= 2) return toast('최대 2번까지 들을 수 있습니다.'); listens++; speak(q.passage); play.textContent = `▶ 다시 듣기 (${2 - listens}회 남음)`; } }, '▶ 듣기 (최대 2회)');
       body.push(h('div', { class: 'passage' }, play));
     } else if (q.passage) body.push(h('div', { class: 'passage' }, q.passage));
     const longP = !!q.passage && sec.key !== 'listening' && q.passage.split(/\s+/).length >= 110;
@@ -996,6 +1006,7 @@ async function pageExamAdaptive(id, state) {
       const st = h('p', { class: 'muted' }, '녹음 버튼을 눌러 말해 보세요.');
       const rb = h('button', { class: 'btn', onclick: guard(async () => {
         if (rec) { rec.stop(); return; }
+        if (!window.MediaRecorder || !navigator.mediaDevices?.getUserMedia) return noRecord();
         const stream = await navigator.mediaDevices.getUserMedia({ audio: true }); const chunks = [];
         rec = new MediaRecorder(stream); rec.ondataavailable = (e) => chunks.push(e.data);
         rec.onstop = () => { stream.getTracks().forEach((t) => t.stop()); ans.blob = new Blob(chunks, { type: rec.mimeType || 'audio/webm' }); rec = null; rb.textContent = '🎙 다시 녹음'; st.replaceChildren('녹음 완료 · ', h('audio', { controls: true, src: URL.createObjectURL(ans.blob) })); };
@@ -1458,6 +1469,14 @@ function showNotice() {
     h('button', { 'aria-label': '공지 닫기', onclick: () => { try { localStorage.setItem(key, 1); } catch {} bar.remove(); } }, '×'));
   $app.before(bar);
 }
+const bootFail = () => { // a script error before the first page was drawn: show a way out instead of an endless spinner
+  if (!document.querySelector('#app')?.innerText.trim().startsWith('불러오는 중')) return;
+  $app.replaceChildren(h('div', { class: 'card' }, h('h2', {}, '페이지를 불러오지 못했습니다.'),
+    h('p', {}, inApp ? '앱 안의 브라우저에서는 일부 기능이 동작하지 않을 수 있습니다. 기본 브라우저(크롬·사파리)로 열어 주세요.' : '새로고침해 주세요. 계속되면 다른 브라우저로 열어 주세요.'),
+    h('div', { class: 'row' }, h('button', { class: 'btn', onclick: () => location.reload() }, '새로고침'), inApp ? h('button', { class: 'btn alt', onclick: openExternal }, '기본 브라우저로 열기') : null)));
+};
+window.addEventListener('error', bootFail);
+window.addEventListener('unhandledrejection', bootFail);
 window.addEventListener('hashchange', route);
 document.addEventListener('click', (e) => { if (!e.target.closest('nav')) $nav.classList.remove('open'); });
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') document.querySelectorAll('.modal').forEach((m) => m.remove()); });
