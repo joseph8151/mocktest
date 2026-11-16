@@ -2,6 +2,7 @@ import { Hono } from 'hono';
 import { deleteCookie, getCookie, setCookie } from 'hono/cookie';
 import { uid, now, isEmail, randomToken, sha256hex, timingSafeEqual } from '../lib/util.js';
 import { hashPassword, verifyPassword, createSession, destroySession, loadUser, requireUser, accountGate } from '../lib/auth.js';
+import { operatorAlert } from '../lib/notify.js';
 import { sendMail, mailWelcome, mailReset, mailVerify, mailConsent } from '../lib/email.js';
 import { clientIp, rateLimited, tooMany, audit, maskEmail, passwordProblem, turnstileOk, newTotpSecret, totpVerify, otpauthUri } from '../lib/security.js';
 
@@ -73,6 +74,7 @@ app.post('/register', async (c) => {
   await audit(c, 'user.register', id, { role, grade: b.grade || null, ua: String(c.req.header('user-agent') || '').slice(0, 120) }, { id, email });
   if (role === 'admin') await audit(c, 'admin.bootstrap', id, 'first administrator account', { id, email });
   c.executionCtx.waitUntil(sendMail(c.env, email, `[${c.env.SITE_NAME}] 가입을 환영합니다`, mailWelcome(c.env, name)));
+  if (role !== 'admin') c.executionCtx.waitUntil(operatorAlert(c.env, '새 회원가입', { 이름: name, 이메일: email, 학년: b.grade || '-', 연락처: b.phone || '-', '만 14세 미만': under14 ? '예 (보호자 동의 필요)' : '아니오', 가입방법: '이메일' }));
   if (c.env.RESEND_API_KEY && role !== 'admin') c.executionCtx.waitUntil(sendVerify(c, { id, email, name }));
   if (under14) { await sendConsent(c, { id, email, name }, guardianEmail); await audit(c, 'consent.requested', id, { guardian: maskEmail(guardianEmail) }, { id, email }); }
   return c.json({ user: { id, email, name, role } });
@@ -165,6 +167,7 @@ app.get('/kakao/callback', async (c) => {
         .bind(id, email, hash, salt, name, now(), now(), now(), kid).run();
       u = { id, email, name, role: 'student', status: 'active' }; created = true;
       await audit(c, 'user.register', id, { via: 'kakao' }, u); // Kakao accounts are 14+ under Kakao's own terms
+      c.executionCtx.waitUntil(operatorAlert(c.env, '새 회원가입', { 이름: name, 이메일: email, 가입방법: '카카오' }));
     }
     if (u.status !== 'active') { await audit(c, 'login.fail', u.id, { reason: 'suspended', via: 'kakao' }, u); return fail('정지된 계정입니다.'); }
     if (u.totp_secret) return fail('2단계 인증을 사용하는 계정은 이메일로 로그인해 주세요.');

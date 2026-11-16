@@ -8,7 +8,8 @@ import {
   portoneVerifyAndFulfill, portoneGetPayment, portoneVerifyWebhook, recheckOrder, failOrder,
 } from '../lib/payments.js';
 import { bankAccount, cleanDepositor, BANK_DAYS } from '../lib/bank.js';
-import { sendMail, mailBankOrder, mailBankAlert } from '../lib/email.js';
+import { sendMail, mailBankOrder } from '../lib/email.js';
+import { operatorAlert } from '../lib/notify.js';
 
 const app = new Hono();
 
@@ -24,12 +25,24 @@ async function siteNotice(env) {
   const v = (await env.DB.prepare(`SELECT value FROM settings WHERE key='notice'`).first())?.value || null;
   noticeCache = { at: Date.now(), v }; return v;
 }
-export const clearNoticeCache = () => { noticeCache = { at: 0, v: undefined }; };
+export const clearNoticeCache = () => { noticeCache = { at: 0, v: undefined }; popupCache = { at: 0, v: undefined }; };
+// Promo popup (관리자 → 대시보드). Until the admin saves one, a default "무통장입금만 가능" popup shows once a bank account is set.
+export const DEFAULT_POPUP = { on: true, title: '지금은 무통장입금으로 결제해요', body: '카드 결제는 준비 중이며, 현재는 무통장입금으로만 결제할 수 있습니다.\n입금하시면 30분~1시간 안에 확인하고 이용권을 바로 지급해 드립니다.\n주문하면 입금 계좌와 금액을 화면과 이메일로 안내해 드려요.' };
+let popupCache = { at: 0, v: undefined };
+async function sitePopup(env) {
+  if (popupCache.v !== undefined && Date.now() - popupCache.at < 30000) return popupCache.v;
+  let v = null;
+  const row = await env.DB.prepare(`SELECT value FROM settings WHERE key='popup'`).first();
+  if (row?.value) { try { const p = JSON.parse(row.value); v = p.on && (p.title || p.body) ? p : null; } catch {} }
+  else if (await bankAccount(env)) v = DEFAULT_POPUP;
+  popupCache = { at: Date.now(), v }; return v;
+}
 app.get('/config', async (c) => c.json({
   site: c.env.SITE_NAME,
   turnstile: c.env.TURNSTILE_SITE_KEY && c.env.TURNSTILE_SECRET ? c.env.TURNSTILE_SITE_KEY : null,
   kakao: !!c.env.KAKAO_REST_KEY,
   notice: await siteNotice(c.env),
+  popup: await sitePopup(c.env),
   biz: { name: c.env.BIZ_NAME || '(상호명 입력)', owner: c.env.BIZ_OWNER || '(대표자명)', regNo: c.env.BIZ_REG_NO || '(사업자등록번호)', salesNo: c.env.BIZ_SALES_NO || '(통신판매업 신고번호)', address: c.env.BIZ_ADDRESS || '(사업장 주소)', contact: c.env.BIZ_CONTACT || '(고객센터 이메일/전화)' },
 }));
 
@@ -243,8 +256,11 @@ app.post('/pay/bank/order', requireUser, async (c) => {
   await c.env.DB.prepare(`UPDATE orders SET status='awaiting_deposit', meta=? WHERE id=?`).bind(JSON.stringify({ depositor, cashReceipt, account: acct }), order.id).run();
   const view = bankView({ ...order, status: 'awaiting_deposit', title: product.title, meta: JSON.stringify({ depositor, cashReceipt }) }, acct);
   await sendMail(c.env, user.email, `[${c.env.SITE_NAME}] 입금 안내`, mailBankOrder(c.env, user.name, view));
-  // operator alert (NOTIFY_EMAIL: set it as a Text variable in the Cloudflare dashboard) so deposits are confirmed quickly
-  if (c.env.NOTIFY_EMAIL) await sendMail(c.env, c.env.NOTIFY_EMAIL, `[${c.env.SITE_NAME}] 새 무통장입금 주문 · ${depositor} · ${order.amount.toLocaleString()}원`, mailBankAlert(c.env, view));
+  c.executionCtx.waitUntil(operatorAlert(c.env, `무통장입금 주문 · ${depositor} · ${order.amount.toLocaleString()}원`, {
+    상품: product.title, 입금자명: depositor, 금액: `${order.amount.toLocaleString()}원`, 회원: `${user.name} (${user.email})`,
+    현금영수증: cashReceipt ? `${cashReceipt.type === 'business' ? '지출증빙' : '소득공제'} ${cashReceipt.number}` : '신청 안 함', 선물: order.gift ? '예' : '아니오',
+    할일: '통장에서 입금 확인 후 관리자 → 주문 → "입금 확인"',
+  }));
   return c.json(view);
 });
 app.get('/pay/bank/:id', requireUser, async (c) => {

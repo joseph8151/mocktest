@@ -63,6 +63,19 @@ export const mailBankOrder = (env, name, v) =>
    <table style="border-collapse:collapse;font-size:14px">${[['상품', v.title], ['입금액', `<b>${v.amount.toLocaleString()}원</b>`], ['은행', v.account.bank], ['계좌번호', `<b>${esc(v.account.account)}</b>`], ['예금주', v.account.holder], ['입금자명', v.depositor], ['입금기한', new Date(v.expiresAt + 9 * 3600000).toISOString().slice(0, 16).replace('T', ' ') + ' (KST)']]
      .map(([k, x]) => `<tr><td style="padding:4px 14px 4px 0;color:#6b7280">${k}</td><td>${k === '입금액' || k === '계좌번호' ? x : esc(x)}</td></tr>`).join('')}</table>
    <p style="font-size:13px;color:#6b7280">입금자명이 다르면 확인이 늦어질 수 있습니다. 기한 안에 입금되지 않으면 주문은 자동 취소됩니다.</p>${btn(`${env.SITE_URL}/#/pay/bank?order=${v.orderId}`, '입금 안내 다시 보기')}`;
-export const mailBankAlert = (env, v) =>
-  `<p>새 무통장입금 주문이 들어왔습니다. 통장에서 입금을 확인한 뒤 관리자 화면에서 “입금 확인”을 눌러 주세요.</p>
-   <p>상품: ${esc(v.title)}<br>입금자명: <b>${esc(v.depositor)}</b><br>금액: <b>${v.amount.toLocaleString()}원</b>${v.cashReceipt ? `<br>현금영수증: ${v.cashReceipt.type === 'business' ? '지출증빙' : '소득공제'} ${esc(v.cashReceipt.number)}` : ''}</p>${btn(`${env.SITE_URL}/#/admin/orders`, '주문 관리 열기')}`;
+
+/** 결과지: the score sheet itself in the mail (works without opening the site), plus a link to the full report. */
+export function mailReport(env, { student, title, level, finishedAt, score, link, linkLabel = '전체 리포트 보기 (문항별 해설)', from, message, pending }) {
+  const sc = score || {}, td = 'padding:7px 10px;border-bottom:1px solid #e3e1d8', th = `${td};color:#6b7280;font-weight:400;text-align:left`;
+  const when = finishedAt ? new Date(finishedAt + 9 * 3600000).toISOString().slice(0, 10) : '';
+  const secs = Object.values(sc.sections || {}).map((x) => `<tr><td style="${td}">${esc(x.name)}</td><td style="${td};font-weight:700">${esc(x.main ?? '–')}</td><td style="${td};color:#6b7280;font-size:13px">${esc(x.sub || '')}${x.total ? ` · ${x.correct}/${x.total} 정답` : ''}</td></tr>`).join('');
+  const extras = (sc.extras || []).map((x) => `<tr><th style="${th}">${esc(x.label)}</th><td style="${td};font-weight:700" colspan="2">${esc(x.value)}</td></tr>`).join('');
+  return `${from ? `<p><b>${esc(from)}</b>님이 시험 결과지를 보냈습니다.</p>` : ''}${message ? `<p style="background:#f5f4ef;padding:10px 14px;white-space:pre-wrap">${esc(message)}</p>` : ''}
+   <p style="margin:0;color:#6b7280;font-size:13px">${esc(title)}${level ? ` · ${esc(level)}` : ''}${when ? ` · ${when}` : ''}</p>
+   <h2 style="margin:4px 0 14px;font-size:20px">${esc(student || '')} 학생 결과지</h2>
+   ${sc.headline ? `<div style="border:1px solid #0a1f44;padding:14px 16px;margin-bottom:14px"><div style="color:#6b7280;font-size:13px">${esc(sc.headline.label)}</div><div style="font-size:28px;font-weight:800">${esc(sc.headline.value)}</div></div>` : ''}
+   <table style="border-collapse:collapse;width:100%;font-size:14px">${extras}${secs}</table>
+   ${pending ? '<p style="font-size:13px;color:#b31942">쓰기·말하기(서술형)는 채점이 끝나면 리포트에 반영됩니다.</p>' : ''}
+   ${(sc.notes || []).length ? `<p style="font-size:12px;color:#6b7280">${sc.notes.map(esc).join('<br>')}</p>` : ''}
+   ${link ? btn(link, linkLabel) : ''}`;
+}

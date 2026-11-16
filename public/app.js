@@ -65,7 +65,7 @@ const ACTION_KO = {
   'user.register': '회원가입', 'login.success': '로그인', 'admin.login': '관리자 로그인', 'login.fail': '로그인 실패', 'login.2fa_failed': '2단계 인증 실패', logout: '로그아웃',
   'password.change': '비밀번호 변경', 'password.reset_request': '비밀번호 찾기 요청', 'password.reset': '비밀번호 재설정', 'profile.update': '회원정보 수정',
   'account.delete': '탈퇴·삭제(익명화)', '2fa.enable': '2단계 인증 켬', '2fa.disable': '2단계 인증 끔', 'session.revoke': '기기 로그아웃', 'admin.bootstrap': '첫 관리자 생성',
-  'exam.start': '시험 시작', 'exam.section_submit': '영역 제출', 'exam.finish': '시험 종료', 'exam.audio_upload': '녹음 제출', 'share.create': '리포트 공유', 'share.revoke': '공유 중지', 'shared.view': '공유 리포트 열람',
+  'exam.start': '시험 시작', 'exam.section_submit': '영역 제출', 'exam.finish': '시험 종료', 'exam.audio_upload': '녹음 제출', 'share.create': '리포트 공유', 'report.email': '결과지 메일 발송', 'share.revoke': '공유 중지', 'shared.view': '공유 리포트 열람',
   'order.create': '결제 시작', 'order.paid': '결제 완료', 'order.failed': '결제 실패·취소', 'order.refunded': '환불 완료', 'refund.request': '환불 요청',
   'admin.post': '관리자 작업', 'admin.patch': '관리자 수정', 'admin.put': '관리자 수정', 'admin.delete': '관리자 삭제', 'admin.get': '데이터 내보내기',
 };
@@ -134,8 +134,8 @@ Object.assign(EXAM_META, {
     points: ['듣기는 음성으로 재생(최대 2회), 문법·어휘, 독해 3개 영역', '영역별 200–300 척도 점수와 합산 점수(600–900) 추정', 'CEFR A2–B2 수준 문항'] },
 });
 const FAQ = [
-  ['결제하면 바로 시험을 볼 수 있나요?', '결제가 확인되면 이용권이 지급되어 “내 시험”에서 바로 시작할 수 있습니다. 무통장입금은 안내된 계좌로 입금하시면 확인 후 지급되며(영업시간 기준 보통 당일), 지급되면 이메일로 알려 드립니다.'],
-  ['어떤 결제 방법이 있나요?', '현재 무통장입금(계좌이체)으로 결제할 수 있습니다. 주문하면 계좌와 입금액이 안내되고, 3일 안에 입금하시면 됩니다. 현금영수증도 신청할 수 있습니다.'],
+  ['결제하면 바로 시험을 볼 수 있나요?', '결제가 확인되면 이용권이 지급되어 “내 시험”에서 바로 시작할 수 있습니다. 무통장입금은 입금 후 30분~1시간 안에 확인해 지급하고, 지급되면 이메일로 알려 드립니다.'],
+  ['어떤 결제 방법이 있나요?', '현재는 무통장입금만 가능합니다 (카드 결제는 준비 중입니다). 주문하면 입금 계좌와 금액이 화면과 이메일로 안내되고, 3일 안에 입금하시면 됩니다. 현금영수증도 신청할 수 있습니다.'],
   ['시험 도중 나가면 어떻게 되나요?', '진행 상황이 저장되어 같은 계정으로 다시 접속하면 이어서 풀 수 있습니다. 단, 영역별 제한 시간은 계속 흘러갑니다.'],
   ['실제 시험 점수와 같은가요?', '아니요. 형식을 참고해 만든 연습용 문제이며 점수는 학습 참고용 추정치입니다. NWEA · GL Assessment · WIDA와 무관합니다.'],
   ['WIDA 쓰기·말하기 결과는 언제 나오나요?', '교사가 채점을 마치면 이메일로 알려드리고, 리포트에 종합 레벨이 표시됩니다.'],
@@ -270,7 +270,7 @@ function buy(p, payment) {
     const crNum = h('input', { inputmode: 'numeric', placeholder: '번호 (숫자만)', hidden: true });
     crType.onchange = () => { crNum.hidden = crType.value === 'none'; };
     return h('div', { class: 'notice', hidden: !!(shown.length || payment.stripe), style: 'margin-top:14px' },
-      h('b', {}, '무통장입금'), h('p', { class: 'small' }, '주문 후 안내되는 계좌로 3일 안에 입금하시면, 입금 확인 뒤 이용권이 지급됩니다 (영업일 기준 보통 당일).'),
+      h('b', {}, '무통장입금'), h('p', { class: 'small' }, '현재는 무통장입금만 가능합니다. 주문 후 안내되는 계좌로 입금하시면 30분~1시간 안에 확인하고 이용권을 지급해 드립니다. (입금 기한 3일)'),
       field('입금자명', dep), field('현금영수증', h('div', { class: 'row', style: 'gap:8px' }, crType, crNum)),
       h('button', { class: 'btn', onclick: guard(once(async () => {
         const r = await api('POST', '/pay/bank/order', { productId: p.id, coupon, gift, depositor: dep.value, cashReceipt: { type: crType.value, number: crNum.value } });
@@ -289,7 +289,15 @@ function buy(p, payment) {
     ),
     bankBox,
     !shown.length && !payment.stripe && !payment.bank ? (me.role === 'admin'
-      ? h('div', { class: 'notice' }, h('b', {}, '결제 수단이 아직 연결되지 않았습니다.'), h('p', { class: 'small' }, 'PG사(포트원·KCP·Stripe)에서 받은 키를 Cloudflare 대시보드 → Workers → mocktest → Settings → Variables and Secrets에 넣으면 이 창에 결제 버튼이 나타납니다.'), h('a', { class: 'btn sm', href: '#/admin/payments', onclick: close }, '결제설정 보기 →'))
+      ? (() => { // admin, nothing connected yet: start selling right here with 무통장입금
+        const f = h('form', { onsubmit: guard(async (e) => { e.preventDefault(); await api('POST', '/admin/bank-account', { bank: f.bank.value, account: f.account.value, holder: f.holder.value }); productsCache = null; toast('저장됨 · 이제 무통장입금으로 판매할 수 있습니다'); close(); const r = await getProducts(); buy(p, r.payment); }) },
+          h('div', { class: 'row', style: 'gap:8px' }, h('input', { name: 'bank', placeholder: '은행 (예: 국민은행)', required: true, style: 'flex:1 1 120px' }), h('input', { name: 'holder', placeholder: '예금주', required: true, style: 'flex:1 1 100px' })),
+          h('input', { name: 'account', placeholder: '계좌번호', inputmode: 'numeric', required: true, style: 'margin-top:8px' }),
+          h('button', { class: 'btn', style: 'margin-top:10px' }, '저장하고 무통장입금 시작'));
+        return h('div', { class: 'notice' }, h('b', {}, '아직 결제 수단이 없습니다 — 무통장입금으로 바로 시작하세요.'),
+          h('p', { class: 'small' }, '입금받을 계좌를 넣으면 이 창에 무통장입금이 나타납니다. 고객이 주문하면 관리자 → 주문에서 “입금 확인”을 눌러 이용권을 지급합니다. (카드 결제는 PG 계약 후 결제설정에서 추가)'), f,
+          h('a', { class: 'small', href: '#/admin/payments', onclick: close }, '결제설정 보기 →'));
+      })()
       : h('p', { class: 'err' }, '지금은 결제를 받을 수 없습니다. 잠시 후 다시 시도하거나 고객센터로 문의해 주세요.')) : null,
     h('p', { style: 'margin-top:16px' }, h('button', { class: 'btn alt sm', onclick: close }, '닫기')),
   ));
@@ -323,7 +331,7 @@ async function pagePayBank(q) {
   const copy = (t) => h('button', { class: 'btn sm alt', onclick: () => copyText(t) }, '복사');
   const head = { awaiting_deposit: ['Awaiting deposit', '입금을 기다리고 있습니다.'], paid: ['Payment complete', '입금이 확인되었습니다.'], failed: ['Cancelled', '취소된 주문입니다.'], refunded: ['Refunded', '환불된 주문입니다.'] }[v.status] || ['Order', v.status];
   mount(h('div', { class: 'card intro' }, h('div', { class: 'big' }, head[0]), h('h2', {}, head[1]),
-    v.status === 'awaiting_deposit' ? h('p', {}, '아래 계좌로 입금해 주시면 확인 후 이용권을 지급하고 이메일로 알려 드립니다. 같은 내용을 이메일로도 보내 드렸습니다.') : null,
+    v.status === 'awaiting_deposit' ? h('p', {}, '아래 계좌로 입금해 주시면 30분~1시간 안에 확인하고 이용권을 지급한 뒤 이메일로 알려 드립니다. 같은 안내를 이메일로도 보내 드렸습니다.') : null,
     v.status === 'paid' ? h('p', {}, '이용권이 지급되었습니다.') : null,
     h('table', {}, [['상품', v.title], ['입금액', h('b', {}, money(v.amount, 'KRW'))], ['은행', a.bank], ['계좌번호', h('span', {}, h('b', {}, a.account), ' ', copy(String(a.account || '').replace(/-/g, '')))], ['예금주', a.holder], ['입금자명', v.depositor],
       ['현금영수증', v.cashReceipt ? `${v.cashReceipt.type === 'business' ? '지출증빙' : '소득공제'} · ${v.cashReceipt.number}` : '신청 안 함'], v.status === 'awaiting_deposit' ? ['입금기한', date(v.expiresAt)] : null]
@@ -1059,6 +1067,21 @@ function integrityNote(i) {
   return parts.length ? h('div', { class: 'notice integ' }, h('b', {}, '시험 중 기록: '), parts.join(' · '), h('p', { class: 'small muted', style: 'margin:4px 0 0' }, '다른 창으로 이동하거나 복사를 시도한 횟수입니다. 실제 시험에서는 허용되지 않는 행동입니다.')) : null;
 }
 const weakest = (sc) => { const e = Object.entries(sc.sections || {}).filter(([, s]) => s.total).sort((a, b) => a[1].correct / a[1].total - b[1].correct / b[1].total)[0]; return e ? e[0] : ''; };
+function emailBox(r, id) { // 결과지 이메일: score sheet + read-only link to up to 3 addresses
+  const to = h('input', { type: 'text', inputmode: 'email', class: 'grow', placeholder: '받는 사람 이메일 (쉼표로 최대 3명)', autocomplete: 'email' });
+  const msg = h('textarea', { rows: 2, maxlength: 500, placeholder: '함께 보낼 메시지 (선택)' });
+  const out = h('p', { class: 'small' });
+  const send = (addr) => guard(async () => {
+    const list = addr || to.value; if (!String(list).trim()) return toast('받는 사람 이메일을 입력해 주세요.');
+    out.className = 'small muted'; out.textContent = '보내는 중…';
+    try { const s = await api('POST', `/attempts/${id}/email`, { to: list, message: msg.value }); out.className = 'small ok-text'; out.textContent = `✓ ${s.sent.join(', ')}(으)로 결과지를 보냈습니다.${s.failed.length ? ` (실패: ${s.failed.join(', ')})` : ''}`; if (!addr) to.value = ''; }
+    catch (e) { out.className = 'small err'; out.textContent = e.message; }
+  });
+  return h('div', { class: 'card noprint share' }, h('div', { class: 'kicker' }, 'Email'), h('h3', {}, '결과지 이메일로 보내기'),
+    h('p', { class: 'muted small' }, '점수표가 메일 본문에 들어가고, 문항별 해설까지 볼 수 있는 링크(로그인 없이 14일간 열람)가 함께 갑니다. 학부모·선생님·학원에 보내 보세요.'),
+    h('div', { class: 'row', style: 'flex-wrap:nowrap' }, to, h('button', { class: 'btn sm', onclick: send() }, '보내기')), msg,
+    me?.email && !me.email.endsWith('.invalid') ? h('p', {}, h('button', { class: 'btn sm alt', onclick: send(me.email) }, `내 이메일(${me.email})로 받기`)) : null, out);
+}
 function shareBox(r, id) {
   const out = h('div', { class: 'small' });
   const make = guard(async () => { const s = await api('POST', `/attempts/${id}/share`); out.replaceChildren(h('div', { class: 'share-url' }, h('input', { value: s.url, readonly: true, onclick: (e) => e.target.select() }), h('button', { class: 'btn sm', onclick: () => copyText(s.url) }, '복사')), h('p', { class: 'muted' }, `${date(s.expiresAt)}까지 열람 가능 · 로그인 없이 보는 읽기 전용 리포트 (이메일은 표시되지 않음)`)); stop.hidden = false; });
@@ -1107,6 +1130,7 @@ function renderReport(r, id) {
     analytics(r, t),
     !r.shared && id ? h('p', { class: 'noprint' }, h('a', { class: 'btn sm alt', href: `#/practice?exam=${t}&section=${weakest(sc)}` }, '약한 영역 연습하기 →')) : null,
     id && !r.shared && (r.student?.email === me?.email || r.student?.email?.endsWith('@family.invalid')) ? shareBox(r, id) : null,
+    id && !r.shared && r.attempt?.status !== 'in_progress' ? emailBox(r, id) : null,
     h('h3', {}, '문항별 리뷰'), items);
 }
 
@@ -1125,6 +1149,13 @@ async function adminStats(b) {
   const nt = h('textarea', { rows: 2, maxlength: 300, placeholder: '예: 추석 연휴(9/16–18) 고객센터 휴무 · 비워 두면 공지가 내려갑니다.' }); nt.value = cfg.notice || '';
   if (!me.twofa) b.append(h('div', { class: 'notice' }, h('b', {}, '관리자 계정에 2단계 인증이 꺼져 있습니다.'), h('p', { class: 'small' }, '비밀번호만으로 관리자 권한을 얻을 수 없도록 인증 앱 코드를 추가하세요.'), h('a', { class: 'btn sm', href: '#/me?secure=1' }, '지금 켜기 →')));
   b.append(h('div', { class: 'card' }, h('h3', {}, '사이트 공지 배너'), nt, h('div', { class: 'row' }, h('button', { class: 'btn sm', onclick: guard(async () => { await api('POST', '/admin/notice', { text: nt.value }); cfg.notice = nt.value.trim() || null; showNotice(); toast('공지가 저장되었습니다.'); }) }, '저장'))));
+  const pop = (await api('GET', '/admin/popup')).popup;
+  const pOn = h('input', { type: 'checkbox', style: 'width:auto', checked: !!pop.on }), pT = h('input', { maxlength: 60, value: pop.title || '', placeholder: '제목' }), pB = h('textarea', { rows: 4, maxlength: 600, placeholder: '내용 (줄바꿈 그대로 표시)' }); pB.value = pop.body || '';
+  b.append(h('div', { class: 'card' }, h('h3', {}, '홍보 팝업'), h('p', { class: 'small muted' }, `홈·레테 첫 화면에 하루 한 번 뜹니다 (방문자가 "오늘 하루 보지 않기" 가능).${pop.default ? ' 지금은 기본 문구이며, 입금 계좌를 저장해야 표시됩니다.' : ''}`),
+    h('label', { class: 'giftchk' }, pOn, ' 팝업 켜기'), pT, pB,
+    h('div', { class: 'row' }, h('button', { class: 'btn sm', onclick: guard(async () => { const r = await api('POST', '/admin/popup', { on: pOn.checked, title: pT.value, body: pB.value }); cfg.popup = r.popup.on ? r.popup : null; toast('팝업이 저장되었습니다.'); }) }, '저장'),
+      h('button', { class: 'btn sm alt', onclick: () => { const keep = cfg.popup; cfg.popup = { title: pT.value, body: pB.value }; try { Object.keys(localStorage).filter((k) => k.startsWith('popup-hidden:')).forEach((k) => localStorage.removeItem(k)); } catch {} showPopup(); cfg.popup = keep; } }, '미리보기'),
+      h('button', { class: 'btn sm alt', onclick: guard(async () => { await api('POST', '/admin/popup', { reset: true }); toast('기본 문구로 되돌렸습니다.'); pageAdmin('stats'); }) }, '기본 문구로 되돌리기'))));
   const charts = h('div', { class: 'charts' });
   api('GET', '/admin/stats/series').then((x) => charts.replaceChildren(...dashCharts(x))).catch(() => {});
   b.append(h('div', { class: 'stats' }, [['회원', s.users], ['결제 주문', s.paidOrders], ['응시', s.attempts], ['채점 대기', s.pendingGrading], ['환불 요청', s.pendingRefunds], ['입금 대기', s.awaitingDeposit ?? 0], ['활성 문제', s.questions], ...s.revenue.map((r) => [`매출 ${r.currency}`, money(r.s, r.currency)])].map(([l, v]) => h('div', { class: 'stat' }, h('div', { class: 'muted small' }, l), h('b', {}, v)))));
@@ -1460,6 +1491,18 @@ async function route() {
     mount(h('div', { class: 'card' }, h('h2', { class: 'err' }, '오류'), h('p', {}, e.message), h('a', { class: 'btn alt', href: '#/' }, '처음으로')));
   }
 }
+function showPopup() { // promo popup on the landing pages, at most once a day per message
+  const pu = cfg.popup; if (!pu || document.querySelector('.modal')) return;
+  const key = 'popup-hidden:' + (pu.title || '') + (pu.body || '').length, today = new Date().toDateString();
+  try { if (localStorage.getItem(key) === today) return; } catch {}
+  const close = (forToday) => { if (forToday) { try { localStorage.setItem(key, today); } catch {} } m.remove(); };
+  const m = h('div', { class: 'modal promo', onclick: (e) => e.target === m && close(false) }, h('div', { class: 'card', role: 'dialog', 'aria-label': pu.title || '안내' },
+    h('div', { class: 'kicker' }, 'Notice'), pu.title ? h('h3', {}, pu.title) : null,
+    (pu.body || '').split('\n').filter(Boolean).map((l) => h('p', {}, l)),
+    h('div', { class: 'row', style: 'margin-top:16px' }, h('a', { class: 'btn', href: '#/kr', onclick: () => close(false) }, '레테 보기'), h('a', { class: 'btn alt', href: '#/', onclick: () => { close(false); setTimeout(() => document.getElementById('exams')?.scrollIntoView({ behavior: 'smooth' }), 50); } }, '미국 시험 보기')),
+    h('div', { class: 'row small', style: 'justify-content:space-between;margin-top:14px' }, h('button', { class: 'linkbtn', onclick: () => close(true) }, '오늘 하루 보지 않기'), h('button', { class: 'linkbtn', onclick: () => close(false) }, '닫기'))));
+  document.body.append(m);
+}
 function showNotice() {
   document.getElementById('notice')?.remove();
   if (!cfg.notice) return;
@@ -1494,5 +1537,6 @@ document.addEventListener('keydown', (e) => { if (e.key === 'Escape') document.q
     history.replaceState(null, '', '/');
     location.hash = code ? `#/pay/cancel?msg=${encodeURIComponent(msg || code)}` : `#/pay/success?order=${po}&provider=portone`;
   }
-  route();
+  await route();
+  if (!location.hash || /^#\/?(kr)?$/.test(location.hash)) showPopup();
 })();

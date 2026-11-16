@@ -29,6 +29,8 @@
   "vars": {
     "SITE_NAME": "MockTest Lab",
     "SITE_URL": "",
-    "ADMIN_EMAIL": ""
+    "ADMIN_EMAIL": "",
+    // Operator alerts (new member, new 무통장입금 order) go to this Formspree form's owner by e-mail.
+    "FORMSPREE_URL": "https://formspree.io/f/maeoerpk"
   }
 }

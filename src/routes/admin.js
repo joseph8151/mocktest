@@ -7,7 +7,7 @@ import { regradeAttempt } from './exams.js';
 import { aiConfigured, aiMode, gradePending, gradeAnswer, AI_MODEL_DEFAULT } from '../lib/aigrade.js';
 import { kcpCancel, kcpEnabled, kcpConfig } from '../lib/kcp.js';
 import { audit, redact, logEvent } from '../lib/security.js';
-import { clearNoticeCache } from './shop.js';
+import { clearNoticeCache, DEFAULT_POPUP } from './shop.js';
 import { purgeEdge } from '../lib/edgecache.js';
 import { bankAccount } from '../lib/bank.js';
 import { deliver, mailFrom, mailTest, sendMail, mailSupportReply } from '../lib/email.js';
@@ -146,7 +146,7 @@ app.post('/bank-account', async (c) => { // 무통장입금 account (empty accou
   if (v.account && (!v.bank || !v.holder || v.account.replace(/-/g, '').length < 8)) return c.json({ error: '은행, 계좌번호, 예금주를 모두 입력해 주세요.' }, 400);
   await c.env.DB.prepare(`INSERT INTO settings (key,value,updated_at) VALUES ('bank_account',?,?) ON CONFLICT(key) DO UPDATE SET value=excluded.value, updated_at=excluded.updated_at`)
     .bind(JSON.stringify(v.account ? v : { enabled: false }), now()).run();
-  await purgeEdge(c, ['/api/products']);
+  clearNoticeCache(); await purgeEdge(c, ['/api/products', '/api/config']);
   return c.json({ ok: true, bank: v.account ? v : null });
 });
 app.post('/orders/:id/recheck', async (c) => {
@@ -480,6 +480,23 @@ app.post('/notice', async (c) => {
   await c.env.DB.prepare(`INSERT INTO settings (key,value,updated_at) VALUES ('notice',?,?) ON CONFLICT(key) DO UPDATE SET value=excluded.value, updated_at=excluded.updated_at`).bind(text || null, now()).run();
   clearNoticeCache(); await purgeEdge(c, ['/api/config']);
   return c.json({ ok: true });
+});
+
+app.get('/popup', async (c) => {
+  const row = await c.env.DB.prepare(`SELECT value FROM settings WHERE key='popup'`).first();
+  return c.json({ popup: row?.value ? JSON.parse(row.value) : { ...DEFAULT_POPUP, default: true } });
+});
+app.post('/popup', async (c) => {
+  const b = await c.req.json().catch(() => ({}));
+  if (b.reset) { // back to the default 무통장입금 popup
+    await c.env.DB.prepare(`DELETE FROM settings WHERE key='popup'`).run();
+    clearNoticeCache(); await purgeEdge(c, ['/api/config']);
+    return c.json({ ok: true, popup: { ...DEFAULT_POPUP, default: true } });
+  }
+  const v = { on: !!b.on, title: String(b.title || '').trim().slice(0, 60), body: String(b.body || '').trim().slice(0, 600) };
+  await c.env.DB.prepare(`INSERT INTO settings (key,value,updated_at) VALUES ('popup',?,?) ON CONFLICT(key) DO UPDATE SET value=excluded.value, updated_at=excluded.updated_at`).bind(JSON.stringify(v), now()).run();
+  clearNoticeCache(); await purgeEdge(c, ['/api/config']);
+  return c.json({ ok: true, popup: v });
 });
 
 /* ---- security overview + audit log ---- */
