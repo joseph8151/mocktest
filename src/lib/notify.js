@@ -15,7 +15,7 @@ export async function operatorAlert(env, subject, fields, { replyTo } = {}) {
   const jobs = [];
   if (env.FORMSPREE_URL) jobs.push(fetch(env.FORMSPREE_URL, {
     method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-    body: JSON.stringify({ _subject: title, 알림: subject, ...fields, ...(replyTo ? { email: replyTo, _replyto: replyTo } : {}), 관리자화면: `${env.SITE_URL}/#/admin` }),
+    body: JSON.stringify({ _subject: title, 알림: subject, ...fields, ...(replyTo ? { email: replyTo, _replyto: replyTo } : {}), 관리자화면: fields.관리자화면 || `${env.SITE_URL}/#/admin` }),
   }).then(async (r) => { if (!r.ok) console.error('formspree', r.status, (await r.text()).slice(0, 200)); }));
   if (env.NOTIFY_EMAIL) jobs.push(sendMail(env, env.NOTIFY_EMAIL, title,
     `<p><b>${escH(subject)}</b></p><table>${Object.entries(fields).map(([k, v]) => `<tr><td style="color:#6b7280;padding:3px 12px 3px 0;vertical-align:top">${escH(k)}</td><td style="white-space:pre-wrap">${escH(v)}</td></tr>`).join('')}</table>`, { replyTo }));

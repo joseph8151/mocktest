@@ -1331,9 +1331,19 @@ async function userDetail(id) {
   document.body.append(m);
 }
 async function adminOrders(b) {
-  const { orders } = await api('GET', '/admin/orders');
-  b.append(h('p', {}, h('a', { class: 'btn sm alt', href: '/api/admin/orders.csv' }, 'CSV 내보내기')), h('table', {}, h('tr', {}, ['일시', '회원', '상품', '수단', '금액', '상태', ''].map((x) => h('th', {}, x))), orders.map((o) => h('tr', {},
-    h('td', {}, date(o.created_at)), h('td', {}, `${o.name} (${o.email})`), h('td', {}, o.title), h('td', {}, o.provider === 'bank' ? (() => { const m = JSON.parse(o.meta || '{}'); return h('span', {}, '무통장', h('div', { class: 'small muted' }, `입금자 ${m.depositor || '-'}`, m.cashReceipt ? ` · 현금영수증 ${m.cashReceipt.type === 'business' ? '지출증빙' : '소득공제'} ${m.cashReceipt.number}` : '')); })() : o.provider), h('td', {}, money(o.amount, o.currency)), h('td', {}, o.status === 'awaiting_deposit' && o.provider === 'bank' ? h('span', { class: 'badge warn' }, '입금 대기') : o.status),
+  const { orders: all } = await api('GET', '/admin/orders');
+  // filters: 입금 대기 first (match depositor name + amount with the bank app, then press 입금 확인)
+  const f = new URLSearchParams(location.hash.split('?')[1] || '').get('f') || (all.some((o) => o.provider === 'bank' && o.status === 'awaiting_deposit') ? 'bank' : 'all');
+  const FILTERS = [['bank', '입금 대기', (o) => o.provider === 'bank' && o.status === 'awaiting_deposit'], ['paid', '결제 완료', (o) => o.status === 'paid'], ['refund', '환불 요청', (o) => o.refund_status === 'pending'], ['all', '전체', () => true]];
+  const orders = all.filter((FILTERS.find((x) => x[0] === f) || FILTERS[3])[2]);
+  const ago = (t) => { const m = Math.round((Date.now() - t) / 60000); return m < 60 ? `${m}분 전` : m < 1440 ? `${Math.round(m / 60)}시간 전` : `${Math.round(m / 1440)}일 전`; };
+  b.append(...[h('div', { class: 'row', style: 'margin-bottom:12px' }, FILTERS.map(([k, l, fn]) => h('a', { class: 'btn sm ' + (k === f ? '' : 'alt'), href: `#/admin/orders?f=${k}`, onclick: (e) => { e.preventDefault(); history.replaceState(null, '', `#/admin/orders?f=${k}`); pageAdmin('orders'); } }, `${l} ${all.filter(fn).length}`)),
+    h('a', { class: 'btn sm alt', href: '/api/admin/orders.csv' }, 'CSV 내보내기')),
+    f === 'bank' ? h('p', { class: 'small muted' }, '은행 앱의 입금 내역에서 입금자명·금액이 같은 주문을 찾아 “입금 확인”을 누르면 이용권이 바로 지급되고 고객에게 메일이 갑니다. 3일이 지나도 입금이 없으면 자동 취소됩니다.') : null,
+    orders.length ? null : h('p', { class: 'muted' }, f === 'bank' ? '입금을 기다리는 주문이 없습니다.' : '해당하는 주문이 없습니다.')].filter(Boolean));
+  if (!orders.length) return;
+  b.append(h('table', {}, h('tr', {}, ['일시', '회원', '상품', '수단', '금액', '상태', ''].map((x) => h('th', {}, x))), orders.map((o) => h('tr', {},
+    h('td', {}, date(o.created_at), o.status === 'awaiting_deposit' ? h('div', { class: 'small muted' }, ago(o.created_at)) : null), h('td', {}, `${o.name} (${o.email})`), h('td', {}, o.title), h('td', {}, o.provider === 'bank' ? (() => { const m = JSON.parse(o.meta || '{}'); return h('span', {}, '무통장', h('div', { class: 'small muted' }, `입금자 ${m.depositor || '-'}`, m.cashReceipt ? ` · 현금영수증 ${m.cashReceipt.type === 'business' ? '지출증빙' : '소득공제'} ${m.cashReceipt.number}` : '')); })() : o.provider), h('td', {}, money(o.amount, o.currency)), h('td', {}, o.status === 'awaiting_deposit' && o.provider === 'bank' ? h('span', { class: 'badge warn' }, '입금 대기') : o.status),
     h('td', {}, o.refund_status === 'pending' ? h('div', { class: 'small' }, h('span', { class: 'badge warn' }, '환불요청'), ` ${o.refund_reason || ''} `, h('button', { class: 'btn sm alt', onclick: guard(async () => { await api('POST', `/admin/refund-requests/${o.refund_id}/reject`); pageAdmin('orders'); }) }, '거절')) : null,
       ['awaiting_deposit', 'failed'].includes(o.status) && o.provider === 'bank' ? h('button', { class: 'btn sm', onclick: guard(async () => { const m = JSON.parse(o.meta || '{}'); if (!confirm(`통장에서 입금을 확인했나요?\n입금자 ${m.depositor || '-'} · ${money(o.amount, o.currency)}\n확인하면 이용권이 지급됩니다.`)) return; await api('POST', `/admin/orders/${o.id}/mark-paid`, {}); toast('입금 확인 · 이용권 지급'); pageAdmin('orders'); }) }, '입금 확인') : null,
       ['pending', 'failed', 'awaiting_deposit'].includes(o.status) && !['admin', 'bank'].includes(o.provider) ? h('button', { class: 'btn sm alt', title: 'PG사 관리자 화면에서 결제를 확인한 경우에만', onclick: guard(async () => { const tno = prompt('PG사(KCP·포트원·Stripe) 관리자 화면에서 결제 완료를 확인했나요? 확인했다면 거래번호를 입력하세요 (선택).'); if (tno === null) return; await api('POST', `/admin/orders/${o.id}/mark-paid`, { tno }); toast('결제 확정 · 이용권 지급'); pageAdmin('orders'); }) }, '수동 확정') : null,

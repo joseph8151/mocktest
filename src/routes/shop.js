@@ -262,7 +262,7 @@ app.post('/pay/bank/order', requireUser, async (c) => {
   c.executionCtx.waitUntil(operatorAlert(c.env, `무통장입금 주문 · ${depositor} · ${order.amount.toLocaleString()}원`, {
     상품: product.title, 입금자명: depositor, 금액: `${order.amount.toLocaleString()}원`, 회원: `${user.name} (${maskEmail(user.email)})`, 주문번호: order.id.slice(0, 8),
     현금영수증: cashReceipt ? `${cashReceipt.type === 'business' ? '지출증빙' : '소득공제'} 신청 (번호 ${maskTail(cashReceipt.number)} · 전체는 관리자 → 주문)` : '신청 안 함', 선물: order.gift ? '예' : '아니오',
-    할일: '통장에서 입금 확인 후 관리자 → 주문 → "입금 확인"',
+    할일: '통장에서 입금 확인 후 관리자 → 주문 → "입금 확인" (확인 후 30분~1시간 안에 처리)', 관리자화면: `${c.env.SITE_URL}/#/admin/orders?f=bank`,
   }));
   return c.json(view);
 });
