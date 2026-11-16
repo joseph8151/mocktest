@@ -1083,7 +1083,7 @@
     "exam_type": "KR_ENG",
     "section": "grammar",
     "difficulty": 3,
-    "stem": "Choose the words that correctly complete the sentence.\n\"The second half of the game was ______ than the first half.\"",
+    "stem": "Choose the words that correctly complete the sentence.\n\"Everyone agreed that the movie was ______ than the book.\"",
     "choices": [
       "most exciting",
       "more exciting",
@@ -1214,7 +1214,7 @@
       "womens",
       "womens'",
       "women's",
-      "woman's's"
+      "womans'"
     ],
     "answer": 2,
     "explanation": "WOMEN is a plural that does not end in -s, so you add an apostrophe and -s to make it possessive: WOMEN'S."
@@ -1265,7 +1265,7 @@
     "exam_type": "KR_ENG",
     "section": "grammar",
     "difficulty": 3,
-    "stem": "Choose the conjunction that best completes the sentence.\n\"You will miss the bus ______ you hurry.\"",
+    "stem": "Choose the conjunction that best completes the sentence.\n\"We cannot go camping this weekend ______ the rain stops.\"",
     "choices": [
       "unless",
       "because",
@@ -1273,7 +1273,7 @@
       "since"
     ],
     "answer": 0,
-    "explanation": "UNLESS means \"if not\": you will miss the bus if you do not hurry. The other conjunctions do not make sense here."
+    "explanation": "UNLESS means \"if not\": the camping trip cannot happen if the rain does not stop. The other conjunctions do not make sense here."
   },
   {
     "exam_type": "KR_ENG",
