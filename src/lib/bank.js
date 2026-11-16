@@ -5,6 +5,7 @@ export const BANK_DAYS = 3; // unpaid transfer orders expire after this
 export async function bankAccount(env) {
   let s = null;
   try { s = JSON.parse((await env.DB.prepare(`SELECT value FROM settings WHERE key='bank_account'`).first())?.value || 'null'); } catch {}
+  if (s && s.enabled === false) return null; // switched off in 관리자 → 결제설정 (wins over the configured account)
   const a = s?.account ? s : env.BANK_ACCOUNT ? { bank: env.BANK_NAME || '', account: env.BANK_ACCOUNT, holder: env.BANK_HOLDER || '' } : null;
   return a && a.enabled !== false && a.bank && a.account && a.holder ? { bank: a.bank, account: a.account, holder: a.holder } : null;
 }
