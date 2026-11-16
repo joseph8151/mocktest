@@ -489,3 +489,4 @@ input:focus,select:focus,textarea:focus{border-color:var(--ink);box-shadow:0 0 0
 .eyebrow::before{display:none}
 .cattabs{border-radius:18px;padding:6px;gap:6px;box-shadow:var(--shadow-sm)}.cattabs a{border-radius:13px;border-bottom:0}.cattabs a+a{border-left:0}
 .tags span{border-radius:999px;padding-left:9px;padding-right:9px}
+.hp{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0}

@@ -4,13 +4,13 @@
 export const mailFrom = (env) => env.MAIL_FROM || `${env.SITE_NAME || 'MockTest Lab'} <onboarding@resend.dev>`;
 
 /** Returns { ok, error? } — error carries Resend's message (bad key, unverified domain ...). */
-export async function deliver(env, to, subject, html) {
+export async function deliver(env, to, subject, html, { replyTo } = {}) {
   if (!env.RESEND_API_KEY) { console.log(`[mail:dev] to=${to} subject=${subject}\n${html}`); return { ok: false, error: 'RESEND_API_KEY가 설정되지 않았습니다.' }; }
   try {
     const r = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ from: mailFrom(env), to, subject, html: layout(env, html) }),
+      body: JSON.stringify({ from: mailFrom(env), to, subject, html: layout(env, html), ...(replyTo ? { reply_to: replyTo } : {}) }),
     });
     if (r.ok) return { ok: true };
     const j = await r.json().catch(() => ({}));
@@ -20,8 +20,8 @@ export async function deliver(env, to, subject, html) {
     return { ok: false, error: String(e.message || e) };
   }
 }
-export async function sendMail(env, to, subject, html) {
-  const r = await deliver(env, to, subject, html);
+export async function sendMail(env, to, subject, html, opts) {
+  const r = await deliver(env, to, subject, html, opts);
   if (!r.ok && env.RESEND_API_KEY) console.error('mail not sent', subject, r.error);
   return r.ok;
 }
@@ -79,3 +79,7 @@ export function mailReport(env, { student, title, level, finishedAt, score, link
    ${(sc.notes || []).length ? `<p style="font-size:12px;color:#6b7280">${sc.notes.map(esc).join('<br>')}</p>` : ''}
    ${link ? btn(link, linkLabel) : ''}`;
 }
+export const mailContactReceived = (env, name, ticketNo, subject) =>
+  `<p><b>${esc(name)}</b>님, 문의가 접수되었습니다.</p><p>접수번호 <b>${esc(ticketNo)}</b> · 「${esc(subject)}」</p><p>영업시간 기준 보통 하루 안에 이 이메일 주소로 답변드립니다. 추가로 전할 내용이 있으면 이 메일에 답장하지 말고 고객센터에서 다시 접수해 주세요.</p>`;
+export const mailGuestReply = (env, name, subject, answer) =>
+  `<p><b>${esc(name)}</b>님, 문의하신 「${esc(subject)}」에 답변드립니다.</p><div style="background:#f5f6f8;padding:14px 16px;white-space:pre-wrap">${esc(answer)}</div><p style="font-size:13px;color:#6b7280">추가 문의는 ${esc(env.SITE_URL)}/#/contact 에서 접수해 주세요.</p>`;

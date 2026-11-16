@@ -11,7 +11,7 @@ import { clearNoticeCache, DEFAULT_POPUP } from './shop.js';
 import { purgeEdge } from '../lib/edgecache.js';
 import { bankAccount } from '../lib/bank.js';
 import { manualSettings, clearManualCache } from '../lib/sections.js';
-import { deliver, mailFrom, mailTest, sendMail, mailSupportReply } from '../lib/email.js';
+import { deliver, mailFrom, mailTest, sendMail, mailSupportReply, mailGuestReply } from '../lib/email.js';
 import { anonymizeUser } from './auth.js';
 import { hashPassword } from '../lib/auth.js';
 import { randomToken } from '../lib/util.js';
@@ -409,25 +409,39 @@ app.post('/gift-codes/:code/revoke', async (c) => {
 /* ---- 1:1 support ---- */
 app.get('/support', async (c) => {
   const st = c.req.query('status') || 'open';
-  const { results } = await c.env.DB.prepare(`SELECT t.*,u.email,u.name FROM support_tickets t JOIN users u ON u.id=t.user_id WHERE (?1='all' OR t.status=?1) ORDER BY t.updated_at DESC LIMIT 300`).bind(st).all();
+  const { results } = await c.env.DB.prepare(`SELECT t.*,COALESCE(u.email,t.guest_email) AS email,COALESCE(u.name,t.guest_name) AS name,(u.id IS NULL) AS guest FROM support_tickets t LEFT JOIN users u ON u.id=t.user_id WHERE (?1='all' OR t.status=?1) ORDER BY t.updated_at DESC LIMIT 300`).bind(st).all();
   return c.json({ tickets: results });
 });
 app.get('/support/:id', async (c) => {
-  const t = await c.env.DB.prepare('SELECT t.*,u.email,u.name FROM support_tickets t JOIN users u ON u.id=t.user_id WHERE t.id=?').bind(c.req.param('id')).first();
+  const t = await c.env.DB.prepare('SELECT t.*,COALESCE(u.email,t.guest_email) AS email,COALESCE(u.name,t.guest_name) AS name,(u.id IS NULL) AS guest FROM support_tickets t LEFT JOIN users u ON u.id=t.user_id WHERE t.id=?').bind(c.req.param('id')).first();
   if (!t) return c.json({ error: 'not found' }, 404);
   const { results } = await c.env.DB.prepare('SELECT staff,body,created_at FROM support_messages WHERE ticket_id=? ORDER BY created_at').bind(t.id).all();
   return c.json({ ticket: t, messages: results });
 });
 app.post('/support/:id/reply', async (c) => {
   const b = await c.req.json().catch(() => ({}));
-  const t = await c.env.DB.prepare('SELECT t.*,u.email,u.name FROM support_tickets t JOIN users u ON u.id=t.user_id WHERE t.id=?').bind(c.req.param('id')).first();
+  const t = await c.env.DB.prepare('SELECT t.*,COALESCE(u.email,t.guest_email) AS email,COALESCE(u.name,t.guest_name) AS name,(u.id IS NULL) AS guest FROM support_tickets t LEFT JOIN users u ON u.id=t.user_id WHERE t.id=?').bind(c.req.param('id')).first();
   const body = String(b.body || '').trim().slice(0, 4000);
   if (!t || !body) return c.json({ error: '내용을 입력하세요.' }, 400);
   await c.env.DB.batch([
     c.env.DB.prepare('INSERT INTO support_messages (id,ticket_id,user_id,staff,body,created_at) VALUES (?,?,?,1,?,?)').bind(uid(), t.id, c.get('user').id, body, now()),
     c.env.DB.prepare(`UPDATE support_tickets SET status='answered', updated_at=? WHERE id=?`).bind(now(), t.id),
   ]);
-  c.executionCtx.waitUntil(sendMail(c.env, t.email, `[${c.env.SITE_NAME}] 문의 답변`, mailSupportReply(c.env, t.name, t.subject, t.id)));
+  // members get a link (the answer stays behind their login); guests have no account, so the answer itself is mailed
+  c.executionCtx.waitUntil(sendMail(c.env, t.email, `[${c.env.SITE_NAME}] 문의 답변`, t.guest ? mailGuestReply(c.env, t.name, t.subject, body) : mailSupportReply(c.env, t.name, t.subject, t.id)));
+  await audit(c, 'support.answer', t.id, { guest: !!t.guest });
+  return c.json({ ok: true });
+});
+app.post('/support/:id/answered', async (c) => { // answered directly from the mailbox
+  const b = await c.req.json().catch(() => ({}));
+  const t = await c.env.DB.prepare('SELECT id FROM support_tickets WHERE id=?').bind(c.req.param('id')).first();
+  if (!t) return c.json({ error: 'not found' }, 404);
+  const note = String(b.note || '이메일로 답변함').trim().slice(0, 500);
+  await c.env.DB.batch([
+    c.env.DB.prepare('INSERT INTO support_messages (id,ticket_id,user_id,staff,body,created_at) VALUES (?,?,?,1,?,?)').bind(uid(), t.id, c.get('user').id, `[메모] ${note}`, now()),
+    c.env.DB.prepare(`UPDATE support_tickets SET status='answered', updated_at=? WHERE id=?`).bind(now(), t.id),
+  ]);
+  await audit(c, 'support.answer', t.id, { via: 'email' });
   return c.json({ ok: true });
 });
 app.post('/support/:id/close', async (c) => {

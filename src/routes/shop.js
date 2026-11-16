@@ -1,7 +1,7 @@
 import { Hono } from 'hono';
 import { uid, now } from '../lib/util.js';
 import { requireUser, loadUser, accountGate } from '../lib/auth.js';
-import { rateLimited, tooMany, audit } from '../lib/security.js';
+import { rateLimited, tooMany, audit, maskEmail } from '../lib/security.js';
 import { kcpEnabled, kcpRegister, kcpForm, kcpApprove, kcpCancel, kcpOrderId } from '../lib/kcp.js';
 import {
   fulfillOrder, stripeCreateCheckout, stripeVerify, stripeRetrieveSession,
@@ -9,7 +9,7 @@ import {
 } from '../lib/payments.js';
 import { bankAccount, cleanDepositor, BANK_DAYS } from '../lib/bank.js';
 import { sendMail, mailBankOrder } from '../lib/email.js';
-import { operatorAlert } from '../lib/notify.js';
+import { operatorAlert, maskTail } from '../lib/notify.js';
 import { manualSettings } from '../lib/sections.js';
 
 const app = new Hono();
@@ -259,8 +259,8 @@ app.post('/pay/bank/order', requireUser, async (c) => {
   const view = bankView({ ...order, status: 'awaiting_deposit', title: product.title, meta: JSON.stringify({ depositor, cashReceipt }) }, acct);
   await sendMail(c.env, user.email, `[${c.env.SITE_NAME}] 입금 안내`, mailBankOrder(c.env, user.name, view));
   c.executionCtx.waitUntil(operatorAlert(c.env, `무통장입금 주문 · ${depositor} · ${order.amount.toLocaleString()}원`, {
-    상품: product.title, 입금자명: depositor, 금액: `${order.amount.toLocaleString()}원`, 회원: `${user.name} (${user.email})`,
-    현금영수증: cashReceipt ? `${cashReceipt.type === 'business' ? '지출증빙' : '소득공제'} ${cashReceipt.number}` : '신청 안 함', 선물: order.gift ? '예' : '아니오',
+    상품: product.title, 입금자명: depositor, 금액: `${order.amount.toLocaleString()}원`, 회원: `${user.name} (${maskEmail(user.email)})`, 주문번호: order.id.slice(0, 8),
+    현금영수증: cashReceipt ? `${cashReceipt.type === 'business' ? '지출증빙' : '소득공제'} 신청 (번호 ${maskTail(cashReceipt.number)} · 전체는 관리자 → 주문)` : '신청 안 함', 선물: order.gift ? '예' : '아니오',
     할일: '통장에서 입금 확인 후 관리자 → 주문 → "입금 확인"',
   }));
   return c.json(view);

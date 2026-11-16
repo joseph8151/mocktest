@@ -6,19 +6,24 @@
 import { hex, hmacSha256, randomToken } from './util.js';
 import { sendMail } from './email.js';
 
-/** Operator alert (new member, new bank-transfer order): Formspree form (FORMSPREE_URL; the form owner gets the mail)
- * and/or a direct mail to NOTIFY_EMAIL through Resend. Never throws. */
-export async function operatorAlert(env, subject, fields) {
-  const title = `[${env.SITE_NAME || 'MockTest Lab'}] ${subject}`;
+/** Operator alert (new member, new bank-transfer order, customer inquiry): Formspree form (FORMSPREE_URL; the form owner
+ * gets the mail) and/or a direct mail to NOTIFY_EMAIL through Resend. replyTo = the customer, so "답장" answers them directly.
+ * Callers pass only what the operator needs (mask everything else). Never throws. */
+const escH = (v) => String(v ?? '').replace(/[&<>"]/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[ch]));
+export async function operatorAlert(env, subject, fields, { replyTo } = {}) {
+  const title = `[${env.SITE_NAME || 'MockTest Lab'}] ${subject}`.replace(/[\r\n]+/g, ' ').slice(0, 150);
   const jobs = [];
   if (env.FORMSPREE_URL) jobs.push(fetch(env.FORMSPREE_URL, {
     method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-    body: JSON.stringify({ _subject: title, 알림: subject, ...fields, 관리자화면: `${env.SITE_URL}/#/admin` }),
+    body: JSON.stringify({ _subject: title, 알림: subject, ...fields, ...(replyTo ? { email: replyTo, _replyto: replyTo } : {}), 관리자화면: `${env.SITE_URL}/#/admin` }),
   }).then(async (r) => { if (!r.ok) console.error('formspree', r.status, (await r.text()).slice(0, 200)); }));
   if (env.NOTIFY_EMAIL) jobs.push(sendMail(env, env.NOTIFY_EMAIL, title,
-    `<p><b>${subject}</b></p><table>${Object.entries(fields).map(([k, v]) => `<tr><td style="color:#6b7280;padding:3px 12px 3px 0">${k}</td><td>${String(v ?? '').replace(/[&<>"]/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[ch]))}</td></tr>`).join('')}</table>`));
+    `<p><b>${escH(subject)}</b></p><table>${Object.entries(fields).map(([k, v]) => `<tr><td style="color:#6b7280;padding:3px 12px 3px 0;vertical-align:top">${escH(k)}</td><td style="white-space:pre-wrap">${escH(v)}</td></tr>`).join('')}</table>`, { replyTo }));
   await Promise.all(jobs.map((j) => j.catch((e) => console.error('operator alert', e))));
 }
+/** Privacy: alerts leave our system (Formspree keeps submissions) — mask what the operator does not need to act. */
+export const maskPhone = (p) => { const d = String(p || '').replace(/\D/g, ''); return d.length >= 8 ? `${d.slice(0, 3)}-****-${d.slice(-4)}` : '-'; };
+export const maskTail = (s, keep = 4) => { const d = String(s || ''); return d.length > keep ? '*'.repeat(Math.min(8, d.length - keep)) + d.slice(-keep) : d; };
 
 export const alimtalkOn = (env) => !!(env.SOLAPI_API_KEY && env.SOLAPI_API_SECRET && env.SOLAPI_SENDER && env.KAKAO_PFID);
 const phoneOk = (p) => { const d = String(p || '').replace(/\D/g, ''); return /^01[016789]\d{7,8}$/.test(d) ? d : null; };

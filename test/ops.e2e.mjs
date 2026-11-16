@@ -24,7 +24,8 @@ assert.ok((await admin.post('/api/auth/login', { email: process.env.ADMIN_EMAIL 
 const u = new C(), email = `ops${stamp}@t.com`;
 const r = await u.post('/api/auth/register', { email, name: '박서준', password: PW, agree: true, grade: '초4' });
 assert.ok(r.user);
-const a1 = await wait((x) => x.body.이메일 === email);
+const a1 = await wait((x) => x.body.알림 === '새 회원가입' && x.body.이름 === '박서준' && x.body.이메일?.endsWith('@t.com'));
+assert.ok(!a1.body.이메일.includes(`ops${stamp}`), 'email masked in alerts'); assert.equal(a1.body.연락처, undefined, 'no phone in alerts');
 assert.equal(a1.path, '/f/test'); assert.equal(a1.accept, 'application/json');
 assert.equal(a1.body.알림, '새 회원가입'); assert.equal(a1.body.이름, '박서준'); assert.equal(a1.body.학년, '초4'); assert.match(a1.body._subject, /새 회원가입/);
 
@@ -42,7 +43,7 @@ await admin.post(`/api/admin/users/${r.user.id}/verify-email`);
 const o = await u.post('/api/pay/bank/order', { productId: 'p-cat4-1', depositor: '박서준' });
 assert.ok(o.orderId, JSON.stringify(o));
 const a2 = await wait((x) => /무통장입금 주문/.test(x.body.알림 || ''));
-assert.equal(a2.body.입금자명, '박서준'); assert.match(a2.body.금액, /원$/); assert.match(a2.body.회원, new RegExp(email));
+assert.equal(a2.body.입금자명, '박서준'); assert.match(a2.body.금액, /원$/); assert.ok(!a2.body.회원.includes(email), 'member email masked');
 await u.post(`/api/pay/bank/${o.orderId}/cancel`);
 
 // admin edits the popup; off -> nothing

@@ -98,7 +98,7 @@ function renderNav() {
       me.isChild ? null : h('a', { href: '#/support' }, '문의'),
       me.role === 'admin' ? h('a', { href: '#/admin' }, '관리자') : null,
       h('button', { onclick: guard(async () => { await api('POST', '/auth/logout'); me = null; renderNav(); location.hash = '#/'; }) }, `로그아웃 (${me.name})`),
-    ] : [h('a', { class: 'keep', href: '#/login' }, '로그인'), h('a', { class: 'cta', href: '#/register' }, '시작하기')]),
+    ] : [h('a', { href: '#/contact' }, '고객센터'), h('a', { class: 'keep', href: '#/login' }, '로그인'), h('a', { class: 'cta', href: '#/register' }, '시작하기')]),
   ].filter(Boolean));
 }
 
@@ -650,8 +650,34 @@ async function pagePractice(q = {}) {
 }
 
 /* ---------- support ---------- */
+/** 고객센터: public problem report / inquiry form; answered by e-mail. Members also see their ticket history (#/support). */
+const CS_CATS = ['결제·환불', '시험·채점', '계정·로그인', '문제 오류 신고', '기관·단체', '기타'];
+function pageContact(q = {}) {
+  const f = h('form', { class: 'card', onsubmit: guard(async (e) => {
+    e.preventDefault();
+    const d = Object.fromEntries(new FormData(f)); d.agree = !!f.agree?.checked;
+    const r = await api('POST', '/contact', { ...d, ref: q.ref || d.ref });
+    mount(h('div', { class: 'card intro' }, h('div', { class: 'big' }, 'Received'), h('h2', {}, '문의가 접수되었습니다.'),
+      h('p', {}, `접수번호 ${r.no || ''} · 입력하신 이메일로 접수 확인 메일을 보냈고, 답변도 그 주소로 드립니다. 영업시간 기준 보통 하루 안에 답변드립니다.`),
+      h('div', { class: 'row' }, h('a', { class: 'btn', href: '#/' }, '처음으로'), me ? h('a', { class: 'btn alt', href: '#/support' }, '내 문의 내역') : null)));
+  }) },
+    h('div', { class: 'row', style: 'gap:10px' }, h('div', { class: 'grow' }, field('분류', h('select', { name: 'category' }, CS_CATS.map((c) => h('option', { selected: c === q.cat }, c))))),
+      me ? null : h('div', { class: 'grow' }, field('이름', h('input', { name: 'name', required: true, maxlength: 40, autocomplete: 'name' })))),
+    me ? h('p', { class: 'small muted' }, `답변은 ${me.email} 로 보내 드립니다.`) : field('답변받을 이메일', h('input', { name: 'email', type: 'email', required: true, maxlength: 120, autocomplete: 'email', inputmode: 'email' })),
+    field('제목', h('input', { name: 'subject', required: true, maxlength: 120, value: q.subject || '' })),
+    field('내용', h('textarea', { name: 'body', rows: 7, required: true, maxlength: 4000, placeholder: '어떤 문제가 있었는지 적어 주세요. (예: 결제 후 이용권이 보이지 않아요 · 3번 문제 정답이 이상해요 · 로그인이 안 돼요)\n주문번호, 시험 이름, 사용 중인 기기·브라우저를 함께 적어 주시면 더 빨리 해결됩니다.\n※ 비밀번호, 카드번호, 계좌 비밀번호는 절대 적지 마세요.' }, q.body || '')),
+    q.ref ? h('p', { class: 'small muted' }, `참고 정보가 함께 전달됩니다: ${q.ref}`) : null,
+    h('input', { name: 'website', tabindex: '-1', autocomplete: 'off', 'aria-hidden': 'true', class: 'hp' }), // honeypot
+    me ? null : h('label', { class: 'giftchk', style: 'font-weight:400' }, h('input', { type: 'checkbox', name: 'agree', style: 'width:auto', required: true }),
+      ' [필수] 문의 처리를 위해 이름·이메일·문의 내용을 수집하며, 처리 후 3년간 보관 뒤 파기합니다 (전자상거래법상 분쟁 처리 기록). 답변 알림을 위해 문의 내용이 이메일 서비스(Formspree·Resend)를 거쳐 전달됩니다.'),
+    me ? null : botCheck(),
+    h('button', { class: 'btn', style: 'margin-top:14px' }, '문의 보내기'));
+  mount(h('div', { class: 'kicker' }, 'Help center'), h('h2', {}, '고객센터 · 문제 신고'),
+    h('p', { class: 'muted' }, '결제·시험·로그인 등 문제가 생기면 여기에 남겨 주세요. 담당자가 확인하고 이메일로 답변드립니다. 로그인하지 않아도 접수할 수 있습니다.'), f,
+    me ? h('p', {}, h('a', { href: '#/support' }, '내 문의 내역 보기 →')) : null);
+}
 async function pageSupport(id, q = {}) {
-  if (!me) return (location.hash = '#/login');
+  if (!me) return pageContact(q);
   if (id) {
     const { ticket, messages } = await api('GET', `/support/${id}`);
     const f = h('form', { onsubmit: guard(async (e) => { e.preventDefault(); await api('POST', `/support/${id}/reply`, { body: f.b.value }); pageSupport(id); }) }, h('textarea', { name: 'b', rows: 4, required: true, placeholder: '추가로 문의할 내용' }), h('button', { class: 'btn sm' }, '보내기'));
@@ -1201,8 +1227,10 @@ async function adminSupport(b) {
     const d = await api('GET', `/admin/support/${t.id}`);
     const close = () => m.remove();
     const f = h('form', { onsubmit: guard(async (e) => { e.preventDefault(); await api('POST', `/admin/support/${t.id}/reply`, { body: f.b.value }); close(); toast('답변을 등록하고 메일로 알렸습니다.'); pageAdmin('support'); }) }, h('textarea', { name: 'b', rows: 5, required: true, placeholder: '답변' }), h('div', { class: 'row' }, h('button', { class: 'btn sm' }, '답변 보내기'), h('button', { type: 'button', class: 'btn sm alt', onclick: guard(async () => { await api('POST', `/admin/support/${t.id}/close`); close(); pageAdmin('support'); }) }, '종료'), h('button', { type: 'button', class: 'btn sm alt', onclick: close }, '닫기')));
-    const m = h('div', { class: 'modal', onclick: (e) => e.target === m && close() }, h('div', { class: 'card', style: 'max-width:640px;max-height:90vh;overflow:auto' }, h('h3', {}, d.ticket.subject), h('p', { class: 'small muted' }, `${d.ticket.name} (${d.ticket.email}) · ${d.ticket.category} · ${date(d.ticket.created_at)}`),
-      d.messages.map((x) => h('div', { class: 'msg ' + (x.staff ? 'staff' : '') }, h('div', { class: 'small muted' }, x.staff ? '운영팀' : '회원', ' · ', date(x.created_at)), h('div', { class: 'msgbody' }, x.body))), f));
+    const m = h('div', { class: 'modal', onclick: (e) => e.target === m && close() }, h('div', { class: 'card', style: 'max-width:640px;max-height:90vh;overflow:auto' }, h('h3', {}, d.ticket.subject), h('p', { class: 'small muted' }, `${d.ticket.name} (${d.ticket.email}) · ${d.ticket.category} · ${date(d.ticket.created_at)}`), h('p', { class: 'row small' }, d.ticket.guest ? h('span', { class: 'badge warn' }, '비회원') : h('span', { class: 'badge' }, '회원'), d.ticket.ref ? h('span', { class: 'muted' }, `참고: ${d.ticket.ref}`) : null,
+        h('a', { class: 'btn sm alt', href: `mailto:${encodeURIComponent(d.ticket.email)}?subject=${encodeURIComponent('Re: ' + d.ticket.subject + ' [' + d.ticket.id.slice(0, 8).toUpperCase() + ']')}` }, '메일로 답장'),
+        h('button', { class: 'btn sm alt', type: 'button', onclick: guard(async () => { await api('POST', `/admin/support/${t.id}/answered`, {}); close(); toast('답변 완료로 표시했습니다.'); pageAdmin('support'); }) }, '메일로 답했음')),
+      d.messages.map((x) => h('div', { class: 'msg ' + (x.staff ? 'staff' : '') }, h('div', { class: 'small muted' }, x.staff ? '운영팀' : (d.ticket.guest ? '고객(비회원)' : '회원'), ' · ', date(x.created_at)), h('div', { class: 'msgbody' }, x.body))), f));
     document.body.append(m);
   });
   b.append(h('div', { class: 'row', style: 'margin-bottom:12px' }, [['open', '답변 대기'], ['answered', '답변 완료'], ['closed', '종료'], ['all', '전체']].map(([k, l]) => h('a', { class: 'btn sm ' + (k === st ? '' : 'alt'), href: `#/admin/support?status=${k}` }, l))),
@@ -1458,10 +1486,10 @@ const LEGAL = {
     ['제8조 (분쟁 해결)', '이 약관은 대한민국 법률에 따르며, 분쟁은 민사소송법상 관할 법원에서 해결합니다.'],
   ]],
   privacy: ['개인정보처리방침', (c) => [
-    ['1. 수집 항목', '필수: 이름, 이메일, 비밀번호(암호화 저장). 선택: 학년, 연락처. 서비스 이용 과정에서 응시 기록(답안, 소요 시간, 점수)과 결제 기록이 생성되며, 말하기 시험 시 음성 녹음이 수집됩니다.'],
+    ['1. 수집 항목', '필수: 이름, 이메일, 비밀번호(암호화 저장). 선택: 학년, 연락처. 서비스 이용 과정에서 응시 기록(답안, 소요 시간, 점수)과 결제 기록이 생성되며, 말하기 시험 시 음성 녹음이 수집됩니다. 고객센터 문의 시: 이름, 이메일, 문의 내용(비회원 포함). 무통장입금 시: 입금자명, 현금영수증 신청 번호(선택).'],
     ['2. 이용 목적', '회원 관리, 이용권 제공, 시험 채점 및 결과 리포트 제공, 결제·환불 처리, 고객 문의 대응, 서비스 개선.'],
     ['3. 보유 기간', '회원 탈퇴 시 이름·이메일·연락처·말하기 녹음은 지체 없이 파기합니다. 응시 결과·답안과 서비스 이용 기록(접속·로그인·결제·시험 활동 기록, 접속 IP)은 개인을 알아볼 수 없게 익명화하여 서비스 운영·부정 이용 방지·분쟁 대응을 위해 보관합니다. 전자상거래법에 따라 계약·결제 기록 5년, 소비자 불만·분쟁 기록 3년은 반드시 보관합니다.'],
-    ['4. 제3자 제공 및 처리위탁', '결제 처리를 위해 포트원 및 결제대행사, Stripe에 결제에 필요한 정보를 전달하며, 서버·저장소는 Cloudflare, 이메일 발송은 Resend를 통해 처리됩니다. 쓰기·서술형·말하기 답안의 AI 1차 채점을 위해 답안 내용(말하기는 녹음을 Cloudflare Workers AI로 글로 옮긴 내용)과 문항만 Anthropic(미국)에 전송하며, 이름·이메일 등 회원을 알아볼 수 있는 정보는 보내지 않습니다. 이 외에는 법령에 근거한 경우를 제외하고 동의 없이 제공하지 않습니다.'],
+    ['4. 제3자 제공 및 처리위탁', '결제 처리를 위해 포트원 및 결제대행사, Stripe에 결제에 필요한 정보를 전달하며, 서버·저장소는 Cloudflare, 이메일 발송은 Resend를 통해 처리됩니다. 고객 문의 답변과 운영 알림 메일은 Formspree(미국)를 거쳐 운영자에게 전달되며, 문의 답변에 필요한 이름·이메일·문의 내용 외의 정보(회원 이메일, 현금영수증 번호 등)는 일부를 가려(마스킹) 보냅니다. 쓰기·서술형·말하기 답안의 AI 1차 채점을 위해 답안 내용(말하기는 녹음을 Cloudflare Workers AI로 글로 옮긴 내용)과 문항만 Anthropic(미국)에 전송하며, 이름·이메일 등 회원을 알아볼 수 있는 정보는 보내지 않습니다. 이 외에는 법령에 근거한 경우를 제외하고 동의 없이 제공하지 않습니다.'],
     ['5. 이용자의 권리', '회원은 언제든지 개인정보 열람·정정·삭제·처리정지를 요청할 수 있으며, 아래 문의처로 연락하면 지체 없이 처리합니다.'],
     ['6. 아동의 개인정보', '만 14세 미만 아동의 개인정보는 법정대리인의 동의를 받아 수집합니다.'],
     ['7. 개인정보 보호책임자', `${c.biz.owner} · 문의: ${c.biz.contact}`],
@@ -1505,6 +1533,7 @@ async function route() {
       case 'classes': return await pageClasses(seg[1]);
       case 'practice': return await pagePractice(q);
       case 'support': return await pageSupport(seg[1], q);
+      case 'contact': return pageContact(q);
       case 'verify': return await pageVerify(seg[1]);
       case 'consent': return await pageConsent(seg[1]);
       case 'admin': return await pageAdmin(seg[1]);
@@ -1516,7 +1545,8 @@ async function route() {
     }
   } catch (e) {
     if (e.status === 401) { me = null; renderNav(); location.hash = '#/login'; return; }
-    mount(h('div', { class: 'card' }, h('h2', { class: 'err' }, '오류'), h('p', {}, e.message), h('a', { class: 'btn alt', href: '#/' }, '처음으로')));
+    mount(h('div', { class: 'card' }, h('h2', { class: 'err' }, '오류'), h('p', {}, e.message), h('div', { class: 'row' }, h('a', { class: 'btn alt', href: '#/' }, '처음으로'),
+      h('a', { class: 'btn alt', href: `#/contact?cat=${encodeURIComponent('기타')}&subject=${encodeURIComponent('오류 신고')}&ref=${encodeURIComponent((location.hash.split('?')[0] || '/').slice(0, 60) + ' · ' + String(e.message).slice(0, 50))}` }, '문제 신고하기'))));
   }
 }
 function showPopup() { // promo popup on the landing pages, at most once a day per message

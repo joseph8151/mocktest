@@ -6,6 +6,7 @@ import exams from './routes/exams.js';
 import admin from './routes/admin.js';
 import sample from './routes/sample.js';
 import family from './routes/family.js';
+import contact from './routes/contact.js';
 import { ensureDb } from './lib/bootstrap.js';
 import { aiConfigured, gradePending } from './lib/aigrade.js';
 import { API_HEADERS } from './lib/security.js';
@@ -67,6 +68,7 @@ app.all('/_seed/*', (c) => c.text('Not found', 404));
 
 app.route('/api/auth', auth);
 app.route('/api/admin', admin);
+app.route('/api', contact); // public 고객센터 form — before the routers that require a login
 app.route('/api', sample);
 app.route('/api', shop);
 app.route('/api', exams);

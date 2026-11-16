@@ -3,6 +3,7 @@ import { Hono } from 'hono';
 import { uid, now, randomToken, numEqual } from '../lib/util.js';
 import { requireUser, createSession, accountGate, hashPassword, verifyPassword } from '../lib/auth.js';
 import { audit, rateLimited, tooMany, clientIp } from '../lib/security.js';
+import { operatorAlert } from '../lib/notify.js';
 import { EXAMS } from '../lib/exam.js';
 import { giftCode } from '../lib/payments.js';
 
@@ -225,6 +226,8 @@ app.post('/support', async (c) => {
     db(c).prepare('INSERT INTO support_messages (id,ticket_id,user_id,staff,body,created_at) VALUES (?,?,?,0,?,?)').bind(uid(), id, u.id, body, now()),
   ]);
   await audit(c, 'support.create', id, { category: cat });
+  c.executionCtx.waitUntil(operatorAlert(c.env, `고객 문의 [${cat}] ${subject}`, { 접수번호: id.slice(0, 8).toUpperCase(), 분류: cat, 이름: u.name, 회원: '회원', 내용: body,
+    답변방법: '이 메일에 답장하면 고객에게 바로 전달됩니다 (관리자 → 문의에서 답변해도 됩니다)' }, { replyTo: u.email }));
   return c.json({ ok: true, id });
 });
 app.get('/support/:id', async (c) => {
@@ -244,6 +247,7 @@ app.post('/support/:id/reply', async (c) => {
     db(c).prepare(`UPDATE support_tickets SET status='open', updated_at=? WHERE id=?`).bind(now(), t.id),
   ]);
   await audit(c, 'support.reply', t.id);
+  c.executionCtx.waitUntil(operatorAlert(c.env, `고객 추가 문의 · ${t.subject}`, { 접수번호: t.id.slice(0, 8).toUpperCase(), 이름: u.name, 내용: body }, { replyTo: u.email }));
   return c.json({ ok: true });
 });
 
