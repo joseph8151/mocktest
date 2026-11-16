@@ -3773,6 +3773,614 @@ INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,st
 INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-writing_expository-13ed3f967aee','KR_ENG','writing_expository','text',4,NULL,'Some schools require students to wear uniforms, while others let students choose their own clothes. Should middle school students be required to wear uniforms? State your claim, support it with at least two reasons and examples, and respond to one argument from the other side.',NULL,NULL,NULL,'Rubric (score each 1-4): Claim/focus - states a clear position or controlling idea in the introduction. Reasons and evidence - gives at least two relevant reasons supported by examples, facts, or details. Organization - introduction, body, and conclusion; transitions such as first, for example, however, and therefore; a counterclaim is acknowledged where appropriate. Language and style - precise, academic vocabulary and a formal tone; varied sentences. Conventions - correct grammar, spelling, capitalization, and punctuation. Expected length: about 3 paragraphs (roughly 200-300 words).',1,0);
 INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-writing_expository-021df9449353','KR_ENG','writing_expository','text',4,NULL,'Explain how a student your age can make a positive difference in his or her community. Describe at least two specific actions, explain why each one matters, and give examples to support your ideas.',NULL,NULL,NULL,'Rubric (score each 1-4): Claim/focus - states a clear position or controlling idea in the introduction. Reasons and evidence - gives at least two relevant reasons supported by examples, facts, or details. Organization - introduction, body, and conclusion; transitions such as first, for example, however, and therefore; a counterclaim is acknowledged where appropriate. Language and style - precise, academic vocabulary and a formal tone; varied sentences. Conventions - correct grammar, spelling, capitalization, and punctuation. Expected length: about 3 paragraphs (roughly 200-300 words).',1,0);
 INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-writing_expository-4c5ed1922325','KR_ENG','writing_expository','text',4,NULL,'Some people think students should have homework every school night. Others believe homework should be limited so students have more time for family, sports, and rest. Which side do you agree with? State your claim and support it with reasons and evidence.',NULL,NULL,NULL,'Rubric (score each 1-4): Claim/focus - states a clear position or controlling idea in the introduction. Reasons and evidence - gives at least two relevant reasons supported by examples, facts, or details. Organization - introduction, body, and conclusion; transitions such as first, for example, however, and therefore; a counterclaim is acknowledged where appropriate. Language and style - precise, academic vocabulary and a formal tone; varied sentences. Conventions - correct grammar, spelling, capitalization, and punctuation. Expected length: about 3 paragraphs (roughly 200-300 words).',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-f171fe52d29f','KR_ENG','reading','mcq',1,'Priya''s class was putting on a play about the planets, and Ms. Baker gave Priya the part of the Sun. The Sun had more lines than anyone else. When Priya read the script, her stomach felt full of butterflies.
+
+"I can''t do it," she told her grandfather that night. "Everyone will be staring at me, and what if I forget my words in front of the whole school?"
+
+Grandpa set down his newspaper and smiled. "When I was your age, I was terrified of singing in front of other people," he said. "Do you know what helped me? I practiced a little bit every day, and slowly the fear went away."
+
+So every evening after dinner, Priya practiced in the living room while Grandpa sat on the couch and pretended to be the audience. At first, Priya mumbled and looked at the floor. Grandpa cupped his hand around his ear. "The back row can''t hear you!" he joked. Priya laughed, took a deep breath, and spoke louder.
+
+Each night, she got a little better, and she learned to stand up straight and speak slowly and clearly. Soon she knew all of her lines by heart, and she even remembered some of the lines for the other planets.
+
+On the night of the play, the gym was packed with families. Priya peeked out from behind the curtain and saw rows and rows of faces. Her hands began to shake, but then she spotted Grandpa in the third row, and he gave her a big thumbs-up.
+
+The play began. Priya stepped into the bright light and said her first line in a strong, clear voice. Everything went well until a boy named Marcus, who played Mars, froze in the middle of the stage. His mouth opened, but no words came out, and the whole room became completely silent.
+
+Priya knew his line, so she leaned over and whispered it to him. Marcus nodded and said the line, and the play went on. Nobody in the audience even noticed.
+
+After the show, Marcus ran up to her. "Thanks for saving me," he said. "How did you know my part?"
+
+Priya smiled. "I practiced a lot," she said. Then she looked out at the third row, where Grandpa was clapping louder than anyone else in the gym.','What is the main lesson of this story?',NULL,'["Grown-ups should always sit in the front row at school plays.","Plays about the planets are hard to remember.","It is best to choose a small part so you do not have to speak.","Practicing a little each day can help you face your fears."]',3,'Priya was afraid, but by practicing every night she became confident and was even ready to help Marcus.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-d2a33dbbfc1d','KR_ENG','reading','mcq',1,'Priya''s class was putting on a play about the planets, and Ms. Baker gave Priya the part of the Sun. The Sun had more lines than anyone else. When Priya read the script, her stomach felt full of butterflies.
+
+"I can''t do it," she told her grandfather that night. "Everyone will be staring at me, and what if I forget my words in front of the whole school?"
+
+Grandpa set down his newspaper and smiled. "When I was your age, I was terrified of singing in front of other people," he said. "Do you know what helped me? I practiced a little bit every day, and slowly the fear went away."
+
+So every evening after dinner, Priya practiced in the living room while Grandpa sat on the couch and pretended to be the audience. At first, Priya mumbled and looked at the floor. Grandpa cupped his hand around his ear. "The back row can''t hear you!" he joked. Priya laughed, took a deep breath, and spoke louder.
+
+Each night, she got a little better, and she learned to stand up straight and speak slowly and clearly. Soon she knew all of her lines by heart, and she even remembered some of the lines for the other planets.
+
+On the night of the play, the gym was packed with families. Priya peeked out from behind the curtain and saw rows and rows of faces. Her hands began to shake, but then she spotted Grandpa in the third row, and he gave her a big thumbs-up.
+
+The play began. Priya stepped into the bright light and said her first line in a strong, clear voice. Everything went well until a boy named Marcus, who played Mars, froze in the middle of the stage. His mouth opened, but no words came out, and the whole room became completely silent.
+
+Priya knew his line, so she leaned over and whispered it to him. Marcus nodded and said the line, and the play went on. Nobody in the audience even noticed.
+
+After the show, Marcus ran up to her. "Thanks for saving me," he said. "How did you know my part?"
+
+Priya smiled. "I practiced a lot," she said. Then she looked out at the third row, where Grandpa was clapping louder than anyone else in the gym.','Who pretended to be the audience when Priya practiced?',NULL,'["Grandpa","Marcus","Ms. Baker","Priya''s classmates"]',0,'The story says Grandpa sat on the couch and pretended to be the audience.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-6076b5ebca45','KR_ENG','reading','mcq',1,'Priya''s class was putting on a play about the planets, and Ms. Baker gave Priya the part of the Sun. The Sun had more lines than anyone else. When Priya read the script, her stomach felt full of butterflies.
+
+"I can''t do it," she told her grandfather that night. "Everyone will be staring at me, and what if I forget my words in front of the whole school?"
+
+Grandpa set down his newspaper and smiled. "When I was your age, I was terrified of singing in front of other people," he said. "Do you know what helped me? I practiced a little bit every day, and slowly the fear went away."
+
+So every evening after dinner, Priya practiced in the living room while Grandpa sat on the couch and pretended to be the audience. At first, Priya mumbled and looked at the floor. Grandpa cupped his hand around his ear. "The back row can''t hear you!" he joked. Priya laughed, took a deep breath, and spoke louder.
+
+Each night, she got a little better, and she learned to stand up straight and speak slowly and clearly. Soon she knew all of her lines by heart, and she even remembered some of the lines for the other planets.
+
+On the night of the play, the gym was packed with families. Priya peeked out from behind the curtain and saw rows and rows of faces. Her hands began to shake, but then she spotted Grandpa in the third row, and he gave her a big thumbs-up.
+
+The play began. Priya stepped into the bright light and said her first line in a strong, clear voice. Everything went well until a boy named Marcus, who played Mars, froze in the middle of the stage. His mouth opened, but no words came out, and the whole room became completely silent.
+
+Priya knew his line, so she leaned over and whispered it to him. Marcus nodded and said the line, and the play went on. Nobody in the audience even noticed.
+
+After the show, Marcus ran up to her. "Thanks for saving me," he said. "How did you know my part?"
+
+Priya smiled. "I practiced a lot," she said. Then she looked out at the third row, where Grandpa was clapping louder than anyone else in the gym.','When Priya read the script, "her stomach felt full of butterflies." This means that Priya felt —',NULL,'["hungry","nervous","proud","sleepy"]',1,'Priya is scared to speak in front of everyone, so the butterflies show that she felt nervous.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-6523074da9d0','KR_ENG','reading','mcq',1,'Priya''s class was putting on a play about the planets, and Ms. Baker gave Priya the part of the Sun. The Sun had more lines than anyone else. When Priya read the script, her stomach felt full of butterflies.
+
+"I can''t do it," she told her grandfather that night. "Everyone will be staring at me, and what if I forget my words in front of the whole school?"
+
+Grandpa set down his newspaper and smiled. "When I was your age, I was terrified of singing in front of other people," he said. "Do you know what helped me? I practiced a little bit every day, and slowly the fear went away."
+
+So every evening after dinner, Priya practiced in the living room while Grandpa sat on the couch and pretended to be the audience. At first, Priya mumbled and looked at the floor. Grandpa cupped his hand around his ear. "The back row can''t hear you!" he joked. Priya laughed, took a deep breath, and spoke louder.
+
+Each night, she got a little better, and she learned to stand up straight and speak slowly and clearly. Soon she knew all of her lines by heart, and she even remembered some of the lines for the other planets.
+
+On the night of the play, the gym was packed with families. Priya peeked out from behind the curtain and saw rows and rows of faces. Her hands began to shake, but then she spotted Grandpa in the third row, and he gave her a big thumbs-up.
+
+The play began. Priya stepped into the bright light and said her first line in a strong, clear voice. Everything went well until a boy named Marcus, who played Mars, froze in the middle of the stage. His mouth opened, but no words came out, and the whole room became completely silent.
+
+Priya knew his line, so she leaned over and whispered it to him. Marcus nodded and said the line, and the play went on. Nobody in the audience even noticed.
+
+After the show, Marcus ran up to her. "Thanks for saving me," he said. "How did you know my part?"
+
+Priya smiled. "I practiced a lot," she said. Then she looked out at the third row, where Grandpa was clapping louder than anyone else in the gym.','Why was Priya able to help Marcus when he froze?',NULL,'["Marcus had asked her to practice with him.","Ms. Baker told her to read his lines for him.","She was holding the script on the stage.","She had practiced so much that she learned other people''s lines too."]',3,'Priya practiced so much that she knew some lines for the other planets, so she could whisper Marcus''s line.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-62ed396ab146','KR_ENG','reading','mcq',1,'Priya''s class was putting on a play about the planets, and Ms. Baker gave Priya the part of the Sun. The Sun had more lines than anyone else. When Priya read the script, her stomach felt full of butterflies.
+
+"I can''t do it," she told her grandfather that night. "Everyone will be staring at me, and what if I forget my words in front of the whole school?"
+
+Grandpa set down his newspaper and smiled. "When I was your age, I was terrified of singing in front of other people," he said. "Do you know what helped me? I practiced a little bit every day, and slowly the fear went away."
+
+So every evening after dinner, Priya practiced in the living room while Grandpa sat on the couch and pretended to be the audience. At first, Priya mumbled and looked at the floor. Grandpa cupped his hand around his ear. "The back row can''t hear you!" he joked. Priya laughed, took a deep breath, and spoke louder.
+
+Each night, she got a little better, and she learned to stand up straight and speak slowly and clearly. Soon she knew all of her lines by heart, and she even remembered some of the lines for the other planets.
+
+On the night of the play, the gym was packed with families. Priya peeked out from behind the curtain and saw rows and rows of faces. Her hands began to shake, but then she spotted Grandpa in the third row, and he gave her a big thumbs-up.
+
+The play began. Priya stepped into the bright light and said her first line in a strong, clear voice. Everything went well until a boy named Marcus, who played Mars, froze in the middle of the stage. His mouth opened, but no words came out, and the whole room became completely silent.
+
+Priya knew his line, so she leaned over and whispered it to him. Marcus nodded and said the line, and the play went on. Nobody in the audience even noticed.
+
+After the show, Marcus ran up to her. "Thanks for saving me," he said. "How did you know my part?"
+
+Priya smiled. "I practiced a lot," she said. Then she looked out at the third row, where Grandpa was clapping louder than anyone else in the gym.','How does Priya change from the beginning of the story to the end?',NULL,'["She goes from kind to unkind.","She goes from busy to bored.","She goes from happy to angry.","She goes from scared to confident."]',3,'At first Priya says she can''t do it, but at the end she speaks in a strong, clear voice and even helps a classmate.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-1221678de91a','KR_ENG','reading','mcq',1,'In a small fishing village by the sea, the people held a lantern festival every fall. Each child made a paper lantern. On the night of the festival, everyone carried their lanterns down to the beach. The lights helped the fishing boats find their way home in the dark.
+
+A boy named Kai wanted to make the most beautiful lantern of all. He worked on it for days. But his hands were clumsy, and his lantern came out lopsided. One side was taller than the other. The bottom was thick and heavy because he had used too much clay to hold the candle.
+
+The other children laughed when they saw it. "Your lantern looks like a sleepy duck," said a girl named Mei. Her own lantern was tall and thin, with fancy paper flowers on every side.
+
+Kai felt his face grow hot. He almost threw his lantern away, but his grandmother stopped him. "A lantern has one job," she said. "It must give light. Let us see if yours can do that."
+
+On the night of the festival, the sky was full of dark clouds. As the children walked to the beach, a strong wind began to blow off the sea. One by one, the tall, thin lanterns tipped over in the sand, and their candles went out. Mei''s lantern blew right out of her hands and rolled away.
+
+But Kai''s lantern did not tip. Its heavy bottom kept it steady, and its little flame kept burning behind the thick paper.
+
+Out on the water, a fishing boat was coming home late. The fisherman could not see the shore in the dark. Then he saw one small, steady light on the beach. He turned his boat toward it and landed safely. The fisherman was Mei''s father.
+
+The next morning, Mei came to Kai''s house. She looked down at the ground. "I''m sorry I laughed at your lantern," she said quietly. "It brought my father home."
+
+Kai smiled. "Maybe next year we can make lanterns together," he said. "You can make the flowers, and I will make the bottom."
+
+From then on, the people of the village made their lanterns with wide, heavy bottoms. They still added flowers, too. But they always remembered that a lantern does not need to be perfect. It only needs to shine.','What is the lesson of this story?',NULL,'["It is safer to stay home on stormy nights.","Children should not go to the beach at night.","Paper flowers make the best lanterns.","Something does not have to look perfect to be useful."]',3,'Kai''s lopsided lantern was the only one that kept shining, and it brought a boat home safely.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-48cd9d2aaa8b','KR_ENG','reading','mcq',1,'In a small fishing village by the sea, the people held a lantern festival every fall. Each child made a paper lantern. On the night of the festival, everyone carried their lanterns down to the beach. The lights helped the fishing boats find their way home in the dark.
+
+A boy named Kai wanted to make the most beautiful lantern of all. He worked on it for days. But his hands were clumsy, and his lantern came out lopsided. One side was taller than the other. The bottom was thick and heavy because he had used too much clay to hold the candle.
+
+The other children laughed when they saw it. "Your lantern looks like a sleepy duck," said a girl named Mei. Her own lantern was tall and thin, with fancy paper flowers on every side.
+
+Kai felt his face grow hot. He almost threw his lantern away, but his grandmother stopped him. "A lantern has one job," she said. "It must give light. Let us see if yours can do that."
+
+On the night of the festival, the sky was full of dark clouds. As the children walked to the beach, a strong wind began to blow off the sea. One by one, the tall, thin lanterns tipped over in the sand, and their candles went out. Mei''s lantern blew right out of her hands and rolled away.
+
+But Kai''s lantern did not tip. Its heavy bottom kept it steady, and its little flame kept burning behind the thick paper.
+
+Out on the water, a fishing boat was coming home late. The fisherman could not see the shore in the dark. Then he saw one small, steady light on the beach. He turned his boat toward it and landed safely. The fisherman was Mei''s father.
+
+The next morning, Mei came to Kai''s house. She looked down at the ground. "I''m sorry I laughed at your lantern," she said quietly. "It brought my father home."
+
+Kai smiled. "Maybe next year we can make lanterns together," he said. "You can make the flowers, and I will make the bottom."
+
+From then on, the people of the village made their lanterns with wide, heavy bottoms. They still added flowers, too. But they always remembered that a lantern does not need to be perfect. It only needs to shine.','Why did Kai''s lantern stay lit in the wind?',NULL,'["Kai held it high above his head.","Its heavy bottom kept it from tipping over.","It had more paper flowers than the others.","His grandmother carried it for him."]',1,'The story says Kai''s lantern did not tip because its heavy bottom kept it steady.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-d030d692d656','KR_ENG','reading','mcq',1,'In a small fishing village by the sea, the people held a lantern festival every fall. Each child made a paper lantern. On the night of the festival, everyone carried their lanterns down to the beach. The lights helped the fishing boats find their way home in the dark.
+
+A boy named Kai wanted to make the most beautiful lantern of all. He worked on it for days. But his hands were clumsy, and his lantern came out lopsided. One side was taller than the other. The bottom was thick and heavy because he had used too much clay to hold the candle.
+
+The other children laughed when they saw it. "Your lantern looks like a sleepy duck," said a girl named Mei. Her own lantern was tall and thin, with fancy paper flowers on every side.
+
+Kai felt his face grow hot. He almost threw his lantern away, but his grandmother stopped him. "A lantern has one job," she said. "It must give light. Let us see if yours can do that."
+
+On the night of the festival, the sky was full of dark clouds. As the children walked to the beach, a strong wind began to blow off the sea. One by one, the tall, thin lanterns tipped over in the sand, and their candles went out. Mei''s lantern blew right out of her hands and rolled away.
+
+But Kai''s lantern did not tip. Its heavy bottom kept it steady, and its little flame kept burning behind the thick paper.
+
+Out on the water, a fishing boat was coming home late. The fisherman could not see the shore in the dark. Then he saw one small, steady light on the beach. He turned his boat toward it and landed safely. The fisherman was Mei''s father.
+
+The next morning, Mei came to Kai''s house. She looked down at the ground. "I''m sorry I laughed at your lantern," she said quietly. "It brought my father home."
+
+Kai smiled. "Maybe next year we can make lanterns together," he said. "You can make the flowers, and I will make the bottom."
+
+From then on, the people of the village made their lanterns with wide, heavy bottoms. They still added flowers, too. But they always remembered that a lantern does not need to be perfect. It only needs to shine.','The word "lopsided" in the story means —',NULL,'["uneven, with one side higher than the other","very bright and colorful","wet from the rain","small enough to fit in a pocket"]',0,'The next sentence explains that one side of the lantern was taller than the other, so lopsided means uneven.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-c56b1b53424e','KR_ENG','reading','mcq',1,'In a small fishing village by the sea, the people held a lantern festival every fall. Each child made a paper lantern. On the night of the festival, everyone carried their lanterns down to the beach. The lights helped the fishing boats find their way home in the dark.
+
+A boy named Kai wanted to make the most beautiful lantern of all. He worked on it for days. But his hands were clumsy, and his lantern came out lopsided. One side was taller than the other. The bottom was thick and heavy because he had used too much clay to hold the candle.
+
+The other children laughed when they saw it. "Your lantern looks like a sleepy duck," said a girl named Mei. Her own lantern was tall and thin, with fancy paper flowers on every side.
+
+Kai felt his face grow hot. He almost threw his lantern away, but his grandmother stopped him. "A lantern has one job," she said. "It must give light. Let us see if yours can do that."
+
+On the night of the festival, the sky was full of dark clouds. As the children walked to the beach, a strong wind began to blow off the sea. One by one, the tall, thin lanterns tipped over in the sand, and their candles went out. Mei''s lantern blew right out of her hands and rolled away.
+
+But Kai''s lantern did not tip. Its heavy bottom kept it steady, and its little flame kept burning behind the thick paper.
+
+Out on the water, a fishing boat was coming home late. The fisherman could not see the shore in the dark. Then he saw one small, steady light on the beach. He turned his boat toward it and landed safely. The fisherman was Mei''s father.
+
+The next morning, Mei came to Kai''s house. She looked down at the ground. "I''m sorry I laughed at your lantern," she said quietly. "It brought my father home."
+
+Kai smiled. "Maybe next year we can make lanterns together," he said. "You can make the flowers, and I will make the bottom."
+
+From then on, the people of the village made their lanterns with wide, heavy bottoms. They still added flowers, too. But they always remembered that a lantern does not need to be perfect. It only needs to shine.','Why did Mei look down at the ground when she came to Kai''s house?',NULL,'["She was looking for her lost lantern.","She was afraid of Kai''s grandmother.","She felt sorry and a little ashamed for laughing at him.","She wanted to show Kai a new lantern."]',2,'Mei had laughed at Kai''s lantern, and then it saved her father, so she felt bad about what she had done.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-1965a86b1deb','KR_ENG','reading','mcq',1,'In a small fishing village by the sea, the people held a lantern festival every fall. Each child made a paper lantern. On the night of the festival, everyone carried their lanterns down to the beach. The lights helped the fishing boats find their way home in the dark.
+
+A boy named Kai wanted to make the most beautiful lantern of all. He worked on it for days. But his hands were clumsy, and his lantern came out lopsided. One side was taller than the other. The bottom was thick and heavy because he had used too much clay to hold the candle.
+
+The other children laughed when they saw it. "Your lantern looks like a sleepy duck," said a girl named Mei. Her own lantern was tall and thin, with fancy paper flowers on every side.
+
+Kai felt his face grow hot. He almost threw his lantern away, but his grandmother stopped him. "A lantern has one job," she said. "It must give light. Let us see if yours can do that."
+
+On the night of the festival, the sky was full of dark clouds. As the children walked to the beach, a strong wind began to blow off the sea. One by one, the tall, thin lanterns tipped over in the sand, and their candles went out. Mei''s lantern blew right out of her hands and rolled away.
+
+But Kai''s lantern did not tip. Its heavy bottom kept it steady, and its little flame kept burning behind the thick paper.
+
+Out on the water, a fishing boat was coming home late. The fisherman could not see the shore in the dark. Then he saw one small, steady light on the beach. He turned his boat toward it and landed safely. The fisherman was Mei''s father.
+
+The next morning, Mei came to Kai''s house. She looked down at the ground. "I''m sorry I laughed at your lantern," she said quietly. "It brought my father home."
+
+Kai smiled. "Maybe next year we can make lanterns together," he said. "You can make the flowers, and I will make the bottom."
+
+From then on, the people of the village made their lanterns with wide, heavy bottoms. They still added flowers, too. But they always remembered that a lantern does not need to be perfect. It only needs to shine.','What happened right after the strong wind began to blow?',NULL,'["The fisherman landed his boat safely.","Kai''s grandmother stopped him from throwing his lantern away.","Mei apologized to Kai.","The tall, thin lanterns tipped over and went out."]',3,'As soon as the wind began to blow, the tall, thin lanterns tipped over in the sand and their candles went out.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-6074198fd659','KR_ENG','reading','mcq',1,'One rainy Saturday, Noah heard a tiny sound coming from under the porch. He knelt down and peeked into the darkness, and two bright green eyes looked back at him. It was a small gray kitten, wet and shivering.
+
+Noah carefully lifted the kitten and carried it inside, where his mom helped him dry it with a soft towel and gave it a little dish of water. The kitten purred happily and rubbed its head against Noah''s hand.
+
+"Can we keep her?" Noah asked. He had wanted a pet for as long as he could remember.
+
+Mom carefully studied the kitten. "She is very clean, and she is not too thin," she said. "I think she belongs to someone, and that person might be looking for her right now."
+
+Noah''s heart sank. He knew how sad he would feel if he lost a pet, but he still did not want to give the kitten back.
+
+That night, Noah could not fall asleep because he kept thinking about the kitten''s owner, who might be crying at home. In the morning, he made up his mind, so he got out paper and markers and made five colorful signs. Under the words "FOUND: SMALL GRAY KITTEN," he drew a picture of her and wrote his mom''s phone number. Then Noah and his mom taped the signs to poles all along the street.
+
+For two days, nobody called, and Noah began to hope that the kitten could stay.
+
+On the third day, the phone rang. It was an old man named Mr. Han, who lived four blocks away. "That is my Misty!" he said. "She slipped out the door during the storm, and I have looked everywhere for her."
+
+When Mr. Han came to the door, the kitten jumped right into his arms. "Thank you, young man," he said. "You did the right thing, even though it was hard."
+
+Noah tried to smile, but he felt a little sad as he watched them leave.
+
+A week later, Mr. Han called again. "Misty misses you," he said. "Would you like to come over and play with her on Saturdays?" Noah agreed right away.
+
+Now every Saturday, Noah visits Misty and Mr. Han, who is teaching him to play checkers while Misty curls up in Noah''s lap. Noah did not get a pet, but he got two new friends.','What is the theme of this story?',NULL,'["Doing the right thing can be hard, but it can lead to something good.","It is easy to find a lost pet.","Everyone who finds a pet should keep it.","Kittens should never be allowed to go outside."]',0,'Noah found the owner even though he wanted the kitten, and in the end he gained two new friends.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-a96013b65734','KR_ENG','reading','mcq',1,'One rainy Saturday, Noah heard a tiny sound coming from under the porch. He knelt down and peeked into the darkness, and two bright green eyes looked back at him. It was a small gray kitten, wet and shivering.
+
+Noah carefully lifted the kitten and carried it inside, where his mom helped him dry it with a soft towel and gave it a little dish of water. The kitten purred happily and rubbed its head against Noah''s hand.
+
+"Can we keep her?" Noah asked. He had wanted a pet for as long as he could remember.
+
+Mom carefully studied the kitten. "She is very clean, and she is not too thin," she said. "I think she belongs to someone, and that person might be looking for her right now."
+
+Noah''s heart sank. He knew how sad he would feel if he lost a pet, but he still did not want to give the kitten back.
+
+That night, Noah could not fall asleep because he kept thinking about the kitten''s owner, who might be crying at home. In the morning, he made up his mind, so he got out paper and markers and made five colorful signs. Under the words "FOUND: SMALL GRAY KITTEN," he drew a picture of her and wrote his mom''s phone number. Then Noah and his mom taped the signs to poles all along the street.
+
+For two days, nobody called, and Noah began to hope that the kitten could stay.
+
+On the third day, the phone rang. It was an old man named Mr. Han, who lived four blocks away. "That is my Misty!" he said. "She slipped out the door during the storm, and I have looked everywhere for her."
+
+When Mr. Han came to the door, the kitten jumped right into his arms. "Thank you, young man," he said. "You did the right thing, even though it was hard."
+
+Noah tried to smile, but he felt a little sad as he watched them leave.
+
+A week later, Mr. Han called again. "Misty misses you," he said. "Would you like to come over and play with her on Saturdays?" Noah agreed right away.
+
+Now every Saturday, Noah visits Misty and Mr. Han, who is teaching him to play checkers while Misty curls up in Noah''s lap. Noah did not get a pet, but he got two new friends.','Why did Mom think the kitten belonged to someone?',NULL,'["The kitten was hiding under their porch.","The kitten was clean and not too thin.","A neighbor said she had lost a kitten.","The kitten had a name tag on its collar."]',1,'Mom said the kitten was very clean and not too thin, so she thought someone was taking care of it.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-d614ae9df3b6','KR_ENG','reading','mcq',1,'One rainy Saturday, Noah heard a tiny sound coming from under the porch. He knelt down and peeked into the darkness, and two bright green eyes looked back at him. It was a small gray kitten, wet and shivering.
+
+Noah carefully lifted the kitten and carried it inside, where his mom helped him dry it with a soft towel and gave it a little dish of water. The kitten purred happily and rubbed its head against Noah''s hand.
+
+"Can we keep her?" Noah asked. He had wanted a pet for as long as he could remember.
+
+Mom carefully studied the kitten. "She is very clean, and she is not too thin," she said. "I think she belongs to someone, and that person might be looking for her right now."
+
+Noah''s heart sank. He knew how sad he would feel if he lost a pet, but he still did not want to give the kitten back.
+
+That night, Noah could not fall asleep because he kept thinking about the kitten''s owner, who might be crying at home. In the morning, he made up his mind, so he got out paper and markers and made five colorful signs. Under the words "FOUND: SMALL GRAY KITTEN," he drew a picture of her and wrote his mom''s phone number. Then Noah and his mom taped the signs to poles all along the street.
+
+For two days, nobody called, and Noah began to hope that the kitten could stay.
+
+On the third day, the phone rang. It was an old man named Mr. Han, who lived four blocks away. "That is my Misty!" he said. "She slipped out the door during the storm, and I have looked everywhere for her."
+
+When Mr. Han came to the door, the kitten jumped right into his arms. "Thank you, young man," he said. "You did the right thing, even though it was hard."
+
+Noah tried to smile, but he felt a little sad as he watched them leave.
+
+A week later, Mr. Han called again. "Misty misses you," he said. "Would you like to come over and play with her on Saturdays?" Noah agreed right away.
+
+Now every Saturday, Noah visits Misty and Mr. Han, who is teaching him to play checkers while Misty curls up in Noah''s lap. Noah did not get a pet, but he got two new friends.','The story says "Noah''s heart sank." This shows that Noah felt —',NULL,'["disappointed","excited","silly","brave"]',0,'Noah wanted to keep the kitten, so he felt disappointed when Mom said it probably belonged to someone.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-8e641c943f72','KR_ENG','reading','mcq',1,'One rainy Saturday, Noah heard a tiny sound coming from under the porch. He knelt down and peeked into the darkness, and two bright green eyes looked back at him. It was a small gray kitten, wet and shivering.
+
+Noah carefully lifted the kitten and carried it inside, where his mom helped him dry it with a soft towel and gave it a little dish of water. The kitten purred happily and rubbed its head against Noah''s hand.
+
+"Can we keep her?" Noah asked. He had wanted a pet for as long as he could remember.
+
+Mom carefully studied the kitten. "She is very clean, and she is not too thin," she said. "I think she belongs to someone, and that person might be looking for her right now."
+
+Noah''s heart sank. He knew how sad he would feel if he lost a pet, but he still did not want to give the kitten back.
+
+That night, Noah could not fall asleep because he kept thinking about the kitten''s owner, who might be crying at home. In the morning, he made up his mind, so he got out paper and markers and made five colorful signs. Under the words "FOUND: SMALL GRAY KITTEN," he drew a picture of her and wrote his mom''s phone number. Then Noah and his mom taped the signs to poles all along the street.
+
+For two days, nobody called, and Noah began to hope that the kitten could stay.
+
+On the third day, the phone rang. It was an old man named Mr. Han, who lived four blocks away. "That is my Misty!" he said. "She slipped out the door during the storm, and I have looked everywhere for her."
+
+When Mr. Han came to the door, the kitten jumped right into his arms. "Thank you, young man," he said. "You did the right thing, even though it was hard."
+
+Noah tried to smile, but he felt a little sad as he watched them leave.
+
+A week later, Mr. Han called again. "Misty misses you," he said. "Would you like to come over and play with her on Saturdays?" Noah agreed right away.
+
+Now every Saturday, Noah visits Misty and Mr. Han, who is teaching him to play checkers while Misty curls up in Noah''s lap. Noah did not get a pet, but he got two new friends.','Why could Noah not fall asleep that night?',NULL,'["He kept thinking about how sad the kitten''s owner might be.","He was worried about the storm outside.","The kitten was meowing too loudly.","He was excited about his checkers game."]',0,'The story says he kept thinking about the kitten''s owner, who might be crying at home.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-3580adcebae8','KR_ENG','reading','mcq',1,'One rainy Saturday, Noah heard a tiny sound coming from under the porch. He knelt down and peeked into the darkness, and two bright green eyes looked back at him. It was a small gray kitten, wet and shivering.
+
+Noah carefully lifted the kitten and carried it inside, where his mom helped him dry it with a soft towel and gave it a little dish of water. The kitten purred happily and rubbed its head against Noah''s hand.
+
+"Can we keep her?" Noah asked. He had wanted a pet for as long as he could remember.
+
+Mom carefully studied the kitten. "She is very clean, and she is not too thin," she said. "I think she belongs to someone, and that person might be looking for her right now."
+
+Noah''s heart sank. He knew how sad he would feel if he lost a pet, but he still did not want to give the kitten back.
+
+That night, Noah could not fall asleep because he kept thinking about the kitten''s owner, who might be crying at home. In the morning, he made up his mind, so he got out paper and markers and made five colorful signs. Under the words "FOUND: SMALL GRAY KITTEN," he drew a picture of her and wrote his mom''s phone number. Then Noah and his mom taped the signs to poles all along the street.
+
+For two days, nobody called, and Noah began to hope that the kitten could stay.
+
+On the third day, the phone rang. It was an old man named Mr. Han, who lived four blocks away. "That is my Misty!" he said. "She slipped out the door during the storm, and I have looked everywhere for her."
+
+When Mr. Han came to the door, the kitten jumped right into his arms. "Thank you, young man," he said. "You did the right thing, even though it was hard."
+
+Noah tried to smile, but he felt a little sad as he watched them leave.
+
+A week later, Mr. Han called again. "Misty misses you," he said. "Would you like to come over and play with her on Saturdays?" Noah agreed right away.
+
+Now every Saturday, Noah visits Misty and Mr. Han, who is teaching him to play checkers while Misty curls up in Noah''s lap. Noah did not get a pet, but he got two new friends.','What did Noah do right after he made the signs?',NULL,'["He named the kitten Pebble.","He and his mom taped them to poles along the street.","He gave the kitten a dish of water.","He called Mr. Han on the phone."]',1,'After he finished the five signs, Noah and his mom taped them to poles all along the street.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-5ecdcc9b9b25','KR_ENG','reading','mcq',1,'Bees are busy insects. They buzz from flower to flower all day long. But did you know that bees help farmers grow much of the food we eat? Let''s find out how.
+
+Honeybees live together in a home called a hive. A hive can hold thousands of bees. Each hive has one queen bee, and her job is to lay eggs. Most of the other bees are worker bees. Worker bees clean the hive, care for the young bees, and guard the door. The older worker bees fly out to find food.
+
+Bees get two kinds of food from flowers. The first is nectar, a sweet liquid inside the flower. Bees carry nectar back to the hive and turn it into honey. The second is pollen, a yellow powder made by flowers. Bees eat pollen because it helps them stay strong and healthy.
+
+When a bee lands on a flower to drink nectar, pollen sticks to the tiny hairs on its body. Then the bee flies to another flower of the same kind. Some of the pollen falls off and lands on the new flower. Moving pollen from one flower to another is called pollination. Many flowers need pollen from another flower to make seeds and fruit. Without pollination, many plants could not make apples, berries, or melons.
+
+How do bees find the best flowers? A worker bee that finds a good patch of flowers flies back to the hive and does a special dance. She wiggles and turns in a pattern. The dance tells the other bees which way to fly and how far to go. Soon, many bees are on their way to the flowers.
+
+Bees are very important to people. About one out of every three bites of food we eat comes from plants that need bees and other animals to pollinate them. Some farmers even bring hives to their fields so the bees can pollinate their crops.
+
+Today, many bees are in trouble. Some places do not have enough flowers. Some sprays that kill bugs can also hurt bees. But people can help. Families can plant flowers in their yards. Schools can grow bee gardens. Even a few pots of flowers on a porch can give bees food.
+
+The next time you hear a bee buzzing, remember how hard it works. That little insect helps put food on your table.','What is the main idea of this article?',NULL,'["Bees dance to have fun inside the hive.","Bees are dangerous insects that people should stay away from.","Honey is the most important food that people eat.","Bees help plants make fruit and seeds, so they are important to people."]',3,'The article explains how bees pollinate plants and why that matters for the food people eat.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-f5673e39dc8f','KR_ENG','reading','mcq',1,'Bees are busy insects. They buzz from flower to flower all day long. But did you know that bees help farmers grow much of the food we eat? Let''s find out how.
+
+Honeybees live together in a home called a hive. A hive can hold thousands of bees. Each hive has one queen bee, and her job is to lay eggs. Most of the other bees are worker bees. Worker bees clean the hive, care for the young bees, and guard the door. The older worker bees fly out to find food.
+
+Bees get two kinds of food from flowers. The first is nectar, a sweet liquid inside the flower. Bees carry nectar back to the hive and turn it into honey. The second is pollen, a yellow powder made by flowers. Bees eat pollen because it helps them stay strong and healthy.
+
+When a bee lands on a flower to drink nectar, pollen sticks to the tiny hairs on its body. Then the bee flies to another flower of the same kind. Some of the pollen falls off and lands on the new flower. Moving pollen from one flower to another is called pollination. Many flowers need pollen from another flower to make seeds and fruit. Without pollination, many plants could not make apples, berries, or melons.
+
+How do bees find the best flowers? A worker bee that finds a good patch of flowers flies back to the hive and does a special dance. She wiggles and turns in a pattern. The dance tells the other bees which way to fly and how far to go. Soon, many bees are on their way to the flowers.
+
+Bees are very important to people. About one out of every three bites of food we eat comes from plants that need bees and other animals to pollinate them. Some farmers even bring hives to their fields so the bees can pollinate their crops.
+
+Today, many bees are in trouble. Some places do not have enough flowers. Some sprays that kill bugs can also hurt bees. But people can help. Families can plant flowers in their yards. Schools can grow bee gardens. Even a few pots of flowers on a porch can give bees food.
+
+The next time you hear a bee buzzing, remember how hard it works. That little insect helps put food on your table.','What is the queen bee''s job?',NULL,'["to find new flowers","to lay eggs","to guard the door","to make honey from nectar"]',1,'The article says each hive has one queen bee, and her job is to lay eggs.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-64e0ee779331','KR_ENG','reading','mcq',1,'Bees are busy insects. They buzz from flower to flower all day long. But did you know that bees help farmers grow much of the food we eat? Let''s find out how.
+
+Honeybees live together in a home called a hive. A hive can hold thousands of bees. Each hive has one queen bee, and her job is to lay eggs. Most of the other bees are worker bees. Worker bees clean the hive, care for the young bees, and guard the door. The older worker bees fly out to find food.
+
+Bees get two kinds of food from flowers. The first is nectar, a sweet liquid inside the flower. Bees carry nectar back to the hive and turn it into honey. The second is pollen, a yellow powder made by flowers. Bees eat pollen because it helps them stay strong and healthy.
+
+When a bee lands on a flower to drink nectar, pollen sticks to the tiny hairs on its body. Then the bee flies to another flower of the same kind. Some of the pollen falls off and lands on the new flower. Moving pollen from one flower to another is called pollination. Many flowers need pollen from another flower to make seeds and fruit. Without pollination, many plants could not make apples, berries, or melons.
+
+How do bees find the best flowers? A worker bee that finds a good patch of flowers flies back to the hive and does a special dance. She wiggles and turns in a pattern. The dance tells the other bees which way to fly and how far to go. Soon, many bees are on their way to the flowers.
+
+Bees are very important to people. About one out of every three bites of food we eat comes from plants that need bees and other animals to pollinate them. Some farmers even bring hives to their fields so the bees can pollinate their crops.
+
+Today, many bees are in trouble. Some places do not have enough flowers. Some sprays that kill bugs can also hurt bees. But people can help. Families can plant flowers in their yards. Schools can grow bee gardens. Even a few pots of flowers on a porch can give bees food.
+
+The next time you hear a bee buzzing, remember how hard it works. That little insect helps put food on your table.','In the article, the word "pollination" means —',NULL,'["turning nectar into honey","moving pollen from one flower to another","spraying plants to kill bugs","building a new hive"]',1,'The article explains that moving pollen from one flower to another is called pollination.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-607ee4b4314b','KR_ENG','reading','mcq',1,'Bees are busy insects. They buzz from flower to flower all day long. But did you know that bees help farmers grow much of the food we eat? Let''s find out how.
+
+Honeybees live together in a home called a hive. A hive can hold thousands of bees. Each hive has one queen bee, and her job is to lay eggs. Most of the other bees are worker bees. Worker bees clean the hive, care for the young bees, and guard the door. The older worker bees fly out to find food.
+
+Bees get two kinds of food from flowers. The first is nectar, a sweet liquid inside the flower. Bees carry nectar back to the hive and turn it into honey. The second is pollen, a yellow powder made by flowers. Bees eat pollen because it helps them stay strong and healthy.
+
+When a bee lands on a flower to drink nectar, pollen sticks to the tiny hairs on its body. Then the bee flies to another flower of the same kind. Some of the pollen falls off and lands on the new flower. Moving pollen from one flower to another is called pollination. Many flowers need pollen from another flower to make seeds and fruit. Without pollination, many plants could not make apples, berries, or melons.
+
+How do bees find the best flowers? A worker bee that finds a good patch of flowers flies back to the hive and does a special dance. She wiggles and turns in a pattern. The dance tells the other bees which way to fly and how far to go. Soon, many bees are on their way to the flowers.
+
+Bees are very important to people. About one out of every three bites of food we eat comes from plants that need bees and other animals to pollinate them. Some farmers even bring hives to their fields so the bees can pollinate their crops.
+
+Today, many bees are in trouble. Some places do not have enough flowers. Some sprays that kill bugs can also hurt bees. But people can help. Families can plant flowers in their yards. Schools can grow bee gardens. Even a few pots of flowers on a porch can give bees food.
+
+The next time you hear a bee buzzing, remember how hard it works. That little insect helps put food on your table.','Why does the author tell about the bee dance?',NULL,'["to describe how the queen bee lays eggs","to show that bees like music","to explain why bees are in trouble","to explain how bees tell other bees where to find flowers"]',3,'The dance tells other bees which way to fly and how far to go to reach the flowers.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-7558d42cb05a','KR_ENG','reading','mcq',1,'Bees are busy insects. They buzz from flower to flower all day long. But did you know that bees help farmers grow much of the food we eat? Let''s find out how.
+
+Honeybees live together in a home called a hive. A hive can hold thousands of bees. Each hive has one queen bee, and her job is to lay eggs. Most of the other bees are worker bees. Worker bees clean the hive, care for the young bees, and guard the door. The older worker bees fly out to find food.
+
+Bees get two kinds of food from flowers. The first is nectar, a sweet liquid inside the flower. Bees carry nectar back to the hive and turn it into honey. The second is pollen, a yellow powder made by flowers. Bees eat pollen because it helps them stay strong and healthy.
+
+When a bee lands on a flower to drink nectar, pollen sticks to the tiny hairs on its body. Then the bee flies to another flower of the same kind. Some of the pollen falls off and lands on the new flower. Moving pollen from one flower to another is called pollination. Many flowers need pollen from another flower to make seeds and fruit. Without pollination, many plants could not make apples, berries, or melons.
+
+How do bees find the best flowers? A worker bee that finds a good patch of flowers flies back to the hive and does a special dance. She wiggles and turns in a pattern. The dance tells the other bees which way to fly and how far to go. Soon, many bees are on their way to the flowers.
+
+Bees are very important to people. About one out of every three bites of food we eat comes from plants that need bees and other animals to pollinate them. Some farmers even bring hives to their fields so the bees can pollinate their crops.
+
+Today, many bees are in trouble. Some places do not have enough flowers. Some sprays that kill bugs can also hurt bees. But people can help. Families can plant flowers in their yards. Schools can grow bee gardens. Even a few pots of flowers on a porch can give bees food.
+
+The next time you hear a bee buzzing, remember how hard it works. That little insect helps put food on your table.','Based on the article, what would most likely happen if there were no bees near an apple farm?',NULL,'["The apples would grow bigger.","The apple trees would grow faster.","Fewer apples would grow.","The apple trees would make more honey."]',2,'Apples need pollination to grow, and bees do much of that work, so fewer apples would grow without them.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-f1c398da5ad3','KR_ENG','reading','mcq',1,'Have you ever stuck a picture to a refrigerator with a magnet? A magnet is an object that can pull some metal things toward it without even touching them. This pull is called a force. Magnets are all around us, and they are fun to explore.
+
+Magnets do not pull on everything. Try holding a magnet near a wooden pencil, a rubber eraser, or a piece of paper. Nothing happens. Now hold it near a steel paper clip or an iron nail. The clip jumps right to the magnet! Magnets attract things made of iron and steel. Attract means to pull toward. Most other materials, like wood, plastic, and glass, are not attracted to magnets.
+
+Every magnet has two ends called poles. One end is the north pole, and the other end is the south pole. The pull of a magnet is strongest at its poles. If you put two magnets near each other, something interesting happens. If you put a north pole near a south pole, the magnets snap together. Opposite poles attract. But if you put two north poles together, the magnets push away from each other. You can feel them pushing! Two south poles push apart, too. When magnets push away from each other, we say they repel.
+
+A magnet''s force can even pass through some things. Put a paper clip on top of a sheet of paper. Then move a magnet under the paper. The paper clip will slide along as if by magic. The force of the magnet goes right through the thin paper.
+
+Did you know that the Earth is like a giant magnet? That is why a compass works. A compass has a small magnetic needle that can spin. The Earth''s magnetic force pulls on the needle so that one end always points north. For hundreds of years, sailors and travelers have used compasses to find their way.
+
+People use magnets in many ways. Magnets keep cabinet doors closed. They are inside speakers, computers, and toys. Some trains even use giant magnets to float above the track. These trains can go very fast because they do not rub against the rails.
+
+Magnets may be small, but their force is powerful. The next time you see a magnet, try to find out what it will pick up!','What is this article mostly about?',NULL,'["how trains were invented","how to build a refrigerator","why sailors travel on the ocean","how magnets pull and push things and how people use them"]',3,'The article explains what magnets attract, how poles attract and repel, and many ways people use magnets.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-30568e05f2b4','KR_ENG','reading','mcq',1,'Have you ever stuck a picture to a refrigerator with a magnet? A magnet is an object that can pull some metal things toward it without even touching them. This pull is called a force. Magnets are all around us, and they are fun to explore.
+
+Magnets do not pull on everything. Try holding a magnet near a wooden pencil, a rubber eraser, or a piece of paper. Nothing happens. Now hold it near a steel paper clip or an iron nail. The clip jumps right to the magnet! Magnets attract things made of iron and steel. Attract means to pull toward. Most other materials, like wood, plastic, and glass, are not attracted to magnets.
+
+Every magnet has two ends called poles. One end is the north pole, and the other end is the south pole. The pull of a magnet is strongest at its poles. If you put two magnets near each other, something interesting happens. If you put a north pole near a south pole, the magnets snap together. Opposite poles attract. But if you put two north poles together, the magnets push away from each other. You can feel them pushing! Two south poles push apart, too. When magnets push away from each other, we say they repel.
+
+A magnet''s force can even pass through some things. Put a paper clip on top of a sheet of paper. Then move a magnet under the paper. The paper clip will slide along as if by magic. The force of the magnet goes right through the thin paper.
+
+Did you know that the Earth is like a giant magnet? That is why a compass works. A compass has a small magnetic needle that can spin. The Earth''s magnetic force pulls on the needle so that one end always points north. For hundreds of years, sailors and travelers have used compasses to find their way.
+
+People use magnets in many ways. Magnets keep cabinet doors closed. They are inside speakers, computers, and toys. Some trains even use giant magnets to float above the track. These trains can go very fast because they do not rub against the rails.
+
+Magnets may be small, but their force is powerful. The next time you see a magnet, try to find out what it will pick up!','Which object would a magnet attract?',NULL,'["a rubber eraser","a wooden pencil","a glass marble","an iron nail"]',3,'The article says magnets attract things made of iron and steel, but not wood, rubber, or glass.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-f27bca9b8012','KR_ENG','reading','mcq',1,'Have you ever stuck a picture to a refrigerator with a magnet? A magnet is an object that can pull some metal things toward it without even touching them. This pull is called a force. Magnets are all around us, and they are fun to explore.
+
+Magnets do not pull on everything. Try holding a magnet near a wooden pencil, a rubber eraser, or a piece of paper. Nothing happens. Now hold it near a steel paper clip or an iron nail. The clip jumps right to the magnet! Magnets attract things made of iron and steel. Attract means to pull toward. Most other materials, like wood, plastic, and glass, are not attracted to magnets.
+
+Every magnet has two ends called poles. One end is the north pole, and the other end is the south pole. The pull of a magnet is strongest at its poles. If you put two magnets near each other, something interesting happens. If you put a north pole near a south pole, the magnets snap together. Opposite poles attract. But if you put two north poles together, the magnets push away from each other. You can feel them pushing! Two south poles push apart, too. When magnets push away from each other, we say they repel.
+
+A magnet''s force can even pass through some things. Put a paper clip on top of a sheet of paper. Then move a magnet under the paper. The paper clip will slide along as if by magic. The force of the magnet goes right through the thin paper.
+
+Did you know that the Earth is like a giant magnet? That is why a compass works. A compass has a small magnetic needle that can spin. The Earth''s magnetic force pulls on the needle so that one end always points north. For hundreds of years, sailors and travelers have used compasses to find their way.
+
+People use magnets in many ways. Magnets keep cabinet doors closed. They are inside speakers, computers, and toys. Some trains even use giant magnets to float above the track. These trains can go very fast because they do not rub against the rails.
+
+Magnets may be small, but their force is powerful. The next time you see a magnet, try to find out what it will pick up!','In the article, the word "repel" means —',NULL,'["spin around","pull together","push away","stay still"]',2,'The article says that when magnets push away from each other, they repel.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-00c7c276ebd4','KR_ENG','reading','mcq',1,'Have you ever stuck a picture to a refrigerator with a magnet? A magnet is an object that can pull some metal things toward it without even touching them. This pull is called a force. Magnets are all around us, and they are fun to explore.
+
+Magnets do not pull on everything. Try holding a magnet near a wooden pencil, a rubber eraser, or a piece of paper. Nothing happens. Now hold it near a steel paper clip or an iron nail. The clip jumps right to the magnet! Magnets attract things made of iron and steel. Attract means to pull toward. Most other materials, like wood, plastic, and glass, are not attracted to magnets.
+
+Every magnet has two ends called poles. One end is the north pole, and the other end is the south pole. The pull of a magnet is strongest at its poles. If you put two magnets near each other, something interesting happens. If you put a north pole near a south pole, the magnets snap together. Opposite poles attract. But if you put two north poles together, the magnets push away from each other. You can feel them pushing! Two south poles push apart, too. When magnets push away from each other, we say they repel.
+
+A magnet''s force can even pass through some things. Put a paper clip on top of a sheet of paper. Then move a magnet under the paper. The paper clip will slide along as if by magic. The force of the magnet goes right through the thin paper.
+
+Did you know that the Earth is like a giant magnet? That is why a compass works. A compass has a small magnetic needle that can spin. The Earth''s magnetic force pulls on the needle so that one end always points north. For hundreds of years, sailors and travelers have used compasses to find their way.
+
+People use magnets in many ways. Magnets keep cabinet doors closed. They are inside speakers, computers, and toys. Some trains even use giant magnets to float above the track. These trains can go very fast because they do not rub against the rails.
+
+Magnets may be small, but their force is powerful. The next time you see a magnet, try to find out what it will pick up!','Why does the author ask readers to hold a magnet near a pencil and then near a paper clip?',NULL,'["to explain why magnets have two poles","to show that magnets attract only some materials","to show that pencils are heavier than paper clips","to teach readers how to make a compass"]',1,'Nothing happens with the pencil, but the paper clip jumps to the magnet, which shows magnets attract only certain materials.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-2765f1d59471','KR_ENG','reading','mcq',1,'Have you ever stuck a picture to a refrigerator with a magnet? A magnet is an object that can pull some metal things toward it without even touching them. This pull is called a force. Magnets are all around us, and they are fun to explore.
+
+Magnets do not pull on everything. Try holding a magnet near a wooden pencil, a rubber eraser, or a piece of paper. Nothing happens. Now hold it near a steel paper clip or an iron nail. The clip jumps right to the magnet! Magnets attract things made of iron and steel. Attract means to pull toward. Most other materials, like wood, plastic, and glass, are not attracted to magnets.
+
+Every magnet has two ends called poles. One end is the north pole, and the other end is the south pole. The pull of a magnet is strongest at its poles. If you put two magnets near each other, something interesting happens. If you put a north pole near a south pole, the magnets snap together. Opposite poles attract. But if you put two north poles together, the magnets push away from each other. You can feel them pushing! Two south poles push apart, too. When magnets push away from each other, we say they repel.
+
+A magnet''s force can even pass through some things. Put a paper clip on top of a sheet of paper. Then move a magnet under the paper. The paper clip will slide along as if by magic. The force of the magnet goes right through the thin paper.
+
+Did you know that the Earth is like a giant magnet? That is why a compass works. A compass has a small magnetic needle that can spin. The Earth''s magnetic force pulls on the needle so that one end always points north. For hundreds of years, sailors and travelers have used compasses to find their way.
+
+People use magnets in many ways. Magnets keep cabinet doors closed. They are inside speakers, computers, and toys. Some trains even use giant magnets to float above the track. These trains can go very fast because they do not rub against the rails.
+
+Magnets may be small, but their force is powerful. The next time you see a magnet, try to find out what it will pick up!','Why does a compass needle always point north?',NULL,'["The Earth acts like a giant magnet and pulls on the needle.","The needle is made of wood.","Sailors turn the needle by hand.","The wind pushes the needle north."]',0,'The article says the Earth is like a giant magnet, and its force pulls on the needle so one end points north.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-3537bd0e0166','KR_ENG','reading','mcq',1,'Close your eyes and touch the page of a book. Can you read the words with your fingers? People who are blind can read with their fingers by using braille. It was invented by a boy who was only fifteen years old.
+
+Louis Braille was born in France in 1809. His father made saddles and other leather goods. When Louis was three years old, he was playing in his father''s workshop. He picked up a sharp tool, and it slipped and hurt his eye. Soon the other eye became sick, too. By the time he was five, Louis was completely blind.
+
+Louis was a bright and curious child. He wanted to learn, so his parents sent him to the village school. He listened carefully and remembered what he heard. But he could not read books on his own, and that made him sad.
+
+When Louis was ten, he went to a special school for blind children in Paris. The school had a few books with large raised letters. Students traced the letters with their fingers. But the books were huge and heavy, and reading them was very slow. The school had only a few of them.
+
+One day, a man who had been an army captain visited the school. He showed the students a code he had made for soldiers. The code used raised dots pressed into thick paper. Soldiers could read messages by touch at night, without any light. The code was hard to learn, but it gave Louis an idea.
+
+Louis worked on his own code for years. He worked at night and during school breaks. At last, when he was fifteen, he finished it. His code used only six dots in two columns of three. Each letter of the alphabet had its own pattern of dots. Because the patterns were small, a reader could feel a whole letter with one fingertip. That made reading much faster.
+
+At first, many teachers did not want to use the new code. They liked the old way better. But blind students loved it, and they kept using it. After Louis died, braille spread around the world.
+
+Today, braille is used in almost every country. You can find it on elevator buttons, signs, and books. Louis Braille''s idea opened the world of reading to millions of people.','What is the main idea of this article?',NULL,'["Louis Braille, who was blind, made a code that helps blind people read.","Books with large raised letters were easy to carry.","Louis Braille''s father made saddles and leather goods.","Soldiers in France needed to read messages at night."]',0,'The article tells how Louis Braille lost his sight and then invented a reading code used around the world.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-510b108770f6','KR_ENG','reading','mcq',1,'Close your eyes and touch the page of a book. Can you read the words with your fingers? People who are blind can read with their fingers by using braille. It was invented by a boy who was only fifteen years old.
+
+Louis Braille was born in France in 1809. His father made saddles and other leather goods. When Louis was three years old, he was playing in his father''s workshop. He picked up a sharp tool, and it slipped and hurt his eye. Soon the other eye became sick, too. By the time he was five, Louis was completely blind.
+
+Louis was a bright and curious child. He wanted to learn, so his parents sent him to the village school. He listened carefully and remembered what he heard. But he could not read books on his own, and that made him sad.
+
+When Louis was ten, he went to a special school for blind children in Paris. The school had a few books with large raised letters. Students traced the letters with their fingers. But the books were huge and heavy, and reading them was very slow. The school had only a few of them.
+
+One day, a man who had been an army captain visited the school. He showed the students a code he had made for soldiers. The code used raised dots pressed into thick paper. Soldiers could read messages by touch at night, without any light. The code was hard to learn, but it gave Louis an idea.
+
+Louis worked on his own code for years. He worked at night and during school breaks. At last, when he was fifteen, he finished it. His code used only six dots in two columns of three. Each letter of the alphabet had its own pattern of dots. Because the patterns were small, a reader could feel a whole letter with one fingertip. That made reading much faster.
+
+At first, many teachers did not want to use the new code. They liked the old way better. But blind students loved it, and they kept using it. After Louis died, braille spread around the world.
+
+Today, braille is used in almost every country. You can find it on elevator buttons, signs, and books. Louis Braille''s idea opened the world of reading to millions of people.','Which event happened FIRST?',NULL,'["An army captain showed Louis a dot code.","Louis went to a school for blind children in Paris.","Louis hurt his eye in his father''s workshop.","Louis finished his own code."]',2,'Louis hurt his eye when he was three, before any of the other events.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-1c5dde89b90c','KR_ENG','reading','mcq',1,'Close your eyes and touch the page of a book. Can you read the words with your fingers? People who are blind can read with their fingers by using braille. It was invented by a boy who was only fifteen years old.
+
+Louis Braille was born in France in 1809. His father made saddles and other leather goods. When Louis was three years old, he was playing in his father''s workshop. He picked up a sharp tool, and it slipped and hurt his eye. Soon the other eye became sick, too. By the time he was five, Louis was completely blind.
+
+Louis was a bright and curious child. He wanted to learn, so his parents sent him to the village school. He listened carefully and remembered what he heard. But he could not read books on his own, and that made him sad.
+
+When Louis was ten, he went to a special school for blind children in Paris. The school had a few books with large raised letters. Students traced the letters with their fingers. But the books were huge and heavy, and reading them was very slow. The school had only a few of them.
+
+One day, a man who had been an army captain visited the school. He showed the students a code he had made for soldiers. The code used raised dots pressed into thick paper. Soldiers could read messages by touch at night, without any light. The code was hard to learn, but it gave Louis an idea.
+
+Louis worked on his own code for years. He worked at night and during school breaks. At last, when he was fifteen, he finished it. His code used only six dots in two columns of three. Each letter of the alphabet had its own pattern of dots. Because the patterns were small, a reader could feel a whole letter with one fingertip. That made reading much faster.
+
+At first, many teachers did not want to use the new code. They liked the old way better. But blind students loved it, and they kept using it. After Louis died, braille spread around the world.
+
+Today, braille is used in almost every country. You can find it on elevator buttons, signs, and books. Louis Braille''s idea opened the world of reading to millions of people.','Read this sentence from the article.
+"Students traced the letters with their fingers."
+What does "traced" mean?',NULL,'["painted bright colors on","counted out loud","cut out from paper","moved along the shape of"]',3,'The students felt the raised letters by moving their fingers along each shape.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-d8a2f6177f9e','KR_ENG','reading','mcq',1,'Close your eyes and touch the page of a book. Can you read the words with your fingers? People who are blind can read with their fingers by using braille. It was invented by a boy who was only fifteen years old.
+
+Louis Braille was born in France in 1809. His father made saddles and other leather goods. When Louis was three years old, he was playing in his father''s workshop. He picked up a sharp tool, and it slipped and hurt his eye. Soon the other eye became sick, too. By the time he was five, Louis was completely blind.
+
+Louis was a bright and curious child. He wanted to learn, so his parents sent him to the village school. He listened carefully and remembered what he heard. But he could not read books on his own, and that made him sad.
+
+When Louis was ten, he went to a special school for blind children in Paris. The school had a few books with large raised letters. Students traced the letters with their fingers. But the books were huge and heavy, and reading them was very slow. The school had only a few of them.
+
+One day, a man who had been an army captain visited the school. He showed the students a code he had made for soldiers. The code used raised dots pressed into thick paper. Soldiers could read messages by touch at night, without any light. The code was hard to learn, but it gave Louis an idea.
+
+Louis worked on his own code for years. He worked at night and during school breaks. At last, when he was fifteen, he finished it. His code used only six dots in two columns of three. Each letter of the alphabet had its own pattern of dots. Because the patterns were small, a reader could feel a whole letter with one fingertip. That made reading much faster.
+
+At first, many teachers did not want to use the new code. They liked the old way better. But blind students loved it, and they kept using it. After Louis died, braille spread around the world.
+
+Today, braille is used in almost every country. You can find it on elevator buttons, signs, and books. Louis Braille''s idea opened the world of reading to millions of people.','Why was Louis''s six-dot code better than the books with large raised letters?',NULL,'["It was used only by soldiers at night.","Its books were huge and heavy.","It used bigger letters that were easier to see.","A reader could feel a whole letter with one fingertip, so reading was faster."]',3,'The article says the small patterns let a reader feel a whole letter with one fingertip, which made reading much faster.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-c0c3ccb50d15','KR_ENG','reading','mcq',1,'Close your eyes and touch the page of a book. Can you read the words with your fingers? People who are blind can read with their fingers by using braille. It was invented by a boy who was only fifteen years old.
+
+Louis Braille was born in France in 1809. His father made saddles and other leather goods. When Louis was three years old, he was playing in his father''s workshop. He picked up a sharp tool, and it slipped and hurt his eye. Soon the other eye became sick, too. By the time he was five, Louis was completely blind.
+
+Louis was a bright and curious child. He wanted to learn, so his parents sent him to the village school. He listened carefully and remembered what he heard. But he could not read books on his own, and that made him sad.
+
+When Louis was ten, he went to a special school for blind children in Paris. The school had a few books with large raised letters. Students traced the letters with their fingers. But the books were huge and heavy, and reading them was very slow. The school had only a few of them.
+
+One day, a man who had been an army captain visited the school. He showed the students a code he had made for soldiers. The code used raised dots pressed into thick paper. Soldiers could read messages by touch at night, without any light. The code was hard to learn, but it gave Louis an idea.
+
+Louis worked on his own code for years. He worked at night and during school breaks. At last, when he was fifteen, he finished it. His code used only six dots in two columns of three. Each letter of the alphabet had its own pattern of dots. Because the patterns were small, a reader could feel a whole letter with one fingertip. That made reading much faster.
+
+At first, many teachers did not want to use the new code. They liked the old way better. But blind students loved it, and they kept using it. After Louis died, braille spread around the world.
+
+Today, braille is used in almost every country. You can find it on elevator buttons, signs, and books. Louis Braille''s idea opened the world of reading to millions of people.','Which words best describe Louis Braille?',NULL,'["curious and hardworking","shy and forgetful","bossy and unkind","lazy and careless"]',0,'Louis was eager to learn and worked on his code for years, even at night and during breaks.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-0a5b25f8c003','KR_ENG','vocab','mcq',1,NULL,'The hikers were CAUTIOUS on the icy path and took small, slow steps. What does CAUTIOUS mean?',NULL,'["silly and loud","fast and wild","careful to stay safe","angry and upset"]',2,'The hikers took small, slow steps on the ice, so they were careful to stay safe.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-05aa769537d3','KR_ENG','vocab','mcq',1,NULL,'The baker will COMBINE the flour, eggs, and milk in a big bowl. What does COMBINE mean?',NULL,'["throw away","mix together","keep apart","count slowly"]',1,'Putting flour, eggs, and milk in one bowl means mixing them together.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-2be2f6aff3d0','KR_ENG','vocab','mcq',1,NULL,'Which word means almost the SAME as GLANCE?',NULL,'["peek","shout","bite","nap"]',0,'A glance is a quick look, and a peek is also a quick look.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-1af7ad4d7d67','KR_ENG','vocab','mcq',1,NULL,'Which word means almost the SAME as DAMP?',NULL,'["empty","dusty","hot","wet"]',3,'Damp means a little bit wet.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-a572df815f3c','KR_ENG','vocab','mcq',1,NULL,'Which word means the OPPOSITE of CROWDED?',NULL,'["busy","noisy","empty","full"]',2,'A crowded place is full of people; an empty place has no one in it.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-4e1158ca506b','KR_ENG','vocab','mcq',1,NULL,'Which word means the OPPOSITE of VICTORY?',NULL,'["game","prize","defeat","cheer"]',2,'A victory is a win, and a defeat is a loss.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-55eb4de7b4f1','KR_ENG','vocab','mcq',1,NULL,'The prefix UN- means "not." What does UNHAPPY mean?',NULL,'["happy before","happy again","not happy","very happy"]',2,'UN- means not, so unhappy means not happy.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-9a982f38c126','KR_ENG','vocab','mcq',1,NULL,'Which word means "to read again"?',NULL,'["reader","reread","misread","unread"]',1,'The prefix RE- means again, so reread means to read again.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-945e813c0e9b','KR_ENG','vocab','mcq',1,NULL,'After we cleaned it, the kitchen was SPOTLESS. What does SPOTLESS mean?',NULL,'["without any spots or dirt","covered in paint","dark and messy","full of spots"]',0,'The suffix -LESS means without, so spotless means without any spots.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-8bde10e186dd','KR_ENG','vocab','mcq',1,NULL,'Which word means "full of help"?',NULL,'["helpless","helper","helpful","unhelpful"]',2,'The suffix -FUL means full of, so helpful means full of help.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-624af6aeb184','KR_ENG','vocab','mcq',1,NULL,'A BUILDER is a person who builds. What does the suffix -ER mean in BUILDER?',NULL,'["before","a person who does something","not","again"]',1,'The suffix -ER can mean a person who does something, like a builder who builds.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-8c92a7eedcd7','KR_ENG','vocab','mcq',1,NULL,'What does DISAGREE mean?',NULL,'["agree before","agree a lot","agree again","not agree"]',3,'The prefix DIS- means not, so disagree means not agree.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-99af55265341','KR_ENG','vocab','mcq',1,NULL,'The baseball player swung the BAT and hit the ball.
+In which sentence does BAT mean the same thing?',NULL,'["We saw a bat catching insects at night.","Hand me the bat so I can take my turn at hitting.","The bat hung upside down to sleep.","A bat flew out of the dark cave."]',1,'In both sentences, a bat is the stick used to hit a ball, not the flying animal.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-17d7717f3552','KR_ENG','vocab','mcq',1,NULL,'Please WAVE goodbye to Grandpa as he drives away. What does WAVE mean in this sentence?',NULL,'["a sudden feeling","a curl in someone''s hair","a moving ridge of water in the ocean","move your hand back and forth"]',3,'When you say goodbye, you wave by moving your hand back and forth.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-131a3ce88277','KR_ENG','vocab','mcq',1,NULL,'Many flowers bloom in the SPRING.
+In which sentence does SPRING mean the same thing?',NULL,'["Spring is my favorite season because it is warm.","We drank cool water from a mountain spring.","The spring in the old bed squeaked.","Cats can spring onto high shelves."]',0,'In both sentences, spring is the season that comes after winter.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-e564cbc828c1','KR_ENG','vocab','mcq',1,NULL,'Dad stayed home from work because he felt UNDER THE WEATHER. What does UNDER THE WEATHER mean?',NULL,'["very cold","a little sick","caught in the rain","full of energy"]',1,'Feeling under the weather is an idiom that means feeling a little sick.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-ebfdec2f6af7','KR_ENG','vocab','mcq',1,NULL,'Grandpa told me to HOLD MY HORSES before I opened the gift. What did he mean?',NULL,'["ride a horse","hurry up","wait and be patient","hold on tightly"]',2,'Hold your horses is an idiom that means slow down and wait.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-35d2c83e7011','KR_ENG','vocab','mcq',1,NULL,'Mia was ALL EARS when her coach explained the new game. What does ALL EARS mean?',NULL,'["feeling sleepy","making a lot of noise","hearing badly","listening carefully"]',3,'Being all ears is an idiom that means listening very carefully.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-c0a46548671a','KR_ENG','vocab','mcq',1,NULL,'The puppy was so FILTHY after rolling in the mud that it needed a bath. What does FILTHY mean?',NULL,'["very hungry","very small","very dirty","very happy"]',2,'The puppy rolled in mud and needed a bath, so filthy means very dirty.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-5c92a52cd076','KR_ENG','vocab','mcq',1,NULL,'Choose the word that best completes the sentence.
+The crowd began to ______ when the team scored the winning goal.',NULL,'["frown","yawn","cheer","whisper"]',2,'People shout happily, or cheer, when their team wins.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-6b7c9bc4d926','KR_ENG','vocab','mcq',1,NULL,'Choose the word that best completes the sentence.
+Our class held a bake sale to ______ money for the animal shelter.',NULL,'["waste","raise","borrow","lose"]',1,'To raise money means to collect it for a purpose.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-e86afa8b7c92','KR_ENG','vocab','mcq',1,NULL,'Which word means almost the SAME as COURAGE?',NULL,'["bravery","speed","anger","fear"]',0,'Courage and bravery both mean being able to face something scary.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-029c392446dc','KR_ENG','vocab','mcq',1,NULL,'Which word means the OPPOSITE of ACCEPT?',NULL,'["take","refuse","receive","agree"]',1,'To accept means to take something; to refuse means to say no to it.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-4c850b9e5027','KR_ENG','vocab','mcq',1,NULL,'Liam was PUZZLED by the strange noise and did not know what it could be. What does PUZZLED mean?',NULL,'["sleepy","pleased","confused","bored"]',2,'Liam did not know what the noise was, so he was confused.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-aa5ec79fcbff','KR_ENG','vocab','mcq',1,NULL,'The team will CONSTRUCT a tall tower out of blocks. What does CONSTRUCT mean?',NULL,'["count","build","knock down","paint"]',1,'To construct something means to build it.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-3ebc6e6b309c','KR_ENG','vocab','mcq',1,NULL,'Which word is a compound word made from two smaller words?',NULL,'["garden","yellow","happy","sunflower"]',3,'Sunflower is made from the two words sun and flower.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-51f34be11645','KR_ENG','vocab','mcq',1,NULL,'Which word means almost the SAME as SHOUT?',NULL,'["laugh","sing","yell","whisper"]',2,'To shout and to yell both mean to call out loudly.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-b08f5eee6bbb','KR_ENG','vocab','mcq',1,NULL,'Which word means the OPPOSITE of WIDE?',NULL,'["flat","narrow","tall","long"]',1,'Wide means far from side to side, and narrow means close from side to side.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-49b5611bbc6f','KR_ENG','vocab','mcq',1,NULL,'The sun will SET behind the hills soon, and then it will get dark. What does SET mean in this sentence?',NULL,'["get hot","rise up","shine brightly","go down"]',3,'When the sun sets, it goes down and the sky gets dark.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-cbbb709a5905','KR_ENG','vocab','mcq',1,NULL,'The eagle spread its wings and began to SOAR high above the mountains. What does SOAR mean?',NULL,'["rest in a nest","dive into water","fly high in the air","walk slowly"]',2,'The eagle is high above the mountains with its wings spread, so soar means to fly high.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-798766b829d3','KR_ENG','grammar','mcq',1,NULL,'Choose the word that completes the sentence correctly.
+Yesterday, Lena ______ a letter to her pen pal.',NULL,'["write","wrote","writed","written"]',1,'Write is an irregular verb. Its past tense is wrote.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-7e2f349be83c','KR_ENG','grammar','mcq',1,NULL,'Choose the word that completes the sentence correctly.
+Last week, our class ______ a trip to the museum.',NULL,'["taked","taken","took","take"]',2,'Take is an irregular verb. Its past tense is took.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-a33ca31d210f','KR_ENG','grammar','mcq',1,NULL,'Choose the words that complete the sentence correctly.
+Next Saturday, we ______ our cousins in Ohio.',NULL,'["will visit","visiting","visited","visits"]',0,'Next Saturday is in the future, so we use will visit.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-f0ecd989889a','KR_ENG','grammar','mcq',1,NULL,'Choose the words that complete the sentence correctly.
+Shh! The baby ______ right now.',NULL,'["is sleeping","slept","are sleeping","sleep"]',0,'Right now shows the action is happening at this moment, and baby is singular, so is sleeping is correct.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-d58efef46024','KR_ENG','grammar','mcq',1,NULL,'Choose the word that completes the sentence correctly.
+My sister and I ______ in the school band.',NULL,'["play","is playing","has played","plays"]',0,'My sister and I is a plural subject, so it takes the verb play.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-19320d69b5f7','KR_ENG','grammar','mcq',1,NULL,'Choose the word that completes the sentence correctly.
+The cat ______ on the sunny windowsill every afternoon.',NULL,'["sitting","are sitting","sits","sit"]',2,'The cat is a singular subject, so the verb is sits.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-263b6de6a1c3','KR_ENG','grammar','mcq',1,NULL,'Choose the word that completes the sentence correctly.
+There ______ three apples in the basket.',NULL,'["are","was","is","be"]',0,'Apples is plural, so we use are.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-abcbe82a67ab','KR_ENG','grammar','mcq',1,NULL,'Choose the word that completes the sentence correctly.
+Our teacher read a funny story to ______ before lunch.',NULL,'["ours","we","our","us"]',3,'Us is the pronoun used after a word like to. We is used only as a subject.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-6525ae5cf940','KR_ENG','grammar','mcq',1,NULL,'Choose the word that completes the sentence correctly.
+My cousins live far away, but ______ are visiting us this summer.',NULL,'["their","they","theirs","them"]',1,'They is the pronoun used as the subject of a sentence. Them is not used as a subject.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-a98a1674c860','KR_ENG','grammar','mcq',1,NULL,'Choose the word that completes the sentence correctly.
+The boy hurt ______ when he fell off the swing.',NULL,'["herself","themselves","hisself","himself"]',3,'Himself refers back to the boy. Hisself is not a correct word.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-5275549c0c75','KR_ENG','grammar','mcq',1,NULL,'Choose the word that completes the sentence correctly.
+Is this pencil yours or ______?',NULL,'["I","my","me","mine"]',3,'Mine is the possessive pronoun that can stand alone, like yours.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-7dfc3c75e96b','KR_ENG','grammar','mcq',1,NULL,'Choose the word that completes the sentence correctly.
+This rock is ______ than that one.',NULL,'["more heavier","heavier","heavy","heaviest"]',1,'When comparing two things, we add -er: heavier. More heavier uses two comparing words.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-d88ebdf61cbc','KR_ENG','grammar','mcq',1,NULL,'Choose the word that completes the sentence correctly.
+Pedro is the ______ singer in our whole class.',NULL,'["goodest","best","better","most best"]',1,'Best is the correct word for comparing one person to a whole group.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-b522d4ba670d','KR_ENG','grammar','mcq',1,NULL,'Choose the words that complete the sentence correctly.
+The second puzzle was ______ than the first one.',NULL,'["more difficult","most difficult","difficult","difficulter"]',0,'Long words like difficult use more to compare two things.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-05835cd7dbe3','KR_ENG','grammar','mcq',1,NULL,'Choose the word that completes the sentence correctly.
+The turtle walked ______ across the road.',NULL,'["slowness","slowly","slowed","slowest"]',1,'Slowly is an adverb that tells how the turtle walked.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-1596588ed608','KR_ENG','grammar','mcq',1,NULL,'Which word is an adjective that best completes the sentence?
+The ______ kitten chased the ball of yarn.',NULL,'["played","playful","playfully","plays"]',1,'Playful is an adjective that describes the kitten.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-ed9b7d5a26f2','KR_ENG','grammar','mcq',1,NULL,'Choose the word that completes the sentence correctly.
+Do you want apple juice ______ orange juice?',NULL,'["or","so","but","because"]',0,'Or is used to show a choice between two things.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-4d3daa1d0afd','KR_ENG','grammar','mcq',1,NULL,'Choose the word that completes the sentence correctly.
+It started to snow, ______ we built a snowman.',NULL,'["so","but","although","or"]',0,'So shows a result: because it snowed, we built a snowman.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-049b146f70b6','KR_ENG','grammar','mcq',1,NULL,'Choose the word that completes the sentence correctly.
+The cat is hiding ______ the bed.',NULL,'["of","to","under","from"]',2,'Under tells where the cat is hiding.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-9fa2f12921c8','KR_ENG','grammar','mcq',1,NULL,'Choose the word that completes the sentence correctly.
+My birthday party is ______ Saturday.',NULL,'["at","in","to","on"]',3,'We use on before days of the week.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-d5bbe8eb99b1','KR_ENG','grammar','mcq',1,NULL,'Which sentence is capitalized correctly?',NULL,'["We visited grandpa in Chicago on monday.","We visited Grandpa in chicago on Monday.","We visited Grandpa in Chicago on Monday.","we visited grandpa in chicago on monday."]',2,'The first word, names of people and places, and days of the week begin with capital letters.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-cee50e7fc7a7','KR_ENG','grammar','mcq',1,NULL,'Which sentence is capitalized correctly?',NULL,'["ms. Lee will teach at Oak Hill School in september.","Ms. Lee will teach at Oak Hill School in September.","Ms. lee will teach at Oak Hill school in September.","Ms. Lee will teach at oak hill school in September."]',1,'Titles, names, the name of a school, and months begin with capital letters.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-722501dc56d9','KR_ENG','grammar','mcq',1,NULL,'Which sentence uses the correct end mark?',NULL,'["Where did you put my blue mittens,","Where did you put my blue mittens","Where did you put my blue mittens.","Where did you put my blue mittens?"]',3,'The sentence asks a question, so it ends with a question mark.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-c8f84379ea56','KR_ENG','grammar','mcq',1,NULL,'Which sentence uses commas correctly?',NULL,'["We packed sandwiches, apples and, juice for the picnic.","We packed, sandwiches apples and juice for the picnic.","We packed sandwiches apples, and juice, for the picnic.","We packed sandwiches, apples, and juice for the picnic."]',3,'Commas separate the items in a list: sandwiches, apples, and juice.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-22a84b4b5c30','KR_ENG','grammar','mcq',1,NULL,'Which sentence uses a comma correctly in the date?',NULL,'["Our school opened on May 4 2015.","Our school opened on May 4, 2015.","Our school opened on May, 4 2015.","Our school, opened on May 4 2015."]',1,'A comma goes between the day and the year in a date.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-16c5aa184102','KR_ENG','grammar','mcq',1,NULL,'Which is the correct contraction for DO NOT?',NULL,'["do''nt","don''t","dont","doesn''t"]',1,'The apostrophe takes the place of the missing letter o: don''t.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-4f3bcfe84ad8','KR_ENG','grammar','mcq',1,NULL,'Which of these is a complete sentence?',NULL,'["The tall giraffe ate leaves from the tree.","Ate leaves from the tall tree.","The tall giraffe from the tree.","Leaves from the tall tree."]',0,'A complete sentence needs a subject and a verb. The giraffe (subject) ate (verb) leaves.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-bee1a6125a37','KR_ENG','grammar','mcq',1,NULL,'Which is the correct way to write this sentence?
+"I like pizza my brother likes tacos."',NULL,'["I like pizza my brother, likes tacos.","I like pizza but, my brother likes tacos.","I like pizza, my brother likes tacos.","I like pizza, but my brother likes tacos."]',3,'Two complete thoughts can be joined with a comma and a word like but.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-4d476002c370','KR_ENG','grammar','mcq',1,NULL,'Which sentence is written correctly?',NULL,'["Three geese swam across the pond.","Three gooses swam across the pond.","Three goose swam across the pond.","Three geeses swam across the pond."]',0,'The plural of goose is geese.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-e241c5741f6b','KR_ENG','grammar','mcq',1,NULL,'Which word in this sentence is used incorrectly?
+"We was late for the bus this morning."',NULL,'["morning","bus","was","late"]',2,'We is plural, so the verb should be were: We were late.',1,0);
 INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-6ac6ea792676','KR_ENG','reading','mcq',1,'Jun had lived on Maple Street for only two weeks, and he did not know anyone in his new neighborhood yet. Every afternoon, he sat on the front steps and watched the cars go by while he thought about his old friends and his old school.
 
 Next door lived an older woman named Mrs. Ortiz, who spent every afternoon working in her backyard garden. One afternoon she waved at Jun over the fence. "I could use some help," she called. "My tomato plants are thirsty, and my back is tired."
