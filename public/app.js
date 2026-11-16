@@ -1028,7 +1028,7 @@ function renderReport(r, id) {
     it.image_svg ? h('img', { class: 'qimg', src: svgUri(it.image_svg), alt: '' }) : null, h('b', {}, it.stem),
     it.kind === 'num' ? h('div', {}, h('p', {}, h('span', { class: 'badge ' + (it.correct ? 'ok' : 'bad') }, '내 답'), ' ', it.text || '(무응답)', '  ', h('span', { class: 'badge ok' }, '정답'), ' ', (it.choices || []).join(' 또는 ')), it.explanation ? h('p', { class: 'small muted' }, `해설: ${it.explanation}`) : null) :
     it.kind === 'mcq' ? h('div', {}, it.choices.map((c, j) => h('div', { class: 'choice' + (j === it.answer ? ' right' : j === it.choice ? ' miss' : '') }, h('b', {}, 'ABCDEFGH'[j]), choiceNode(c), j === it.choice ? h('span', { class: 'badge ' + (j === it.answer ? 'ok' : 'bad') }, '내 답') : null, j === it.answer ? h('span', { class: 'badge ok' }, '정답') : null)), it.explanation ? h('p', { class: 'small muted' }, `해설: ${it.explanation}`) : null)
-      : h('div', {}, it.text ? h('div', { class: 'passage' }, it.text) : h('p', { class: 'muted' }, '(녹음 응답)'), h('p', {}, it.manual_score ? `교사 점수: ${it.manual_score}/6` : '채점 대기 중', it.feedback ? ` · ${it.feedback}` : ''))));
+      : h('div', {}, it.text ? h('div', { class: 'passage' }, it.text) : h('p', { class: 'muted' }, '(녹음 응답)'), h('p', {}, it.manual_score ? `${it.graded_by === 'ai' ? 'AI 채점' : it.graded_by === 'ai+teacher' ? '채점 (AI·선생님 확인)' : '선생님 채점'}: ${it.manual_score}/6` : '채점 대기 중', it.feedback ? ` · ${it.feedback}` : ''))));
   mount(
     h('div', { class: 'score-hero' },
       h('div', {}, h('div', { class: 'muted small' }, `${r.student.name} · ${date(r.attempt.finished_at)}${r.attempt.level?.name && r.attempt.level.key !== 'all' ? ' · ' + r.attempt.level.name : ''}`), h('h2', {}, `${r.attempt.title} 결과`),
@@ -1278,13 +1278,38 @@ async function adminPayments(b) {
     row('카카오 알림톡 (SOLAPI)', st.kakao.alimtalk, [['템플릿', `결과 알림 ${st.kakao.templates.result ? '✓' : '✗'} · 결제 알림 ${st.kakao.templates.paid ? '✓' : '✗'}`], ['필요 값', 'SOLAPI_API_KEY, SOLAPI_API_SECRET (Secret), SOLAPI_SENDER, KAKAO_PFID, ALIMTALK_TPL_RESULT, ALIMTALK_TPL_PAID']]));
 }
 async function adminGrading(b) {
-  const { items } = await api('GET', '/admin/grading');
+  const [{ items }, ai] = await Promise.all([api('GET', '/admin/grading'), api('GET', '/admin/ai-grading')]);
+  const MODES = [['review', 'AI 1차 채점 → 선생님 확정 (권장)'], ['auto', 'AI 점수 바로 확정 (과제 이탈 의심 답안만 선생님에게)'], ['off', 'AI 채점 끄기']];
+  const pend = ai.pending || {};
+  b.append(h('div', { class: 'card' }, h('h3', {}, 'AI 채점'),
+    ai.configured
+      ? h('div', {},
+        h('p', { class: 'small muted' }, `모델 ${ai.model} · 말하기 음성 인식 ${ai.speech ? '사용 가능 (Workers AI)' : '없음 — 말하기는 선생님 채점'} · 대기 ${pend.none || 0} · 진행 중 ${pend.running || 0} · AI 제안 완료 ${pend.done || 0} · 오류 ${pend.error || 0}`),
+        h('div', { class: 'row' },
+          h('select', { onchange: guard(async (e) => { await api('POST', '/admin/ai-grading/mode', { mode: e.target.value }); toast('저장됨'); }) }, MODES.map(([v, l]) => h('option', { value: v, selected: ai.mode === v }, l))),
+          h('button', { class: 'btn sm alt', onclick: guard(async () => { await api('POST', '/admin/ai-grading/run'); toast('대기 중인 답안을 AI가 채점합니다. 잠시 후 새로고침하세요.'); setTimeout(() => pageAdmin('grading'), 4000); }) }, '대기 답안 AI 채점')),
+        h('p', { class: 'small muted' }, '답안 제출 직후 자동으로 채점하고, 놓친 답안은 10분마다 다시 시도합니다. AI 점수는 루브릭 기준 1–6점 제안이며, 공식 점수는 아래에서 확정한 점수입니다.'))
+      : h('p', { class: 'small muted' }, 'Cloudflare 대시보드 → Workers & Pages → mocktest → Settings → Variables and Secrets 에서 ANTHROPIC_API_KEY 를 Secret 으로 추가하면 쓰기·서술형(및 말하기) 답안을 Claude가 1차 채점합니다.')));
   if (!items.length) return b.append(h('p', { class: 'muted' }, '채점할 답안이 없습니다.'));
+  const BY = { ai: 'AI 자동 확정', 'ai+teacher': 'AI 제안 → 선생님 확정', teacher: '선생님 채점' };
   b.append(...items.map((it) => {
-    const f = h('form', { class: 'card', onsubmit: guard(async (e) => { e.preventDefault(); await api('POST', '/admin/grading/' + it.id, { score: f.score.value, feedback: f.fb.value }); toast('저장됨'); pageAdmin('grading'); }) },
-      h('div', { class: 'small muted' }, `${it.name} (${it.email}) · ${it.section}`), h('b', {}, it.stem),
+    let aiFb = {}; try { aiFb = JSON.parse(it.ai_feedback || '{}'); } catch {}
+    const suspect = /^\[과제 이탈 의심\]/.test(aiFb.notes || ''); // never prefill a high score for a suspicious answer
+    const save = (score, feedback, fromAi) => guard(async (e) => { e?.preventDefault(); await api('POST', '/admin/grading/' + it.id, { score, feedback, fromAi }); toast('저장됨'); pageAdmin('grading'); });
+    const suggestion = it.ai_status === 'done' ? h('div', { class: 'passage small' },
+      h('b', {}, `AI 제안 ${it.ai_score}/6`), ` · ${it.ai_model || ''}`, suspect ? h('span', { class: 'badge warn' }, '확인 필요') : null, h('br'), aiFb.feedback || '', aiFb.notes ? h('div', { class: 'muted' }, `채점 근거: ${aiFb.notes}`) : null,
+      it.ai_transcript ? h('div', { class: 'muted' }, `음성 인식: “${it.ai_transcript}”`) : null)
+      : it.ai_status === 'running' ? h('p', { class: 'small muted' }, 'AI 채점 중…')
+      : it.ai_status === 'error' ? h('p', { class: 'small muted' }, `AI 채점 실패: ${aiFb.error || ''}`) : null;
+    const f = h('form', { class: 'card', onsubmit: (e) => save(f.score.value, f.fb.value, it.ai_status === 'done' && +f.score.value === it.ai_score)(e) },
+      h('div', { class: 'small muted' }, `${it.name} (${it.email}) · ${it.exam_type} ${it.section}`, it.graded_by ? ` · ${BY[it.graded_by] || it.graded_by}` : ''), h('b', {}, it.stem),
       it.kind === 'text' ? h('div', { class: 'passage' }, it.text || '(무응답)') : (it.audio_key ? h('audio', { controls: true, src: '/api/admin/audio/' + encodeURIComponent(it.audio_key) }) : h('p', { class: 'muted' }, '(녹음 없음)')),
-      h('div', { class: 'row' }, h('input', { name: 'score', type: 'number', min: 1, max: 6, value: it.manual_score ?? '', placeholder: '1-6', required: true, style: 'width:90px' }), h('input', { name: 'fb', class: 'grow', value: it.feedback || '', placeholder: '피드백(선택)' }), h('button', { class: 'btn sm' }, it.manual_score ? '수정' : '채점')));
+      suggestion,
+      h('div', { class: 'row' },
+        h('input', { name: 'score', type: 'number', min: 1, max: 6, value: it.manual_score ?? (it.ai_status === 'done' && !(suspect && it.ai_score > 2) ? it.ai_score : ''), placeholder: '1-6', required: true, style: 'width:90px' }),
+        h('input', { name: 'fb', class: 'grow', value: it.feedback || (it.manual_score == null && aiFb.feedback) || '', placeholder: '피드백(선택)' }),
+        h('button', { class: 'btn sm' }, it.manual_score ? '수정' : '확정'),
+        ai.configured && it.manual_score == null ? h('button', { type: 'button', class: 'btn sm alt', onclick: guard(async () => { toast('AI 채점 중…'); await api('POST', `/admin/grading/${it.id}/ai`); pageAdmin('grading'); }) }, it.ai_status === 'done' ? 'AI 다시' : 'AI 채점') : null));
     return f;
   }));
 }
@@ -1307,7 +1332,7 @@ const LEGAL = {
     ['1. 수집 항목', '필수: 이름, 이메일, 비밀번호(암호화 저장). 선택: 학년, 연락처. 서비스 이용 과정에서 응시 기록(답안, 소요 시간, 점수)과 결제 기록이 생성되며, 말하기 시험 시 음성 녹음이 수집됩니다.'],
     ['2. 이용 목적', '회원 관리, 이용권 제공, 시험 채점 및 결과 리포트 제공, 결제·환불 처리, 고객 문의 대응, 서비스 개선.'],
     ['3. 보유 기간', '회원 탈퇴 시 이름·이메일·연락처·말하기 녹음은 지체 없이 파기합니다. 응시 결과·답안과 서비스 이용 기록(접속·로그인·결제·시험 활동 기록, 접속 IP)은 개인을 알아볼 수 없게 익명화하여 서비스 운영·부정 이용 방지·분쟁 대응을 위해 보관합니다. 전자상거래법에 따라 계약·결제 기록 5년, 소비자 불만·분쟁 기록 3년은 반드시 보관합니다.'],
-    ['4. 제3자 제공 및 처리위탁', '결제 처리를 위해 포트원 및 결제대행사, Stripe에 결제에 필요한 정보를 전달하며, 서버·저장소는 Cloudflare, 이메일 발송은 Resend를 통해 처리됩니다. 이 외에는 법령에 근거한 경우를 제외하고 동의 없이 제공하지 않습니다.'],
+    ['4. 제3자 제공 및 처리위탁', '결제 처리를 위해 포트원 및 결제대행사, Stripe에 결제에 필요한 정보를 전달하며, 서버·저장소는 Cloudflare, 이메일 발송은 Resend를 통해 처리됩니다. 쓰기·서술형·말하기 답안의 AI 1차 채점을 위해 답안 내용(말하기는 녹음을 Cloudflare Workers AI로 글로 옮긴 내용)과 문항만 Anthropic(미국)에 전송하며, 이름·이메일 등 회원을 알아볼 수 있는 정보는 보내지 않습니다. 이 외에는 법령에 근거한 경우를 제외하고 동의 없이 제공하지 않습니다.'],
     ['5. 이용자의 권리', '회원은 언제든지 개인정보 열람·정정·삭제·처리정지를 요청할 수 있으며, 아래 문의처로 연락하면 지체 없이 처리합니다.'],
     ['6. 아동의 개인정보', '만 14세 미만 아동의 개인정보는 법정대리인의 동의를 받아 수집합니다.'],
     ['7. 개인정보 보호책임자', `${c.biz.owner} · 문의: ${c.biz.contact}`],

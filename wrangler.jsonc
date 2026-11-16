@@ -5,6 +5,8 @@
   "compatibility_date": "2025-09-01",
   // Run the Worker close to the database: pages that need several D1 queries finish much faster for far-away visitors.
   "placement": { "mode": "smart" },
+  // Smaller upload and faster cold starts (the Anthropic SDK used for AI grading is large).
+  "minify": true,
   // Stamps ?v=<hash> on app.js / style.css in index.html so browsers can cache them for a year.
   "build": { "command": "node scripts/stamp-assets.mjs" },
   "assets": {
@@ -13,6 +15,10 @@
     "not_found_handling": "single-page-application",
     "run_worker_first": ["/api/*", "/_seed/*"]
   },
+  // Workers AI: speech-to-text (Whisper) for speaking answers before AI grading.
+  "ai": { "binding": "AI" },
+  // Every 10 minutes: AI-grade any writing/speaking answers still waiting (only when ANTHROPIC_API_KEY is set).
+  "triggers": { "crons": ["*/10 * * * *"] },
   "d1_databases": [
     { "binding": "DB", "database_name": "mocktest", "migrations_dir": "migrations" }
   ],

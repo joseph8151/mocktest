@@ -3,3 +3,5 @@ STRIPE_WEBHOOK_SECRET=
 PORTONE_API_SECRET=
 PORTONE_WEBHOOK_SECRET=
 RESEND_API_KEY=
+# AI grading (Claude). Production: add ANTHROPIC_API_KEY as a Secret in the Cloudflare dashboard.
+ANTHROPIC_API_KEY=

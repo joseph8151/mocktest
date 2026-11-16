@@ -6,9 +6,17 @@ import { EXAMS, GRACE_MS, initialState, pickNext, pickGrouped, sectionTarget, ad
 import { sendMail, mailResult } from '../lib/email.js';
 import { audit, logEvent } from '../lib/security.js';
 import { alimtalk, phoneFor } from '../lib/notify.js';
+import { gradeAttempt } from '../lib/aigrade.js';
 
 const app = new Hono();
 app.use('*', requireUser);
+app.use('*', async (c, next) => { // an attempt that just finished with writing/speaking: AI-grade it after the response is sent
+  await next();
+  const a = c.get('attempt');
+  if (!a?._needsGrading) return;
+  const job = gradeAttempt(c.env, a.id).catch((e) => console.error('ai grading', e));
+  try { c.executionCtx.waitUntil(job); } catch { /* no execution context (tests): the cron sweep picks it up */ }
+});
 
 const publicQ = (q) => ({
   id: q.id, section: q.section, kind: q.kind, passage: q.passage, stem: q.stem, image_svg: q.image_svg,
@@ -97,6 +105,7 @@ app.post('/attempts', async (c) => {
 
 async function loadAttempt(c, { live = false } = {}) {
   const a = await c.env.DB.prepare('SELECT * FROM attempts WHERE id=?').bind(c.req.param('id')).first();
+  if (a) c.set('attempt', a);
   const u = c.get('user');
   if (!a) return null;
   if (live) { // taking the test: owner only, and only while the ticket is still valid
@@ -125,8 +134,23 @@ async function finish(env, a, st) {
     .bind(status, JSON.stringify(score), JSON.stringify(st), now(), a.id).run();
   const u = await env.DB.prepare('SELECT id,email FROM users WHERE id=?').bind(a.user_id).first();
   await logEvent(env, { actor: u, action: 'exam.finish', target: a.id, detail: { exam: a.exam_type, level: st.level, status, score: score.headline ? `${score.headline.label} ${score.headline.value}` : score.overall ?? null, answered: results.length } });
+  if (status === 'submitted') a._needsGrading = true; // writing/speaking: AI grading starts after the response (see middleware)
   if (status === 'graded') await notifyResult(env, a);
   if (status === 'graded') await alimtalk(env, await phoneFor(env, a.user_id), 'result', { 이름: (await env.DB.prepare('SELECT name FROM users WHERE id=?').bind(a.user_id).first())?.name || '', 시험: EXAMS[a.exam_type].title, 링크: `${env.SITE_URL}/#/report/${a.id}` });
+}
+/** Re-score an attempt after a writing/speaking answer got its score; sends the result once nothing is pending. */
+export async function regradeAttempt(env, attemptId) {
+  const att = await env.DB.prepare('SELECT * FROM attempts WHERE id=?').bind(attemptId).first();
+  if (!att) return null;
+  const { results } = await env.DB.prepare('SELECT * FROM answers WHERE attempt_id=?').bind(att.id).all();
+  const sc = scoreAttempt(att.exam_type, results, JSON.parse(att.state).level);
+  const status = att.status === 'in_progress' ? 'in_progress' : sc.pendingManual ? 'submitted' : 'graded';
+  if (status === 'graded') { // only the request that flips submitted -> graded sends the result
+    const upd = await env.DB.prepare(`UPDATE attempts SET score=?, status='graded' WHERE id=? AND status='submitted'`).bind(JSON.stringify(sc), att.id).run();
+    if (upd.meta?.changes) { await notifyResult(env, att); return status; }
+  }
+  await env.DB.prepare('UPDATE attempts SET score=? WHERE id=?').bind(JSON.stringify(sc), att.id).run();
+  return status;
 }
 export async function notifyResult(env, a) { // child profiles: the parent receives the mail
   const u = await env.DB.prepare(`SELECT COALESCE(p.email,c.email) AS email, c.name FROM users c LEFT JOIN users p ON p.id=c.parent_id WHERE c.id=?`).bind(a.user_id).first();
@@ -401,7 +425,7 @@ async function peerCompare(env, a, levelKey) {
 /** Report payload. `shared` = the read-only parent view: no e-mail, no internal ids. */
 export async function buildReport(env, a, { shared = false } = {}) {
   const { results } = await env.DB.prepare(
-    `SELECT a.section,a.kind,a.difficulty,a.choice,a.text,a.correct,a.manual_score,a.feedback,a.time_ms,
+    `SELECT a.section,a.kind,a.difficulty,a.choice,a.text,a.correct,a.manual_score,a.feedback,a.graded_by,a.time_ms,
             q.stem,q.passage,q.image_svg,q.choices,q.answer,q.explanation
      FROM answers a JOIN questions q ON q.id=a.question_id WHERE a.attempt_id=? ORDER BY a.created_at`).bind(a.id).all();
   const user = await env.DB.prepare('SELECT name,email,grade FROM users WHERE id=?').bind(a.user_id).first();

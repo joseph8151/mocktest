@@ -1,9 +1,10 @@
 import { Hono } from 'hono';
 import { uid, now } from '../lib/util.js';
 import { requireAdmin } from '../lib/auth.js';
-import { EXAMS, scoreAttempt } from '../lib/exam.js';
+import { EXAMS } from '../lib/exam.js';
 import { stripeRetrieveSession, stripeRefund, portoneCancel, recheckOrder, fulfillOrder, giftCode } from '../lib/payments.js';
-import { notifyResult } from './exams.js';
+import { regradeAttempt } from './exams.js';
+import { aiConfigured, aiMode, gradePending, gradeAnswer, AI_MODEL_DEFAULT } from '../lib/aigrade.js';
 import { kcpCancel, kcpEnabled, kcpConfig } from '../lib/kcp.js';
 import { audit, redact, logEvent } from '../lib/security.js';
 import { clearNoticeCache } from './shop.js';
@@ -266,10 +267,36 @@ app.post('/questions/import', async (c) => {
 /* ---- manual grading (WIDA writing / speaking) ---- */
 app.get('/grading', async (c) => {
   const { results } = await c.env.DB.prepare(
-    `SELECT a.id,a.attempt_id,a.section,a.kind,a.text,a.audio_key,a.manual_score,a.feedback,q.stem,q.passage,u.name,u.email
+    `SELECT a.id,a.attempt_id,a.section,a.kind,a.text,a.audio_key,a.manual_score,a.feedback,a.graded_by,a.ai_status,a.ai_score,a.ai_feedback,a.ai_transcript,a.ai_model,t.exam_type,q.stem,q.passage,u.name,u.email
      FROM answers a JOIN attempts t ON t.id=a.attempt_id JOIN questions q ON q.id=a.question_id JOIN users u ON u.id=t.user_id
      WHERE a.kind IN ('text','audio') AND t.status!='in_progress' ORDER BY (a.manual_score IS NOT NULL), a.created_at DESC LIMIT 200`).all();
   return c.json({ items: results });
+});
+/* ---- AI grading (Claude; speaking transcribed with Workers AI) ---- */
+app.get('/ai-grading', async (c) => {
+  const counts = Object.fromEntries((await c.env.DB.prepare(`SELECT COALESCE(a.ai_status,'none') s, COUNT(*) n FROM answers a JOIN attempts t ON t.id=a.attempt_id
+      WHERE a.kind IN ('text','audio') AND a.manual_score IS NULL AND t.status!='in_progress' GROUP BY 1`).all()).results.map((r) => [r.s, r.n]));
+  return c.json({ configured: aiConfigured(c.env), speech: !!c.env.AI, mode: await aiMode(c.env), model: c.env.AI_MODEL || AI_MODEL_DEFAULT, pending: counts });
+});
+app.post('/ai-grading/mode', async (c) => {
+  const { mode } = await c.req.json();
+  if (!['review', 'auto', 'off'].includes(mode)) return c.json({ error: 'mode' }, 400);
+  await c.env.DB.prepare(`INSERT INTO settings (key,value,updated_at) VALUES ('ai_grading_mode',?,?) ON CONFLICT(key) DO UPDATE SET value=excluded.value, updated_at=excluded.updated_at`).bind(mode, now()).run();
+  return c.json({ ok: true, mode });
+});
+app.post('/ai-grading/run', async (c) => { // grade the backlog now (in the background; the page polls)
+  if (!aiConfigured(c.env)) return c.json({ error: 'ANTHROPIC_API_KEY가 설정되지 않았습니다.' }, 400);
+  const job = gradePending(c.env, { limit: 20 }).catch((e) => console.error('ai run', e));
+  try { c.executionCtx.waitUntil(job); } catch { await job; }
+  return c.json({ ok: true });
+});
+app.post('/grading/:id/ai', async (c) => { // (re)grade one answer with AI, synchronously
+  if (!aiConfigured(c.env)) return c.json({ error: 'ANTHROPIC_API_KEY가 설정되지 않았습니다.' }, 400);
+  const id = c.req.param('id');
+  await c.env.DB.prepare(`UPDATE answers SET ai_status=NULL WHERE id=? AND manual_score IS NULL AND ai_status!='running'`).bind(id).run();
+  const ok = await gradeAnswer(c.env, id, { mode: 'review' });
+  const r = await c.env.DB.prepare('SELECT ai_status,ai_score,ai_feedback,ai_transcript FROM answers WHERE id=?').bind(id).first();
+  return c.json({ ok, ...r });
 });
 app.get('/audio/*', async (c) => {
   const key = decodeURIComponent(c.req.path.replace(/^\/api\/admin\/audio\//, ''));
@@ -286,13 +313,8 @@ app.post('/grading/:id', async (c) => {
   if (!(score >= 1 && score <= 6)) return c.json({ error: '점수는 1~6입니다.' }, 400);
   const ans = await c.env.DB.prepare('SELECT * FROM answers WHERE id=?').bind(c.req.param('id')).first();
   if (!ans) return c.json({ error: 'not found' }, 404);
-  await c.env.DB.prepare('UPDATE answers SET manual_score=?, feedback=? WHERE id=?').bind(score, String(b.feedback || '').slice(0, 2000), ans.id).run();
-  const att = await c.env.DB.prepare('SELECT * FROM attempts WHERE id=?').bind(ans.attempt_id).first();
-  const { results } = await c.env.DB.prepare('SELECT * FROM answers WHERE attempt_id=?').bind(att.id).all();
-  const sc = scoreAttempt(att.exam_type, results, JSON.parse(att.state).level);
-  const status = att.status === 'in_progress' ? 'in_progress' : sc.pendingManual ? 'submitted' : 'graded';
-  await c.env.DB.prepare('UPDATE attempts SET score=?, status=? WHERE id=?').bind(JSON.stringify(sc), status, att.id).run();
-  if (status === 'graded' && att.status === 'submitted') await notifyResult(c.env, att);
+  await c.env.DB.prepare(`UPDATE answers SET manual_score=?, feedback=?, graded_by=? WHERE id=?`).bind(score, String(b.feedback || '').slice(0, 2000), b.fromAi ? 'ai+teacher' : 'teacher', ans.id).run();
+  await regradeAttempt(c.env, ans.attempt_id);
   return c.json({ ok: true });
 });
 

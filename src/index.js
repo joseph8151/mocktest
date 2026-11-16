@@ -7,6 +7,7 @@ import admin from './routes/admin.js';
 import sample from './routes/sample.js';
 import family from './routes/family.js';
 import { ensureDb } from './lib/bootstrap.js';
+import { aiConfigured, gradePending } from './lib/aigrade.js';
 import { API_HEADERS } from './lib/security.js';
 import { edgeKey } from './lib/edgecache.js';
 
@@ -78,4 +79,11 @@ app.onError((err, c) => {
   return c.json({ error: '서버 오류가 발생했습니다.' }, 500);
 });
 
-export default app;
+export default {
+  fetch: (req, env, ctx) => app.fetch(req, env, ctx),
+  // Cron (wrangler.jsonc triggers): AI-grade writing/speaking answers the instant pass missed (timeouts, errors, backlog).
+  scheduled(event, env, ctx) {
+    if (!aiConfigured(env)) return;
+    ctx.waitUntil(ensureDb(env, ctx).then(() => gradePending(env, { limit: 15 })).catch((e) => console.error('cron ai grading', e)));
+  },
+};
