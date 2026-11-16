@@ -51,7 +51,7 @@ app.get('/payment-status', async (c) => {
   const e = c.env, site = e.SITE_URL;
   const bank = await bankAccount(e);
   return c.json({
-    bank: { configured: !!bank, ...(bank || {}) },
+    bank: { configured: !!bank, notify: !!e.NOTIFY_EMAIL, ...(bank || {}) },
     siteUrl: site,
     stripe: { configured: !!e.STRIPE_SECRET_KEY, webhookSecret: !!e.STRIPE_WEBHOOK_SECRET, webhookUrl: `${site}/api/webhooks/stripe` },
     portone: { configured: !!(e.PORTONE_API_SECRET && e.PORTONE_STORE_ID && e.PORTONE_CHANNEL_KEY), webhookSecret: !!e.PORTONE_WEBHOOK_SECRET, webhookUrl: `${site}/api/webhooks/portone` },

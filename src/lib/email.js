@@ -63,3 +63,6 @@ export const mailBankOrder = (env, name, v) =>
    <table style="border-collapse:collapse;font-size:14px">${[['상품', v.title], ['입금액', `<b>${v.amount.toLocaleString()}원</b>`], ['은행', v.account.bank], ['계좌번호', `<b>${esc(v.account.account)}</b>`], ['예금주', v.account.holder], ['입금자명', v.depositor], ['입금기한', new Date(v.expiresAt + 9 * 3600000).toISOString().slice(0, 16).replace('T', ' ') + ' (KST)']]
      .map(([k, x]) => `<tr><td style="padding:4px 14px 4px 0;color:#6b7280">${k}</td><td>${k === '입금액' || k === '계좌번호' ? x : esc(x)}</td></tr>`).join('')}</table>
    <p style="font-size:13px;color:#6b7280">입금자명이 다르면 확인이 늦어질 수 있습니다. 기한 안에 입금되지 않으면 주문은 자동 취소됩니다.</p>${btn(`${env.SITE_URL}/#/pay/bank?order=${v.orderId}`, '입금 안내 다시 보기')}`;
+export const mailBankAlert = (env, v) =>
+  `<p>새 무통장입금 주문이 들어왔습니다. 통장에서 입금을 확인한 뒤 관리자 화면에서 “입금 확인”을 눌러 주세요.</p>
+   <p>상품: ${esc(v.title)}<br>입금자명: <b>${esc(v.depositor)}</b><br>금액: <b>${v.amount.toLocaleString()}원</b>${v.cashReceipt ? `<br>현금영수증: ${v.cashReceipt.type === 'business' ? '지출증빙' : '소득공제'} ${esc(v.cashReceipt.number)}` : ''}</p>${btn(`${env.SITE_URL}/#/admin/orders`, '주문 관리 열기')}`;

@@ -8,7 +8,7 @@ import {
   portoneVerifyAndFulfill, portoneGetPayment, portoneVerifyWebhook, recheckOrder, failOrder,
 } from '../lib/payments.js';
 import { bankAccount, cleanDepositor, BANK_DAYS } from '../lib/bank.js';
-import { sendMail, mailBankOrder } from '../lib/email.js';
+import { sendMail, mailBankOrder, mailBankAlert } from '../lib/email.js';
 
 const app = new Hono();
 
@@ -243,6 +243,8 @@ app.post('/pay/bank/order', requireUser, async (c) => {
   await c.env.DB.prepare(`UPDATE orders SET status='awaiting_deposit', meta=? WHERE id=?`).bind(JSON.stringify({ depositor, cashReceipt, account: acct }), order.id).run();
   const view = bankView({ ...order, status: 'awaiting_deposit', title: product.title, meta: JSON.stringify({ depositor, cashReceipt }) }, acct);
   await sendMail(c.env, user.email, `[${c.env.SITE_NAME}] 입금 안내`, mailBankOrder(c.env, user.name, view));
+  // operator alert (NOTIFY_EMAIL: set it as a Text variable in the Cloudflare dashboard) so deposits are confirmed quickly
+  if (c.env.NOTIFY_EMAIL) await sendMail(c.env, c.env.NOTIFY_EMAIL, `[${c.env.SITE_NAME}] 새 무통장입금 주문 · ${depositor} · ${order.amount.toLocaleString()}원`, mailBankAlert(c.env, view));
   return c.json(view);
 });
 app.get('/pay/bank/:id', requireUser, async (c) => {

@@ -117,7 +117,8 @@ Object.assign(EXAM_META, {
     points: ['듣기는 음성으로 재생(최대 2회), 문법·어휘, 독해 3개 영역', '영역별 200–300 척도 점수와 합산 점수(600–900) 추정', 'CEFR A2–B2 수준 문항'] },
 });
 const FAQ = [
-  ['결제하면 바로 시험을 볼 수 있나요?', '네. 결제가 확인되면 이용권이 자동으로 지급되어 곧바로 “내 시험”에서 시작할 수 있습니다.'],
+  ['결제하면 바로 시험을 볼 수 있나요?', '결제가 확인되면 이용권이 지급되어 “내 시험”에서 바로 시작할 수 있습니다. 무통장입금은 안내된 계좌로 입금하시면 확인 후 지급되며(영업시간 기준 보통 당일), 지급되면 이메일로 알려 드립니다.'],
+  ['어떤 결제 방법이 있나요?', '현재 무통장입금(계좌이체)으로 결제할 수 있습니다. 주문하면 계좌와 입금액이 안내되고, 3일 안에 입금하시면 됩니다. 현금영수증도 신청할 수 있습니다.'],
   ['시험 도중 나가면 어떻게 되나요?', '진행 상황이 저장되어 같은 계정으로 다시 접속하면 이어서 풀 수 있습니다. 단, 영역별 제한 시간은 계속 흘러갑니다.'],
   ['실제 시험 점수와 같은가요?', '아니요. 형식을 참고해 만든 연습용 문제이며 점수는 학습 참고용 추정치입니다. NWEA · GL Assessment · WIDA와 무관합니다.'],
   ['WIDA 쓰기·말하기 결과는 언제 나오나요?', '교사가 채점을 마치면 이메일로 알려드리고, 리포트에 종합 레벨이 표시됩니다.'],
@@ -195,12 +196,12 @@ async function pageHome() {
     h('div', { id: 'exams' }), catTabs('us'), head('01', 'Exams', 'Choose your test', '원하는 시험과 횟수권을 고르세요. 결제가 확인되면 이용권이 즉시 지급됩니다.'),
     h('div', { class: 'index' }, Object.entries(EXAM_META).filter(([, m]) => !m.kr).map(([type, m], i) => examCard(type, m, i, products, payment))),
     head('02', 'Process', 'How it works', '가입부터 리포트까지, 군더더기 없이.'),
-    h('div', { class: 'steps' }, [['회원가입', '이메일로 가입하고 학년을 입력합니다.'], ['결제', '국내 카드·간편결제 또는 해외 카드. 결제 즉시 이용권 지급.'], ['응시', '영역별 타이머와 함께 실전처럼 응시합니다.'], ['리포트', '점수·해설·성장 추이를 확인하고 PDF로 저장합니다.']].map(([t, d]) => h('div', { class: 'step' }, h('h3', {}, t), h('p', {}, d)))),
+    h('div', { class: 'steps' }, [['회원가입', '이메일로 가입하고 학년을 입력합니다.'], ['결제', '결제가 확인되면 이용권이 바로 지급됩니다. 무통장입금은 입금 확인 후 지급됩니다.'], ['응시', '영역별 타이머와 함께 실전처럼 응시합니다.'], ['리포트', '점수·해설·성장 추이를 확인하고 PDF로 저장합니다.']].map(([t, d]) => h('div', { class: 'step' }, h('h3', {}, t), h('p', {}, d)))),
     head('03', 'Features', 'What you get'),
-    h('div', { class: 'features' }, [['실전형 출제', '서버가 한 문항씩 출제하고 정답은 노출되지 않습니다. 새로고침해도 이어서 풀 수 있습니다.'], ['성장 추이', '같은 시험을 반복 응시하면 점수 변화를 그래프로 보여줍니다.'], ['해설 리포트', '문항별 정답·내 답·해설과 영역별 강약점을 제공합니다.'], ['듣기 · 말하기', '듣기는 음성으로 재생하고, 말하기는 브라우저에서 바로 녹음합니다.'], ['안전한 결제', 'Stripe · 포트원. 서버에서 금액을 검증하고 웹훅으로 자동 지급합니다.'], ['PDF 저장', '리포트를 인쇄하거나 PDF로 저장해 상담에 활용하세요.']].map(([t, d], i) => h('div', { class: 'feature' }, h('div', { class: 'fi' }, `0${i + 1}`), h('div', {}, h('b', {}, t), h('span', {}, d))))),
+    h('div', { class: 'features' }, [['실전형 출제', '서버가 한 문항씩 출제하고 정답은 노출되지 않습니다. 새로고침해도 이어서 풀 수 있습니다.'], ['성장 추이', '같은 시험을 반복 응시하면 점수 변화를 그래프로 보여줍니다.'], ['해설 리포트', '문항별 정답·내 답·해설과 영역별 강약점을 제공합니다.'], ['듣기 · 말하기', '듣기는 음성으로 재생하고, 말하기는 브라우저에서 바로 녹음합니다.'], ['안전한 결제', '금액은 서버에서 검증하고, 결제·입금이 확인되면 이용권을 지급하고 메일로 알려 드립니다.'], ['PDF 저장', '리포트를 인쇄하거나 PDF로 저장해 상담에 활용하세요.']].map(([t, d], i) => h('div', { class: 'feature' }, h('div', { class: 'fi' }, `0${i + 1}`), h('div', {}, h('b', {}, t), h('span', {}, d))))),
     head('04', 'FAQ', 'Questions, answered'),
     FAQ.map(([q, a]) => h('details', { class: 'faq' }, h('summary', {}, q), h('p', {}, a))),
-    h('div', { class: 'cta-band' }, h('div', {}, h('h2', {}, 'Ready for test day?'), h('p', {}, '결제 후 바로 시작 · 결과는 즉시 확인')), h('button', { class: 'btn lg', onclick: toExams }, 'Choose your test →')),
+    h('div', { class: 'cta-band' }, h('div', {}, h('h2', {}, 'Ready for test day?'), h('p', {}, '결제 확인 후 바로 시작 · 결과는 즉시 확인')), h('button', { class: 'btn lg', onclick: toExams }, 'Choose your test →')),
   );
 }
 
@@ -239,7 +240,7 @@ function buy(p, payment) {
     const crType = h('select', {}, [['none', '현금영수증 신청 안 함'], ['personal', '소득공제용 (휴대폰 번호)'], ['business', '지출증빙용 (사업자등록번호)']].map(([v, l]) => h('option', { value: v }, l)));
     const crNum = h('input', { inputmode: 'numeric', placeholder: '번호 (숫자만)', hidden: true });
     crType.onchange = () => { crNum.hidden = crType.value === 'none'; };
-    return h('div', { class: 'notice', hidden: true, style: 'margin-top:14px' },
+    return h('div', { class: 'notice', hidden: !!(shown.length || payment.stripe), style: 'margin-top:14px' },
       h('b', {}, '무통장입금'), h('p', { class: 'small' }, '주문 후 안내되는 계좌로 3일 안에 입금하시면, 입금 확인 뒤 이용권이 지급됩니다 (영업일 기준 보통 당일).'),
       field('입금자명', dep), field('현금영수증', h('div', { class: 'row', style: 'gap:8px' }, crType, crNum)),
       h('button', { class: 'btn', onclick: guard(once(async () => {
@@ -255,7 +256,7 @@ function buy(p, payment) {
     h('div', { class: 'row', style: 'margin-top:18px' },
       shown.map(([k, l], i) => h('button', { class: 'btn', onclick: guard(once(() => (k === 'kcp' ? payKcp(p, method, coupon, gift) : payPortone(p, close, method, coupon, gift)))) }, me.role === 'admin' ? l + ' · ' : '', newPriceK())),
       payment.stripe ? h('button', { class: 'btn alt', onclick: guard(once(() => payStripe(p, coupon, gift))) }, 'International card · ', priceU) : null,
-      payment.bank && p.id !== 'p-test' ? h('button', { class: 'btn alt', onclick: () => { bankBox.hidden = !bankBox.hidden; } }, '무통장입금 · ', newPriceK()) : null,
+      payment.bank && p.id !== 'p-test' ? h('button', { class: 'btn alt', onclick: () => { bankBox.hidden = false; bankBox.querySelector('input')?.focus(); } }, '무통장입금 · ', newPriceK()) : null,
     ),
     bankBox,
     !shown.length && !payment.stripe && !payment.bank ? (me.role === 'admin'
@@ -1300,7 +1301,7 @@ async function adminPayments(b) {
     (() => {
       const f = h('form', { class: 'row', style: 'margin-top:10px', onsubmit: guard(async (e) => { e.preventDefault(); await api('POST', '/admin/bank-account', { bank: f.bank.value, account: f.account.value, holder: f.holder.value }); toast(f.account.value ? '저장됨 · 결제창에 무통장입금이 표시됩니다' : '무통장입금을 껐습니다'); pageAdmin('payments'); }) },
         h('input', { name: 'bank', placeholder: '은행 (예: 국민은행)', value: st.bank.bank || '', style: 'width:150px' }), h('input', { name: 'account', placeholder: '계좌번호', value: st.bank.account || '', class: 'grow' }), h('input', { name: 'holder', placeholder: '예금주', value: st.bank.holder || '', style: 'width:140px' }), h('button', { class: 'btn sm' }, '저장'));
-      const card = row('무통장입금 (PG 없이 바로 사용)', st.bank.configured, [['입금 확인', '관리자 → 주문에서 입금자명·금액을 통장과 맞춰 보고 “입금 확인”을 누르면 이용권이 지급됩니다'], ['기한', '3일 안에 입금이 없으면 주문 자동 취소'], ['끄기', '계좌번호를 비우고 저장']]);
+      const card = row('무통장입금 (PG 없이 바로 사용)', st.bank.configured, [['입금 확인', '관리자 → 주문에서 입금자명·금액을 통장과 맞춰 보고 “입금 확인”을 누르면 이용권이 지급됩니다'], ['새 주문 알림 메일', st.bank.notify ? '켜짐 (NOTIFY_EMAIL)' : 'Cloudflare 변수 NOTIFY_EMAIL(Text)에 받을 주소를 넣으면 주문마다 메일이 옵니다'], ['기한', '3일 안에 입금이 없으면 주문 자동 취소'], ['끄기', '계좌번호를 비우고 저장']]);
       card.append(f); return card;
     })(),
     row('KCP 직접 연동', st.kcp.configured, [['모드', st.kcp.mode === 'prod' ? '운영(prod)' : '테스트(test)'], ['site_cd', st.kcp.siteCd || '(KCP_SITE_CD 필요)'], ['결과 수신(Ret_URL)', st.kcp.returnUrl], ['필요 시크릿', 'KCP_SITE_CD, KCP_CERT_INFO (운영 전환 시 KCP_MODE=prod)']]),
@@ -1379,7 +1380,7 @@ const LEGAL = {
     ['1. 전액 환불', '결제 후 7일 이내이며 응시 기록이 전혀 없는(미사용) 이용권은 전액 환불됩니다.'],
     ['2. 부분 환불', '다회권은 사용하지 않은 회차에 대해, 이미 응시한 회차 가격(정가 기준)을 공제한 금액을 환불합니다.'],
     ['3. 환불 불가', '응시를 시작한 1회권, 유효기간이 지난 이용권, 회원의 약관 위반으로 이용이 제한된 경우.'],
-    ['4. 환불 절차', `고객센터(${c.biz.contact})로 주문 정보와 함께 요청하시면 확인 후 영업일 기준 3일 이내에 결제 수단으로 환불합니다. 카드사 사정에 따라 취소 반영에 며칠이 더 걸릴 수 있습니다.`],
+    ['4. 환불 절차', `고객센터(${c.biz.contact})로 주문 정보와 함께 요청하시면 확인 후 영업일 기준 3일 이내에 결제 수단으로 환불합니다. 카드사 사정에 따라 취소 반영에 며칠이 더 걸릴 수 있습니다. 무통장입금으로 결제한 경우 환불받을 계좌(은행·계좌번호·예금주)를 알려 주시면 그 계좌로 송금합니다.`],
     ['5. 서비스 장애', '회사 귀책으로 시험을 정상 응시하지 못한 경우 응시 횟수를 복구하거나 환불합니다.'],
   ]],
 };
