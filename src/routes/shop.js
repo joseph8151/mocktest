@@ -45,7 +45,8 @@ app.get('/config', async (c) => c.json({
   notice: await siteNotice(c.env),
   popup: await sitePopup(c.env),
   manual: await manualSettings(c.env), // which teacher-graded sections are offered (speaking / essay)
-  biz: { name: c.env.BIZ_NAME || '', owner: c.env.BIZ_OWNER || '', regNo: c.env.BIZ_REG_NO || '', salesNo: c.env.BIZ_SALES_NO || '', address: c.env.BIZ_ADDRESS || '', contact: c.env.BIZ_CONTACT || '' }, // unset fields are left out of the footer
+  biz: Object.fromEntries(Object.entries({ name: c.env.BIZ_NAME, owner: c.env.BIZ_OWNER, regNo: c.env.BIZ_REG_NO, salesNo: c.env.BIZ_SALES_NO, address: c.env.BIZ_ADDRESS, contact: c.env.BIZ_CONTACT })
+    .map(([k, v]) => [k, /^\s*\(.*\)\s*$/.test(v || '') ? '' : String(v || '').trim()])), // unset or placeholder "(…)" values are left out of the footer
 }));
 
 app.get('/products', async (c) => {

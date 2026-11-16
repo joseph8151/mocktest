@@ -36,7 +36,7 @@ function layout(env, body) {
       <div style="font-weight:800;font-size:16px;margin-bottom:18px">★ ${esc(env.SITE_NAME || 'MockTest Lab')}</div>
       ${body}
     </div>
-    <div style="padding:14px 28px;border-top:1px solid #e3e1d8;font-size:12px;color:#6b7280">본 메일은 발신 전용입니다. 문의: ${esc(env.BIZ_CONTACT || env.SITE_URL || '')}</div>
+    <div style="padding:14px 28px;border-top:1px solid #e3e1d8;font-size:12px;color:#6b7280">본 메일은 발신 전용입니다. 문의: ${esc(env.BIZ_CONTACT && !/^\s*\(.*\)\s*$/.test(env.BIZ_CONTACT) ? env.BIZ_CONTACT : `${env.SITE_URL || ''}/#/contact`)}</div>
   </div></div>`;
 }
 export const mailWelcome = (env, name) =>
