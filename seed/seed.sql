@@ -5676,6 +5676,798 @@ INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,st
 반대하는 사람들은 인공지능이 써 준 글을 그대로 내면 스스로 생각하고 글을 쓰는 힘이 자라지 않는다고 걱정한다. 또 인공지능이 틀린 내용을 그럴듯하게 써 주는 경우도 있어서, 내용을 확인하지 않으면 잘못된 지식을 배울 수 있다고 지적한다.
 
 전문가들은 인공지능을 쓰더라도 어떤 부분에 도움을 받았는지 밝히고, 결과를 스스로 확인하며, 최종 글은 자기 생각으로 완성하는 습관이 중요하다고 조언한다.','위 글의 내용을 찬성 측과 반대 측의 의견이 드러나도록 3문장 안팎으로 요약한 뒤, ''숙제에 인공지능을 활용하는 것''에 대한 자신의 의견을 까닭과 함께 쓰시오. 전체를 8~12문장으로 쓰고, 글에 나온 근거를 한 가지 이상 활용하시오.',NULL,NULL,NULL,'채점 기준(10점): ① 요약에 화제(숙제에 인공지능 활용), 찬성 측 근거(빠른 정보 탐색·글 다듬기, 올바른 사용법 익히기), 반대 측 근거(생각하고 쓰는 힘 약화, 틀린 내용 위험)가 균형 있게 담김(3점) ② 요약이 3문장 안팎으로 간결하고 원문을 그대로 베끼지 않음(1점) ③ 자신의 입장(찬성·반대·조건부 찬성 등)이 분명함(2점) ④ 글에 나온 근거를 한 가지 이상 활용하고, 자신의 경험이나 생각으로 까닭을 덧붙임(2점) ⑤ 전문가 조언 등을 바탕으로 한 구체적 실천 방안 제시(1점) ⑥ 8~12문장 분량, 맞춤법·문장 호응(1점). 요약 없이 의견만 쓰거나 한쪽 의견만 요약하면 ①에서 감점.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-437157f93224','KR_KOR','nonfiction','mcq',1,'펭귄은 새예요. 그런데 다른 새들과 달리 하늘을 날지 못해요. 펭귄의 날개는 작고 납작해서 하늘을 날기에는 알맞지 않아요.
+
+대신 펭귄은 헤엄을 아주 잘 쳐요. 납작한 날개를 배의 노처럼 저어서 물속을 빠르게 나아가요. 펭귄은 물속에서 물고기를 잡아먹으며 살아요.
+
+펭귄은 땅 위에서는 뒤뚱뒤뚱 걸어요. 다리가 짧아서 빨리 걷지 못해요. 그래서 얼음 위에서는 배를 깔고 쭉 미끄러져 가기도 해요. 그러면 걷는 것보다 더 빨리 갈 수 있어요.
+
+추운 곳에 사는 펭귄은 몸에 깃털이 촘촘하게 나 있어요. 이 깃털 덕분에 차가운 물에 들어가도 몸이 따뜻해요. 아주 추운 날에는 여러 마리가 서로 몸을 꼭 붙이고 모여 서서 추위를 견뎌요.','이 글은 무엇에 대해 알려 주는 글인가요?',NULL,'["새가 하늘을 나는 까닭","펭귄을 집에서 기르는 방법","펭귄이 사는 모습","물고기를 잡는 낚시 방법"]',2,'글 전체가 펭귄의 날개, 헤엄치는 모습, 걷는 모습, 추위를 견디는 방법처럼 펭귄이 사는 모습을 알려 주고 있어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-ec5dd3b5b62e','KR_KOR','nonfiction','mcq',1,'펭귄은 새예요. 그런데 다른 새들과 달리 하늘을 날지 못해요. 펭귄의 날개는 작고 납작해서 하늘을 날기에는 알맞지 않아요.
+
+대신 펭귄은 헤엄을 아주 잘 쳐요. 납작한 날개를 배의 노처럼 저어서 물속을 빠르게 나아가요. 펭귄은 물속에서 물고기를 잡아먹으며 살아요.
+
+펭귄은 땅 위에서는 뒤뚱뒤뚱 걸어요. 다리가 짧아서 빨리 걷지 못해요. 그래서 얼음 위에서는 배를 깔고 쭉 미끄러져 가기도 해요. 그러면 걷는 것보다 더 빨리 갈 수 있어요.
+
+추운 곳에 사는 펭귄은 몸에 깃털이 촘촘하게 나 있어요. 이 깃털 덕분에 차가운 물에 들어가도 몸이 따뜻해요. 아주 추운 날에는 여러 마리가 서로 몸을 꼭 붙이고 모여 서서 추위를 견뎌요.','펭귄이 얼음 위에서 배를 깔고 미끄러져 가는 까닭은 무엇인가요?',NULL,'["배가 아파서","날개를 쉬게 하려고","걷는 것보다 더 빨리 갈 수 있어서","물고기를 숨기려고"]',2,'셋째 문단에서 펭귄은 다리가 짧아 빨리 걷지 못해서, 배를 깔고 미끄러지면 걷는 것보다 더 빨리 갈 수 있다고 했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-70bb47c96207','KR_KOR','nonfiction','mcq',1,'펭귄은 새예요. 그런데 다른 새들과 달리 하늘을 날지 못해요. 펭귄의 날개는 작고 납작해서 하늘을 날기에는 알맞지 않아요.
+
+대신 펭귄은 헤엄을 아주 잘 쳐요. 납작한 날개를 배의 노처럼 저어서 물속을 빠르게 나아가요. 펭귄은 물속에서 물고기를 잡아먹으며 살아요.
+
+펭귄은 땅 위에서는 뒤뚱뒤뚱 걸어요. 다리가 짧아서 빨리 걷지 못해요. 그래서 얼음 위에서는 배를 깔고 쭉 미끄러져 가기도 해요. 그러면 걷는 것보다 더 빨리 갈 수 있어요.
+
+추운 곳에 사는 펭귄은 몸에 깃털이 촘촘하게 나 있어요. 이 깃털 덕분에 차가운 물에 들어가도 몸이 따뜻해요. 아주 추운 날에는 여러 마리가 서로 몸을 꼭 붙이고 모여 서서 추위를 견뎌요.','글의 내용과 맞는 것은 무엇인가요?',NULL,'["펭귄은 날개를 노처럼 저어서 헤엄친다.","펭귄의 날개는 크고 넓다.","펭귄은 하늘을 높이 날 수 있다.","펭귄은 땅 위에서 아주 빨리 뛴다."]',0,'둘째 문단에 납작한 날개를 배의 노처럼 저어서 물속을 나아간다고 나와요. 펭귄은 날지 못하고, 날개는 작고 납작하며, 땅 위에서는 뒤뚱뒤뚱 걸어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-51b240b6c05f','KR_KOR','nonfiction','mcq',1,'펭귄은 새예요. 그런데 다른 새들과 달리 하늘을 날지 못해요. 펭귄의 날개는 작고 납작해서 하늘을 날기에는 알맞지 않아요.
+
+대신 펭귄은 헤엄을 아주 잘 쳐요. 납작한 날개를 배의 노처럼 저어서 물속을 빠르게 나아가요. 펭귄은 물속에서 물고기를 잡아먹으며 살아요.
+
+펭귄은 땅 위에서는 뒤뚱뒤뚱 걸어요. 다리가 짧아서 빨리 걷지 못해요. 그래서 얼음 위에서는 배를 깔고 쭉 미끄러져 가기도 해요. 그러면 걷는 것보다 더 빨리 갈 수 있어요.
+
+추운 곳에 사는 펭귄은 몸에 깃털이 촘촘하게 나 있어요. 이 깃털 덕분에 차가운 물에 들어가도 몸이 따뜻해요. 아주 추운 날에는 여러 마리가 서로 몸을 꼭 붙이고 모여 서서 추위를 견뎌요.','''뒤뚱뒤뚱''은 어떤 모양을 흉내 낸 말인가요?',NULL,'["물에 첨벙 뛰어드는 모양","하늘 높이 날아오르는 모양","몸을 이쪽저쪽으로 흔들며 걷는 모양","아주 빠르게 달리는 모양"]',2,'''뒤뚱뒤뚱''은 몸이 이쪽저쪽으로 기울며 흔들리게 걷는 모양을 흉내 낸 말이에요. 다리가 짧은 펭귄이 걷는 모습이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-6b561b63918a','KR_KOR','nonfiction','mcq',1,'햇살 어린이 도서관 이용 안내
+
+햇살 어린이 도서관은 어린이를 위한 도서관이에요. 그림책과 동화책이 아주 많이 있어요. 누구나 와서 책을 읽을 수 있어요.
+
+도서관이 문을 여는 날과 시간은 아래 표를 보세요. 요일마다 여는 시간이 달라요.
+
+책을 빌리려면 도서 대출 카드가 있어야 해요. 한 사람이 한 번에 세 권까지 빌릴 수 있어요. 빌린 책은 일주일 안에 돌려주세요.
+
+도서관 안에서는 이렇게 해 주세요.
+첫째, 작은 목소리로 이야기해요.
+둘째, 음식은 먹지 않아요.
+셋째, 다 읽은 책은 책 수레에 올려 두어요.
+
+토요일 오전 11시에는 그림책 읽어 주기 시간이 있어요. 선생님과 함께 재미있는 그림책을 읽어요.','이 글은 어떤 글인가요?','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 408 190" width="408" height="190" font-family="sans-serif"><rect x="0" y="0" width="408" height="190" fill="#ffffff"/><text x="204" y="26" font-size="17" font-weight="bold" text-anchor="middle" fill="#0a1f44">햇살 어린이 도서관 여는 시간</text><rect x="4" y="40" width="400" height="36" fill="#e6e9f0"/><line x1="4" y1="40" x2="404" y2="40" stroke="#333" stroke-width="2"/><line x1="4" y1="76" x2="404" y2="76" stroke="#333" stroke-width="2"/><line x1="4" y1="112" x2="404" y2="112" stroke="#333" stroke-width="2"/><line x1="4" y1="148" x2="404" y2="148" stroke="#333" stroke-width="2"/><line x1="4" y1="184" x2="404" y2="184" stroke="#333" stroke-width="2"/><line x1="4" y1="40" x2="4" y2="184" stroke="#333" stroke-width="2"/><line x1="154" y1="40" x2="154" y2="184" stroke="#333" stroke-width="2"/><line x1="404" y1="40" x2="404" y2="184" stroke="#333" stroke-width="2"/><text x="79" y="64" font-size="15" text-anchor="middle" fill="#000" font-weight="bold">요일</text><text x="279" y="64" font-size="15" text-anchor="middle" fill="#000" font-weight="bold">여는 시간</text><text x="79" y="100" font-size="15" text-anchor="middle" fill="#000">월요일</text><text x="279" y="100" font-size="15" text-anchor="middle" fill="#000">쉬어요</text><text x="79" y="136" font-size="15" text-anchor="middle" fill="#000">화요일 ~ 금요일</text><text x="279" y="136" font-size="15" text-anchor="middle" fill="#000">오전 9시 ~ 오후 6시</text><text x="79" y="172" font-size="15" text-anchor="middle" fill="#000">토요일, 일요일</text><text x="279" y="172" font-size="15" text-anchor="middle" fill="#000">오전 10시 ~ 오후 5시</text></svg>','["도서관에 다녀온 일을 쓴 일기","도서관을 이용하는 방법을 알려 주는 글","책 속 이야기를 들려주는 글","친구에게 보내는 편지"]',1,'제목이 ''이용 안내''이고, 여는 시간, 책을 빌리는 방법, 지켜야 할 일을 알려 주는 안내문이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-418cfab2da89','KR_KOR','nonfiction','mcq',1,'햇살 어린이 도서관 이용 안내
+
+햇살 어린이 도서관은 어린이를 위한 도서관이에요. 그림책과 동화책이 아주 많이 있어요. 누구나 와서 책을 읽을 수 있어요.
+
+도서관이 문을 여는 날과 시간은 아래 표를 보세요. 요일마다 여는 시간이 달라요.
+
+책을 빌리려면 도서 대출 카드가 있어야 해요. 한 사람이 한 번에 세 권까지 빌릴 수 있어요. 빌린 책은 일주일 안에 돌려주세요.
+
+도서관 안에서는 이렇게 해 주세요.
+첫째, 작은 목소리로 이야기해요.
+둘째, 음식은 먹지 않아요.
+셋째, 다 읽은 책은 책 수레에 올려 두어요.
+
+토요일 오전 11시에는 그림책 읽어 주기 시간이 있어요. 선생님과 함께 재미있는 그림책을 읽어요.','표를 보고 답하세요. 토요일에 도서관은 몇 시에 문을 닫나요?','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 408 190" width="408" height="190" font-family="sans-serif"><rect x="0" y="0" width="408" height="190" fill="#ffffff"/><text x="204" y="26" font-size="17" font-weight="bold" text-anchor="middle" fill="#0a1f44">햇살 어린이 도서관 여는 시간</text><rect x="4" y="40" width="400" height="36" fill="#e6e9f0"/><line x1="4" y1="40" x2="404" y2="40" stroke="#333" stroke-width="2"/><line x1="4" y1="76" x2="404" y2="76" stroke="#333" stroke-width="2"/><line x1="4" y1="112" x2="404" y2="112" stroke="#333" stroke-width="2"/><line x1="4" y1="148" x2="404" y2="148" stroke="#333" stroke-width="2"/><line x1="4" y1="184" x2="404" y2="184" stroke="#333" stroke-width="2"/><line x1="4" y1="40" x2="4" y2="184" stroke="#333" stroke-width="2"/><line x1="154" y1="40" x2="154" y2="184" stroke="#333" stroke-width="2"/><line x1="404" y1="40" x2="404" y2="184" stroke="#333" stroke-width="2"/><text x="79" y="64" font-size="15" text-anchor="middle" fill="#000" font-weight="bold">요일</text><text x="279" y="64" font-size="15" text-anchor="middle" fill="#000" font-weight="bold">여는 시간</text><text x="79" y="100" font-size="15" text-anchor="middle" fill="#000">월요일</text><text x="279" y="100" font-size="15" text-anchor="middle" fill="#000">쉬어요</text><text x="79" y="136" font-size="15" text-anchor="middle" fill="#000">화요일 ~ 금요일</text><text x="279" y="136" font-size="15" text-anchor="middle" fill="#000">오전 9시 ~ 오후 6시</text><text x="79" y="172" font-size="15" text-anchor="middle" fill="#000">토요일, 일요일</text><text x="279" y="172" font-size="15" text-anchor="middle" fill="#000">오전 10시 ~ 오후 5시</text></svg>','["오후 5시","오후 6시","오전 10시","오전 9시"]',0,'표에서 토요일, 일요일은 오전 10시부터 오후 5시까지 열어요. 오후 6시는 화요일부터 금요일까지 문을 닫는 시간이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-99d5a20e94d5','KR_KOR','nonfiction','mcq',1,'햇살 어린이 도서관 이용 안내
+
+햇살 어린이 도서관은 어린이를 위한 도서관이에요. 그림책과 동화책이 아주 많이 있어요. 누구나 와서 책을 읽을 수 있어요.
+
+도서관이 문을 여는 날과 시간은 아래 표를 보세요. 요일마다 여는 시간이 달라요.
+
+책을 빌리려면 도서 대출 카드가 있어야 해요. 한 사람이 한 번에 세 권까지 빌릴 수 있어요. 빌린 책은 일주일 안에 돌려주세요.
+
+도서관 안에서는 이렇게 해 주세요.
+첫째, 작은 목소리로 이야기해요.
+둘째, 음식은 먹지 않아요.
+셋째, 다 읽은 책은 책 수레에 올려 두어요.
+
+토요일 오전 11시에는 그림책 읽어 주기 시간이 있어요. 선생님과 함께 재미있는 그림책을 읽어요.','한 사람이 한 번에 빌릴 수 있는 책은 몇 권까지인가요?','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 408 190" width="408" height="190" font-family="sans-serif"><rect x="0" y="0" width="408" height="190" fill="#ffffff"/><text x="204" y="26" font-size="17" font-weight="bold" text-anchor="middle" fill="#0a1f44">햇살 어린이 도서관 여는 시간</text><rect x="4" y="40" width="400" height="36" fill="#e6e9f0"/><line x1="4" y1="40" x2="404" y2="40" stroke="#333" stroke-width="2"/><line x1="4" y1="76" x2="404" y2="76" stroke="#333" stroke-width="2"/><line x1="4" y1="112" x2="404" y2="112" stroke="#333" stroke-width="2"/><line x1="4" y1="148" x2="404" y2="148" stroke="#333" stroke-width="2"/><line x1="4" y1="184" x2="404" y2="184" stroke="#333" stroke-width="2"/><line x1="4" y1="40" x2="4" y2="184" stroke="#333" stroke-width="2"/><line x1="154" y1="40" x2="154" y2="184" stroke="#333" stroke-width="2"/><line x1="404" y1="40" x2="404" y2="184" stroke="#333" stroke-width="2"/><text x="79" y="64" font-size="15" text-anchor="middle" fill="#000" font-weight="bold">요일</text><text x="279" y="64" font-size="15" text-anchor="middle" fill="#000" font-weight="bold">여는 시간</text><text x="79" y="100" font-size="15" text-anchor="middle" fill="#000">월요일</text><text x="279" y="100" font-size="15" text-anchor="middle" fill="#000">쉬어요</text><text x="79" y="136" font-size="15" text-anchor="middle" fill="#000">화요일 ~ 금요일</text><text x="279" y="136" font-size="15" text-anchor="middle" fill="#000">오전 9시 ~ 오후 6시</text><text x="79" y="172" font-size="15" text-anchor="middle" fill="#000">토요일, 일요일</text><text x="279" y="172" font-size="15" text-anchor="middle" fill="#000">오전 10시 ~ 오후 5시</text></svg>','["세 권","일곱 권","한 권","다섯 권"]',0,'셋째 문단에 한 사람이 한 번에 세 권까지 빌릴 수 있다고 했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-654e38898289','KR_KOR','nonfiction','mcq',1,'햇살 어린이 도서관 이용 안내
+
+햇살 어린이 도서관은 어린이를 위한 도서관이에요. 그림책과 동화책이 아주 많이 있어요. 누구나 와서 책을 읽을 수 있어요.
+
+도서관이 문을 여는 날과 시간은 아래 표를 보세요. 요일마다 여는 시간이 달라요.
+
+책을 빌리려면 도서 대출 카드가 있어야 해요. 한 사람이 한 번에 세 권까지 빌릴 수 있어요. 빌린 책은 일주일 안에 돌려주세요.
+
+도서관 안에서는 이렇게 해 주세요.
+첫째, 작은 목소리로 이야기해요.
+둘째, 음식은 먹지 않아요.
+셋째, 다 읽은 책은 책 수레에 올려 두어요.
+
+토요일 오전 11시에는 그림책 읽어 주기 시간이 있어요. 선생님과 함께 재미있는 그림책을 읽어요.','도서관 안에서 지켜야 할 일을 지키지 않은 친구는 누구인가요?','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 408 190" width="408" height="190" font-family="sans-serif"><rect x="0" y="0" width="408" height="190" fill="#ffffff"/><text x="204" y="26" font-size="17" font-weight="bold" text-anchor="middle" fill="#0a1f44">햇살 어린이 도서관 여는 시간</text><rect x="4" y="40" width="400" height="36" fill="#e6e9f0"/><line x1="4" y1="40" x2="404" y2="40" stroke="#333" stroke-width="2"/><line x1="4" y1="76" x2="404" y2="76" stroke="#333" stroke-width="2"/><line x1="4" y1="112" x2="404" y2="112" stroke="#333" stroke-width="2"/><line x1="4" y1="148" x2="404" y2="148" stroke="#333" stroke-width="2"/><line x1="4" y1="184" x2="404" y2="184" stroke="#333" stroke-width="2"/><line x1="4" y1="40" x2="4" y2="184" stroke="#333" stroke-width="2"/><line x1="154" y1="40" x2="154" y2="184" stroke="#333" stroke-width="2"/><line x1="404" y1="40" x2="404" y2="184" stroke="#333" stroke-width="2"/><text x="79" y="64" font-size="15" text-anchor="middle" fill="#000" font-weight="bold">요일</text><text x="279" y="64" font-size="15" text-anchor="middle" fill="#000" font-weight="bold">여는 시간</text><text x="79" y="100" font-size="15" text-anchor="middle" fill="#000">월요일</text><text x="279" y="100" font-size="15" text-anchor="middle" fill="#000">쉬어요</text><text x="79" y="136" font-size="15" text-anchor="middle" fill="#000">화요일 ~ 금요일</text><text x="279" y="136" font-size="15" text-anchor="middle" fill="#000">오전 9시 ~ 오후 6시</text><text x="79" y="172" font-size="15" text-anchor="middle" fill="#000">토요일, 일요일</text><text x="279" y="172" font-size="15" text-anchor="middle" fill="#000">오전 10시 ~ 오후 5시</text></svg>','["민지: 과자를 먹으면서 책을 읽었어요.","서연: 다 읽은 책을 책 수레에 올려 두었어요.","준호: 작은 목소리로 이야기했어요.","하준: 빌린 책을 일주일 안에 돌려주었어요."]',0,'도서관 안에서는 음식을 먹지 않아야 해요. 민지는 과자를 먹었으므로 약속을 지키지 않았어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-f4c6cdc917e6','KR_KOR','nonfiction','mcq',1,'우리 반은 친구들이 가장 좋아하는 과일을 알아보았어요. 선생님께서 사과, 딸기, 바나나, 포도 가운데에서 가장 좋아하는 과일을 하나씩 고르라고 하셨어요. 친구들은 손을 들어 좋아하는 과일을 골랐어요. 그리고 그 결과를 그래프로 나타냈어요. 동그라미 하나는 친구 한 명이에요.
+
+딸기를 고른 친구들은 딸기가 새콤달콤하고 색깔이 예뻐서 좋다고 했어요. 사과를 고른 친구들은 아삭아삭 씹는 느낌이 좋다고 했어요. 바나나를 고른 친구들은 껍질을 벗기기 쉬워서 좋다고 했어요.
+
+선생님께서는 다음 주 간식으로 우리 반 친구들이 가장 많이 고른 과일을 준비해 주신다고 하셨어요. 우리는 모두 손뼉을 치며 좋아했어요.','그래프를 보고 답하세요. 포도를 고른 친구는 몇 명인가요?','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 244" width="480" height="244" font-family="sans-serif"><rect width="480" height="244" fill="#fff"/><text x="240" y="26" font-size="17" font-weight="bold" text-anchor="middle" fill="#0a1f44">우리 반 친구들이 좋아하는 과일</text><text x="50" y="70" font-size="15" text-anchor="middle">사과</text><circle cx="115" cy="64" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="157" cy="64" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="199" cy="64" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="241" cy="64" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="283" cy="64" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><text x="50" y="110" font-size="15" text-anchor="middle">딸기</text><circle cx="115" cy="104" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="157" cy="104" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="199" cy="104" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="241" cy="104" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="283" cy="104" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="325" cy="104" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="367" cy="104" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="409" cy="104" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><text x="50" y="150" font-size="15" text-anchor="middle">바나나</text><circle cx="115" cy="144" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="157" cy="144" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="199" cy="144" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><text x="50" y="190" font-size="15" text-anchor="middle">포도</text><circle cx="115" cy="184" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="157" cy="184" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="199" cy="184" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="241" cy="184" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><line x1="90" y1="44" x2="90" y2="204" stroke="#333" stroke-width="2"/><line x1="90" y1="204" x2="470" y2="204" stroke="#333" stroke-width="2"/><circle cx="300" cy="228" r="9" fill="none" stroke="#b31942" stroke-width="2.5"/><text x="316" y="233" font-size="14">= 1명</text></svg>','["8명","5명","4명","3명"]',2,'그래프에서 포도 줄에 동그라미가 4개 있어요. 동그라미 하나가 한 명이므로 4명이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-93a16dadaf10','KR_KOR','nonfiction','mcq',1,'우리 반은 친구들이 가장 좋아하는 과일을 알아보았어요. 선생님께서 사과, 딸기, 바나나, 포도 가운데에서 가장 좋아하는 과일을 하나씩 고르라고 하셨어요. 친구들은 손을 들어 좋아하는 과일을 골랐어요. 그리고 그 결과를 그래프로 나타냈어요. 동그라미 하나는 친구 한 명이에요.
+
+딸기를 고른 친구들은 딸기가 새콤달콤하고 색깔이 예뻐서 좋다고 했어요. 사과를 고른 친구들은 아삭아삭 씹는 느낌이 좋다고 했어요. 바나나를 고른 친구들은 껍질을 벗기기 쉬워서 좋다고 했어요.
+
+선생님께서는 다음 주 간식으로 우리 반 친구들이 가장 많이 고른 과일을 준비해 주신다고 하셨어요. 우리는 모두 손뼉을 치며 좋아했어요.','사과를 고른 친구들이 사과를 좋아하는 까닭은 무엇인가요?','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 244" width="480" height="244" font-family="sans-serif"><rect width="480" height="244" fill="#fff"/><text x="240" y="26" font-size="17" font-weight="bold" text-anchor="middle" fill="#0a1f44">우리 반 친구들이 좋아하는 과일</text><text x="50" y="70" font-size="15" text-anchor="middle">사과</text><circle cx="115" cy="64" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="157" cy="64" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="199" cy="64" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="241" cy="64" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="283" cy="64" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><text x="50" y="110" font-size="15" text-anchor="middle">딸기</text><circle cx="115" cy="104" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="157" cy="104" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="199" cy="104" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="241" cy="104" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="283" cy="104" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="325" cy="104" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="367" cy="104" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="409" cy="104" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><text x="50" y="150" font-size="15" text-anchor="middle">바나나</text><circle cx="115" cy="144" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="157" cy="144" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="199" cy="144" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><text x="50" y="190" font-size="15" text-anchor="middle">포도</text><circle cx="115" cy="184" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="157" cy="184" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="199" cy="184" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="241" cy="184" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><line x1="90" y1="44" x2="90" y2="204" stroke="#333" stroke-width="2"/><line x1="90" y1="204" x2="470" y2="204" stroke="#333" stroke-width="2"/><circle cx="300" cy="228" r="9" fill="none" stroke="#b31942" stroke-width="2.5"/><text x="316" y="233" font-size="14">= 1명</text></svg>','["한 송이에 알이 많아서","껍질을 벗기기 쉬워서","새콤달콤하고 색깔이 예뻐서","아삭아삭 씹는 느낌이 좋아서"]',3,'둘째 문단에 사과를 고른 친구들은 아삭아삭 씹는 느낌이 좋다고 했어요. 새콤달콤하다는 것은 딸기, 껍질을 벗기기 쉽다는 것은 바나나를 고른 까닭이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-d76e3e9e7c5d','KR_KOR','nonfiction','mcq',1,'우리 반은 친구들이 가장 좋아하는 과일을 알아보았어요. 선생님께서 사과, 딸기, 바나나, 포도 가운데에서 가장 좋아하는 과일을 하나씩 고르라고 하셨어요. 친구들은 손을 들어 좋아하는 과일을 골랐어요. 그리고 그 결과를 그래프로 나타냈어요. 동그라미 하나는 친구 한 명이에요.
+
+딸기를 고른 친구들은 딸기가 새콤달콤하고 색깔이 예뻐서 좋다고 했어요. 사과를 고른 친구들은 아삭아삭 씹는 느낌이 좋다고 했어요. 바나나를 고른 친구들은 껍질을 벗기기 쉬워서 좋다고 했어요.
+
+선생님께서는 다음 주 간식으로 우리 반 친구들이 가장 많이 고른 과일을 준비해 주신다고 하셨어요. 우리는 모두 손뼉을 치며 좋아했어요.','다음 주 간식으로 나올 과일은 무엇일까요?','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 244" width="480" height="244" font-family="sans-serif"><rect width="480" height="244" fill="#fff"/><text x="240" y="26" font-size="17" font-weight="bold" text-anchor="middle" fill="#0a1f44">우리 반 친구들이 좋아하는 과일</text><text x="50" y="70" font-size="15" text-anchor="middle">사과</text><circle cx="115" cy="64" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="157" cy="64" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="199" cy="64" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="241" cy="64" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="283" cy="64" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><text x="50" y="110" font-size="15" text-anchor="middle">딸기</text><circle cx="115" cy="104" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="157" cy="104" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="199" cy="104" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="241" cy="104" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="283" cy="104" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="325" cy="104" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="367" cy="104" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="409" cy="104" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><text x="50" y="150" font-size="15" text-anchor="middle">바나나</text><circle cx="115" cy="144" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="157" cy="144" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="199" cy="144" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><text x="50" y="190" font-size="15" text-anchor="middle">포도</text><circle cx="115" cy="184" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="157" cy="184" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="199" cy="184" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="241" cy="184" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><line x1="90" y1="44" x2="90" y2="204" stroke="#333" stroke-width="2"/><line x1="90" y1="204" x2="470" y2="204" stroke="#333" stroke-width="2"/><circle cx="300" cy="228" r="9" fill="none" stroke="#b31942" stroke-width="2.5"/><text x="316" y="233" font-size="14">= 1명</text></svg>','["사과","바나나","포도","딸기"]',3,'간식은 가장 많이 고른 과일로 준비한다고 했어요. 그래프에서 동그라미가 가장 많은 것은 딸기(8명)예요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-e49a71a0addc','KR_KOR','nonfiction','mcq',1,'우리 반은 친구들이 가장 좋아하는 과일을 알아보았어요. 선생님께서 사과, 딸기, 바나나, 포도 가운데에서 가장 좋아하는 과일을 하나씩 고르라고 하셨어요. 친구들은 손을 들어 좋아하는 과일을 골랐어요. 그리고 그 결과를 그래프로 나타냈어요. 동그라미 하나는 친구 한 명이에요.
+
+딸기를 고른 친구들은 딸기가 새콤달콤하고 색깔이 예뻐서 좋다고 했어요. 사과를 고른 친구들은 아삭아삭 씹는 느낌이 좋다고 했어요. 바나나를 고른 친구들은 껍질을 벗기기 쉬워서 좋다고 했어요.
+
+선생님께서는 다음 주 간식으로 우리 반 친구들이 가장 많이 고른 과일을 준비해 주신다고 하셨어요. 우리는 모두 손뼉을 치며 좋아했어요.','그래프를 보고 답하세요. 사과를 고른 친구는 바나나를 고른 친구보다 몇 명 더 많나요?','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 244" width="480" height="244" font-family="sans-serif"><rect width="480" height="244" fill="#fff"/><text x="240" y="26" font-size="17" font-weight="bold" text-anchor="middle" fill="#0a1f44">우리 반 친구들이 좋아하는 과일</text><text x="50" y="70" font-size="15" text-anchor="middle">사과</text><circle cx="115" cy="64" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="157" cy="64" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="199" cy="64" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="241" cy="64" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="283" cy="64" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><text x="50" y="110" font-size="15" text-anchor="middle">딸기</text><circle cx="115" cy="104" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="157" cy="104" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="199" cy="104" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="241" cy="104" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="283" cy="104" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="325" cy="104" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="367" cy="104" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="409" cy="104" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><text x="50" y="150" font-size="15" text-anchor="middle">바나나</text><circle cx="115" cy="144" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="157" cy="144" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="199" cy="144" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><text x="50" y="190" font-size="15" text-anchor="middle">포도</text><circle cx="115" cy="184" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="157" cy="184" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="199" cy="184" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><circle cx="241" cy="184" r="14" fill="none" stroke="#b31942" stroke-width="2.5"/><line x1="90" y1="44" x2="90" y2="204" stroke="#333" stroke-width="2"/><line x1="90" y1="204" x2="470" y2="204" stroke="#333" stroke-width="2"/><circle cx="300" cy="228" r="9" fill="none" stroke="#b31942" stroke-width="2.5"/><text x="316" y="233" font-size="14">= 1명</text></svg>','["5명","2명","1명","3명"]',1,'사과는 5명, 바나나는 3명이므로 사과를 고른 친구가 2명 더 많아요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-45f6e644ba87','KR_KOR','nonfiction','mcq',1,'다 쓴 물건을 버릴 때에는 한꺼번에 버리면 안 돼요. 다시 쓸 수 있는 것은 종류에 따라 나누어서 버려야 해요. 이것을 분리배출이라고 해요.
+
+분리배출을 할 때에는 물건을 무엇으로 만들었는지 살펴보고 나누어요. 신문지와 다 쓴 공책은 종이로 만들었어요. 그래서 종이를 모으는 곳에 넣어요. 우유 팩은 종이로 만들었지만 따로 모으는 곳에 넣어요. 페트병과 과자 봉지처럼 플라스틱이나 비닐로 만든 것도 따로 모아요. 유리병과 캔도 각각 나누어 모아요.
+
+버리기 전에 할 일도 있어요. 병이나 캔에 남은 음료수는 깨끗이 비우고 물로 헹구어요. 그래야 다시 쓰기 좋아요.
+
+이렇게 모은 물건은 공장에 가서 새 물건으로 다시 태어나요. 헌 종이는 새 공책이 되고, 페트병은 옷이나 가방이 되기도 해요. 분리배출을 잘하면 쓰레기를 줄이고 지구도 지킬 수 있어요.','이 글에서 말하는 ''분리배출''은 무엇인가요?',NULL,'["쓰레기를 한꺼번에 모아 버리는 것","다시 쓸 수 있는 것을 종류에 따라 나누어 버리는 것","헌 물건 대신 새 물건을 사는 것","쓰레기를 땅속에 묻는 것"]',1,'첫째 문단에서 다시 쓸 수 있는 것을 종류에 따라 나누어 버리는 것을 분리배출이라고 한다고 했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-c3fdc633092b','KR_KOR','nonfiction','mcq',1,'다 쓴 물건을 버릴 때에는 한꺼번에 버리면 안 돼요. 다시 쓸 수 있는 것은 종류에 따라 나누어서 버려야 해요. 이것을 분리배출이라고 해요.
+
+분리배출을 할 때에는 물건을 무엇으로 만들었는지 살펴보고 나누어요. 신문지와 다 쓴 공책은 종이로 만들었어요. 그래서 종이를 모으는 곳에 넣어요. 우유 팩은 종이로 만들었지만 따로 모으는 곳에 넣어요. 페트병과 과자 봉지처럼 플라스틱이나 비닐로 만든 것도 따로 모아요. 유리병과 캔도 각각 나누어 모아요.
+
+버리기 전에 할 일도 있어요. 병이나 캔에 남은 음료수는 깨끗이 비우고 물로 헹구어요. 그래야 다시 쓰기 좋아요.
+
+이렇게 모은 물건은 공장에 가서 새 물건으로 다시 태어나요. 헌 종이는 새 공책이 되고, 페트병은 옷이나 가방이 되기도 해요. 분리배출을 잘하면 쓰레기를 줄이고 지구도 지킬 수 있어요.','종이를 모으는 곳에 넣어야 하는 것은 무엇인가요?',NULL,'["신문지","과자 봉지","캔","유리병"]',0,'둘째 문단에 우유 팩, 신문지, 다 쓴 공책은 종이로 만들었으니 종이를 모으는 곳에 넣는다고 했어요. 과자 봉지는 비닐, 캔과 유리병은 따로 모아요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-8ca9daeb697d','KR_KOR','nonfiction','mcq',1,'다 쓴 물건을 버릴 때에는 한꺼번에 버리면 안 돼요. 다시 쓸 수 있는 것은 종류에 따라 나누어서 버려야 해요. 이것을 분리배출이라고 해요.
+
+분리배출을 할 때에는 물건을 무엇으로 만들었는지 살펴보고 나누어요. 신문지와 다 쓴 공책은 종이로 만들었어요. 그래서 종이를 모으는 곳에 넣어요. 우유 팩은 종이로 만들었지만 따로 모으는 곳에 넣어요. 페트병과 과자 봉지처럼 플라스틱이나 비닐로 만든 것도 따로 모아요. 유리병과 캔도 각각 나누어 모아요.
+
+버리기 전에 할 일도 있어요. 병이나 캔에 남은 음료수는 깨끗이 비우고 물로 헹구어요. 그래야 다시 쓰기 좋아요.
+
+이렇게 모은 물건은 공장에 가서 새 물건으로 다시 태어나요. 헌 종이는 새 공책이 되고, 페트병은 옷이나 가방이 되기도 해요. 분리배출을 잘하면 쓰레기를 줄이고 지구도 지킬 수 있어요.','분리배출을 할 때 무엇을 보고 물건을 나누나요?',NULL,'["물건의 크기가 큰지 작은지","물건의 색깔이 무엇인지","물건의 값이 비싼지 싼지","물건을 무엇으로 만들었는지"]',3,'둘째 문단 첫 문장에 물건을 무엇으로 만들었는지 살펴보고 나눈다고 했어요. 종이, 플라스틱, 유리처럼 만든 재료에 따라 나누는 거예요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-27c663d23aaa','KR_KOR','nonfiction','mcq',1,'다 쓴 물건을 버릴 때에는 한꺼번에 버리면 안 돼요. 다시 쓸 수 있는 것은 종류에 따라 나누어서 버려야 해요. 이것을 분리배출이라고 해요.
+
+분리배출을 할 때에는 물건을 무엇으로 만들었는지 살펴보고 나누어요. 신문지와 다 쓴 공책은 종이로 만들었어요. 그래서 종이를 모으는 곳에 넣어요. 우유 팩은 종이로 만들었지만 따로 모으는 곳에 넣어요. 페트병과 과자 봉지처럼 플라스틱이나 비닐로 만든 것도 따로 모아요. 유리병과 캔도 각각 나누어 모아요.
+
+버리기 전에 할 일도 있어요. 병이나 캔에 남은 음료수는 깨끗이 비우고 물로 헹구어요. 그래야 다시 쓰기 좋아요.
+
+이렇게 모은 물건은 공장에 가서 새 물건으로 다시 태어나요. 헌 종이는 새 공책이 되고, 페트병은 옷이나 가방이 되기도 해요. 분리배출을 잘하면 쓰레기를 줄이고 지구도 지킬 수 있어요.','캔을 버리기 전에 해야 할 일은 무엇인가요?',NULL,'["캔에 이름을 쓴다.","캔을 신문지와 함께 넣는다.","남은 음료수를 비우고 물로 헹군다.","캔을 종이로 싼다."]',2,'셋째 문단에 병이나 캔에 남은 음료수는 깨끗이 비우고 물로 헹군다고 했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-924edd425303','KR_KOR','literature','mcq',1,'숲속에 아기 고슴도치 따끔이가 살았어요. 따끔이의 등에는 뾰족한 가시가 잔뜩 나 있었어요.
+
+친구들이 공놀이를 할 때였어요.
+"나도 같이 놀자!"
+따끔이가 공을 굴리자, 가시에 콕 찔린 공에서 ''푸시시'' 바람이 빠져 버렸어요. 친구들은 깜짝 놀랐어요. 따끔이는 고개를 푹 숙이고 집으로 돌아왔어요.
+"나는 왜 가시가 있을까? 가시가 없으면 좋겠어."
+
+다음 날, 친구들이 사과나무 아래에 모여 있었어요. 바람에 떨어진 사과가 풀밭 여기저기에 흩어져 있었어요. 아기 토끼가 말했어요.
+"사과가 너무 많아서 다 주워 가기 힘들겠어."
+그때 따끔이가 풀밭을 데굴데굴 굴렀어요. 그러자 사과가 가시에 콕콕 꽂혔어요.
+"와, 따끔이 최고!"
+친구들이 손뼉을 쳤어요. 따끔이는 처음으로 자기 가시가 자랑스러웠어요.','공에서 바람이 빠진 까닭은 무엇인가요?',NULL,'["공이 나뭇가지에 걸려서","토끼가 공을 밟아서","공이 따끔이의 가시에 찔려서","공이 너무 낡아서"]',2,'따끔이가 공을 굴리자 가시에 콕 찔린 공에서 바람이 빠졌다고 했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-0b7dd7de6ea1','KR_KOR','literature','mcq',1,'숲속에 아기 고슴도치 따끔이가 살았어요. 따끔이의 등에는 뾰족한 가시가 잔뜩 나 있었어요.
+
+친구들이 공놀이를 할 때였어요.
+"나도 같이 놀자!"
+따끔이가 공을 굴리자, 가시에 콕 찔린 공에서 ''푸시시'' 바람이 빠져 버렸어요. 친구들은 깜짝 놀랐어요. 따끔이는 고개를 푹 숙이고 집으로 돌아왔어요.
+"나는 왜 가시가 있을까? 가시가 없으면 좋겠어."
+
+다음 날, 친구들이 사과나무 아래에 모여 있었어요. 바람에 떨어진 사과가 풀밭 여기저기에 흩어져 있었어요. 아기 토끼가 말했어요.
+"사과가 너무 많아서 다 주워 가기 힘들겠어."
+그때 따끔이가 풀밭을 데굴데굴 굴렀어요. 그러자 사과가 가시에 콕콕 꽂혔어요.
+"와, 따끔이 최고!"
+친구들이 손뼉을 쳤어요. 따끔이는 처음으로 자기 가시가 자랑스러웠어요.','''고개를 푹 숙이고 집으로 돌아왔어요''에서 알 수 있는 따끔이의 마음은 무엇인가요?',NULL,'["졸리다.","자랑스럽다.","속상하다.","신난다."]',2,'공을 망가뜨려 친구들과 놀지 못하게 되자 따끔이는 고개를 푹 숙였어요. 가시가 없으면 좋겠다고 말한 것으로 보아 속상한 마음이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-f0d98e36272b','KR_KOR','literature','mcq',1,'숲속에 아기 고슴도치 따끔이가 살았어요. 따끔이의 등에는 뾰족한 가시가 잔뜩 나 있었어요.
+
+친구들이 공놀이를 할 때였어요.
+"나도 같이 놀자!"
+따끔이가 공을 굴리자, 가시에 콕 찔린 공에서 ''푸시시'' 바람이 빠져 버렸어요. 친구들은 깜짝 놀랐어요. 따끔이는 고개를 푹 숙이고 집으로 돌아왔어요.
+"나는 왜 가시가 있을까? 가시가 없으면 좋겠어."
+
+다음 날, 친구들이 사과나무 아래에 모여 있었어요. 바람에 떨어진 사과가 풀밭 여기저기에 흩어져 있었어요. 아기 토끼가 말했어요.
+"사과가 너무 많아서 다 주워 가기 힘들겠어."
+그때 따끔이가 풀밭을 데굴데굴 굴렀어요. 그러자 사과가 가시에 콕콕 꽂혔어요.
+"와, 따끔이 최고!"
+친구들이 손뼉을 쳤어요. 따끔이는 처음으로 자기 가시가 자랑스러웠어요.','따끔이의 마음은 어떻게 바뀌었나요?',NULL,'["기쁘다 → 심심하다","속상하다 → 자랑스럽다","자랑스럽다 → 속상하다","무섭다 → 화가 난다"]',1,'처음에는 가시 때문에 공을 망가뜨려 속상했지만, 마지막에는 가시로 사과를 모아 친구들을 도와서 가시가 자랑스러웠어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-308bdb412f42','KR_KOR','literature','mcq',1,'숲속에 아기 고슴도치 따끔이가 살았어요. 따끔이의 등에는 뾰족한 가시가 잔뜩 나 있었어요.
+
+친구들이 공놀이를 할 때였어요.
+"나도 같이 놀자!"
+따끔이가 공을 굴리자, 가시에 콕 찔린 공에서 ''푸시시'' 바람이 빠져 버렸어요. 친구들은 깜짝 놀랐어요. 따끔이는 고개를 푹 숙이고 집으로 돌아왔어요.
+"나는 왜 가시가 있을까? 가시가 없으면 좋겠어."
+
+다음 날, 친구들이 사과나무 아래에 모여 있었어요. 바람에 떨어진 사과가 풀밭 여기저기에 흩어져 있었어요. 아기 토끼가 말했어요.
+"사과가 너무 많아서 다 주워 가기 힘들겠어."
+그때 따끔이가 풀밭을 데굴데굴 굴렀어요. 그러자 사과가 가시에 콕콕 꽂혔어요.
+"와, 따끔이 최고!"
+친구들이 손뼉을 쳤어요. 따끔이는 처음으로 자기 가시가 자랑스러웠어요.','이 이야기에서 배울 수 있는 것은 무엇인가요?',NULL,'["누구에게나 쓸모 있는 좋은 점이 있다.","공놀이는 혼자 해야 재미있다.","숲속에서는 친구와 놀면 안 된다.","사과는 나무에서 직접 따야 한다."]',0,'따끔이는 싫어하던 가시가 사과를 모을 때 큰 도움이 된다는 것을 알았어요. 누구에게나 쓸모 있는 좋은 점이 있다는 것을 알려 주는 이야기예요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-9b6af4041cc2','KR_KOR','literature','mcq',1,'달님
+
+밤하늘에 둥근 달님
+환하게 웃고 있어요.
+
+내가 걸으면
+달님도 따라 걷고
+내가 멈추면
+달님도 멈춰 서요.
+
+달님, 달님
+어디까지 따라와요?
+우리 집까지 따라와요?
+
+창문 너머 달님이
+살짝 들여다봐요.
+잘 자라, 잘 자라
+노란 불 켜 주어요.','이 시에 나타난 때는 언제인가요?',NULL,'["한낮","해가 뜰 때","밤","이른 아침"]',2,'첫째 연에 ''밤하늘에 둥근 달님''이라고 했으므로 밤이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-a9c428989779','KR_KOR','literature','mcq',1,'달님
+
+밤하늘에 둥근 달님
+환하게 웃고 있어요.
+
+내가 걸으면
+달님도 따라 걷고
+내가 멈추면
+달님도 멈춰 서요.
+
+달님, 달님
+어디까지 따라와요?
+우리 집까지 따라와요?
+
+창문 너머 달님이
+살짝 들여다봐요.
+잘 자라, 잘 자라
+노란 불 켜 주어요.','말하는 이가 걸으면 달님은 어떻게 하나요?',NULL,'["따라 걷는다.","멈춰 선다.","노래를 부른다.","구름 뒤에 숨는다."]',0,'둘째 연에 ''내가 걸으면 / 달님도 따라 걷고''라고 했어요. 멈춰 서는 것은 말하는 이가 멈출 때예요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-396efd225bc2','KR_KOR','literature','mcq',1,'달님
+
+밤하늘에 둥근 달님
+환하게 웃고 있어요.
+
+내가 걸으면
+달님도 따라 걷고
+내가 멈추면
+달님도 멈춰 서요.
+
+달님, 달님
+어디까지 따라와요?
+우리 집까지 따라와요?
+
+창문 너머 달님이
+살짝 들여다봐요.
+잘 자라, 잘 자라
+노란 불 켜 주어요.','이 시에서 달님은 어떻게 그려져 있나요?',NULL,'["무섭게 화를 내는 괴물","차갑고 딱딱한 얼음","데굴데굴 굴러가는 공","사람처럼 웃고, 걷고, 인사하는 친구"]',3,'달님이 웃고, 따라 걷고, 창문을 들여다보며 ''잘 자라''라고 인사해요. 달님을 사람처럼, 다정한 친구처럼 나타냈어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-2817de5dd727','KR_KOR','literature','mcq',1,'달님
+
+밤하늘에 둥근 달님
+환하게 웃고 있어요.
+
+내가 걸으면
+달님도 따라 걷고
+내가 멈추면
+달님도 멈춰 서요.
+
+달님, 달님
+어디까지 따라와요?
+우리 집까지 따라와요?
+
+창문 너머 달님이
+살짝 들여다봐요.
+잘 자라, 잘 자라
+노란 불 켜 주어요.','넷째 연에서 두 번 되풀이한 말은 무엇인가요?',NULL,'["노란 불","창문 너머","달님","잘 자라"]',3,'넷째 연의 ''잘 자라, 잘 자라''에서 ''잘 자라''를 두 번 되풀이했어요. ''달님, 달님''은 셋째 연에 나와요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-755d9d86fcf4','KR_KOR','literature','mcq',1,'깊은 숲속에 아기 원숭이 몽이가 살았어요. 어느 날 몽이는 숲속 길에서 반짝이는 물건을 주웠어요. 사람이 떨어뜨리고 간 작은 거울이었어요.
+
+몽이가 거울을 들여다보니 그 안에 원숭이 한 마리가 있었어요.
+"너는 누구야?"
+몽이가 얼굴을 잔뜩 찡그렸어요. 그러자 거울 속 원숭이도 얼굴을 찡그렸어요.
+"흥, 나한테 화를 내다니!"
+몽이가 주먹을 휘두르자 거울 속 원숭이도 주먹을 휘둘렀어요. 몽이는 씩씩거렸어요.
+
+그때 엄마 원숭이가 다가와 말했어요.
+"몽아, 한번 웃어 보렴."
+몽이가 쭈뼛쭈뼛 웃어 보았어요. 그러자 거울 속 원숭이도 방긋 웃었어요. 몽이가 손을 흔들자 거울 속 원숭이도 손을 흔들었어요.
+"엄마, 쟤가 나랑 똑같이 해요!"
+엄마 원숭이가 빙그레 웃었어요.
+"그래. 네가 웃으면 친구도 웃는단다."','몽이가 숲속 길에서 주운 물건은 무엇인가요?',NULL,'["공","사과","거울","모자"]',2,'첫째 문단에 사람이 떨어뜨리고 간 작은 거울을 주웠다고 했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-12b16460034b','KR_KOR','literature','mcq',1,'깊은 숲속에 아기 원숭이 몽이가 살았어요. 어느 날 몽이는 숲속 길에서 반짝이는 물건을 주웠어요. 사람이 떨어뜨리고 간 작은 거울이었어요.
+
+몽이가 거울을 들여다보니 그 안에 원숭이 한 마리가 있었어요.
+"너는 누구야?"
+몽이가 얼굴을 잔뜩 찡그렸어요. 그러자 거울 속 원숭이도 얼굴을 찡그렸어요.
+"흥, 나한테 화를 내다니!"
+몽이가 주먹을 휘두르자 거울 속 원숭이도 주먹을 휘둘렀어요. 몽이는 씩씩거렸어요.
+
+그때 엄마 원숭이가 다가와 말했어요.
+"몽아, 한번 웃어 보렴."
+몽이가 쭈뼛쭈뼛 웃어 보았어요. 그러자 거울 속 원숭이도 방긋 웃었어요. 몽이가 손을 흔들자 거울 속 원숭이도 손을 흔들었어요.
+"엄마, 쟤가 나랑 똑같이 해요!"
+엄마 원숭이가 빙그레 웃었어요.
+"그래. 네가 웃으면 친구도 웃는단다."','거울 속 원숭이가 얼굴을 찡그린 까닭은 무엇인가요?',NULL,'["몽이가 먼저 얼굴을 찡그려서","거울 속 원숭이가 배가 고파서","엄마 원숭이가 화를 내서","거울 속 원숭이가 몽이를 싫어해서"]',0,'거울은 앞에 있는 모습을 그대로 비춰요. 몽이가 먼저 얼굴을 찡그렸기 때문에 거울 속 원숭이도 찡그린 거예요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-46a2cea78c87','KR_KOR','literature','mcq',1,'깊은 숲속에 아기 원숭이 몽이가 살았어요. 어느 날 몽이는 숲속 길에서 반짝이는 물건을 주웠어요. 사람이 떨어뜨리고 간 작은 거울이었어요.
+
+몽이가 거울을 들여다보니 그 안에 원숭이 한 마리가 있었어요.
+"너는 누구야?"
+몽이가 얼굴을 잔뜩 찡그렸어요. 그러자 거울 속 원숭이도 얼굴을 찡그렸어요.
+"흥, 나한테 화를 내다니!"
+몽이가 주먹을 휘두르자 거울 속 원숭이도 주먹을 휘둘렀어요. 몽이는 씩씩거렸어요.
+
+그때 엄마 원숭이가 다가와 말했어요.
+"몽아, 한번 웃어 보렴."
+몽이가 쭈뼛쭈뼛 웃어 보았어요. 그러자 거울 속 원숭이도 방긋 웃었어요. 몽이가 손을 흔들자 거울 속 원숭이도 손을 흔들었어요.
+"엄마, 쟤가 나랑 똑같이 해요!"
+엄마 원숭이가 빙그레 웃었어요.
+"그래. 네가 웃으면 친구도 웃는단다."','''몽이는 씩씩거렸어요''에서 알 수 있는 몽이의 마음은 무엇인가요?',NULL,'["기뻤다.","화가 났다.","졸렸다.","미안했다."]',1,'''씩씩거리다''는 화가 나서 숨을 거칠게 쉬는 모습이에요. 몽이는 거울 속 원숭이가 자기에게 화를 낸다고 생각해 화가 났어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-d98d2cf31de5','KR_KOR','literature','mcq',1,'깊은 숲속에 아기 원숭이 몽이가 살았어요. 어느 날 몽이는 숲속 길에서 반짝이는 물건을 주웠어요. 사람이 떨어뜨리고 간 작은 거울이었어요.
+
+몽이가 거울을 들여다보니 그 안에 원숭이 한 마리가 있었어요.
+"너는 누구야?"
+몽이가 얼굴을 잔뜩 찡그렸어요. 그러자 거울 속 원숭이도 얼굴을 찡그렸어요.
+"흥, 나한테 화를 내다니!"
+몽이가 주먹을 휘두르자 거울 속 원숭이도 주먹을 휘둘렀어요. 몽이는 씩씩거렸어요.
+
+그때 엄마 원숭이가 다가와 말했어요.
+"몽아, 한번 웃어 보렴."
+몽이가 쭈뼛쭈뼛 웃어 보았어요. 그러자 거울 속 원숭이도 방긋 웃었어요. 몽이가 손을 흔들자 거울 속 원숭이도 손을 흔들었어요.
+"엄마, 쟤가 나랑 똑같이 해요!"
+엄마 원숭이가 빙그레 웃었어요.
+"그래. 네가 웃으면 친구도 웃는단다."','엄마 원숭이의 마지막 말이 알려 주는 것은 무엇인가요?',NULL,'["화가 나면 주먹을 휘둘러야 한다.","거울은 깨지기 쉬우니 만지면 안 된다.","숲속에서는 엄마 곁을 떠나면 안 된다.","내가 먼저 웃으며 대하면 친구도 웃으며 대한다."]',3,'몽이가 웃자 거울 속 원숭이도 웃었어요. 엄마는 ''네가 웃으면 친구도 웃는단다''라고 하며, 내가 먼저 친절하게 대하면 상대도 그렇게 대한다는 것을 알려 주었어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-a117837da374','KR_KOR','literature','mcq',1,'하린이네 반은 다음 주에 줄넘기 대회를 해요. 친구들은 줄을 쉽게 넘었지만 하린이는 한 번도 넘지 못했어요. 줄이 자꾸 발에 걸렸거든요.
+"나는 줄넘기를 못하나 봐."
+하린이는 줄넘기를 바닥에 내려놓고 입을 삐죽 내밀었어요.
+
+그날 저녁, 아빠가 하린이와 함께 마당으로 나갔어요.
+"줄을 돌리다가 줄이 발 앞에 오면 그때 뛰는 거야. 하나, 둘, 폴짝!"
+하린이는 아빠의 말에 맞추어 뛰어 보았어요. 처음에는 또 걸렸지만, 몇 번 하자 드디어 한 번을 넘었어요.
+
+하린이는 날마다 저녁에 마당에서 연습했어요. 하루는 세 번, 다음 날은 다섯 번을 넘었어요.
+
+대회 날, 하린이는 숨을 크게 쉬고 줄을 돌렸어요.
+"여덟, 아홉, 열!"
+친구들이 손뼉을 쳤어요. 하린이의 얼굴에 함박웃음이 피었어요.','처음에 하린이가 줄넘기를 하지 못한 까닭은 무엇인가요?',NULL,'["줄넘기가 없어서","줄이 자꾸 발에 걸려서","친구들이 놀려서","다리를 다쳐서"]',1,'첫째 문단에 줄이 자꾸 발에 걸려서 한 번도 넘지 못했다고 했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-577dbb000b3e','KR_KOR','literature','mcq',1,'하린이네 반은 다음 주에 줄넘기 대회를 해요. 친구들은 줄을 쉽게 넘었지만 하린이는 한 번도 넘지 못했어요. 줄이 자꾸 발에 걸렸거든요.
+"나는 줄넘기를 못하나 봐."
+하린이는 줄넘기를 바닥에 내려놓고 입을 삐죽 내밀었어요.
+
+그날 저녁, 아빠가 하린이와 함께 마당으로 나갔어요.
+"줄을 돌리다가 줄이 발 앞에 오면 그때 뛰는 거야. 하나, 둘, 폴짝!"
+하린이는 아빠의 말에 맞추어 뛰어 보았어요. 처음에는 또 걸렸지만, 몇 번 하자 드디어 한 번을 넘었어요.
+
+하린이는 날마다 저녁에 마당에서 연습했어요. 하루는 세 번, 다음 날은 다섯 번을 넘었어요.
+
+대회 날, 하린이는 숨을 크게 쉬고 줄을 돌렸어요.
+"여덟, 아홉, 열!"
+친구들이 손뼉을 쳤어요. 하린이의 얼굴에 함박웃음이 피었어요.','''입을 삐죽 내밀었어요''에서 알 수 있는 하린이의 마음은 무엇인가요?',NULL,'["고맙고 반갑다.","뿌듯하고 자랑스럽다.","신나고 즐겁다.","속상하고 시무룩하다."]',3,'줄넘기를 한 번도 못 넘어서 ''나는 줄넘기를 못하나 봐.''라고 말하며 입을 삐죽 내밀었어요. 속상하고 시무룩한 마음이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-78ec3fa0c795','KR_KOR','literature','mcq',1,'하린이네 반은 다음 주에 줄넘기 대회를 해요. 친구들은 줄을 쉽게 넘었지만 하린이는 한 번도 넘지 못했어요. 줄이 자꾸 발에 걸렸거든요.
+"나는 줄넘기를 못하나 봐."
+하린이는 줄넘기를 바닥에 내려놓고 입을 삐죽 내밀었어요.
+
+그날 저녁, 아빠가 하린이와 함께 마당으로 나갔어요.
+"줄을 돌리다가 줄이 발 앞에 오면 그때 뛰는 거야. 하나, 둘, 폴짝!"
+하린이는 아빠의 말에 맞추어 뛰어 보았어요. 처음에는 또 걸렸지만, 몇 번 하자 드디어 한 번을 넘었어요.
+
+하린이는 날마다 저녁에 마당에서 연습했어요. 하루는 세 번, 다음 날은 다섯 번을 넘었어요.
+
+대회 날, 하린이는 숨을 크게 쉬고 줄을 돌렸어요.
+"여덟, 아홉, 열!"
+친구들이 손뼉을 쳤어요. 하린이의 얼굴에 함박웃음이 피었어요.','대회 날 하린이는 줄넘기를 몇 번 넘었나요?',NULL,'["열 번","한 번","다섯 번","세 번"]',0,'대회 날 ''여덟, 아홉, 열!'' 하고 셌으므로 열 번을 넘었어요. 세 번과 다섯 번은 연습할 때 넘은 횟수예요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-b78ab7d63442','KR_KOR','literature','mcq',1,'하린이네 반은 다음 주에 줄넘기 대회를 해요. 친구들은 줄을 쉽게 넘었지만 하린이는 한 번도 넘지 못했어요. 줄이 자꾸 발에 걸렸거든요.
+"나는 줄넘기를 못하나 봐."
+하린이는 줄넘기를 바닥에 내려놓고 입을 삐죽 내밀었어요.
+
+그날 저녁, 아빠가 하린이와 함께 마당으로 나갔어요.
+"줄을 돌리다가 줄이 발 앞에 오면 그때 뛰는 거야. 하나, 둘, 폴짝!"
+하린이는 아빠의 말에 맞추어 뛰어 보았어요. 처음에는 또 걸렸지만, 몇 번 하자 드디어 한 번을 넘었어요.
+
+하린이는 날마다 저녁에 마당에서 연습했어요. 하루는 세 번, 다음 날은 다섯 번을 넘었어요.
+
+대회 날, 하린이는 숨을 크게 쉬고 줄을 돌렸어요.
+"여덟, 아홉, 열!"
+친구들이 손뼉을 쳤어요. 하린이의 얼굴에 함박웃음이 피었어요.','이 이야기를 읽고 알맞게 말한 친구는 누구인가요?',NULL,'["유나: 줄넘기는 처음부터 잘하는 사람만 잘할 수 있구나.","도윤: 아빠가 하린이 대신 대회에 나가서 다행이야.","지아: 하린이가 대회에 나가지 못해서 아쉬웠겠어.","서준: 하린이처럼 날마다 꾸준히 연습하면 잘할 수 있게 되는구나."]',3,'하린이는 처음에 한 번도 못 넘었지만 날마다 연습해서 대회 날 열 번을 넘었어요. 꾸준히 연습하면 잘할 수 있다는 서준이의 말이 알맞아요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-a0a26a293434','KR_KOR','vocab','mcq',1,NULL,'''높다''와 뜻이 반대인 말은 무엇인가요?',NULL,'["길다","좁다","낮다","크다"]',2,'''높다''는 아래에서 위까지가 길다는 뜻이에요. 반대말은 ''낮다''예요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-9daf85fe017f','KR_KOR','vocab','mcq',1,NULL,'''덥다''와 뜻이 반대인 말은 무엇인가요?',NULL,'["무겁다","달다","맵다","춥다"]',3,'여름처럼 날씨가 ''덥다''의 반대말은 겨울처럼 날씨가 ''춥다''예요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-8ed2735c4bcf','KR_KOR','vocab','mcq',1,NULL,'''무섭다''와 뜻이 비슷한 말은 무엇인가요?',NULL,'["배고프다","시원하다","즐겁다","두렵다"]',3,'''무섭다''와 ''두렵다''는 모두 겁이 나는 마음을 나타내는 말이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-bf710e5eb70b','KR_KOR','vocab','mcq',1,NULL,'바르게 쓴 것은 무엇인가요?',NULL,'["물꼬기가 헤엄쳐요.","물고기가 헤엄처요.","물고기가 헤엄쳐요.","물고기가 혜엄쳐요."]',2,'''물고기''는 소리 나는 대로 ''물꼬기''로 쓰지 않아요. ''헤엄쳐요''도 바르게 써야 해요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-1d7be1de7f5c','KR_KOR','vocab','mcq',1,NULL,'놀이터에서 타는 놀이 기구의 이름을 바르게 쓴 것은 무엇인가요?',NULL,'["미꾸럼틀","미끄럼틀","미끌럼틀","미끄름틀"]',1,'바른 낱말은 ''미끄럼틀''이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-91384b6e7f64','KR_KOR','vocab','mcq',1,NULL,'띄어쓰기를 바르게 한 것은 무엇인가요?',NULL,'["동생 이 우유를 마셔요.","동생이 우유를 마셔요.","동생이우유를 마셔요.","동생이 우유를마셔요."]',1,'''동생이'', ''우유를'', ''마셔요''처럼 낱말 뒤에 붙는 ''이'', ''를''은 앞말에 붙여 쓰고, 낱말과 낱말 사이는 띄어 써요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-f74d2dcfb009','KR_KOR','vocab','mcq',1,NULL,'밤에 할아버지께 드리는 인사로 알맞은 것은 무엇인가요?',NULL,'["할아버지, 빨리 자.","할아버지, 안녕히 주무세요.","할아버지, 잘 자.","할아버지, 잘 자라."]',1,'웃어른께는 ''자다'' 대신 높임말 ''주무시다''를 써서 ''안녕히 주무세요.''라고 인사해요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-1fce192f4c2b','KR_KOR','vocab','mcq',1,NULL,'''나는 사과를 좋아해요( )''의 ( )에 들어갈 문장 부호는 무엇인가요?',NULL,'["마침표(.)","쉼표(,)","물음표(?)","느낌표(!)"]',0,'자기 생각을 차분히 말하는 문장의 끝에는 마침표(.)를 써요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-8dc85db4307d','KR_KOR','vocab','mcq',1,NULL,'''다리''가 강이나 냇물을 건너갈 수 있게 놓은 것이라는 뜻으로 쓰인 문장은 무엇인가요?',NULL,'["다리를 쭉 펴고 앉았어요.","강아지가 다리를 다쳤어요.","튼튼한 다리를 건너 마을에 갔어요.","많이 걸어서 다리가 아파요."]',2,'''다리를 건너 마을에 갔어요''의 ''다리''는 강이나 냇물을 건널 수 있게 놓은 것이에요. 나머지는 몸의 한 부분인 다리예요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-3a907467db03','KR_KOR','vocab','mcq',1,NULL,'''연필 세 ( )''의 ( )에 알맞은 말은 무엇인가요?',NULL,'["켤레","자루","마리","그루"]',1,'연필은 ''자루''로 세어요. 동물은 마리, 신발은 켤레, 나무는 그루로 세어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-21382750c372','KR_KOR','vocab','mcq',1,NULL,'''토끼가 ( ) 뛰어가요.''의 ( )에 알맞은 흉내 내는 말은 무엇인가요?',NULL,'["꿀꿀","깡충깡충","주룩주룩","엉금엉금"]',1,'토끼가 뛰는 모양은 ''깡충깡충''이에요. ''엉금엉금''은 거북처럼 느리게 기어가는 모양이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-1a025715e3c9','KR_KOR','vocab','mcq',1,NULL,'다른 낱말들과 같은 무리가 아닌 것은 무엇인가요?',NULL,'["코끼리","사자","기차","호랑이"]',2,'사자, 호랑이, 코끼리는 동물이고, 기차는 탈것이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-08f36b2f80c3','KR_KOR','vocab','mcq',1,NULL,'''낮잠''의 뜻으로 알맞은 것은 무엇인가요?',NULL,'["낮에 하는 놀이","아침에 먹는 밥","낮에 자는 잠","밤에 깊이 자는 잠"]',2,'''낮잠''은 ''낮''과 ''잠''이 합쳐진 말로, 낮에 자는 잠이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-5be77ef93c0f','KR_KOR','vocab','mcq',1,NULL,'''비가 왔어요. ( ) 우산을 썼어요.''의 ( )에 알맞은 말은 무엇인가요?',NULL,'["그러나","하지만","그런데","그래서"]',3,'비가 온 것이 까닭이 되어 우산을 썼으므로 ''그래서''로 이어 줘요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-8129e86b9c9a','KR_KOR','vocab','mcq',1,NULL,'''엄마가 아기를 ( ).''의 ( )에 알맞은 말은 무엇인가요?',NULL,'["읽어요","안아요","마셔요","입어요"]',1,'엄마가 아기에게 할 수 있는 일은 ''안아요''예요. 마시는 것은 물, 읽는 것은 책, 입는 것은 옷이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-ce77edbe3d9b','KR_KOR','vocab','mcq',1,NULL,'''어제 놀이공원에 ( ).''의 ( )에 알맞은 말은 무엇인가요?',NULL,'["갈 거예요","가자","가요","갔어요"]',3,'''어제''는 이미 지나간 때이므로 ''갔어요''처럼 지나간 일을 나타내는 말과 어울려요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-52a03ece2ecf','KR_KOR','vocab','mcq',1,NULL,'바르게 쓴 것은 무엇인가요?',NULL,'["손을 시서요.","손을 씻어요.","손울 씻어요.","손을 씼어요."]',1,'바르게 쓰면 ''손을 씻어요.''예요. ''씻다''의 받침은 ㅅ이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-752aeeee676b','KR_KOR','vocab','mcq',1,NULL,'시계가 가는 소리를 흉내 낸 말은 무엇인가요?',NULL,'["부릉부릉","개굴개굴","째깍째깍","뻐꾹뻐꾹"]',2,'시계 소리는 ''째깍째깍''이에요. 개굴개굴은 개구리, 뻐꾹뻐꾹은 뻐꾸기, 부릉부릉은 자동차 소리예요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-39bc0fd1e1ac','KR_KOR','vocab','mcq',1,NULL,'''집''을 높여 이르는 말은 무엇인가요?',NULL,'["문","댁","마당","방"]',1,'웃어른의 집은 ''댁''이라고 높여 말해요. 예를 들어 ''할머니 댁''이라고 해요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-ecdd6d94a727','KR_KOR','vocab','mcq',1,NULL,'''꽃''과 ''밭''을 합쳐 만든 낱말은 무엇인가요?',NULL,'["꽃잎","꽃밭","밭꽃","꽃병"]',1,'''꽃''과 ''밭''을 차례대로 합치면 꽃이 많이 핀 밭이라는 뜻의 ''꽃밭''이 돼요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-f46fbbf7634e','KR_KOR','nonfiction','mcq',2,'넓은 바다에는 아주 커다란 동물인 고래가 살아요. 고래는 물속에서 살고 생김새도 물고기와 비슷해서, 고래를 물고기라고 생각하는 사람이 많아요. 하지만 고래는 물고기가 아니에요. 고래는 사람이나 개처럼 새끼에게 젖을 먹여 키우는 동물이에요.
+
+먼저, 물고기와 고래는 숨 쉬는 방법이 달라요. 물고기는 아가미로 숨을 쉬기 때문에 물 밖으로 나오지 않아도 돼요. 그러나 고래는 사람처럼 폐로 숨을 쉬어요. 그래서 고래는 숨을 쉬려고 가끔 물 위로 올라와야 해요. 고래가 물 위로 올라와 숨을 내쉬면 머리 위에 있는 콧구멍에서 물줄기가 분수처럼 높이 솟아오르기도 해요.
+
+다음으로, 새끼를 낳는 방법도 달라요. 물고기는 대부분 알을 낳아요. 그런데 고래는 새끼를 낳고, 엄마 고래가 새끼에게 젖을 먹여 키워요.
+
+헤엄치는 모습도 서로 달라요. 물고기는 꼬리를 양옆으로 흔들며 헤엄쳐요. 고래는 꼬리를 위아래로 움직이며 헤엄쳐요.
+
+이처럼 고래는 물고기와 닮은 점도 있지만, 다른 점이 더 많아요.','이 글의 중심 생각으로 알맞은 것은 무엇인가요?',NULL,'["고래는 물속에 살지만 물고기가 아니다.","고래는 바다에서 가장 큰 물고기이다.","고래는 물 밖에서 더 오래 산다.","물고기는 모두 알을 낳는다."]',0,'첫째 문단에서 ''고래는 물고기가 아니에요''라고 말하고, 이어지는 문단에서 그 까닭을 하나씩 설명했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-4d930224a358','KR_KOR','nonfiction','mcq',2,'넓은 바다에는 아주 커다란 동물인 고래가 살아요. 고래는 물속에서 살고 생김새도 물고기와 비슷해서, 고래를 물고기라고 생각하는 사람이 많아요. 하지만 고래는 물고기가 아니에요. 고래는 사람이나 개처럼 새끼에게 젖을 먹여 키우는 동물이에요.
+
+먼저, 물고기와 고래는 숨 쉬는 방법이 달라요. 물고기는 아가미로 숨을 쉬기 때문에 물 밖으로 나오지 않아도 돼요. 그러나 고래는 사람처럼 폐로 숨을 쉬어요. 그래서 고래는 숨을 쉬려고 가끔 물 위로 올라와야 해요. 고래가 물 위로 올라와 숨을 내쉬면 머리 위에 있는 콧구멍에서 물줄기가 분수처럼 높이 솟아오르기도 해요.
+
+다음으로, 새끼를 낳는 방법도 달라요. 물고기는 대부분 알을 낳아요. 그런데 고래는 새끼를 낳고, 엄마 고래가 새끼에게 젖을 먹여 키워요.
+
+헤엄치는 모습도 서로 달라요. 물고기는 꼬리를 양옆으로 흔들며 헤엄쳐요. 고래는 꼬리를 위아래로 움직이며 헤엄쳐요.
+
+이처럼 고래는 물고기와 닮은 점도 있지만, 다른 점이 더 많아요.','이 글은 어떤 방법으로 설명하고 있나요?',NULL,'["고래를 잡는 방법을 설명했다.","고래에 대한 옛이야기를 들려주었다.","고래와 물고기의 다른 점을 견주어 설명했다.","고래가 자라는 과정을 차례대로 설명했다."]',2,'숨 쉬는 방법, 새끼를 낳는 방법, 헤엄치는 모습에서 고래와 물고기가 어떻게 다른지 견주어(대조하여) 설명했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-75e20062bd14','KR_KOR','nonfiction','mcq',2,'넓은 바다에는 아주 커다란 동물인 고래가 살아요. 고래는 물속에서 살고 생김새도 물고기와 비슷해서, 고래를 물고기라고 생각하는 사람이 많아요. 하지만 고래는 물고기가 아니에요. 고래는 사람이나 개처럼 새끼에게 젖을 먹여 키우는 동물이에요.
+
+먼저, 물고기와 고래는 숨 쉬는 방법이 달라요. 물고기는 아가미로 숨을 쉬기 때문에 물 밖으로 나오지 않아도 돼요. 그러나 고래는 사람처럼 폐로 숨을 쉬어요. 그래서 고래는 숨을 쉬려고 가끔 물 위로 올라와야 해요. 고래가 물 위로 올라와 숨을 내쉬면 머리 위에 있는 콧구멍에서 물줄기가 분수처럼 높이 솟아오르기도 해요.
+
+다음으로, 새끼를 낳는 방법도 달라요. 물고기는 대부분 알을 낳아요. 그런데 고래는 새끼를 낳고, 엄마 고래가 새끼에게 젖을 먹여 키워요.
+
+헤엄치는 모습도 서로 달라요. 물고기는 꼬리를 양옆으로 흔들며 헤엄쳐요. 고래는 꼬리를 위아래로 움직이며 헤엄쳐요.
+
+이처럼 고래는 물고기와 닮은 점도 있지만, 다른 점이 더 많아요.','고래가 가끔 물 위로 올라와야 하는 까닭은 무엇인가요?',NULL,'["폐로 숨을 쉬기 때문에","물고기를 잡아야 하기 때문에","햇볕을 쬐어야 하기 때문에","물줄기를 뿜으며 놀기 때문에"]',0,'둘째 문단에 고래는 사람처럼 폐로 숨을 쉬어서 숨을 쉬려고 물 위로 올라와야 한다고 했어요. 물줄기는 숨을 내쉴 때 생기는 것이지 올라오는 까닭이 아니에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-762cc5b14dfe','KR_KOR','nonfiction','mcq',2,'넓은 바다에는 아주 커다란 동물인 고래가 살아요. 고래는 물속에서 살고 생김새도 물고기와 비슷해서, 고래를 물고기라고 생각하는 사람이 많아요. 하지만 고래는 물고기가 아니에요. 고래는 사람이나 개처럼 새끼에게 젖을 먹여 키우는 동물이에요.
+
+먼저, 물고기와 고래는 숨 쉬는 방법이 달라요. 물고기는 아가미로 숨을 쉬기 때문에 물 밖으로 나오지 않아도 돼요. 그러나 고래는 사람처럼 폐로 숨을 쉬어요. 그래서 고래는 숨을 쉬려고 가끔 물 위로 올라와야 해요. 고래가 물 위로 올라와 숨을 내쉬면 머리 위에 있는 콧구멍에서 물줄기가 분수처럼 높이 솟아오르기도 해요.
+
+다음으로, 새끼를 낳는 방법도 달라요. 물고기는 대부분 알을 낳아요. 그런데 고래는 새끼를 낳고, 엄마 고래가 새끼에게 젖을 먹여 키워요.
+
+헤엄치는 모습도 서로 달라요. 물고기는 꼬리를 양옆으로 흔들며 헤엄쳐요. 고래는 꼬리를 위아래로 움직이며 헤엄쳐요.
+
+이처럼 고래는 물고기와 닮은 점도 있지만, 다른 점이 더 많아요.','고래와 물고기를 바르게 비교한 것은 무엇인가요?',NULL,'["고래는 폐로 숨을 쉬고, 물고기는 아가미로 숨을 쉰다.","고래는 알을 낳고, 물고기는 새끼를 낳는다.","고래는 아가미로 숨을 쉬고, 물고기는 폐로 숨을 쉰다.","고래는 꼬리를 양옆으로, 물고기는 위아래로 움직인다."]',0,'고래는 폐, 물고기는 아가미로 숨을 쉬어요. 나머지는 고래와 물고기의 특징을 서로 바꾸어 쓴 것이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-57bd5b572064','KR_KOR','nonfiction','mcq',2,'우리 반은 4월 5일에 화분에 강낭콩을 심었어요. 강낭콩을 심기 전에는 하룻밤 동안 물에 불려 두었어요. 그러면 단단한 껍질이 부드러워져서 싹이 더 잘 나요. 하룻밤 사이에 강낭콩은 물을 머금어 처음보다 통통하게 커져 있었어요.
+
+화분에 흙을 담고, 손가락 한 마디 깊이로 구멍을 판 다음 강낭콩을 넣고 흙을 살살 덮었어요. 그리고 흙이 마르지 않게 물을 주었어요. 화분은 햇빛이 잘 드는 창가에 두었어요.
+
+일주일쯤 지나자 흙을 뚫고 싹이 올라왔어요. 처음 나온 떡잎 두 장은 동글동글하고 두꺼웠어요. 떡잎 사이에서 본잎이 나왔는데, 본잎은 떡잎보다 얇고 끝이 뾰족했어요. 본잎이 나오자 줄기도 쑥쑥 자랐어요.
+
+우리는 일주일마다 자를 대고 강낭콩의 키를 재어 그래프로 나타냈어요. 그래프를 보니 강낭콩은 날이 갈수록 더 빨리 자랐어요. 줄기가 길어지자 화분에 막대를 꽂아 주었어요. 줄기가 막대를 감고 올라가면 쓰러지지 않거든요.
+
+앞으로 강낭콩에 꽃이 피고 꼬투리가 열리면 그 모습도 관찰하여 기록할 거예요.','그래프를 보고 답하세요. 4월 26일에 잰 강낭콩의 키는 몇 cm인가요?','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 330" width="460" height="330" font-family="sans-serif"><rect width="460" height="330" fill="#fff"/><text x="230" y="26" font-size="17" font-weight="bold" text-anchor="middle" fill="#0a1f44">강낭콩의 키</text><text x="16" y="42" font-size="13">(cm)</text><line x1="60" y1="270" x2="440" y2="270" stroke="#ccc" stroke-width="1"/><text x="52" y="275" font-size="13" text-anchor="end">0</text><line x1="60" y1="248" x2="440" y2="248" stroke="#ccc" stroke-width="1"/><text x="52" y="253" font-size="13" text-anchor="end">2</text><line x1="60" y1="226" x2="440" y2="226" stroke="#ccc" stroke-width="1"/><text x="52" y="231" font-size="13" text-anchor="end">4</text><line x1="60" y1="204" x2="440" y2="204" stroke="#ccc" stroke-width="1"/><text x="52" y="209" font-size="13" text-anchor="end">6</text><line x1="60" y1="182" x2="440" y2="182" stroke="#ccc" stroke-width="1"/><text x="52" y="187" font-size="13" text-anchor="end">8</text><line x1="60" y1="160" x2="440" y2="160" stroke="#ccc" stroke-width="1"/><text x="52" y="165" font-size="13" text-anchor="end">10</text><line x1="60" y1="138" x2="440" y2="138" stroke="#ccc" stroke-width="1"/><text x="52" y="143" font-size="13" text-anchor="end">12</text><line x1="60" y1="116" x2="440" y2="116" stroke="#ccc" stroke-width="1"/><text x="52" y="121" font-size="13" text-anchor="end">14</text><line x1="60" y1="94" x2="440" y2="94" stroke="#ccc" stroke-width="1"/><text x="52" y="99" font-size="13" text-anchor="end">16</text><line x1="60" y1="72" x2="440" y2="72" stroke="#ccc" stroke-width="1"/><text x="52" y="77" font-size="13" text-anchor="end">18</text><line x1="60" y1="50" x2="440" y2="50" stroke="#ccc" stroke-width="1"/><text x="52" y="55" font-size="13" text-anchor="end">20</text><rect x="90" y="248" width="50" height="22" fill="#0a1f44"/><text x="115" y="242" font-size="14" text-anchor="middle" font-weight="bold">2</text><text x="115" y="292" font-size="14" text-anchor="middle">4월 12일</text><rect x="185" y="204" width="50" height="66" fill="#0a1f44"/><text x="210" y="198" font-size="14" text-anchor="middle" font-weight="bold">6</text><text x="210" y="292" font-size="14" text-anchor="middle">4월 19일</text><rect x="280" y="149" width="50" height="121" fill="#0a1f44"/><text x="305" y="143" font-size="14" text-anchor="middle" font-weight="bold">11</text><text x="305" y="292" font-size="14" text-anchor="middle">4월 26일</text><rect x="375" y="72" width="50" height="198" fill="#0a1f44"/><text x="400" y="66" font-size="14" text-anchor="middle" font-weight="bold">18</text><text x="400" y="292" font-size="14" text-anchor="middle">5월 3일</text><line x1="60" y1="40" x2="60" y2="270" stroke="#333" stroke-width="2"/><line x1="60" y1="270" x2="440" y2="270" stroke="#333" stroke-width="2"/><text x="440" y="314" font-size="13" text-anchor="end">(재어 본 날)</text></svg>','["2cm","18cm","11cm","6cm"]',2,'그래프에서 4월 26일 막대는 11cm를 나타내요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-172bad444295','KR_KOR','nonfiction','mcq',2,'우리 반은 4월 5일에 화분에 강낭콩을 심었어요. 강낭콩을 심기 전에는 하룻밤 동안 물에 불려 두었어요. 그러면 단단한 껍질이 부드러워져서 싹이 더 잘 나요. 하룻밤 사이에 강낭콩은 물을 머금어 처음보다 통통하게 커져 있었어요.
+
+화분에 흙을 담고, 손가락 한 마디 깊이로 구멍을 판 다음 강낭콩을 넣고 흙을 살살 덮었어요. 그리고 흙이 마르지 않게 물을 주었어요. 화분은 햇빛이 잘 드는 창가에 두었어요.
+
+일주일쯤 지나자 흙을 뚫고 싹이 올라왔어요. 처음 나온 떡잎 두 장은 동글동글하고 두꺼웠어요. 떡잎 사이에서 본잎이 나왔는데, 본잎은 떡잎보다 얇고 끝이 뾰족했어요. 본잎이 나오자 줄기도 쑥쑥 자랐어요.
+
+우리는 일주일마다 자를 대고 강낭콩의 키를 재어 그래프로 나타냈어요. 그래프를 보니 강낭콩은 날이 갈수록 더 빨리 자랐어요. 줄기가 길어지자 화분에 막대를 꽂아 주었어요. 줄기가 막대를 감고 올라가면 쓰러지지 않거든요.
+
+앞으로 강낭콩에 꽃이 피고 꼬투리가 열리면 그 모습도 관찰하여 기록할 거예요.','그래프를 보고 답하세요. 일주일 동안 강낭콩이 가장 많이 자란 때는 언제인가요?','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 330" width="460" height="330" font-family="sans-serif"><rect width="460" height="330" fill="#fff"/><text x="230" y="26" font-size="17" font-weight="bold" text-anchor="middle" fill="#0a1f44">강낭콩의 키</text><text x="16" y="42" font-size="13">(cm)</text><line x1="60" y1="270" x2="440" y2="270" stroke="#ccc" stroke-width="1"/><text x="52" y="275" font-size="13" text-anchor="end">0</text><line x1="60" y1="248" x2="440" y2="248" stroke="#ccc" stroke-width="1"/><text x="52" y="253" font-size="13" text-anchor="end">2</text><line x1="60" y1="226" x2="440" y2="226" stroke="#ccc" stroke-width="1"/><text x="52" y="231" font-size="13" text-anchor="end">4</text><line x1="60" y1="204" x2="440" y2="204" stroke="#ccc" stroke-width="1"/><text x="52" y="209" font-size="13" text-anchor="end">6</text><line x1="60" y1="182" x2="440" y2="182" stroke="#ccc" stroke-width="1"/><text x="52" y="187" font-size="13" text-anchor="end">8</text><line x1="60" y1="160" x2="440" y2="160" stroke="#ccc" stroke-width="1"/><text x="52" y="165" font-size="13" text-anchor="end">10</text><line x1="60" y1="138" x2="440" y2="138" stroke="#ccc" stroke-width="1"/><text x="52" y="143" font-size="13" text-anchor="end">12</text><line x1="60" y1="116" x2="440" y2="116" stroke="#ccc" stroke-width="1"/><text x="52" y="121" font-size="13" text-anchor="end">14</text><line x1="60" y1="94" x2="440" y2="94" stroke="#ccc" stroke-width="1"/><text x="52" y="99" font-size="13" text-anchor="end">16</text><line x1="60" y1="72" x2="440" y2="72" stroke="#ccc" stroke-width="1"/><text x="52" y="77" font-size="13" text-anchor="end">18</text><line x1="60" y1="50" x2="440" y2="50" stroke="#ccc" stroke-width="1"/><text x="52" y="55" font-size="13" text-anchor="end">20</text><rect x="90" y="248" width="50" height="22" fill="#0a1f44"/><text x="115" y="242" font-size="14" text-anchor="middle" font-weight="bold">2</text><text x="115" y="292" font-size="14" text-anchor="middle">4월 12일</text><rect x="185" y="204" width="50" height="66" fill="#0a1f44"/><text x="210" y="198" font-size="14" text-anchor="middle" font-weight="bold">6</text><text x="210" y="292" font-size="14" text-anchor="middle">4월 19일</text><rect x="280" y="149" width="50" height="121" fill="#0a1f44"/><text x="305" y="143" font-size="14" text-anchor="middle" font-weight="bold">11</text><text x="305" y="292" font-size="14" text-anchor="middle">4월 26일</text><rect x="375" y="72" width="50" height="198" fill="#0a1f44"/><text x="400" y="66" font-size="14" text-anchor="middle" font-weight="bold">18</text><text x="400" y="292" font-size="14" text-anchor="middle">5월 3일</text><line x1="60" y1="40" x2="60" y2="270" stroke="#333" stroke-width="2"/><line x1="60" y1="270" x2="440" y2="270" stroke="#333" stroke-width="2"/><text x="440" y="314" font-size="13" text-anchor="end">(재어 본 날)</text></svg>','["4월 19일부터 4월 26일까지","4월 5일부터 4월 12일까지","4월 12일부터 4월 19일까지","4월 26일부터 5월 3일까지"]',3,'자란 길이를 빼어 보면 4월 12일~19일은 4cm, 19일~26일은 5cm, 4월 26일~5월 3일은 7cm예요. 4월 5일~12일은 0cm에서 2cm로 2cm 자랐어요. 가장 많이 자란 때는 4월 26일부터 5월 3일까지예요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-4b0241162cce','KR_KOR','nonfiction','mcq',2,'우리 반은 4월 5일에 화분에 강낭콩을 심었어요. 강낭콩을 심기 전에는 하룻밤 동안 물에 불려 두었어요. 그러면 단단한 껍질이 부드러워져서 싹이 더 잘 나요. 하룻밤 사이에 강낭콩은 물을 머금어 처음보다 통통하게 커져 있었어요.
+
+화분에 흙을 담고, 손가락 한 마디 깊이로 구멍을 판 다음 강낭콩을 넣고 흙을 살살 덮었어요. 그리고 흙이 마르지 않게 물을 주었어요. 화분은 햇빛이 잘 드는 창가에 두었어요.
+
+일주일쯤 지나자 흙을 뚫고 싹이 올라왔어요. 처음 나온 떡잎 두 장은 동글동글하고 두꺼웠어요. 떡잎 사이에서 본잎이 나왔는데, 본잎은 떡잎보다 얇고 끝이 뾰족했어요. 본잎이 나오자 줄기도 쑥쑥 자랐어요.
+
+우리는 일주일마다 자를 대고 강낭콩의 키를 재어 그래프로 나타냈어요. 그래프를 보니 강낭콩은 날이 갈수록 더 빨리 자랐어요. 줄기가 길어지자 화분에 막대를 꽂아 주었어요. 줄기가 막대를 감고 올라가면 쓰러지지 않거든요.
+
+앞으로 강낭콩에 꽃이 피고 꼬투리가 열리면 그 모습도 관찰하여 기록할 거예요.','글에 나온 강낭콩 기르기의 차례로 알맞은 것은 무엇인가요?','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 330" width="460" height="330" font-family="sans-serif"><rect width="460" height="330" fill="#fff"/><text x="230" y="26" font-size="17" font-weight="bold" text-anchor="middle" fill="#0a1f44">강낭콩의 키</text><text x="16" y="42" font-size="13">(cm)</text><line x1="60" y1="270" x2="440" y2="270" stroke="#ccc" stroke-width="1"/><text x="52" y="275" font-size="13" text-anchor="end">0</text><line x1="60" y1="248" x2="440" y2="248" stroke="#ccc" stroke-width="1"/><text x="52" y="253" font-size="13" text-anchor="end">2</text><line x1="60" y1="226" x2="440" y2="226" stroke="#ccc" stroke-width="1"/><text x="52" y="231" font-size="13" text-anchor="end">4</text><line x1="60" y1="204" x2="440" y2="204" stroke="#ccc" stroke-width="1"/><text x="52" y="209" font-size="13" text-anchor="end">6</text><line x1="60" y1="182" x2="440" y2="182" stroke="#ccc" stroke-width="1"/><text x="52" y="187" font-size="13" text-anchor="end">8</text><line x1="60" y1="160" x2="440" y2="160" stroke="#ccc" stroke-width="1"/><text x="52" y="165" font-size="13" text-anchor="end">10</text><line x1="60" y1="138" x2="440" y2="138" stroke="#ccc" stroke-width="1"/><text x="52" y="143" font-size="13" text-anchor="end">12</text><line x1="60" y1="116" x2="440" y2="116" stroke="#ccc" stroke-width="1"/><text x="52" y="121" font-size="13" text-anchor="end">14</text><line x1="60" y1="94" x2="440" y2="94" stroke="#ccc" stroke-width="1"/><text x="52" y="99" font-size="13" text-anchor="end">16</text><line x1="60" y1="72" x2="440" y2="72" stroke="#ccc" stroke-width="1"/><text x="52" y="77" font-size="13" text-anchor="end">18</text><line x1="60" y1="50" x2="440" y2="50" stroke="#ccc" stroke-width="1"/><text x="52" y="55" font-size="13" text-anchor="end">20</text><rect x="90" y="248" width="50" height="22" fill="#0a1f44"/><text x="115" y="242" font-size="14" text-anchor="middle" font-weight="bold">2</text><text x="115" y="292" font-size="14" text-anchor="middle">4월 12일</text><rect x="185" y="204" width="50" height="66" fill="#0a1f44"/><text x="210" y="198" font-size="14" text-anchor="middle" font-weight="bold">6</text><text x="210" y="292" font-size="14" text-anchor="middle">4월 19일</text><rect x="280" y="149" width="50" height="121" fill="#0a1f44"/><text x="305" y="143" font-size="14" text-anchor="middle" font-weight="bold">11</text><text x="305" y="292" font-size="14" text-anchor="middle">4월 26일</text><rect x="375" y="72" width="50" height="198" fill="#0a1f44"/><text x="400" y="66" font-size="14" text-anchor="middle" font-weight="bold">18</text><text x="400" y="292" font-size="14" text-anchor="middle">5월 3일</text><line x1="60" y1="40" x2="60" y2="270" stroke="#333" stroke-width="2"/><line x1="60" y1="270" x2="440" y2="270" stroke="#333" stroke-width="2"/><text x="440" y="314" font-size="13" text-anchor="end">(재어 본 날)</text></svg>','["흙에 심기 → 물에 불리기 → 싹 트기 → 막대 꽂기","흙에 심기 → 싹 트기 → 물에 불리기 → 막대 꽂기","물에 불리기 → 막대 꽂기 → 흙에 심기 → 싹 트기","물에 불리기 → 흙에 심기 → 싹 트기 → 막대 꽂기"]',3,'심기 전에 물에 불리고, 흙에 심은 뒤 일주일쯤 지나 싹이 나고, 줄기가 길어지자 막대를 꽂았어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-85da3b92092d','KR_KOR','nonfiction','mcq',2,'우리 반은 4월 5일에 화분에 강낭콩을 심었어요. 강낭콩을 심기 전에는 하룻밤 동안 물에 불려 두었어요. 그러면 단단한 껍질이 부드러워져서 싹이 더 잘 나요. 하룻밤 사이에 강낭콩은 물을 머금어 처음보다 통통하게 커져 있었어요.
+
+화분에 흙을 담고, 손가락 한 마디 깊이로 구멍을 판 다음 강낭콩을 넣고 흙을 살살 덮었어요. 그리고 흙이 마르지 않게 물을 주었어요. 화분은 햇빛이 잘 드는 창가에 두었어요.
+
+일주일쯤 지나자 흙을 뚫고 싹이 올라왔어요. 처음 나온 떡잎 두 장은 동글동글하고 두꺼웠어요. 떡잎 사이에서 본잎이 나왔는데, 본잎은 떡잎보다 얇고 끝이 뾰족했어요. 본잎이 나오자 줄기도 쑥쑥 자랐어요.
+
+우리는 일주일마다 자를 대고 강낭콩의 키를 재어 그래프로 나타냈어요. 그래프를 보니 강낭콩은 날이 갈수록 더 빨리 자랐어요. 줄기가 길어지자 화분에 막대를 꽂아 주었어요. 줄기가 막대를 감고 올라가면 쓰러지지 않거든요.
+
+앞으로 강낭콩에 꽃이 피고 꼬투리가 열리면 그 모습도 관찰하여 기록할 거예요.','화분에 막대를 꽂아 준 까닭은 무엇인가요?','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 330" width="460" height="330" font-family="sans-serif"><rect width="460" height="330" fill="#fff"/><text x="230" y="26" font-size="17" font-weight="bold" text-anchor="middle" fill="#0a1f44">강낭콩의 키</text><text x="16" y="42" font-size="13">(cm)</text><line x1="60" y1="270" x2="440" y2="270" stroke="#ccc" stroke-width="1"/><text x="52" y="275" font-size="13" text-anchor="end">0</text><line x1="60" y1="248" x2="440" y2="248" stroke="#ccc" stroke-width="1"/><text x="52" y="253" font-size="13" text-anchor="end">2</text><line x1="60" y1="226" x2="440" y2="226" stroke="#ccc" stroke-width="1"/><text x="52" y="231" font-size="13" text-anchor="end">4</text><line x1="60" y1="204" x2="440" y2="204" stroke="#ccc" stroke-width="1"/><text x="52" y="209" font-size="13" text-anchor="end">6</text><line x1="60" y1="182" x2="440" y2="182" stroke="#ccc" stroke-width="1"/><text x="52" y="187" font-size="13" text-anchor="end">8</text><line x1="60" y1="160" x2="440" y2="160" stroke="#ccc" stroke-width="1"/><text x="52" y="165" font-size="13" text-anchor="end">10</text><line x1="60" y1="138" x2="440" y2="138" stroke="#ccc" stroke-width="1"/><text x="52" y="143" font-size="13" text-anchor="end">12</text><line x1="60" y1="116" x2="440" y2="116" stroke="#ccc" stroke-width="1"/><text x="52" y="121" font-size="13" text-anchor="end">14</text><line x1="60" y1="94" x2="440" y2="94" stroke="#ccc" stroke-width="1"/><text x="52" y="99" font-size="13" text-anchor="end">16</text><line x1="60" y1="72" x2="440" y2="72" stroke="#ccc" stroke-width="1"/><text x="52" y="77" font-size="13" text-anchor="end">18</text><line x1="60" y1="50" x2="440" y2="50" stroke="#ccc" stroke-width="1"/><text x="52" y="55" font-size="13" text-anchor="end">20</text><rect x="90" y="248" width="50" height="22" fill="#0a1f44"/><text x="115" y="242" font-size="14" text-anchor="middle" font-weight="bold">2</text><text x="115" y="292" font-size="14" text-anchor="middle">4월 12일</text><rect x="185" y="204" width="50" height="66" fill="#0a1f44"/><text x="210" y="198" font-size="14" text-anchor="middle" font-weight="bold">6</text><text x="210" y="292" font-size="14" text-anchor="middle">4월 19일</text><rect x="280" y="149" width="50" height="121" fill="#0a1f44"/><text x="305" y="143" font-size="14" text-anchor="middle" font-weight="bold">11</text><text x="305" y="292" font-size="14" text-anchor="middle">4월 26일</text><rect x="375" y="72" width="50" height="198" fill="#0a1f44"/><text x="400" y="66" font-size="14" text-anchor="middle" font-weight="bold">18</text><text x="400" y="292" font-size="14" text-anchor="middle">5월 3일</text><line x1="60" y1="40" x2="60" y2="270" stroke="#333" stroke-width="2"/><line x1="60" y1="270" x2="440" y2="270" stroke="#333" stroke-width="2"/><text x="440" y="314" font-size="13" text-anchor="end">(재어 본 날)</text></svg>','["강낭콩에 벌레가 오지 못하게 하려고","강낭콩에 햇빛이 들지 않게 하려고","강낭콩의 키를 쉽게 재려고","줄기가 막대를 감고 올라가 쓰러지지 않게 하려고"]',3,'넷째 문단에 줄기가 막대를 감고 올라가면 쓰러지지 않는다고 했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-1dfdf6febccd','KR_KOR','nonfiction','mcq',2,'꿈나무 과학관 어린이 체험 교실 안내
+
+꿈나무 과학관에서 여름 방학을 맞아 어린이 체험 교실을 엽니다. 체험 교실에서는 직접 만들고 실험하면서 과학의 원리를 쉽게 배울 수 있습니다.
+
+체험 교실은 7월 22일부터 8월 16일까지 열립니다. 프로그램마다 열리는 요일과 시간이 다르니 아래 시간표를 꼭 확인하세요. 한 프로그램에는 한 번에 열다섯 명까지 참여할 수 있습니다.
+
+참여하고 싶은 어린이는 과학관 누리집에서 미리 신청해야 합니다. 자리가 다 차면 신청이 일찍 끝날 수 있습니다. 참가비는 따로 없지만, 만들기 재료가 필요한 프로그램은 재료비를 냅니다. 직접 만든 작품은 집에 가져갈 수 있습니다.
+
+체험 교실에 올 때에는 시작 시간 10분 전까지 2층 체험실 앞에 모여 주세요. 늦게 오면 들어갈 수 없습니다. 체험실 안에서는 선생님의 안내에 따라 안전하게 활동해 주세요. 초등학교 1학년과 2학년 어린이는 보호자와 함께 와야 합니다.
+
+궁금한 점은 과학관 1층 안내 데스크에 물어보세요.','이 글을 쓴 까닭으로 알맞은 것은 무엇인가요?','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 478 226" width="478" height="226" font-family="sans-serif"><rect x="0" y="0" width="478" height="226" fill="#ffffff"/><text x="239" y="26" font-size="17" font-weight="bold" text-anchor="middle" fill="#0a1f44">어린이 체험 교실 시간표</text><rect x="4" y="40" width="470" height="36" fill="#e6e9f0"/><line x1="4" y1="40" x2="474" y2="40" stroke="#333" stroke-width="2"/><line x1="4" y1="76" x2="474" y2="76" stroke="#333" stroke-width="2"/><line x1="4" y1="112" x2="474" y2="112" stroke="#333" stroke-width="2"/><line x1="4" y1="148" x2="474" y2="148" stroke="#333" stroke-width="2"/><line x1="4" y1="184" x2="474" y2="184" stroke="#333" stroke-width="2"/><line x1="4" y1="220" x2="474" y2="220" stroke="#333" stroke-width="2"/><line x1="4" y1="40" x2="4" y2="220" stroke="#333" stroke-width="2"/><line x1="174" y1="40" x2="174" y2="220" stroke="#333" stroke-width="2"/><line x1="274" y1="40" x2="274" y2="220" stroke="#333" stroke-width="2"/><line x1="384" y1="40" x2="384" y2="220" stroke="#333" stroke-width="2"/><line x1="474" y1="40" x2="474" y2="220" stroke="#333" stroke-width="2"/><text x="89" y="64" font-size="15" text-anchor="middle" fill="#000" font-weight="bold">프로그램</text><text x="224" y="64" font-size="15" text-anchor="middle" fill="#000" font-weight="bold">요일</text><text x="329" y="64" font-size="15" text-anchor="middle" fill="#000" font-weight="bold">시작 시간</text><text x="429" y="64" font-size="15" text-anchor="middle" fill="#000" font-weight="bold">재료비</text><text x="89" y="100" font-size="15" text-anchor="middle" fill="#000">종이 비행기 날리기</text><text x="224" y="100" font-size="15" text-anchor="middle" fill="#000">화, 목</text><text x="329" y="100" font-size="15" text-anchor="middle" fill="#000">오전 10시</text><text x="429" y="100" font-size="15" text-anchor="middle" fill="#000">1,000원</text><text x="89" y="136" font-size="15" text-anchor="middle" fill="#000">무지개 만들기</text><text x="224" y="136" font-size="15" text-anchor="middle" fill="#000">수, 금</text><text x="329" y="136" font-size="15" text-anchor="middle" fill="#000">오후 2시</text><text x="429" y="136" font-size="15" text-anchor="middle" fill="#000">1,000원</text><text x="89" y="172" font-size="15" text-anchor="middle" fill="#000">자석 놀이</text><text x="224" y="172" font-size="15" text-anchor="middle" fill="#000">토</text><text x="329" y="172" font-size="15" text-anchor="middle" fill="#000">오전 11시</text><text x="429" y="172" font-size="15" text-anchor="middle" fill="#000">없음</text><text x="89" y="208" font-size="15" text-anchor="middle" fill="#000">별자리 관찰</text><text x="224" y="208" font-size="15" text-anchor="middle" fill="#000">금</text><text x="329" y="208" font-size="15" text-anchor="middle" fill="#000">저녁 7시</text><text x="429" y="208" font-size="15" text-anchor="middle" fill="#000">없음</text></svg>','["유명한 과학자의 삶을 소개하려고","체험 교실에 참여하는 방법을 알리려고","자석이 붙는 원리를 설명하려고","과학관에 다녀온 느낌을 나누려고"]',1,'체험 교실이 열리는 때, 신청 방법, 모이는 곳과 시간 등을 알려 주는 안내문이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-34e1cece4da9','KR_KOR','nonfiction','mcq',2,'꿈나무 과학관 어린이 체험 교실 안내
+
+꿈나무 과학관에서 여름 방학을 맞아 어린이 체험 교실을 엽니다. 체험 교실에서는 직접 만들고 실험하면서 과학의 원리를 쉽게 배울 수 있습니다.
+
+체험 교실은 7월 22일부터 8월 16일까지 열립니다. 프로그램마다 열리는 요일과 시간이 다르니 아래 시간표를 꼭 확인하세요. 한 프로그램에는 한 번에 열다섯 명까지 참여할 수 있습니다.
+
+참여하고 싶은 어린이는 과학관 누리집에서 미리 신청해야 합니다. 자리가 다 차면 신청이 일찍 끝날 수 있습니다. 참가비는 따로 없지만, 만들기 재료가 필요한 프로그램은 재료비를 냅니다. 직접 만든 작품은 집에 가져갈 수 있습니다.
+
+체험 교실에 올 때에는 시작 시간 10분 전까지 2층 체험실 앞에 모여 주세요. 늦게 오면 들어갈 수 없습니다. 체험실 안에서는 선생님의 안내에 따라 안전하게 활동해 주세요. 초등학교 1학년과 2학년 어린이는 보호자와 함께 와야 합니다.
+
+궁금한 점은 과학관 1층 안내 데스크에 물어보세요.','시간표를 보고 답하세요. 토요일에 참여할 수 있는 프로그램은 무엇인가요?','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 478 226" width="478" height="226" font-family="sans-serif"><rect x="0" y="0" width="478" height="226" fill="#ffffff"/><text x="239" y="26" font-size="17" font-weight="bold" text-anchor="middle" fill="#0a1f44">어린이 체험 교실 시간표</text><rect x="4" y="40" width="470" height="36" fill="#e6e9f0"/><line x1="4" y1="40" x2="474" y2="40" stroke="#333" stroke-width="2"/><line x1="4" y1="76" x2="474" y2="76" stroke="#333" stroke-width="2"/><line x1="4" y1="112" x2="474" y2="112" stroke="#333" stroke-width="2"/><line x1="4" y1="148" x2="474" y2="148" stroke="#333" stroke-width="2"/><line x1="4" y1="184" x2="474" y2="184" stroke="#333" stroke-width="2"/><line x1="4" y1="220" x2="474" y2="220" stroke="#333" stroke-width="2"/><line x1="4" y1="40" x2="4" y2="220" stroke="#333" stroke-width="2"/><line x1="174" y1="40" x2="174" y2="220" stroke="#333" stroke-width="2"/><line x1="274" y1="40" x2="274" y2="220" stroke="#333" stroke-width="2"/><line x1="384" y1="40" x2="384" y2="220" stroke="#333" stroke-width="2"/><line x1="474" y1="40" x2="474" y2="220" stroke="#333" stroke-width="2"/><text x="89" y="64" font-size="15" text-anchor="middle" fill="#000" font-weight="bold">프로그램</text><text x="224" y="64" font-size="15" text-anchor="middle" fill="#000" font-weight="bold">요일</text><text x="329" y="64" font-size="15" text-anchor="middle" fill="#000" font-weight="bold">시작 시간</text><text x="429" y="64" font-size="15" text-anchor="middle" fill="#000" font-weight="bold">재료비</text><text x="89" y="100" font-size="15" text-anchor="middle" fill="#000">종이 비행기 날리기</text><text x="224" y="100" font-size="15" text-anchor="middle" fill="#000">화, 목</text><text x="329" y="100" font-size="15" text-anchor="middle" fill="#000">오전 10시</text><text x="429" y="100" font-size="15" text-anchor="middle" fill="#000">1,000원</text><text x="89" y="136" font-size="15" text-anchor="middle" fill="#000">무지개 만들기</text><text x="224" y="136" font-size="15" text-anchor="middle" fill="#000">수, 금</text><text x="329" y="136" font-size="15" text-anchor="middle" fill="#000">오후 2시</text><text x="429" y="136" font-size="15" text-anchor="middle" fill="#000">1,000원</text><text x="89" y="172" font-size="15" text-anchor="middle" fill="#000">자석 놀이</text><text x="224" y="172" font-size="15" text-anchor="middle" fill="#000">토</text><text x="329" y="172" font-size="15" text-anchor="middle" fill="#000">오전 11시</text><text x="429" y="172" font-size="15" text-anchor="middle" fill="#000">없음</text><text x="89" y="208" font-size="15" text-anchor="middle" fill="#000">별자리 관찰</text><text x="224" y="208" font-size="15" text-anchor="middle" fill="#000">금</text><text x="329" y="208" font-size="15" text-anchor="middle" fill="#000">저녁 7시</text><text x="429" y="208" font-size="15" text-anchor="middle" fill="#000">없음</text></svg>','["별자리 관찰","자석 놀이","종이 비행기 날리기","무지개 만들기"]',1,'시간표에서 요일이 ''토''인 프로그램은 자석 놀이뿐이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-40a207642ae9','KR_KOR','nonfiction','mcq',2,'꿈나무 과학관 어린이 체험 교실 안내
+
+꿈나무 과학관에서 여름 방학을 맞아 어린이 체험 교실을 엽니다. 체험 교실에서는 직접 만들고 실험하면서 과학의 원리를 쉽게 배울 수 있습니다.
+
+체험 교실은 7월 22일부터 8월 16일까지 열립니다. 프로그램마다 열리는 요일과 시간이 다르니 아래 시간표를 꼭 확인하세요. 한 프로그램에는 한 번에 열다섯 명까지 참여할 수 있습니다.
+
+참여하고 싶은 어린이는 과학관 누리집에서 미리 신청해야 합니다. 자리가 다 차면 신청이 일찍 끝날 수 있습니다. 참가비는 따로 없지만, 만들기 재료가 필요한 프로그램은 재료비를 냅니다. 직접 만든 작품은 집에 가져갈 수 있습니다.
+
+체험 교실에 올 때에는 시작 시간 10분 전까지 2층 체험실 앞에 모여 주세요. 늦게 오면 들어갈 수 없습니다. 체험실 안에서는 선생님의 안내에 따라 안전하게 활동해 주세요. 초등학교 1학년과 2학년 어린이는 보호자와 함께 와야 합니다.
+
+궁금한 점은 과학관 1층 안내 데스크에 물어보세요.','수요일에 ''무지개 만들기''에 참여하려면 몇 시까지 체험실 앞에 모여야 하나요?','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 478 226" width="478" height="226" font-family="sans-serif"><rect x="0" y="0" width="478" height="226" fill="#ffffff"/><text x="239" y="26" font-size="17" font-weight="bold" text-anchor="middle" fill="#0a1f44">어린이 체험 교실 시간표</text><rect x="4" y="40" width="470" height="36" fill="#e6e9f0"/><line x1="4" y1="40" x2="474" y2="40" stroke="#333" stroke-width="2"/><line x1="4" y1="76" x2="474" y2="76" stroke="#333" stroke-width="2"/><line x1="4" y1="112" x2="474" y2="112" stroke="#333" stroke-width="2"/><line x1="4" y1="148" x2="474" y2="148" stroke="#333" stroke-width="2"/><line x1="4" y1="184" x2="474" y2="184" stroke="#333" stroke-width="2"/><line x1="4" y1="220" x2="474" y2="220" stroke="#333" stroke-width="2"/><line x1="4" y1="40" x2="4" y2="220" stroke="#333" stroke-width="2"/><line x1="174" y1="40" x2="174" y2="220" stroke="#333" stroke-width="2"/><line x1="274" y1="40" x2="274" y2="220" stroke="#333" stroke-width="2"/><line x1="384" y1="40" x2="384" y2="220" stroke="#333" stroke-width="2"/><line x1="474" y1="40" x2="474" y2="220" stroke="#333" stroke-width="2"/><text x="89" y="64" font-size="15" text-anchor="middle" fill="#000" font-weight="bold">프로그램</text><text x="224" y="64" font-size="15" text-anchor="middle" fill="#000" font-weight="bold">요일</text><text x="329" y="64" font-size="15" text-anchor="middle" fill="#000" font-weight="bold">시작 시간</text><text x="429" y="64" font-size="15" text-anchor="middle" fill="#000" font-weight="bold">재료비</text><text x="89" y="100" font-size="15" text-anchor="middle" fill="#000">종이 비행기 날리기</text><text x="224" y="100" font-size="15" text-anchor="middle" fill="#000">화, 목</text><text x="329" y="100" font-size="15" text-anchor="middle" fill="#000">오전 10시</text><text x="429" y="100" font-size="15" text-anchor="middle" fill="#000">1,000원</text><text x="89" y="136" font-size="15" text-anchor="middle" fill="#000">무지개 만들기</text><text x="224" y="136" font-size="15" text-anchor="middle" fill="#000">수, 금</text><text x="329" y="136" font-size="15" text-anchor="middle" fill="#000">오후 2시</text><text x="429" y="136" font-size="15" text-anchor="middle" fill="#000">1,000원</text><text x="89" y="172" font-size="15" text-anchor="middle" fill="#000">자석 놀이</text><text x="224" y="172" font-size="15" text-anchor="middle" fill="#000">토</text><text x="329" y="172" font-size="15" text-anchor="middle" fill="#000">오전 11시</text><text x="429" y="172" font-size="15" text-anchor="middle" fill="#000">없음</text><text x="89" y="208" font-size="15" text-anchor="middle" fill="#000">별자리 관찰</text><text x="224" y="208" font-size="15" text-anchor="middle" fill="#000">금</text><text x="329" y="208" font-size="15" text-anchor="middle" fill="#000">저녁 7시</text><text x="429" y="208" font-size="15" text-anchor="middle" fill="#000">없음</text></svg>','["오후 2시","오후 1시 50분","오후 2시 10분","오후 1시"]',1,'시간표에서 무지개 만들기는 오후 2시에 시작해요. 글에서 시작 시간 10분 전까지 모이라고 했으므로 오후 1시 50분까지 모여야 해요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-05951191690c','KR_KOR','nonfiction','mcq',2,'꿈나무 과학관 어린이 체험 교실 안내
+
+꿈나무 과학관에서 여름 방학을 맞아 어린이 체험 교실을 엽니다. 체험 교실에서는 직접 만들고 실험하면서 과학의 원리를 쉽게 배울 수 있습니다.
+
+체험 교실은 7월 22일부터 8월 16일까지 열립니다. 프로그램마다 열리는 요일과 시간이 다르니 아래 시간표를 꼭 확인하세요. 한 프로그램에는 한 번에 열다섯 명까지 참여할 수 있습니다.
+
+참여하고 싶은 어린이는 과학관 누리집에서 미리 신청해야 합니다. 자리가 다 차면 신청이 일찍 끝날 수 있습니다. 참가비는 따로 없지만, 만들기 재료가 필요한 프로그램은 재료비를 냅니다. 직접 만든 작품은 집에 가져갈 수 있습니다.
+
+체험 교실에 올 때에는 시작 시간 10분 전까지 2층 체험실 앞에 모여 주세요. 늦게 오면 들어갈 수 없습니다. 체험실 안에서는 선생님의 안내에 따라 안전하게 활동해 주세요. 초등학교 1학년과 2학년 어린이는 보호자와 함께 와야 합니다.
+
+궁금한 점은 과학관 1층 안내 데스크에 물어보세요.','글과 시간표의 내용과 맞지 않는 것은 무엇인가요?','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 478 226" width="478" height="226" font-family="sans-serif"><rect x="0" y="0" width="478" height="226" fill="#ffffff"/><text x="239" y="26" font-size="17" font-weight="bold" text-anchor="middle" fill="#0a1f44">어린이 체험 교실 시간표</text><rect x="4" y="40" width="470" height="36" fill="#e6e9f0"/><line x1="4" y1="40" x2="474" y2="40" stroke="#333" stroke-width="2"/><line x1="4" y1="76" x2="474" y2="76" stroke="#333" stroke-width="2"/><line x1="4" y1="112" x2="474" y2="112" stroke="#333" stroke-width="2"/><line x1="4" y1="148" x2="474" y2="148" stroke="#333" stroke-width="2"/><line x1="4" y1="184" x2="474" y2="184" stroke="#333" stroke-width="2"/><line x1="4" y1="220" x2="474" y2="220" stroke="#333" stroke-width="2"/><line x1="4" y1="40" x2="4" y2="220" stroke="#333" stroke-width="2"/><line x1="174" y1="40" x2="174" y2="220" stroke="#333" stroke-width="2"/><line x1="274" y1="40" x2="274" y2="220" stroke="#333" stroke-width="2"/><line x1="384" y1="40" x2="384" y2="220" stroke="#333" stroke-width="2"/><line x1="474" y1="40" x2="474" y2="220" stroke="#333" stroke-width="2"/><text x="89" y="64" font-size="15" text-anchor="middle" fill="#000" font-weight="bold">프로그램</text><text x="224" y="64" font-size="15" text-anchor="middle" fill="#000" font-weight="bold">요일</text><text x="329" y="64" font-size="15" text-anchor="middle" fill="#000" font-weight="bold">시작 시간</text><text x="429" y="64" font-size="15" text-anchor="middle" fill="#000" font-weight="bold">재료비</text><text x="89" y="100" font-size="15" text-anchor="middle" fill="#000">종이 비행기 날리기</text><text x="224" y="100" font-size="15" text-anchor="middle" fill="#000">화, 목</text><text x="329" y="100" font-size="15" text-anchor="middle" fill="#000">오전 10시</text><text x="429" y="100" font-size="15" text-anchor="middle" fill="#000">1,000원</text><text x="89" y="136" font-size="15" text-anchor="middle" fill="#000">무지개 만들기</text><text x="224" y="136" font-size="15" text-anchor="middle" fill="#000">수, 금</text><text x="329" y="136" font-size="15" text-anchor="middle" fill="#000">오후 2시</text><text x="429" y="136" font-size="15" text-anchor="middle" fill="#000">1,000원</text><text x="89" y="172" font-size="15" text-anchor="middle" fill="#000">자석 놀이</text><text x="224" y="172" font-size="15" text-anchor="middle" fill="#000">토</text><text x="329" y="172" font-size="15" text-anchor="middle" fill="#000">오전 11시</text><text x="429" y="172" font-size="15" text-anchor="middle" fill="#000">없음</text><text x="89" y="208" font-size="15" text-anchor="middle" fill="#000">별자리 관찰</text><text x="224" y="208" font-size="15" text-anchor="middle" fill="#000">금</text><text x="329" y="208" font-size="15" text-anchor="middle" fill="#000">저녁 7시</text><text x="429" y="208" font-size="15" text-anchor="middle" fill="#000">없음</text></svg>','["체험 교실의 모든 프로그램은 돈을 내지 않아도 된다.","한 프로그램에 한 번에 열다섯 명까지 참여할 수 있다.","1학년과 2학년은 보호자와 함께 와야 한다.","누리집에서 미리 신청해야 한다."]',0,'참가비는 없지만 만들기 재료가 필요한 프로그램은 재료비를 내요. 시간표를 보면 종이 비행기 날리기와 무지개 만들기는 재료비가 1,000원이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-a074f49d76c7','KR_KOR','nonfiction','mcq',2,'우리 학교 급식실에서는 날마다 많은 음식이 버려집니다. 영양 선생님께서 알려 주신 바에 따르면, 하루에 버려지는 음식이 큰 통으로 다섯 통이나 된다고 합니다. 저는 우리가 급식을 남기지 말아야 한다고 생각합니다.
+
+첫째, 음식을 남기면 음식을 만든 분들의 정성이 헛되이 됩니다. 쌀 한 톨이 밥상에 오르기까지 농부는 봄부터 가을까지 땀 흘려 일합니다. 급식실 조리사님들도 이른 아침부터 우리를 위해 음식을 만드십니다.
+
+둘째, 버려진 음식은 환경을 더럽힙니다. 음식물 쓰레기를 처리하려면 많은 돈과 힘이 듭니다. 음식물 쓰레기가 썩으면서 나쁜 냄새가 나기도 합니다.
+
+셋째, 골고루 먹어야 몸이 튼튼해집니다. 좋아하는 반찬만 먹고 나머지를 남기면 우리 몸에 필요한 영양소를 고루 얻을 수 없습니다.
+
+급식을 남기지 않으려면 먹을 만큼만 받는 것이 좋습니다. 그리고 싫어하는 반찬도 한 입씩 먹어 보려고 노력해야 합니다. 우리 모두 ''빈 그릇 운동''에 함께합시다.','글쓴이가 이 글에서 주장하는 것은 무엇인가요?',NULL,'["급식 반찬을 바꾸자.","급식실을 더 넓게 만들자.","급식을 남기지 말자.","좋아하는 반찬을 더 많이 받자."]',2,'첫째 문단 끝에서 ''급식을 남기지 말아야 한다고 생각합니다''라고 주장을 밝히고, 마지막 문단에서 ''빈 그릇 운동''에 함께하자고 했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-0c8bdc9b4639','KR_KOR','nonfiction','mcq',2,'우리 학교 급식실에서는 날마다 많은 음식이 버려집니다. 영양 선생님께서 알려 주신 바에 따르면, 하루에 버려지는 음식이 큰 통으로 다섯 통이나 된다고 합니다. 저는 우리가 급식을 남기지 말아야 한다고 생각합니다.
+
+첫째, 음식을 남기면 음식을 만든 분들의 정성이 헛되이 됩니다. 쌀 한 톨이 밥상에 오르기까지 농부는 봄부터 가을까지 땀 흘려 일합니다. 급식실 조리사님들도 이른 아침부터 우리를 위해 음식을 만드십니다.
+
+둘째, 버려진 음식은 환경을 더럽힙니다. 음식물 쓰레기를 처리하려면 많은 돈과 힘이 듭니다. 음식물 쓰레기가 썩으면서 나쁜 냄새가 나기도 합니다.
+
+셋째, 골고루 먹어야 몸이 튼튼해집니다. 좋아하는 반찬만 먹고 나머지를 남기면 우리 몸에 필요한 영양소를 고루 얻을 수 없습니다.
+
+급식을 남기지 않으려면 먹을 만큼만 받는 것이 좋습니다. 그리고 싫어하는 반찬도 한 입씩 먹어 보려고 노력해야 합니다. 우리 모두 ''빈 그릇 운동''에 함께합시다.','다음 중 ''사실''을 나타낸 문장은 무엇인가요?',NULL,'["우리는 급식을 남기지 말아야 한다.","먹을 만큼만 받는 것이 좋다.","싫어하는 반찬도 한 입씩 먹어 보려고 노력해야 한다.","급식실에서 하루에 큰 통으로 다섯 통의 음식이 버려진다."]',3,'버려지는 음식의 양은 영양 선생님께서 알려 주신, 실제로 있는 일이에요. 나머지는 글쓴이의 생각(의견)이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-89cd3069e9af','KR_KOR','nonfiction','mcq',2,'우리 학교 급식실에서는 날마다 많은 음식이 버려집니다. 영양 선생님께서 알려 주신 바에 따르면, 하루에 버려지는 음식이 큰 통으로 다섯 통이나 된다고 합니다. 저는 우리가 급식을 남기지 말아야 한다고 생각합니다.
+
+첫째, 음식을 남기면 음식을 만든 분들의 정성이 헛되이 됩니다. 쌀 한 톨이 밥상에 오르기까지 농부는 봄부터 가을까지 땀 흘려 일합니다. 급식실 조리사님들도 이른 아침부터 우리를 위해 음식을 만드십니다.
+
+둘째, 버려진 음식은 환경을 더럽힙니다. 음식물 쓰레기를 처리하려면 많은 돈과 힘이 듭니다. 음식물 쓰레기가 썩으면서 나쁜 냄새가 나기도 합니다.
+
+셋째, 골고루 먹어야 몸이 튼튼해집니다. 좋아하는 반찬만 먹고 나머지를 남기면 우리 몸에 필요한 영양소를 고루 얻을 수 없습니다.
+
+급식을 남기지 않으려면 먹을 만큼만 받는 것이 좋습니다. 그리고 싫어하는 반찬도 한 입씩 먹어 보려고 노력해야 합니다. 우리 모두 ''빈 그릇 운동''에 함께합시다.','글쓴이가 주장의 까닭으로 든 것이 아닌 것은 무엇인가요?',NULL,'["골고루 먹어야 몸이 튼튼해진다.","버려진 음식은 환경을 더럽힌다.","급식을 남기면 선생님께 꾸중을 듣는다.","음식을 만든 분들의 정성이 헛되이 된다."]',2,'글쓴이는 만든 분들의 정성, 환경, 건강의 세 가지 까닭을 들었어요. 꾸중을 듣는다는 내용은 글에 없어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-e93ae692cfd6','KR_KOR','nonfiction','mcq',2,'우리 학교 급식실에서는 날마다 많은 음식이 버려집니다. 영양 선생님께서 알려 주신 바에 따르면, 하루에 버려지는 음식이 큰 통으로 다섯 통이나 된다고 합니다. 저는 우리가 급식을 남기지 말아야 한다고 생각합니다.
+
+첫째, 음식을 남기면 음식을 만든 분들의 정성이 헛되이 됩니다. 쌀 한 톨이 밥상에 오르기까지 농부는 봄부터 가을까지 땀 흘려 일합니다. 급식실 조리사님들도 이른 아침부터 우리를 위해 음식을 만드십니다.
+
+둘째, 버려진 음식은 환경을 더럽힙니다. 음식물 쓰레기를 처리하려면 많은 돈과 힘이 듭니다. 음식물 쓰레기가 썩으면서 나쁜 냄새가 나기도 합니다.
+
+셋째, 골고루 먹어야 몸이 튼튼해집니다. 좋아하는 반찬만 먹고 나머지를 남기면 우리 몸에 필요한 영양소를 고루 얻을 수 없습니다.
+
+급식을 남기지 않으려면 먹을 만큼만 받는 것이 좋습니다. 그리고 싫어하는 반찬도 한 입씩 먹어 보려고 노력해야 합니다. 우리 모두 ''빈 그릇 운동''에 함께합시다.','글쓴이가 급식을 남기지 않는 방법으로 말한 것은 무엇인가요?',NULL,'["남은 반찬을 친구에게 준다.","밥을 아주 빨리 먹는다.","먹을 만큼만 받는다.","급식 대신 도시락을 싸 온다."]',2,'마지막 문단에서 먹을 만큼만 받고, 싫어하는 반찬도 한 입씩 먹어 보자고 했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-1871c17e4266','KR_KOR','literature','mcq',2,'오늘은 서진이가 새 학교에 가는 첫날이었어요. 서진이는 교실 문 앞에서 한참 동안 서 있었어요. 가슴이 콩닥콩닥 뛰고 손에는 땀이 촉촉하게 배었어요.
+''친구들이 나를 싫어하면 어떡하지?''
+
+선생님을 따라 교실에 들어서자 친구들의 눈이 모두 서진이에게 쏠렸어요. 서진이는 작은 목소리로 겨우 이름만 말하고 자리에 앉았어요.
+
+쉬는 시간이 되었지만 서진이는 혼자 창밖만 바라보았어요. 그때 옆자리 친구가 서진이의 필통을 보며 말했어요.
+"어, 너도 공룡 좋아해? 이거 트리케라톱스지?"
+서진이의 필통에는 공룡 그림이 가득했어요.
+"응! 뿔이 세 개라서 내가 제일 좋아하는 공룡이야."
+"나는 도윤이야. 나도 공룡 박사가 꿈이야!"
+
+둘은 쉬는 시간 내내 공룡 이야기를 나누었어요. 점심시간에는 도윤이가 서진이를 운동장으로 데리고 가서 다른 친구들에게 소개해 주었어요.
+
+집에 돌아온 서진이는 엄마에게 달려가 말했어요.
+"엄마, 내일 공룡 책 가져가도 돼요? 도윤이랑 같이 보기로 했어요."
+엄마는 빙그레 웃으며 고개를 끄덕였어요.','''가슴이 콩닥콩닥 뛰고 손에는 땀이 촉촉하게 배었어요''에서 알 수 있는 서진이의 마음은 무엇인가요?',NULL,'["심심하고 지루하다.","뿌듯하고 자랑스럽다.","화가 나고 억울하다.","긴장되고 걱정스럽다."]',3,'새 학교 첫날 교실 문 앞에서 ''친구들이 나를 싫어하면 어떡하지?''라고 생각했어요. 가슴이 뛰고 손에 땀이 나는 것은 긴장되고 걱정스러운 마음을 나타내요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-c727822f6580','KR_KOR','literature','mcq',2,'오늘은 서진이가 새 학교에 가는 첫날이었어요. 서진이는 교실 문 앞에서 한참 동안 서 있었어요. 가슴이 콩닥콩닥 뛰고 손에는 땀이 촉촉하게 배었어요.
+''친구들이 나를 싫어하면 어떡하지?''
+
+선생님을 따라 교실에 들어서자 친구들의 눈이 모두 서진이에게 쏠렸어요. 서진이는 작은 목소리로 겨우 이름만 말하고 자리에 앉았어요.
+
+쉬는 시간이 되었지만 서진이는 혼자 창밖만 바라보았어요. 그때 옆자리 친구가 서진이의 필통을 보며 말했어요.
+"어, 너도 공룡 좋아해? 이거 트리케라톱스지?"
+서진이의 필통에는 공룡 그림이 가득했어요.
+"응! 뿔이 세 개라서 내가 제일 좋아하는 공룡이야."
+"나는 도윤이야. 나도 공룡 박사가 꿈이야!"
+
+둘은 쉬는 시간 내내 공룡 이야기를 나누었어요. 점심시간에는 도윤이가 서진이를 운동장으로 데리고 가서 다른 친구들에게 소개해 주었어요.
+
+집에 돌아온 서진이는 엄마에게 달려가 말했어요.
+"엄마, 내일 공룡 책 가져가도 돼요? 도윤이랑 같이 보기로 했어요."
+엄마는 빙그레 웃으며 고개를 끄덕였어요.','서진이와 도윤이가 친해진 까닭은 무엇인가요?',NULL,'["둘 다 공룡을 좋아해서","도윤이가 필통을 빌려 달라고 해서","선생님께서 짝을 지어 주셔서","같은 동네에 살아서"]',0,'도윤이가 서진이의 공룡 필통을 보고 말을 걸었고, 둘 다 공룡을 좋아해서 쉬는 시간 내내 이야기를 나누며 친해졌어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-c640c7e0daea','KR_KOR','literature','mcq',2,'오늘은 서진이가 새 학교에 가는 첫날이었어요. 서진이는 교실 문 앞에서 한참 동안 서 있었어요. 가슴이 콩닥콩닥 뛰고 손에는 땀이 촉촉하게 배었어요.
+''친구들이 나를 싫어하면 어떡하지?''
+
+선생님을 따라 교실에 들어서자 친구들의 눈이 모두 서진이에게 쏠렸어요. 서진이는 작은 목소리로 겨우 이름만 말하고 자리에 앉았어요.
+
+쉬는 시간이 되었지만 서진이는 혼자 창밖만 바라보았어요. 그때 옆자리 친구가 서진이의 필통을 보며 말했어요.
+"어, 너도 공룡 좋아해? 이거 트리케라톱스지?"
+서진이의 필통에는 공룡 그림이 가득했어요.
+"응! 뿔이 세 개라서 내가 제일 좋아하는 공룡이야."
+"나는 도윤이야. 나도 공룡 박사가 꿈이야!"
+
+둘은 쉬는 시간 내내 공룡 이야기를 나누었어요. 점심시간에는 도윤이가 서진이를 운동장으로 데리고 가서 다른 친구들에게 소개해 주었어요.
+
+집에 돌아온 서진이는 엄마에게 달려가 말했어요.
+"엄마, 내일 공룡 책 가져가도 돼요? 도윤이랑 같이 보기로 했어요."
+엄마는 빙그레 웃으며 고개를 끄덕였어요.','이야기에서 서진이의 마음은 어떻게 바뀌었나요?',NULL,'["걱정스럽다 → 즐겁고 설렌다","화가 난다 → 슬프다","신난다 → 지루하다","즐겁다 → 걱정스럽다"]',0,'처음에는 친구들이 싫어할까 봐 걱정했지만, 도윤이와 친해진 뒤에는 내일 공룡 책을 가져가고 싶을 만큼 즐겁고 설레는 마음이 되었어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-3162bfc50bd2','KR_KOR','literature','mcq',2,'오늘은 서진이가 새 학교에 가는 첫날이었어요. 서진이는 교실 문 앞에서 한참 동안 서 있었어요. 가슴이 콩닥콩닥 뛰고 손에는 땀이 촉촉하게 배었어요.
+''친구들이 나를 싫어하면 어떡하지?''
+
+선생님을 따라 교실에 들어서자 친구들의 눈이 모두 서진이에게 쏠렸어요. 서진이는 작은 목소리로 겨우 이름만 말하고 자리에 앉았어요.
+
+쉬는 시간이 되었지만 서진이는 혼자 창밖만 바라보았어요. 그때 옆자리 친구가 서진이의 필통을 보며 말했어요.
+"어, 너도 공룡 좋아해? 이거 트리케라톱스지?"
+서진이의 필통에는 공룡 그림이 가득했어요.
+"응! 뿔이 세 개라서 내가 제일 좋아하는 공룡이야."
+"나는 도윤이야. 나도 공룡 박사가 꿈이야!"
+
+둘은 쉬는 시간 내내 공룡 이야기를 나누었어요. 점심시간에는 도윤이가 서진이를 운동장으로 데리고 가서 다른 친구들에게 소개해 주었어요.
+
+집에 돌아온 서진이는 엄마에게 달려가 말했어요.
+"엄마, 내일 공룡 책 가져가도 돼요? 도윤이랑 같이 보기로 했어요."
+엄마는 빙그레 웃으며 고개를 끄덕였어요.','이 이야기 다음에 일어날 일로 가장 알맞은 것은 무엇인가요?',NULL,'["서진이가 예전 학교로 다시 돌아간다.","서진이가 공룡 필통을 버린다.","서진이가 학교에 가기 싫다며 운다.","서진이가 공룡 책을 가져가 도윤이와 함께 본다."]',3,'서진이는 도윤이와 공룡 책을 같이 보기로 했고, 엄마도 고개를 끄덕였어요. 그러니 다음 날 공룡 책을 가져가 함께 볼 거예요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-f86da93a40ea','KR_KOR','literature','mcq',2,'할머니 손
+
+할머니 손은
+약손이에요.
+배 아플 때 살살 문질러 주면
+아픈 배가 스르르 나아요.
+
+할머니 손은
+요술 손이에요.
+밀가루 반죽 조물조물하면
+맛있는 만두가 뚝딱 생겨요.
+
+할머니 손은
+나무껍질 같아요.
+거칠거칠 주름진 손
+오래오래 우리를 돌봐 준 손.
+
+할머니 손을
+꼭 잡아 드리면
+할머니는 웃으며 말해요.
+"아이고, 우리 강아지 손 참 따뜻하다."','셋째 연에서 할머니 손을 ''나무껍질''에 빗댄 까닭은 무엇인가요?',NULL,'["손이 초록색이라서","거칠거칠하고 주름져서","나무를 잘 심으셔서","손이 아주 커서"]',1,'셋째 연에서 ''거칠거칠 주름진 손''이라고 했어요. 할머니 손이 나무껍질처럼 거칠고 주름진 모습을 빗대어 나타냈어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-dc780994f053','KR_KOR','literature','mcq',2,'할머니 손
+
+할머니 손은
+약손이에요.
+배 아플 때 살살 문질러 주면
+아픈 배가 스르르 나아요.
+
+할머니 손은
+요술 손이에요.
+밀가루 반죽 조물조물하면
+맛있는 만두가 뚝딱 생겨요.
+
+할머니 손은
+나무껍질 같아요.
+거칠거칠 주름진 손
+오래오래 우리를 돌봐 준 손.
+
+할머니 손을
+꼭 잡아 드리면
+할머니는 웃으며 말해요.
+"아이고, 우리 강아지 손 참 따뜻하다."','둘째 연에서 할머니 손을 ''요술 손''이라고 한 까닭은 무엇인가요?',NULL,'["반죽으로 맛있는 만두를 뚝딱 만들어서","마술 공연을 보여 주셔서","아픈 배를 낫게 해 주셔서","손에서 반짝반짝 빛이 나서"]',0,'둘째 연에서 밀가루 반죽을 조물조물하면 만두가 뚝딱 생긴다고 했어요. 아픈 배를 낫게 하는 것은 첫째 연의 ''약손''에 대한 내용이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-7fa7b0536f66','KR_KOR','literature','mcq',2,'할머니 손
+
+할머니 손은
+약손이에요.
+배 아플 때 살살 문질러 주면
+아픈 배가 스르르 나아요.
+
+할머니 손은
+요술 손이에요.
+밀가루 반죽 조물조물하면
+맛있는 만두가 뚝딱 생겨요.
+
+할머니 손은
+나무껍질 같아요.
+거칠거칠 주름진 손
+오래오래 우리를 돌봐 준 손.
+
+할머니 손을
+꼭 잡아 드리면
+할머니는 웃으며 말해요.
+"아이고, 우리 강아지 손 참 따뜻하다."','마지막 연에서 할머니가 ''우리 강아지''라고 부른 것은 누구인가요?',NULL,'["할머니의 친구","집에서 기르는 강아지","할머니 손을 잡아 드린 말하는 이","말하는 이의 엄마"]',2,'할머니 손을 꼭 잡아 드린 사람은 말하는 이예요. 할머니는 귀여운 손주를 ''우리 강아지''라고 다정하게 부른 거예요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-08d32b44abf2','KR_KOR','literature','mcq',2,'할머니 손
+
+할머니 손은
+약손이에요.
+배 아플 때 살살 문질러 주면
+아픈 배가 스르르 나아요.
+
+할머니 손은
+요술 손이에요.
+밀가루 반죽 조물조물하면
+맛있는 만두가 뚝딱 생겨요.
+
+할머니 손은
+나무껍질 같아요.
+거칠거칠 주름진 손
+오래오래 우리를 돌봐 준 손.
+
+할머니 손을
+꼭 잡아 드리면
+할머니는 웃으며 말해요.
+"아이고, 우리 강아지 손 참 따뜻하다."','이 시에 나타난 말하는 이의 마음으로 알맞은 것은 무엇인가요?',NULL,'["할머니를 사랑하고 고마워하는 마음","할머니를 무서워하는 마음","배가 아파서 속상한 마음","만두를 먹기 싫어하는 마음"]',0,'말하는 이는 자신을 돌봐 준 할머니 손을 약손, 요술 손이라 부르고, 할머니 손을 꼭 잡아 드려요. 할머니를 사랑하고 고마워하는 마음이 담겨 있어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-5b74d3d2483a','KR_KOR','literature','mcq',2,'옛날 어느 산골 마을 한가운데에 맑은 우물이 하나 있었어요. 마을 사람들은 모두 이 우물물을 길어다 밥을 짓고 빨래를 했어요. 그리고 봄이 되면 다 함께 모여 우물 바닥을 깨끗이 청소했어요.
+
+그런데 우물 옆에 사는 욕심쟁이 최 부자가 생각했어요.
+''우물이 우리 집 바로 옆에 있으니 내 것이나 마찬가지야. 남들이 물을 퍼 가면 내 물이 줄어들겠지.''
+최 부자는 우물 둘레에 높은 담을 쌓고 대문을 굳게 잠갔어요. 마을 사람들은 하는 수 없이 멀리 산 아래 냇가까지 물을 길으러 다녀야 했어요.
+
+봄이 되었지만 아무도 우물을 청소하러 오지 않았어요. 최 부자 혼자서는 깊은 우물을 청소할 수 없었지요. 우물 바닥에는 낙엽과 흙이 차곡차곡 쌓였어요. 여름이 되자 우물물은 뿌옇게 흐려지고 고약한 냄새까지 났어요.
+
+최 부자는 그제야 고개를 떨구었어요. 최 부자는 담을 허물고 마을 사람들을 찾아가 머리를 숙였어요.
+"내가 욕심을 부렸소. 다 함께 우물을 쓰고, 다 함께 가꿉시다."
+마을 사람들은 다시 모여 우물을 청소했어요. 얼마 뒤 우물물은 예전처럼 맑아졌답니다.','최 부자가 우물 둘레에 담을 쌓은 까닭은 무엇인가요?',NULL,'["우물에 사람이 빠질까 봐","남들이 물을 퍼 가면 자기 물이 줄어들까 봐","마을 사람들이 부탁해서","마을에 도둑이 들까 봐"]',1,'최 부자는 우물이 자기 것이나 마찬가지라고 생각하고, 남들이 물을 퍼 가면 자기 물이 줄어들 거라고 여겨 담을 쌓았어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-9f2bd97b5efe','KR_KOR','literature','mcq',2,'옛날 어느 산골 마을 한가운데에 맑은 우물이 하나 있었어요. 마을 사람들은 모두 이 우물물을 길어다 밥을 짓고 빨래를 했어요. 그리고 봄이 되면 다 함께 모여 우물 바닥을 깨끗이 청소했어요.
+
+그런데 우물 옆에 사는 욕심쟁이 최 부자가 생각했어요.
+''우물이 우리 집 바로 옆에 있으니 내 것이나 마찬가지야. 남들이 물을 퍼 가면 내 물이 줄어들겠지.''
+최 부자는 우물 둘레에 높은 담을 쌓고 대문을 굳게 잠갔어요. 마을 사람들은 하는 수 없이 멀리 산 아래 냇가까지 물을 길으러 다녀야 했어요.
+
+봄이 되었지만 아무도 우물을 청소하러 오지 않았어요. 최 부자 혼자서는 깊은 우물을 청소할 수 없었지요. 우물 바닥에는 낙엽과 흙이 차곡차곡 쌓였어요. 여름이 되자 우물물은 뿌옇게 흐려지고 고약한 냄새까지 났어요.
+
+최 부자는 그제야 고개를 떨구었어요. 최 부자는 담을 허물고 마을 사람들을 찾아가 머리를 숙였어요.
+"내가 욕심을 부렸소. 다 함께 우물을 쓰고, 다 함께 가꿉시다."
+마을 사람들은 다시 모여 우물을 청소했어요. 얼마 뒤 우물물은 예전처럼 맑아졌답니다.','여름이 되자 우물물이 흐려진 까닭은 무엇인가요?',NULL,'["냇물이 우물로 흘러 들어와서","마을 사람들이 우물에 쓰레기를 버려서","비가 오랫동안 내리지 않아서","아무도 함께 청소하지 않아 낙엽과 흙이 쌓여서"]',3,'담 때문에 마을 사람들이 봄 청소를 하러 오지 못했고, 최 부자 혼자서는 청소할 수 없어 바닥에 낙엽과 흙이 쌓였어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-63c2e0730f26','KR_KOR','literature','mcq',2,'옛날 어느 산골 마을 한가운데에 맑은 우물이 하나 있었어요. 마을 사람들은 모두 이 우물물을 길어다 밥을 짓고 빨래를 했어요. 그리고 봄이 되면 다 함께 모여 우물 바닥을 깨끗이 청소했어요.
+
+그런데 우물 옆에 사는 욕심쟁이 최 부자가 생각했어요.
+''우물이 우리 집 바로 옆에 있으니 내 것이나 마찬가지야. 남들이 물을 퍼 가면 내 물이 줄어들겠지.''
+최 부자는 우물 둘레에 높은 담을 쌓고 대문을 굳게 잠갔어요. 마을 사람들은 하는 수 없이 멀리 산 아래 냇가까지 물을 길으러 다녀야 했어요.
+
+봄이 되었지만 아무도 우물을 청소하러 오지 않았어요. 최 부자 혼자서는 깊은 우물을 청소할 수 없었지요. 우물 바닥에는 낙엽과 흙이 차곡차곡 쌓였어요. 여름이 되자 우물물은 뿌옇게 흐려지고 고약한 냄새까지 났어요.
+
+최 부자는 그제야 고개를 떨구었어요. 최 부자는 담을 허물고 마을 사람들을 찾아가 머리를 숙였어요.
+"내가 욕심을 부렸소. 다 함께 우물을 쓰고, 다 함께 가꿉시다."
+마을 사람들은 다시 모여 우물을 청소했어요. 얼마 뒤 우물물은 예전처럼 맑아졌답니다.','최 부자는 어떻게 바뀌었나요?',NULL,'["부지런하다가 게을러졌다.","겁이 많다가 용감해졌다.","착하다가 욕심쟁이가 되었다.","욕심을 부리다가 잘못을 뉘우쳤다."]',3,'처음에는 우물을 혼자 차지하려는 욕심쟁이였지만, 우물물이 흐려지자 담을 허물고 ''내가 욕심을 부렸소.''라며 잘못을 뉘우쳤어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-387717dae899','KR_KOR','literature','mcq',2,'옛날 어느 산골 마을 한가운데에 맑은 우물이 하나 있었어요. 마을 사람들은 모두 이 우물물을 길어다 밥을 짓고 빨래를 했어요. 그리고 봄이 되면 다 함께 모여 우물 바닥을 깨끗이 청소했어요.
+
+그런데 우물 옆에 사는 욕심쟁이 최 부자가 생각했어요.
+''우물이 우리 집 바로 옆에 있으니 내 것이나 마찬가지야. 남들이 물을 퍼 가면 내 물이 줄어들겠지.''
+최 부자는 우물 둘레에 높은 담을 쌓고 대문을 굳게 잠갔어요. 마을 사람들은 하는 수 없이 멀리 산 아래 냇가까지 물을 길으러 다녀야 했어요.
+
+봄이 되었지만 아무도 우물을 청소하러 오지 않았어요. 최 부자 혼자서는 깊은 우물을 청소할 수 없었지요. 우물 바닥에는 낙엽과 흙이 차곡차곡 쌓였어요. 여름이 되자 우물물은 뿌옇게 흐려지고 고약한 냄새까지 났어요.
+
+최 부자는 그제야 고개를 떨구었어요. 최 부자는 담을 허물고 마을 사람들을 찾아가 머리를 숙였어요.
+"내가 욕심을 부렸소. 다 함께 우물을 쓰고, 다 함께 가꿉시다."
+마을 사람들은 다시 모여 우물을 청소했어요. 얼마 뒤 우물물은 예전처럼 맑아졌답니다.','이 이야기가 주는 교훈으로 가장 알맞은 것은 무엇인가요?',NULL,'["집 둘레에는 담을 높이 쌓아야 한다.","물은 멀리 있는 냇가에서 길어야 한다.","우물은 여름에만 청소하면 된다.","여럿이 함께 쓰는 것은 함께 아끼고 가꾸어야 한다."]',3,'우물을 혼자 차지하려 하자 아무도 돌보지 않아 물이 더러워졌고, 다 함께 가꾸자 다시 맑아졌어요. 함께 쓰는 것은 함께 아끼고 가꾸어야 한다는 교훈을 줘요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-cb44e0382321','KR_KOR','literature','mcq',2,'지난 일요일, 할아버지를 따라 저수지에 낚시를 갔다. 처음 해 보는 낚시라서 나는 아침부터 신이 났다. 할아버지는 낚싯바늘에 미끼를 끼우는 방법과 낚싯줄을 던지는 방법을 차근차근 알려 주셨다.
+
+낚싯줄을 던지고 물 위에 뜬 찌를 바라보았다. 그런데 십 분이 지나고 삼십 분이 지나도 찌는 꼼짝도 하지 않았다. 나는 엉덩이가 들썩들썩하고 하품이 자꾸 나왔다.
+"할아버지, 물고기가 다 어디 갔어요? 그냥 집에 가요."
+할아버지는 허허 웃으시며 말씀하셨다.
+"낚시는 기다리는 거란다. 물고기도 천천히 다가와서 미끼를 살펴보거든."
+
+나는 다시 물가에 앉았다. 가만히 앉아 있으니 그동안 보이지 않던 것들이 보였다. 물 위를 스치듯 날아가는 잠자리, 바람에 살랑거리는 갈대, 햇빛에 반짝이는 물결이 보였다.
+
+그때 찌가 쏙 들어갔다. 할아버지와 함께 낚싯대를 힘껏 당기자 손바닥만 한 붕어가 파닥거리며 올라왔다. 우리는 붕어를 한참 바라본 뒤 다시 물에 놓아주었다.
+
+집으로 오는 길에 나는 기다리는 것도 재미있을 수 있다는 것을 처음 알았다.','이 글에서 일이 일어난 곳은 어디인가요?',NULL,'["저수지","바닷가","시냇가","수영장"]',0,'첫 문장에 할아버지를 따라 저수지에 낚시를 갔다고 했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-e8a7c16205ff','KR_KOR','literature','mcq',2,'지난 일요일, 할아버지를 따라 저수지에 낚시를 갔다. 처음 해 보는 낚시라서 나는 아침부터 신이 났다. 할아버지는 낚싯바늘에 미끼를 끼우는 방법과 낚싯줄을 던지는 방법을 차근차근 알려 주셨다.
+
+낚싯줄을 던지고 물 위에 뜬 찌를 바라보았다. 그런데 십 분이 지나고 삼십 분이 지나도 찌는 꼼짝도 하지 않았다. 나는 엉덩이가 들썩들썩하고 하품이 자꾸 나왔다.
+"할아버지, 물고기가 다 어디 갔어요? 그냥 집에 가요."
+할아버지는 허허 웃으시며 말씀하셨다.
+"낚시는 기다리는 거란다. 물고기도 천천히 다가와서 미끼를 살펴보거든."
+
+나는 다시 물가에 앉았다. 가만히 앉아 있으니 그동안 보이지 않던 것들이 보였다. 물 위를 스치듯 날아가는 잠자리, 바람에 살랑거리는 갈대, 햇빛에 반짝이는 물결이 보였다.
+
+그때 찌가 쏙 들어갔다. 할아버지와 함께 낚싯대를 힘껏 당기자 손바닥만 한 붕어가 파닥거리며 올라왔다. 우리는 붕어를 한참 바라본 뒤 다시 물에 놓아주었다.
+
+집으로 오는 길에 나는 기다리는 것도 재미있을 수 있다는 것을 처음 알았다.','''엉덩이가 들썩들썩하고 하품이 자꾸 나왔다''에서 알 수 있는 글쓴이의 마음은 무엇인가요?',NULL,'["무섭고 떨린다.","지루하고 답답하다.","슬프고 서운하다.","미안하고 부끄럽다."]',1,'찌가 오랫동안 꼼짝도 하지 않자 가만히 있지 못하고 하품이 났어요. 그냥 집에 가자고 한 것으로 보아 지루하고 답답한 마음이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-aeec7c2e16f6','KR_KOR','literature','mcq',2,'지난 일요일, 할아버지를 따라 저수지에 낚시를 갔다. 처음 해 보는 낚시라서 나는 아침부터 신이 났다. 할아버지는 낚싯바늘에 미끼를 끼우는 방법과 낚싯줄을 던지는 방법을 차근차근 알려 주셨다.
+
+낚싯줄을 던지고 물 위에 뜬 찌를 바라보았다. 그런데 십 분이 지나고 삼십 분이 지나도 찌는 꼼짝도 하지 않았다. 나는 엉덩이가 들썩들썩하고 하품이 자꾸 나왔다.
+"할아버지, 물고기가 다 어디 갔어요? 그냥 집에 가요."
+할아버지는 허허 웃으시며 말씀하셨다.
+"낚시는 기다리는 거란다. 물고기도 천천히 다가와서 미끼를 살펴보거든."
+
+나는 다시 물가에 앉았다. 가만히 앉아 있으니 그동안 보이지 않던 것들이 보였다. 물 위를 스치듯 날아가는 잠자리, 바람에 살랑거리는 갈대, 햇빛에 반짝이는 물결이 보였다.
+
+그때 찌가 쏙 들어갔다. 할아버지와 함께 낚싯대를 힘껏 당기자 손바닥만 한 붕어가 파닥거리며 올라왔다. 우리는 붕어를 한참 바라본 뒤 다시 물에 놓아주었다.
+
+집으로 오는 길에 나는 기다리는 것도 재미있을 수 있다는 것을 처음 알았다.','글쓴이가 다시 물가에 앉아 있을 때 본 것이 아닌 것은 무엇인가요?',NULL,'["바람에 살랑거리는 갈대","물 위를 스치듯 날아가는 잠자리","햇빛에 반짝이는 물결","하늘을 나는 갈매기"]',3,'넷째 문단에는 잠자리, 갈대, 물결이 나와요. 갈매기는 글에 나오지 않아요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-37acfffef15e','KR_KOR','literature','mcq',2,'지난 일요일, 할아버지를 따라 저수지에 낚시를 갔다. 처음 해 보는 낚시라서 나는 아침부터 신이 났다. 할아버지는 낚싯바늘에 미끼를 끼우는 방법과 낚싯줄을 던지는 방법을 차근차근 알려 주셨다.
+
+낚싯줄을 던지고 물 위에 뜬 찌를 바라보았다. 그런데 십 분이 지나고 삼십 분이 지나도 찌는 꼼짝도 하지 않았다. 나는 엉덩이가 들썩들썩하고 하품이 자꾸 나왔다.
+"할아버지, 물고기가 다 어디 갔어요? 그냥 집에 가요."
+할아버지는 허허 웃으시며 말씀하셨다.
+"낚시는 기다리는 거란다. 물고기도 천천히 다가와서 미끼를 살펴보거든."
+
+나는 다시 물가에 앉았다. 가만히 앉아 있으니 그동안 보이지 않던 것들이 보였다. 물 위를 스치듯 날아가는 잠자리, 바람에 살랑거리는 갈대, 햇빛에 반짝이는 물결이 보였다.
+
+그때 찌가 쏙 들어갔다. 할아버지와 함께 낚싯대를 힘껏 당기자 손바닥만 한 붕어가 파닥거리며 올라왔다. 우리는 붕어를 한참 바라본 뒤 다시 물에 놓아주었다.
+
+집으로 오는 길에 나는 기다리는 것도 재미있을 수 있다는 것을 처음 알았다.','글쓴이가 이 일로 새롭게 알게 된 것은 무엇인가요?',NULL,'["잡은 물고기는 꼭 집에 가져가야 한다.","기다리는 것도 재미있을 수 있다.","낚시는 빨리 끝내야 재미있다.","할아버지는 낚시를 싫어하신다."]',1,'마지막 문단에 기다리는 것도 재미있을 수 있다는 것을 처음 알았다고 했어요. 잡은 붕어는 다시 물에 놓아주었어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-f01776c686f3','KR_KOR','vocab','mcq',2,NULL,'''넓다''와 뜻이 반대인 말은 무엇인가요?',NULL,'["얇다","좁다","낮다","짧다"]',1,'''넓다''는 면이나 바닥이 크다는 뜻이고, 반대말은 ''좁다''예요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-ada9cdd51f0d','KR_KOR','vocab','mcq',2,NULL,'''도서관 안은 무척 조용했다.''에서 ''조용하다''와 뜻이 비슷한 말은 무엇인가요?',NULL,'["시끄럽다","부드럽다","고요하다","커다랗다"]',2,'''조용하다''와 ''고요하다''는 모두 아무 소리가 나지 않고 잠잠하다는 뜻이에요. ''시끄럽다''는 반대말이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-53079d8473d2','KR_KOR','vocab','mcq',2,NULL,'맞춤법에 맞게 쓴 문장은 무엇인가요?',NULL,'["문제를 곰고미 생각했다.","문제를 곰곰히 생각했다.","문제를 곰곰이 생각햇다.","문제를 곰곰이 생각했다."]',3,'''곰곰이''는 ''-이''로 써요. ''생각했다''의 받침은 ㅆ이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-b767e5167b5a','KR_KOR','vocab','mcq',2,NULL,'맞춤법에 맞게 쓴 문장은 무엇인가요?',NULL,'["선물을 받고 기분이 좋았다.","선물을 받고 기분이 조았다.","선물을 받고 기분이 좋았따.","선물을 받고 기분이 좋왔다."]',0,'''좋다''에 ''-았다''가 붙으면 ''좋았다''로 써요. ㅎ 받침을 빠뜨리거나 소리 나는 대로 쓰면 안 돼요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-56fbb1a317c4','KR_KOR','vocab','mcq',2,NULL,'''놀이터에서 장갑 한 짝을 ( ).''의 ( )에 알맞은 말은 무엇인가요?',NULL,'["이러버렸다","잃어버렸다","잊어버렸다","일어버렸다"]',1,'물건이 없어진 것은 ''잃어버리다''예요. ''잊어버리다''는 기억하던 것을 생각해 내지 못할 때 써요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-24a396350887','KR_KOR','vocab','mcq',2,NULL,'''우리 반은 옆 반보다 학생 수가 ( ).''의 ( )에 알맞은 말은 무엇인가요?',NULL,'["작다","짧다","적다","좁다"]',2,'수나 양이 많지 않을 때는 ''적다''를 써요. ''작다''는 크기가 크지 않을 때 써요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-c597a124676e','KR_KOR','vocab','mcq',2,NULL,'띄어쓰기를 바르게 한 문장은 무엇인가요?',NULL,'["나도 줄넘기를 할 수있다.","나도 줄넘기를 할수 있다.","나도 줄넘기를 할 수 있다.","나도줄넘기를 할 수 있다."]',2,'''할 수 있다''는 ''할'', ''수'', ''있다''를 모두 띄어 써요. ''나도''의 ''도''는 앞말에 붙여 써요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-59f9f2b48af0','KR_KOR','vocab','mcq',2,NULL,'띄어쓰기를 바르게 한 문장은 무엇인가요?',NULL,'["나는 친구 와 함께 학교에 갔다.","나는 친구와 함께학교에 갔다.","나는 친구와 함께 학교에 갔다.","나는 친구와 함께 학교에갔다."]',2,'''친구와''의 ''와'', ''학교에''의 ''에''는 앞말에 붙여 쓰고, 낱말과 낱말 사이는 띄어 써요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-a1ac20f2017a','KR_KOR','vocab','mcq',2,NULL,'높임 표현을 바르게 쓴 문장은 무엇인가요?',NULL,'["할머니께서 방에서 잔다.","할머니께서 방에서 잠을 잔다.","할머니께서 방에서 주무신다.","할머니가 방에서 자고 있다."]',2,'웃어른인 할머니를 높일 때는 ''께서''와 함께 ''자다''의 높임말 ''주무시다''를 써요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-d0b427a37474','KR_KOR','vocab','mcq',2,NULL,'''선생님께서 ( )을 하셨다.''의 ( )에 들어갈 높임 표현으로 알맞은 것은 무엇인가요?',NULL,'["소리","말","이야기","말씀"]',3,'선생님의 말을 높여 이를 때는 ''말씀''을 써요. ''이야기''는 높임말이 아니고 ''이야기을''처럼 쓰지도 않아요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-a7feeadb448a','KR_KOR','vocab','mcq',2,NULL,'''내일 우리 가족은 바다에 ( ).''의 ( )에 알맞은 말은 무엇인가요?',NULL,'["다녀왔다","갈 것이다","갔었다","갔다"]',1,'''내일''은 앞으로 올 때이므로 ''갈 것이다''처럼 앞으로 할 일을 나타내는 말과 어울려요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-9f5fa147b711','KR_KOR','vocab','mcq',2,NULL,'''비가 와서 우산을 ( ) 학교에 갔다.''의 ( )에 알맞은 말은 무엇인가요?',NULL,'["쓰고","끼고","입고","신고"]',0,'우산은 ''쓰다''와 어울려요. 옷은 입고, 신발은 신고, 장갑은 끼어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-d6545ea5a9ae','KR_KOR','vocab','mcq',2,NULL,'''한약이 너무 써서 얼굴을 찌푸렸다.''의 ''쓰다''와 같은 뜻으로 쓰인 것은 무엇인가요?',NULL,'["공책에 이름을 쓰다.","용돈을 아껴 쓰다.","씀바귀 나물은 맛이 조금 쓰다.","햇볕이 뜨거워 모자를 쓰다."]',2,'한약이 ''쓰다''는 맛이 쓰다는 뜻이에요. 씀바귀 나물의 맛이 쓰다는 것과 같은 뜻이에요. 나머지는 글씨를 쓰다, 모자를 쓰다, 돈을 쓰다의 뜻이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-a44c3b3f659e','KR_KOR','vocab','mcq',2,NULL,'''민호는 입이 무거워서 친구의 비밀을 잘 지킨다.''에서 ''입이 무겁다''의 뜻은 무엇인가요?',NULL,'["목소리가 아주 크다.","말을 함부로 옮기지 않는다.","입을 다쳐서 아프다.","밥을 아주 많이 먹는다."]',1,'''입이 무겁다''는 말수가 적고 들은 말을 함부로 옮기지 않는다는 뜻의 관용 표현이에요. 그래서 비밀을 잘 지킨다고 했어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-b6abc511d54d','KR_KOR','vocab','mcq',2,NULL,'''가는 말이 고와야 오는 말이 곱다''라는 속담의 뜻으로 알맞은 것은 무엇인가요?',NULL,'["내가 남에게 좋게 말해야 남도 나에게 좋게 말한다.","남의 말을 듣지 말고 내 말만 해야 한다.","말을 타고 갈 때에는 천천히 가야 한다.","말은 짧게 할수록 좋다."]',0,'여기서 ''말''은 우리가 하는 말이에요. 내가 먼저 고운 말을 해야 남도 고운 말로 대답한다는 뜻이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-3638845e7ffc','KR_KOR','vocab','mcq',2,NULL,'''열심히 연습했다. ( ) 대회에서 일등을 하지 못했다.''의 ( )에 알맞은 말은 무엇인가요?',NULL,'["하지만","그리고","그래서","왜냐하면"]',0,'열심히 연습한 것과 일등을 하지 못한 것은 서로 반대되는 내용이므로 ''하지만''으로 이어요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-2e0cd8a73e82','KR_KOR','vocab','mcq',2,NULL,'''맨발로 모래밭을 걸었다.''에서 ''맨-''의 뜻으로 알맞은 것은 무엇인가요?',NULL,'["가장 끝에 있는","아주 많은","다른 것이 없는","새로 생긴"]',2,'''맨발''은 양말이나 신발을 신지 않은 발이에요. ''맨-''은 ''다른 것이 없는''이라는 뜻을 더해 줘요. ''맨손'', ''맨땅''도 같은 짜임이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-18c804261665','KR_KOR','vocab','mcq',2,NULL,'''입학''과 뜻이 반대인 말은 무엇인가요?',NULL,'["졸업","입장","방학","개학"]',0,'''입학''은 학교에 들어가는 것이고, ''졸업''은 학교의 과정을 다 마치고 나오는 것이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-8d07c55544fe','KR_KOR','vocab','mcq',2,NULL,'''밤하늘에 별이 ( ) 빛난다.''의 ( )에 알맞은 흉내 내는 말은 무엇인가요?',NULL,'["데굴데굴","뒤뚱뒤뚱","엉금엉금","반짝반짝"]',3,'별이 빛나는 모양은 ''반짝반짝''이에요. 데굴데굴은 구르는 모양, 엉금엉금은 기는 모양, 뒤뚱뒤뚱은 흔들리며 걷는 모양이에요.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-dd0a7dcfa2c0','KR_KOR','vocab','mcq',2,NULL,'''동생이 넘어지자 나는 얼른 동생을 일으켜 주었다.''에서 ''얼른''의 뜻은 무엇인가요?',NULL,'["시간을 끌지 않고 빨리","조용히 소리 없이","아주 천천히","아무도 모르게 몰래"]',0,'''얼른''은 시간을 끌지 않고 바로, 빨리라는 뜻이에요.',1,0);
 INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-d07b373ca45c','KR_KOR','nonfiction','mcq',1,'개미는 땅속에 집을 짓고 여럿이 모여 살아요. 개미집 안에는 길이 여러 갈래로 나 있고, 방도 많아요. 개미집 입구는 아주 작아서 눈에 잘 띄지 않아요. 먹이를 모아 두는 방과 알을 돌보는 방이 따로 있어요.
 
 개미는 먹이를 찾으면 집으로 돌아가면서 땅에 냄새를 남겨요. 다른 개미들은 그 냄새를 따라가서 먹이를 찾아요. 그래서 개미들이 한 줄로 길게 걸어가는 모습을 볼 수 있어요. 개미는 더듬이로 냄새를 맡고, 친구와 더듬이를 맞대어 이야기를 나누기도 해요.
@@ -6451,6 +7243,1151 @@ INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,st
 INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-2920a3bca85c','KR_KOR','vocab','mcq',2,NULL,'''발표 차례가 다가오자 가슴이 조마조마했다.''에서 ''조마조마하다''의 뜻은 무엇인가요?',NULL,'["졸려서 눈이 감긴다.","배가 불러 편안하다.","기뻐서 신이 난다.","걱정이 되어 마음이 불안하다."]',3,'''조마조마하다''는 앞으로 닥칠 일이 걱정되어 마음이 놓이지 않는다는 뜻이에요.',1,0);
 INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-writing-ed5917c10b1a','KR_KOR','writing','text',2,'우리 반은 교실에서 거북이 ''느림이''를 기르기로 했어요. 선생님께서 "느림이를 잘 돌보려면 우리 반에 어떤 약속이 필요할까요?" 하고 물으셨어요.','느림이를 잘 돌보기 위한 약속 두 가지를 정하고, 그 약속이 필요한 까닭을 넣어 3~4문장으로 써 보세요.',NULL,NULL,NULL,'채점 기준 — 내용(3점): 먹이 주기 당번 정하기, 물 갈아 주기, 함부로 만지거나 두드리지 않기 등 거북이를 돌보는 데 알맞은 약속 두 가지(각 1점)와 그 까닭(1점)을 썼다. 문장(1점): 3~4문장으로 ''첫째, 둘째''나 ''왜냐하면''처럼 이어 주는 말을 써서 자연스럽게 썼다. 맞춤법(1점): 받침·띄어쓰기·문장 부호가 대체로 바르다.',1,0);
 INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-writing-f0a5756ac4df','KR_KOR','writing','text',2,NULL,'지난 주말에 있었던 일 가운데 가장 기억에 남는 일을 일기로 써 보세요. 언제, 어디서, 누구와, 무엇을 했는지와 그때의 마음이 드러나게 3~4문장으로 쓰세요.',NULL,NULL,NULL,'채점 기준 — 내용(3점): 겪은 일 한 가지를 골라 언제·어디서·누구와·무엇을 했는지 드러냈고(2점), 그때의 생각이나 마음을 썼다(1점). 문장(1점): 3~4문장을 일이 일어난 차례대로 이어지게 썼다. 맞춤법(1점): 받침·띄어쓰기·문장 부호가 대체로 바르다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-4291b953c47e','KR_KOR','nonfiction','mcq',3,'밤하늘의 달을 며칠 동안 관찰해 보면 모양이 날마다 조금씩 달라진다는 것을 알 수 있습니다. 어떤 날은 손톱처럼 가늘고, 어떤 날은 쟁반처럼 둥급니다. 그렇다면 달은 정말로 모양이 바뀌는 것일까요?
+
+사실 달은 스스로 빛을 내지 못합니다. 우리가 보는 달빛은 햇빛이 달에 부딪혀 되비친 것입니다. 달은 공처럼 둥글기 때문에 언제나 햇빛을 받는 절반은 밝고, 나머지 절반은 어둡습니다. 그런데 달은 약 한 달에 한 번씩 지구 둘레를 돌기 때문에, 지구에서 바라볼 때 달의 밝은 쪽이 보이는 양이 날마다 달라집니다. 그래서 달의 모양이 바뀌는 것처럼 보이는 것입니다. 보름달이 뜬 날에는 달의 밝은 쪽 전체가 지구를 향하고 있고, 달이 보이지 않는 날에는 밝은 쪽이 지구 반대편을 향하고 있습니다.
+
+달의 모양은 정해진 차례에 따라 바뀝니다. 달이 거의 보이지 않는 날이 지나고 2~3일쯤 되면 저녁 서쪽 하늘에 눈썹처럼 가는 초승달이 뜹니다. 일주일쯤 지나면 오른쪽 절반이 밝은 상현달이 되고, 보름쯤 지나면 둥근 보름달이 됩니다. 그 뒤로는 밝은 부분이 다시 조금씩 줄어들어 왼쪽 절반이 밝은 하현달이 되고, 가는 그믐달을 거쳐 다시 보이지 않게 됩니다. 이렇게 달의 모양이 한 바퀴 바뀌는 데에는 약 30일이 걸립니다.
+
+옛날 사람들은 이 성질을 이용해 날짜를 셌습니다. 달 모양만 보아도 그달의 며칠쯤인지 알 수 있었기 때문입니다. 이렇게 달을 기준으로 만든 달력을 음력이라고 합니다. 설날과 추석 같은 명절은 음력으로 날을 정하기 때문에, 우리가 흔히 쓰는 양력 달력에서는 해마다 날짜가 달라집니다. 음력 8월 15일인 추석날 밤에 크고 둥근 보름달이 뜨는 까닭도 바로 여기에 있습니다.','이 글의 중심 생각으로 가장 알맞은 것은 무엇인가요?',NULL,'["음력은 양력보다 더 정확하고 편리한 달력이다.","달은 해보다 더 밝은 빛을 스스로 낸다.","달은 날마다 실제 크기가 커졌다 작아졌다 한다.","달은 스스로 빛을 내지 못하며, 지구 둘레를 돌기 때문에 모양이 차례대로 바뀌어 보인다."]',3,'글은 달빛이 햇빛을 되비친 것이고, 달이 지구 둘레를 돌면서 밝은 쪽이 보이는 양이 달라져 모양이 바뀌어 보인다고 설명합니다. 달의 실제 크기가 변한다는 것은 글과 반대되는 내용입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-232d88dea36c','KR_KOR','nonfiction','mcq',3,'밤하늘의 달을 며칠 동안 관찰해 보면 모양이 날마다 조금씩 달라진다는 것을 알 수 있습니다. 어떤 날은 손톱처럼 가늘고, 어떤 날은 쟁반처럼 둥급니다. 그렇다면 달은 정말로 모양이 바뀌는 것일까요?
+
+사실 달은 스스로 빛을 내지 못합니다. 우리가 보는 달빛은 햇빛이 달에 부딪혀 되비친 것입니다. 달은 공처럼 둥글기 때문에 언제나 햇빛을 받는 절반은 밝고, 나머지 절반은 어둡습니다. 그런데 달은 약 한 달에 한 번씩 지구 둘레를 돌기 때문에, 지구에서 바라볼 때 달의 밝은 쪽이 보이는 양이 날마다 달라집니다. 그래서 달의 모양이 바뀌는 것처럼 보이는 것입니다. 보름달이 뜬 날에는 달의 밝은 쪽 전체가 지구를 향하고 있고, 달이 보이지 않는 날에는 밝은 쪽이 지구 반대편을 향하고 있습니다.
+
+달의 모양은 정해진 차례에 따라 바뀝니다. 달이 거의 보이지 않는 날이 지나고 2~3일쯤 되면 저녁 서쪽 하늘에 눈썹처럼 가는 초승달이 뜹니다. 일주일쯤 지나면 오른쪽 절반이 밝은 상현달이 되고, 보름쯤 지나면 둥근 보름달이 됩니다. 그 뒤로는 밝은 부분이 다시 조금씩 줄어들어 왼쪽 절반이 밝은 하현달이 되고, 가는 그믐달을 거쳐 다시 보이지 않게 됩니다. 이렇게 달의 모양이 한 바퀴 바뀌는 데에는 약 30일이 걸립니다.
+
+옛날 사람들은 이 성질을 이용해 날짜를 셌습니다. 달 모양만 보아도 그달의 며칠쯤인지 알 수 있었기 때문입니다. 이렇게 달을 기준으로 만든 달력을 음력이라고 합니다. 설날과 추석 같은 명절은 음력으로 날을 정하기 때문에, 우리가 흔히 쓰는 양력 달력에서는 해마다 날짜가 달라집니다. 음력 8월 15일인 추석날 밤에 크고 둥근 보름달이 뜨는 까닭도 바로 여기에 있습니다.','달의 모양이 바뀌는 차례를 바르게 나타낸 것은 무엇인가요?',NULL,'["초승달 → 상현달 → 보름달 → 하현달 → 그믐달","초승달 → 하현달 → 보름달 → 상현달 → 그믐달","보름달 → 초승달 → 상현달 → 그믐달 → 하현달","그믐달 → 보름달 → 상현달 → 초승달 → 하현달"]',0,'셋째 문단에 초승달, 상현달(일주일쯤), 보름달(보름쯤), 하현달, 그믐달의 차례가 나옵니다. 상현달과 하현달의 순서를 바꾼 것이 함정입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-7c81f1ab9c8d','KR_KOR','nonfiction','mcq',3,'밤하늘의 달을 며칠 동안 관찰해 보면 모양이 날마다 조금씩 달라진다는 것을 알 수 있습니다. 어떤 날은 손톱처럼 가늘고, 어떤 날은 쟁반처럼 둥급니다. 그렇다면 달은 정말로 모양이 바뀌는 것일까요?
+
+사실 달은 스스로 빛을 내지 못합니다. 우리가 보는 달빛은 햇빛이 달에 부딪혀 되비친 것입니다. 달은 공처럼 둥글기 때문에 언제나 햇빛을 받는 절반은 밝고, 나머지 절반은 어둡습니다. 그런데 달은 약 한 달에 한 번씩 지구 둘레를 돌기 때문에, 지구에서 바라볼 때 달의 밝은 쪽이 보이는 양이 날마다 달라집니다. 그래서 달의 모양이 바뀌는 것처럼 보이는 것입니다. 보름달이 뜬 날에는 달의 밝은 쪽 전체가 지구를 향하고 있고, 달이 보이지 않는 날에는 밝은 쪽이 지구 반대편을 향하고 있습니다.
+
+달의 모양은 정해진 차례에 따라 바뀝니다. 달이 거의 보이지 않는 날이 지나고 2~3일쯤 되면 저녁 서쪽 하늘에 눈썹처럼 가는 초승달이 뜹니다. 일주일쯤 지나면 오른쪽 절반이 밝은 상현달이 되고, 보름쯤 지나면 둥근 보름달이 됩니다. 그 뒤로는 밝은 부분이 다시 조금씩 줄어들어 왼쪽 절반이 밝은 하현달이 되고, 가는 그믐달을 거쳐 다시 보이지 않게 됩니다. 이렇게 달의 모양이 한 바퀴 바뀌는 데에는 약 30일이 걸립니다.
+
+옛날 사람들은 이 성질을 이용해 날짜를 셌습니다. 달 모양만 보아도 그달의 며칠쯤인지 알 수 있었기 때문입니다. 이렇게 달을 기준으로 만든 달력을 음력이라고 합니다. 설날과 추석 같은 명절은 음력으로 날을 정하기 때문에, 우리가 흔히 쓰는 양력 달력에서는 해마다 날짜가 달라집니다. 음력 8월 15일인 추석날 밤에 크고 둥근 보름달이 뜨는 까닭도 바로 여기에 있습니다.','이 글의 내용과 맞지 않는 것은 무엇인가요?',NULL,'["상현달은 오른쪽 절반이 밝은 달이다.","달의 모양이 한 바퀴 바뀌는 데에는 약 일주일이 걸린다.","음력은 달을 기준으로 만든 달력이다.","달빛은 햇빛이 달에 부딪혀 되비친 것이다."]',1,'달의 모양이 한 바퀴 바뀌는 데에는 약 30일이 걸린다고 했습니다. ‘일주일’은 초승달 무렵에서 상현달이 되기까지의 기간입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-29ffbf149e25','KR_KOR','nonfiction','mcq',3,'밤하늘의 달을 며칠 동안 관찰해 보면 모양이 날마다 조금씩 달라진다는 것을 알 수 있습니다. 어떤 날은 손톱처럼 가늘고, 어떤 날은 쟁반처럼 둥급니다. 그렇다면 달은 정말로 모양이 바뀌는 것일까요?
+
+사실 달은 스스로 빛을 내지 못합니다. 우리가 보는 달빛은 햇빛이 달에 부딪혀 되비친 것입니다. 달은 공처럼 둥글기 때문에 언제나 햇빛을 받는 절반은 밝고, 나머지 절반은 어둡습니다. 그런데 달은 약 한 달에 한 번씩 지구 둘레를 돌기 때문에, 지구에서 바라볼 때 달의 밝은 쪽이 보이는 양이 날마다 달라집니다. 그래서 달의 모양이 바뀌는 것처럼 보이는 것입니다. 보름달이 뜬 날에는 달의 밝은 쪽 전체가 지구를 향하고 있고, 달이 보이지 않는 날에는 밝은 쪽이 지구 반대편을 향하고 있습니다.
+
+달의 모양은 정해진 차례에 따라 바뀝니다. 달이 거의 보이지 않는 날이 지나고 2~3일쯤 되면 저녁 서쪽 하늘에 눈썹처럼 가는 초승달이 뜹니다. 일주일쯤 지나면 오른쪽 절반이 밝은 상현달이 되고, 보름쯤 지나면 둥근 보름달이 됩니다. 그 뒤로는 밝은 부분이 다시 조금씩 줄어들어 왼쪽 절반이 밝은 하현달이 되고, 가는 그믐달을 거쳐 다시 보이지 않게 됩니다. 이렇게 달의 모양이 한 바퀴 바뀌는 데에는 약 30일이 걸립니다.
+
+옛날 사람들은 이 성질을 이용해 날짜를 셌습니다. 달 모양만 보아도 그달의 며칠쯤인지 알 수 있었기 때문입니다. 이렇게 달을 기준으로 만든 달력을 음력이라고 합니다. 설날과 추석 같은 명절은 음력으로 날을 정하기 때문에, 우리가 흔히 쓰는 양력 달력에서는 해마다 날짜가 달라집니다. 음력 8월 15일인 추석날 밤에 크고 둥근 보름달이 뜨는 까닭도 바로 여기에 있습니다.','오늘 밤 하늘에 상현달이 떴습니다. 약 일주일 뒤에 볼 수 있는 달은 무엇일까요?',NULL,'["그믐달","보름달","초승달","하현달"]',1,'글에 따르면 상현달은 일주일쯤, 보름달은 보름쯤 지나서 뜹니다. 그러므로 상현달에서 다시 일주일쯤 지나면 보름달을 볼 수 있습니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-785a72f65c0d','KR_KOR','nonfiction','mcq',3,'[햇살초 어린이 신문] 아침 10분 독서, 도서관이 북적북적
+
+햇살초등학교 3학년 교실에서는 요즘 아침마다 책장 넘기는 소리만 들립니다. 지난 4월부터 3학년 모든 반이 수업 시작 전 10분 동안 책을 읽는 ‘아침 독서 시간’을 운영하고 있기 때문입니다.
+
+아침 독서 시간이 생긴 뒤 학교 도서관을 찾는 3학년 학생도 크게 늘었습니다. 도서관에서 조사한 자료(그래프)를 보면, 3월에 80권이던 3학년 학생들의 책 대출 권수가 6월에는 230권이 되었습니다. 석 달 사이에 세 배 가까이 늘어난 것입니다. 7월에는 대출 권수가 조금 줄었는데, 도서관이 책 정리 때문에 일주일 동안 문을 닫았기 때문입니다.
+
+3학년 2반 김하늘 학생은 “처음에는 10분이 길게 느껴졌는데, 이제는 이야기가 궁금해서 쉬는 시간에도 이어서 읽어요.”라고 말했습니다. 도서관 담당 박지영 선생님은 “학생들이 직접 책을 고르러 오는 모습이 무척 반갑습니다.”라고 하셨습니다.
+
+아침 독서 시간에는 만화책이 아닌 책이면 무엇이든 읽을 수 있습니다. 학생들은 집에서 가져온 책을 읽기도 하고, 학급 문고에서 골라 읽기도 합니다. 다 읽은 책은 ‘독서 나무’ 게시판에 제목과 한 줄 느낌을 적어 붙이는데, 지금 3학년 복도의 독서 나무에는 나뭇잎 모양 종이가 400장 넘게 붙어 있습니다.
+
+하지만 아쉬운 점도 있습니다. 인기 있는 책은 빌리려는 학생이 많아 오래 기다려야 합니다. 이에 학교는 2학기에 학생들에게 읽고 싶은 책을 추천받아 새 책을 더 사들일 계획입니다. 아침 10분이 학생들의 하루를 어떻게 바꾸어 갈지 기대됩니다.','이 기사에서 가장 중요하게 알리려는 내용은 무엇인가요?','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300" font-family="sans-serif"><rect x="0" y="0" width="480" height="300" fill="#fff"/><text x="240" y="20" text-anchor="middle" font-size="15" font-weight="bold" fill="#0a1f44">3학년 학생들의 월별 도서관 책 대출 권수</text><text x="44" y="34" text-anchor="end" font-size="12" fill="#555">(권)</text><line x1="50" y1="270.0" x2="470" y2="270.0" stroke="#ccc" stroke-width="1"/><text x="44" y="274.0" text-anchor="end" font-size="12" fill="#333">0</text><line x1="50" y1="226.0" x2="470" y2="226.0" stroke="#ccc" stroke-width="1"/><text x="44" y="230.0" text-anchor="end" font-size="12" fill="#333">50</text><line x1="50" y1="182.0" x2="470" y2="182.0" stroke="#ccc" stroke-width="1"/><text x="44" y="186.0" text-anchor="end" font-size="12" fill="#333">100</text><line x1="50" y1="138.0" x2="470" y2="138.0" stroke="#ccc" stroke-width="1"/><text x="44" y="142.0" text-anchor="end" font-size="12" fill="#333">150</text><line x1="50" y1="94.0" x2="470" y2="94.0" stroke="#ccc" stroke-width="1"/><text x="44" y="98.0" text-anchor="end" font-size="12" fill="#333">200</text><line x1="50" y1="50.0" x2="470" y2="50.0" stroke="#ccc" stroke-width="1"/><text x="44" y="54.0" text-anchor="end" font-size="12" fill="#333">250</text><line x1="50" y1="45" x2="50" y2="270" stroke="#333" stroke-width="2"/><line x1="50" y1="270" x2="470" y2="270" stroke="#333" stroke-width="2"/><rect x="70.0" y="199.6" width="44.0" height="70.4" fill="#0a1f44"/><text x="92.0" y="193.6" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">80</text><text x="92.0" y="288" text-anchor="middle" font-size="13" fill="#333">3월</text><rect x="154.0" y="155.6" width="44.0" height="114.4" fill="#0a1f44"/><text x="176.0" y="149.6" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">130</text><text x="176.0" y="288" text-anchor="middle" font-size="13" fill="#333">4월</text><rect x="238.0" y="102.8" width="44.0" height="167.2" fill="#0a1f44"/><text x="260.0" y="96.8" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">190</text><text x="260.0" y="288" text-anchor="middle" font-size="13" fill="#333">5월</text><rect x="322.0" y="67.6" width="44.0" height="202.4" fill="#0a1f44"/><text x="344.0" y="61.6" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">230</text><text x="344.0" y="288" text-anchor="middle" font-size="13" fill="#333">6월</text><rect x="406.0" y="120.4" width="44.0" height="149.6" fill="#0a1f44"/><text x="428.0" y="114.4" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">170</text><text x="428.0" y="288" text-anchor="middle" font-size="13" fill="#333">7월</text></svg>','["인기 있는 책을 빌리려면 오래 기다려야 한다.","아침 독서 시간이 생긴 뒤 3학년 학생들의 도서관 이용이 크게 늘었다.","도서관이 책 정리 때문에 일주일 동안 문을 닫았다.","김하늘 학생은 쉬는 시간에도 책을 읽는다."]',1,'제목과 둘째, 셋째 문단이 모두 아침 독서 시간 뒤 도서관 이용(대출 권수)이 늘었다는 내용입니다. 나머지는 기사에 나오는 작은 내용입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-de46322d6c54','KR_KOR','nonfiction','mcq',3,'[햇살초 어린이 신문] 아침 10분 독서, 도서관이 북적북적
+
+햇살초등학교 3학년 교실에서는 요즘 아침마다 책장 넘기는 소리만 들립니다. 지난 4월부터 3학년 모든 반이 수업 시작 전 10분 동안 책을 읽는 ‘아침 독서 시간’을 운영하고 있기 때문입니다.
+
+아침 독서 시간이 생긴 뒤 학교 도서관을 찾는 3학년 학생도 크게 늘었습니다. 도서관에서 조사한 자료(그래프)를 보면, 3월에 80권이던 3학년 학생들의 책 대출 권수가 6월에는 230권이 되었습니다. 석 달 사이에 세 배 가까이 늘어난 것입니다. 7월에는 대출 권수가 조금 줄었는데, 도서관이 책 정리 때문에 일주일 동안 문을 닫았기 때문입니다.
+
+3학년 2반 김하늘 학생은 “처음에는 10분이 길게 느껴졌는데, 이제는 이야기가 궁금해서 쉬는 시간에도 이어서 읽어요.”라고 말했습니다. 도서관 담당 박지영 선생님은 “학생들이 직접 책을 고르러 오는 모습이 무척 반갑습니다.”라고 하셨습니다.
+
+아침 독서 시간에는 만화책이 아닌 책이면 무엇이든 읽을 수 있습니다. 학생들은 집에서 가져온 책을 읽기도 하고, 학급 문고에서 골라 읽기도 합니다. 다 읽은 책은 ‘독서 나무’ 게시판에 제목과 한 줄 느낌을 적어 붙이는데, 지금 3학년 복도의 독서 나무에는 나뭇잎 모양 종이가 400장 넘게 붙어 있습니다.
+
+하지만 아쉬운 점도 있습니다. 인기 있는 책은 빌리려는 학생이 많아 오래 기다려야 합니다. 이에 학교는 2학기에 학생들에게 읽고 싶은 책을 추천받아 새 책을 더 사들일 계획입니다. 아침 10분이 학생들의 하루를 어떻게 바꾸어 갈지 기대됩니다.','그래프에서 바로 앞 달보다 대출 권수가 가장 많이 늘어난 달은 언제인가요?','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300" font-family="sans-serif"><rect x="0" y="0" width="480" height="300" fill="#fff"/><text x="240" y="20" text-anchor="middle" font-size="15" font-weight="bold" fill="#0a1f44">3학년 학생들의 월별 도서관 책 대출 권수</text><text x="44" y="34" text-anchor="end" font-size="12" fill="#555">(권)</text><line x1="50" y1="270.0" x2="470" y2="270.0" stroke="#ccc" stroke-width="1"/><text x="44" y="274.0" text-anchor="end" font-size="12" fill="#333">0</text><line x1="50" y1="226.0" x2="470" y2="226.0" stroke="#ccc" stroke-width="1"/><text x="44" y="230.0" text-anchor="end" font-size="12" fill="#333">50</text><line x1="50" y1="182.0" x2="470" y2="182.0" stroke="#ccc" stroke-width="1"/><text x="44" y="186.0" text-anchor="end" font-size="12" fill="#333">100</text><line x1="50" y1="138.0" x2="470" y2="138.0" stroke="#ccc" stroke-width="1"/><text x="44" y="142.0" text-anchor="end" font-size="12" fill="#333">150</text><line x1="50" y1="94.0" x2="470" y2="94.0" stroke="#ccc" stroke-width="1"/><text x="44" y="98.0" text-anchor="end" font-size="12" fill="#333">200</text><line x1="50" y1="50.0" x2="470" y2="50.0" stroke="#ccc" stroke-width="1"/><text x="44" y="54.0" text-anchor="end" font-size="12" fill="#333">250</text><line x1="50" y1="45" x2="50" y2="270" stroke="#333" stroke-width="2"/><line x1="50" y1="270" x2="470" y2="270" stroke="#333" stroke-width="2"/><rect x="70.0" y="199.6" width="44.0" height="70.4" fill="#0a1f44"/><text x="92.0" y="193.6" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">80</text><text x="92.0" y="288" text-anchor="middle" font-size="13" fill="#333">3월</text><rect x="154.0" y="155.6" width="44.0" height="114.4" fill="#0a1f44"/><text x="176.0" y="149.6" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">130</text><text x="176.0" y="288" text-anchor="middle" font-size="13" fill="#333">4월</text><rect x="238.0" y="102.8" width="44.0" height="167.2" fill="#0a1f44"/><text x="260.0" y="96.8" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">190</text><text x="260.0" y="288" text-anchor="middle" font-size="13" fill="#333">5월</text><rect x="322.0" y="67.6" width="44.0" height="202.4" fill="#0a1f44"/><text x="344.0" y="61.6" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">230</text><text x="344.0" y="288" text-anchor="middle" font-size="13" fill="#333">6월</text><rect x="406.0" y="120.4" width="44.0" height="149.6" fill="#0a1f44"/><text x="428.0" y="114.4" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">170</text><text x="428.0" y="288" text-anchor="middle" font-size="13" fill="#333">7월</text></svg>','["5월","4월","7월","6월"]',0,'앞 달보다 늘어난 권수는 4월 50권(80→130), 5월 60권(130→190), 6월 40권(190→230)입니다. 7월은 오히려 60권 줄었습니다. 대출 권수가 가장 많은 6월을 고르면 함정에 빠집니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-9a335e213a67','KR_KOR','nonfiction','mcq',3,'[햇살초 어린이 신문] 아침 10분 독서, 도서관이 북적북적
+
+햇살초등학교 3학년 교실에서는 요즘 아침마다 책장 넘기는 소리만 들립니다. 지난 4월부터 3학년 모든 반이 수업 시작 전 10분 동안 책을 읽는 ‘아침 독서 시간’을 운영하고 있기 때문입니다.
+
+아침 독서 시간이 생긴 뒤 학교 도서관을 찾는 3학년 학생도 크게 늘었습니다. 도서관에서 조사한 자료(그래프)를 보면, 3월에 80권이던 3학년 학생들의 책 대출 권수가 6월에는 230권이 되었습니다. 석 달 사이에 세 배 가까이 늘어난 것입니다. 7월에는 대출 권수가 조금 줄었는데, 도서관이 책 정리 때문에 일주일 동안 문을 닫았기 때문입니다.
+
+3학년 2반 김하늘 학생은 “처음에는 10분이 길게 느껴졌는데, 이제는 이야기가 궁금해서 쉬는 시간에도 이어서 읽어요.”라고 말했습니다. 도서관 담당 박지영 선생님은 “학생들이 직접 책을 고르러 오는 모습이 무척 반갑습니다.”라고 하셨습니다.
+
+아침 독서 시간에는 만화책이 아닌 책이면 무엇이든 읽을 수 있습니다. 학생들은 집에서 가져온 책을 읽기도 하고, 학급 문고에서 골라 읽기도 합니다. 다 읽은 책은 ‘독서 나무’ 게시판에 제목과 한 줄 느낌을 적어 붙이는데, 지금 3학년 복도의 독서 나무에는 나뭇잎 모양 종이가 400장 넘게 붙어 있습니다.
+
+하지만 아쉬운 점도 있습니다. 인기 있는 책은 빌리려는 학생이 많아 오래 기다려야 합니다. 이에 학교는 2학기에 학생들에게 읽고 싶은 책을 추천받아 새 책을 더 사들일 계획입니다. 아침 10분이 학생들의 하루를 어떻게 바꾸어 갈지 기대됩니다.','7월에 대출 권수가 줄어든 까닭은 무엇인가요?','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300" font-family="sans-serif"><rect x="0" y="0" width="480" height="300" fill="#fff"/><text x="240" y="20" text-anchor="middle" font-size="15" font-weight="bold" fill="#0a1f44">3학년 학생들의 월별 도서관 책 대출 권수</text><text x="44" y="34" text-anchor="end" font-size="12" fill="#555">(권)</text><line x1="50" y1="270.0" x2="470" y2="270.0" stroke="#ccc" stroke-width="1"/><text x="44" y="274.0" text-anchor="end" font-size="12" fill="#333">0</text><line x1="50" y1="226.0" x2="470" y2="226.0" stroke="#ccc" stroke-width="1"/><text x="44" y="230.0" text-anchor="end" font-size="12" fill="#333">50</text><line x1="50" y1="182.0" x2="470" y2="182.0" stroke="#ccc" stroke-width="1"/><text x="44" y="186.0" text-anchor="end" font-size="12" fill="#333">100</text><line x1="50" y1="138.0" x2="470" y2="138.0" stroke="#ccc" stroke-width="1"/><text x="44" y="142.0" text-anchor="end" font-size="12" fill="#333">150</text><line x1="50" y1="94.0" x2="470" y2="94.0" stroke="#ccc" stroke-width="1"/><text x="44" y="98.0" text-anchor="end" font-size="12" fill="#333">200</text><line x1="50" y1="50.0" x2="470" y2="50.0" stroke="#ccc" stroke-width="1"/><text x="44" y="54.0" text-anchor="end" font-size="12" fill="#333">250</text><line x1="50" y1="45" x2="50" y2="270" stroke="#333" stroke-width="2"/><line x1="50" y1="270" x2="470" y2="270" stroke="#333" stroke-width="2"/><rect x="70.0" y="199.6" width="44.0" height="70.4" fill="#0a1f44"/><text x="92.0" y="193.6" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">80</text><text x="92.0" y="288" text-anchor="middle" font-size="13" fill="#333">3월</text><rect x="154.0" y="155.6" width="44.0" height="114.4" fill="#0a1f44"/><text x="176.0" y="149.6" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">130</text><text x="176.0" y="288" text-anchor="middle" font-size="13" fill="#333">4월</text><rect x="238.0" y="102.8" width="44.0" height="167.2" fill="#0a1f44"/><text x="260.0" y="96.8" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">190</text><text x="260.0" y="288" text-anchor="middle" font-size="13" fill="#333">5월</text><rect x="322.0" y="67.6" width="44.0" height="202.4" fill="#0a1f44"/><text x="344.0" y="61.6" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">230</text><text x="344.0" y="288" text-anchor="middle" font-size="13" fill="#333">6월</text><rect x="406.0" y="120.4" width="44.0" height="149.6" fill="#0a1f44"/><text x="428.0" y="114.4" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">170</text><text x="428.0" y="288" text-anchor="middle" font-size="13" fill="#333">7월</text></svg>','["도서관이 책 정리 때문에 일주일 동안 문을 닫아서","학생들이 책 읽기에 싫증을 느껴서","인기 있는 책을 빌리려는 학생이 많아서","아침 독서 시간이 없어져서"]',0,'셋째 문단에서 7월에 대출 권수가 줄어든 것은 도서관이 일주일 동안 문을 닫았기 때문이라고 밝혔습니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-c8be4cf9f457','KR_KOR','nonfiction','mcq',3,'[햇살초 어린이 신문] 아침 10분 독서, 도서관이 북적북적
+
+햇살초등학교 3학년 교실에서는 요즘 아침마다 책장 넘기는 소리만 들립니다. 지난 4월부터 3학년 모든 반이 수업 시작 전 10분 동안 책을 읽는 ‘아침 독서 시간’을 운영하고 있기 때문입니다.
+
+아침 독서 시간이 생긴 뒤 학교 도서관을 찾는 3학년 학생도 크게 늘었습니다. 도서관에서 조사한 자료(그래프)를 보면, 3월에 80권이던 3학년 학생들의 책 대출 권수가 6월에는 230권이 되었습니다. 석 달 사이에 세 배 가까이 늘어난 것입니다. 7월에는 대출 권수가 조금 줄었는데, 도서관이 책 정리 때문에 일주일 동안 문을 닫았기 때문입니다.
+
+3학년 2반 김하늘 학생은 “처음에는 10분이 길게 느껴졌는데, 이제는 이야기가 궁금해서 쉬는 시간에도 이어서 읽어요.”라고 말했습니다. 도서관 담당 박지영 선생님은 “학생들이 직접 책을 고르러 오는 모습이 무척 반갑습니다.”라고 하셨습니다.
+
+아침 독서 시간에는 만화책이 아닌 책이면 무엇이든 읽을 수 있습니다. 학생들은 집에서 가져온 책을 읽기도 하고, 학급 문고에서 골라 읽기도 합니다. 다 읽은 책은 ‘독서 나무’ 게시판에 제목과 한 줄 느낌을 적어 붙이는데, 지금 3학년 복도의 독서 나무에는 나뭇잎 모양 종이가 400장 넘게 붙어 있습니다.
+
+하지만 아쉬운 점도 있습니다. 인기 있는 책은 빌리려는 학생이 많아 오래 기다려야 합니다. 이에 학교는 2학기에 학생들에게 읽고 싶은 책을 추천받아 새 책을 더 사들일 계획입니다. 아침 10분이 학생들의 하루를 어떻게 바꾸어 갈지 기대됩니다.','다음 중 사실이 아니라 글쓴이의 생각이나 느낌을 나타낸 문장은 무엇인가요?','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300" font-family="sans-serif"><rect x="0" y="0" width="480" height="300" fill="#fff"/><text x="240" y="20" text-anchor="middle" font-size="15" font-weight="bold" fill="#0a1f44">3학년 학생들의 월별 도서관 책 대출 권수</text><text x="44" y="34" text-anchor="end" font-size="12" fill="#555">(권)</text><line x1="50" y1="270.0" x2="470" y2="270.0" stroke="#ccc" stroke-width="1"/><text x="44" y="274.0" text-anchor="end" font-size="12" fill="#333">0</text><line x1="50" y1="226.0" x2="470" y2="226.0" stroke="#ccc" stroke-width="1"/><text x="44" y="230.0" text-anchor="end" font-size="12" fill="#333">50</text><line x1="50" y1="182.0" x2="470" y2="182.0" stroke="#ccc" stroke-width="1"/><text x="44" y="186.0" text-anchor="end" font-size="12" fill="#333">100</text><line x1="50" y1="138.0" x2="470" y2="138.0" stroke="#ccc" stroke-width="1"/><text x="44" y="142.0" text-anchor="end" font-size="12" fill="#333">150</text><line x1="50" y1="94.0" x2="470" y2="94.0" stroke="#ccc" stroke-width="1"/><text x="44" y="98.0" text-anchor="end" font-size="12" fill="#333">200</text><line x1="50" y1="50.0" x2="470" y2="50.0" stroke="#ccc" stroke-width="1"/><text x="44" y="54.0" text-anchor="end" font-size="12" fill="#333">250</text><line x1="50" y1="45" x2="50" y2="270" stroke="#333" stroke-width="2"/><line x1="50" y1="270" x2="470" y2="270" stroke="#333" stroke-width="2"/><rect x="70.0" y="199.6" width="44.0" height="70.4" fill="#0a1f44"/><text x="92.0" y="193.6" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">80</text><text x="92.0" y="288" text-anchor="middle" font-size="13" fill="#333">3월</text><rect x="154.0" y="155.6" width="44.0" height="114.4" fill="#0a1f44"/><text x="176.0" y="149.6" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">130</text><text x="176.0" y="288" text-anchor="middle" font-size="13" fill="#333">4월</text><rect x="238.0" y="102.8" width="44.0" height="167.2" fill="#0a1f44"/><text x="260.0" y="96.8" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">190</text><text x="260.0" y="288" text-anchor="middle" font-size="13" fill="#333">5월</text><rect x="322.0" y="67.6" width="44.0" height="202.4" fill="#0a1f44"/><text x="344.0" y="61.6" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">230</text><text x="344.0" y="288" text-anchor="middle" font-size="13" fill="#333">6월</text><rect x="406.0" y="120.4" width="44.0" height="149.6" fill="#0a1f44"/><text x="428.0" y="114.4" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">170</text><text x="428.0" y="288" text-anchor="middle" font-size="13" fill="#333">7월</text></svg>','["3월에 3학년 학생들의 책 대출 권수는 80권이었습니다.","아침 10분이 학생들의 하루를 어떻게 바꾸어 갈지 기대됩니다.","도서관이 책 정리 때문에 일주일 동안 문을 닫았습니다.","지난 4월부터 3학년 모든 반이 아침 독서 시간을 운영하고 있습니다."]',1,'‘기대됩니다’는 글쓴이의 마음을 나타낸 말입니다. 나머지는 날짜, 숫자처럼 확인할 수 있는 사실입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-58798c2ac128','KR_KOR','nonfiction','mcq',3,'제3회 별빛 마을 어린이 과학 축제에 여러분을 초대합니다!
+
+과학은 어렵고 딱딱하다고 생각하나요? 직접 만들고 실험해 보면 과학이 얼마나 재미있는지 알게 될 거예요. 별빛 마을 어린이 과학 축제는 우리 마을 어린이들이 과학과 친해질 수 있도록 해마다 열리는 행사입니다. 올해는 처음으로 우리 마을 중학교 과학 동아리 형, 누나들이 체험 도우미로 나섭니다. 도우미들은 체험 방법을 친절하게 알려 주고, 안전하게 실험할 수 있도록 도와줄 거예요.
+
+○ 날짜: 10월 12일 토요일
+○ 장소: 별빛 마을 주민 센터와 앞마당
+○ 참가 대상: 초등학교 1~6학년 어린이 (입장료 없음)
+
+체험 마당은 모두 네 곳에서 열립니다. 아래 표를 보고 하고 싶은 체험을 미리 골라 두세요. 체험마다 시간과 장소, 참가할 수 있는 학년이 다르니 꼭 확인해야 합니다. 체험은 한 사람이 두 가지까지만 할 수 있습니다. 모든 체험이 끝난 오후 4시에는 앞마당에서 과학 퀴즈 대회가 열리며, 퀴즈에 참가한 어린이 모두에게 작은 선물을 드립니다.
+
+참가 신청은 10월 5일까지 주민 센터 누리집에서 받습니다. 체험마다 정해진 인원이 있어서 먼저 신청한 순서대로 마감됩니다. 비가 오면 앞마당에서 하는 체험은 주민 센터 2층 강당으로 옮겨서 진행합니다.
+
+축제에 오는 어린이는 이름표를 꼭 달아야 합니다. 이름표는 축제 날 주민 센터 1층 안내 데스크에서 받을 수 있습니다. 쓰레기는 각자 가져가고, 체험 도구는 사용한 뒤 제자리에 두어 주세요. 궁금한 점은 주민 센터로 물어보세요.','이 글을 쓴 목적으로 가장 알맞은 것은 무엇인가요?','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 214" width="560" height="214" font-family="sans-serif"><rect x="0" y="0" width="560" height="214" fill="#fff"/><text x="280" y="24" text-anchor="middle" font-size="15" font-weight="bold" fill="#0a1f44">[체험 마당 안내]</text><rect x="10" y="36" width="540" height="34" fill="#e8ebf2"/><text x="80" y="58" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">체험</text><text x="195" y="58" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">시간</text><text x="290" y="58" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">장소</text><text x="385" y="58" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">참가 학년</text><text x="490" y="58" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">준비물</text><text x="80" y="92" text-anchor="middle" font-size="13" fill="#222">물로켓 쏘기</text><text x="195" y="92" text-anchor="middle" font-size="13" fill="#222">오전 10시</text><text x="290" y="92" text-anchor="middle" font-size="13" fill="#222">앞마당</text><text x="385" y="92" text-anchor="middle" font-size="13" fill="#222">3~6학년</text><text x="490" y="92" text-anchor="middle" font-size="13" fill="#222">빈 페트병 1개</text><text x="80" y="126" text-anchor="middle" font-size="13" fill="#222">달걀 낙하 실험</text><text x="195" y="126" text-anchor="middle" font-size="13" fill="#222">오전 11시</text><text x="290" y="126" text-anchor="middle" font-size="13" fill="#222">앞마당</text><text x="385" y="126" text-anchor="middle" font-size="13" fill="#222">1~6학년</text><text x="490" y="126" text-anchor="middle" font-size="13" fill="#222">없음</text><text x="80" y="160" text-anchor="middle" font-size="13" fill="#222">천연 비누 만들기</text><text x="195" y="160" text-anchor="middle" font-size="13" fill="#222">오후 1시</text><text x="290" y="160" text-anchor="middle" font-size="13" fill="#222">1층 체험실</text><text x="385" y="160" text-anchor="middle" font-size="13" fill="#222">1~3학년</text><text x="490" y="160" text-anchor="middle" font-size="13" fill="#222">앞치마</text><text x="80" y="194" text-anchor="middle" font-size="13" fill="#222">별자리 관찰 상자</text><text x="195" y="194" text-anchor="middle" font-size="13" fill="#222">오후 3시</text><text x="290" y="194" text-anchor="middle" font-size="13" fill="#222">2층 강당</text><text x="385" y="194" text-anchor="middle" font-size="13" fill="#222">4~6학년</text><text x="490" y="194" text-anchor="middle" font-size="13" fill="#222">없음</text><rect x="10" y="36" width="540" height="170" fill="none" stroke="#333" stroke-width="2"/><line x1="10" y1="70" x2="550" y2="70" stroke="#333" stroke-width="2"/><line x1="10" y1="104" x2="550" y2="104" stroke="#333" stroke-width="1"/><line x1="10" y1="138" x2="550" y2="138" stroke="#333" stroke-width="1"/><line x1="10" y1="172" x2="550" y2="172" stroke="#333" stroke-width="1"/><line x1="150" y1="36" x2="150" y2="206" stroke="#333" stroke-width="1"/><line x1="240" y1="36" x2="240" y2="206" stroke="#333" stroke-width="1"/><line x1="340" y1="36" x2="340" y2="206" stroke="#333" stroke-width="1"/><line x1="430" y1="36" x2="430" y2="206" stroke="#333" stroke-width="1"/></svg>','["지난해 과학 축제에서 있었던 일을 기록하려고","과학이 어려운 까닭을 따져 보려고","어린이 과학 축제를 알리고 참가하도록 권하려고","물로켓을 만드는 방법을 자세히 설명하려고"]',2,'축제의 날짜, 장소, 체험, 신청 방법을 알려 주고 ‘초대합니다’라고 했으므로 축제를 알리고 참가를 권하는 안내문입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-c5d36887b5e2','KR_KOR','nonfiction','mcq',3,'제3회 별빛 마을 어린이 과학 축제에 여러분을 초대합니다!
+
+과학은 어렵고 딱딱하다고 생각하나요? 직접 만들고 실험해 보면 과학이 얼마나 재미있는지 알게 될 거예요. 별빛 마을 어린이 과학 축제는 우리 마을 어린이들이 과학과 친해질 수 있도록 해마다 열리는 행사입니다. 올해는 처음으로 우리 마을 중학교 과학 동아리 형, 누나들이 체험 도우미로 나섭니다. 도우미들은 체험 방법을 친절하게 알려 주고, 안전하게 실험할 수 있도록 도와줄 거예요.
+
+○ 날짜: 10월 12일 토요일
+○ 장소: 별빛 마을 주민 센터와 앞마당
+○ 참가 대상: 초등학교 1~6학년 어린이 (입장료 없음)
+
+체험 마당은 모두 네 곳에서 열립니다. 아래 표를 보고 하고 싶은 체험을 미리 골라 두세요. 체험마다 시간과 장소, 참가할 수 있는 학년이 다르니 꼭 확인해야 합니다. 체험은 한 사람이 두 가지까지만 할 수 있습니다. 모든 체험이 끝난 오후 4시에는 앞마당에서 과학 퀴즈 대회가 열리며, 퀴즈에 참가한 어린이 모두에게 작은 선물을 드립니다.
+
+참가 신청은 10월 5일까지 주민 센터 누리집에서 받습니다. 체험마다 정해진 인원이 있어서 먼저 신청한 순서대로 마감됩니다. 비가 오면 앞마당에서 하는 체험은 주민 센터 2층 강당으로 옮겨서 진행합니다.
+
+축제에 오는 어린이는 이름표를 꼭 달아야 합니다. 이름표는 축제 날 주민 센터 1층 안내 데스크에서 받을 수 있습니다. 쓰레기는 각자 가져가고, 체험 도구는 사용한 뒤 제자리에 두어 주세요. 궁금한 점은 주민 센터로 물어보세요.','3학년 지민이가 체험 두 가지를 하려고 합니다. 지민이가 모두 참가할 수 있는 체험끼리 짝 지은 것은 무엇인가요?','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 214" width="560" height="214" font-family="sans-serif"><rect x="0" y="0" width="560" height="214" fill="#fff"/><text x="280" y="24" text-anchor="middle" font-size="15" font-weight="bold" fill="#0a1f44">[체험 마당 안내]</text><rect x="10" y="36" width="540" height="34" fill="#e8ebf2"/><text x="80" y="58" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">체험</text><text x="195" y="58" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">시간</text><text x="290" y="58" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">장소</text><text x="385" y="58" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">참가 학년</text><text x="490" y="58" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">준비물</text><text x="80" y="92" text-anchor="middle" font-size="13" fill="#222">물로켓 쏘기</text><text x="195" y="92" text-anchor="middle" font-size="13" fill="#222">오전 10시</text><text x="290" y="92" text-anchor="middle" font-size="13" fill="#222">앞마당</text><text x="385" y="92" text-anchor="middle" font-size="13" fill="#222">3~6학년</text><text x="490" y="92" text-anchor="middle" font-size="13" fill="#222">빈 페트병 1개</text><text x="80" y="126" text-anchor="middle" font-size="13" fill="#222">달걀 낙하 실험</text><text x="195" y="126" text-anchor="middle" font-size="13" fill="#222">오전 11시</text><text x="290" y="126" text-anchor="middle" font-size="13" fill="#222">앞마당</text><text x="385" y="126" text-anchor="middle" font-size="13" fill="#222">1~6학년</text><text x="490" y="126" text-anchor="middle" font-size="13" fill="#222">없음</text><text x="80" y="160" text-anchor="middle" font-size="13" fill="#222">천연 비누 만들기</text><text x="195" y="160" text-anchor="middle" font-size="13" fill="#222">오후 1시</text><text x="290" y="160" text-anchor="middle" font-size="13" fill="#222">1층 체험실</text><text x="385" y="160" text-anchor="middle" font-size="13" fill="#222">1~3학년</text><text x="490" y="160" text-anchor="middle" font-size="13" fill="#222">앞치마</text><text x="80" y="194" text-anchor="middle" font-size="13" fill="#222">별자리 관찰 상자</text><text x="195" y="194" text-anchor="middle" font-size="13" fill="#222">오후 3시</text><text x="290" y="194" text-anchor="middle" font-size="13" fill="#222">2층 강당</text><text x="385" y="194" text-anchor="middle" font-size="13" fill="#222">4~6학년</text><text x="490" y="194" text-anchor="middle" font-size="13" fill="#222">없음</text><rect x="10" y="36" width="540" height="170" fill="none" stroke="#333" stroke-width="2"/><line x1="10" y1="70" x2="550" y2="70" stroke="#333" stroke-width="2"/><line x1="10" y1="104" x2="550" y2="104" stroke="#333" stroke-width="1"/><line x1="10" y1="138" x2="550" y2="138" stroke="#333" stroke-width="1"/><line x1="10" y1="172" x2="550" y2="172" stroke="#333" stroke-width="1"/><line x1="150" y1="36" x2="150" y2="206" stroke="#333" stroke-width="1"/><line x1="240" y1="36" x2="240" y2="206" stroke="#333" stroke-width="1"/><line x1="340" y1="36" x2="340" y2="206" stroke="#333" stroke-width="1"/><line x1="430" y1="36" x2="430" y2="206" stroke="#333" stroke-width="1"/></svg>','["별자리 관찰 상자, 물로켓 쏘기","물로켓 쏘기, 천연 비누 만들기","달걀 낙하 실험, 별자리 관찰 상자","천연 비누 만들기, 별자리 관찰 상자"]',1,'표를 보면 물로켓 쏘기는 3~6학년, 천연 비누 만들기는 1~3학년이므로 3학년이 둘 다 할 수 있습니다. 별자리 관찰 상자는 4~6학년만 참가할 수 있어서 별자리 관찰 상자가 들어간 짝은 모두 틀립니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-30c8848a3b4b','KR_KOR','nonfiction','mcq',3,'제3회 별빛 마을 어린이 과학 축제에 여러분을 초대합니다!
+
+과학은 어렵고 딱딱하다고 생각하나요? 직접 만들고 실험해 보면 과학이 얼마나 재미있는지 알게 될 거예요. 별빛 마을 어린이 과학 축제는 우리 마을 어린이들이 과학과 친해질 수 있도록 해마다 열리는 행사입니다. 올해는 처음으로 우리 마을 중학교 과학 동아리 형, 누나들이 체험 도우미로 나섭니다. 도우미들은 체험 방법을 친절하게 알려 주고, 안전하게 실험할 수 있도록 도와줄 거예요.
+
+○ 날짜: 10월 12일 토요일
+○ 장소: 별빛 마을 주민 센터와 앞마당
+○ 참가 대상: 초등학교 1~6학년 어린이 (입장료 없음)
+
+체험 마당은 모두 네 곳에서 열립니다. 아래 표를 보고 하고 싶은 체험을 미리 골라 두세요. 체험마다 시간과 장소, 참가할 수 있는 학년이 다르니 꼭 확인해야 합니다. 체험은 한 사람이 두 가지까지만 할 수 있습니다. 모든 체험이 끝난 오후 4시에는 앞마당에서 과학 퀴즈 대회가 열리며, 퀴즈에 참가한 어린이 모두에게 작은 선물을 드립니다.
+
+참가 신청은 10월 5일까지 주민 센터 누리집에서 받습니다. 체험마다 정해진 인원이 있어서 먼저 신청한 순서대로 마감됩니다. 비가 오면 앞마당에서 하는 체험은 주민 센터 2층 강당으로 옮겨서 진행합니다.
+
+축제에 오는 어린이는 이름표를 꼭 달아야 합니다. 이름표는 축제 날 주민 센터 1층 안내 데스크에서 받을 수 있습니다. 쓰레기는 각자 가져가고, 체험 도구는 사용한 뒤 제자리에 두어 주세요. 궁금한 점은 주민 센터로 물어보세요.','축제 날 비가 온다면 물로켓 쏘기는 어디에서 하게 되나요?','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 214" width="560" height="214" font-family="sans-serif"><rect x="0" y="0" width="560" height="214" fill="#fff"/><text x="280" y="24" text-anchor="middle" font-size="15" font-weight="bold" fill="#0a1f44">[체험 마당 안내]</text><rect x="10" y="36" width="540" height="34" fill="#e8ebf2"/><text x="80" y="58" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">체험</text><text x="195" y="58" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">시간</text><text x="290" y="58" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">장소</text><text x="385" y="58" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">참가 학년</text><text x="490" y="58" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">준비물</text><text x="80" y="92" text-anchor="middle" font-size="13" fill="#222">물로켓 쏘기</text><text x="195" y="92" text-anchor="middle" font-size="13" fill="#222">오전 10시</text><text x="290" y="92" text-anchor="middle" font-size="13" fill="#222">앞마당</text><text x="385" y="92" text-anchor="middle" font-size="13" fill="#222">3~6학년</text><text x="490" y="92" text-anchor="middle" font-size="13" fill="#222">빈 페트병 1개</text><text x="80" y="126" text-anchor="middle" font-size="13" fill="#222">달걀 낙하 실험</text><text x="195" y="126" text-anchor="middle" font-size="13" fill="#222">오전 11시</text><text x="290" y="126" text-anchor="middle" font-size="13" fill="#222">앞마당</text><text x="385" y="126" text-anchor="middle" font-size="13" fill="#222">1~6학년</text><text x="490" y="126" text-anchor="middle" font-size="13" fill="#222">없음</text><text x="80" y="160" text-anchor="middle" font-size="13" fill="#222">천연 비누 만들기</text><text x="195" y="160" text-anchor="middle" font-size="13" fill="#222">오후 1시</text><text x="290" y="160" text-anchor="middle" font-size="13" fill="#222">1층 체험실</text><text x="385" y="160" text-anchor="middle" font-size="13" fill="#222">1~3학년</text><text x="490" y="160" text-anchor="middle" font-size="13" fill="#222">앞치마</text><text x="80" y="194" text-anchor="middle" font-size="13" fill="#222">별자리 관찰 상자</text><text x="195" y="194" text-anchor="middle" font-size="13" fill="#222">오후 3시</text><text x="290" y="194" text-anchor="middle" font-size="13" fill="#222">2층 강당</text><text x="385" y="194" text-anchor="middle" font-size="13" fill="#222">4~6학년</text><text x="490" y="194" text-anchor="middle" font-size="13" fill="#222">없음</text><rect x="10" y="36" width="540" height="170" fill="none" stroke="#333" stroke-width="2"/><line x1="10" y1="70" x2="550" y2="70" stroke="#333" stroke-width="2"/><line x1="10" y1="104" x2="550" y2="104" stroke="#333" stroke-width="1"/><line x1="10" y1="138" x2="550" y2="138" stroke="#333" stroke-width="1"/><line x1="10" y1="172" x2="550" y2="172" stroke="#333" stroke-width="1"/><line x1="150" y1="36" x2="150" y2="206" stroke="#333" stroke-width="1"/><line x1="240" y1="36" x2="240" y2="206" stroke="#333" stroke-width="1"/><line x1="340" y1="36" x2="340" y2="206" stroke="#333" stroke-width="1"/><line x1="430" y1="36" x2="430" y2="206" stroke="#333" stroke-width="1"/></svg>','["주민 센터 1층 체험실","주민 센터 2층 강당","주민 센터 1층 안내 데스크","비가 그칠 때까지 열리지 않는다."]',1,'물로켓 쏘기는 표에서 앞마당에서 하는 체험입니다. 글에 비가 오면 앞마당 체험은 2층 강당으로 옮긴다고 했습니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-308f1f46a2ae','KR_KOR','nonfiction','mcq',3,'제3회 별빛 마을 어린이 과학 축제에 여러분을 초대합니다!
+
+과학은 어렵고 딱딱하다고 생각하나요? 직접 만들고 실험해 보면 과학이 얼마나 재미있는지 알게 될 거예요. 별빛 마을 어린이 과학 축제는 우리 마을 어린이들이 과학과 친해질 수 있도록 해마다 열리는 행사입니다. 올해는 처음으로 우리 마을 중학교 과학 동아리 형, 누나들이 체험 도우미로 나섭니다. 도우미들은 체험 방법을 친절하게 알려 주고, 안전하게 실험할 수 있도록 도와줄 거예요.
+
+○ 날짜: 10월 12일 토요일
+○ 장소: 별빛 마을 주민 센터와 앞마당
+○ 참가 대상: 초등학교 1~6학년 어린이 (입장료 없음)
+
+체험 마당은 모두 네 곳에서 열립니다. 아래 표를 보고 하고 싶은 체험을 미리 골라 두세요. 체험마다 시간과 장소, 참가할 수 있는 학년이 다르니 꼭 확인해야 합니다. 체험은 한 사람이 두 가지까지만 할 수 있습니다. 모든 체험이 끝난 오후 4시에는 앞마당에서 과학 퀴즈 대회가 열리며, 퀴즈에 참가한 어린이 모두에게 작은 선물을 드립니다.
+
+참가 신청은 10월 5일까지 주민 센터 누리집에서 받습니다. 체험마다 정해진 인원이 있어서 먼저 신청한 순서대로 마감됩니다. 비가 오면 앞마당에서 하는 체험은 주민 센터 2층 강당으로 옮겨서 진행합니다.
+
+축제에 오는 어린이는 이름표를 꼭 달아야 합니다. 이름표는 축제 날 주민 센터 1층 안내 데스크에서 받을 수 있습니다. 쓰레기는 각자 가져가고, 체험 도구는 사용한 뒤 제자리에 두어 주세요. 궁금한 점은 주민 센터로 물어보세요.','안내문에 맞게 행동한 어린이는 누구인가요?','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 214" width="560" height="214" font-family="sans-serif"><rect x="0" y="0" width="560" height="214" fill="#fff"/><text x="280" y="24" text-anchor="middle" font-size="15" font-weight="bold" fill="#0a1f44">[체험 마당 안내]</text><rect x="10" y="36" width="540" height="34" fill="#e8ebf2"/><text x="80" y="58" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">체험</text><text x="195" y="58" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">시간</text><text x="290" y="58" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">장소</text><text x="385" y="58" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">참가 학년</text><text x="490" y="58" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">준비물</text><text x="80" y="92" text-anchor="middle" font-size="13" fill="#222">물로켓 쏘기</text><text x="195" y="92" text-anchor="middle" font-size="13" fill="#222">오전 10시</text><text x="290" y="92" text-anchor="middle" font-size="13" fill="#222">앞마당</text><text x="385" y="92" text-anchor="middle" font-size="13" fill="#222">3~6학년</text><text x="490" y="92" text-anchor="middle" font-size="13" fill="#222">빈 페트병 1개</text><text x="80" y="126" text-anchor="middle" font-size="13" fill="#222">달걀 낙하 실험</text><text x="195" y="126" text-anchor="middle" font-size="13" fill="#222">오전 11시</text><text x="290" y="126" text-anchor="middle" font-size="13" fill="#222">앞마당</text><text x="385" y="126" text-anchor="middle" font-size="13" fill="#222">1~6학년</text><text x="490" y="126" text-anchor="middle" font-size="13" fill="#222">없음</text><text x="80" y="160" text-anchor="middle" font-size="13" fill="#222">천연 비누 만들기</text><text x="195" y="160" text-anchor="middle" font-size="13" fill="#222">오후 1시</text><text x="290" y="160" text-anchor="middle" font-size="13" fill="#222">1층 체험실</text><text x="385" y="160" text-anchor="middle" font-size="13" fill="#222">1~3학년</text><text x="490" y="160" text-anchor="middle" font-size="13" fill="#222">앞치마</text><text x="80" y="194" text-anchor="middle" font-size="13" fill="#222">별자리 관찰 상자</text><text x="195" y="194" text-anchor="middle" font-size="13" fill="#222">오후 3시</text><text x="290" y="194" text-anchor="middle" font-size="13" fill="#222">2층 강당</text><text x="385" y="194" text-anchor="middle" font-size="13" fill="#222">4~6학년</text><text x="490" y="194" text-anchor="middle" font-size="13" fill="#222">없음</text><rect x="10" y="36" width="540" height="170" fill="none" stroke="#333" stroke-width="2"/><line x1="10" y1="70" x2="550" y2="70" stroke="#333" stroke-width="2"/><line x1="10" y1="104" x2="550" y2="104" stroke="#333" stroke-width="1"/><line x1="10" y1="138" x2="550" y2="138" stroke="#333" stroke-width="1"/><line x1="10" y1="172" x2="550" y2="172" stroke="#333" stroke-width="1"/><line x1="150" y1="36" x2="150" y2="206" stroke="#333" stroke-width="1"/><line x1="240" y1="36" x2="240" y2="206" stroke="#333" stroke-width="1"/><line x1="340" y1="36" x2="340" y2="206" stroke="#333" stroke-width="1"/><line x1="430" y1="36" x2="430" y2="206" stroke="#333" stroke-width="1"/></svg>','["준호: 물로켓 쏘기를 하려고 10월 3일에 누리집에서 신청하고, 빈 페트병을 챙겼어.","하린: 1학년 동생과 함께 별자리 관찰 상자 체험을 하기로 했어.","도윤: 축제 날 주민 센터에 가서 바로 신청하면 돼.","서아: 체험을 많이 하고 싶어서 세 가지를 신청했어."]',0,'신청은 10월 5일까지 누리집에서 하고, 물로켓 쏘기의 준비물은 빈 페트병입니다. 체험은 두 가지까지만 할 수 있고, 별자리 관찰 상자는 4~6학년만 참가할 수 있습니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-b9757e431b29','KR_KOR','nonfiction','mcq',3,'우리 조상들은 된장, 간장, 김치 같은 음식을 커다란 항아리에 담아 두었습니다. 흙으로 빚어 구운 이런 그릇을 ‘옹기’라고 합니다. 옹기는 오랜 세월 우리 음식 문화를 지켜 온 소중한 그릇입니다.
+
+옹기의 가장 큰 특징은 ‘숨을 쉰다’는 것입니다. 옹기를 만드는 흙에는 작은 모래 알갱이가 섞여 있습니다. 이 흙을 높은 불에 구우면 그릇 벽에 눈에 보이지 않는 아주 작은 구멍이 생깁니다. 이 구멍은 너무 작아서 물은 빠져나가지 못하지만, 공기는 드나들 수 있습니다. 그래서 옹기 속 음식은 바깥 공기와 조금씩 통하면서 천천히 알맞게 익습니다. 된장이나 김치가 옹기 속에서 깊은 맛을 내는 것은 이 때문입니다.
+
+옹기는 음식이 쉽게 상하지 않게 지켜 주기도 합니다. 옹기를 구울 때 생기는 그을음이 그릇에 스며들어 나쁜 균이 자라는 것을 막아 준다고 합니다. 냉장고가 없던 시절에도 음식을 오래 두고 먹을 수 있었던 까닭입니다.
+
+옹기는 쓰임새에 따라 크기와 모양이 다양합니다. 김치를 담는 독은 크고 배가 불룩하며, 물을 긷는 동이는 손잡이가 달려 있어 들기 편합니다. 곡식을 담아 두는 큰 항아리나 젓갈을 담는 작은 단지도 있었습니다. 지역마다 모양이 조금씩 다르기도 했습니다. 날씨가 서늘한 북쪽 지방의 옹기는 입구가 넓고 몸통이 길쭉한 편이었고, 햇볕이 강한 남쪽 지방의 옹기는 입구가 좁고 배가 불룩한 편이었습니다. 입구를 좁게 만들어 햇볕을 덜 받게 해서 음식이 쉽게 상하지 않도록 한 것입니다.
+
+요즘에는 플라스틱이나 유리 그릇을 많이 쓰지만, 옹기의 좋은 점이 다시 알려지면서 옹기를 찾는 사람들이 늘고 있습니다. 옹기를 만드는 장인들은 지금도 흙을 반죽하고 두드려 하나하나 손으로 빚는 전통 방법을 지키고 있습니다. 흙에서 와서 다시 흙으로 돌아가는 옹기는 자연을 해치지 않는 그릇이기도 합니다.','이 글에서 옹기가 ‘숨을 쉰다’고 한 것은 무슨 뜻인가요?',NULL,'["옹기가 살아 있는 동물처럼 소리를 낸다.","그릇 벽의 구멍으로 물이 조금씩 빠져나간다.","옹기 속 음식이 바람을 맞아 빨리 마른다.","그릇 벽의 아주 작은 구멍으로 공기가 드나든다."]',3,'둘째 문단에서 옹기 벽의 작은 구멍은 물은 빠져나가지 못하지만 공기는 드나들 수 있다고 했습니다. ‘숨을 쉰다’는 이것을 사람에 빗대어 표현한 말입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-2d392121bf60','KR_KOR','nonfiction','mcq',3,'우리 조상들은 된장, 간장, 김치 같은 음식을 커다란 항아리에 담아 두었습니다. 흙으로 빚어 구운 이런 그릇을 ‘옹기’라고 합니다. 옹기는 오랜 세월 우리 음식 문화를 지켜 온 소중한 그릇입니다.
+
+옹기의 가장 큰 특징은 ‘숨을 쉰다’는 것입니다. 옹기를 만드는 흙에는 작은 모래 알갱이가 섞여 있습니다. 이 흙을 높은 불에 구우면 그릇 벽에 눈에 보이지 않는 아주 작은 구멍이 생깁니다. 이 구멍은 너무 작아서 물은 빠져나가지 못하지만, 공기는 드나들 수 있습니다. 그래서 옹기 속 음식은 바깥 공기와 조금씩 통하면서 천천히 알맞게 익습니다. 된장이나 김치가 옹기 속에서 깊은 맛을 내는 것은 이 때문입니다.
+
+옹기는 음식이 쉽게 상하지 않게 지켜 주기도 합니다. 옹기를 구울 때 생기는 그을음이 그릇에 스며들어 나쁜 균이 자라는 것을 막아 준다고 합니다. 냉장고가 없던 시절에도 음식을 오래 두고 먹을 수 있었던 까닭입니다.
+
+옹기는 쓰임새에 따라 크기와 모양이 다양합니다. 김치를 담는 독은 크고 배가 불룩하며, 물을 긷는 동이는 손잡이가 달려 있어 들기 편합니다. 곡식을 담아 두는 큰 항아리나 젓갈을 담는 작은 단지도 있었습니다. 지역마다 모양이 조금씩 다르기도 했습니다. 날씨가 서늘한 북쪽 지방의 옹기는 입구가 넓고 몸통이 길쭉한 편이었고, 햇볕이 강한 남쪽 지방의 옹기는 입구가 좁고 배가 불룩한 편이었습니다. 입구를 좁게 만들어 햇볕을 덜 받게 해서 음식이 쉽게 상하지 않도록 한 것입니다.
+
+요즘에는 플라스틱이나 유리 그릇을 많이 쓰지만, 옹기의 좋은 점이 다시 알려지면서 옹기를 찾는 사람들이 늘고 있습니다. 옹기를 만드는 장인들은 지금도 흙을 반죽하고 두드려 하나하나 손으로 빚는 전통 방법을 지키고 있습니다. 흙에서 와서 다시 흙으로 돌아가는 옹기는 자연을 해치지 않는 그릇이기도 합니다.','남쪽 지방의 옹기를 입구가 좁게 만든 까닭은 무엇인가요?',NULL,'["흙을 아껴서 옹기를 싸게 만들려고","햇볕을 덜 받게 해서 음식이 쉽게 상하지 않도록 하려고","물을 길을 때 손잡이를 달기 쉽게 하려고","추운 날씨에 음식이 얼지 않도록 하려고"]',1,'넷째 문단 끝에 입구를 좁게 만들어 햇볕을 덜 받게 해서 음식이 쉽게 상하지 않도록 했다고 나옵니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-b8d6cde6cd9a','KR_KOR','nonfiction','mcq',3,'우리 조상들은 된장, 간장, 김치 같은 음식을 커다란 항아리에 담아 두었습니다. 흙으로 빚어 구운 이런 그릇을 ‘옹기’라고 합니다. 옹기는 오랜 세월 우리 음식 문화를 지켜 온 소중한 그릇입니다.
+
+옹기의 가장 큰 특징은 ‘숨을 쉰다’는 것입니다. 옹기를 만드는 흙에는 작은 모래 알갱이가 섞여 있습니다. 이 흙을 높은 불에 구우면 그릇 벽에 눈에 보이지 않는 아주 작은 구멍이 생깁니다. 이 구멍은 너무 작아서 물은 빠져나가지 못하지만, 공기는 드나들 수 있습니다. 그래서 옹기 속 음식은 바깥 공기와 조금씩 통하면서 천천히 알맞게 익습니다. 된장이나 김치가 옹기 속에서 깊은 맛을 내는 것은 이 때문입니다.
+
+옹기는 음식이 쉽게 상하지 않게 지켜 주기도 합니다. 옹기를 구울 때 생기는 그을음이 그릇에 스며들어 나쁜 균이 자라는 것을 막아 준다고 합니다. 냉장고가 없던 시절에도 음식을 오래 두고 먹을 수 있었던 까닭입니다.
+
+옹기는 쓰임새에 따라 크기와 모양이 다양합니다. 김치를 담는 독은 크고 배가 불룩하며, 물을 긷는 동이는 손잡이가 달려 있어 들기 편합니다. 곡식을 담아 두는 큰 항아리나 젓갈을 담는 작은 단지도 있었습니다. 지역마다 모양이 조금씩 다르기도 했습니다. 날씨가 서늘한 북쪽 지방의 옹기는 입구가 넓고 몸통이 길쭉한 편이었고, 햇볕이 강한 남쪽 지방의 옹기는 입구가 좁고 배가 불룩한 편이었습니다. 입구를 좁게 만들어 햇볕을 덜 받게 해서 음식이 쉽게 상하지 않도록 한 것입니다.
+
+요즘에는 플라스틱이나 유리 그릇을 많이 쓰지만, 옹기의 좋은 점이 다시 알려지면서 옹기를 찾는 사람들이 늘고 있습니다. 옹기를 만드는 장인들은 지금도 흙을 반죽하고 두드려 하나하나 손으로 빚는 전통 방법을 지키고 있습니다. 흙에서 와서 다시 흙으로 돌아가는 옹기는 자연을 해치지 않는 그릇이기도 합니다.','넷째 문단에서 북쪽 지방과 남쪽 지방의 옹기를 설명한 방법으로 알맞은 것은 무엇인가요?',NULL,'["글쓴이가 직접 겪은 일을 들려주었다.","일이 일어난 차례대로 설명했다.","두 대상의 다른 점을 견주어 설명했다.","어려운 낱말의 뜻을 하나하나 풀이했다."]',2,'북쪽 옹기는 입구가 넓고 길쭉하고, 남쪽 옹기는 입구가 좁고 불룩하다고 서로 다른 점을 견주어(대조하여) 설명했습니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-f240ed11be0f','KR_KOR','nonfiction','mcq',3,'우리 조상들은 된장, 간장, 김치 같은 음식을 커다란 항아리에 담아 두었습니다. 흙으로 빚어 구운 이런 그릇을 ‘옹기’라고 합니다. 옹기는 오랜 세월 우리 음식 문화를 지켜 온 소중한 그릇입니다.
+
+옹기의 가장 큰 특징은 ‘숨을 쉰다’는 것입니다. 옹기를 만드는 흙에는 작은 모래 알갱이가 섞여 있습니다. 이 흙을 높은 불에 구우면 그릇 벽에 눈에 보이지 않는 아주 작은 구멍이 생깁니다. 이 구멍은 너무 작아서 물은 빠져나가지 못하지만, 공기는 드나들 수 있습니다. 그래서 옹기 속 음식은 바깥 공기와 조금씩 통하면서 천천히 알맞게 익습니다. 된장이나 김치가 옹기 속에서 깊은 맛을 내는 것은 이 때문입니다.
+
+옹기는 음식이 쉽게 상하지 않게 지켜 주기도 합니다. 옹기를 구울 때 생기는 그을음이 그릇에 스며들어 나쁜 균이 자라는 것을 막아 준다고 합니다. 냉장고가 없던 시절에도 음식을 오래 두고 먹을 수 있었던 까닭입니다.
+
+옹기는 쓰임새에 따라 크기와 모양이 다양합니다. 김치를 담는 독은 크고 배가 불룩하며, 물을 긷는 동이는 손잡이가 달려 있어 들기 편합니다. 곡식을 담아 두는 큰 항아리나 젓갈을 담는 작은 단지도 있었습니다. 지역마다 모양이 조금씩 다르기도 했습니다. 날씨가 서늘한 북쪽 지방의 옹기는 입구가 넓고 몸통이 길쭉한 편이었고, 햇볕이 강한 남쪽 지방의 옹기는 입구가 좁고 배가 불룩한 편이었습니다. 입구를 좁게 만들어 햇볕을 덜 받게 해서 음식이 쉽게 상하지 않도록 한 것입니다.
+
+요즘에는 플라스틱이나 유리 그릇을 많이 쓰지만, 옹기의 좋은 점이 다시 알려지면서 옹기를 찾는 사람들이 늘고 있습니다. 옹기를 만드는 장인들은 지금도 흙을 반죽하고 두드려 하나하나 손으로 빚는 전통 방법을 지키고 있습니다. 흙에서 와서 다시 흙으로 돌아가는 옹기는 자연을 해치지 않는 그릇이기도 합니다.','이 글의 내용과 맞지 않는 것은 무엇인가요?',NULL,'["옹기를 만드는 흙에는 작은 모래 알갱이가 섞여 있다.","옹기는 물이 조금씩 새어 나가도록 만든 그릇이다.","옹기는 자연을 해치지 않는 그릇이다.","물을 긷는 동이에는 손잡이가 달려 있다."]',1,'옹기 벽의 구멍은 너무 작아서 물은 빠져나가지 못한다고 했습니다. 공기가 드나든다는 것과 물이 샌다는 것을 헷갈리지 않아야 합니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-982f5bdcd311','KR_KOR','literature','mcq',3,'참나무 숲에 다람쥐 깜박이가 살았어요. 깜박이는 이름처럼 무엇이든 잘 잊어버렸어요. 가을이 되면 다람쥐들은 겨울에 먹을 도토리를 땅속에 묻어 두는데, 깜박이는 도토리를 어디에 묻었는지 자꾸 잊어버렸지요.
+
+“깜박이가 또 잊어버렸대!”
+
+“깜박이는 도토리를 땅에 버리는 거나 마찬가지야.”
+
+친구들은 깜박이를 보며 킥킥 웃었어요. 깜박이는 얼굴이 빨개져서 꼬리를 축 늘어뜨렸어요.
+
+겨울이 오자 깜박이는 배가 고팠어요. 여기저기 땅을 파 보았지만 도토리는 겨우 몇 개밖에 찾지 못했어요. 가을에 나무껍질에 긁어 둔 표시도 하얀 눈에 덮여 보이지 않았지요. 그때 옆집 다람쥐 똘똘이가 도토리 한 줌을 내밀었어요.
+
+“이거 먹어. 나는 넉넉하게 모아 두었거든.”
+
+깜박이는 고맙다고 말하면서도 마음 한구석이 쓸쓸했어요.
+
+‘나는 왜 이렇게 쓸모가 없을까?’
+
+긴 겨울이 지나고 봄이 왔어요. 숲 여기저기에서 연둣빛 새싹이 고개를 내밀었어요. 그런데 이상한 일이 생겼어요. 지난해까지 풀만 자라던 언덕에 작은 참나무 싹이 줄지어 돋아난 거예요.
+
+“어? 여긴 내가 도토리를 묻었던 곳 같은데…….”
+
+부엉이 할아버지가 나뭇가지 위에서 말씀하셨어요.
+
+“허허, 네가 찾지 못한 도토리들이 싹을 틔웠구나. 몇십 년이 지나면 이 언덕도 참나무 숲이 될 게다. 그러면 너희 손주의 손주들까지 도토리를 배불리 먹겠지.”
+
+깜박이는 눈을 동그랗게 떴어요. 친구들도 하나둘 모여들어 작은 싹들을 신기한 듯 바라보았어요.
+
+“깜박이 덕분에 숲이 넓어지는 거야?”
+
+똘똘이의 말에 깜박이는 쑥스럽게 웃었어요. 그날 밤, 깜박이는 오랜만에 꼬리를 활짝 펴고 잠이 들었어요.','이야기에서 깜박이의 마음은 어떻게 바뀌었나요?',NULL,'["화가 나고 억울함 → 무섭고 걱정됨","자랑스럽고 신남 → 부끄럽고 쓸쓸함","배고프고 서운함 → 똘똘이에게 미안함","부끄럽고 쓸쓸함 → 쑥스럽지만 기쁨"]',3,'처음에는 놀림을 받아 얼굴이 빨개지고 ‘쓸모가 없을까?’ 하며 쓸쓸해했지만, 끝에는 쑥스럽게 웃고 꼬리를 활짝 펴고 잠들었습니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-02e7c03aacfd','KR_KOR','literature','mcq',3,'참나무 숲에 다람쥐 깜박이가 살았어요. 깜박이는 이름처럼 무엇이든 잘 잊어버렸어요. 가을이 되면 다람쥐들은 겨울에 먹을 도토리를 땅속에 묻어 두는데, 깜박이는 도토리를 어디에 묻었는지 자꾸 잊어버렸지요.
+
+“깜박이가 또 잊어버렸대!”
+
+“깜박이는 도토리를 땅에 버리는 거나 마찬가지야.”
+
+친구들은 깜박이를 보며 킥킥 웃었어요. 깜박이는 얼굴이 빨개져서 꼬리를 축 늘어뜨렸어요.
+
+겨울이 오자 깜박이는 배가 고팠어요. 여기저기 땅을 파 보았지만 도토리는 겨우 몇 개밖에 찾지 못했어요. 가을에 나무껍질에 긁어 둔 표시도 하얀 눈에 덮여 보이지 않았지요. 그때 옆집 다람쥐 똘똘이가 도토리 한 줌을 내밀었어요.
+
+“이거 먹어. 나는 넉넉하게 모아 두었거든.”
+
+깜박이는 고맙다고 말하면서도 마음 한구석이 쓸쓸했어요.
+
+‘나는 왜 이렇게 쓸모가 없을까?’
+
+긴 겨울이 지나고 봄이 왔어요. 숲 여기저기에서 연둣빛 새싹이 고개를 내밀었어요. 그런데 이상한 일이 생겼어요. 지난해까지 풀만 자라던 언덕에 작은 참나무 싹이 줄지어 돋아난 거예요.
+
+“어? 여긴 내가 도토리를 묻었던 곳 같은데…….”
+
+부엉이 할아버지가 나뭇가지 위에서 말씀하셨어요.
+
+“허허, 네가 찾지 못한 도토리들이 싹을 틔웠구나. 몇십 년이 지나면 이 언덕도 참나무 숲이 될 게다. 그러면 너희 손주의 손주들까지 도토리를 배불리 먹겠지.”
+
+깜박이는 눈을 동그랗게 떴어요. 친구들도 하나둘 모여들어 작은 싹들을 신기한 듯 바라보았어요.
+
+“깜박이 덕분에 숲이 넓어지는 거야?”
+
+똘똘이의 말에 깜박이는 쑥스럽게 웃었어요. 그날 밤, 깜박이는 오랜만에 꼬리를 활짝 펴고 잠이 들었어요.','봄에 언덕에 참나무 싹이 줄지어 돋아난 까닭은 무엇인가요?',NULL,'["깜박이가 묻어 두고 찾지 못한 도토리가 싹을 틔워서","부엉이 할아버지가 참나무 씨앗을 뿌려서","봄비가 많이 와서 풀이 참나무로 바뀌어서","똘똘이가 남은 도토리를 언덕에 버려서"]',0,'부엉이 할아버지가 “네가 찾지 못한 도토리들이 싹을 틔웠구나.”라고 말씀하셨습니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-475419e35305','KR_KOR','literature','mcq',3,'참나무 숲에 다람쥐 깜박이가 살았어요. 깜박이는 이름처럼 무엇이든 잘 잊어버렸어요. 가을이 되면 다람쥐들은 겨울에 먹을 도토리를 땅속에 묻어 두는데, 깜박이는 도토리를 어디에 묻었는지 자꾸 잊어버렸지요.
+
+“깜박이가 또 잊어버렸대!”
+
+“깜박이는 도토리를 땅에 버리는 거나 마찬가지야.”
+
+친구들은 깜박이를 보며 킥킥 웃었어요. 깜박이는 얼굴이 빨개져서 꼬리를 축 늘어뜨렸어요.
+
+겨울이 오자 깜박이는 배가 고팠어요. 여기저기 땅을 파 보았지만 도토리는 겨우 몇 개밖에 찾지 못했어요. 가을에 나무껍질에 긁어 둔 표시도 하얀 눈에 덮여 보이지 않았지요. 그때 옆집 다람쥐 똘똘이가 도토리 한 줌을 내밀었어요.
+
+“이거 먹어. 나는 넉넉하게 모아 두었거든.”
+
+깜박이는 고맙다고 말하면서도 마음 한구석이 쓸쓸했어요.
+
+‘나는 왜 이렇게 쓸모가 없을까?’
+
+긴 겨울이 지나고 봄이 왔어요. 숲 여기저기에서 연둣빛 새싹이 고개를 내밀었어요. 그런데 이상한 일이 생겼어요. 지난해까지 풀만 자라던 언덕에 작은 참나무 싹이 줄지어 돋아난 거예요.
+
+“어? 여긴 내가 도토리를 묻었던 곳 같은데…….”
+
+부엉이 할아버지가 나뭇가지 위에서 말씀하셨어요.
+
+“허허, 네가 찾지 못한 도토리들이 싹을 틔웠구나. 몇십 년이 지나면 이 언덕도 참나무 숲이 될 게다. 그러면 너희 손주의 손주들까지 도토리를 배불리 먹겠지.”
+
+깜박이는 눈을 동그랗게 떴어요. 친구들도 하나둘 모여들어 작은 싹들을 신기한 듯 바라보았어요.
+
+“깜박이 덕분에 숲이 넓어지는 거야?”
+
+똘똘이의 말에 깜박이는 쑥스럽게 웃었어요. 그날 밤, 깜박이는 오랜만에 꼬리를 활짝 펴고 잠이 들었어요.','이 이야기에서 말하고자 하는 것으로 가장 알맞은 것은 무엇인가요?',NULL,'["친구를 놀리면 나중에 벌을 받게 된다.","겨울이 오기 전에 도토리를 많이 먹어 두어야 한다.","먹을 것은 남에게 나누지 말고 혼자 아껴 두어야 한다.","부족해 보이는 점이 있어도 누구에게나 소중한 쓸모가 있다."]',3,'잘 잊어버리는 깜박이의 모습이 오히려 숲을 넓히는 일이 되었습니다. 단점처럼 보이는 것에도 쓸모가 있다는 것이 이 이야기의 주제입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-b3cf3fd4544a','KR_KOR','literature','mcq',3,'참나무 숲에 다람쥐 깜박이가 살았어요. 깜박이는 이름처럼 무엇이든 잘 잊어버렸어요. 가을이 되면 다람쥐들은 겨울에 먹을 도토리를 땅속에 묻어 두는데, 깜박이는 도토리를 어디에 묻었는지 자꾸 잊어버렸지요.
+
+“깜박이가 또 잊어버렸대!”
+
+“깜박이는 도토리를 땅에 버리는 거나 마찬가지야.”
+
+친구들은 깜박이를 보며 킥킥 웃었어요. 깜박이는 얼굴이 빨개져서 꼬리를 축 늘어뜨렸어요.
+
+겨울이 오자 깜박이는 배가 고팠어요. 여기저기 땅을 파 보았지만 도토리는 겨우 몇 개밖에 찾지 못했어요. 가을에 나무껍질에 긁어 둔 표시도 하얀 눈에 덮여 보이지 않았지요. 그때 옆집 다람쥐 똘똘이가 도토리 한 줌을 내밀었어요.
+
+“이거 먹어. 나는 넉넉하게 모아 두었거든.”
+
+깜박이는 고맙다고 말하면서도 마음 한구석이 쓸쓸했어요.
+
+‘나는 왜 이렇게 쓸모가 없을까?’
+
+긴 겨울이 지나고 봄이 왔어요. 숲 여기저기에서 연둣빛 새싹이 고개를 내밀었어요. 그런데 이상한 일이 생겼어요. 지난해까지 풀만 자라던 언덕에 작은 참나무 싹이 줄지어 돋아난 거예요.
+
+“어? 여긴 내가 도토리를 묻었던 곳 같은데…….”
+
+부엉이 할아버지가 나뭇가지 위에서 말씀하셨어요.
+
+“허허, 네가 찾지 못한 도토리들이 싹을 틔웠구나. 몇십 년이 지나면 이 언덕도 참나무 숲이 될 게다. 그러면 너희 손주의 손주들까지 도토리를 배불리 먹겠지.”
+
+깜박이는 눈을 동그랗게 떴어요. 친구들도 하나둘 모여들어 작은 싹들을 신기한 듯 바라보았어요.
+
+“깜박이 덕분에 숲이 넓어지는 거야?”
+
+똘똘이의 말에 깜박이는 쑥스럽게 웃었어요. 그날 밤, 깜박이는 오랜만에 꼬리를 활짝 펴고 잠이 들었어요.','이 이야기를 읽고 알맞게 감상한 친구는 누구인가요?',NULL,'["수아: 놀림받던 깜박이가 숲을 넓히는 데 도움이 되었다니, 내 단점도 다르게 볼 수 있겠다는 생각이 들었어.","태오: 깜박이가 겨울 내내 도토리를 배불리 먹어서 다행이야.","지유: 부엉이 할아버지가 깜박이를 혼내셔서 마음이 아팠어.","민호: 도토리를 나누어 준 똘똘이는 욕심이 많은 친구 같아."]',0,'똘똘이는 도토리를 나누어 준 친절한 친구이고, 부엉이 할아버지는 깜박이를 혼내지 않았으며, 깜박이는 겨울에 배가 고팠습니다. 이야기 내용에 맞고 주제와도 이어지는 감상은 수아의 감상입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-b5b9a7751b1c','KR_KOR','literature','mcq',3,'운동회를 일주일 앞둔 날, 체육 시간에 반 대표 이어달리기 선수를 뽑았다. 민준이는 1학기 내내 달리기 연습을 했기 때문에 당연히 뽑힐 줄 알았다. 그런데 결과는 다섯 번째였다. 선수는 네 명뿐이었다.
+
+“괜찮아, 아깝게 떨어졌네.”
+
+친구들이 어깨를 두드렸지만 민준이는 대꾸도 하지 않았다. 집에 오는 길 내내 운동화 끝으로 돌멩이만 툭툭 찼다. 그날 밤에는 잠자리에 누워서도 달리기 결과가 자꾸 떠올라 한참 동안 잠들지 못했다.
+
+다음 날, 담임 선생님께서 민준이를 부르셨다.
+
+“민준아, 운동회 날 우리 반 응원단장을 맡아 줄 수 있겠니? 목소리도 크고, 친구들 이름을 다 외우고 있는 사람이 필요하거든.”
+
+민준이는 내키지 않았지만 고개를 끄덕였다.
+
+그날부터 민준이는 쉬는 시간마다 응원 구호를 만들었다. 선수 네 명의 이름을 넣어 노랫말도 지었다. 처음에는 쭈뼛거리던 친구들도 민준이를 따라 손뼉을 치며 노래를 불렀다. 연습 마지막 날에는 모두가 우유갑에 콩을 넣어 만든 응원 도구를 흔들며 구호를 외쳤다. 교실이 쩌렁쩌렁 울렸다.
+
+드디어 운동회 날이 되었다. 마지막 경기인 이어달리기에서 민준이네 반은 세 번째로 바통을 넘겨받았다.
+
+“이서윤! 달려라! 바람처럼!”
+
+민준이가 목이 터져라 외치자 반 친구들이 한목소리로 따라 외쳤다. 서윤이가 한 명을 앞질렀고, 마지막 선수 도윤이가 결승선을 두 번째로 통과했다.
+
+경기가 끝나자 도윤이가 숨을 헐떡이며 민준이에게 달려왔다.
+
+“네 목소리가 계속 들려서 끝까지 힘이 났어. 고마워!”
+
+민준이는 쉰 목소리로 웃었다. 결승선을 함께 달린 것 같은 기분이었다.','‘집에 오는 길 내내 운동화 끝으로 돌멩이만 툭툭 찼다.’에 나타난 민준이의 마음으로 알맞은 것은 무엇인가요?',NULL,'["선수로 뽑히지 못해 속상하고 실망스럽다.","운동회가 다가와서 설레고 기대된다.","선수로 뽑혀서 자랑스럽고 신난다.","친구들이 위로해 주어 고맙고 든든하다."]',0,'민준이는 당연히 뽑힐 줄 알았는데 다섯 번째로 떨어져서, 친구들 말에 대꾸도 하지 않고 돌멩이만 찼습니다. 속상하고 실망한 마음을 행동으로 보여 준 것입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-961d8f52d899','KR_KOR','literature','mcq',3,'운동회를 일주일 앞둔 날, 체육 시간에 반 대표 이어달리기 선수를 뽑았다. 민준이는 1학기 내내 달리기 연습을 했기 때문에 당연히 뽑힐 줄 알았다. 그런데 결과는 다섯 번째였다. 선수는 네 명뿐이었다.
+
+“괜찮아, 아깝게 떨어졌네.”
+
+친구들이 어깨를 두드렸지만 민준이는 대꾸도 하지 않았다. 집에 오는 길 내내 운동화 끝으로 돌멩이만 툭툭 찼다. 그날 밤에는 잠자리에 누워서도 달리기 결과가 자꾸 떠올라 한참 동안 잠들지 못했다.
+
+다음 날, 담임 선생님께서 민준이를 부르셨다.
+
+“민준아, 운동회 날 우리 반 응원단장을 맡아 줄 수 있겠니? 목소리도 크고, 친구들 이름을 다 외우고 있는 사람이 필요하거든.”
+
+민준이는 내키지 않았지만 고개를 끄덕였다.
+
+그날부터 민준이는 쉬는 시간마다 응원 구호를 만들었다. 선수 네 명의 이름을 넣어 노랫말도 지었다. 처음에는 쭈뼛거리던 친구들도 민준이를 따라 손뼉을 치며 노래를 불렀다. 연습 마지막 날에는 모두가 우유갑에 콩을 넣어 만든 응원 도구를 흔들며 구호를 외쳤다. 교실이 쩌렁쩌렁 울렸다.
+
+드디어 운동회 날이 되었다. 마지막 경기인 이어달리기에서 민준이네 반은 세 번째로 바통을 넘겨받았다.
+
+“이서윤! 달려라! 바람처럼!”
+
+민준이가 목이 터져라 외치자 반 친구들이 한목소리로 따라 외쳤다. 서윤이가 한 명을 앞질렀고, 마지막 선수 도윤이가 결승선을 두 번째로 통과했다.
+
+경기가 끝나자 도윤이가 숨을 헐떡이며 민준이에게 달려왔다.
+
+“네 목소리가 계속 들려서 끝까지 힘이 났어. 고마워!”
+
+민준이는 쉰 목소리로 웃었다. 결승선을 함께 달린 것 같은 기분이었다.','선생님께서 민준이에게 응원단장을 맡기신 까닭은 무엇인가요?',NULL,'["이어달리기 선수들이 민준이를 추천해서","응원 노래를 이미 많이 알고 있어서","목소리가 크고 친구들 이름을 다 외우고 있어서","반에서 달리기를 가장 잘해서"]',2,'선생님께서 “목소리도 크고, 친구들 이름을 다 외우고 있는 사람이 필요하거든.”이라고 말씀하셨습니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-849289d5dc8a','KR_KOR','literature','mcq',3,'운동회를 일주일 앞둔 날, 체육 시간에 반 대표 이어달리기 선수를 뽑았다. 민준이는 1학기 내내 달리기 연습을 했기 때문에 당연히 뽑힐 줄 알았다. 그런데 결과는 다섯 번째였다. 선수는 네 명뿐이었다.
+
+“괜찮아, 아깝게 떨어졌네.”
+
+친구들이 어깨를 두드렸지만 민준이는 대꾸도 하지 않았다. 집에 오는 길 내내 운동화 끝으로 돌멩이만 툭툭 찼다. 그날 밤에는 잠자리에 누워서도 달리기 결과가 자꾸 떠올라 한참 동안 잠들지 못했다.
+
+다음 날, 담임 선생님께서 민준이를 부르셨다.
+
+“민준아, 운동회 날 우리 반 응원단장을 맡아 줄 수 있겠니? 목소리도 크고, 친구들 이름을 다 외우고 있는 사람이 필요하거든.”
+
+민준이는 내키지 않았지만 고개를 끄덕였다.
+
+그날부터 민준이는 쉬는 시간마다 응원 구호를 만들었다. 선수 네 명의 이름을 넣어 노랫말도 지었다. 처음에는 쭈뼛거리던 친구들도 민준이를 따라 손뼉을 치며 노래를 불렀다. 연습 마지막 날에는 모두가 우유갑에 콩을 넣어 만든 응원 도구를 흔들며 구호를 외쳤다. 교실이 쩌렁쩌렁 울렸다.
+
+드디어 운동회 날이 되었다. 마지막 경기인 이어달리기에서 민준이네 반은 세 번째로 바통을 넘겨받았다.
+
+“이서윤! 달려라! 바람처럼!”
+
+민준이가 목이 터져라 외치자 반 친구들이 한목소리로 따라 외쳤다. 서윤이가 한 명을 앞질렀고, 마지막 선수 도윤이가 결승선을 두 번째로 통과했다.
+
+경기가 끝나자 도윤이가 숨을 헐떡이며 민준이에게 달려왔다.
+
+“네 목소리가 계속 들려서 끝까지 힘이 났어. 고마워!”
+
+민준이는 쉰 목소리로 웃었다. 결승선을 함께 달린 것 같은 기분이었다.','다음 일을 일어난 차례대로 바르게 늘어놓은 것은 무엇인가요?
+(가) 민준이가 이어달리기 선수로 뽑히지 못했다.
+(나) 민준이가 선수들의 이름을 넣어 노랫말을 지었다.
+(다) 선생님께서 민준이에게 응원단장을 부탁하셨다.
+(라) 도윤이가 민준이에게 고맙다고 말했다.',NULL,'["(다) → (가) → (나) → (라)","(가) → (나) → (다) → (라)","(가) → (다) → (나) → (라)","(가) → (다) → (라) → (나)"]',2,'선수 뽑기에서 떨어진 다음 날 선생님의 부탁을 받았고, 그날부터 노랫말을 지었으며, 운동회 날 경기가 끝나고 도윤이가 고맙다고 했습니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-e57f60af298d','KR_KOR','literature','mcq',3,'운동회를 일주일 앞둔 날, 체육 시간에 반 대표 이어달리기 선수를 뽑았다. 민준이는 1학기 내내 달리기 연습을 했기 때문에 당연히 뽑힐 줄 알았다. 그런데 결과는 다섯 번째였다. 선수는 네 명뿐이었다.
+
+“괜찮아, 아깝게 떨어졌네.”
+
+친구들이 어깨를 두드렸지만 민준이는 대꾸도 하지 않았다. 집에 오는 길 내내 운동화 끝으로 돌멩이만 툭툭 찼다. 그날 밤에는 잠자리에 누워서도 달리기 결과가 자꾸 떠올라 한참 동안 잠들지 못했다.
+
+다음 날, 담임 선생님께서 민준이를 부르셨다.
+
+“민준아, 운동회 날 우리 반 응원단장을 맡아 줄 수 있겠니? 목소리도 크고, 친구들 이름을 다 외우고 있는 사람이 필요하거든.”
+
+민준이는 내키지 않았지만 고개를 끄덕였다.
+
+그날부터 민준이는 쉬는 시간마다 응원 구호를 만들었다. 선수 네 명의 이름을 넣어 노랫말도 지었다. 처음에는 쭈뼛거리던 친구들도 민준이를 따라 손뼉을 치며 노래를 불렀다. 연습 마지막 날에는 모두가 우유갑에 콩을 넣어 만든 응원 도구를 흔들며 구호를 외쳤다. 교실이 쩌렁쩌렁 울렸다.
+
+드디어 운동회 날이 되었다. 마지막 경기인 이어달리기에서 민준이네 반은 세 번째로 바통을 넘겨받았다.
+
+“이서윤! 달려라! 바람처럼!”
+
+민준이가 목이 터져라 외치자 반 친구들이 한목소리로 따라 외쳤다. 서윤이가 한 명을 앞질렀고, 마지막 선수 도윤이가 결승선을 두 번째로 통과했다.
+
+경기가 끝나자 도윤이가 숨을 헐떡이며 민준이에게 달려왔다.
+
+“네 목소리가 계속 들려서 끝까지 힘이 났어. 고마워!”
+
+민준이는 쉰 목소리로 웃었다. 결승선을 함께 달린 것 같은 기분이었다.','‘결승선을 함께 달린 것 같은 기분이었다.’는 어떤 뜻인가요?',NULL,'["응원을 하느라 너무 힘들어서 다리가 아팠다.","민준이도 몰래 선수들과 함께 달리기를 했다.","다음 운동회에서는 꼭 선수가 되겠다고 다짐했다.","선수로 뛰지는 않았지만 응원으로 함께 힘을 보탠 것 같아 뿌듯했다."]',3,'민준이는 실제로 달리지 않았지만 도윤이가 민준이의 응원 덕분에 힘이 났다고 했습니다. 그래서 자기도 경기에 함께한 것처럼 뿌듯하게 느낀 것입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-439f9c3d1b07','KR_KOR','literature','mcq',3,'제목: 몽당연필
+
+새 학기에 만난 연필은
+내 한 뼘보다 길었지
+
+받아쓰기 한 번에
+한 마디
+일기 한 장에
+또 한 마디
+
+사각사각
+연필이 걸어간 길에
+글자들이 줄지어 따라왔어
+
+이제는 내 새끼손가락만 한
+몽당연필
+
+키는 작아졌지만
+연필이 줄어든 만큼
+내 공책은 두툼해졌지
+
+필통 속에서 푹 쉬렴
+짧아진 연필아
+네 덕분에 나도 이만큼 컸어','이 시의 말하는 이는 누구인가요?',NULL,'["필통 속에 들어 있는 연필","새 연필을 파는 문구점 주인","한 학기 동안 연필을 써 온 어린이","받아쓰기 시험을 내는 선생님"]',2,'‘내 공책은 두툼해졌지’, ‘네 덕분에 나도 이만큼 컸어’처럼 연필을 써 온 ‘나’가 연필에게 말하고 있습니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-a11ff13e2cc1','KR_KOR','literature','mcq',3,'제목: 몽당연필
+
+새 학기에 만난 연필은
+내 한 뼘보다 길었지
+
+받아쓰기 한 번에
+한 마디
+일기 한 장에
+또 한 마디
+
+사각사각
+연필이 걸어간 길에
+글자들이 줄지어 따라왔어
+
+이제는 내 새끼손가락만 한
+몽당연필
+
+키는 작아졌지만
+연필이 줄어든 만큼
+내 공책은 두툼해졌지
+
+필통 속에서 푹 쉬렴
+짧아진 연필아
+네 덕분에 나도 이만큼 컸어','‘사각사각’은 무엇을 흉내 낸 말인가요?',NULL,'["연필로 공책에 글씨를 쓰는 소리","연필을 깎을 때 칼이 움직이는 모양","공책을 한 장씩 넘기는 모양","필통을 흔들 때 연필이 부딪치는 소리"]',0,'‘사각사각 / 연필이 걸어간 길에 / 글자들이 줄지어 따라왔어’에서 글자를 쓸 때 나는 소리를 흉내 낸 말임을 알 수 있습니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-82221d527334','KR_KOR','literature','mcq',3,'제목: 몽당연필
+
+새 학기에 만난 연필은
+내 한 뼘보다 길었지
+
+받아쓰기 한 번에
+한 마디
+일기 한 장에
+또 한 마디
+
+사각사각
+연필이 걸어간 길에
+글자들이 줄지어 따라왔어
+
+이제는 내 새끼손가락만 한
+몽당연필
+
+키는 작아졌지만
+연필이 줄어든 만큼
+내 공책은 두툼해졌지
+
+필통 속에서 푹 쉬렴
+짧아진 연필아
+네 덕분에 나도 이만큼 컸어','‘연필이 줄어든 만큼 / 내 공책은 두툼해졌지’에 담긴 뜻으로 알맞은 것은 무엇인가요?',NULL,'["연필을 닳도록 쓰면서 그만큼 글을 많이 쓰고 공부했다.","연필이 짧아져서 새 공책을 많이 사야 했다.","연필을 공책 사이에 끼워 두었다.","공책이 두꺼워서 연필이 잘 써지지 않았다."]',0,'연필이 닳은 것은 받아쓰기, 일기 같은 글을 많이 썼기 때문이고, 그만큼 공책에 글이 쌓여 두툼해졌다는 뜻입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-2751516148be','KR_KOR','literature','mcq',3,'제목: 몽당연필
+
+새 학기에 만난 연필은
+내 한 뼘보다 길었지
+
+받아쓰기 한 번에
+한 마디
+일기 한 장에
+또 한 마디
+
+사각사각
+연필이 걸어간 길에
+글자들이 줄지어 따라왔어
+
+이제는 내 새끼손가락만 한
+몽당연필
+
+키는 작아졌지만
+연필이 줄어든 만큼
+내 공책은 두툼해졌지
+
+필통 속에서 푹 쉬렴
+짧아진 연필아
+네 덕분에 나도 이만큼 컸어','마지막 연에 나타난 말하는 이의 마음으로 가장 알맞은 것은 무엇인가요?',NULL,'["새 연필을 갖고 싶어 조르는 마음","연필을 잃어버릴까 봐 걱정하는 마음","짧아진 연필에게 고마워하는 마음","연필이 짧아져서 짜증 나는 마음"]',2,'‘푹 쉬렴’, ‘네 덕분에 나도 이만큼 컸어’라는 말에 오랫동안 함께한 연필을 아끼고 고마워하는 마음이 담겨 있습니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-716ce2763829','KR_KOR','literature','mcq',3,'제목: 혼자 탄 버스
+
+10월 18일 토요일, 날씨: 바람이 조금 불었다.
+
+오늘 나는 처음으로 혼자 버스를 타고 할머니 댁에 갔다. 지난주까지는 엄마와 함께 다녔는데, 엄마가 이제 3학년이니 혼자 가 보라고 하셨다. 엄마는 버스 번호와 내릴 정류장 이름을 쪽지에 적어 주셨다. 나는 쪽지를 주머니에 넣고 몇 번이나 손으로 만져 보았다.
+
+“25번 버스를 타고 여섯 정거장 지나서 ‘시장 앞’에서 내리면 돼.”
+
+정류장에서 기다리는데 가슴이 콩닥콩닥 뛰었다. 25번 버스가 오자 나는 교통 카드를 찍고 창가 자리에 앉았다. 창밖으로 우리 학교와 놀이터, 자주 가던 빵집이 휙휙 지나갔다. 정거장을 하나 지날 때마다 손가락을 하나씩 접었다. 그런데 네 번째 정거장을 지났을 무렵, 안내 방송이 잘 들리지 않아서 손가락을 몇 개 접었는지 헷갈렸다. 갑자기 눈앞이 캄캄해졌다.
+
+나는 용기를 내어 옆자리 할머니께 여쭈어보았다.
+
+“할머니, ‘시장 앞’ 정류장은 아직 안 지났나요?”
+
+“다음다음 정류장이란다. 내가 알려 줄게.”
+
+내릴 때가 되자 할머니께서 내 어깨를 톡톡 두드려 주셨다. 나는 고개 숙여 인사하고 버스에서 내렸다.
+
+정류장에는 우리 할머니가 마중 나와 계셨다. 할머니를 보자마자 다리에 힘이 쭉 빠졌다. 할머니는 “우리 손녀 다 컸네.” 하시며 나를 꼭 안아 주셨다. 그날 할머니 댁에서 먹은 김치전은 오늘따라 더 맛있었다.
+
+혼자 버스를 타는 일은 생각보다 떨렸지만, 모르는 것이 있으면 물어보면 된다는 것을 알게 되었다. 다음에는 쪽지 없이도 갈 수 있을 것 같다.','‘갑자기 눈앞이 캄캄해졌다.’에 나타난 ‘나’의 마음으로 알맞은 것은 무엇인가요?',NULL,'["버스 안이 어두워서 졸리다.","할머니 댁에 거의 다 와서 반갑다.","어디서 내려야 할지 몰라 몹시 당황스럽다.","창밖 풍경이 아름다워서 설렌다."]',2,'손가락을 몇 개 접었는지 헷갈려 내릴 곳을 알 수 없게 되자 어떻게 해야 할지 몰라 당황한 마음을 ‘눈앞이 캄캄해졌다’고 표현했습니다. 실제로 어두워진 것이 아닙니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-1c04fdd5ced0','KR_KOR','literature','mcq',3,'제목: 혼자 탄 버스
+
+10월 18일 토요일, 날씨: 바람이 조금 불었다.
+
+오늘 나는 처음으로 혼자 버스를 타고 할머니 댁에 갔다. 지난주까지는 엄마와 함께 다녔는데, 엄마가 이제 3학년이니 혼자 가 보라고 하셨다. 엄마는 버스 번호와 내릴 정류장 이름을 쪽지에 적어 주셨다. 나는 쪽지를 주머니에 넣고 몇 번이나 손으로 만져 보았다.
+
+“25번 버스를 타고 여섯 정거장 지나서 ‘시장 앞’에서 내리면 돼.”
+
+정류장에서 기다리는데 가슴이 콩닥콩닥 뛰었다. 25번 버스가 오자 나는 교통 카드를 찍고 창가 자리에 앉았다. 창밖으로 우리 학교와 놀이터, 자주 가던 빵집이 휙휙 지나갔다. 정거장을 하나 지날 때마다 손가락을 하나씩 접었다. 그런데 네 번째 정거장을 지났을 무렵, 안내 방송이 잘 들리지 않아서 손가락을 몇 개 접었는지 헷갈렸다. 갑자기 눈앞이 캄캄해졌다.
+
+나는 용기를 내어 옆자리 할머니께 여쭈어보았다.
+
+“할머니, ‘시장 앞’ 정류장은 아직 안 지났나요?”
+
+“다음다음 정류장이란다. 내가 알려 줄게.”
+
+내릴 때가 되자 할머니께서 내 어깨를 톡톡 두드려 주셨다. 나는 고개 숙여 인사하고 버스에서 내렸다.
+
+정류장에는 우리 할머니가 마중 나와 계셨다. 할머니를 보자마자 다리에 힘이 쭉 빠졌다. 할머니는 “우리 손녀 다 컸네.” 하시며 나를 꼭 안아 주셨다. 그날 할머니 댁에서 먹은 김치전은 오늘따라 더 맛있었다.
+
+혼자 버스를 타는 일은 생각보다 떨렸지만, 모르는 것이 있으면 물어보면 된다는 것을 알게 되었다. 다음에는 쪽지 없이도 갈 수 있을 것 같다.','‘나’가 손가락을 몇 개 접었는지 헷갈린 까닭은 무엇인가요?',NULL,'["창밖을 보다가 잠이 들어서","엄마가 써 준 쪽지를 잃어버려서","버스를 잘못 타서","안내 방송이 잘 들리지 않아서"]',3,'글에 ‘안내 방송이 잘 들리지 않아서 손가락을 몇 개 접었는지 헷갈렸다’고 나옵니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-5559df7f5814','KR_KOR','literature','mcq',3,'제목: 혼자 탄 버스
+
+10월 18일 토요일, 날씨: 바람이 조금 불었다.
+
+오늘 나는 처음으로 혼자 버스를 타고 할머니 댁에 갔다. 지난주까지는 엄마와 함께 다녔는데, 엄마가 이제 3학년이니 혼자 가 보라고 하셨다. 엄마는 버스 번호와 내릴 정류장 이름을 쪽지에 적어 주셨다. 나는 쪽지를 주머니에 넣고 몇 번이나 손으로 만져 보았다.
+
+“25번 버스를 타고 여섯 정거장 지나서 ‘시장 앞’에서 내리면 돼.”
+
+정류장에서 기다리는데 가슴이 콩닥콩닥 뛰었다. 25번 버스가 오자 나는 교통 카드를 찍고 창가 자리에 앉았다. 창밖으로 우리 학교와 놀이터, 자주 가던 빵집이 휙휙 지나갔다. 정거장을 하나 지날 때마다 손가락을 하나씩 접었다. 그런데 네 번째 정거장을 지났을 무렵, 안내 방송이 잘 들리지 않아서 손가락을 몇 개 접었는지 헷갈렸다. 갑자기 눈앞이 캄캄해졌다.
+
+나는 용기를 내어 옆자리 할머니께 여쭈어보았다.
+
+“할머니, ‘시장 앞’ 정류장은 아직 안 지났나요?”
+
+“다음다음 정류장이란다. 내가 알려 줄게.”
+
+내릴 때가 되자 할머니께서 내 어깨를 톡톡 두드려 주셨다. 나는 고개 숙여 인사하고 버스에서 내렸다.
+
+정류장에는 우리 할머니가 마중 나와 계셨다. 할머니를 보자마자 다리에 힘이 쭉 빠졌다. 할머니는 “우리 손녀 다 컸네.” 하시며 나를 꼭 안아 주셨다. 그날 할머니 댁에서 먹은 김치전은 오늘따라 더 맛있었다.
+
+혼자 버스를 타는 일은 생각보다 떨렸지만, 모르는 것이 있으면 물어보면 된다는 것을 알게 되었다. 다음에는 쪽지 없이도 갈 수 있을 것 같다.','할머니를 보자마자 ‘나’의 다리에 힘이 쭉 빠진 까닭으로 가장 알맞은 것은 무엇인가요?',NULL,'["정류장을 잘못 내려서 겁이 나서","내내 긴장했던 마음이 풀리면서 안심이 되어서","버스에서 오래 서 있어서 다리가 아파서","할머니가 늦게 오셔서 서운해서"]',1,'처음 혼자 버스를 타며 가슴이 콩닥콩닥 뛰고 당황하기도 했는데, 할머니를 만나자 긴장이 풀린 것입니다. ‘나’는 창가 자리에 앉아 갔으므로 오래 서 있었던 것도 아닙니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-6bae8e78d038','KR_KOR','literature','mcq',3,'제목: 혼자 탄 버스
+
+10월 18일 토요일, 날씨: 바람이 조금 불었다.
+
+오늘 나는 처음으로 혼자 버스를 타고 할머니 댁에 갔다. 지난주까지는 엄마와 함께 다녔는데, 엄마가 이제 3학년이니 혼자 가 보라고 하셨다. 엄마는 버스 번호와 내릴 정류장 이름을 쪽지에 적어 주셨다. 나는 쪽지를 주머니에 넣고 몇 번이나 손으로 만져 보았다.
+
+“25번 버스를 타고 여섯 정거장 지나서 ‘시장 앞’에서 내리면 돼.”
+
+정류장에서 기다리는데 가슴이 콩닥콩닥 뛰었다. 25번 버스가 오자 나는 교통 카드를 찍고 창가 자리에 앉았다. 창밖으로 우리 학교와 놀이터, 자주 가던 빵집이 휙휙 지나갔다. 정거장을 하나 지날 때마다 손가락을 하나씩 접었다. 그런데 네 번째 정거장을 지났을 무렵, 안내 방송이 잘 들리지 않아서 손가락을 몇 개 접었는지 헷갈렸다. 갑자기 눈앞이 캄캄해졌다.
+
+나는 용기를 내어 옆자리 할머니께 여쭈어보았다.
+
+“할머니, ‘시장 앞’ 정류장은 아직 안 지났나요?”
+
+“다음다음 정류장이란다. 내가 알려 줄게.”
+
+내릴 때가 되자 할머니께서 내 어깨를 톡톡 두드려 주셨다. 나는 고개 숙여 인사하고 버스에서 내렸다.
+
+정류장에는 우리 할머니가 마중 나와 계셨다. 할머니를 보자마자 다리에 힘이 쭉 빠졌다. 할머니는 “우리 손녀 다 컸네.” 하시며 나를 꼭 안아 주셨다. 그날 할머니 댁에서 먹은 김치전은 오늘따라 더 맛있었다.
+
+혼자 버스를 타는 일은 생각보다 떨렸지만, 모르는 것이 있으면 물어보면 된다는 것을 알게 되었다. 다음에는 쪽지 없이도 갈 수 있을 것 같다.','이 일기에서 ‘나’가 알게 된 점으로 가장 알맞은 것은 무엇인가요?',NULL,'["버스는 언제나 어른과 함께 타야 한다.","모르는 사람에게는 절대 말을 걸면 안 된다.","정류장 이름은 쪽지에 적지 않아도 된다.","모르는 것이 있을 때에는 용기를 내어 물어보면 된다."]',3,'마지막 문단에 ‘모르는 것이 있으면 물어보면 된다는 것을 알게 되었다’고 썼습니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-da2aec53908f','KR_KOR','vocab','mcq',3,NULL,'‘엄마가 게임을 그만하라고 하시자 동생은 시무룩한 얼굴로 방에 들어갔다.’에서 ‘시무룩하다’의 뜻으로 알맞은 것은 무엇인가요?',NULL,'["몹시 졸려서 눈이 감긴다.","무척 기뻐서 얼굴이 환하다.","마음에 들지 않아 말없이 언짢은 기색이 있다.","깜짝 놀라 어리둥절하다."]',2,'‘시무룩하다’는 마음에 들지 않아서 말이 없고 언짢은 얼굴을 하는 것입니다. 게임을 그만하라는 말을 들은 동생의 기분과 어울립니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-59e74b269afb','KR_KOR','vocab','mcq',3,NULL,'‘처음 와 본 동네라서 모든 것이 낯설었다.’에서 ‘낯설다’와 뜻이 반대인 낱말은 무엇인가요?',NULL,'["서먹하다","어색하다","새롭다","익숙하다"]',3,'‘낯설다’는 처음 보는 것처럼 익숙하지 않다는 뜻이므로 반대말은 ‘익숙하다’입니다. ‘어색하다’, ‘서먹하다’는 오히려 비슷한 느낌의 말입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-d0940eaf770b','KR_KOR','vocab','mcq',3,NULL,'‘지각한 까닭을 선생님께 말씀드렸다.’에서 ‘까닭’과 뜻이 비슷한 낱말은 무엇인가요?',NULL,'["이유","결과","차례","버릇"]',0,'‘까닭’은 어떤 일이 생기게 된 원인이나 사정을 말하며, ‘이유’와 뜻이 비슷합니다. ‘결과’는 오히려 반대되는 쪽의 말입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-f7b18d93d813','KR_KOR','vocab','mcq',3,NULL,'다음 문장 가운데 ‘다리’의 뜻이 나머지 셋과 다른 것은 무엇인가요?',NULL,'["오래 걸었더니 다리가 퉁퉁 부었다.","아기가 다리를 쭉 뻗고 잠들었다.","축구를 하다가 넘어져 다리를 다쳤다.","강 위에 새 다리가 놓여 건너기 편해졌다."]',3,'‘강 위의 다리’는 물을 건너도록 만든 구조물이고, 나머지는 몸의 일부인 다리를 뜻합니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-b4572c076610','KR_KOR','vocab','mcq',3,NULL,'‘오늘이 몇 월 (   )이지?’의 빈칸에 들어갈 바른 말은 무엇인가요?',NULL,'["며칠","몇칠","며일","몇일"]',0,'날짜를 묻는 말은 ‘며칠’로 써야 합니다. ‘몇일’은 소리 나는 대로 잘못 짐작해 쓰기 쉬운 틀린 말입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-30c44457afce','KR_KOR','vocab','mcq',3,NULL,'다음 중 맞춤법에 맞게 쓴 낱말은 무엇인가요?',NULL,'["설걷이","설거지","설거치","설겆이"]',1,'그릇을 씻어 정리하는 일은 ‘설거지’가 바른 표기입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-d7e4ea75bf19','KR_KOR','vocab','mcq',3,NULL,'‘구슬이 모두 몇 개인지 하나씩 (   ) 보았다.’의 빈칸에 들어갈 알맞은 말은 무엇인가요?',NULL,'["쇄어","새어","세어","세워"]',2,'수를 헤아리는 것은 ‘세다’이므로 ‘세어’가 맞습니다. ‘새어’는 물이나 빛이 틈으로 빠져나오는 ‘새다’, ‘세워’는 ‘세우다’에서 온 말입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-00ca4e869f52','KR_KOR','vocab','mcq',3,NULL,'띄어쓰기가 바른 문장은 무엇인가요?',NULL,'["냉장고에 먹을것이 많다.","냉장고에먹을 것이 많다.","냉장고에 먹을 것이많다.","냉장고에 먹을 것이 많다."]',3,'‘것’은 앞말과 띄어 쓰고, 조사 ‘에’, ‘이’는 앞말에 붙여 씁니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-31e784ccf1ce','KR_KOR','vocab','mcq',3,NULL,'띄어쓰기가 바른 문장은 무엇인가요?',NULL,'["나는 줄넘기를 할줄 안다.","나는 줄넘기를할 줄 안다.","나는 줄넘기를 할 줄안다.","나는 줄넘기를 할 줄 안다."]',3,'‘할 줄 안다’에서 ‘할’, ‘줄’, ‘안다’는 각각 띄어 씁니다. 조사 ‘를’은 앞말 ‘줄넘기’에 붙입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-7e339b2686a1','KR_KOR','vocab','mcq',3,NULL,'웃어른을 높이는 말을 바르게 쓴 문장은 무엇인가요?',NULL,'["교장 선생님께서 교실에 있습니다.","교장 선생님께서 교실에 계십니다.","교장 선생님이 교실에 있어요.","교장 선생님께서 교실에 있으십니다."]',1,'웃어른이 어떤 곳에 머무르는 것을 높일 때에는 ‘있다’ 대신 ‘계시다’를 씁니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-0de0072dee21','KR_KOR','vocab','mcq',3,NULL,'‘할아버지께서 (   ) 병원에 가셨다.’의 빈칸에 들어갈 높임 표현으로 알맞은 것은 무엇인가요?',NULL,'["아파서","편찮으셔서","아팠으니까","아프니까"]',1,'웃어른이 아프신 것을 높여 말할 때에는 ‘편찮으시다’를 씁니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-e5d0db56065d','KR_KOR','vocab','mcq',3,NULL,'‘세 살 버릇 여든까지 간다’의 뜻으로 알맞은 것은 무엇인가요?',NULL,'["세 살이 되면 여든 살까지 건강하게 산다.","나쁜 버릇은 금방 저절로 없어진다.","나이가 많은 사람의 말을 잘 들어야 한다.","어릴 때 몸에 밴 버릇은 나이가 들어도 고치기 어렵다."]',3,'어릴 때 들인 버릇은 오래도록 바뀌지 않으므로 처음부터 좋은 버릇을 들여야 한다는 뜻입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-c77f0c5970b2','KR_KOR','vocab','mcq',3,NULL,'다음 상황에 가장 잘 어울리는 속담은 무엇인가요?
+‘발표 준비를 거의 하지 않은 형준이가 자기가 제일 잘할 거라며 큰소리를 쳤지만, 막상 발표 시간에는 한마디도 제대로 하지 못했다.’',NULL,'["빈 수레가 요란하다","티끌 모아 태산","가는 날이 장날","하늘의 별 따기"]',0,'‘빈 수레가 요란하다’는 실속 없는 사람이 오히려 더 떠들어 댄다는 뜻으로, 준비 없이 큰소리만 친 형준이의 모습과 어울립니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-99ab6a873802','KR_KOR','vocab','mcq',3,NULL,'‘시험 기간이라 형은 눈코 뜰 새 없이 바빴다.’에서 ‘눈코 뜰 새 없다’의 뜻은 무엇인가요?',NULL,'["코가 막혀서 숨쉬기가 힘들다.","정신을 차릴 수 없을 만큼 몹시 바쁘다.","무엇을 보아도 관심이 없다.","너무 졸려서 눈을 뜰 수 없다."]',1,'‘눈코 뜰 새 없다’는 눈을 뜨고 코로 숨 쉴 틈도 없을 만큼 매우 바쁘다는 뜻의 관용 표현입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-e42db185a888','KR_KOR','vocab','mcq',3,NULL,'‘친구가 고민을 이야기할 때에는 그 말에 귀를 (   ) 한다.’의 빈칸에 들어갈 알맞은 말은 무엇인가요?',NULL,'["빌려야","닫아야","막아야","기울여야"]',3,'‘귀를 기울이다’는 남의 말을 주의 깊게 듣는다는 뜻의 관용 표현입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-809a8432bee5','KR_KOR','vocab','mcq',3,NULL,'다음 중 두 낱말이 합쳐져서 만들어진 낱말이 아닌 것은 무엇인가요?',NULL,'["하늘","눈물","손수건","책가방"]',0,'‘눈물(눈+물)’, ‘책가방(책+가방)’, ‘손수건(손+수건)’은 두 낱말이 합쳐진 말이지만, ‘하늘’은 더 나눌 수 없는 하나의 낱말입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-3244da4e3e26','KR_KOR','vocab','mcq',3,NULL,'‘나는 아침에 우산을 챙겼다. (   ) 오후에 비가 온다는 일기 예보를 들었기 때문이다.’의 빈칸에 들어갈 알맞은 말은 무엇인가요?',NULL,'["그런데","왜냐하면","그러나","그래서"]',1,'뒤 문장이 ‘~기 때문이다’로 앞 문장의 까닭을 설명하므로 ‘왜냐하면’이 알맞습니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-6f36d618cd43','KR_KOR','vocab','mcq',3,NULL,'다음 중 시간을 나타내는 말과 서술어가 바르게 어울리는 문장은 무엇인가요?',NULL,'["어제 나는 가족과 동물원에 갔다.","어제 나는 가족과 동물원에 갈 것이다.","어제 나는 가족과 동물원에 가겠다.","어제 나는 가족과 동물원에 간다."]',0,'‘어제’는 지나간 때를 나타내므로 ‘갔다’처럼 지난 일을 나타내는 말과 어울립니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-acae161d3913','KR_KOR','vocab','mcq',3,NULL,'‘수영, 식수, 수도’에 공통으로 들어 있는 ‘수’의 뜻은 무엇인가요?',NULL,'["손","나무","숫자","물"]',3,'‘수영’은 물에서 헤엄치는 것, ‘식수’는 마시는 물, ‘수도’는 물을 끌어오는 시설이므로 공통된 ‘수’는 ‘물’을 뜻합니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-7b80602e5c61','KR_KOR','nonfiction','mcq',4,'꽃이 활짝 핀 들판에서는 꿀벌들이 바쁘게 날아다닙니다. 꿀벌은 꽃에서 꿀과 꽃가루를 모아 벌집으로 가져갑니다. 그런데 넓은 들판에서 꽃이 많이 핀 곳을 처음 찾아낸 꿀벌은 그 위치를 다른 꿀벌들에게 어떻게 알려 줄까요? 꿀벌은 말을 할 수 없지만, ‘춤’이라는 특별한 방법으로 정보를 나눕니다.
+
+먹이를 찾아낸 꿀벌은 벌집으로 돌아와 다른 벌들 앞에서 춤을 춥니다. 꽃밭이 벌집에서 가까울 때에는 동그라미를 그리며 빙글빙글 도는 ‘원형 춤’을 춥니다. 이 춤은 ‘가까운 곳에 먹이가 있으니 주변을 찾아보라’는 뜻입니다. 꽃밭이 멀리 있을 때에는 숫자 8과 비슷한 모양으로 움직이는 ‘8자 춤’을 춥니다. 8자 춤을 출 때 꿀벌은 가운데 곧은 길을 지나가면서 엉덩이를 좌우로 흔드는데, 이 때문에 ‘엉덩이춤’이라고도 부릅니다.
+
+8자 춤에는 꽃밭의 방향과 거리가 담겨 있습니다. 꿀벌은 해를 기준으로 방향을 알립니다. 가운데 곧은 길을 위쪽으로 똑바로 걸어가면 해가 있는 쪽으로 날아가라는 뜻이고, 아래쪽으로 걸어가면 해의 반대쪽으로 가라는 뜻입니다. 또 곧은 길을 걸어가는 동안 엉덩이를 흔드는 시간이 길수록 꽃밭이 멀리 있다는 것을 나타냅니다.
+
+다른 꿀벌들은 춤추는 벌을 더듬이로 만지며 따라다니다가 춤의 뜻을 알아차리고 꽃밭을 향해 날아갑니다. 벌집 안은 깜깜하기 때문에 눈으로 보기보다는 몸의 움직임을 더듬이로 느끼는 것입니다. 춤을 보고 나간 벌이 꽃밭을 찾지 못하면 다시 벌집으로 돌아와 다른 벌의 춤을 보고 새로 길을 나서기도 합니다. 춤추는 벌의 몸에 묻은 꽃 냄새도 어떤 꽃을 찾아야 하는지 알려 주는 단서가 됩니다.
+
+이러한 꿀벌의 춤을 처음 밝혀낸 사람은 오스트리아의 과학자 카를 폰 프리슈입니다. 그는 먹이 그릇을 벌집에서 점점 먼 곳으로 옮겨 가며 거리에 따라 꿀벌의 춤이 어떻게 달라지는지 살펴보는 등, 여러 해 동안 꿀벌을 끈기 있게 관찰하고 실험한 끝에 춤의 비밀을 알아냈고, 이 연구로 노벨상을 받았습니다.
+
+꿀벌 한 마리는 작고 약하지만, 수만 마리의 꿀벌은 춤으로 정보를 나누며 먹이를 효율적으로 모읍니다. 서로 정보를 나누고 힘을 합쳐 일하는 꿀벌의 모습은 우리에게도 많은 것을 알려 줍니다.','이 글의 중심 생각으로 가장 알맞은 것은 무엇인가요?',NULL,'["카를 폰 프리슈는 꿀벌을 기르는 방법을 처음 만들었다.","꿀벌은 벌집 안이 어두워서 춤을 추지 못한다.","꿀벌은 꽃 냄새만으로 먹이가 있는 곳을 찾는다.","꿀벌은 춤을 추어 먹이가 있는 곳의 방향과 거리를 서로 알려 준다."]',3,'글 전체가 원형 춤과 8자 춤으로 먹이의 위치를 알리는 꿀벌의 정보 전달 방법을 설명하고 있습니다. 꽃 냄새는 단서 가운데 하나일 뿐입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-770366d50570','KR_KOR','nonfiction','mcq',4,'꽃이 활짝 핀 들판에서는 꿀벌들이 바쁘게 날아다닙니다. 꿀벌은 꽃에서 꿀과 꽃가루를 모아 벌집으로 가져갑니다. 그런데 넓은 들판에서 꽃이 많이 핀 곳을 처음 찾아낸 꿀벌은 그 위치를 다른 꿀벌들에게 어떻게 알려 줄까요? 꿀벌은 말을 할 수 없지만, ‘춤’이라는 특별한 방법으로 정보를 나눕니다.
+
+먹이를 찾아낸 꿀벌은 벌집으로 돌아와 다른 벌들 앞에서 춤을 춥니다. 꽃밭이 벌집에서 가까울 때에는 동그라미를 그리며 빙글빙글 도는 ‘원형 춤’을 춥니다. 이 춤은 ‘가까운 곳에 먹이가 있으니 주변을 찾아보라’는 뜻입니다. 꽃밭이 멀리 있을 때에는 숫자 8과 비슷한 모양으로 움직이는 ‘8자 춤’을 춥니다. 8자 춤을 출 때 꿀벌은 가운데 곧은 길을 지나가면서 엉덩이를 좌우로 흔드는데, 이 때문에 ‘엉덩이춤’이라고도 부릅니다.
+
+8자 춤에는 꽃밭의 방향과 거리가 담겨 있습니다. 꿀벌은 해를 기준으로 방향을 알립니다. 가운데 곧은 길을 위쪽으로 똑바로 걸어가면 해가 있는 쪽으로 날아가라는 뜻이고, 아래쪽으로 걸어가면 해의 반대쪽으로 가라는 뜻입니다. 또 곧은 길을 걸어가는 동안 엉덩이를 흔드는 시간이 길수록 꽃밭이 멀리 있다는 것을 나타냅니다.
+
+다른 꿀벌들은 춤추는 벌을 더듬이로 만지며 따라다니다가 춤의 뜻을 알아차리고 꽃밭을 향해 날아갑니다. 벌집 안은 깜깜하기 때문에 눈으로 보기보다는 몸의 움직임을 더듬이로 느끼는 것입니다. 춤을 보고 나간 벌이 꽃밭을 찾지 못하면 다시 벌집으로 돌아와 다른 벌의 춤을 보고 새로 길을 나서기도 합니다. 춤추는 벌의 몸에 묻은 꽃 냄새도 어떤 꽃을 찾아야 하는지 알려 주는 단서가 됩니다.
+
+이러한 꿀벌의 춤을 처음 밝혀낸 사람은 오스트리아의 과학자 카를 폰 프리슈입니다. 그는 먹이 그릇을 벌집에서 점점 먼 곳으로 옮겨 가며 거리에 따라 꿀벌의 춤이 어떻게 달라지는지 살펴보는 등, 여러 해 동안 꿀벌을 끈기 있게 관찰하고 실험한 끝에 춤의 비밀을 알아냈고, 이 연구로 노벨상을 받았습니다.
+
+꿀벌 한 마리는 작고 약하지만, 수만 마리의 꿀벌은 춤으로 정보를 나누며 먹이를 효율적으로 모읍니다. 서로 정보를 나누고 힘을 합쳐 일하는 꿀벌의 모습은 우리에게도 많은 것을 알려 줍니다.','원형 춤과 8자 춤에 대한 설명으로 알맞은 것은 무엇인가요?',NULL,'["원형 춤은 먹이가 가까울 때, 8자 춤은 먹이가 멀리 있을 때 춘다.","원형 춤을 출 때 엉덩이를 흔들기 때문에 원형 춤을 ‘엉덩이춤’이라고도 한다.","원형 춤은 먹이가 멀리 있을 때, 8자 춤은 먹이가 가까울 때 춘다.","원형 춤에는 8자 춤보다 꽃밭의 방향이 더 자세히 담겨 있다."]',0,'둘째 문단에서 꽃밭이 가까우면 원형 춤, 멀면 8자 춤을 춘다고 했고, 엉덩이를 흔드는 것은 8자 춤입니다. 방향과 거리가 담긴 것도 8자 춤입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-9cb14a101c2a','KR_KOR','nonfiction','mcq',4,'꽃이 활짝 핀 들판에서는 꿀벌들이 바쁘게 날아다닙니다. 꿀벌은 꽃에서 꿀과 꽃가루를 모아 벌집으로 가져갑니다. 그런데 넓은 들판에서 꽃이 많이 핀 곳을 처음 찾아낸 꿀벌은 그 위치를 다른 꿀벌들에게 어떻게 알려 줄까요? 꿀벌은 말을 할 수 없지만, ‘춤’이라는 특별한 방법으로 정보를 나눕니다.
+
+먹이를 찾아낸 꿀벌은 벌집으로 돌아와 다른 벌들 앞에서 춤을 춥니다. 꽃밭이 벌집에서 가까울 때에는 동그라미를 그리며 빙글빙글 도는 ‘원형 춤’을 춥니다. 이 춤은 ‘가까운 곳에 먹이가 있으니 주변을 찾아보라’는 뜻입니다. 꽃밭이 멀리 있을 때에는 숫자 8과 비슷한 모양으로 움직이는 ‘8자 춤’을 춥니다. 8자 춤을 출 때 꿀벌은 가운데 곧은 길을 지나가면서 엉덩이를 좌우로 흔드는데, 이 때문에 ‘엉덩이춤’이라고도 부릅니다.
+
+8자 춤에는 꽃밭의 방향과 거리가 담겨 있습니다. 꿀벌은 해를 기준으로 방향을 알립니다. 가운데 곧은 길을 위쪽으로 똑바로 걸어가면 해가 있는 쪽으로 날아가라는 뜻이고, 아래쪽으로 걸어가면 해의 반대쪽으로 가라는 뜻입니다. 또 곧은 길을 걸어가는 동안 엉덩이를 흔드는 시간이 길수록 꽃밭이 멀리 있다는 것을 나타냅니다.
+
+다른 꿀벌들은 춤추는 벌을 더듬이로 만지며 따라다니다가 춤의 뜻을 알아차리고 꽃밭을 향해 날아갑니다. 벌집 안은 깜깜하기 때문에 눈으로 보기보다는 몸의 움직임을 더듬이로 느끼는 것입니다. 춤을 보고 나간 벌이 꽃밭을 찾지 못하면 다시 벌집으로 돌아와 다른 벌의 춤을 보고 새로 길을 나서기도 합니다. 춤추는 벌의 몸에 묻은 꽃 냄새도 어떤 꽃을 찾아야 하는지 알려 주는 단서가 됩니다.
+
+이러한 꿀벌의 춤을 처음 밝혀낸 사람은 오스트리아의 과학자 카를 폰 프리슈입니다. 그는 먹이 그릇을 벌집에서 점점 먼 곳으로 옮겨 가며 거리에 따라 꿀벌의 춤이 어떻게 달라지는지 살펴보는 등, 여러 해 동안 꿀벌을 끈기 있게 관찰하고 실험한 끝에 춤의 비밀을 알아냈고, 이 연구로 노벨상을 받았습니다.
+
+꿀벌 한 마리는 작고 약하지만, 수만 마리의 꿀벌은 춤으로 정보를 나누며 먹이를 효율적으로 모읍니다. 서로 정보를 나누고 힘을 합쳐 일하는 꿀벌의 모습은 우리에게도 많은 것을 알려 줍니다.','어떤 꿀벌이 8자 춤을 추면서 가운데 곧은 길을 아래쪽으로 걸어가며 엉덩이를 아주 오래 흔들었습니다. 이 춤이 알려 주는 내용으로 알맞은 것은 무엇인가요?',NULL,'["해가 있는 쪽으로 아주 먼 곳에 꽃밭이 있다.","벌집 바로 주변에 꽃밭이 있으니 근처를 찾아보라.","해의 반대쪽으로 아주 가까운 곳에 꽃밭이 있다.","해의 반대쪽으로 아주 먼 곳에 꽃밭이 있다."]',3,'곧은 길을 아래쪽으로 걸으면 해의 반대쪽을, 엉덩이를 흔드는 시간이 길수록 먼 곳을 뜻합니다. 두 조건을 함께 따져야 합니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-3d8bb1c7c9f1','KR_KOR','nonfiction','mcq',4,'꽃이 활짝 핀 들판에서는 꿀벌들이 바쁘게 날아다닙니다. 꿀벌은 꽃에서 꿀과 꽃가루를 모아 벌집으로 가져갑니다. 그런데 넓은 들판에서 꽃이 많이 핀 곳을 처음 찾아낸 꿀벌은 그 위치를 다른 꿀벌들에게 어떻게 알려 줄까요? 꿀벌은 말을 할 수 없지만, ‘춤’이라는 특별한 방법으로 정보를 나눕니다.
+
+먹이를 찾아낸 꿀벌은 벌집으로 돌아와 다른 벌들 앞에서 춤을 춥니다. 꽃밭이 벌집에서 가까울 때에는 동그라미를 그리며 빙글빙글 도는 ‘원형 춤’을 춥니다. 이 춤은 ‘가까운 곳에 먹이가 있으니 주변을 찾아보라’는 뜻입니다. 꽃밭이 멀리 있을 때에는 숫자 8과 비슷한 모양으로 움직이는 ‘8자 춤’을 춥니다. 8자 춤을 출 때 꿀벌은 가운데 곧은 길을 지나가면서 엉덩이를 좌우로 흔드는데, 이 때문에 ‘엉덩이춤’이라고도 부릅니다.
+
+8자 춤에는 꽃밭의 방향과 거리가 담겨 있습니다. 꿀벌은 해를 기준으로 방향을 알립니다. 가운데 곧은 길을 위쪽으로 똑바로 걸어가면 해가 있는 쪽으로 날아가라는 뜻이고, 아래쪽으로 걸어가면 해의 반대쪽으로 가라는 뜻입니다. 또 곧은 길을 걸어가는 동안 엉덩이를 흔드는 시간이 길수록 꽃밭이 멀리 있다는 것을 나타냅니다.
+
+다른 꿀벌들은 춤추는 벌을 더듬이로 만지며 따라다니다가 춤의 뜻을 알아차리고 꽃밭을 향해 날아갑니다. 벌집 안은 깜깜하기 때문에 눈으로 보기보다는 몸의 움직임을 더듬이로 느끼는 것입니다. 춤을 보고 나간 벌이 꽃밭을 찾지 못하면 다시 벌집으로 돌아와 다른 벌의 춤을 보고 새로 길을 나서기도 합니다. 춤추는 벌의 몸에 묻은 꽃 냄새도 어떤 꽃을 찾아야 하는지 알려 주는 단서가 됩니다.
+
+이러한 꿀벌의 춤을 처음 밝혀낸 사람은 오스트리아의 과학자 카를 폰 프리슈입니다. 그는 먹이 그릇을 벌집에서 점점 먼 곳으로 옮겨 가며 거리에 따라 꿀벌의 춤이 어떻게 달라지는지 살펴보는 등, 여러 해 동안 꿀벌을 끈기 있게 관찰하고 실험한 끝에 춤의 비밀을 알아냈고, 이 연구로 노벨상을 받았습니다.
+
+꿀벌 한 마리는 작고 약하지만, 수만 마리의 꿀벌은 춤으로 정보를 나누며 먹이를 효율적으로 모읍니다. 서로 정보를 나누고 힘을 합쳐 일하는 꿀벌의 모습은 우리에게도 많은 것을 알려 줍니다.','벌집 안의 꿀벌들이 춤추는 벌을 더듬이로 만지며 따라다니는 까닭은 무엇인가요?',NULL,'["춤을 잘못 춘 벌을 벌집 밖으로 내보내려고","벌집 안이 깜깜해서 눈으로 보기보다 몸의 움직임을 더듬이로 느끼려고","춤추는 벌에게서 꿀을 나누어 받으려고","춤추는 벌이 길을 잃지 않도록 붙잡아 주려고"]',1,'넷째 문단에서 벌집 안은 깜깜하기 때문에 몸의 움직임을 더듬이로 느낀다고 설명합니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-675d9b27a758','KR_KOR','nonfiction','mcq',4,'[푸른초 어린이 기자단] 아침밥, 먹고 다니나요?
+
+“배에서 꼬르륵 소리가 나서 2교시부터는 집중이 잘 안 돼요.” 푸른초등학교 5학년 한 학생의 말입니다. 어린이 기자단은 아침밥을 먹지 않고 학교에 오는 학생이 얼마나 되는지 알아보려고 지난달 3학년부터 6학년까지 학생 400명에게 설문 조사를 했습니다. 학년마다 100명씩, 같은 수의 학생에게 물었습니다.
+
+조사 결과는 [자료 1]과 같습니다. 아침밥을 먹고 등교하는 학생의 비율은 3학년이 가장 높았고, 학년이 올라갈수록 점점 낮아졌습니다. 6학년은 열 명 가운데 네 명 가까이가 아침을 거르고 학교에 오는 셈입니다.
+
+아침밥을 먹지 않는 까닭을 물었더니 [자료 2]처럼 ‘시간이 없어서’라는 대답이 가장 많았습니다. 밤늦게 자서 아침에 일어나기 힘들다는 학생이 많았습니다. 그다음으로 많은 대답은 ‘입맛이 없어서’였습니다. 이 학생들은 일어나자마자 밥을 먹기가 부담스럽다고 했습니다. 보건 선생님께서는 일어난 뒤 물 한 컵을 마시고 가볍게 몸을 움직이면 입맛이 도는 데 도움이 된다고 하셨습니다.
+
+전문가들은 아침밥이 뇌가 활동하는 데 필요한 에너지를 준다고 말합니다. 우리 몸은 잠자는 동안에도 에너지를 쓰기 때문에, 아침에 일어났을 때 우리 몸은 연료가 거의 바닥난 자동차와 비슷합니다. 이때 아침밥을 먹지 않으면 오전 내내 기운이 없고 집중하기 어려울 수 있습니다. 또 아침을 굶으면 점심을 지나치게 많이 먹게 되기도 합니다. 요즘 아침을 챙겨 먹기 시작했다는 6학년 이도현 학생은 “오전 수업 시간에 덜 졸리고 배도 덜 고파요.”라고 말했습니다.
+
+그렇다고 아침밥을 꼭 거창하게 차려 먹어야 하는 것은 아닙니다. 바나나 한 개와 우유 한 잔, 삶은 달걀 하나만으로도 몸에 에너지를 채울 수 있습니다. 전날 밤 조금 일찍 잠자리에 들어 아침에 10분만 일찍 일어나는 것부터 시작해 보면 어떨까요? 든든한 아침밥 한 끼가 활기찬 하루를 만들어 줄 것입니다.','이 글을 쓴 목적으로 가장 알맞은 것은 무엇인가요?','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 300" width="620" height="300" font-family="sans-serif"><rect x="0" y="0" width="620" height="300" fill="#fff"/><text x="165" y="20" text-anchor="middle" font-size="15" font-weight="bold" fill="#0a1f44">[자료 1] 아침밥을 먹고 오는 학생</text><text x="44" y="34" text-anchor="end" font-size="12" fill="#555">(%)</text><line x1="50" y1="270.0" x2="320" y2="270.0" stroke="#ccc" stroke-width="1"/><text x="44" y="274.0" text-anchor="end" font-size="12" fill="#333">0</text><line x1="50" y1="226.0" x2="320" y2="226.0" stroke="#ccc" stroke-width="1"/><text x="44" y="230.0" text-anchor="end" font-size="12" fill="#333">20</text><line x1="50" y1="182.0" x2="320" y2="182.0" stroke="#ccc" stroke-width="1"/><text x="44" y="186.0" text-anchor="end" font-size="12" fill="#333">40</text><line x1="50" y1="138.0" x2="320" y2="138.0" stroke="#ccc" stroke-width="1"/><text x="44" y="142.0" text-anchor="end" font-size="12" fill="#333">60</text><line x1="50" y1="94.0" x2="320" y2="94.0" stroke="#ccc" stroke-width="1"/><text x="44" y="98.0" text-anchor="end" font-size="12" fill="#333">80</text><line x1="50" y1="50.0" x2="320" y2="50.0" stroke="#ccc" stroke-width="1"/><text x="44" y="54.0" text-anchor="end" font-size="12" fill="#333">100</text><line x1="50" y1="45" x2="50" y2="270" stroke="#333" stroke-width="2"/><line x1="50" y1="270" x2="320" y2="270" stroke="#333" stroke-width="2"/><rect x="65.2" y="80.8" width="37.1" height="189.2" fill="#0a1f44"/><text x="83.8" y="74.8" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">86%</text><text x="83.8" y="288" text-anchor="middle" font-size="13" fill="#333">3학년</text><rect x="132.7" y="96.2" width="37.1" height="173.8" fill="#0a1f44"/><text x="151.3" y="90.2" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">79%</text><text x="151.3" y="288" text-anchor="middle" font-size="13" fill="#333">4학년</text><rect x="200.2" y="116.0" width="37.1" height="154.0" fill="#0a1f44"/><text x="218.8" y="110.0" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">70%</text><text x="218.8" y="288" text-anchor="middle" font-size="13" fill="#333">5학년</text><rect x="267.7" y="135.8" width="37.1" height="134.2" fill="#0a1f44"/><text x="286.3" y="129.8" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">61%</text><text x="286.3" y="288" text-anchor="middle" font-size="13" fill="#333">6학년</text><text x="475" y="24" text-anchor="middle" font-size="15" font-weight="bold" fill="#0a1f44">[자료 2] 아침밥을 거르는 까닭</text><rect x="345" y="36" width="260" height="34" fill="#e8ebf2"/><text x="440" y="58" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">까닭</text><text x="570" y="58" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">비율</text><text x="440" y="92" text-anchor="middle" font-size="13" fill="#222">시간이 없어서</text><text x="570" y="92" text-anchor="middle" font-size="13" fill="#222">48%</text><text x="440" y="126" text-anchor="middle" font-size="13" fill="#222">입맛이 없어서</text><text x="570" y="126" text-anchor="middle" font-size="13" fill="#222">31%</text><text x="440" y="160" text-anchor="middle" font-size="13" fill="#222">차려 줄 사람이 없어서</text><text x="570" y="160" text-anchor="middle" font-size="13" fill="#222">12%</text><text x="440" y="194" text-anchor="middle" font-size="13" fill="#222">기타</text><text x="570" y="194" text-anchor="middle" font-size="13" fill="#222">9%</text><rect x="345" y="36" width="260" height="170" fill="none" stroke="#333" stroke-width="2"/><line x1="345" y1="70" x2="605" y2="70" stroke="#333" stroke-width="2"/><line x1="345" y1="104" x2="605" y2="104" stroke="#333" stroke-width="1"/><line x1="345" y1="138" x2="605" y2="138" stroke="#333" stroke-width="1"/><line x1="345" y1="172" x2="605" y2="172" stroke="#333" stroke-width="1"/><line x1="535" y1="36" x2="535" y2="206" stroke="#333" stroke-width="1"/></svg>','["아침밥을 거르는 학생이 많다는 것을 알리고 아침밥을 챙겨 먹자고 권하려고","맛있는 아침 메뉴를 만드는 방법을 소개하려고","학년별로 점심을 먹는 양이 어떻게 다른지 비교하려고","어린이 기자단이 하는 일을 자랑하려고"]',0,'설문 조사 결과로 아침을 거르는 학생이 많다는 것을 알리고, 마지막 문단에서 아침밥을 챙겨 먹는 방법을 제안하고 있습니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-ca59d2476346','KR_KOR','nonfiction','mcq',4,'[푸른초 어린이 기자단] 아침밥, 먹고 다니나요?
+
+“배에서 꼬르륵 소리가 나서 2교시부터는 집중이 잘 안 돼요.” 푸른초등학교 5학년 한 학생의 말입니다. 어린이 기자단은 아침밥을 먹지 않고 학교에 오는 학생이 얼마나 되는지 알아보려고 지난달 3학년부터 6학년까지 학생 400명에게 설문 조사를 했습니다. 학년마다 100명씩, 같은 수의 학생에게 물었습니다.
+
+조사 결과는 [자료 1]과 같습니다. 아침밥을 먹고 등교하는 학생의 비율은 3학년이 가장 높았고, 학년이 올라갈수록 점점 낮아졌습니다. 6학년은 열 명 가운데 네 명 가까이가 아침을 거르고 학교에 오는 셈입니다.
+
+아침밥을 먹지 않는 까닭을 물었더니 [자료 2]처럼 ‘시간이 없어서’라는 대답이 가장 많았습니다. 밤늦게 자서 아침에 일어나기 힘들다는 학생이 많았습니다. 그다음으로 많은 대답은 ‘입맛이 없어서’였습니다. 이 학생들은 일어나자마자 밥을 먹기가 부담스럽다고 했습니다. 보건 선생님께서는 일어난 뒤 물 한 컵을 마시고 가볍게 몸을 움직이면 입맛이 도는 데 도움이 된다고 하셨습니다.
+
+전문가들은 아침밥이 뇌가 활동하는 데 필요한 에너지를 준다고 말합니다. 우리 몸은 잠자는 동안에도 에너지를 쓰기 때문에, 아침에 일어났을 때 우리 몸은 연료가 거의 바닥난 자동차와 비슷합니다. 이때 아침밥을 먹지 않으면 오전 내내 기운이 없고 집중하기 어려울 수 있습니다. 또 아침을 굶으면 점심을 지나치게 많이 먹게 되기도 합니다. 요즘 아침을 챙겨 먹기 시작했다는 6학년 이도현 학생은 “오전 수업 시간에 덜 졸리고 배도 덜 고파요.”라고 말했습니다.
+
+그렇다고 아침밥을 꼭 거창하게 차려 먹어야 하는 것은 아닙니다. 바나나 한 개와 우유 한 잔, 삶은 달걀 하나만으로도 몸에 에너지를 채울 수 있습니다. 전날 밤 조금 일찍 잠자리에 들어 아침에 10분만 일찍 일어나는 것부터 시작해 보면 어떨까요? 든든한 아침밥 한 끼가 활기찬 하루를 만들어 줄 것입니다.','[자료 1]을 바르게 읽은 것은 무엇인가요?','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 300" width="620" height="300" font-family="sans-serif"><rect x="0" y="0" width="620" height="300" fill="#fff"/><text x="165" y="20" text-anchor="middle" font-size="15" font-weight="bold" fill="#0a1f44">[자료 1] 아침밥을 먹고 오는 학생</text><text x="44" y="34" text-anchor="end" font-size="12" fill="#555">(%)</text><line x1="50" y1="270.0" x2="320" y2="270.0" stroke="#ccc" stroke-width="1"/><text x="44" y="274.0" text-anchor="end" font-size="12" fill="#333">0</text><line x1="50" y1="226.0" x2="320" y2="226.0" stroke="#ccc" stroke-width="1"/><text x="44" y="230.0" text-anchor="end" font-size="12" fill="#333">20</text><line x1="50" y1="182.0" x2="320" y2="182.0" stroke="#ccc" stroke-width="1"/><text x="44" y="186.0" text-anchor="end" font-size="12" fill="#333">40</text><line x1="50" y1="138.0" x2="320" y2="138.0" stroke="#ccc" stroke-width="1"/><text x="44" y="142.0" text-anchor="end" font-size="12" fill="#333">60</text><line x1="50" y1="94.0" x2="320" y2="94.0" stroke="#ccc" stroke-width="1"/><text x="44" y="98.0" text-anchor="end" font-size="12" fill="#333">80</text><line x1="50" y1="50.0" x2="320" y2="50.0" stroke="#ccc" stroke-width="1"/><text x="44" y="54.0" text-anchor="end" font-size="12" fill="#333">100</text><line x1="50" y1="45" x2="50" y2="270" stroke="#333" stroke-width="2"/><line x1="50" y1="270" x2="320" y2="270" stroke="#333" stroke-width="2"/><rect x="65.2" y="80.8" width="37.1" height="189.2" fill="#0a1f44"/><text x="83.8" y="74.8" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">86%</text><text x="83.8" y="288" text-anchor="middle" font-size="13" fill="#333">3학년</text><rect x="132.7" y="96.2" width="37.1" height="173.8" fill="#0a1f44"/><text x="151.3" y="90.2" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">79%</text><text x="151.3" y="288" text-anchor="middle" font-size="13" fill="#333">4학년</text><rect x="200.2" y="116.0" width="37.1" height="154.0" fill="#0a1f44"/><text x="218.8" y="110.0" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">70%</text><text x="218.8" y="288" text-anchor="middle" font-size="13" fill="#333">5학년</text><rect x="267.7" y="135.8" width="37.1" height="134.2" fill="#0a1f44"/><text x="286.3" y="129.8" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">61%</text><text x="286.3" y="288" text-anchor="middle" font-size="13" fill="#333">6학년</text><text x="475" y="24" text-anchor="middle" font-size="15" font-weight="bold" fill="#0a1f44">[자료 2] 아침밥을 거르는 까닭</text><rect x="345" y="36" width="260" height="34" fill="#e8ebf2"/><text x="440" y="58" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">까닭</text><text x="570" y="58" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">비율</text><text x="440" y="92" text-anchor="middle" font-size="13" fill="#222">시간이 없어서</text><text x="570" y="92" text-anchor="middle" font-size="13" fill="#222">48%</text><text x="440" y="126" text-anchor="middle" font-size="13" fill="#222">입맛이 없어서</text><text x="570" y="126" text-anchor="middle" font-size="13" fill="#222">31%</text><text x="440" y="160" text-anchor="middle" font-size="13" fill="#222">차려 줄 사람이 없어서</text><text x="570" y="160" text-anchor="middle" font-size="13" fill="#222">12%</text><text x="440" y="194" text-anchor="middle" font-size="13" fill="#222">기타</text><text x="570" y="194" text-anchor="middle" font-size="13" fill="#222">9%</text><rect x="345" y="36" width="260" height="170" fill="none" stroke="#333" stroke-width="2"/><line x1="345" y1="70" x2="605" y2="70" stroke="#333" stroke-width="2"/><line x1="345" y1="104" x2="605" y2="104" stroke="#333" stroke-width="1"/><line x1="345" y1="138" x2="605" y2="138" stroke="#333" stroke-width="1"/><line x1="345" y1="172" x2="605" y2="172" stroke="#333" stroke-width="1"/><line x1="535" y1="36" x2="535" y2="206" stroke="#333" stroke-width="1"/></svg>','["5학년은 절반이 넘는 학생이 아침밥을 거른다.","아침밥을 먹고 오는 학생의 비율은 4학년이 가장 높다.","학년이 높을수록 아침밥을 먹고 오는 학생의 비율이 낮다.","바로 위 학년과의 차이는 3학년과 4학년 사이가 가장 크다."]',2,'86% → 79% → 70% → 61%로 학년이 올라갈수록 낮아집니다. 5학년은 70%가 먹고 오므로 거르는 학생은 30%뿐이고, 차이는 3·4학년 7%, 4·5학년 9%, 5·6학년 9%라서 3·4학년 사이가 가장 작습니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-e3265975fe9e','KR_KOR','nonfiction','mcq',4,'[푸른초 어린이 기자단] 아침밥, 먹고 다니나요?
+
+“배에서 꼬르륵 소리가 나서 2교시부터는 집중이 잘 안 돼요.” 푸른초등학교 5학년 한 학생의 말입니다. 어린이 기자단은 아침밥을 먹지 않고 학교에 오는 학생이 얼마나 되는지 알아보려고 지난달 3학년부터 6학년까지 학생 400명에게 설문 조사를 했습니다. 학년마다 100명씩, 같은 수의 학생에게 물었습니다.
+
+조사 결과는 [자료 1]과 같습니다. 아침밥을 먹고 등교하는 학생의 비율은 3학년이 가장 높았고, 학년이 올라갈수록 점점 낮아졌습니다. 6학년은 열 명 가운데 네 명 가까이가 아침을 거르고 학교에 오는 셈입니다.
+
+아침밥을 먹지 않는 까닭을 물었더니 [자료 2]처럼 ‘시간이 없어서’라는 대답이 가장 많았습니다. 밤늦게 자서 아침에 일어나기 힘들다는 학생이 많았습니다. 그다음으로 많은 대답은 ‘입맛이 없어서’였습니다. 이 학생들은 일어나자마자 밥을 먹기가 부담스럽다고 했습니다. 보건 선생님께서는 일어난 뒤 물 한 컵을 마시고 가볍게 몸을 움직이면 입맛이 도는 데 도움이 된다고 하셨습니다.
+
+전문가들은 아침밥이 뇌가 활동하는 데 필요한 에너지를 준다고 말합니다. 우리 몸은 잠자는 동안에도 에너지를 쓰기 때문에, 아침에 일어났을 때 우리 몸은 연료가 거의 바닥난 자동차와 비슷합니다. 이때 아침밥을 먹지 않으면 오전 내내 기운이 없고 집중하기 어려울 수 있습니다. 또 아침을 굶으면 점심을 지나치게 많이 먹게 되기도 합니다. 요즘 아침을 챙겨 먹기 시작했다는 6학년 이도현 학생은 “오전 수업 시간에 덜 졸리고 배도 덜 고파요.”라고 말했습니다.
+
+그렇다고 아침밥을 꼭 거창하게 차려 먹어야 하는 것은 아닙니다. 바나나 한 개와 우유 한 잔, 삶은 달걀 하나만으로도 몸에 에너지를 채울 수 있습니다. 전날 밤 조금 일찍 잠자리에 들어 아침에 10분만 일찍 일어나는 것부터 시작해 보면 어떨까요? 든든한 아침밥 한 끼가 활기찬 하루를 만들어 줄 것입니다.','[자료 2]에서 가장 많은 학생이 고른 까닭을 줄이기 위해 글쓴이가 제안한 방법은 무엇인가요?','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 300" width="620" height="300" font-family="sans-serif"><rect x="0" y="0" width="620" height="300" fill="#fff"/><text x="165" y="20" text-anchor="middle" font-size="15" font-weight="bold" fill="#0a1f44">[자료 1] 아침밥을 먹고 오는 학생</text><text x="44" y="34" text-anchor="end" font-size="12" fill="#555">(%)</text><line x1="50" y1="270.0" x2="320" y2="270.0" stroke="#ccc" stroke-width="1"/><text x="44" y="274.0" text-anchor="end" font-size="12" fill="#333">0</text><line x1="50" y1="226.0" x2="320" y2="226.0" stroke="#ccc" stroke-width="1"/><text x="44" y="230.0" text-anchor="end" font-size="12" fill="#333">20</text><line x1="50" y1="182.0" x2="320" y2="182.0" stroke="#ccc" stroke-width="1"/><text x="44" y="186.0" text-anchor="end" font-size="12" fill="#333">40</text><line x1="50" y1="138.0" x2="320" y2="138.0" stroke="#ccc" stroke-width="1"/><text x="44" y="142.0" text-anchor="end" font-size="12" fill="#333">60</text><line x1="50" y1="94.0" x2="320" y2="94.0" stroke="#ccc" stroke-width="1"/><text x="44" y="98.0" text-anchor="end" font-size="12" fill="#333">80</text><line x1="50" y1="50.0" x2="320" y2="50.0" stroke="#ccc" stroke-width="1"/><text x="44" y="54.0" text-anchor="end" font-size="12" fill="#333">100</text><line x1="50" y1="45" x2="50" y2="270" stroke="#333" stroke-width="2"/><line x1="50" y1="270" x2="320" y2="270" stroke="#333" stroke-width="2"/><rect x="65.2" y="80.8" width="37.1" height="189.2" fill="#0a1f44"/><text x="83.8" y="74.8" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">86%</text><text x="83.8" y="288" text-anchor="middle" font-size="13" fill="#333">3학년</text><rect x="132.7" y="96.2" width="37.1" height="173.8" fill="#0a1f44"/><text x="151.3" y="90.2" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">79%</text><text x="151.3" y="288" text-anchor="middle" font-size="13" fill="#333">4학년</text><rect x="200.2" y="116.0" width="37.1" height="154.0" fill="#0a1f44"/><text x="218.8" y="110.0" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">70%</text><text x="218.8" y="288" text-anchor="middle" font-size="13" fill="#333">5학년</text><rect x="267.7" y="135.8" width="37.1" height="134.2" fill="#0a1f44"/><text x="286.3" y="129.8" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">61%</text><text x="286.3" y="288" text-anchor="middle" font-size="13" fill="#333">6학년</text><text x="475" y="24" text-anchor="middle" font-size="15" font-weight="bold" fill="#0a1f44">[자료 2] 아침밥을 거르는 까닭</text><rect x="345" y="36" width="260" height="34" fill="#e8ebf2"/><text x="440" y="58" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">까닭</text><text x="570" y="58" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">비율</text><text x="440" y="92" text-anchor="middle" font-size="13" fill="#222">시간이 없어서</text><text x="570" y="92" text-anchor="middle" font-size="13" fill="#222">48%</text><text x="440" y="126" text-anchor="middle" font-size="13" fill="#222">입맛이 없어서</text><text x="570" y="126" text-anchor="middle" font-size="13" fill="#222">31%</text><text x="440" y="160" text-anchor="middle" font-size="13" fill="#222">차려 줄 사람이 없어서</text><text x="570" y="160" text-anchor="middle" font-size="13" fill="#222">12%</text><text x="440" y="194" text-anchor="middle" font-size="13" fill="#222">기타</text><text x="570" y="194" text-anchor="middle" font-size="13" fill="#222">9%</text><rect x="345" y="36" width="260" height="170" fill="none" stroke="#333" stroke-width="2"/><line x1="345" y1="70" x2="605" y2="70" stroke="#333" stroke-width="2"/><line x1="345" y1="104" x2="605" y2="104" stroke="#333" stroke-width="1"/><line x1="345" y1="138" x2="605" y2="138" stroke="#333" stroke-width="1"/><line x1="345" y1="172" x2="605" y2="172" stroke="#333" stroke-width="1"/><line x1="535" y1="36" x2="535" y2="206" stroke="#333" stroke-width="1"/></svg>','["전날 밤 일찍 잠자리에 들어 아침에 10분 일찍 일어나기","학교에서 아침밥을 나누어 주자고 건의하기","입맛이 돌도록 좋아하는 반찬을 만들어 먹기","점심을 많이 먹어서 아침을 대신하기"]',0,'[자료 2]에서 가장 많은 까닭은 ‘시간이 없어서(48%)’입니다. 글쓴이는 마지막 문단에서 일찍 자고 10분 일찍 일어나 보자고 제안했습니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-eb26b5957e0e','KR_KOR','nonfiction','mcq',4,'[푸른초 어린이 기자단] 아침밥, 먹고 다니나요?
+
+“배에서 꼬르륵 소리가 나서 2교시부터는 집중이 잘 안 돼요.” 푸른초등학교 5학년 한 학생의 말입니다. 어린이 기자단은 아침밥을 먹지 않고 학교에 오는 학생이 얼마나 되는지 알아보려고 지난달 3학년부터 6학년까지 학생 400명에게 설문 조사를 했습니다. 학년마다 100명씩, 같은 수의 학생에게 물었습니다.
+
+조사 결과는 [자료 1]과 같습니다. 아침밥을 먹고 등교하는 학생의 비율은 3학년이 가장 높았고, 학년이 올라갈수록 점점 낮아졌습니다. 6학년은 열 명 가운데 네 명 가까이가 아침을 거르고 학교에 오는 셈입니다.
+
+아침밥을 먹지 않는 까닭을 물었더니 [자료 2]처럼 ‘시간이 없어서’라는 대답이 가장 많았습니다. 밤늦게 자서 아침에 일어나기 힘들다는 학생이 많았습니다. 그다음으로 많은 대답은 ‘입맛이 없어서’였습니다. 이 학생들은 일어나자마자 밥을 먹기가 부담스럽다고 했습니다. 보건 선생님께서는 일어난 뒤 물 한 컵을 마시고 가볍게 몸을 움직이면 입맛이 도는 데 도움이 된다고 하셨습니다.
+
+전문가들은 아침밥이 뇌가 활동하는 데 필요한 에너지를 준다고 말합니다. 우리 몸은 잠자는 동안에도 에너지를 쓰기 때문에, 아침에 일어났을 때 우리 몸은 연료가 거의 바닥난 자동차와 비슷합니다. 이때 아침밥을 먹지 않으면 오전 내내 기운이 없고 집중하기 어려울 수 있습니다. 또 아침을 굶으면 점심을 지나치게 많이 먹게 되기도 합니다. 요즘 아침을 챙겨 먹기 시작했다는 6학년 이도현 학생은 “오전 수업 시간에 덜 졸리고 배도 덜 고파요.”라고 말했습니다.
+
+그렇다고 아침밥을 꼭 거창하게 차려 먹어야 하는 것은 아닙니다. 바나나 한 개와 우유 한 잔, 삶은 달걀 하나만으로도 몸에 에너지를 채울 수 있습니다. 전날 밤 조금 일찍 잠자리에 들어 아침에 10분만 일찍 일어나는 것부터 시작해 보면 어떨까요? 든든한 아침밥 한 끼가 활기찬 하루를 만들어 줄 것입니다.','‘아침에 일어났을 때 우리 몸은 연료가 거의 바닥난 자동차와 비슷합니다.’에 쓰인 설명 방법으로 알맞은 것은 무엇인가요?','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 300" width="620" height="300" font-family="sans-serif"><rect x="0" y="0" width="620" height="300" fill="#fff"/><text x="165" y="20" text-anchor="middle" font-size="15" font-weight="bold" fill="#0a1f44">[자료 1] 아침밥을 먹고 오는 학생</text><text x="44" y="34" text-anchor="end" font-size="12" fill="#555">(%)</text><line x1="50" y1="270.0" x2="320" y2="270.0" stroke="#ccc" stroke-width="1"/><text x="44" y="274.0" text-anchor="end" font-size="12" fill="#333">0</text><line x1="50" y1="226.0" x2="320" y2="226.0" stroke="#ccc" stroke-width="1"/><text x="44" y="230.0" text-anchor="end" font-size="12" fill="#333">20</text><line x1="50" y1="182.0" x2="320" y2="182.0" stroke="#ccc" stroke-width="1"/><text x="44" y="186.0" text-anchor="end" font-size="12" fill="#333">40</text><line x1="50" y1="138.0" x2="320" y2="138.0" stroke="#ccc" stroke-width="1"/><text x="44" y="142.0" text-anchor="end" font-size="12" fill="#333">60</text><line x1="50" y1="94.0" x2="320" y2="94.0" stroke="#ccc" stroke-width="1"/><text x="44" y="98.0" text-anchor="end" font-size="12" fill="#333">80</text><line x1="50" y1="50.0" x2="320" y2="50.0" stroke="#ccc" stroke-width="1"/><text x="44" y="54.0" text-anchor="end" font-size="12" fill="#333">100</text><line x1="50" y1="45" x2="50" y2="270" stroke="#333" stroke-width="2"/><line x1="50" y1="270" x2="320" y2="270" stroke="#333" stroke-width="2"/><rect x="65.2" y="80.8" width="37.1" height="189.2" fill="#0a1f44"/><text x="83.8" y="74.8" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">86%</text><text x="83.8" y="288" text-anchor="middle" font-size="13" fill="#333">3학년</text><rect x="132.7" y="96.2" width="37.1" height="173.8" fill="#0a1f44"/><text x="151.3" y="90.2" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">79%</text><text x="151.3" y="288" text-anchor="middle" font-size="13" fill="#333">4학년</text><rect x="200.2" y="116.0" width="37.1" height="154.0" fill="#0a1f44"/><text x="218.8" y="110.0" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">70%</text><text x="218.8" y="288" text-anchor="middle" font-size="13" fill="#333">5학년</text><rect x="267.7" y="135.8" width="37.1" height="134.2" fill="#0a1f44"/><text x="286.3" y="129.8" text-anchor="middle" font-size="13" fill="#b31942" font-weight="bold">61%</text><text x="286.3" y="288" text-anchor="middle" font-size="13" fill="#333">6학년</text><text x="475" y="24" text-anchor="middle" font-size="15" font-weight="bold" fill="#0a1f44">[자료 2] 아침밥을 거르는 까닭</text><rect x="345" y="36" width="260" height="34" fill="#e8ebf2"/><text x="440" y="58" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">까닭</text><text x="570" y="58" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">비율</text><text x="440" y="92" text-anchor="middle" font-size="13" fill="#222">시간이 없어서</text><text x="570" y="92" text-anchor="middle" font-size="13" fill="#222">48%</text><text x="440" y="126" text-anchor="middle" font-size="13" fill="#222">입맛이 없어서</text><text x="570" y="126" text-anchor="middle" font-size="13" fill="#222">31%</text><text x="440" y="160" text-anchor="middle" font-size="13" fill="#222">차려 줄 사람이 없어서</text><text x="570" y="160" text-anchor="middle" font-size="13" fill="#222">12%</text><text x="440" y="194" text-anchor="middle" font-size="13" fill="#222">기타</text><text x="570" y="194" text-anchor="middle" font-size="13" fill="#222">9%</text><rect x="345" y="36" width="260" height="170" fill="none" stroke="#333" stroke-width="2"/><line x1="345" y1="70" x2="605" y2="70" stroke="#333" stroke-width="2"/><line x1="345" y1="104" x2="605" y2="104" stroke="#333" stroke-width="1"/><line x1="345" y1="138" x2="605" y2="138" stroke="#333" stroke-width="1"/><line x1="345" y1="172" x2="605" y2="172" stroke="#333" stroke-width="1"/><line x1="535" y1="36" x2="535" y2="206" stroke="#333" stroke-width="1"/></svg>','["일이 일어난 차례에 따라 설명했다.","조사한 숫자를 들어 정확하게 설명했다.","대상을 종류별로 나누어 설명했다.","잘 아는 다른 대상에 빗대어 쉽게 설명했다."]',3,'에너지가 부족한 아침의 몸 상태를 연료가 떨어진 자동차에 빗대어(비유하여) 읽는 사람이 쉽게 이해하도록 했습니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-e2e00f96e3b0','KR_KOR','nonfiction','mcq',4,'전화도 인터넷도 없던 옛날에는 먼 곳에 급한 소식을 어떻게 전했을까요? 말을 탄 사람이 달려가 소식을 전할 수도 있었지만, 그러면 며칠씩 걸렸습니다. 그래서 조상들은 ‘봉수’라는 방법을 생각해 냈습니다.
+
+봉수는 밤에는 횃불, 낮에는 연기를 올려 소식을 전하는 통신 방법입니다. 밤에 올리는 불을 ‘봉’, 낮에 올리는 연기를 ‘수’라고 하여 둘을 합쳐 봉수라고 불렀습니다. 낮에는 불빛이 잘 보이지 않고 밤에는 연기가 잘 보이지 않기 때문에 이렇게 나누어 쓴 것입니다. 연기를 피울 때에는 짐승의 똥을 섞어 태우기도 했는데, 그러면 연기가 바람에 쉽게 흩어지지 않고 곧게 올라갔다고 합니다.
+
+봉수를 올리는 곳을 ‘봉수대’라고 합니다. 봉수대는 멀리까지 잘 보이도록 높은 산꼭대기에 세웠고, 이웃한 봉수대끼리 서로 바라볼 수 있는 거리에 두었습니다. 봉수대에서는 군사들이 밤낮으로 번갈아 지키며 이웃 봉수대를 살폈고, 불을 피울 나무와 짚을 늘 넉넉히 쌓아 두었습니다. 한 봉수대에서 불을 올리면 다음 봉수대에서 그것을 보고 똑같이 불을 올리는 방식으로, 소식이 이어달리기하듯 전해졌습니다. 조선 시대에는 국경에서 올린 봉수가 반나절쯤 만에 한양의 남산까지 닿았다고 합니다.
+
+봉수는 횃불이나 연기의 개수로 상황을 알렸습니다. [표]처럼 아무 일이 없는 평상시에도 횃불 한 개를 올렸고, 상황이 위험할수록 개수를 늘렸습니다. 날마다 횃불 한 개를 올린 것은 ‘오늘도 무사하다’는 것을 알리는 동시에, 봉수대가 제대로 일하고 있는지 확인하는 뜻도 있었습니다.
+
+봉수는 날씨의 영향을 많이 받았습니다. 비가 오거나 안개가 짙게 낀 날에는 불빛과 연기가 잘 보이지 않았습니다. 이럴 때에는 봉수대를 지키는 군사가 직접 다음 봉수대까지 달려가서 소식을 알렸습니다. 또 신호를 잘못 올리거나 제때 올리지 않은 군사는 무거운 벌을 받았습니다.
+
+봉수 제도는 오랫동안 나라의 소식을 전하는 데 큰 역할을 했지만, 전화와 전신이 들어오면서 사라졌습니다. 하지만 지금도 서울 남산을 비롯한 여러 곳에 봉수대가 남아 있어, 소식을 빠르게 전하려고 애썼던 조상들의 지혜를 보여 줍니다.','적이 국경을 넘어 들어왔을 때 봉수대에서 올린 횃불은 몇 개인가요?','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 236" width="440" height="236" font-family="sans-serif"><rect x="0" y="0" width="440" height="236" fill="#fff"/><text x="220" y="24" text-anchor="middle" font-size="15" font-weight="bold" fill="#0a1f44">[표] 봉수대에서 올린 횃불(연기)의 개수와 뜻</text><rect x="10" y="36" width="420" height="32" fill="#e8ebf2"/><text x="55" y="57" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">개수</text><text x="265" y="57" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">알리는 상황</text><text x="55" y="89" text-anchor="middle" font-size="13" fill="#222">1개</text><text x="265" y="89" text-anchor="middle" font-size="13" fill="#222">아무 일이 없는 평상시</text><text x="55" y="121" text-anchor="middle" font-size="13" fill="#222">2개</text><text x="265" y="121" text-anchor="middle" font-size="13" fill="#222">바다나 국경 밖에 적이 나타남</text><text x="55" y="153" text-anchor="middle" font-size="13" fill="#222">3개</text><text x="265" y="153" text-anchor="middle" font-size="13" fill="#222">적이 국경 가까이 다가옴</text><text x="55" y="185" text-anchor="middle" font-size="13" fill="#222">4개</text><text x="265" y="185" text-anchor="middle" font-size="13" fill="#222">적이 국경을 넘어 들어옴</text><text x="55" y="217" text-anchor="middle" font-size="13" fill="#222">5개</text><text x="265" y="217" text-anchor="middle" font-size="13" fill="#222">적과 싸움이 벌어짐</text><rect x="10" y="36" width="420" height="192" fill="none" stroke="#333" stroke-width="2"/><line x1="10" y1="68" x2="430" y2="68" stroke="#333" stroke-width="2"/><line x1="10" y1="100" x2="430" y2="100" stroke="#333" stroke-width="1"/><line x1="10" y1="132" x2="430" y2="132" stroke="#333" stroke-width="1"/><line x1="10" y1="164" x2="430" y2="164" stroke="#333" stroke-width="1"/><line x1="10" y1="196" x2="430" y2="196" stroke="#333" stroke-width="1"/><line x1="100" y1="36" x2="100" y2="228" stroke="#333" stroke-width="1"/></svg>','["4개","2개","5개","3개"]',0,'[표]에서 적이 국경을 넘어 들어온 상황은 횃불 4개로 알렸습니다. 3개(국경 가까이 다가옴)와 헷갈리지 않아야 합니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-e281c0cf909e','KR_KOR','nonfiction','mcq',4,'전화도 인터넷도 없던 옛날에는 먼 곳에 급한 소식을 어떻게 전했을까요? 말을 탄 사람이 달려가 소식을 전할 수도 있었지만, 그러면 며칠씩 걸렸습니다. 그래서 조상들은 ‘봉수’라는 방법을 생각해 냈습니다.
+
+봉수는 밤에는 횃불, 낮에는 연기를 올려 소식을 전하는 통신 방법입니다. 밤에 올리는 불을 ‘봉’, 낮에 올리는 연기를 ‘수’라고 하여 둘을 합쳐 봉수라고 불렀습니다. 낮에는 불빛이 잘 보이지 않고 밤에는 연기가 잘 보이지 않기 때문에 이렇게 나누어 쓴 것입니다. 연기를 피울 때에는 짐승의 똥을 섞어 태우기도 했는데, 그러면 연기가 바람에 쉽게 흩어지지 않고 곧게 올라갔다고 합니다.
+
+봉수를 올리는 곳을 ‘봉수대’라고 합니다. 봉수대는 멀리까지 잘 보이도록 높은 산꼭대기에 세웠고, 이웃한 봉수대끼리 서로 바라볼 수 있는 거리에 두었습니다. 봉수대에서는 군사들이 밤낮으로 번갈아 지키며 이웃 봉수대를 살폈고, 불을 피울 나무와 짚을 늘 넉넉히 쌓아 두었습니다. 한 봉수대에서 불을 올리면 다음 봉수대에서 그것을 보고 똑같이 불을 올리는 방식으로, 소식이 이어달리기하듯 전해졌습니다. 조선 시대에는 국경에서 올린 봉수가 반나절쯤 만에 한양의 남산까지 닿았다고 합니다.
+
+봉수는 횃불이나 연기의 개수로 상황을 알렸습니다. [표]처럼 아무 일이 없는 평상시에도 횃불 한 개를 올렸고, 상황이 위험할수록 개수를 늘렸습니다. 날마다 횃불 한 개를 올린 것은 ‘오늘도 무사하다’는 것을 알리는 동시에, 봉수대가 제대로 일하고 있는지 확인하는 뜻도 있었습니다.
+
+봉수는 날씨의 영향을 많이 받았습니다. 비가 오거나 안개가 짙게 낀 날에는 불빛과 연기가 잘 보이지 않았습니다. 이럴 때에는 봉수대를 지키는 군사가 직접 다음 봉수대까지 달려가서 소식을 알렸습니다. 또 신호를 잘못 올리거나 제때 올리지 않은 군사는 무거운 벌을 받았습니다.
+
+봉수 제도는 오랫동안 나라의 소식을 전하는 데 큰 역할을 했지만, 전화와 전신이 들어오면서 사라졌습니다. 하지만 지금도 서울 남산을 비롯한 여러 곳에 봉수대가 남아 있어, 소식을 빠르게 전하려고 애썼던 조상들의 지혜를 보여 줍니다.','어느 날 밤, 봉수대를 지키던 군사가 이웃 봉수대에서 횃불 세 개가 올라오는 것을 보았습니다. 이 군사가 해야 할 일로 가장 알맞은 것은 무엇인가요?','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 236" width="440" height="236" font-family="sans-serif"><rect x="0" y="0" width="440" height="236" fill="#fff"/><text x="220" y="24" text-anchor="middle" font-size="15" font-weight="bold" fill="#0a1f44">[표] 봉수대에서 올린 횃불(연기)의 개수와 뜻</text><rect x="10" y="36" width="420" height="32" fill="#e8ebf2"/><text x="55" y="57" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">개수</text><text x="265" y="57" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">알리는 상황</text><text x="55" y="89" text-anchor="middle" font-size="13" fill="#222">1개</text><text x="265" y="89" text-anchor="middle" font-size="13" fill="#222">아무 일이 없는 평상시</text><text x="55" y="121" text-anchor="middle" font-size="13" fill="#222">2개</text><text x="265" y="121" text-anchor="middle" font-size="13" fill="#222">바다나 국경 밖에 적이 나타남</text><text x="55" y="153" text-anchor="middle" font-size="13" fill="#222">3개</text><text x="265" y="153" text-anchor="middle" font-size="13" fill="#222">적이 국경 가까이 다가옴</text><text x="55" y="185" text-anchor="middle" font-size="13" fill="#222">4개</text><text x="265" y="185" text-anchor="middle" font-size="13" fill="#222">적이 국경을 넘어 들어옴</text><text x="55" y="217" text-anchor="middle" font-size="13" fill="#222">5개</text><text x="265" y="217" text-anchor="middle" font-size="13" fill="#222">적과 싸움이 벌어짐</text><rect x="10" y="36" width="420" height="192" fill="none" stroke="#333" stroke-width="2"/><line x1="10" y1="68" x2="430" y2="68" stroke="#333" stroke-width="2"/><line x1="10" y1="100" x2="430" y2="100" stroke="#333" stroke-width="1"/><line x1="10" y1="132" x2="430" y2="132" stroke="#333" stroke-width="1"/><line x1="10" y1="164" x2="430" y2="164" stroke="#333" stroke-width="1"/><line x1="10" y1="196" x2="430" y2="196" stroke="#333" stroke-width="1"/><line x1="100" y1="36" x2="100" y2="228" stroke="#333" stroke-width="1"/></svg>','["적과 싸움이 벌어졌다는 뜻이므로 횃불 다섯 개를 올린다.","적이 국경 가까이 다가왔다는 뜻이므로 자기 봉수대에서도 횃불 세 개를 올린다.","밤에는 연기가 잘 보이지 않으므로 날이 밝을 때까지 기다린다.","아무 일이 없다는 뜻이므로 평소처럼 횃불 한 개만 올린다."]',1,'[표]에서 세 개는 적이 국경 가까이 다가온 상황이고, 글에서 다음 봉수대는 받은 신호를 보고 똑같이 불을 올린다고 했습니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-3a092a38b104','KR_KOR','nonfiction','mcq',4,'전화도 인터넷도 없던 옛날에는 먼 곳에 급한 소식을 어떻게 전했을까요? 말을 탄 사람이 달려가 소식을 전할 수도 있었지만, 그러면 며칠씩 걸렸습니다. 그래서 조상들은 ‘봉수’라는 방법을 생각해 냈습니다.
+
+봉수는 밤에는 횃불, 낮에는 연기를 올려 소식을 전하는 통신 방법입니다. 밤에 올리는 불을 ‘봉’, 낮에 올리는 연기를 ‘수’라고 하여 둘을 합쳐 봉수라고 불렀습니다. 낮에는 불빛이 잘 보이지 않고 밤에는 연기가 잘 보이지 않기 때문에 이렇게 나누어 쓴 것입니다. 연기를 피울 때에는 짐승의 똥을 섞어 태우기도 했는데, 그러면 연기가 바람에 쉽게 흩어지지 않고 곧게 올라갔다고 합니다.
+
+봉수를 올리는 곳을 ‘봉수대’라고 합니다. 봉수대는 멀리까지 잘 보이도록 높은 산꼭대기에 세웠고, 이웃한 봉수대끼리 서로 바라볼 수 있는 거리에 두었습니다. 봉수대에서는 군사들이 밤낮으로 번갈아 지키며 이웃 봉수대를 살폈고, 불을 피울 나무와 짚을 늘 넉넉히 쌓아 두었습니다. 한 봉수대에서 불을 올리면 다음 봉수대에서 그것을 보고 똑같이 불을 올리는 방식으로, 소식이 이어달리기하듯 전해졌습니다. 조선 시대에는 국경에서 올린 봉수가 반나절쯤 만에 한양의 남산까지 닿았다고 합니다.
+
+봉수는 횃불이나 연기의 개수로 상황을 알렸습니다. [표]처럼 아무 일이 없는 평상시에도 횃불 한 개를 올렸고, 상황이 위험할수록 개수를 늘렸습니다. 날마다 횃불 한 개를 올린 것은 ‘오늘도 무사하다’는 것을 알리는 동시에, 봉수대가 제대로 일하고 있는지 확인하는 뜻도 있었습니다.
+
+봉수는 날씨의 영향을 많이 받았습니다. 비가 오거나 안개가 짙게 낀 날에는 불빛과 연기가 잘 보이지 않았습니다. 이럴 때에는 봉수대를 지키는 군사가 직접 다음 봉수대까지 달려가서 소식을 알렸습니다. 또 신호를 잘못 올리거나 제때 올리지 않은 군사는 무거운 벌을 받았습니다.
+
+봉수 제도는 오랫동안 나라의 소식을 전하는 데 큰 역할을 했지만, 전화와 전신이 들어오면서 사라졌습니다. 하지만 지금도 서울 남산을 비롯한 여러 곳에 봉수대가 남아 있어, 소식을 빠르게 전하려고 애썼던 조상들의 지혜를 보여 줍니다.','아무 일이 없는 날에도 횃불 한 개를 올린 까닭으로 알맞은 것은 무엇인가요?','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 236" width="440" height="236" font-family="sans-serif"><rect x="0" y="0" width="440" height="236" fill="#fff"/><text x="220" y="24" text-anchor="middle" font-size="15" font-weight="bold" fill="#0a1f44">[표] 봉수대에서 올린 횃불(연기)의 개수와 뜻</text><rect x="10" y="36" width="420" height="32" fill="#e8ebf2"/><text x="55" y="57" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">개수</text><text x="265" y="57" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">알리는 상황</text><text x="55" y="89" text-anchor="middle" font-size="13" fill="#222">1개</text><text x="265" y="89" text-anchor="middle" font-size="13" fill="#222">아무 일이 없는 평상시</text><text x="55" y="121" text-anchor="middle" font-size="13" fill="#222">2개</text><text x="265" y="121" text-anchor="middle" font-size="13" fill="#222">바다나 국경 밖에 적이 나타남</text><text x="55" y="153" text-anchor="middle" font-size="13" fill="#222">3개</text><text x="265" y="153" text-anchor="middle" font-size="13" fill="#222">적이 국경 가까이 다가옴</text><text x="55" y="185" text-anchor="middle" font-size="13" fill="#222">4개</text><text x="265" y="185" text-anchor="middle" font-size="13" fill="#222">적이 국경을 넘어 들어옴</text><text x="55" y="217" text-anchor="middle" font-size="13" fill="#222">5개</text><text x="265" y="217" text-anchor="middle" font-size="13" fill="#222">적과 싸움이 벌어짐</text><rect x="10" y="36" width="420" height="192" fill="none" stroke="#333" stroke-width="2"/><line x1="10" y1="68" x2="430" y2="68" stroke="#333" stroke-width="2"/><line x1="10" y1="100" x2="430" y2="100" stroke="#333" stroke-width="1"/><line x1="10" y1="132" x2="430" y2="132" stroke="#333" stroke-width="1"/><line x1="10" y1="164" x2="430" y2="164" stroke="#333" stroke-width="1"/><line x1="10" y1="196" x2="430" y2="196" stroke="#333" stroke-width="1"/><line x1="100" y1="36" x2="100" y2="228" stroke="#333" stroke-width="1"/></svg>','["무사하다는 것을 알리고, 봉수대가 제대로 일하는지 확인하려고","밤길을 걷는 사람들에게 길을 밝혀 주려고","횃불을 올리는 연습을 하려고","산짐승이 봉수대에 다가오지 못하게 하려고"]',0,'넷째 문단에서 날마다 올린 횃불 한 개는 ‘오늘도 무사하다’는 것을 알리고 봉수대가 제대로 일하는지 확인하는 뜻이 있었다고 설명합니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-fb2bc362e528','KR_KOR','nonfiction','mcq',4,'전화도 인터넷도 없던 옛날에는 먼 곳에 급한 소식을 어떻게 전했을까요? 말을 탄 사람이 달려가 소식을 전할 수도 있었지만, 그러면 며칠씩 걸렸습니다. 그래서 조상들은 ‘봉수’라는 방법을 생각해 냈습니다.
+
+봉수는 밤에는 횃불, 낮에는 연기를 올려 소식을 전하는 통신 방법입니다. 밤에 올리는 불을 ‘봉’, 낮에 올리는 연기를 ‘수’라고 하여 둘을 합쳐 봉수라고 불렀습니다. 낮에는 불빛이 잘 보이지 않고 밤에는 연기가 잘 보이지 않기 때문에 이렇게 나누어 쓴 것입니다. 연기를 피울 때에는 짐승의 똥을 섞어 태우기도 했는데, 그러면 연기가 바람에 쉽게 흩어지지 않고 곧게 올라갔다고 합니다.
+
+봉수를 올리는 곳을 ‘봉수대’라고 합니다. 봉수대는 멀리까지 잘 보이도록 높은 산꼭대기에 세웠고, 이웃한 봉수대끼리 서로 바라볼 수 있는 거리에 두었습니다. 봉수대에서는 군사들이 밤낮으로 번갈아 지키며 이웃 봉수대를 살폈고, 불을 피울 나무와 짚을 늘 넉넉히 쌓아 두었습니다. 한 봉수대에서 불을 올리면 다음 봉수대에서 그것을 보고 똑같이 불을 올리는 방식으로, 소식이 이어달리기하듯 전해졌습니다. 조선 시대에는 국경에서 올린 봉수가 반나절쯤 만에 한양의 남산까지 닿았다고 합니다.
+
+봉수는 횃불이나 연기의 개수로 상황을 알렸습니다. [표]처럼 아무 일이 없는 평상시에도 횃불 한 개를 올렸고, 상황이 위험할수록 개수를 늘렸습니다. 날마다 횃불 한 개를 올린 것은 ‘오늘도 무사하다’는 것을 알리는 동시에, 봉수대가 제대로 일하고 있는지 확인하는 뜻도 있었습니다.
+
+봉수는 날씨의 영향을 많이 받았습니다. 비가 오거나 안개가 짙게 낀 날에는 불빛과 연기가 잘 보이지 않았습니다. 이럴 때에는 봉수대를 지키는 군사가 직접 다음 봉수대까지 달려가서 소식을 알렸습니다. 또 신호를 잘못 올리거나 제때 올리지 않은 군사는 무거운 벌을 받았습니다.
+
+봉수 제도는 오랫동안 나라의 소식을 전하는 데 큰 역할을 했지만, 전화와 전신이 들어오면서 사라졌습니다. 하지만 지금도 서울 남산을 비롯한 여러 곳에 봉수대가 남아 있어, 소식을 빠르게 전하려고 애썼던 조상들의 지혜를 보여 줍니다.','봉수에서 낮에는 연기를, 밤에는 횃불을 쓴 까닭은 무엇인가요?','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 236" width="440" height="236" font-family="sans-serif"><rect x="0" y="0" width="440" height="236" fill="#fff"/><text x="220" y="24" text-anchor="middle" font-size="15" font-weight="bold" fill="#0a1f44">[표] 봉수대에서 올린 횃불(연기)의 개수와 뜻</text><rect x="10" y="36" width="420" height="32" fill="#e8ebf2"/><text x="55" y="57" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">개수</text><text x="265" y="57" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">알리는 상황</text><text x="55" y="89" text-anchor="middle" font-size="13" fill="#222">1개</text><text x="265" y="89" text-anchor="middle" font-size="13" fill="#222">아무 일이 없는 평상시</text><text x="55" y="121" text-anchor="middle" font-size="13" fill="#222">2개</text><text x="265" y="121" text-anchor="middle" font-size="13" fill="#222">바다나 국경 밖에 적이 나타남</text><text x="55" y="153" text-anchor="middle" font-size="13" fill="#222">3개</text><text x="265" y="153" text-anchor="middle" font-size="13" fill="#222">적이 국경 가까이 다가옴</text><text x="55" y="185" text-anchor="middle" font-size="13" fill="#222">4개</text><text x="265" y="185" text-anchor="middle" font-size="13" fill="#222">적이 국경을 넘어 들어옴</text><text x="55" y="217" text-anchor="middle" font-size="13" fill="#222">5개</text><text x="265" y="217" text-anchor="middle" font-size="13" fill="#222">적과 싸움이 벌어짐</text><rect x="10" y="36" width="420" height="192" fill="none" stroke="#333" stroke-width="2"/><line x1="10" y1="68" x2="430" y2="68" stroke="#333" stroke-width="2"/><line x1="10" y1="100" x2="430" y2="100" stroke="#333" stroke-width="1"/><line x1="10" y1="132" x2="430" y2="132" stroke="#333" stroke-width="1"/><line x1="10" y1="164" x2="430" y2="164" stroke="#333" stroke-width="1"/><line x1="10" y1="196" x2="430" y2="196" stroke="#333" stroke-width="1"/><line x1="100" y1="36" x2="100" y2="228" stroke="#333" stroke-width="1"/></svg>','["낮에는 땔감이 부족하고 밤에는 넉넉해서","밤에는 비가 자주 와서 연기를 피울 수 없어서","연기는 횃불보다 소식을 더 멀리 전할 수 있어서","낮에는 불빛이, 밤에는 연기가 잘 보이지 않아서"]',3,'둘째 문단에 ‘낮에는 불빛이 잘 보이지 않고 밤에는 연기가 잘 보이지 않기 때문에’ 나누어 썼다고 나옵니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-9db69690bb83','KR_KOR','nonfiction','mcq',4,'비 오는 날 건물 입구에 가면 젖은 우산을 넣을 수 있도록 길쭉한 비닐 봉투가 놓여 있는 것을 자주 볼 수 있습니다. 우산에서 떨어진 빗물 때문에 바닥이 미끄러워지는 것을 막기 위해서입니다. 하지만 저는 건물 입구에서 우산 비닐을 나누어 주는 대신 ‘빗물 털이기’를 놓아야 한다고 생각합니다.
+
+첫째, 우산 비닐은 한 번 쓰고 버려지는 쓰레기가 됩니다. 우산 비닐은 건물에 들어갈 때 잠깐 쓰이고 나올 때 곧바로 버려집니다. 비가 많이 오는 날에는 건물 한 곳에서만 하루에 수백 장이 버려지기도 합니다. 우리 동네 도서관에서 일하시는 분께 여쭈어보니, 비가 오는 날에는 하루에 우산 비닐 한 상자를 다 쓴다고 하셨습니다. 게다가 젖은 비닐은 물기와 흙이 묻어 있어 재활용하기도 어렵습니다. 결국 대부분 태우거나 땅에 묻게 되는데, 비닐은 땅속에서 아주 오랫동안 썩지 않아 환경을 오염시킵니다.
+
+둘째, 빗물 털이기를 쓰면 바닥이 젖는 것도 막을 수 있습니다. 빗물 털이기는 솔이나 천이 달린 통에 우산을 넣고 몇 번 위아래로 움직이면 빗물이 털리는 기구입니다. 우산에 묻은 물기를 대부분 없앨 수 있으므로 비닐을 씌우지 않아도 바닥이 크게 젖지 않습니다. 실제로 빗물 털이기를 놓은 우리 동네 구청에서는 우산 비닐을 없앤 뒤에도 미끄럼 사고가 늘지 않았다고 합니다.
+
+셋째, 오래 쓸 수 있어서 비용도 아낄 수 있습니다. 우산 비닐은 비가 올 때마다 새로 사야 하지만, 빗물 털이기는 한 번 설치하면 몇 년 동안 쓸 수 있습니다. 또 우산 비닐을 채워 놓고 버려진 비닐을 모아 치우는 데에도 일손이 많이 드는데, 빗물 털이기를 쓰면 이런 수고도 줄일 수 있습니다.
+
+물론 빗물 털이기를 쓰면 우산을 터는 데 몇 초가 더 걸리고, 처음에는 사용 방법이 낯설 수도 있습니다. 그러나 잠깐의 불편함 때문에 수많은 비닐 쓰레기를 계속 만들어 낼 수는 없습니다. 입구에 사용 방법을 알기 쉽게 붙여 둔다면 누구나 금방 익숙해질 것입니다.
+
+작은 비닐 한 장이라도 모이면 엄청난 양의 쓰레기가 됩니다. 비 오는 날 건물 입구에서부터 환경을 생각하는 습관을 시작해 보면 어떨까요?','글쓴이의 주장으로 가장 알맞은 것은 무엇인가요?',NULL,'["건물 입구에 우산 비닐 대신 빗물 털이기를 놓아야 한다.","비 오는 날에는 건물 안에 우산을 가지고 들어가면 안 된다.","우산 비닐을 재활용할 수 있도록 깨끗이 씻어야 한다.","미끄럼 사고를 막으려면 우산 비닐을 더 많이 나누어 주어야 한다."]',0,'첫째 문단 끝의 ‘우산 비닐을 나누어 주는 대신 빗물 털이기를 놓아야 한다고 생각합니다’가 글쓴이의 주장입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-403b26c2a9ba','KR_KOR','nonfiction','mcq',4,'비 오는 날 건물 입구에 가면 젖은 우산을 넣을 수 있도록 길쭉한 비닐 봉투가 놓여 있는 것을 자주 볼 수 있습니다. 우산에서 떨어진 빗물 때문에 바닥이 미끄러워지는 것을 막기 위해서입니다. 하지만 저는 건물 입구에서 우산 비닐을 나누어 주는 대신 ‘빗물 털이기’를 놓아야 한다고 생각합니다.
+
+첫째, 우산 비닐은 한 번 쓰고 버려지는 쓰레기가 됩니다. 우산 비닐은 건물에 들어갈 때 잠깐 쓰이고 나올 때 곧바로 버려집니다. 비가 많이 오는 날에는 건물 한 곳에서만 하루에 수백 장이 버려지기도 합니다. 우리 동네 도서관에서 일하시는 분께 여쭈어보니, 비가 오는 날에는 하루에 우산 비닐 한 상자를 다 쓴다고 하셨습니다. 게다가 젖은 비닐은 물기와 흙이 묻어 있어 재활용하기도 어렵습니다. 결국 대부분 태우거나 땅에 묻게 되는데, 비닐은 땅속에서 아주 오랫동안 썩지 않아 환경을 오염시킵니다.
+
+둘째, 빗물 털이기를 쓰면 바닥이 젖는 것도 막을 수 있습니다. 빗물 털이기는 솔이나 천이 달린 통에 우산을 넣고 몇 번 위아래로 움직이면 빗물이 털리는 기구입니다. 우산에 묻은 물기를 대부분 없앨 수 있으므로 비닐을 씌우지 않아도 바닥이 크게 젖지 않습니다. 실제로 빗물 털이기를 놓은 우리 동네 구청에서는 우산 비닐을 없앤 뒤에도 미끄럼 사고가 늘지 않았다고 합니다.
+
+셋째, 오래 쓸 수 있어서 비용도 아낄 수 있습니다. 우산 비닐은 비가 올 때마다 새로 사야 하지만, 빗물 털이기는 한 번 설치하면 몇 년 동안 쓸 수 있습니다. 또 우산 비닐을 채워 놓고 버려진 비닐을 모아 치우는 데에도 일손이 많이 드는데, 빗물 털이기를 쓰면 이런 수고도 줄일 수 있습니다.
+
+물론 빗물 털이기를 쓰면 우산을 터는 데 몇 초가 더 걸리고, 처음에는 사용 방법이 낯설 수도 있습니다. 그러나 잠깐의 불편함 때문에 수많은 비닐 쓰레기를 계속 만들어 낼 수는 없습니다. 입구에 사용 방법을 알기 쉽게 붙여 둔다면 누구나 금방 익숙해질 것입니다.
+
+작은 비닐 한 장이라도 모이면 엄청난 양의 쓰레기가 됩니다. 비 오는 날 건물 입구에서부터 환경을 생각하는 습관을 시작해 보면 어떨까요?','글쓴이가 주장을 뒷받침하려고 든 근거가 아닌 것은 무엇인가요?',NULL,'["빗물 털이기는 모양이 예뻐서 건물 입구를 꾸며 준다.","우산 비닐은 한 번 쓰고 버려져 쓰레기가 된다.","빗물 털이기로 물기를 털면 바닥이 크게 젖지 않는다.","빗물 털이기는 오래 쓸 수 있어 비용을 아낄 수 있다."]',0,'글쓴이는 쓰레기 문제, 바닥이 젖는 것을 막는 효과, 비용 절약을 근거로 들었습니다. 빗물 털이기의 모양에 대한 내용은 글에 없습니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-3a603c49af76','KR_KOR','nonfiction','mcq',4,'비 오는 날 건물 입구에 가면 젖은 우산을 넣을 수 있도록 길쭉한 비닐 봉투가 놓여 있는 것을 자주 볼 수 있습니다. 우산에서 떨어진 빗물 때문에 바닥이 미끄러워지는 것을 막기 위해서입니다. 하지만 저는 건물 입구에서 우산 비닐을 나누어 주는 대신 ‘빗물 털이기’를 놓아야 한다고 생각합니다.
+
+첫째, 우산 비닐은 한 번 쓰고 버려지는 쓰레기가 됩니다. 우산 비닐은 건물에 들어갈 때 잠깐 쓰이고 나올 때 곧바로 버려집니다. 비가 많이 오는 날에는 건물 한 곳에서만 하루에 수백 장이 버려지기도 합니다. 우리 동네 도서관에서 일하시는 분께 여쭈어보니, 비가 오는 날에는 하루에 우산 비닐 한 상자를 다 쓴다고 하셨습니다. 게다가 젖은 비닐은 물기와 흙이 묻어 있어 재활용하기도 어렵습니다. 결국 대부분 태우거나 땅에 묻게 되는데, 비닐은 땅속에서 아주 오랫동안 썩지 않아 환경을 오염시킵니다.
+
+둘째, 빗물 털이기를 쓰면 바닥이 젖는 것도 막을 수 있습니다. 빗물 털이기는 솔이나 천이 달린 통에 우산을 넣고 몇 번 위아래로 움직이면 빗물이 털리는 기구입니다. 우산에 묻은 물기를 대부분 없앨 수 있으므로 비닐을 씌우지 않아도 바닥이 크게 젖지 않습니다. 실제로 빗물 털이기를 놓은 우리 동네 구청에서는 우산 비닐을 없앤 뒤에도 미끄럼 사고가 늘지 않았다고 합니다.
+
+셋째, 오래 쓸 수 있어서 비용도 아낄 수 있습니다. 우산 비닐은 비가 올 때마다 새로 사야 하지만, 빗물 털이기는 한 번 설치하면 몇 년 동안 쓸 수 있습니다. 또 우산 비닐을 채워 놓고 버려진 비닐을 모아 치우는 데에도 일손이 많이 드는데, 빗물 털이기를 쓰면 이런 수고도 줄일 수 있습니다.
+
+물론 빗물 털이기를 쓰면 우산을 터는 데 몇 초가 더 걸리고, 처음에는 사용 방법이 낯설 수도 있습니다. 그러나 잠깐의 불편함 때문에 수많은 비닐 쓰레기를 계속 만들어 낼 수는 없습니다. 입구에 사용 방법을 알기 쉽게 붙여 둔다면 누구나 금방 익숙해질 것입니다.
+
+작은 비닐 한 장이라도 모이면 엄청난 양의 쓰레기가 됩니다. 비 오는 날 건물 입구에서부터 환경을 생각하는 습관을 시작해 보면 어떨까요?','다섯째 문단에서 글쓴이가 쓴 방법으로 알맞은 것은 무엇인가요?',NULL,'["빗물 털이기를 만드는 과정을 차례대로 설명했다.","반대하는 사람이 내세울 만한 불편한 점을 인정하고, 그에 대한 해결 방법을 내놓았다.","자기 주장이 틀렸다는 것을 인정하고 생각을 바꾸었다.","우산 비닐과 빗물 털이기의 값을 숫자로 비교했다."]',1,'‘물론 ~ 낯설 수도 있습니다’에서 예상되는 반대 의견을 먼저 인정한 뒤, ‘사용 방법을 알기 쉽게 붙여 둔다면’이라는 해결 방법을 제시하여 주장을 지켰습니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-1cafc19c36c2','KR_KOR','nonfiction','mcq',4,'비 오는 날 건물 입구에 가면 젖은 우산을 넣을 수 있도록 길쭉한 비닐 봉투가 놓여 있는 것을 자주 볼 수 있습니다. 우산에서 떨어진 빗물 때문에 바닥이 미끄러워지는 것을 막기 위해서입니다. 하지만 저는 건물 입구에서 우산 비닐을 나누어 주는 대신 ‘빗물 털이기’를 놓아야 한다고 생각합니다.
+
+첫째, 우산 비닐은 한 번 쓰고 버려지는 쓰레기가 됩니다. 우산 비닐은 건물에 들어갈 때 잠깐 쓰이고 나올 때 곧바로 버려집니다. 비가 많이 오는 날에는 건물 한 곳에서만 하루에 수백 장이 버려지기도 합니다. 우리 동네 도서관에서 일하시는 분께 여쭈어보니, 비가 오는 날에는 하루에 우산 비닐 한 상자를 다 쓴다고 하셨습니다. 게다가 젖은 비닐은 물기와 흙이 묻어 있어 재활용하기도 어렵습니다. 결국 대부분 태우거나 땅에 묻게 되는데, 비닐은 땅속에서 아주 오랫동안 썩지 않아 환경을 오염시킵니다.
+
+둘째, 빗물 털이기를 쓰면 바닥이 젖는 것도 막을 수 있습니다. 빗물 털이기는 솔이나 천이 달린 통에 우산을 넣고 몇 번 위아래로 움직이면 빗물이 털리는 기구입니다. 우산에 묻은 물기를 대부분 없앨 수 있으므로 비닐을 씌우지 않아도 바닥이 크게 젖지 않습니다. 실제로 빗물 털이기를 놓은 우리 동네 구청에서는 우산 비닐을 없앤 뒤에도 미끄럼 사고가 늘지 않았다고 합니다.
+
+셋째, 오래 쓸 수 있어서 비용도 아낄 수 있습니다. 우산 비닐은 비가 올 때마다 새로 사야 하지만, 빗물 털이기는 한 번 설치하면 몇 년 동안 쓸 수 있습니다. 또 우산 비닐을 채워 놓고 버려진 비닐을 모아 치우는 데에도 일손이 많이 드는데, 빗물 털이기를 쓰면 이런 수고도 줄일 수 있습니다.
+
+물론 빗물 털이기를 쓰면 우산을 터는 데 몇 초가 더 걸리고, 처음에는 사용 방법이 낯설 수도 있습니다. 그러나 잠깐의 불편함 때문에 수많은 비닐 쓰레기를 계속 만들어 낼 수는 없습니다. 입구에 사용 방법을 알기 쉽게 붙여 둔다면 누구나 금방 익숙해질 것입니다.
+
+작은 비닐 한 장이라도 모이면 엄청난 양의 쓰레기가 됩니다. 비 오는 날 건물 입구에서부터 환경을 생각하는 습관을 시작해 보면 어떨까요?','글쓴이의 주장에 반대하는 사람이 할 수 있는 말로 가장 알맞은 것은 무엇인가요?',NULL,'["우산 비닐은 땅속에서 오랫동안 썩지 않아서 환경에 나빠요.","사람이 많은 건물에서는 빗물 털이기 앞에 줄이 길어져 입구가 더 붐빌 수 있어요.","젖은 비닐은 흙과 물기가 묻어 있어서 재활용하기 어려워요.","빗물 털이기는 한 번 설치하면 몇 년 동안 쓸 수 있어요."]',1,'나머지 셋은 모두 글쓴이의 주장을 뒷받침하는 말입니다. 빗물 털이기 때문에 생길 수 있는 새로운 문제를 지적한 말이 반대 의견이 됩니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-30c1dd93e41e','KR_KOR','literature','mcq',4,'옛날 어느 고을에서 개 한 마리를 두고 두 사람이 다투는 일이 벌어졌다. 한 사람은 장터에서 짚신을 파는 가난한 박 서방이었고, 다른 한 사람은 마을에서 제일가는 부자 최 영감이었다.
+
+“이 누렁이는 제가 강아지 때부터 길러 온 개입니다. 사흘 전에 집을 나가 찾고 있었는데, 최 영감 댁 마당에 묶여 있지 뭡니까.”
+
+박 서방이 억울한 얼굴로 말하자 최 영감이 콧방귀를 뀌었다.
+
+“무슨 소리! 이 개는 내가 지난봄에 장에서 쌀 한 가마를 주고 사 온 개요. 가난뱅이가 남의 개를 탐내는구먼.”
+
+두 사람은 원님 앞에 나아갔다. 구경꾼들이 관아 마당을 가득 메웠다. 누렁이는 두 사람 사이에서 꼬리를 내리고 이리저리 눈치만 살폈다. 원님은 한참 동안 수염을 쓰다듬더니 입을 열었다.
+
+“둘 다 증인이 없으니 말만 들어서는 알 수가 없구나. 그렇다면 개에게 직접 물어보겠다.”
+
+사람들이 웅성거렸다. 개에게 묻다니, 다들 원님이 농담을 하는 줄 알았다. 박 서방은 어리둥절한 얼굴이었고, 최 영감은 속으로 쾌재를 불렀다.
+
+‘개가 말을 할 리 없으니 결국 내 것이 되겠구나.’
+
+원님은 누렁이를 마을 밖 세 갈래 길로 데려가게 했다. 한 길은 박 서방네 초가집으로, 한 길은 최 영감네 기와집으로, 나머지 한 길은 이웃 마을로 이어지는 길이었다. 원님은 두 사람에게 각자 집에 가 있으라고 한 뒤, 하루 동안 누렁이에게 먹이를 주지 말라고 일렀다. 누렁이는 갈림길 옆 나무에 묶인 채 하룻밤을 보냈다. 지나가던 사람들이 먹을 것을 던져 주려 하자 포졸들이 막아섰다.
+
+다음 날 해 질 무렵, 원님은 누렁이의 목줄을 풀어 주었다. 배가 고픈 누렁이는 코를 킁킁거리며 잠시 망설이더니, 박 서방네 초가집 쪽으로 쏜살같이 달려갔다. 누렁이는 사립문 앞에서 기다리던 박 서방의 품에 뛰어들어 얼굴을 마구 핥았다.
+
+원님은 껄껄 웃으며 말했다.
+
+“배고픈 짐승은 자기를 먹여 길러 준 집을 잊지 않는 법이오. 개가 스스로 제 주인을 알려 주었구려.”
+
+최 영감은 얼굴이 벌게져서 고개를 들지 못했다. 그 뒤로 고을 사람들은 억울한 일이 생기면 그 원님을 찾아가곤 했다고 한다.','원님이 하루 동안 누렁이에게 먹이를 주지 말라고 한 까닭은 무엇인가요?',NULL,'["누렁이가 말을 듣지 않아 벌을 주려고","두 사람 가운데 누가 더 먹이를 많이 주는지 보려고","누렁이를 이웃 마을로 보내려고","배고픈 누렁이가 자기를 길러 준 진짜 주인의 집으로 달려가게 하려고"]',3,'원님은 “배고픈 짐승은 자기를 먹여 길러 준 집을 잊지 않는 법”이라고 했습니다. 배가 고프면 누렁이가 오래 살던 집을 찾아갈 것이라고 생각한 것입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-b55f220e721a','KR_KOR','literature','mcq',4,'옛날 어느 고을에서 개 한 마리를 두고 두 사람이 다투는 일이 벌어졌다. 한 사람은 장터에서 짚신을 파는 가난한 박 서방이었고, 다른 한 사람은 마을에서 제일가는 부자 최 영감이었다.
+
+“이 누렁이는 제가 강아지 때부터 길러 온 개입니다. 사흘 전에 집을 나가 찾고 있었는데, 최 영감 댁 마당에 묶여 있지 뭡니까.”
+
+박 서방이 억울한 얼굴로 말하자 최 영감이 콧방귀를 뀌었다.
+
+“무슨 소리! 이 개는 내가 지난봄에 장에서 쌀 한 가마를 주고 사 온 개요. 가난뱅이가 남의 개를 탐내는구먼.”
+
+두 사람은 원님 앞에 나아갔다. 구경꾼들이 관아 마당을 가득 메웠다. 누렁이는 두 사람 사이에서 꼬리를 내리고 이리저리 눈치만 살폈다. 원님은 한참 동안 수염을 쓰다듬더니 입을 열었다.
+
+“둘 다 증인이 없으니 말만 들어서는 알 수가 없구나. 그렇다면 개에게 직접 물어보겠다.”
+
+사람들이 웅성거렸다. 개에게 묻다니, 다들 원님이 농담을 하는 줄 알았다. 박 서방은 어리둥절한 얼굴이었고, 최 영감은 속으로 쾌재를 불렀다.
+
+‘개가 말을 할 리 없으니 결국 내 것이 되겠구나.’
+
+원님은 누렁이를 마을 밖 세 갈래 길로 데려가게 했다. 한 길은 박 서방네 초가집으로, 한 길은 최 영감네 기와집으로, 나머지 한 길은 이웃 마을로 이어지는 길이었다. 원님은 두 사람에게 각자 집에 가 있으라고 한 뒤, 하루 동안 누렁이에게 먹이를 주지 말라고 일렀다. 누렁이는 갈림길 옆 나무에 묶인 채 하룻밤을 보냈다. 지나가던 사람들이 먹을 것을 던져 주려 하자 포졸들이 막아섰다.
+
+다음 날 해 질 무렵, 원님은 누렁이의 목줄을 풀어 주었다. 배가 고픈 누렁이는 코를 킁킁거리며 잠시 망설이더니, 박 서방네 초가집 쪽으로 쏜살같이 달려갔다. 누렁이는 사립문 앞에서 기다리던 박 서방의 품에 뛰어들어 얼굴을 마구 핥았다.
+
+원님은 껄껄 웃으며 말했다.
+
+“배고픈 짐승은 자기를 먹여 길러 준 집을 잊지 않는 법이오. 개가 스스로 제 주인을 알려 주었구려.”
+
+최 영감은 얼굴이 벌게져서 고개를 들지 못했다. 그 뒤로 고을 사람들은 억울한 일이 생기면 그 원님을 찾아가곤 했다고 한다.','이 이야기에 나타난 원님의 성격으로 가장 알맞은 것은 무엇인가요?',NULL,'["겁이 많고 소심하다.","욕심이 많고 거만하다.","성미가 급하고 고집이 세다.","지혜롭고 공정하다."]',3,'원님은 증인이 없는 다툼을 개의 습성을 이용한 꾀로 공정하게 해결했습니다. 그래서 사람들이 억울한 일이 생기면 원님을 찾아갔습니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-91713a26ee2f','KR_KOR','literature','mcq',4,'옛날 어느 고을에서 개 한 마리를 두고 두 사람이 다투는 일이 벌어졌다. 한 사람은 장터에서 짚신을 파는 가난한 박 서방이었고, 다른 한 사람은 마을에서 제일가는 부자 최 영감이었다.
+
+“이 누렁이는 제가 강아지 때부터 길러 온 개입니다. 사흘 전에 집을 나가 찾고 있었는데, 최 영감 댁 마당에 묶여 있지 뭡니까.”
+
+박 서방이 억울한 얼굴로 말하자 최 영감이 콧방귀를 뀌었다.
+
+“무슨 소리! 이 개는 내가 지난봄에 장에서 쌀 한 가마를 주고 사 온 개요. 가난뱅이가 남의 개를 탐내는구먼.”
+
+두 사람은 원님 앞에 나아갔다. 구경꾼들이 관아 마당을 가득 메웠다. 누렁이는 두 사람 사이에서 꼬리를 내리고 이리저리 눈치만 살폈다. 원님은 한참 동안 수염을 쓰다듬더니 입을 열었다.
+
+“둘 다 증인이 없으니 말만 들어서는 알 수가 없구나. 그렇다면 개에게 직접 물어보겠다.”
+
+사람들이 웅성거렸다. 개에게 묻다니, 다들 원님이 농담을 하는 줄 알았다. 박 서방은 어리둥절한 얼굴이었고, 최 영감은 속으로 쾌재를 불렀다.
+
+‘개가 말을 할 리 없으니 결국 내 것이 되겠구나.’
+
+원님은 누렁이를 마을 밖 세 갈래 길로 데려가게 했다. 한 길은 박 서방네 초가집으로, 한 길은 최 영감네 기와집으로, 나머지 한 길은 이웃 마을로 이어지는 길이었다. 원님은 두 사람에게 각자 집에 가 있으라고 한 뒤, 하루 동안 누렁이에게 먹이를 주지 말라고 일렀다. 누렁이는 갈림길 옆 나무에 묶인 채 하룻밤을 보냈다. 지나가던 사람들이 먹을 것을 던져 주려 하자 포졸들이 막아섰다.
+
+다음 날 해 질 무렵, 원님은 누렁이의 목줄을 풀어 주었다. 배가 고픈 누렁이는 코를 킁킁거리며 잠시 망설이더니, 박 서방네 초가집 쪽으로 쏜살같이 달려갔다. 누렁이는 사립문 앞에서 기다리던 박 서방의 품에 뛰어들어 얼굴을 마구 핥았다.
+
+원님은 껄껄 웃으며 말했다.
+
+“배고픈 짐승은 자기를 먹여 길러 준 집을 잊지 않는 법이오. 개가 스스로 제 주인을 알려 주었구려.”
+
+최 영감은 얼굴이 벌게져서 고개를 들지 못했다. 그 뒤로 고을 사람들은 억울한 일이 생기면 그 원님을 찾아가곤 했다고 한다.','‘최 영감은 얼굴이 벌게져서 고개를 들지 못했다.’에서 알 수 있는 것은 무엇인가요?',NULL,'["최 영감이 누렁이를 되찾아서 기뻤다.","최 영감이 원님의 농담이 우스워 웃음을 참았다.","최 영감이 오랫동안 기다려서 지쳤다.","최 영감의 거짓말이 드러나 부끄러웠다."]',3,'누렁이가 박 서방에게 달려가 박 서방이 진짜 주인임이 밝혀졌으므로, 개를 사 왔다고 우긴 최 영감의 말은 거짓이었습니다. 얼굴이 벌게지고 고개를 들지 못한 것은 부끄러움을 나타냅니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-4666811852eb','KR_KOR','literature','mcq',4,'옛날 어느 고을에서 개 한 마리를 두고 두 사람이 다투는 일이 벌어졌다. 한 사람은 장터에서 짚신을 파는 가난한 박 서방이었고, 다른 한 사람은 마을에서 제일가는 부자 최 영감이었다.
+
+“이 누렁이는 제가 강아지 때부터 길러 온 개입니다. 사흘 전에 집을 나가 찾고 있었는데, 최 영감 댁 마당에 묶여 있지 뭡니까.”
+
+박 서방이 억울한 얼굴로 말하자 최 영감이 콧방귀를 뀌었다.
+
+“무슨 소리! 이 개는 내가 지난봄에 장에서 쌀 한 가마를 주고 사 온 개요. 가난뱅이가 남의 개를 탐내는구먼.”
+
+두 사람은 원님 앞에 나아갔다. 구경꾼들이 관아 마당을 가득 메웠다. 누렁이는 두 사람 사이에서 꼬리를 내리고 이리저리 눈치만 살폈다. 원님은 한참 동안 수염을 쓰다듬더니 입을 열었다.
+
+“둘 다 증인이 없으니 말만 들어서는 알 수가 없구나. 그렇다면 개에게 직접 물어보겠다.”
+
+사람들이 웅성거렸다. 개에게 묻다니, 다들 원님이 농담을 하는 줄 알았다. 박 서방은 어리둥절한 얼굴이었고, 최 영감은 속으로 쾌재를 불렀다.
+
+‘개가 말을 할 리 없으니 결국 내 것이 되겠구나.’
+
+원님은 누렁이를 마을 밖 세 갈래 길로 데려가게 했다. 한 길은 박 서방네 초가집으로, 한 길은 최 영감네 기와집으로, 나머지 한 길은 이웃 마을로 이어지는 길이었다. 원님은 두 사람에게 각자 집에 가 있으라고 한 뒤, 하루 동안 누렁이에게 먹이를 주지 말라고 일렀다. 누렁이는 갈림길 옆 나무에 묶인 채 하룻밤을 보냈다. 지나가던 사람들이 먹을 것을 던져 주려 하자 포졸들이 막아섰다.
+
+다음 날 해 질 무렵, 원님은 누렁이의 목줄을 풀어 주었다. 배가 고픈 누렁이는 코를 킁킁거리며 잠시 망설이더니, 박 서방네 초가집 쪽으로 쏜살같이 달려갔다. 누렁이는 사립문 앞에서 기다리던 박 서방의 품에 뛰어들어 얼굴을 마구 핥았다.
+
+원님은 껄껄 웃으며 말했다.
+
+“배고픈 짐승은 자기를 먹여 길러 준 집을 잊지 않는 법이오. 개가 스스로 제 주인을 알려 주었구려.”
+
+최 영감은 얼굴이 벌게져서 고개를 들지 못했다. 그 뒤로 고을 사람들은 억울한 일이 생기면 그 원님을 찾아가곤 했다고 한다.','이 이야기를 읽고 떠올릴 수 있는 생각으로 가장 알맞은 것은 무엇인가요?',NULL,'["동물은 사람의 말을 알아듣지 못하므로 기를 필요가 없다.","거짓말은 언젠가 드러나며, 지혜로운 판단으로 억울함을 풀 수 있다.","돈이 많은 사람의 말을 먼저 믿어야 한다.","잃어버린 물건은 다시 찾지 않는 것이 좋다."]',1,'최 영감의 거짓은 원님의 꾀로 드러났고, 가난한 박 서방은 억울함을 풀었습니다. 이것이 이 옛이야기가 전하려는 교훈입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-bce4c9cb3331','KR_KOR','literature','mcq',4,'할머니가 스마트폰을 새로 사셨다. 엄마는 일이 바빠서 내가 할머니께 사용법을 알려 드리기로 했다. 할머니는 그동안 쓰시던 낡은 휴대 전화를 서랍에 넣으시며 “이제 나도 손주들한테 문자도 보내고 사진도 보내 봐야지.” 하고 웃으셨다. 처음에는 나도 쉬울 줄 알았다.
+
+“할머니, 여기 초록색 그림을 누르시면 문자를 보낼 수 있어요.”
+
+“어디? 이 동그란 거?”
+
+“아니요, 그건 사진기고요. 그 옆에 있는 거요.”
+
+할머니는 화면을 누를 때마다 손가락에 너무 힘을 주셔서 엉뚱한 곳이 눌렸다. 같은 것을 다섯 번째 설명할 때쯤 나도 모르게 목소리가 커졌다.
+
+“아이참, 아까 말씀드렸잖아요!”
+
+할머니는 잠깐 말없이 화면만 바라보시다가 작게 웃으셨다.
+
+“그래, 할미가 눈도 침침하고 자꾸 잊어버리네. 오늘은 그만하자.”
+
+방으로 돌아왔는데 마음이 편하지 않았다. 문득 일곱 살 때 할머니께 젓가락질을 배우던 일이 떠올랐다. 나는 콩자반을 집다가 수십 번 떨어뜨렸고, 그때마다 할머니는 “괜찮아, 천천히 해 보자.” 하시며 다시 내 손가락을 잡아 주셨다. 한 번도 목소리를 높이신 적이 없었다. 그런데 나는 고작 다섯 번 만에 짜증을 낸 것이다. 얼굴이 화끈거렸다.
+
+나는 공책을 꺼내 큰 글씨로 ‘할머니 문자 보내는 방법’을 적었다. 순서마다 번호를 붙이고 버튼 그림도 그렸다. 할머니 눈이 침침하시다는 말이 생각나서 글씨는 손가락 마디만큼 크게 썼다. 다음 날 저녁, 공책을 펼쳐 드리며 말했다.
+
+“할머니, 어제는 죄송했어요. 이거 보시면서 천천히 해 보세요.”
+
+할머니는 돋보기를 쓰고 공책을 한 장 한 장 넘기셨다. “우리 강아지가 선생님이네.” 하시며 웃으시더니, 한참 동안 화면을 꾹꾹 누르셨다.
+
+그날 밤, 내 휴대 전화가 ‘띵’ 하고 울렸다.
+
+‘우리강아지고마워할미가’
+
+띄어쓰기도 문장 부호도 없는 짧은 문자였다. 그런데 나는 그 문자를 몇 번이고 다시 읽었다. 지금까지 받아 본 문자 가운데 가장 멋진 문자였다.','이야기에서 ‘나’의 마음은 어떻게 바뀌었나요?',NULL,'["미안함 → 답답하고 짜증이 남 → 서운함","답답하고 짜증이 남 → 미안함 → 뭉클하고 기쁨","걱정스러움 → 자랑스러움 → 부끄러움","신나고 즐거움 → 지루함 → 화가 남"]',1,'같은 설명을 반복하다 목소리를 높였고(답답함), 방에 돌아와 마음이 편하지 않아 사과했으며(미안함), 할머니의 문자를 몇 번이고 읽으며 감동했습니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-3ddd64528aba','KR_KOR','literature','mcq',4,'할머니가 스마트폰을 새로 사셨다. 엄마는 일이 바빠서 내가 할머니께 사용법을 알려 드리기로 했다. 할머니는 그동안 쓰시던 낡은 휴대 전화를 서랍에 넣으시며 “이제 나도 손주들한테 문자도 보내고 사진도 보내 봐야지.” 하고 웃으셨다. 처음에는 나도 쉬울 줄 알았다.
+
+“할머니, 여기 초록색 그림을 누르시면 문자를 보낼 수 있어요.”
+
+“어디? 이 동그란 거?”
+
+“아니요, 그건 사진기고요. 그 옆에 있는 거요.”
+
+할머니는 화면을 누를 때마다 손가락에 너무 힘을 주셔서 엉뚱한 곳이 눌렸다. 같은 것을 다섯 번째 설명할 때쯤 나도 모르게 목소리가 커졌다.
+
+“아이참, 아까 말씀드렸잖아요!”
+
+할머니는 잠깐 말없이 화면만 바라보시다가 작게 웃으셨다.
+
+“그래, 할미가 눈도 침침하고 자꾸 잊어버리네. 오늘은 그만하자.”
+
+방으로 돌아왔는데 마음이 편하지 않았다. 문득 일곱 살 때 할머니께 젓가락질을 배우던 일이 떠올랐다. 나는 콩자반을 집다가 수십 번 떨어뜨렸고, 그때마다 할머니는 “괜찮아, 천천히 해 보자.” 하시며 다시 내 손가락을 잡아 주셨다. 한 번도 목소리를 높이신 적이 없었다. 그런데 나는 고작 다섯 번 만에 짜증을 낸 것이다. 얼굴이 화끈거렸다.
+
+나는 공책을 꺼내 큰 글씨로 ‘할머니 문자 보내는 방법’을 적었다. 순서마다 번호를 붙이고 버튼 그림도 그렸다. 할머니 눈이 침침하시다는 말이 생각나서 글씨는 손가락 마디만큼 크게 썼다. 다음 날 저녁, 공책을 펼쳐 드리며 말했다.
+
+“할머니, 어제는 죄송했어요. 이거 보시면서 천천히 해 보세요.”
+
+할머니는 돋보기를 쓰고 공책을 한 장 한 장 넘기셨다. “우리 강아지가 선생님이네.” 하시며 웃으시더니, 한참 동안 화면을 꾹꾹 누르셨다.
+
+그날 밤, 내 휴대 전화가 ‘띵’ 하고 울렸다.
+
+‘우리강아지고마워할미가’
+
+띄어쓰기도 문장 부호도 없는 짧은 문자였다. 그런데 나는 그 문자를 몇 번이고 다시 읽었다. 지금까지 받아 본 문자 가운데 가장 멋진 문자였다.','‘나’가 공책에 문자 보내는 방법을 적게 된 계기는 무엇인가요?',NULL,'["할머니께서 공책에 적어 달라고 부탁하셔서","학교 숙제로 사용 설명서를 만들어야 해서","엄마가 공책에 적어 드리라고 시키셔서","어릴 때 할머니께서 젓가락질을 참을성 있게 가르쳐 주신 일이 떠올라서"]',3,'‘나’는 일곱 살 때 할머니께서 한 번도 목소리를 높이지 않고 젓가락질을 가르쳐 주신 일을 떠올리고, 자신의 행동을 돌아보게 되었습니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-69df88fe397d','KR_KOR','literature','mcq',4,'할머니가 스마트폰을 새로 사셨다. 엄마는 일이 바빠서 내가 할머니께 사용법을 알려 드리기로 했다. 할머니는 그동안 쓰시던 낡은 휴대 전화를 서랍에 넣으시며 “이제 나도 손주들한테 문자도 보내고 사진도 보내 봐야지.” 하고 웃으셨다. 처음에는 나도 쉬울 줄 알았다.
+
+“할머니, 여기 초록색 그림을 누르시면 문자를 보낼 수 있어요.”
+
+“어디? 이 동그란 거?”
+
+“아니요, 그건 사진기고요. 그 옆에 있는 거요.”
+
+할머니는 화면을 누를 때마다 손가락에 너무 힘을 주셔서 엉뚱한 곳이 눌렸다. 같은 것을 다섯 번째 설명할 때쯤 나도 모르게 목소리가 커졌다.
+
+“아이참, 아까 말씀드렸잖아요!”
+
+할머니는 잠깐 말없이 화면만 바라보시다가 작게 웃으셨다.
+
+“그래, 할미가 눈도 침침하고 자꾸 잊어버리네. 오늘은 그만하자.”
+
+방으로 돌아왔는데 마음이 편하지 않았다. 문득 일곱 살 때 할머니께 젓가락질을 배우던 일이 떠올랐다. 나는 콩자반을 집다가 수십 번 떨어뜨렸고, 그때마다 할머니는 “괜찮아, 천천히 해 보자.” 하시며 다시 내 손가락을 잡아 주셨다. 한 번도 목소리를 높이신 적이 없었다. 그런데 나는 고작 다섯 번 만에 짜증을 낸 것이다. 얼굴이 화끈거렸다.
+
+나는 공책을 꺼내 큰 글씨로 ‘할머니 문자 보내는 방법’을 적었다. 순서마다 번호를 붙이고 버튼 그림도 그렸다. 할머니 눈이 침침하시다는 말이 생각나서 글씨는 손가락 마디만큼 크게 썼다. 다음 날 저녁, 공책을 펼쳐 드리며 말했다.
+
+“할머니, 어제는 죄송했어요. 이거 보시면서 천천히 해 보세요.”
+
+할머니는 돋보기를 쓰고 공책을 한 장 한 장 넘기셨다. “우리 강아지가 선생님이네.” 하시며 웃으시더니, 한참 동안 화면을 꾹꾹 누르셨다.
+
+그날 밤, 내 휴대 전화가 ‘띵’ 하고 울렸다.
+
+‘우리강아지고마워할미가’
+
+띄어쓰기도 문장 부호도 없는 짧은 문자였다. 그런데 나는 그 문자를 몇 번이고 다시 읽었다. 지금까지 받아 본 문자 가운데 가장 멋진 문자였다.','‘할머니는 잠깐 말없이 화면만 바라보시다가 작게 웃으셨다.’에 담긴 할머니의 마음으로 가장 알맞은 것은 무엇인가요?',NULL,'["손주의 설명이 너무 쉬워서 우스웠다.","문자 보내는 방법을 다 알게 되어 기뻤다.","손주가 언성을 높여 서운했지만 내색하지 않으려 했다.","스마트폰 화면이 재미있어서 즐거웠다."]',2,'손주가 목소리를 높이자 할머니는 잠시 말이 없으셨고, 자기 탓을 하며 그만하자고 하셨습니다. 서운한 마음을 웃음으로 감추신 것입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-a158791eb34f','KR_KOR','literature','mcq',4,'할머니가 스마트폰을 새로 사셨다. 엄마는 일이 바빠서 내가 할머니께 사용법을 알려 드리기로 했다. 할머니는 그동안 쓰시던 낡은 휴대 전화를 서랍에 넣으시며 “이제 나도 손주들한테 문자도 보내고 사진도 보내 봐야지.” 하고 웃으셨다. 처음에는 나도 쉬울 줄 알았다.
+
+“할머니, 여기 초록색 그림을 누르시면 문자를 보낼 수 있어요.”
+
+“어디? 이 동그란 거?”
+
+“아니요, 그건 사진기고요. 그 옆에 있는 거요.”
+
+할머니는 화면을 누를 때마다 손가락에 너무 힘을 주셔서 엉뚱한 곳이 눌렸다. 같은 것을 다섯 번째 설명할 때쯤 나도 모르게 목소리가 커졌다.
+
+“아이참, 아까 말씀드렸잖아요!”
+
+할머니는 잠깐 말없이 화면만 바라보시다가 작게 웃으셨다.
+
+“그래, 할미가 눈도 침침하고 자꾸 잊어버리네. 오늘은 그만하자.”
+
+방으로 돌아왔는데 마음이 편하지 않았다. 문득 일곱 살 때 할머니께 젓가락질을 배우던 일이 떠올랐다. 나는 콩자반을 집다가 수십 번 떨어뜨렸고, 그때마다 할머니는 “괜찮아, 천천히 해 보자.” 하시며 다시 내 손가락을 잡아 주셨다. 한 번도 목소리를 높이신 적이 없었다. 그런데 나는 고작 다섯 번 만에 짜증을 낸 것이다. 얼굴이 화끈거렸다.
+
+나는 공책을 꺼내 큰 글씨로 ‘할머니 문자 보내는 방법’을 적었다. 순서마다 번호를 붙이고 버튼 그림도 그렸다. 할머니 눈이 침침하시다는 말이 생각나서 글씨는 손가락 마디만큼 크게 썼다. 다음 날 저녁, 공책을 펼쳐 드리며 말했다.
+
+“할머니, 어제는 죄송했어요. 이거 보시면서 천천히 해 보세요.”
+
+할머니는 돋보기를 쓰고 공책을 한 장 한 장 넘기셨다. “우리 강아지가 선생님이네.” 하시며 웃으시더니, 한참 동안 화면을 꾹꾹 누르셨다.
+
+그날 밤, 내 휴대 전화가 ‘띵’ 하고 울렸다.
+
+‘우리강아지고마워할미가’
+
+띄어쓰기도 문장 부호도 없는 짧은 문자였다. 그런데 나는 그 문자를 몇 번이고 다시 읽었다. 지금까지 받아 본 문자 가운데 가장 멋진 문자였다.','‘나’가 띄어쓰기도 문장 부호도 없는 문자를 ‘가장 멋진 문자’라고 생각한 까닭으로 가장 알맞은 것은 무엇인가요?',NULL,'["맞춤법이 정확하고 문장이 아주 길어서","할머니께서 더 이상 사용법을 묻지 않겠다고 하셔서","할머니께서 손주를 위해 애써 배워 처음 보내신, 마음이 담긴 문자여서","할머니께서 예쁜 그림과 사진을 함께 보내셔서"]',2,'문자는 짧고 띄어쓰기도 없었지만, 할머니께서 ‘나’가 만든 공책을 보며 한참 동안 애써 보내신 고마움의 문자였기 때문에 소중하게 느껴진 것입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-1212c1f9dc2e','KR_KOR','literature','mcq',4,'제목: 방학한 운동장
+
+방학식 날 오후
+아이들이 우르르 빠져나간 뒤
+운동장이 혼자 남았다
+
+축구 골대는 입을 벌린 채
+날아올 공을 기다리고
+그네는 바람에게
+살짝 등을 밀어 달라고 한다
+
+철봉에 매달렸던 웃음소리
+모래밭에 찍혔던 발자국
+하나둘 지워지는 동안
+운동장은 점점 넓어진다
+
+해 질 녘
+길게 누운 미끄럼틀 그림자가
+텅 빈 운동장을
+가만가만 쓰다듬는다
+
+괜찮아, 운동장아
+한 달만 기다리면
+우리가 다시
+너를 꽉 채워 줄게','이 시의 분위기로 가장 알맞은 것은 무엇인가요?',NULL,'["아이들이 떠나 텅 비고 쓸쓸하다.","운동회 날처럼 들뜨고 활기차다.","갑자기 큰일이 생겨 긴장되고 무섭다.","아이들이 뛰어놀아 시끌벅적하고 신난다."]',0,'아이들이 빠져나가 ‘혼자 남은’ 운동장, 지워지는 웃음소리와 발자국, ‘텅 빈 운동장’ 같은 표현이 쓸쓸한 분위기를 만듭니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-75bcc6a3c6a8','KR_KOR','literature','mcq',4,'제목: 방학한 운동장
+
+방학식 날 오후
+아이들이 우르르 빠져나간 뒤
+운동장이 혼자 남았다
+
+축구 골대는 입을 벌린 채
+날아올 공을 기다리고
+그네는 바람에게
+살짝 등을 밀어 달라고 한다
+
+철봉에 매달렸던 웃음소리
+모래밭에 찍혔던 발자국
+하나둘 지워지는 동안
+운동장은 점점 넓어진다
+
+해 질 녘
+길게 누운 미끄럼틀 그림자가
+텅 빈 운동장을
+가만가만 쓰다듬는다
+
+괜찮아, 운동장아
+한 달만 기다리면
+우리가 다시
+너를 꽉 채워 줄게','‘운동장은 점점 넓어진다’의 뜻으로 가장 알맞은 것은 무엇인가요?',NULL,'["해가 지면서 운동장의 그림자가 길어진다.","방학 동안 운동장을 넓히는 공사를 한다.","아이들이 운동장에 더 많이 모여든다.","아이들이 없어서 운동장이 텅 비어 더 넓게 느껴진다."]',3,'실제로 넓어지는 것이 아니라, 웃음소리와 발자국이 사라져 텅 빈 운동장이 더 넓어 보인다는 뜻입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-79b97cfe6a30','KR_KOR','literature','mcq',4,'제목: 방학한 운동장
+
+방학식 날 오후
+아이들이 우르르 빠져나간 뒤
+운동장이 혼자 남았다
+
+축구 골대는 입을 벌린 채
+날아올 공을 기다리고
+그네는 바람에게
+살짝 등을 밀어 달라고 한다
+
+철봉에 매달렸던 웃음소리
+모래밭에 찍혔던 발자국
+하나둘 지워지는 동안
+운동장은 점점 넓어진다
+
+해 질 녘
+길게 누운 미끄럼틀 그림자가
+텅 빈 운동장을
+가만가만 쓰다듬는다
+
+괜찮아, 운동장아
+한 달만 기다리면
+우리가 다시
+너를 꽉 채워 줄게','다음 중 표현 방법이 나머지 셋과 다른 것은 무엇인가요?',NULL,'["축구 골대는 입을 벌린 채 / 날아올 공을 기다리고","아이들이 우르르 빠져나간 뒤","미끄럼틀 그림자가 / 텅 빈 운동장을 / 가만가만 쓰다듬는다","그네는 바람에게 / 살짝 등을 밀어 달라고 한다"]',1,'축구 골대, 그네, 그림자를 사람처럼 기다리고, 부탁하고, 쓰다듬는다고 나타냈습니다(의인법). ‘아이들이 우르르 빠져나간 뒤’는 실제 아이들의 모습을 흉내 내는 말로 나타낸 것입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-081ad6c16b77','KR_KOR','literature','mcq',4,'제목: 방학한 운동장
+
+방학식 날 오후
+아이들이 우르르 빠져나간 뒤
+운동장이 혼자 남았다
+
+축구 골대는 입을 벌린 채
+날아올 공을 기다리고
+그네는 바람에게
+살짝 등을 밀어 달라고 한다
+
+철봉에 매달렸던 웃음소리
+모래밭에 찍혔던 발자국
+하나둘 지워지는 동안
+운동장은 점점 넓어진다
+
+해 질 녘
+길게 누운 미끄럼틀 그림자가
+텅 빈 운동장을
+가만가만 쓰다듬는다
+
+괜찮아, 운동장아
+한 달만 기다리면
+우리가 다시
+너를 꽉 채워 줄게','마지막 연에 나타난 말하는 이의 마음으로 가장 알맞은 것은 무엇인가요?',NULL,'["운동장에 가지 못하게 되어 화가 난 마음","친구들과 헤어져 서먹해진 마음","방학이 빨리 끝나지 않기를 바라는 마음","쓸쓸한 운동장을 달래며 다시 오겠다고 약속하는 마음"]',3,'‘괜찮아, 운동장아’라고 위로하고 ‘다시 너를 꽉 채워 줄게’라고 약속하는 말에서 운동장을 아끼고 달래는 마음이 드러납니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-0547f8102c09','KR_KOR','literature','mcq',4,'올봄, 나는 베란다에서 방울토마토를 길러 보기로 했다. 학교 앞에서 나누어 준 모종 한 포기를 화분에 옮겨 심으면서, 나는 금방이라도 빨간 열매를 따 먹을 수 있을 것 같아 들떴다.
+
+하지만 방울토마토는 내 마음처럼 빨리 자라 주지 않았다. 아침마다 화분 앞에 쪼그리고 앉아 들여다보았지만 어제와 오늘이 똑같아 보였다. 답답한 마음에 물을 듬뿍듬뿍 주었더니 오히려 잎이 누렇게 변하고 축 처졌다. 깜짝 놀라 아빠께 여쭈어보니, 물을 너무 많이 주면 뿌리가 숨을 쉬지 못한다고 하셨다. 빨리 키우고 싶은 마음이 도리어 토마토를 힘들게 했던 것이다.
+
+그날부터 나는 흙을 손가락으로 눌러 보고 말랐을 때만 물을 주었다. 그리고 관찰 일기를 쓰기 시작했다. 날마다 줄기의 길이를 자로 재어 적어 보니, 눈으로 볼 때는 그대로인 것 같던 줄기가 하루에 조금씩 자라고 있다는 것을 알 수 있었다. 토마토는 멈춰 있던 것이 아니라 보이지 않게 자라고 있었다.
+
+줄기가 길어지자 이번에는 토마토가 자꾸 한쪽으로 기울었다. 아빠와 함께 나무 막대를 꽂고 끈으로 줄기를 살살 묶어 주었다. 너무 세게 묶으면 줄기가 상한다고 해서 끈과 줄기 사이에 손가락 하나가 들어갈 만큼 여유를 두었다.
+
+6월 초에 노란 꽃이 피었고, 꽃이 진 자리에 콩알만 한 초록 열매가 달렸다. 열매가 빨갛게 익기까지는 또 한참을 기다려야 했다. 동생은 날마다 언제 먹을 수 있냐고 물었고, 나는 그때마다 “조금만 더 기다려.”라고 대답했다. 이번에는 나도 조급하지 않았다. 초록 열매가 하루하루 조금씩 붉은빛을 띠어 가는 모습을 지켜보는 것도 재미있었다.
+
+7월의 어느 아침, 드디어 첫 열매를 땄다. 손톱만 한 방울토마토 하나를 가족 넷이 사이좋게 나누어 먹었다. 한 입도 안 되는 조각이었지만, 가게에서 산 어떤 토마토보다 달콤했다.
+
+토마토를 기르면서 나는 기다리는 법을 배웠다. 무엇이든 빨리 이루고 싶을 때가 많지만, 눈에 보이지 않아도 조금씩 자라는 시간이 꼭 필요하다. 요즘 나는 잘 늘지 않는 줄넘기 실력 때문에 조급해질 때마다 베란다의 토마토를 떠올린다.','방울토마토의 잎이 누렇게 변하고 축 처진 까닭은 무엇인가요?',NULL,'["날마다 자로 줄기를 재다가 상처가 나서","물을 너무 많이 주어 뿌리가 숨을 쉬지 못해서","햇볕이 들지 않는 곳에 화분을 두어서","물을 너무 적게 주어 흙이 바싹 말라서"]',1,'빨리 키우고 싶어 물을 듬뿍 주었더니 잎이 누렇게 변했고, 아빠께서 물을 너무 많이 주면 뿌리가 숨을 쉬지 못한다고 하셨습니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-b05d9daf3041','KR_KOR','literature','mcq',4,'올봄, 나는 베란다에서 방울토마토를 길러 보기로 했다. 학교 앞에서 나누어 준 모종 한 포기를 화분에 옮겨 심으면서, 나는 금방이라도 빨간 열매를 따 먹을 수 있을 것 같아 들떴다.
+
+하지만 방울토마토는 내 마음처럼 빨리 자라 주지 않았다. 아침마다 화분 앞에 쪼그리고 앉아 들여다보았지만 어제와 오늘이 똑같아 보였다. 답답한 마음에 물을 듬뿍듬뿍 주었더니 오히려 잎이 누렇게 변하고 축 처졌다. 깜짝 놀라 아빠께 여쭈어보니, 물을 너무 많이 주면 뿌리가 숨을 쉬지 못한다고 하셨다. 빨리 키우고 싶은 마음이 도리어 토마토를 힘들게 했던 것이다.
+
+그날부터 나는 흙을 손가락으로 눌러 보고 말랐을 때만 물을 주었다. 그리고 관찰 일기를 쓰기 시작했다. 날마다 줄기의 길이를 자로 재어 적어 보니, 눈으로 볼 때는 그대로인 것 같던 줄기가 하루에 조금씩 자라고 있다는 것을 알 수 있었다. 토마토는 멈춰 있던 것이 아니라 보이지 않게 자라고 있었다.
+
+줄기가 길어지자 이번에는 토마토가 자꾸 한쪽으로 기울었다. 아빠와 함께 나무 막대를 꽂고 끈으로 줄기를 살살 묶어 주었다. 너무 세게 묶으면 줄기가 상한다고 해서 끈과 줄기 사이에 손가락 하나가 들어갈 만큼 여유를 두었다.
+
+6월 초에 노란 꽃이 피었고, 꽃이 진 자리에 콩알만 한 초록 열매가 달렸다. 열매가 빨갛게 익기까지는 또 한참을 기다려야 했다. 동생은 날마다 언제 먹을 수 있냐고 물었고, 나는 그때마다 “조금만 더 기다려.”라고 대답했다. 이번에는 나도 조급하지 않았다. 초록 열매가 하루하루 조금씩 붉은빛을 띠어 가는 모습을 지켜보는 것도 재미있었다.
+
+7월의 어느 아침, 드디어 첫 열매를 땄다. 손톱만 한 방울토마토 하나를 가족 넷이 사이좋게 나누어 먹었다. 한 입도 안 되는 조각이었지만, 가게에서 산 어떤 토마토보다 달콤했다.
+
+토마토를 기르면서 나는 기다리는 법을 배웠다. 무엇이든 빨리 이루고 싶을 때가 많지만, 눈에 보이지 않아도 조금씩 자라는 시간이 꼭 필요하다. 요즘 나는 잘 늘지 않는 줄넘기 실력 때문에 조급해질 때마다 베란다의 토마토를 떠올린다.','글쓴이가 관찰 일기를 쓰면서 알게 된 것은 무엇인가요?',NULL,'["눈으로는 그대로 같아 보여도 토마토 줄기는 날마다 조금씩 자라고 있었다.","토마토는 6월이 되면 저절로 빨갛게 익는다.","토마토는 물을 많이 줄수록 빨리 자란다.","토마토는 꽃이 피지 않아도 열매가 열린다."]',0,'셋째 문단에서 날마다 길이를 재어 보니 그대로인 것 같던 줄기가 하루에 조금씩 자라고 있었다고 했습니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-5c58b94d32c5','KR_KOR','literature','mcq',4,'올봄, 나는 베란다에서 방울토마토를 길러 보기로 했다. 학교 앞에서 나누어 준 모종 한 포기를 화분에 옮겨 심으면서, 나는 금방이라도 빨간 열매를 따 먹을 수 있을 것 같아 들떴다.
+
+하지만 방울토마토는 내 마음처럼 빨리 자라 주지 않았다. 아침마다 화분 앞에 쪼그리고 앉아 들여다보았지만 어제와 오늘이 똑같아 보였다. 답답한 마음에 물을 듬뿍듬뿍 주었더니 오히려 잎이 누렇게 변하고 축 처졌다. 깜짝 놀라 아빠께 여쭈어보니, 물을 너무 많이 주면 뿌리가 숨을 쉬지 못한다고 하셨다. 빨리 키우고 싶은 마음이 도리어 토마토를 힘들게 했던 것이다.
+
+그날부터 나는 흙을 손가락으로 눌러 보고 말랐을 때만 물을 주었다. 그리고 관찰 일기를 쓰기 시작했다. 날마다 줄기의 길이를 자로 재어 적어 보니, 눈으로 볼 때는 그대로인 것 같던 줄기가 하루에 조금씩 자라고 있다는 것을 알 수 있었다. 토마토는 멈춰 있던 것이 아니라 보이지 않게 자라고 있었다.
+
+줄기가 길어지자 이번에는 토마토가 자꾸 한쪽으로 기울었다. 아빠와 함께 나무 막대를 꽂고 끈으로 줄기를 살살 묶어 주었다. 너무 세게 묶으면 줄기가 상한다고 해서 끈과 줄기 사이에 손가락 하나가 들어갈 만큼 여유를 두었다.
+
+6월 초에 노란 꽃이 피었고, 꽃이 진 자리에 콩알만 한 초록 열매가 달렸다. 열매가 빨갛게 익기까지는 또 한참을 기다려야 했다. 동생은 날마다 언제 먹을 수 있냐고 물었고, 나는 그때마다 “조금만 더 기다려.”라고 대답했다. 이번에는 나도 조급하지 않았다. 초록 열매가 하루하루 조금씩 붉은빛을 띠어 가는 모습을 지켜보는 것도 재미있었다.
+
+7월의 어느 아침, 드디어 첫 열매를 땄다. 손톱만 한 방울토마토 하나를 가족 넷이 사이좋게 나누어 먹었다. 한 입도 안 되는 조각이었지만, 가게에서 산 어떤 토마토보다 달콤했다.
+
+토마토를 기르면서 나는 기다리는 법을 배웠다. 무엇이든 빨리 이루고 싶을 때가 많지만, 눈에 보이지 않아도 조금씩 자라는 시간이 꼭 필요하다. 요즘 나는 잘 늘지 않는 줄넘기 실력 때문에 조급해질 때마다 베란다의 토마토를 떠올린다.','‘가게에서 산 어떤 토마토보다 달콤했다’고 느낀 까닭으로 가장 알맞은 것은 무엇인가요?',NULL,'["가게에서 파는 토마토보다 크기가 훨씬 커서","처음으로 가게에서 토마토를 사 먹어 보아서","설탕을 뿌려서 가족과 함께 먹어서","오랫동안 정성껏 기르고 기다린 끝에 얻은 열매여서"]',3,'첫 열매는 손톱만 하고 한 입도 안 되었지만, 봄부터 여름까지 정성과 기다림 끝에 얻은 것이라 더 달게 느껴진 것입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-literature-6db8ef154cd3','KR_KOR','literature','mcq',4,'올봄, 나는 베란다에서 방울토마토를 길러 보기로 했다. 학교 앞에서 나누어 준 모종 한 포기를 화분에 옮겨 심으면서, 나는 금방이라도 빨간 열매를 따 먹을 수 있을 것 같아 들떴다.
+
+하지만 방울토마토는 내 마음처럼 빨리 자라 주지 않았다. 아침마다 화분 앞에 쪼그리고 앉아 들여다보았지만 어제와 오늘이 똑같아 보였다. 답답한 마음에 물을 듬뿍듬뿍 주었더니 오히려 잎이 누렇게 변하고 축 처졌다. 깜짝 놀라 아빠께 여쭈어보니, 물을 너무 많이 주면 뿌리가 숨을 쉬지 못한다고 하셨다. 빨리 키우고 싶은 마음이 도리어 토마토를 힘들게 했던 것이다.
+
+그날부터 나는 흙을 손가락으로 눌러 보고 말랐을 때만 물을 주었다. 그리고 관찰 일기를 쓰기 시작했다. 날마다 줄기의 길이를 자로 재어 적어 보니, 눈으로 볼 때는 그대로인 것 같던 줄기가 하루에 조금씩 자라고 있다는 것을 알 수 있었다. 토마토는 멈춰 있던 것이 아니라 보이지 않게 자라고 있었다.
+
+줄기가 길어지자 이번에는 토마토가 자꾸 한쪽으로 기울었다. 아빠와 함께 나무 막대를 꽂고 끈으로 줄기를 살살 묶어 주었다. 너무 세게 묶으면 줄기가 상한다고 해서 끈과 줄기 사이에 손가락 하나가 들어갈 만큼 여유를 두었다.
+
+6월 초에 노란 꽃이 피었고, 꽃이 진 자리에 콩알만 한 초록 열매가 달렸다. 열매가 빨갛게 익기까지는 또 한참을 기다려야 했다. 동생은 날마다 언제 먹을 수 있냐고 물었고, 나는 그때마다 “조금만 더 기다려.”라고 대답했다. 이번에는 나도 조급하지 않았다. 초록 열매가 하루하루 조금씩 붉은빛을 띠어 가는 모습을 지켜보는 것도 재미있었다.
+
+7월의 어느 아침, 드디어 첫 열매를 땄다. 손톱만 한 방울토마토 하나를 가족 넷이 사이좋게 나누어 먹었다. 한 입도 안 되는 조각이었지만, 가게에서 산 어떤 토마토보다 달콤했다.
+
+토마토를 기르면서 나는 기다리는 법을 배웠다. 무엇이든 빨리 이루고 싶을 때가 많지만, 눈에 보이지 않아도 조금씩 자라는 시간이 꼭 필요하다. 요즘 나는 잘 늘지 않는 줄넘기 실력 때문에 조급해질 때마다 베란다의 토마토를 떠올린다.','이 글에서 글쓴이가 깨달은 점으로 가장 알맞은 것은 무엇인가요?',NULL,'["줄넘기는 토마토 기르기보다 훨씬 쉽다.","식물은 사서 먹는 것이 직접 기르는 것보다 편하다.","눈에 보이지 않아도 조금씩 자라는 시간이 필요하므로 조급해하지 말고 기다려야 한다.","무엇이든 빨리 끝내야 좋은 결과를 얻을 수 있다."]',2,'마지막 문단에서 ‘기다리는 법을 배웠다’, ‘눈에 보이지 않아도 조금씩 자라는 시간이 꼭 필요하다’고 했습니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-c9e1a2a47edf','KR_KOR','vocab','mcq',4,NULL,'‘자신 있게 농담을 했는데 아무도 웃지 않자 민수는 머쓱해서 머리를 긁적였다.’에서 ‘머쓱하다’의 뜻으로 알맞은 것은 무엇인가요?',NULL,'["몸이 아파 기운이 없다.","일이 뜻대로 되어 자랑스럽다.","무안을 당하거나 흥이 꺾여 어색하고 부끄럽다.","몹시 화가 나서 참기 어렵다."]',2,'‘머쓱하다’는 기대한 반응을 얻지 못해 어색하고 부끄러운 마음을 말합니다. 머리를 긁적이는 행동과도 어울립니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-e4747d828d20','KR_KOR','vocab','mcq',4,NULL,'‘우리 팀은 전반전에 공격을 열심히 했다.’에서 ‘공격’과 뜻이 반대인 낱말은 무엇인가요?',NULL,'["경기","응원","반격","수비"]',3,'‘공격’은 상대를 치는 것이고, 반대로 상대의 공격을 막는 것은 ‘수비’입니다. ‘반격’은 되받아 공격하는 것이므로 반대말이 아닙니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-9724a9d9e2bb','KR_KOR','vocab','mcq',4,NULL,'‘우리 반은 학교 합창 대회에 참가하기로 했다.’에서 ‘참가하다’와 뜻이 가장 비슷한 낱말은 무엇인가요?',NULL,'["준비하다","참여하다","구경하다","포기하다"]',1,'‘참가하다’는 모임이나 행사에 함께 들어가 하는 것으로, ‘참여하다’와 뜻이 비슷합니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-3b2c27da62ae','KR_KOR','vocab','mcq',4,NULL,'‘국이 싱거운지 엄마가 국물 맛을 보셨다.’의 ‘보다’와 같은 뜻으로 쓰인 문장은 무엇인가요?',NULL,'["창밖으로 내리는 눈을 보았다.","동생이 자는 동안 내가 집을 보았다.","어제 수학 시험을 잘 보았다.","할머니께서 김치찌개의 간을 보셨다."]',3,'‘맛을 보다’, ‘간을 보다’의 ‘보다’는 음식의 맛을 알려고 조금 먹어 본다는 뜻입니다. 나머지는 눈으로 보다, 시험을 치르다, 지키다라는 뜻입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-37b79dbf9c2a','KR_KOR','vocab','mcq',4,NULL,'‘이 감기약은 열을 내리는 데 잘 듣는다.’의 ‘듣다’와 같은 뜻으로 쓰인 문장은 무엇인가요?',NULL,'["선생님께 칭찬을 들어서 기뻤다.","자전거 브레이크가 잘 듣지 않아 고쳤다.","동생은 형의 말을 잘 듣는다.","라디오에서 좋아하는 노래를 들었다."]',1,'‘약이 잘 듣다’, ‘브레이크가 잘 듣다’의 ‘듣다’는 어떤 것이 제대로 효과를 나타낸다는 뜻입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-18c67dfb1c89','KR_KOR','vocab','mcq',4,NULL,'낱말을 바르게 쓴 문장은 무엇인가요?',NULL,'["삼촌께 생일 축하 편지를 부쳤다.","봉투에 우표를 부쳤다.","시골 할머니 댁으로 소포를 붙였다.","벽에 반 친구들의 그림을 부쳤다."]',0,'편지나 물건을 보내는 것은 ‘부치다’, 어떤 것을 맞닿아 떨어지지 않게 하는 것은 ‘붙이다’입니다. 우표와 그림은 ‘붙였다’, 소포는 ‘부쳤다’라고 써야 합니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-03dc1ee56d25','KR_KOR','vocab','mcq',4,NULL,'맞춤법에 맞게 쓴 문장은 무엇인가요?',NULL,'["숙제를 집에 두고 왔어. 이제 어떡해?","숙제를 집에 두고 왔어. 이제 어떻해?","숙제를 집에 두고 왔어. 이제 어떻하지?","숙제를 집에 두고 왔어. 이제 어떡게 해?"]',0,'‘어떻게 해’를 줄인 말은 ‘어떡해’입니다. ‘어떻해’, ‘어떻하지’는 틀린 표기이고, ‘어떻게 해?’라고 쓰는 것도 바릅니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-8f743b0d4cb8','KR_KOR','vocab','mcq',4,NULL,'다음 중 맞춤법에 맞게 쓴 낱말은 무엇인가요?',NULL,'["해빛","나무잎","등굣길","귀볼"]',2,'‘등교+길’은 사이시옷을 넣어 ‘등굣길’로 씁니다. 나머지도 ‘햇빛’, ‘나뭇잎’, ‘귓불’로 써야 바릅니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-fba26c02eea8','KR_KOR','vocab','mcq',4,NULL,'띄어쓰기가 바른 문장은 무엇인가요?',NULL,'["전학간 친구를 삼 년만에 다시 만났다.","전학 간 친구를 삼 년만에 다시 만났다.","전학 간 친구를 삼년 만에 다시 만났다.","전학 간 친구를 삼 년 만에 다시 만났다."]',3,'시간이 얼마 지났음을 나타내는 ‘만’은 앞말과 띄어 씁니다(삼 년 만에). 단위를 나타내는 ‘년’도 수와 띄어 쓰며, ‘전학 간’도 띄어 씁니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-2657385e7c28','KR_KOR','vocab','mcq',4,NULL,'띄어쓰기가 바른 문장은 무엇인가요?',NULL,'["비가 너무 많이 와서 소풍을 미룰수밖에 없었다.","비가 너무 많이 와서 소풍을 미룰 수밖에 없었다.","비가 너무 많이 와서 소풍을 미룰 수 밖에 없었다.","비가 너무 많이 와서 소풍을 미룰수 밖에 없었다."]',1,'‘수’는 앞말과 띄어 쓰고, ‘밖에’는 조사이므로 ‘수’에 붙여 ‘미룰 수밖에’로 씁니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-9f2aca970180','KR_KOR','vocab','mcq',4,NULL,'‘선생님, 모르는 것이 있어서 (   ) 왔어요.’의 빈칸에 들어갈 말로 가장 알맞은 것은 무엇인가요?',NULL,'["물어보러","여쭈어보시러","여쭈어보러","물어보시러"]',2,'웃어른께 묻는 것은 ‘여쭈어보다’로 높여 말합니다. 묻는 사람은 ‘나’이므로 ‘-시-’를 넣어 자기를 높이면 안 됩니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-f48545e6b5c1','KR_KOR','vocab','mcq',4,NULL,'‘비록 키는 (   ) 힘은 누구보다 세다.’의 빈칸에 들어갈 말로 가장 알맞은 것은 무엇인가요?',NULL,'["작지만","작아서","작으면","작으니까"]',0,'‘비록’은 ‘-지만’, ‘-더라도’처럼 앞의 내용을 인정하면서 뒤에 반대되는 내용을 이어 주는 말과 어울립니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-0e19fa429707','KR_KOR','vocab','mcq',4,NULL,'앞뒤 말의 호응이 바른 문장은 무엇인가요?',NULL,'["오늘 지각을 했다. 왜냐하면 늦잠을 잤기 때문이다.","오늘 지각을 했다. 왜냐하면 늦잠을 자려고 한다.","오늘 지각을 했다. 왜냐하면 늦잠을 잤다.","오늘 지각을 했다. 왜냐하면 늦잠을 자서 지각했다."]',0,'‘왜냐하면’으로 시작하는 문장은 ‘~때문이다’로 끝나야 자연스럽게 호응합니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-669aab60b93d','KR_KOR','vocab','mcq',4,NULL,'다음 상황에 가장 잘 어울리는 속담은 무엇인가요?
+‘아빠는 안경을 찾느라 온 집 안을 뒤졌는데, 알고 보니 안경은 아빠 머리 위에 얹혀 있었다.’',NULL,'["우물 안 개구리","꿩 먹고 알 먹는다","등잔 밑이 어둡다","하룻강아지 범 무서운 줄 모른다"]',2,'‘등잔 밑이 어둡다’는 가까이 있는 것을 오히려 알아차리기 어렵다는 뜻입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-aba00ef8f0d4','KR_KOR','vocab','mcq',4,NULL,'‘고래 싸움에 새우 등 터진다’의 뜻으로 알맞은 것은 무엇인가요?',NULL,'["바다에 사는 동물들은 서로 싸우지 않는다.","싸움을 말리는 사람이 가장 용감하다.","힘센 사람들끼리 싸우는 사이에 아무 상관 없는 약한 사람이 피해를 입는다.","작은 것이 큰 것을 이길 수도 있다."]',2,'고래처럼 힘센 쪽끼리 싸우는데 그 사이에 낀 새우처럼 약한 쪽이 엉뚱하게 피해를 본다는 뜻입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-5c3a69bec3c6','KR_KOR','vocab','mcq',4,NULL,'‘지호는 그 일에서 손을 떼고 공부에만 집중하기로 했다.’에서 ‘손을 떼다’의 뜻은 무엇인가요?',NULL,'["하던 일을 그만두고 더 이상 관계하지 않다.","손을 깨끗이 씻다.","다른 사람과 손을 잡고 함께하다.","일을 새로 시작하다."]',0,'‘손을 떼다’는 하던 일을 그만두고 관계를 끊는다는 뜻의 관용 표현입니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-1b66bda8de27','KR_KOR','vocab','mcq',4,NULL,'‘반장으로 뽑히고 나니 해야 할 일이 많아서 (   ).’의 빈칸에 들어갈 관용 표현으로 가장 알맞은 것은 무엇인가요?',NULL,'["코가 높았다","발이 넓었다","귀가 얇았다","어깨가 무거웠다"]',3,'‘어깨가 무겁다’는 책임을 맡아 마음에 부담이 크다는 뜻이므로, 반장으로서 할 일이 많은 상황에 어울립니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-321c41dcfdf2','KR_KOR','vocab','mcq',4,NULL,'‘봄이 되면 산과 들에 여러 가지 꽃이 핀다. (   ) 개나리, 진달래, 벚꽃 등이 있다.’의 빈칸에 들어갈 알맞은 말은 무엇인가요?',NULL,'["하지만","그러므로","그런데","예를 들어"]',3,'뒤 문장이 앞에서 말한 ‘여러 가지 꽃’의 예를 들고 있으므로 ‘예를 들어’가 알맞습니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-112dc285aea2','KR_KOR','vocab','mcq',4,NULL,'‘운동장, 시장, 주차장’에 공통으로 들어 있는 ‘장’의 뜻은 무엇인가요?',NULL,'["길다","종이를 세는 단위","어떤 일을 하는 곳","우두머리"]',2,'운동을 하는 곳, 물건을 사고파는 곳, 차를 세워 두는 곳이므로 공통된 ‘장’은 ‘어떤 일을 하는 곳(장소)’을 뜻합니다.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-vocab-968855e30e68','KR_KOR','vocab','mcq',4,NULL,'‘풋사과, 풋고추, 풋과일’에 쓰인 ‘풋-’의 뜻으로 알맞은 것은 무엇인가요?',NULL,'["말린","덜 익은","아주 큰","달콤한"]',1,'‘풋-’은 일부 낱말 앞에 붙어 ‘처음 나온’, ‘덜 익은’이라는 뜻을 더해 줍니다.',1,0);
 INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_kor-nonfiction-140ae1b0e932','KR_KOR','nonfiction','mcq',3,'우리가 마시는 물은 어디에서 왔을까요? 오늘 컵에 담긴 물은 아주 오래전에 바다에 있었을 수도 있고, 구름 속을 떠다녔을 수도 있습니다. 물은 한곳에 머물러 있지 않고 모습을 바꾸며 지구 곳곳을 돌아다닙니다. 이것을 ‘물의 순환’이라고 합니다.
 
 물의 순환은 햇빛에서 시작됩니다. 햇빛이 바다나 강, 호수를 따뜻하게 데우면 물의 일부가 눈에 보이지 않는 수증기로 변해 하늘로 올라갑니다. 이렇게 물이 수증기가 되어 공기 중으로 날아가는 것을 ‘증발’이라고 합니다. 젖은 빨래가 햇볕 아래에서 마르는 것도 증발 때문입니다. 지구에서 물이 가장 많은 곳은 바다이므로 증발도 바다에서 가장 많이 일어납니다.
