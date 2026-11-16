@@ -114,6 +114,11 @@ async function syncSeed(env, { force = false } = {}) {
     const want0 = new Map(seed.questions.map((q) => [q[0], q[4]]));
     const recal = cur.filter((r) => want0.has(r.id) && want0.get(r.id) !== r.difficulty).map((r) => db.prepare('UPDATE questions SET difficulty=? WHERE id=?').bind(want0.get(r.id), r.id));
     for (let i = 0; i < recal.length; i += 50) await db.batch(recal.slice(i, i + 50));
+    // redrawn figures (e.g. made legible on phones): the figure is not part of the id either
+    const wantSvg = new Map(seed.questions.filter((q) => q[7]).map((q) => [q[0], q[7]]));
+    const curSvg = (await db.prepare(`SELECT id,image_svg FROM questions WHERE id LIKE 'seed-%' AND image_svg IS NOT NULL`).all()).results;
+    const redraw = curSvg.filter((r) => wantSvg.has(r.id) && wantSvg.get(r.id) !== r.image_svg).map((r) => db.prepare('UPDATE questions SET image_svg=? WHERE id=?').bind(wantSvg.get(r.id), r.id));
+    for (let i = 0; i < redraw.length; i += 50) await db.batch(redraw.slice(i, i + 50));
     const want = new Set(seed.questions.map((q) => q[0]));
     const stale = [...have].filter((id) => !want.has(id));
     if (stale.length) {

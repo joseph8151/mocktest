@@ -956,7 +956,7 @@ writeFileSync(new URL('../seed/seed.sql', import.meta.url), sql);
 // file that only the Worker can read (/_seed/* is blocked for visitors) and fetched once per new version.
 {
   const seedJson = {
-    version: hash(Q.map((r) => `${r.id}:${r.difficulty}`).join(',')), // difficulty is part of the version so re-calibrations reach live databases
+    version: hash(Q.map((r) => `${r.id}:${r.difficulty}${r.image_svg ? ':' + hash(r.image_svg) : ''}`).join(',')), // difficulty and figures are part of the version so re-calibrations and redrawn figures reach live databases
     questions: Q.map((r) => [r.id, r.exam_type, r.section, r.kind, r.difficulty, r.passage ?? null, r.stem, r.image_svg ?? null, r.choices ? JSON.stringify(r.choices) : null, r.answer ?? null, r.explanation ?? null]),
     products: products.map((p) => [...p.slice(0, 8), 1, p[8]]),
   };
