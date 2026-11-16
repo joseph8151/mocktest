@@ -19,8 +19,16 @@ function h(tag, attrs, ...kids) {
   for (const kid of kids.flat(Infinity)) if (kid != null && kid !== false) el.append(kid.nodeType ? kid : document.createTextNode(String(kid)));
   return el;
 }
-const api = async (method, path, body) => {
-  const r = await fetch('/api' + path, { method, headers: body ? { 'content-type': 'application/json' } : {}, body: body ? JSON.stringify(body) : undefined });
+// Every call has a deadline (a stalled request on a weak phone connection must never leave the page spinning);
+// reads are retried once, writes never (no double orders).
+const api = async (method, path, body, tries = method === 'GET' ? 2 : 1) => {
+  let r;
+  for (let i = 0; ; i++) {
+    const ac = new AbortController(), t = setTimeout(() => ac.abort(), method === 'GET' ? 12000 : 90000);
+    try { r = await fetch('/api' + path, { method, headers: body ? { 'content-type': 'application/json' } : {}, body: body ? JSON.stringify(body) : undefined, signal: ac.signal }); break; }
+    catch (e) { if (i + 1 >= tries) throw new Error(e.name === 'AbortError' ? '연결이 느립니다. 잠시 후 다시 시도해 주세요.' : '네트워크 연결을 확인해 주세요.'); }
+    finally { clearTimeout(t); }
+  }
   const j = await r.json().catch(() => ({}));
   if (!r.ok) { const e = new Error(j.error || `오류 (${r.status})`); e.status = r.status; e.data = j; if (j.lockedElsewhere && location.hash.startsWith('#/exam/')) setTimeout(route, 30); throw e; }
   return j;
@@ -131,7 +139,7 @@ function examCard(type, m, i, products, payment) {
       h('div', { class: 'row small', style: 'margin:-6px 0 16px;gap:14px' }, h('a', { href: `#/info/${type}` }, '시험 안내'), h('a', { href: `#/sample/${type}` }, '무료 샘플 5문항')),
       h('div', { class: 'tags' }, ({ MAP: ['K–G12', '학년별 13단계'], CAT4: ['Level A', 'B/C', 'D', 'E–G'], COGAT: ['L7–8', 'L9–11', 'L12–14', 'L15–18'], SCAT: ['Elementary', 'Intermediate', 'Advanced'], SSAT: ['Elementary', 'Middle', 'Upper'], ISEE: ['Lower', 'Middle', 'Upper'], SAT: ['PSAT 8/9', 'PSAT 10', 'SAT'], KR_ENG: ['9세 SR3.5', '10세 SR4.5', '11세 SR5.5', '12세 SR6.5'], KR_KOR: ['7세', '8세', '9세', '10세', '11세', '12세'], KR_MATH: ['7세', '8세', '9세', '10세', '11세', '12세'], TOEFLJ: ['Primary 1', 'Primary 2', 'Junior'], WIDA: ['G1', 'G2–3', 'G4–5', 'G6–8', 'G9–12'] }[type] || []).map((x) => h('span', {}, x))),
       h('ul', {}, m.points.map((x) => h('li', {}, x))),
-      h('div', { class: 'push' }, products.filter((p) => p.exam_type === type).map((p) => h('div', { class: 'plan' },
+      h('div', { class: 'push' }, payment.bank === undefined ? h('p', { class: 'small muted price-loading' }, '가격 불러오는 중…') : null, products.filter((p) => p.exam_type === type).map((p) => h('div', { class: 'plan' },
         h('div', {}, h('div', { class: 'pt' }, p.id === 'p-test' ? '관리자 결제 테스트' : `${p.attempts}회권`, (() => { const one = products.find((x) => x.exam_type === type && x.attempts === 1); const off = one && p.attempts > 1 ? Math.round((1 - p.price_krw / (one.price_krw * p.attempts)) * 100) : 0; return off > 0 ? h('em', { class: 'save' }, `−${off}%`) : null; })()), h('div', { class: 'pd' }, `${p.valid_days}D · ${money(p.price_usd_cents, 'USD')}`)),
         h('div', { class: 'row', style: 'flex-wrap:nowrap;gap:14px' }, h('div', { class: 'price' }, money(p.price_krw, 'KRW')), h('button', { class: 'btn sm', onclick: () => buy(p, payment) }, '구매'))))),
     );
@@ -157,7 +165,7 @@ async function pageKr() {
     catTabs('kr'),
     h('div', { id: 'kr-tests' }), head('01', 'Level tests', '레테 고르기', '시험을 시작할 때 아이 나이에 맞는 레벨을 고릅니다. 회원정보에 학년(예: 초3)이나 나이(예: 10세)를 적어 두면 자동으로 추천합니다.'),
     h('div', { class: 'index kr-index' }, krTypes.map(([type, m], i) => examCard(type, m, i, products, payment))),
-    products.some((p) => krTypes.some(([t]) => t === p.exam_type)) ? null : h('p', { class: 'notice' }, '레테 문항을 검수하고 있습니다. 곧 구매하실 수 있습니다.'),
+    payment.bank === undefined || products.some((p) => krTypes.some(([t]) => t === p.exam_type)) ? null : h('p', { class: 'notice' }, '레테 문항을 검수하고 있습니다. 곧 구매하실 수 있습니다.'),
     head('02', 'Structure', '구성과 시간'),
     h('div', { class: 'kr-tables' },
       h('div', { class: 'card' }, h('h3', {}, '영어 레테'), h('table', {}, [['Reading', '지문 3개 · 15문항', '30분'], ['Vocabulary', '15문항', '10분'], ['Grammar', '15문항', '12분'], ['Writing · Creative', '1편 (선생님 채점)', '15분'], ['Writing · Expository', '1편 (선생님 채점)', '15분']].map((r) => h('tr', {}, r.map((c) => h('td', {}, c))))),
@@ -173,7 +181,19 @@ async function pageKr() {
 }
 
 let prefetchProducts = null;
-const getProducts = async () => { const p = prefetchProducts; prefetchProducts = null; return (p && (await p)) || api('GET', '/products'); };
+// The home pages never wait long for prices: after 1.5 s they render with "가격 불러오는 중" and redraw when the list arrives.
+let productsCache = null;
+const getProducts = async () => {
+  if (productsCache && Date.now() - productsCache.at < 60000) return productsCache.v;
+  const pre = prefetchProducts; prefetchProducts = null;
+  const p = (pre ? pre.then((v) => v || Promise.reject(new Error('products'))) : api('GET', '/products')).then((v) => { productsCache = { at: Date.now(), v }; return v; });
+  const quick = await Promise.race([p, new Promise((r) => setTimeout(() => r(null), 1500))]);
+  if (quick) return quick;
+  const hash = location.hash;
+  p.then(async () => { if (location.hash !== hash || document.querySelector('.modal')) return; const y = window.scrollY; await route(); window.scrollTo(0, y); })
+    .catch(() => { document.querySelectorAll('.price-loading').forEach((x) => { x.textContent = '가격을 불러오지 못했습니다. 새로고침해 주세요.'; }); });
+  return { products: [], payment: {}, loading: true };
+};
 async function pageHome() {
   const { products, payment } = await getProducts();
   const toExams = () => document.getElementById('exams')?.scrollIntoView({ behavior: 'smooth' });
