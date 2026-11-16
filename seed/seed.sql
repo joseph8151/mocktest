@@ -2052,6 +2052,614 @@ INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,st
 INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-isee-reading-62ca44c44fcc','ISEE','reading','mcq',4,'Seventeenth-century Dutch painters turned away from the grand religious and mythological scenes that had dominated European art. Instead, a rising merchant class wanted pictures of their own world: a woman pouring milk, a tavern crowded with card players, a quiet street after rain. Such works were modest in scale, since they were meant to hang in ordinary homes rather than cathedrals. Yet their apparent simplicity is deceptive. Painters labored over the fall of light on a copper pot or the texture of a linen cloth, convinced that attention to the everyday could reveal something enduring. Some scholars read hidden moral lessons into these scenes, such as warnings against idleness or excess. Others argue that the paintings celebrate ordinary life for its own sake. Probably both views contain some truth, for the artists seldom explained themselves.','As used in the passage, "deceptive" most nearly means',NULL,'["misleading","obvious","pleasing","honest"]',0,'The simplicity hides the painters'' great effort, so it is misleading.',1,0);
 INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-isee-reading-86e9af467cf1','ISEE','reading','mcq',5,'Seventeenth-century Dutch painters turned away from the grand religious and mythological scenes that had dominated European art. Instead, a rising merchant class wanted pictures of their own world: a woman pouring milk, a tavern crowded with card players, a quiet street after rain. Such works were modest in scale, since they were meant to hang in ordinary homes rather than cathedrals. Yet their apparent simplicity is deceptive. Painters labored over the fall of light on a copper pot or the texture of a linen cloth, convinced that attention to the everyday could reveal something enduring. Some scholars read hidden moral lessons into these scenes, such as warnings against idleness or excess. Others argue that the paintings celebrate ordinary life for its own sake. Probably both views contain some truth, for the artists seldom explained themselves.','The author suggests that the two scholarly interpretations',NULL,'["are probably both partly correct","are impossible to reconcile","have been disproved","are unrelated to the paintings"]',0,'The author says both views probably contain some truth.',1,0);
 INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-isee-reading-7dfc242db07b','ISEE','reading','mcq',4,'Seventeenth-century Dutch painters turned away from the grand religious and mythological scenes that had dominated European art. Instead, a rising merchant class wanted pictures of their own world: a woman pouring milk, a tavern crowded with card players, a quiet street after rain. Such works were modest in scale, since they were meant to hang in ordinary homes rather than cathedrals. Yet their apparent simplicity is deceptive. Painters labored over the fall of light on a copper pot or the texture of a linen cloth, convinced that attention to the everyday could reveal something enduring. Some scholars read hidden moral lessons into these scenes, such as warnings against idleness or excess. Others argue that the paintings celebrate ordinary life for its own sake. Probably both views contain some truth, for the artists seldom explained themselves.','Which statement best expresses the main idea of the passage?',NULL,'["Dutch painters of this era depicted everyday life with care for a new merchant audience.","Merchants refused to buy art.","Dutch painters rejected the use of light.","Religious art vanished from Europe."]',0,'The passage describes the shift to everyday subjects and why they were painted.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-a2dd58924f65','KR_ENG','reading','mcq',2,'Sofia kicked the soccer ball as hard as she could. It sailed over the fence, and landed directly on Mr. Okafor''s front porch, where something shattered with a terrible crash.
+
+She raced to the fence and peeked over. Mr. Okafor''s favorite blue flowerpot lay in pieces on the steps, and dirt and red petals were scattered everywhere. Her ball rested quietly beside the broken pot, as if it had done nothing wrong.
+
+Sofia looked up and down the street. Nobody was outside. His car was gone, so he was probably at work. She realized that she could grab the ball, hurry home, and no one would ever discover what had happened.
+
+She climbed over the fence, picked up the ball, and returned to her own yard. That evening, however, she could not stop thinking about the broken pot. At dinner, she pushed her vegetables around her plate, and in bed she stared at the ceiling for hours. Mr. Okafor waved to her every morning when she walked to the bus stop and always asked about her games. How could she wave back tomorrow and pretend that everything was normal?
+
+The next afternoon, Sofia emptied her piggy bank onto her bed and counted eleven dollars and forty cents. Then she took a deep breath and walked next door.
+
+Mr. Okafor was sweeping the steps when she arrived, and Sofia''s heart pounded like a drum. "I''m the one who broke your flowerpot," she said quickly. "It was my soccer ball, and I''m really sorry, so I want to pay for a new one." She held out the coins and bills.
+
+Mr. Okafor leaned on his broom and studied her for a long moment before he smiled. "That old pot was older than you are," he said. "Keep your money, but I do have a job for you, because those flowers still need a home."
+
+On Saturday, Sofia and Mr. Okafor drove to the hardware store and selected a new pot. Back at his house, they filled it with fresh soil and replanted the flowers that had survived. Sofia''s hands were muddy, but she felt lighter than she had in days.
+
+"You know," Mr. Okafor said as they watered the pot, "plenty of people would have stayed silent, and telling the truth takes real courage."
+
+Sofia grinned. From then on, she practiced her powerful kicks at the park.','Which sentence best states a theme of the story?',NULL,'["Telling the truth can be hard, but it is the right thing to do.","Soccer is a game that should only be played at school.","Money is the best way to fix any mistake.","Neighbors should always keep a tall fence between their yards."]',0,'Sofia is tempted to hide what she did, but she confesses, and Mr. Okafor praises her courage. The story shows that telling the truth is right even when it is hard.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-d806e1d46fad','KR_ENG','reading','mcq',2,'Sofia kicked the soccer ball as hard as she could. It sailed over the fence, and landed directly on Mr. Okafor''s front porch, where something shattered with a terrible crash.
+
+She raced to the fence and peeked over. Mr. Okafor''s favorite blue flowerpot lay in pieces on the steps, and dirt and red petals were scattered everywhere. Her ball rested quietly beside the broken pot, as if it had done nothing wrong.
+
+Sofia looked up and down the street. Nobody was outside. His car was gone, so he was probably at work. She realized that she could grab the ball, hurry home, and no one would ever discover what had happened.
+
+She climbed over the fence, picked up the ball, and returned to her own yard. That evening, however, she could not stop thinking about the broken pot. At dinner, she pushed her vegetables around her plate, and in bed she stared at the ceiling for hours. Mr. Okafor waved to her every morning when she walked to the bus stop and always asked about her games. How could she wave back tomorrow and pretend that everything was normal?
+
+The next afternoon, Sofia emptied her piggy bank onto her bed and counted eleven dollars and forty cents. Then she took a deep breath and walked next door.
+
+Mr. Okafor was sweeping the steps when she arrived, and Sofia''s heart pounded like a drum. "I''m the one who broke your flowerpot," she said quickly. "It was my soccer ball, and I''m really sorry, so I want to pay for a new one." She held out the coins and bills.
+
+Mr. Okafor leaned on his broom and studied her for a long moment before he smiled. "That old pot was older than you are," he said. "Keep your money, but I do have a job for you, because those flowers still need a home."
+
+On Saturday, Sofia and Mr. Okafor drove to the hardware store and selected a new pot. Back at his house, they filled it with fresh soil and replanted the flowers that had survived. Sofia''s hands were muddy, but she felt lighter than she had in days.
+
+"You know," Mr. Okafor said as they watered the pot, "plenty of people would have stayed silent, and telling the truth takes real courage."
+
+Sofia grinned. From then on, she practiced her powerful kicks at the park.','In paragraph 2, the word "scattered" most nearly means',NULL,'["spread all around","washed away","hidden carefully","piled up neatly"]',0,'The pot broke and the dirt and petals were "everywhere," so "scattered" means spread all around.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-69095ba09925','KR_ENG','reading','mcq',2,'Sofia kicked the soccer ball as hard as she could. It sailed over the fence, and landed directly on Mr. Okafor''s front porch, where something shattered with a terrible crash.
+
+She raced to the fence and peeked over. Mr. Okafor''s favorite blue flowerpot lay in pieces on the steps, and dirt and red petals were scattered everywhere. Her ball rested quietly beside the broken pot, as if it had done nothing wrong.
+
+Sofia looked up and down the street. Nobody was outside. His car was gone, so he was probably at work. She realized that she could grab the ball, hurry home, and no one would ever discover what had happened.
+
+She climbed over the fence, picked up the ball, and returned to her own yard. That evening, however, she could not stop thinking about the broken pot. At dinner, she pushed her vegetables around her plate, and in bed she stared at the ceiling for hours. Mr. Okafor waved to her every morning when she walked to the bus stop and always asked about her games. How could she wave back tomorrow and pretend that everything was normal?
+
+The next afternoon, Sofia emptied her piggy bank onto her bed and counted eleven dollars and forty cents. Then she took a deep breath and walked next door.
+
+Mr. Okafor was sweeping the steps when she arrived, and Sofia''s heart pounded like a drum. "I''m the one who broke your flowerpot," she said quickly. "It was my soccer ball, and I''m really sorry, so I want to pay for a new one." She held out the coins and bills.
+
+Mr. Okafor leaned on his broom and studied her for a long moment before he smiled. "That old pot was older than you are," he said. "Keep your money, but I do have a job for you, because those flowers still need a home."
+
+On Saturday, Sofia and Mr. Okafor drove to the hardware store and selected a new pot. Back at his house, they filled it with fresh soil and replanted the flowers that had survived. Sofia''s hands were muddy, but she felt lighter than she had in days.
+
+"You know," Mr. Okafor said as they watered the pot, "plenty of people would have stayed silent, and telling the truth takes real courage."
+
+Sofia grinned. From then on, she practiced her powerful kicks at the park.','Why can''t Sofia stop thinking about the pot that night?',NULL,'["She is afraid that Mr. Okafor will move away.","She wants to buy a new flowerpot for her own room.","She is worried that her soccer ball is damaged.","She feels guilty about hiding what she did."]',3,'Sofia wonders how she can wave to Mr. Okafor and pretend nothing happened. This shows she feels guilty for keeping the accident a secret.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-270ae9a07c76','KR_ENG','reading','mcq',2,'Sofia kicked the soccer ball as hard as she could. It sailed over the fence, and landed directly on Mr. Okafor''s front porch, where something shattered with a terrible crash.
+
+She raced to the fence and peeked over. Mr. Okafor''s favorite blue flowerpot lay in pieces on the steps, and dirt and red petals were scattered everywhere. Her ball rested quietly beside the broken pot, as if it had done nothing wrong.
+
+Sofia looked up and down the street. Nobody was outside. His car was gone, so he was probably at work. She realized that she could grab the ball, hurry home, and no one would ever discover what had happened.
+
+She climbed over the fence, picked up the ball, and returned to her own yard. That evening, however, she could not stop thinking about the broken pot. At dinner, she pushed her vegetables around her plate, and in bed she stared at the ceiling for hours. Mr. Okafor waved to her every morning when she walked to the bus stop and always asked about her games. How could she wave back tomorrow and pretend that everything was normal?
+
+The next afternoon, Sofia emptied her piggy bank onto her bed and counted eleven dollars and forty cents. Then she took a deep breath and walked next door.
+
+Mr. Okafor was sweeping the steps when she arrived, and Sofia''s heart pounded like a drum. "I''m the one who broke your flowerpot," she said quickly. "It was my soccer ball, and I''m really sorry, so I want to pay for a new one." She held out the coins and bills.
+
+Mr. Okafor leaned on his broom and studied her for a long moment before he smiled. "That old pot was older than you are," he said. "Keep your money, but I do have a job for you, because those flowers still need a home."
+
+On Saturday, Sofia and Mr. Okafor drove to the hardware store and selected a new pot. Back at his house, they filled it with fresh soil and replanted the flowers that had survived. Sofia''s hands were muddy, but she felt lighter than she had in days.
+
+"You know," Mr. Okafor said as they watered the pot, "plenty of people would have stayed silent, and telling the truth takes real courage."
+
+Sofia grinned. From then on, she practiced her powerful kicks at the park.','What do Mr. Okafor''s words and actions show about him?',NULL,'["He is angry and wants to be paid.","He does not care about his flowers.","He is too busy to listen to Sofia.","He is kind and forgiving."]',3,'Mr. Okafor smiles, tells Sofia to keep her money, and praises her for telling the truth. This shows that he is kind and forgiving.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-c7ef739374fb','KR_ENG','reading','mcq',2,'Sofia kicked the soccer ball as hard as she could. It sailed over the fence, and landed directly on Mr. Okafor''s front porch, where something shattered with a terrible crash.
+
+She raced to the fence and peeked over. Mr. Okafor''s favorite blue flowerpot lay in pieces on the steps, and dirt and red petals were scattered everywhere. Her ball rested quietly beside the broken pot, as if it had done nothing wrong.
+
+Sofia looked up and down the street. Nobody was outside. His car was gone, so he was probably at work. She realized that she could grab the ball, hurry home, and no one would ever discover what had happened.
+
+She climbed over the fence, picked up the ball, and returned to her own yard. That evening, however, she could not stop thinking about the broken pot. At dinner, she pushed her vegetables around her plate, and in bed she stared at the ceiling for hours. Mr. Okafor waved to her every morning when she walked to the bus stop and always asked about her games. How could she wave back tomorrow and pretend that everything was normal?
+
+The next afternoon, Sofia emptied her piggy bank onto her bed and counted eleven dollars and forty cents. Then she took a deep breath and walked next door.
+
+Mr. Okafor was sweeping the steps when she arrived, and Sofia''s heart pounded like a drum. "I''m the one who broke your flowerpot," she said quickly. "It was my soccer ball, and I''m really sorry, so I want to pay for a new one." She held out the coins and bills.
+
+Mr. Okafor leaned on his broom and studied her for a long moment before he smiled. "That old pot was older than you are," he said. "Keep your money, but I do have a job for you, because those flowers still need a home."
+
+On Saturday, Sofia and Mr. Okafor drove to the hardware store and selected a new pot. Back at his house, they filled it with fresh soil and replanted the flowers that had survived. Sofia''s hands were muddy, but she felt lighter than she had in days.
+
+"You know," Mr. Okafor said as they watered the pot, "plenty of people would have stayed silent, and telling the truth takes real courage."
+
+Sofia grinned. From then on, she practiced her powerful kicks at the park.','Which event happens right after Sofia counts the money from her piggy bank?',NULL,'["She picks up her ball from the porch.","She pushes her vegetables around her plate at dinner.","She and Mr. Okafor buy a new pot at the store.","She walks next door to talk to Mr. Okafor."]',3,'After counting eleven dollars and forty cents, Sofia takes a deep breath and walks next door. The other events happen earlier or later.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-5fdae0ed1fb1','KR_ENG','reading','mcq',2,'Imagine you are walking through a forest. A brown moth rests on a tree trunk right in front of you, but you walk past without seeing it. The moth is not invisible. It simply blends in with the bark. This is called camouflage, and it is one of the most useful tools an animal can have.
+
+Camouflage helps animals survive. Many animals are hunted by others. If a hungry bird cannot see a moth, it cannot eat the moth. Camouflage also helps hunters. A tiger''s orange and black stripes look bright in a zoo, but in tall, dry grass they break up the tiger''s shape. Deer and other animals may not notice the tiger until it is too late.
+
+Some animals match the color of their home. A polar bear''s white fur blends in with snow and ice. A flounder is a flat fish that lies on the sandy ocean floor. Its spotted brown skin looks just like the sand around it.
+
+Other animals change their color with the seasons. In summer, the arctic fox has brown and gray fur that matches rocks and plants. When winter comes, it grows thick white fur that matches the snow.
+
+A few animals can change color very quickly. An octopus can change both the color and the bumpy texture of its skin in less than a second. One moment it looks like a rock covered in seaweed, and the next moment it seems to disappear into the coral.
+
+Some insects hide by copying the shape of things around them. A walking stick insect is long, thin, and brown. When it holds still on a branch, it looks just like a twig. Leaf insects are flat and green, with markings that look like the veins of a real leaf.
+
+Not every animal tries to hide, though. Some animals copy the colors of dangerous animals instead. The scarlet kingsnake is harmless, but its red, black, and yellow bands look a lot like those of the coral snake, which is very venomous. Many predators stay away from both snakes.
+
+Scientists are still discovering new examples of camouflage. Whether an animal is hiding from a hunter or sneaking up on its next meal, blending in can mean the difference between life and death.','What is the main idea of the passage?',NULL,'["Polar bears and arctic foxes live in the same places.","Octopuses are the only animals that can change color.","Camouflage helps many animals survive by letting them blend in or look like something else.","Tigers are the most dangerous hunters in the world."]',2,'The passage gives many examples of animals that hide by matching colors, changing colors, or copying shapes, all to help them survive.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-def59d3d4a5d','KR_ENG','reading','mcq',2,'Imagine you are walking through a forest. A brown moth rests on a tree trunk right in front of you, but you walk past without seeing it. The moth is not invisible. It simply blends in with the bark. This is called camouflage, and it is one of the most useful tools an animal can have.
+
+Camouflage helps animals survive. Many animals are hunted by others. If a hungry bird cannot see a moth, it cannot eat the moth. Camouflage also helps hunters. A tiger''s orange and black stripes look bright in a zoo, but in tall, dry grass they break up the tiger''s shape. Deer and other animals may not notice the tiger until it is too late.
+
+Some animals match the color of their home. A polar bear''s white fur blends in with snow and ice. A flounder is a flat fish that lies on the sandy ocean floor. Its spotted brown skin looks just like the sand around it.
+
+Other animals change their color with the seasons. In summer, the arctic fox has brown and gray fur that matches rocks and plants. When winter comes, it grows thick white fur that matches the snow.
+
+A few animals can change color very quickly. An octopus can change both the color and the bumpy texture of its skin in less than a second. One moment it looks like a rock covered in seaweed, and the next moment it seems to disappear into the coral.
+
+Some insects hide by copying the shape of things around them. A walking stick insect is long, thin, and brown. When it holds still on a branch, it looks just like a twig. Leaf insects are flat and green, with markings that look like the veins of a real leaf.
+
+Not every animal tries to hide, though. Some animals copy the colors of dangerous animals instead. The scarlet kingsnake is harmless, but its red, black, and yellow bands look a lot like those of the coral snake, which is very venomous. Many predators stay away from both snakes.
+
+Scientists are still discovering new examples of camouflage. Whether an animal is hiding from a hunter or sneaking up on its next meal, blending in can mean the difference between life and death.','According to the passage, how does the arctic fox''s fur change?',NULL,'["It is brown and gray in summer and white in winter.","It changes color in less than a second.","It grows black stripes in the winter.","It is white in summer and brown in winter."]',0,'Paragraph 4 says the arctic fox has brown and gray fur in summer and grows white fur in winter to match the snow.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-2c8a902e8604','KR_ENG','reading','mcq',2,'Imagine you are walking through a forest. A brown moth rests on a tree trunk right in front of you, but you walk past without seeing it. The moth is not invisible. It simply blends in with the bark. This is called camouflage, and it is one of the most useful tools an animal can have.
+
+Camouflage helps animals survive. Many animals are hunted by others. If a hungry bird cannot see a moth, it cannot eat the moth. Camouflage also helps hunters. A tiger''s orange and black stripes look bright in a zoo, but in tall, dry grass they break up the tiger''s shape. Deer and other animals may not notice the tiger until it is too late.
+
+Some animals match the color of their home. A polar bear''s white fur blends in with snow and ice. A flounder is a flat fish that lies on the sandy ocean floor. Its spotted brown skin looks just like the sand around it.
+
+Other animals change their color with the seasons. In summer, the arctic fox has brown and gray fur that matches rocks and plants. When winter comes, it grows thick white fur that matches the snow.
+
+A few animals can change color very quickly. An octopus can change both the color and the bumpy texture of its skin in less than a second. One moment it looks like a rock covered in seaweed, and the next moment it seems to disappear into the coral.
+
+Some insects hide by copying the shape of things around them. A walking stick insect is long, thin, and brown. When it holds still on a branch, it looks just like a twig. Leaf insects are flat and green, with markings that look like the veins of a real leaf.
+
+Not every animal tries to hide, though. Some animals copy the colors of dangerous animals instead. The scarlet kingsnake is harmless, but its red, black, and yellow bands look a lot like those of the coral snake, which is very venomous. Many predators stay away from both snakes.
+
+Scientists are still discovering new examples of camouflage. Whether an animal is hiding from a hunter or sneaking up on its next meal, blending in can mean the difference between life and death.','How does the author mainly organize paragraphs 3 through 6?',NULL,'["by describing different kinds of camouflage and giving examples of each","by explaining a problem and then its solution","by telling events in the order they happened","by comparing a moth and a tiger"]',0,'Each paragraph names a different way animals use camouflage, such as matching their home or changing with the seasons, and gives animal examples.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-fd9cd633c2fe','KR_ENG','reading','mcq',2,'Imagine you are walking through a forest. A brown moth rests on a tree trunk right in front of you, but you walk past without seeing it. The moth is not invisible. It simply blends in with the bark. This is called camouflage, and it is one of the most useful tools an animal can have.
+
+Camouflage helps animals survive. Many animals are hunted by others. If a hungry bird cannot see a moth, it cannot eat the moth. Camouflage also helps hunters. A tiger''s orange and black stripes look bright in a zoo, but in tall, dry grass they break up the tiger''s shape. Deer and other animals may not notice the tiger until it is too late.
+
+Some animals match the color of their home. A polar bear''s white fur blends in with snow and ice. A flounder is a flat fish that lies on the sandy ocean floor. Its spotted brown skin looks just like the sand around it.
+
+Other animals change their color with the seasons. In summer, the arctic fox has brown and gray fur that matches rocks and plants. When winter comes, it grows thick white fur that matches the snow.
+
+A few animals can change color very quickly. An octopus can change both the color and the bumpy texture of its skin in less than a second. One moment it looks like a rock covered in seaweed, and the next moment it seems to disappear into the coral.
+
+Some insects hide by copying the shape of things around them. A walking stick insect is long, thin, and brown. When it holds still on a branch, it looks just like a twig. Leaf insects are flat and green, with markings that look like the veins of a real leaf.
+
+Not every animal tries to hide, though. Some animals copy the colors of dangerous animals instead. The scarlet kingsnake is harmless, but its red, black, and yellow bands look a lot like those of the coral snake, which is very venomous. Many predators stay away from both snakes.
+
+Scientists are still discovering new examples of camouflage. Whether an animal is hiding from a hunter or sneaking up on its next meal, blending in can mean the difference between life and death.','In paragraph 5, the word "texture" most nearly means',NULL,'["the size of an animal","the speed of a movement","the way a surface looks and feels","the smell of the ocean"]',2,'The octopus changes the "bumpy texture" of its skin to look like a rock, so texture means how a surface looks and feels.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-5105596e6ad4','KR_ENG','reading','mcq',2,'Imagine you are walking through a forest. A brown moth rests on a tree trunk right in front of you, but you walk past without seeing it. The moth is not invisible. It simply blends in with the bark. This is called camouflage, and it is one of the most useful tools an animal can have.
+
+Camouflage helps animals survive. Many animals are hunted by others. If a hungry bird cannot see a moth, it cannot eat the moth. Camouflage also helps hunters. A tiger''s orange and black stripes look bright in a zoo, but in tall, dry grass they break up the tiger''s shape. Deer and other animals may not notice the tiger until it is too late.
+
+Some animals match the color of their home. A polar bear''s white fur blends in with snow and ice. A flounder is a flat fish that lies on the sandy ocean floor. Its spotted brown skin looks just like the sand around it.
+
+Other animals change their color with the seasons. In summer, the arctic fox has brown and gray fur that matches rocks and plants. When winter comes, it grows thick white fur that matches the snow.
+
+A few animals can change color very quickly. An octopus can change both the color and the bumpy texture of its skin in less than a second. One moment it looks like a rock covered in seaweed, and the next moment it seems to disappear into the coral.
+
+Some insects hide by copying the shape of things around them. A walking stick insect is long, thin, and brown. When it holds still on a branch, it looks just like a twig. Leaf insects are flat and green, with markings that look like the veins of a real leaf.
+
+Not every animal tries to hide, though. Some animals copy the colors of dangerous animals instead. The scarlet kingsnake is harmless, but its red, black, and yellow bands look a lot like those of the coral snake, which is very venomous. Many predators stay away from both snakes.
+
+Scientists are still discovering new examples of camouflage. Whether an animal is hiding from a hunter or sneaking up on its next meal, blending in can mean the difference between life and death.','Why do many predators most likely stay away from the scarlet kingsnake?',NULL,'["It hides under the sand on the ocean floor.","Its bite is very venomous.","It changes color with the seasons.","They mistake it for the venomous coral snake."]',3,'The kingsnake is harmless, but its bands look like the coral snake''s, so predators avoid it as if it were dangerous.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-dfb9a683d4f0','KR_ENG','reading','mcq',2,'Long ago, when the world was new, the nights were completely dark. There was no moon, and there were no stars. When the sun went down, the animals of the forest stayed close to their homes, because anyone who wandered away in the darkness could easily get lost.
+
+In those days, Firefly was a plain brown beetle. She was so small that the other animals hardly noticed her. Owl had his sharp eyes, Fox had her clever nose, and Bear had his great strength. Firefly had nothing special at all, or so everyone said.
+
+One evening, a young rabbit named Pip hopped too far from his burrow while chasing a butterfly. Before he knew it, the sun had disappeared, and Pip could not even see his own paws. Frightened and alone, he sat under a fern and began to cry.
+
+The animals heard him, but no one knew how to help. "I can see a little in the dark," said Owl, "but I cannot lead him through the thick bushes." Fox sniffed the air. "I can smell him, but the wind keeps changing." Bear only shook his heavy head.
+
+Firefly listened from a blade of grass. She was tiny, but she was not afraid, so she flew up and up to the great Sky Spirit, who kept the light of the sun in a golden bowl.
+
+"Please," Firefly begged, "give me a small piece of light so I can bring Pip home."
+
+The Sky Spirit studied the little beetle. "Many large animals have asked me for light so that they could show off," it said. "You are the first to ask for light to help someone else." It dipped a finger into the bowl and touched Firefly''s tail. At once, her tail glowed a soft yellow-green.
+
+Firefly zipped down through the trees, flashing her new light. Pip looked up and saw a bright spark dancing in front of him. He followed it over roots and around rocks until he reached his family''s burrow. His mother hugged him tightly.
+
+From that night on, the other animals never ignored Firefly again. And to this day, on warm summer nights, fireflies flash their lights over fields and forests. People say they are still looking for anyone who has lost the way home.','What does this story mainly try to explain?',NULL,'["why the sun sets every night","why rabbits live in burrows","why fireflies glow","why owls can see in the dark"]',2,'The Sky Spirit makes Firefly''s tail glow, and the story says fireflies still flash their lights today. It is a tale that explains why fireflies glow.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-b2513ae6ea21','KR_ENG','reading','mcq',2,'Long ago, when the world was new, the nights were completely dark. There was no moon, and there were no stars. When the sun went down, the animals of the forest stayed close to their homes, because anyone who wandered away in the darkness could easily get lost.
+
+In those days, Firefly was a plain brown beetle. She was so small that the other animals hardly noticed her. Owl had his sharp eyes, Fox had her clever nose, and Bear had his great strength. Firefly had nothing special at all, or so everyone said.
+
+One evening, a young rabbit named Pip hopped too far from his burrow while chasing a butterfly. Before he knew it, the sun had disappeared, and Pip could not even see his own paws. Frightened and alone, he sat under a fern and began to cry.
+
+The animals heard him, but no one knew how to help. "I can see a little in the dark," said Owl, "but I cannot lead him through the thick bushes." Fox sniffed the air. "I can smell him, but the wind keeps changing." Bear only shook his heavy head.
+
+Firefly listened from a blade of grass. She was tiny, but she was not afraid, so she flew up and up to the great Sky Spirit, who kept the light of the sun in a golden bowl.
+
+"Please," Firefly begged, "give me a small piece of light so I can bring Pip home."
+
+The Sky Spirit studied the little beetle. "Many large animals have asked me for light so that they could show off," it said. "You are the first to ask for light to help someone else." It dipped a finger into the bowl and touched Firefly''s tail. At once, her tail glowed a soft yellow-green.
+
+Firefly zipped down through the trees, flashing her new light. Pip looked up and saw a bright spark dancing in front of him. He followed it over roots and around rocks until he reached his family''s burrow. His mother hugged him tightly.
+
+From that night on, the other animals never ignored Firefly again. And to this day, on warm summer nights, fireflies flash their lights over fields and forests. People say they are still looking for anyone who has lost the way home.','Why does the Sky Spirit give Firefly a piece of light?',NULL,'["She is the biggest and strongest animal in the forest.","Owl and Fox tell the Sky Spirit to give her the light.","She wants the light to help someone else, not to show off.","She promises to bring the light back the next morning."]',2,'The Sky Spirit says, "You are the first to ask for light to help someone else," and then touches her tail.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-428213d2987b','KR_ENG','reading','mcq',2,'Long ago, when the world was new, the nights were completely dark. There was no moon, and there were no stars. When the sun went down, the animals of the forest stayed close to their homes, because anyone who wandered away in the darkness could easily get lost.
+
+In those days, Firefly was a plain brown beetle. She was so small that the other animals hardly noticed her. Owl had his sharp eyes, Fox had her clever nose, and Bear had his great strength. Firefly had nothing special at all, or so everyone said.
+
+One evening, a young rabbit named Pip hopped too far from his burrow while chasing a butterfly. Before he knew it, the sun had disappeared, and Pip could not even see his own paws. Frightened and alone, he sat under a fern and began to cry.
+
+The animals heard him, but no one knew how to help. "I can see a little in the dark," said Owl, "but I cannot lead him through the thick bushes." Fox sniffed the air. "I can smell him, but the wind keeps changing." Bear only shook his heavy head.
+
+Firefly listened from a blade of grass. She was tiny, but she was not afraid, so she flew up and up to the great Sky Spirit, who kept the light of the sun in a golden bowl.
+
+"Please," Firefly begged, "give me a small piece of light so I can bring Pip home."
+
+The Sky Spirit studied the little beetle. "Many large animals have asked me for light so that they could show off," it said. "You are the first to ask for light to help someone else." It dipped a finger into the bowl and touched Firefly''s tail. At once, her tail glowed a soft yellow-green.
+
+Firefly zipped down through the trees, flashing her new light. Pip looked up and saw a bright spark dancing in front of him. He followed it over roots and around rocks until he reached his family''s burrow. His mother hugged him tightly.
+
+From that night on, the other animals never ignored Firefly again. And to this day, on warm summer nights, fireflies flash their lights over fields and forests. People say they are still looking for anyone who has lost the way home.','What is the main purpose of paragraph 4?',NULL,'["to explain how Pip got lost","to show that the larger animals could not solve the problem","to show that Owl was the bravest animal","to describe what the forest looked like at night"]',1,'In paragraph 4, Owl, Fox, and Bear each try to help but cannot. This sets up Firefly as the one who solves the problem.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-51a49b6f99af','KR_ENG','reading','mcq',2,'Long ago, when the world was new, the nights were completely dark. There was no moon, and there were no stars. When the sun went down, the animals of the forest stayed close to their homes, because anyone who wandered away in the darkness could easily get lost.
+
+In those days, Firefly was a plain brown beetle. She was so small that the other animals hardly noticed her. Owl had his sharp eyes, Fox had her clever nose, and Bear had his great strength. Firefly had nothing special at all, or so everyone said.
+
+One evening, a young rabbit named Pip hopped too far from his burrow while chasing a butterfly. Before he knew it, the sun had disappeared, and Pip could not even see his own paws. Frightened and alone, he sat under a fern and began to cry.
+
+The animals heard him, but no one knew how to help. "I can see a little in the dark," said Owl, "but I cannot lead him through the thick bushes." Fox sniffed the air. "I can smell him, but the wind keeps changing." Bear only shook his heavy head.
+
+Firefly listened from a blade of grass. She was tiny, but she was not afraid, so she flew up and up to the great Sky Spirit, who kept the light of the sun in a golden bowl.
+
+"Please," Firefly begged, "give me a small piece of light so I can bring Pip home."
+
+The Sky Spirit studied the little beetle. "Many large animals have asked me for light so that they could show off," it said. "You are the first to ask for light to help someone else." It dipped a finger into the bowl and touched Firefly''s tail. At once, her tail glowed a soft yellow-green.
+
+Firefly zipped down through the trees, flashing her new light. Pip looked up and saw a bright spark dancing in front of him. He followed it over roots and around rocks until he reached his family''s burrow. His mother hugged him tightly.
+
+From that night on, the other animals never ignored Firefly again. And to this day, on warm summer nights, fireflies flash their lights over fields and forests. People say they are still looking for anyone who has lost the way home.','In the last paragraph, the word "ignored" most nearly means',NULL,'["were afraid of","followed closely","paid no attention to","laughed together with"]',2,'Earlier, the other animals "hardly noticed" Firefly. After she saved Pip, they never "ignored" her again, so the word means paid no attention to.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-f99b9569965c','KR_ENG','reading','mcq',2,'Long ago, when the world was new, the nights were completely dark. There was no moon, and there were no stars. When the sun went down, the animals of the forest stayed close to their homes, because anyone who wandered away in the darkness could easily get lost.
+
+In those days, Firefly was a plain brown beetle. She was so small that the other animals hardly noticed her. Owl had his sharp eyes, Fox had her clever nose, and Bear had his great strength. Firefly had nothing special at all, or so everyone said.
+
+One evening, a young rabbit named Pip hopped too far from his burrow while chasing a butterfly. Before he knew it, the sun had disappeared, and Pip could not even see his own paws. Frightened and alone, he sat under a fern and began to cry.
+
+The animals heard him, but no one knew how to help. "I can see a little in the dark," said Owl, "but I cannot lead him through the thick bushes." Fox sniffed the air. "I can smell him, but the wind keeps changing." Bear only shook his heavy head.
+
+Firefly listened from a blade of grass. She was tiny, but she was not afraid, so she flew up and up to the great Sky Spirit, who kept the light of the sun in a golden bowl.
+
+"Please," Firefly begged, "give me a small piece of light so I can bring Pip home."
+
+The Sky Spirit studied the little beetle. "Many large animals have asked me for light so that they could show off," it said. "You are the first to ask for light to help someone else." It dipped a finger into the bowl and touched Firefly''s tail. At once, her tail glowed a soft yellow-green.
+
+Firefly zipped down through the trees, flashing her new light. Pip looked up and saw a bright spark dancing in front of him. He followed it over roots and around rocks until he reached his family''s burrow. His mother hugged him tightly.
+
+From that night on, the other animals never ignored Firefly again. And to this day, on warm summer nights, fireflies flash their lights over fields and forests. People say they are still looking for anyone who has lost the way home.','How is Firefly different from Owl, Fox, and Bear?',NULL,'["She finds a way to help Pip even though she seems to have no special gift.","She is larger and stronger than all of them.","She does not hear Pip crying in the forest.","She is afraid of the dark and stays home."]',0,'Owl, Fox, and Bear have special gifts but cannot help. Firefly, who "had nothing special at all," is the one who brings Pip home.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-75f32a659b33','KR_ENG','reading','mcq',2,'On a small island in New York Harbor, a giant green lady holds a torch high above the water. She is the Statue of Liberty. For more than a hundred years, she has welcomed ships into the harbor. But few people know how hard it was to build her.
+
+The idea began in France in 1865. Some French people liked the way the United States stood for freedom. They wanted to give Americans a gift. It would mark one hundred years since the Declaration of Independence. A young artist named Auguste Bartholdi agreed to design a huge statue of a woman with a torch.
+
+Building the statue took many years. Workers hammered thin sheets of copper into shape by hand. The copper skin is only about as thick as two pennies, so it could not stand up on its own. A builder named Gustave Eiffel planned a strong iron frame to hold it up from the inside. Later, Eiffel built a famous tall tower in Paris.
+
+The French agreed to pay for the statue. Americans agreed to build the stone base, called a pedestal. But it was hard to raise money for the pedestal, and for a while, work stopped. Then a newspaper owner named Joseph Pulitzer asked his readers for help. He promised to print the name of every person who gave money, no matter how small the gift. More than 120,000 people sent money. Many of them, including children, gave less than one dollar.
+
+In 1885, the statue was taken apart and shipped across the ocean in 214 wooden crates. Workers put the pieces back together on top of the new base. On October 28, 1886, the Statue of Liberty was at last shown to the world.
+
+When she was new, the statue was the color of a shiny penny. Over many years, air and rain slowly turned the copper pale green. This green coat actually protects the metal under it.
+
+The statue has many signs and symbols. In her left hand, she holds a tablet with the date July 4, 1776. Broken chains lie at her feet to stand for freedom. For millions of people who came to America by ship, she was the first thing they saw in their new home.','What is the author''s main purpose in writing this passage?',NULL,'["to convince readers to move to New York City","to tell a made-up story about a talking statue","to teach readers how to make copper sheets at home","to tell readers how the Statue of Liberty was planned and built"]',3,'The passage gives facts about where the idea came from, how the statue was made and shipped, and what it stands for.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-1ee2b1d2d574','KR_ENG','reading','mcq',2,'On a small island in New York Harbor, a giant green lady holds a torch high above the water. She is the Statue of Liberty. For more than a hundred years, she has welcomed ships into the harbor. But few people know how hard it was to build her.
+
+The idea began in France in 1865. Some French people liked the way the United States stood for freedom. They wanted to give Americans a gift. It would mark one hundred years since the Declaration of Independence. A young artist named Auguste Bartholdi agreed to design a huge statue of a woman with a torch.
+
+Building the statue took many years. Workers hammered thin sheets of copper into shape by hand. The copper skin is only about as thick as two pennies, so it could not stand up on its own. A builder named Gustave Eiffel planned a strong iron frame to hold it up from the inside. Later, Eiffel built a famous tall tower in Paris.
+
+The French agreed to pay for the statue. Americans agreed to build the stone base, called a pedestal. But it was hard to raise money for the pedestal, and for a while, work stopped. Then a newspaper owner named Joseph Pulitzer asked his readers for help. He promised to print the name of every person who gave money, no matter how small the gift. More than 120,000 people sent money. Many of them, including children, gave less than one dollar.
+
+In 1885, the statue was taken apart and shipped across the ocean in 214 wooden crates. Workers put the pieces back together on top of the new base. On October 28, 1886, the Statue of Liberty was at last shown to the world.
+
+When she was new, the statue was the color of a shiny penny. Over many years, air and rain slowly turned the copper pale green. This green coat actually protects the metal under it.
+
+The statue has many signs and symbols. In her left hand, she holds a tablet with the date July 4, 1776. Broken chains lie at her feet to stand for freedom. For millions of people who came to America by ship, she was the first thing they saw in their new home.','Why was an iron frame needed inside the statue?',NULL,'["The copper skin was too thin to stand up on its own.","Copper turns green when it gets wet.","The French did not have enough copper.","The statue had to float across the ocean."]',0,'Paragraph 3 says the copper is only about as thick as two pennies, "so it could not stand up on its own."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-4fc87407b945','KR_ENG','reading','mcq',2,'On a small island in New York Harbor, a giant green lady holds a torch high above the water. She is the Statue of Liberty. For more than a hundred years, she has welcomed ships into the harbor. But few people know how hard it was to build her.
+
+The idea began in France in 1865. Some French people liked the way the United States stood for freedom. They wanted to give Americans a gift. It would mark one hundred years since the Declaration of Independence. A young artist named Auguste Bartholdi agreed to design a huge statue of a woman with a torch.
+
+Building the statue took many years. Workers hammered thin sheets of copper into shape by hand. The copper skin is only about as thick as two pennies, so it could not stand up on its own. A builder named Gustave Eiffel planned a strong iron frame to hold it up from the inside. Later, Eiffel built a famous tall tower in Paris.
+
+The French agreed to pay for the statue. Americans agreed to build the stone base, called a pedestal. But it was hard to raise money for the pedestal, and for a while, work stopped. Then a newspaper owner named Joseph Pulitzer asked his readers for help. He promised to print the name of every person who gave money, no matter how small the gift. More than 120,000 people sent money. Many of them, including children, gave less than one dollar.
+
+In 1885, the statue was taken apart and shipped across the ocean in 214 wooden crates. Workers put the pieces back together on top of the new base. On October 28, 1886, the Statue of Liberty was at last shown to the world.
+
+When she was new, the statue was the color of a shiny penny. Over many years, air and rain slowly turned the copper pale green. This green coat actually protects the metal under it.
+
+The statue has many signs and symbols. In her left hand, she holds a tablet with the date July 4, 1776. Broken chains lie at her feet to stand for freedom. For millions of people who came to America by ship, she was the first thing they saw in their new home.','Why did Pulitzer''s promise most likely help raise money for the pedestal?',NULL,'["Children were paid to read the newspaper.","Only rich people were allowed to give money.","People were proud to see their names printed, even for small gifts.","Pulitzer promised to pay back everyone who gave money."]',2,'Pulitzer promised to print every giver''s name "no matter how small the gift," so many ordinary people, even children, wanted to take part.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-d7424e8db5e4','KR_ENG','reading','mcq',2,'On a small island in New York Harbor, a giant green lady holds a torch high above the water. She is the Statue of Liberty. For more than a hundred years, she has welcomed ships into the harbor. But few people know how hard it was to build her.
+
+The idea began in France in 1865. Some French people liked the way the United States stood for freedom. They wanted to give Americans a gift. It would mark one hundred years since the Declaration of Independence. A young artist named Auguste Bartholdi agreed to design a huge statue of a woman with a torch.
+
+Building the statue took many years. Workers hammered thin sheets of copper into shape by hand. The copper skin is only about as thick as two pennies, so it could not stand up on its own. A builder named Gustave Eiffel planned a strong iron frame to hold it up from the inside. Later, Eiffel built a famous tall tower in Paris.
+
+The French agreed to pay for the statue. Americans agreed to build the stone base, called a pedestal. But it was hard to raise money for the pedestal, and for a while, work stopped. Then a newspaper owner named Joseph Pulitzer asked his readers for help. He promised to print the name of every person who gave money, no matter how small the gift. More than 120,000 people sent money. Many of them, including children, gave less than one dollar.
+
+In 1885, the statue was taken apart and shipped across the ocean in 214 wooden crates. Workers put the pieces back together on top of the new base. On October 28, 1886, the Statue of Liberty was at last shown to the world.
+
+When she was new, the statue was the color of a shiny penny. Over many years, air and rain slowly turned the copper pale green. This green coat actually protects the metal under it.
+
+The statue has many signs and symbols. In her left hand, she holds a tablet with the date July 4, 1776. Broken chains lie at her feet to stand for freedom. For millions of people who came to America by ship, she was the first thing they saw in their new home.','Which of these events happened LAST?',NULL,'["The statue was shipped across the ocean in wooden crates.","Bartholdi agreed to design the statue.","The Statue of Liberty was shown to the world in October 1886.","Work on the pedestal stopped because there was not enough money."]',2,'Bartholdi agreed first, then work on the pedestal stopped for a while, then the statue was shipped in 1885, and finally it was shown to the world in 1886.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-20a137a2163a','KR_ENG','reading','mcq',2,'On a small island in New York Harbor, a giant green lady holds a torch high above the water. She is the Statue of Liberty. For more than a hundred years, she has welcomed ships into the harbor. But few people know how hard it was to build her.
+
+The idea began in France in 1865. Some French people liked the way the United States stood for freedom. They wanted to give Americans a gift. It would mark one hundred years since the Declaration of Independence. A young artist named Auguste Bartholdi agreed to design a huge statue of a woman with a torch.
+
+Building the statue took many years. Workers hammered thin sheets of copper into shape by hand. The copper skin is only about as thick as two pennies, so it could not stand up on its own. A builder named Gustave Eiffel planned a strong iron frame to hold it up from the inside. Later, Eiffel built a famous tall tower in Paris.
+
+The French agreed to pay for the statue. Americans agreed to build the stone base, called a pedestal. But it was hard to raise money for the pedestal, and for a while, work stopped. Then a newspaper owner named Joseph Pulitzer asked his readers for help. He promised to print the name of every person who gave money, no matter how small the gift. More than 120,000 people sent money. Many of them, including children, gave less than one dollar.
+
+In 1885, the statue was taken apart and shipped across the ocean in 214 wooden crates. Workers put the pieces back together on top of the new base. On October 28, 1886, the Statue of Liberty was at last shown to the world.
+
+When she was new, the statue was the color of a shiny penny. Over many years, air and rain slowly turned the copper pale green. This green coat actually protects the metal under it.
+
+The statue has many signs and symbols. In her left hand, she holds a tablet with the date July 4, 1776. Broken chains lie at her feet to stand for freedom. For millions of people who came to America by ship, she was the first thing they saw in their new home.','In paragraph 6, the word "coat" means',NULL,'["the fur of an animal","a brush used for painting","a thin layer that covers something","a jacket worn on cold days"]',2,'The green coat forms on the copper and "protects the metal under it," so here coat means a thin covering layer.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-5b850c369469','KR_ENG','reading','mcq',2,'In the fall of 1886, eleven-year-old Ellie Hart lived with her father on a tiny, rocky island off the coast of Maine. The only building on the island was a white lighthouse. Every evening, Papa climbed the winding stairs to the top of the tower and lit the great lamp. Its beam swept across the dark water and warned ships to stay away from the dangerous rocks.
+
+Ellie understood every part of the job. She helped Papa polish the enormous glass lens until it sparkled, and she trimmed the wicks and carried heavy cans of oil up all ninety-two steps. Still, Papa always lit the lamp himself.
+
+One gray November afternoon, Papa rowed to the mainland to buy flour and lamp oil. "I''ll be back before dark," he promised. But an hour later, the wind began to howl. Rain lashed the windows, and huge waves crashed over the rocks. Ellie watched the harbor, but she saw no sign of Papa''s small boat. He could not row back in a storm like this.
+
+As the sky grew darker, Ellie''s stomach twisted. Somewhere out on the ocean, ships were sailing toward the island. Without the light, they might crash into the rocks.
+
+Ellie grabbed a lantern and climbed the stairs. The tower shook with every gust. At the top, she struck a match with trembling fingers. The first match blew out, and so did the second. On the third attempt, the wick caught, and the great lamp blazed to life. Its beam stretched across the stormy sea.
+
+All night long, Ellie stayed awake in the tower. Every few hours, she carried up more oil and trimmed the wick so the flame would stay bright. Once, through the rain, she spotted the lights of a ship. She held her breath as it turned slowly away from the rocks and sailed safely past.
+
+At sunrise, the storm finally ended, and Ellie noticed a small boat rowing toward the island. Papa leaped onto the dock and ran up the path.
+
+"I saw the light burning all night from the mainland," he said, hugging her. "I knew it had to be you."
+
+Ellie was exhausted, but she smiled. That evening, Papa handed her the box of matches. "Tonight," he said, "you light the lamp."','What is the main problem in the story?',NULL,'["Ellie gets lost on the mainland and cannot find her way home.","Papa cannot get back before dark, so Ellie must keep the lamp lit by herself.","Ellie is too afraid to climb the lighthouse stairs.","A ship crashes on the rocks near the island."]',1,'A storm keeps Papa on the mainland, and ships need the light. Ellie must light the lamp and keep it burning alone.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-a53ba834b6fb','KR_ENG','reading','mcq',2,'In the fall of 1886, eleven-year-old Ellie Hart lived with her father on a tiny, rocky island off the coast of Maine. The only building on the island was a white lighthouse. Every evening, Papa climbed the winding stairs to the top of the tower and lit the great lamp. Its beam swept across the dark water and warned ships to stay away from the dangerous rocks.
+
+Ellie understood every part of the job. She helped Papa polish the enormous glass lens until it sparkled, and she trimmed the wicks and carried heavy cans of oil up all ninety-two steps. Still, Papa always lit the lamp himself.
+
+One gray November afternoon, Papa rowed to the mainland to buy flour and lamp oil. "I''ll be back before dark," he promised. But an hour later, the wind began to howl. Rain lashed the windows, and huge waves crashed over the rocks. Ellie watched the harbor, but she saw no sign of Papa''s small boat. He could not row back in a storm like this.
+
+As the sky grew darker, Ellie''s stomach twisted. Somewhere out on the ocean, ships were sailing toward the island. Without the light, they might crash into the rocks.
+
+Ellie grabbed a lantern and climbed the stairs. The tower shook with every gust. At the top, she struck a match with trembling fingers. The first match blew out, and so did the second. On the third attempt, the wick caught, and the great lamp blazed to life. Its beam stretched across the stormy sea.
+
+All night long, Ellie stayed awake in the tower. Every few hours, she carried up more oil and trimmed the wick so the flame would stay bright. Once, through the rain, she spotted the lights of a ship. She held her breath as it turned slowly away from the rocks and sailed safely past.
+
+At sunrise, the storm finally ended, and Ellie noticed a small boat rowing toward the island. Papa leaped onto the dock and ran up the path.
+
+"I saw the light burning all night from the mainland," he said, hugging her. "I knew it had to be you."
+
+Ellie was exhausted, but she smiled. That evening, Papa handed her the box of matches. "Tonight," he said, "you light the lamp."','According to the story, why is the lighthouse important?',NULL,'["Its light warns ships to stay away from dangerous rocks.","It is a place where sailors buy flour and oil.","It helps fishermen find fish at night.","It is where the island''s mail is kept."]',0,'The first paragraph says the lamp''s beam "warned ships to stay away from the dangerous rocks."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-45becbebd159','KR_ENG','reading','mcq',2,'In the fall of 1886, eleven-year-old Ellie Hart lived with her father on a tiny, rocky island off the coast of Maine. The only building on the island was a white lighthouse. Every evening, Papa climbed the winding stairs to the top of the tower and lit the great lamp. Its beam swept across the dark water and warned ships to stay away from the dangerous rocks.
+
+Ellie understood every part of the job. She helped Papa polish the enormous glass lens until it sparkled, and she trimmed the wicks and carried heavy cans of oil up all ninety-two steps. Still, Papa always lit the lamp himself.
+
+One gray November afternoon, Papa rowed to the mainland to buy flour and lamp oil. "I''ll be back before dark," he promised. But an hour later, the wind began to howl. Rain lashed the windows, and huge waves crashed over the rocks. Ellie watched the harbor, but she saw no sign of Papa''s small boat. He could not row back in a storm like this.
+
+As the sky grew darker, Ellie''s stomach twisted. Somewhere out on the ocean, ships were sailing toward the island. Without the light, they might crash into the rocks.
+
+Ellie grabbed a lantern and climbed the stairs. The tower shook with every gust. At the top, she struck a match with trembling fingers. The first match blew out, and so did the second. On the third attempt, the wick caught, and the great lamp blazed to life. Its beam stretched across the stormy sea.
+
+All night long, Ellie stayed awake in the tower. Every few hours, she carried up more oil and trimmed the wick so the flame would stay bright. Once, through the rain, she spotted the lights of a ship. She held her breath as it turned slowly away from the rocks and sailed safely past.
+
+At sunrise, the storm finally ended, and Ellie noticed a small boat rowing toward the island. Papa leaped onto the dock and ran up the path.
+
+"I saw the light burning all night from the mainland," he said, hugging her. "I knew it had to be you."
+
+Ellie was exhausted, but she smiled. That evening, Papa handed her the box of matches. "Tonight," he said, "you light the lamp."','In paragraph 3, the word "lashed" most nearly means',NULL,'["fell quietly","hit hard","dried quickly","touched gently"]',1,'The wind was howling and huge waves crashed over the rocks, so the rain was hitting the windows hard.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-6a5061491ab1','KR_ENG','reading','mcq',2,'In the fall of 1886, eleven-year-old Ellie Hart lived with her father on a tiny, rocky island off the coast of Maine. The only building on the island was a white lighthouse. Every evening, Papa climbed the winding stairs to the top of the tower and lit the great lamp. Its beam swept across the dark water and warned ships to stay away from the dangerous rocks.
+
+Ellie understood every part of the job. She helped Papa polish the enormous glass lens until it sparkled, and she trimmed the wicks and carried heavy cans of oil up all ninety-two steps. Still, Papa always lit the lamp himself.
+
+One gray November afternoon, Papa rowed to the mainland to buy flour and lamp oil. "I''ll be back before dark," he promised. But an hour later, the wind began to howl. Rain lashed the windows, and huge waves crashed over the rocks. Ellie watched the harbor, but she saw no sign of Papa''s small boat. He could not row back in a storm like this.
+
+As the sky grew darker, Ellie''s stomach twisted. Somewhere out on the ocean, ships were sailing toward the island. Without the light, they might crash into the rocks.
+
+Ellie grabbed a lantern and climbed the stairs. The tower shook with every gust. At the top, she struck a match with trembling fingers. The first match blew out, and so did the second. On the third attempt, the wick caught, and the great lamp blazed to life. Its beam stretched across the stormy sea.
+
+All night long, Ellie stayed awake in the tower. Every few hours, she carried up more oil and trimmed the wick so the flame would stay bright. Once, through the rain, she spotted the lights of a ship. She held her breath as it turned slowly away from the rocks and sailed safely past.
+
+At sunrise, the storm finally ended, and Ellie noticed a small boat rowing toward the island. Papa leaped onto the dock and ran up the path.
+
+"I saw the light burning all night from the mainland," he said, hugging her. "I knew it had to be you."
+
+Ellie was exhausted, but she smiled. That evening, Papa handed her the box of matches. "Tonight," he said, "you light the lamp."','Why does Papa hand Ellie the matches at the end of the story?',NULL,'["He wants her to stop helping with the lighthouse.","He now trusts her to light the lamp on her own.","He is too tired to climb the stairs again.","He has lost his own box of matches."]',1,'Papa always lit the lamp himself. After Ellie kept it burning through the storm, he shows his trust by letting her light it.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-74b97da8aec4','KR_ENG','reading','mcq',2,'In the fall of 1886, eleven-year-old Ellie Hart lived with her father on a tiny, rocky island off the coast of Maine. The only building on the island was a white lighthouse. Every evening, Papa climbed the winding stairs to the top of the tower and lit the great lamp. Its beam swept across the dark water and warned ships to stay away from the dangerous rocks.
+
+Ellie understood every part of the job. She helped Papa polish the enormous glass lens until it sparkled, and she trimmed the wicks and carried heavy cans of oil up all ninety-two steps. Still, Papa always lit the lamp himself.
+
+One gray November afternoon, Papa rowed to the mainland to buy flour and lamp oil. "I''ll be back before dark," he promised. But an hour later, the wind began to howl. Rain lashed the windows, and huge waves crashed over the rocks. Ellie watched the harbor, but she saw no sign of Papa''s small boat. He could not row back in a storm like this.
+
+As the sky grew darker, Ellie''s stomach twisted. Somewhere out on the ocean, ships were sailing toward the island. Without the light, they might crash into the rocks.
+
+Ellie grabbed a lantern and climbed the stairs. The tower shook with every gust. At the top, she struck a match with trembling fingers. The first match blew out, and so did the second. On the third attempt, the wick caught, and the great lamp blazed to life. Its beam stretched across the stormy sea.
+
+All night long, Ellie stayed awake in the tower. Every few hours, she carried up more oil and trimmed the wick so the flame would stay bright. Once, through the rain, she spotted the lights of a ship. She held her breath as it turned slowly away from the rocks and sailed safely past.
+
+At sunrise, the storm finally ended, and Ellie noticed a small boat rowing toward the island. Papa leaped onto the dock and ran up the path.
+
+"I saw the light burning all night from the mainland," he said, hugging her. "I knew it had to be you."
+
+Ellie was exhausted, but she smiled. That evening, Papa handed her the box of matches. "Tonight," he said, "you light the lamp."','Which detail from the story best shows that lighting the lamp was difficult?',NULL,'["The first two matches blew out before the wick caught.","Papa rowed to the mainland to buy flour and lamp oil.","The only building on the island was a white lighthouse.","Its beam stretched across the stormy sea."]',0,'Ellie needs three tries because the first two matches blow out in the shaking tower, which shows the task was hard.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-c60476e70cde','KR_ENG','reading','mcq',2,'Deep beneath your feet, Earth is very hot. Most of the time, you cannot feel that heat. But in some places, it bursts out through the ground in a volcano.
+
+Earth is made of layers. The outer layer, called the crust, is a thin shell of solid rock. It is broken into giant pieces called plates, which fit together like a puzzle. Under the crust is the mantle. In some places, rock deep in the mantle melts. This melted rock is called magma.
+
+Magma is lighter than the solid rock around it, so it slowly rises. It collects in a pool called a magma chamber, a few miles below the surface. Gas bubbles in the magma build up pressure, much like the bubbles in a shaken bottle of soda. When the pressure becomes too great, the magma pushes up through cracks in the crust and bursts out. This is called an eruption. Once magma reaches the surface, it has a new name: lava.
+
+Not all eruptions are the same. Some volcanoes, like the ones in Hawaii, have runny lava that flows gently out of the ground. People can sometimes stand at a safe distance and watch glowing rivers of lava move downhill. Other volcanoes have thick, sticky magma that traps gas. When these volcanoes erupt, they explode violently. They can blast ash and rock miles into the sky. In 1980, Mount St. Helens in Washington State erupted this way. The blast knocked down forests for miles around.
+
+Over time, layers of cooled lava and ash pile up around the opening. Layer by layer, they build a mountain. Some volcanoes grow very tall. Mauna Kea in Hawaii rises more than 33,000 feet from the ocean floor. Measured from its base, it is taller than Mount Everest.
+
+Volcanoes can be dangerous, but they also help people. Volcanic ash breaks down into rich soil that is good for growing crops. Many islands, including all of the Hawaiian Islands, were formed by volcanoes.
+
+Scientists who study volcanoes are called volcanologists. They use special tools to measure small earthquakes, changes in the shape of the ground, and gases coming from a volcano. These signs can warn that an eruption may be coming soon. With enough warning, people who live nearby can move to safety.','Which sentence best states the main idea of the passage?',NULL,'["All volcanoes explode and blast ash into the sky.","Volcanologists are scientists who study earthquakes.","Volcanoes form when magma rises and erupts, and they can both harm and help people.","Mount St. Helens is the most dangerous volcano in the world."]',2,'The passage explains how volcanoes form and erupt, then tells how they can be dangerous but also create soil and islands.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-cc5482b9573c','KR_ENG','reading','mcq',2,'Deep beneath your feet, Earth is very hot. Most of the time, you cannot feel that heat. But in some places, it bursts out through the ground in a volcano.
+
+Earth is made of layers. The outer layer, called the crust, is a thin shell of solid rock. It is broken into giant pieces called plates, which fit together like a puzzle. Under the crust is the mantle. In some places, rock deep in the mantle melts. This melted rock is called magma.
+
+Magma is lighter than the solid rock around it, so it slowly rises. It collects in a pool called a magma chamber, a few miles below the surface. Gas bubbles in the magma build up pressure, much like the bubbles in a shaken bottle of soda. When the pressure becomes too great, the magma pushes up through cracks in the crust and bursts out. This is called an eruption. Once magma reaches the surface, it has a new name: lava.
+
+Not all eruptions are the same. Some volcanoes, like the ones in Hawaii, have runny lava that flows gently out of the ground. People can sometimes stand at a safe distance and watch glowing rivers of lava move downhill. Other volcanoes have thick, sticky magma that traps gas. When these volcanoes erupt, they explode violently. They can blast ash and rock miles into the sky. In 1980, Mount St. Helens in Washington State erupted this way. The blast knocked down forests for miles around.
+
+Over time, layers of cooled lava and ash pile up around the opening. Layer by layer, they build a mountain. Some volcanoes grow very tall. Mauna Kea in Hawaii rises more than 33,000 feet from the ocean floor. Measured from its base, it is taller than Mount Everest.
+
+Volcanoes can be dangerous, but they also help people. Volcanic ash breaks down into rich soil that is good for growing crops. Many islands, including all of the Hawaiian Islands, were formed by volcanoes.
+
+Scientists who study volcanoes are called volcanologists. They use special tools to measure small earthquakes, changes in the shape of the ground, and gases coming from a volcano. These signs can warn that an eruption may be coming soon. With enough warning, people who live nearby can move to safety.','According to the passage, what is the difference between magma and lava?',NULL,'["Magma is hot, and lava is cold.","Magma comes from the crust, and lava comes from the ocean.","Magma is solid rock, and lava is ash.","Magma is melted rock underground, and lava is melted rock that has reached the surface."]',3,'Paragraph 3 says melted rock is called magma, and "once magma reaches the surface, it has a new name: lava."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-06d0a077e6ef','KR_ENG','reading','mcq',2,'Deep beneath your feet, Earth is very hot. Most of the time, you cannot feel that heat. But in some places, it bursts out through the ground in a volcano.
+
+Earth is made of layers. The outer layer, called the crust, is a thin shell of solid rock. It is broken into giant pieces called plates, which fit together like a puzzle. Under the crust is the mantle. In some places, rock deep in the mantle melts. This melted rock is called magma.
+
+Magma is lighter than the solid rock around it, so it slowly rises. It collects in a pool called a magma chamber, a few miles below the surface. Gas bubbles in the magma build up pressure, much like the bubbles in a shaken bottle of soda. When the pressure becomes too great, the magma pushes up through cracks in the crust and bursts out. This is called an eruption. Once magma reaches the surface, it has a new name: lava.
+
+Not all eruptions are the same. Some volcanoes, like the ones in Hawaii, have runny lava that flows gently out of the ground. People can sometimes stand at a safe distance and watch glowing rivers of lava move downhill. Other volcanoes have thick, sticky magma that traps gas. When these volcanoes erupt, they explode violently. They can blast ash and rock miles into the sky. In 1980, Mount St. Helens in Washington State erupted this way. The blast knocked down forests for miles around.
+
+Over time, layers of cooled lava and ash pile up around the opening. Layer by layer, they build a mountain. Some volcanoes grow very tall. Mauna Kea in Hawaii rises more than 33,000 feet from the ocean floor. Measured from its base, it is taller than Mount Everest.
+
+Volcanoes can be dangerous, but they also help people. Volcanic ash breaks down into rich soil that is good for growing crops. Many islands, including all of the Hawaiian Islands, were formed by volcanoes.
+
+Scientists who study volcanoes are called volcanologists. They use special tools to measure small earthquakes, changes in the shape of the ground, and gases coming from a volcano. These signs can warn that an eruption may be coming soon. With enough warning, people who live nearby can move to safety.','Why does the author compare magma to a shaken bottle of soda?',NULL,'["to tell readers not to shake soda bottles","to help readers understand how pressure builds up before an eruption","to show that magma tastes sweet","to explain why volcanoes are cold inside"]',1,'Most readers have seen a shaken soda bottle spray. The comparison helps them picture how gas bubbles build pressure in magma.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-1e776156df9f','KR_ENG','reading','mcq',2,'Deep beneath your feet, Earth is very hot. Most of the time, you cannot feel that heat. But in some places, it bursts out through the ground in a volcano.
+
+Earth is made of layers. The outer layer, called the crust, is a thin shell of solid rock. It is broken into giant pieces called plates, which fit together like a puzzle. Under the crust is the mantle. In some places, rock deep in the mantle melts. This melted rock is called magma.
+
+Magma is lighter than the solid rock around it, so it slowly rises. It collects in a pool called a magma chamber, a few miles below the surface. Gas bubbles in the magma build up pressure, much like the bubbles in a shaken bottle of soda. When the pressure becomes too great, the magma pushes up through cracks in the crust and bursts out. This is called an eruption. Once magma reaches the surface, it has a new name: lava.
+
+Not all eruptions are the same. Some volcanoes, like the ones in Hawaii, have runny lava that flows gently out of the ground. People can sometimes stand at a safe distance and watch glowing rivers of lava move downhill. Other volcanoes have thick, sticky magma that traps gas. When these volcanoes erupt, they explode violently. They can blast ash and rock miles into the sky. In 1980, Mount St. Helens in Washington State erupted this way. The blast knocked down forests for miles around.
+
+Over time, layers of cooled lava and ash pile up around the opening. Layer by layer, they build a mountain. Some volcanoes grow very tall. Mauna Kea in Hawaii rises more than 33,000 feet from the ocean floor. Measured from its base, it is taller than Mount Everest.
+
+Volcanoes can be dangerous, but they also help people. Volcanic ash breaks down into rich soil that is good for growing crops. Many islands, including all of the Hawaiian Islands, were formed by volcanoes.
+
+Scientists who study volcanoes are called volcanologists. They use special tools to measure small earthquakes, changes in the shape of the ground, and gases coming from a volcano. These signs can warn that an eruption may be coming soon. With enough warning, people who live nearby can move to safety.','How was the 1980 eruption of Mount St. Helens different from eruptions in Hawaii?',NULL,'["Mount St. Helens was taller than Mauna Kea.","Mount St. Helens had runny lava, while Hawaii''s volcanoes exploded.","Mount St. Helens formed an island, while Hawaii''s volcanoes formed forests.","Mount St. Helens exploded violently, while Hawaii''s volcanoes often have runny lava that flows gently."]',3,'The passage says Hawaii''s lava flows gently, but Mount St. Helens erupted in a violent blast that knocked down forests.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-7b8a64b8e109','KR_ENG','reading','mcq',2,'Deep beneath your feet, Earth is very hot. Most of the time, you cannot feel that heat. But in some places, it bursts out through the ground in a volcano.
+
+Earth is made of layers. The outer layer, called the crust, is a thin shell of solid rock. It is broken into giant pieces called plates, which fit together like a puzzle. Under the crust is the mantle. In some places, rock deep in the mantle melts. This melted rock is called magma.
+
+Magma is lighter than the solid rock around it, so it slowly rises. It collects in a pool called a magma chamber, a few miles below the surface. Gas bubbles in the magma build up pressure, much like the bubbles in a shaken bottle of soda. When the pressure becomes too great, the magma pushes up through cracks in the crust and bursts out. This is called an eruption. Once magma reaches the surface, it has a new name: lava.
+
+Not all eruptions are the same. Some volcanoes, like the ones in Hawaii, have runny lava that flows gently out of the ground. People can sometimes stand at a safe distance and watch glowing rivers of lava move downhill. Other volcanoes have thick, sticky magma that traps gas. When these volcanoes erupt, they explode violently. They can blast ash and rock miles into the sky. In 1980, Mount St. Helens in Washington State erupted this way. The blast knocked down forests for miles around.
+
+Over time, layers of cooled lava and ash pile up around the opening. Layer by layer, they build a mountain. Some volcanoes grow very tall. Mauna Kea in Hawaii rises more than 33,000 feet from the ocean floor. Measured from its base, it is taller than Mount Everest.
+
+Volcanoes can be dangerous, but they also help people. Volcanic ash breaks down into rich soil that is good for growing crops. Many islands, including all of the Hawaiian Islands, were formed by volcanoes.
+
+Scientists who study volcanoes are called volcanologists. They use special tools to measure small earthquakes, changes in the shape of the ground, and gases coming from a volcano. These signs can warn that an eruption may be coming soon. With enough warning, people who live nearby can move to safety.','In paragraph 4, the word "violently" most nearly means',NULL,'["in a gentle way","without making a sound","with great and dangerous force","slowly and quietly"]',2,'The volcanoes "blast ash and rock miles into the sky," which describes great, dangerous force.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-302d61583360','KR_ENG','vocab','mcq',2,NULL,'The prefix DIS- in "dishonest" and "disagree" means',NULL,'["full of","not or the opposite of","again","before"]',1,'DIS- means not or the opposite of. Dishonest means not honest, and disagree means the opposite of agree.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-b42539441d94','KR_ENG','vocab','mcq',2,NULL,'The prefix OVER- in "overcook" and "oversleep" means',NULL,'["too much","under","again","not enough"]',0,'OVER- means too much. To overcook food is to cook it too much, and to oversleep is to sleep too long.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-4df82fe10504','KR_ENG','vocab','mcq',2,NULL,'The suffix -NESS in "kindness" and "darkness" means',NULL,'["a person who","in the past","without","the state of being"]',3,'-NESS turns an adjective into a noun meaning the state of being. Kindness is the state of being kind.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-2d74ff061173','KR_ENG','vocab','mcq',2,NULL,'The suffix -LY in "quickly" and "softly" means',NULL,'["in a certain way","the study of","full of","able to be"]',0,'-LY makes an adverb that tells how something is done. Quickly means in a quick way.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-6e02311d8f50','KR_ENG','vocab','mcq',2,NULL,'The root TRACT in "tractor" and "subtract" means',NULL,'["pull or draw","hear","break","write"]',0,'TRACT means to pull. A tractor pulls heavy loads, and to subtract is to take away, or pull out, a number.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-95ccbc0a8f53','KR_ENG','vocab','mcq',2,NULL,'The root PED in "pedal" and "pedestrian" means',NULL,'["foot","wheel","hand","head"]',0,'PED means foot. You push a pedal with your foot, and a pedestrian is a person traveling on foot.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-1c672008574a','KR_ENG','vocab','mcq',2,NULL,'The prefix TRI- in "triangle" and "tricycle" means',NULL,'["many","one","two","three"]',3,'TRI- means three. A triangle has three angles, and a tricycle has three wheels.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-b495792c5f89','KR_ENG','vocab','mcq',2,NULL,'The prefix MID- in "midnight" and "midweek" means',NULL,'["after","before","middle","end"]',2,'MID- means middle. Midnight is the middle of the night, and midweek is the middle of the week.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-3c3a770512ec','KR_ENG','vocab','mcq',2,NULL,'The root JECT in "eject" and "reject" means',NULL,'["sleep","see","throw","carry"]',2,'JECT means to throw. To eject is to throw out, and to reject is to throw back or refuse.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-d1bc1df43bc2','KR_ENG','vocab','mcq',2,NULL,'The root GEO in "geography" and "geode" means',NULL,'["earth","life","time","light"]',0,'GEO means earth. Geography is the study of Earth''s land and places.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-aa83676e22b8','KR_ENG','vocab','mcq',2,NULL,'The hallway was so CRAMMED with students that I could barely squeeze through.
+
+What does CRAMMED mean?',NULL,'["freshly painted","completely full","very quiet","nearly empty"]',1,'If you can barely squeeze through, the hallway must be completely full of students.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-a5e164e7a02d','KR_ENG','vocab','mcq',2,NULL,'Jamal''s legs ached, but he was DETERMINED to finish the race, so he kept running.
+
+What does DETERMINED mean?',NULL,'["happy to stop early","firmly decided not to give up","too tired to move","unsure what to do"]',1,'Jamal keeps running even though his legs ache, which shows he has firmly decided not to give up.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-772438a24cff','KR_ENG','vocab','mcq',2,NULL,'The magician waved his hand, and the coin seemed to VANISH into thin air.
+
+Which word means the SAME as VANISH?',NULL,'["shine","disappear","fall","grow"]',1,'Something that vanishes "into thin air" can no longer be seen, so vanish means disappear.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-f4ddb29ea015','KR_ENG','vocab','mcq',2,NULL,'Choose the word that means the OPPOSITE of FORTUNATE.
+
+We were FORTUNATE that the rain stopped just before the parade began.',NULL,'["unlucky","happy","thankful","early"]',0,'Fortunate means lucky. Its opposite is unlucky.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-e99c34f42ece','KR_ENG','vocab','mcq',2,NULL,'Choose the word that means the OPPOSITE of CAUTIOUS.
+
+The CAUTIOUS driver slowed down on the icy road.',NULL,'["careful","patient","nervous","careless"]',3,'A cautious person is careful to avoid danger. The opposite is careless.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-7937b3f052ad','KR_ENG','vocab','mcq',2,NULL,'Maya CONCEALED the birthday present under her bed so her brother would not find it.
+
+What does CONCEALED mean?',NULL,'["broke","hid","wrapped","opened"]',1,'Maya put the present where her brother would not find it, so concealed means hid.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-246da78c6c6a','KR_ENG','vocab','mcq',2,NULL,'In which sentence does TRUNK mean the long nose of an elephant?',NULL,'["The elephant lifted the log with its trunk.","Grandma keeps old photos in a wooden trunk.","A squirrel ran up the trunk of the oak tree.","We packed our bags in the trunk of the car."]',0,'Only the last sentence is about an elephant using its nose. The others use trunk to mean part of a car, part of a tree, or a large box.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-57b75ac68e4c','KR_ENG','vocab','mcq',2,NULL,'Please pour the lemonade from the PITCHER into everyone''s cups.
+
+What does PITCHER mean in this sentence?',NULL,'["a baseball player who throws the ball","a container with a handle for pouring","a person who sells drinks","a large painting"]',1,'Lemonade is poured from a pitcher, so here it means a container for pouring, not a baseball player.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-a92931ac66ef','KR_ENG','vocab','mcq',2,NULL,'When Nora found out she had won the art contest, she was ON CLOUD NINE all week.
+
+What does "on cloud nine" mean?',NULL,'["high up in an airplane","extremely happy","very confused","too tired to work"]',1,'Being "on cloud nine" is an idiom that means feeling extremely happy, which fits winning a contest.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-5f070ce652cf','KR_ENG','vocab','mcq',2,NULL,'We were planning a surprise party for Dad, but my little brother LET THE CAT OUT OF THE BAG.
+
+What does this idiom mean?',NULL,'["ruined the cake","forgot to send invitations","let the pet run outside","told the secret"]',3,'To "let the cat out of the bag" means to tell a secret, so Dad found out about the surprise.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-fb46e945ecb3','KR_ENG','vocab','mcq',2,NULL,'Mom said we could not buy the giant TV because it COSTS AN ARM AND A LEG.
+
+What does this idiom mean?',NULL,'["It is very heavy to carry.","It is easy to break.","It is very expensive.","It is too big for the room."]',2,'"Costs an arm and a leg" is an idiom that means something costs a lot of money.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-5e363e9d3a81','KR_ENG','vocab','mcq',2,NULL,'Which sentence contains a metaphor?',NULL,'["The fresh snow fell all night long.","The fresh snow was as white as a sheet.","We built a snowman in the fresh snow.","The fresh snow was a white blanket on the field."]',3,'A metaphor compares two things without using "like" or "as." The snow is called a white blanket. The first choice is a simile because it uses "as."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-2b469f694df6','KR_ENG','vocab','mcq',2,NULL,'Which sentence uses personification?',NULL,'["We heard thunder after the lightning.","The thunder was very loud last night.","Thunder can scare some dogs.","The thunder grumbled angrily across the sky."]',3,'Personification gives human actions or feelings to things that are not human. Thunder cannot really grumble angrily like a person.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-31f25437c4d6','KR_ENG','vocab','mcq',2,NULL,'Complete the analogy.
+
+PUPPY is to DOG as CALF is to ___.',NULL,'["horse","barn","kitten","cow"]',3,'A puppy is a baby dog, and a calf is a baby cow.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-9d92956d5aaa','KR_ENG','vocab','mcq',2,NULL,'Complete the analogy.
+
+BIRD is to NEST as BEE is to ___.',NULL,'["wing","hive","honey","flower"]',1,'A bird lives in a nest, and a bee lives in a hive.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-39a30a4e3c7c','KR_ENG','vocab','mcq',2,NULL,'The principal will ANNOUNCE the winner of the art contest over the loudspeaker.
+
+What does ANNOUNCE mean?',NULL,'["draw a picture","keep a secret","tell everyone publicly","choose by guessing"]',2,'Something said over the loudspeaker is told to everyone, so announce means to tell everyone publicly.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-99574b468d1c','KR_ENG','vocab','mcq',2,NULL,'The writing on the old map was so FAINT that we could barely read the names of the towns.
+
+What does FAINT mean?',NULL,'["hard to see","brand new","very bright","easy to fold"]',0,'If you can barely read the writing, it is hard to see, so faint means not clear or hard to see.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-3172d2421507','KR_ENG','vocab','mcq',2,NULL,'My swimsuit was still DAMP from the morning, so I hung it in the sun to dry.
+
+Which word means the SAME as DAMP?',NULL,'["slightly wet","torn","very warm","clean"]',0,'The swimsuit needed to dry, so damp means slightly wet.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-653ff33d76bd','KR_ENG','vocab','mcq',2,NULL,'Choose the word that means the OPPOSITE of TEMPORARY.
+
+We lived in a TEMPORARY apartment for two months while our house was being fixed.',NULL,'["crowded","modern","short","permanent"]',3,'Temporary means lasting only a short time. Its opposite is permanent, which means lasting for a very long time or forever.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-6db3dfcfaf4f','KR_ENG','vocab','mcq',2,NULL,'The museum guide will ACCOMPANY our class through the dinosaur hall and answer our questions.
+
+What does ACCOMPANY mean?',NULL,'["wait outside for","take pictures of","go along with","teach a lesson to"]',2,'The guide will walk through the hall with the class, so accompany means to go along with.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-a4201342ba71','KR_ENG','grammar','mcq',2,NULL,'Choose the verb that best completes the sentence.
+
+One of my shoes ___ missing.',NULL,'["is","are","were","have"]',0,'The subject is "one," which is singular, so the singular verb "is" is correct.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-a22e4ebd432a','KR_ENG','grammar','mcq',2,NULL,'Choose the verb that best completes the sentence.
+
+The kittens in the basket ___ sleeping soundly.',NULL,'["was","is","are","has"]',2,'The subject is "kittens," which is plural. The phrase "in the basket" does not change the subject, so use "are."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-f1b3b36cb3c8','KR_ENG','grammar','mcq',2,NULL,'Choose the verb that best completes the sentence.
+
+My brother and I ___ going to the library after school.',NULL,'["is","am","was","are"]',3,'"My brother and I" is a plural subject joined by "and," so the plural verb "are" is correct.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-7ac8810cfd2e','KR_ENG','grammar','mcq',2,NULL,'Choose the verb that best completes the sentence.
+
+Last weekend, Carlos ___ his first fish at the lake.',NULL,'["caught","catched","catches","will catch"]',0,'"Last weekend" shows the past. The past tense of the irregular verb catch is "caught."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-d3aa30a15a19','KR_ENG','grammar','mcq',2,NULL,'Choose the verb that best completes the sentence.
+
+Yesterday, the school bell ___ ten minutes early.',NULL,'["rung","rang","ringed","rings"]',1,'The past tense of the irregular verb ring is "rang." "Rung" needs a helping verb, as in "has rung."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-b20ef78a7462','KR_ENG','grammar','mcq',2,NULL,'Choose the verbs that best complete the sentence.
+
+I ___ that movie three times already.',NULL,'["seen","have seen","has seen","have saw"]',1,'The word "already" goes with the present perfect, and "I" takes "have." The correct form is "have seen."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-855e22cb232d','KR_ENG','grammar','mcq',2,NULL,'Which sentence is written in the future tense?',NULL,'["We visit our cousins in Texas every summer.","We are visiting our cousins in Texas now.","Next summer, we will visit our cousins in Texas.","Last summer, we visited our cousins in Texas."]',2,'The helping verb "will" shows an action that has not happened yet, so the first sentence is in the future tense.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-26f5b9f55757','KR_ENG','grammar','mcq',2,NULL,'Choose the verb that best completes the sentence.
+
+Every morning, Grandpa ___ the newspaper and drinks his tea.',NULL,'["will reading","reading","read","reads"]',3,'The sentence tells about something that happens every morning, and "drinks" is in the present tense, so "reads" keeps the tense the same.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-9cf90bc644e1','KR_ENG','grammar','mcq',2,NULL,'Choose the word that best completes the sentence.
+
+The coach gave ___ students a high five after the game.',NULL,'["we","ourselves","us","ours"]',2,'"Us" is the object pronoun that goes with the noun "students" here. You would say "the coach gave us a high five."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-eeab6b687208','KR_ENG','grammar','mcq',2,NULL,'Choose the word that best completes the sentence.
+
+The puppy barked when it saw ___ in the mirror.',NULL,'["its","himself","itself","it''s"]',2,'The puppy is called "it," so the reflexive pronoun is "itself."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-2bb440a4fe1c','KR_ENG','grammar','mcq',2,NULL,'Choose the word that best completes the sentence.
+
+Is this umbrella ___? It has your name on it.',NULL,'["yours","your","you''re","your''s"]',0,'"Yours" is a possessive pronoun that can stand alone. Possessive pronouns never use an apostrophe.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-ae92d9c9db91','KR_ENG','grammar','mcq',2,NULL,'Choose the word that best completes the sentence.
+
+Today is the ___ day of the summer so far.',NULL,'["most hot","hottest","hotter","hotest"]',1,'When comparing more than two things, use the superlative. For "hot," double the t and add -est: "hottest."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-96eb58b9ca81','KR_ENG','grammar','mcq',2,NULL,'Choose the word that best completes the sentence.
+
+My new puppy is ___ than my old cat.',NULL,'["friendlier","more friendlier","most friendly","friendliest"]',0,'Two animals are being compared, so use the comparative form "friendlier." Do not use "more" and -er together.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-004a244b1cf1','KR_ENG','grammar','mcq',2,NULL,'Choose the word that best completes the sentence.
+
+My cough was bad yesterday, but today I feel much ___.',NULL,'["best","better","more good","gooder"]',1,'"Better" is the comparative form of good and well. "Gooder" is not a word.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-484de4720b3d','KR_ENG','grammar','mcq',2,NULL,'Choose the word that best completes the sentence.
+
+The baby slept ___ in her crib all afternoon.',NULL,'["peacefully","more peaceful","peaceful","peace"]',0,'The word describes how the baby slept, which is a verb, so you need the adverb "peacefully."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-9608ac23b346','KR_ENG','grammar','mcq',2,NULL,'Choose the word that best completes the sentence.
+
+Aisha practiced every day, so she played the violin very ___ at the concert.',NULL,'["better","well","good","best"]',1,'"Well" is an adverb that tells how she played. "Good" is an adjective and should describe a noun.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-cbf717698e57','KR_ENG','grammar','mcq',2,NULL,'Choose the word that best completes the sentence.
+
+Hurry up, ___ you will miss the bus!',NULL,'["since","or","and","because"]',1,'Here "or" means "if not": if you do not hurry, you will miss the bus.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-f088806294bb','KR_ENG','grammar','mcq',2,NULL,'Choose the word that best completes the sentence.
+
+We will move the picnic inside ___ it starts to rain.',NULL,'["unless","if","but","so"]',1,'"If" shows a condition: the picnic moves inside only when it rains. "Unless" would mean the opposite of what makes sense.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-76c98ffd7e53','KR_ENG','grammar','mcq',2,NULL,'Choose the word that best completes the sentence.
+
+We have lived in this town ___ 2019.',NULL,'["during","at","since","for"]',2,'Use "since" with a starting point in time, such as a year. "For" is used with an amount of time, like "for five years."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-b5033798e8ba','KR_ENG','grammar','mcq',2,NULL,'Choose the word that best completes the sentence.
+
+My baby sister was born ___ May.',NULL,'["at","on","in","by"]',2,'Use "in" with months and years. Use "on" with specific days, such as "on May 3."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-44ed91b15540','KR_ENG','grammar','mcq',2,NULL,'Which of these is a sentence fragment?',NULL,'["Under the old wooden bridge.","We walked across the bridge.","The bridge is very old.","The ducks swam under the bridge."]',0,'"Under the old wooden bridge" has no subject and no verb, so it does not express a complete thought.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-ed019b4dcb54','KR_ENG','grammar','mcq',2,NULL,'What is the BEST way to combine these two sentences?
+
+Mia likes apples. Mia likes pears.',NULL,'["Mia likes apples, and pears, Mia likes.","Mia likes apples and pears.","Mia likes apples, Mia likes pears.","Mia likes apples likes pears."]',1,'Both sentences have the same subject and verb, so you can join the two objects with "and": "Mia likes apples and pears."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-c3cfc6777dfa','KR_ENG','grammar','mcq',2,NULL,'Which sentence uses commas correctly?',NULL,'["For our picnic, we packed sandwiches apples, and juice.","For our, picnic we packed sandwiches, apples and, juice.","For our picnic we packed, sandwiches apples and juice.","For our picnic, we packed sandwiches, apples, and juice."]',3,'Commas separate the items in a list and set off the introductory phrase "For our picnic."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-d7d6aeaf52cb','KR_ENG','grammar','mcq',2,NULL,'Which sentence uses commas correctly?',NULL,'["On June 5 2024, our class, planted a tree.","On June 5, 2024, our class planted a tree.","On June, 5 2024 our class planted a tree.","On, June 5, 2024 our class planted a tree."]',1,'A comma goes between the day and the year, and another comma follows the year when the date begins the sentence.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-ddf9aed2151f','KR_ENG','grammar','mcq',2,NULL,'Which sentence uses an apostrophe correctly?',NULL,'["The girls bike''s has a flat tire.","The girl''s bike''s has a flat tire.","The girl''s bike has a flat tire.","The girls'' bike has a flat tire''s."]',2,'One girl owns the bike, so the apostrophe goes before the s in "girl''s." The word "bike" is not possessive and needs no apostrophe.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-04da1a92133f','KR_ENG','grammar','mcq',2,NULL,'Which word is the correct contraction for "will not"?',NULL,'["wont''","will''nt","willn''t","won''t"]',3,'"Won''t" is the special contraction for "will not."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-9441f4c261c4','KR_ENG','grammar','mcq',2,NULL,'Which sentence uses capital letters correctly?',NULL,'["On Thursday, we ate dinner with Aunt Lisa for Thanksgiving.","On Thursday, we ate Dinner with Aunt Lisa for thanksgiving.","on Thursday, we ate dinner with Aunt lisa for Thanksgiving.","On thursday, we ate dinner with aunt Lisa for Thanksgiving."]',0,'Days of the week, holidays, and names with titles (Aunt Lisa) are capitalized. Common nouns like "dinner" are not.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-22990e2f3714','KR_ENG','grammar','mcq',2,NULL,'Choose the word that best completes the sentence.
+
+The dentist cleaned all of my ___.',NULL,'["teeths","tooths","toothes","teeth"]',3,'"Tooth" has an irregular plural form: "teeth."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-086ee0644730','KR_ENG','grammar','mcq',2,NULL,'Which word in this sentence is an adverb?
+
+The children laughed loudly at the silly clown.',NULL,'["loudly","laughed","children","silly"]',0,'"Loudly" tells how the children laughed, so it is an adverb. "Silly" is an adjective that describes the clown.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-b70563035fcd','KR_ENG','grammar','mcq',2,NULL,'Which sentence should end with a question mark?',NULL,'["Where did you put my library book","I put the book on the shelf","Please put my book on the shelf","What a great book this is"]',0,'"Where did you put my library book" asks a question, so it needs a question mark. The others are a command, a statement, and an exclamation.',1,0);
 INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-4cc0b24e1ac4','KR_ENG','reading','mcq',2,'Leo did not want to spend his summer vacation pulling weeds. His mother had signed him up to volunteer at the community garden on Maple Street, and he was not happy about it. "All of my friends are swimming at the neighborhood pool," he grumbled as they walked down the sunny block together.
 
 At the garden, an elderly woman named Mrs. Alvarez waved them over. She wore a wide straw hat, and there was dirt on both of her knees. "You must be Leo," she said with a friendly smile. "I have been waiting all week for a strong helper, and this little plot belongs to you now."
@@ -2612,6 +3220,598 @@ INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,st
 INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-writing_expository-04eb0432c4fb','KR_ENG','writing_expository','text',2,NULL,'Some people think students should have homework every night, while others think students should have no homework at all. What is your opinion? Write an essay that states your opinion and gives at least three reasons with examples to support it.',NULL,NULL,NULL,'Teacher rubric (score each 1-4). Ideas: clearly states the topic or opinion and supports it with at least two or three reasons or facts, each explained with details or examples. Organization: an introduction that states the main idea, body sentences grouped by reason, linking words (for example, also, another reason, because, in addition), and a concluding sentence that restates the main idea. Word choice: uses precise words and some topic vocabulary. Conventions: complete sentences with no fragments or run-ons, correct capitalization and punctuation, commas before coordinating conjunctions, and correct spelling of grade-level words. Expected length: 10-15 sentences.',1,0);
 INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-writing_expository-b347d06db02a','KR_ENG','writing_expository','text',2,NULL,'Think of an animal you know a lot about. Write an informative essay that explains where it lives, what it eats, and how its body or behavior helps it survive in its habitat. Use facts and details, and group related information together.',NULL,NULL,NULL,'Teacher rubric (score each 1-4). Ideas: clearly states the topic or opinion and supports it with at least two or three reasons or facts, each explained with details or examples. Organization: an introduction that states the main idea, body sentences grouped by reason, linking words (for example, also, another reason, because, in addition), and a concluding sentence that restates the main idea. Word choice: uses precise words and some topic vocabulary. Conventions: complete sentences with no fragments or run-ons, correct capitalization and punctuation, commas before coordinating conjunctions, and correct spelling of grade-level words. Expected length: 10-15 sentences.',1,0);
 INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-writing_expository-b9ab7d31fa40','KR_ENG','writing_expository','text',2,NULL,'Your school has money for ONE new thing: a school garden, new playground equipment, or more computers for the library. Which one should the school choose? Write a letter to your principal that states your opinion and supports it with at least three clear reasons.',NULL,NULL,NULL,'Teacher rubric (score each 1-4). Ideas: clearly states the topic or opinion and supports it with at least two or three reasons or facts, each explained with details or examples. Organization: an introduction that states the main idea, body sentences grouped by reason, linking words (for example, also, another reason, because, in addition), and a concluding sentence that restates the main idea. Word choice: uses precise words and some topic vocabulary. Conventions: complete sentences with no fragments or run-ons, correct capitalization and punctuation, commas before coordinating conjunctions, and correct spelling of grade-level words. Expected length: 10-15 sentences.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-d11e86584c96','KR_ENG','reading','mcq',3,'Every Saturday morning, Tomás rode his bicycle to the Oak Hill Animal Shelter, where he walked the dogs and scrubbed the food bowls. Most of the dogs leaped against their gates whenever he passed, barking and wagging as if he were a celebrity. One dog, however, never moved at all. She was a thin brown mutt named Pepper, and she spent every day pressed into the farthest corner of her kennel.
+
+"Pepper was discovered living under a bridge," explained Ms. Okafor, the shelter director. "Nobody knows what happened to her before that, and she doesn''t trust people yet."
+
+Tomás tried every idea he could imagine. He called her name in a cheerful voice, offered treats through the bars, and even squeaked a rubber chicken. Each time, Pepper only trembled and turned her face toward the wall.
+
+After three discouraging weeks, Tomás was ready to quit. "She just doesn''t like me," he told Ms. Okafor.
+
+Ms. Okafor smiled patiently. "Maybe you''re trying too hard. Imagine a stranger running toward you and shouting your name. Would that make you feel safe?"
+
+Tomás remembered his first day at his new school last fall. Everyone had crowded around him with questions, and all he had wanted to do was disappear.
+
+The following Saturday, Tomás tried a different approach. He brought a library book, sat on the floor outside Pepper''s kennel, and read aloud in a low, quiet voice. He did not look at her, and he did not offer any treats; he simply read.
+
+For the first hour, nothing happened, and the next Saturday was the same. On the third Saturday, however, Tomás heard a soft scraping sound. From the corner of his eye, he noticed Pepper creep a few inches closer before she lay down with her nose resting against the bars.
+
+Tomás continued reading, but his heart was pounding like a drum.
+
+By the end of the month, Pepper was waiting at the front of her kennel whenever Tomás arrived, and her tail swept back and forth across the floor. When he finally opened the gate, she climbed into his lap as if she had always belonged there.
+
+Ms. Okafor shook her head in amazement and asked how he had done it.
+
+Tomás scratched Pepper behind the ears. "I stopped asking her to trust me," he said, "and just gave her time."','Which sentence best states the theme of the story?',NULL,'["People should give up on a goal after a few weeks of trying.","Trust often grows slowly when someone is patient and gentle.","Reading out loud is the best way to train any animal.","Shelter dogs are happiest when people give them lots of treats."]',1,'Pepper begins to trust Tomás only after he stops pushing and quietly gives her time, as his last line says. The other choices are not supported; treats and squeaky toys did not work, and Tomás succeeds because he does not give up.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-110f389bd631','KR_ENG','reading','mcq',3,'Every Saturday morning, Tomás rode his bicycle to the Oak Hill Animal Shelter, where he walked the dogs and scrubbed the food bowls. Most of the dogs leaped against their gates whenever he passed, barking and wagging as if he were a celebrity. One dog, however, never moved at all. She was a thin brown mutt named Pepper, and she spent every day pressed into the farthest corner of her kennel.
+
+"Pepper was discovered living under a bridge," explained Ms. Okafor, the shelter director. "Nobody knows what happened to her before that, and she doesn''t trust people yet."
+
+Tomás tried every idea he could imagine. He called her name in a cheerful voice, offered treats through the bars, and even squeaked a rubber chicken. Each time, Pepper only trembled and turned her face toward the wall.
+
+After three discouraging weeks, Tomás was ready to quit. "She just doesn''t like me," he told Ms. Okafor.
+
+Ms. Okafor smiled patiently. "Maybe you''re trying too hard. Imagine a stranger running toward you and shouting your name. Would that make you feel safe?"
+
+Tomás remembered his first day at his new school last fall. Everyone had crowded around him with questions, and all he had wanted to do was disappear.
+
+The following Saturday, Tomás tried a different approach. He brought a library book, sat on the floor outside Pepper''s kennel, and read aloud in a low, quiet voice. He did not look at her, and he did not offer any treats; he simply read.
+
+For the first hour, nothing happened, and the next Saturday was the same. On the third Saturday, however, Tomás heard a soft scraping sound. From the corner of his eye, he noticed Pepper creep a few inches closer before she lay down with her nose resting against the bars.
+
+Tomás continued reading, but his heart was pounding like a drum.
+
+By the end of the month, Pepper was waiting at the front of her kennel whenever Tomás arrived, and her tail swept back and forth across the floor. When he finally opened the gate, she climbed into his lap as if she had always belonged there.
+
+Ms. Okafor shook her head in amazement and asked how he had done it.
+
+Tomás scratched Pepper behind the ears. "I stopped asking her to trust me," he said, "and just gave her time."','Why does Tomás most likely remember his first day at his new school?',NULL,'["It reminds him that he needs to finish his homework.","He realizes that he should bring Pepper to his school.","It helps him understand why a lot of attention could frighten Pepper.","He wants to tell Ms. Okafor a story about his old friends."]',2,'Right after Ms. Okafor asks whether a stranger shouting his name would feel safe, Tomás recalls being crowded with questions and wanting to disappear. This memory helps him see that his eager behavior was overwhelming Pepper.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-e88473653eca','KR_ENG','reading','mcq',3,'Every Saturday morning, Tomás rode his bicycle to the Oak Hill Animal Shelter, where he walked the dogs and scrubbed the food bowls. Most of the dogs leaped against their gates whenever he passed, barking and wagging as if he were a celebrity. One dog, however, never moved at all. She was a thin brown mutt named Pepper, and she spent every day pressed into the farthest corner of her kennel.
+
+"Pepper was discovered living under a bridge," explained Ms. Okafor, the shelter director. "Nobody knows what happened to her before that, and she doesn''t trust people yet."
+
+Tomás tried every idea he could imagine. He called her name in a cheerful voice, offered treats through the bars, and even squeaked a rubber chicken. Each time, Pepper only trembled and turned her face toward the wall.
+
+After three discouraging weeks, Tomás was ready to quit. "She just doesn''t like me," he told Ms. Okafor.
+
+Ms. Okafor smiled patiently. "Maybe you''re trying too hard. Imagine a stranger running toward you and shouting your name. Would that make you feel safe?"
+
+Tomás remembered his first day at his new school last fall. Everyone had crowded around him with questions, and all he had wanted to do was disappear.
+
+The following Saturday, Tomás tried a different approach. He brought a library book, sat on the floor outside Pepper''s kennel, and read aloud in a low, quiet voice. He did not look at her, and he did not offer any treats; he simply read.
+
+For the first hour, nothing happened, and the next Saturday was the same. On the third Saturday, however, Tomás heard a soft scraping sound. From the corner of his eye, he noticed Pepper creep a few inches closer before she lay down with her nose resting against the bars.
+
+Tomás continued reading, but his heart was pounding like a drum.
+
+By the end of the month, Pepper was waiting at the front of her kennel whenever Tomás arrived, and her tail swept back and forth across the floor. When he finally opened the gate, she climbed into his lap as if she had always belonged there.
+
+Ms. Okafor shook her head in amazement and asked how he had done it.
+
+Tomás scratched Pepper behind the ears. "I stopped asking her to trust me," he said, "and just gave her time."','"Tomás continued reading, but his heart was pounding like a drum." What does this simile show?',NULL,'["Tomás was very excited and nervous that Pepper was coming closer.","Tomás was worried that Pepper would bite him.","Tomás was annoyed by a loud noise in the shelter.","Tomás was tired after reading for such a long time."]',0,'A pounding drum suggests a strong, fast heartbeat. It shows how excited and nervous Tomás feels when Pepper finally moves toward him, even though he keeps reading calmly.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-a32a1eff673c','KR_ENG','reading','mcq',3,'Every Saturday morning, Tomás rode his bicycle to the Oak Hill Animal Shelter, where he walked the dogs and scrubbed the food bowls. Most of the dogs leaped against their gates whenever he passed, barking and wagging as if he were a celebrity. One dog, however, never moved at all. She was a thin brown mutt named Pepper, and she spent every day pressed into the farthest corner of her kennel.
+
+"Pepper was discovered living under a bridge," explained Ms. Okafor, the shelter director. "Nobody knows what happened to her before that, and she doesn''t trust people yet."
+
+Tomás tried every idea he could imagine. He called her name in a cheerful voice, offered treats through the bars, and even squeaked a rubber chicken. Each time, Pepper only trembled and turned her face toward the wall.
+
+After three discouraging weeks, Tomás was ready to quit. "She just doesn''t like me," he told Ms. Okafor.
+
+Ms. Okafor smiled patiently. "Maybe you''re trying too hard. Imagine a stranger running toward you and shouting your name. Would that make you feel safe?"
+
+Tomás remembered his first day at his new school last fall. Everyone had crowded around him with questions, and all he had wanted to do was disappear.
+
+The following Saturday, Tomás tried a different approach. He brought a library book, sat on the floor outside Pepper''s kennel, and read aloud in a low, quiet voice. He did not look at her, and he did not offer any treats; he simply read.
+
+For the first hour, nothing happened, and the next Saturday was the same. On the third Saturday, however, Tomás heard a soft scraping sound. From the corner of his eye, he noticed Pepper creep a few inches closer before she lay down with her nose resting against the bars.
+
+Tomás continued reading, but his heart was pounding like a drum.
+
+By the end of the month, Pepper was waiting at the front of her kennel whenever Tomás arrived, and her tail swept back and forth across the floor. When he finally opened the gate, she climbed into his lap as if she had always belonged there.
+
+Ms. Okafor shook her head in amazement and asked how he had done it.
+
+Tomás scratched Pepper behind the ears. "I stopped asking her to trust me," he said, "and just gave her time."','Read the sentence: "he noticed Pepper CREEP a few inches closer." What does CREEP mean in this sentence?',NULL,'["run away quickly","bark loudly","jump suddenly","move slowly and carefully"]',3,'Pepper is shy and moves only "a few inches" before lying down, so CREEP means to move slowly and carefully, often to avoid being noticed.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-f029048194d8','KR_ENG','reading','mcq',3,'Every Saturday morning, Tomás rode his bicycle to the Oak Hill Animal Shelter, where he walked the dogs and scrubbed the food bowls. Most of the dogs leaped against their gates whenever he passed, barking and wagging as if he were a celebrity. One dog, however, never moved at all. She was a thin brown mutt named Pepper, and she spent every day pressed into the farthest corner of her kennel.
+
+"Pepper was discovered living under a bridge," explained Ms. Okafor, the shelter director. "Nobody knows what happened to her before that, and she doesn''t trust people yet."
+
+Tomás tried every idea he could imagine. He called her name in a cheerful voice, offered treats through the bars, and even squeaked a rubber chicken. Each time, Pepper only trembled and turned her face toward the wall.
+
+After three discouraging weeks, Tomás was ready to quit. "She just doesn''t like me," he told Ms. Okafor.
+
+Ms. Okafor smiled patiently. "Maybe you''re trying too hard. Imagine a stranger running toward you and shouting your name. Would that make you feel safe?"
+
+Tomás remembered his first day at his new school last fall. Everyone had crowded around him with questions, and all he had wanted to do was disappear.
+
+The following Saturday, Tomás tried a different approach. He brought a library book, sat on the floor outside Pepper''s kennel, and read aloud in a low, quiet voice. He did not look at her, and he did not offer any treats; he simply read.
+
+For the first hour, nothing happened, and the next Saturday was the same. On the third Saturday, however, Tomás heard a soft scraping sound. From the corner of his eye, he noticed Pepper creep a few inches closer before she lay down with her nose resting against the bars.
+
+Tomás continued reading, but his heart was pounding like a drum.
+
+By the end of the month, Pepper was waiting at the front of her kennel whenever Tomás arrived, and her tail swept back and forth across the floor. When he finally opened the gate, she climbed into his lap as if she had always belonged there.
+
+Ms. Okafor shook her head in amazement and asked how he had done it.
+
+Tomás scratched Pepper behind the ears. "I stopped asking her to trust me," he said, "and just gave her time."','Which event happens FIRST in the story?',NULL,'["Pepper lies down with her nose against the bars.","Tomás squeaks a rubber chicken outside Pepper''s kennel.","Pepper climbs into Tomás''s lap.","Tomás brings a library book to the shelter."]',1,'Tomás tries treats and the rubber chicken during his first three weeks. Only after talking with Ms. Okafor does he bring a book, and Pepper moves closer and later climbs into his lap after that.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-acb93fb7cce0','KR_ENG','reading','mcq',3,'Anika had been a reporter for the Lincoln Ledger, her school''s newspaper, for only a month when she stumbled onto the biggest news of the year. She was waiting in the cafeteria line when she overheard Mr. Haddad, the head cook, talking to a helper.
+
+"After this week, we''re finished with the Friday pizza," he said.
+
+Anika nearly dropped her tray, because Pizza Friday was the most popular day at Lincoln Elementary. That afternoon she wrote an article with the headline "No More Pizza Fridays!" The editor, a sixth grader named Marcus, loved it, and the story appeared on the front page the next morning.
+
+By lunchtime, the whole school was in an uproar. Fourth graders made protest signs, and a group of fifth graders started a petition that collected two hundred names. Anika felt proud, since her first big story had everyone talking.
+
+Then Mr. Haddad stopped her in the hallway, looking puzzled rather than angry.
+
+"Anika, I read your article," he said. "We aren''t getting rid of pizza. We''re getting rid of the frozen pizza, and starting next month, my team is going to make it fresh with homemade dough and real vegetables."
+
+Anika''s face grew hot with embarrassment. She had heard only half of the conversation, and she had never asked Mr. Haddad a single question.
+
+She hurried to the newspaper office to find Marcus and announced that they needed to fix the mistake.
+
+Marcus shrugged. "Everyone will forget about it in a week. If we print a correction, people will decide the Ledger can''t be trusted."
+
+Anika thought about the petition, the signs, and the younger students who were truly upset. "If we don''t fix it," she said slowly, "then they really shouldn''t trust us."
+
+That evening she wrote a new article. This time she interviewed Mr. Haddad for twenty minutes, asking about the new recipe, the cost, and when the change would begin. At the top of the page, she added a note: "Last week the Ledger reported that pizza was being removed from the menu, which was wrong, and I am sorry."
+
+The next Friday, students lined up early for the first homemade pizza. While Anika waited, a fourth grader tapped her on the shoulder and asked whether she was the reporter who had written the correction.
+
+When Anika nodded, the girl grinned. "I''m going to read everything you write from now on."','What is the main problem in the story?',NULL,'["Marcus refuses to let Anika write for the school newspaper.","The fifth graders cannot collect enough names for their petition.","Mr. Haddad decides to stop serving pizza at Lincoln Elementary.","Anika publishes a story that is wrong because she did not check her facts."]',3,'Anika writes "No More Pizza Fridays!" after hearing only half of a conversation, and the whole story is about how she deals with that mistake. Mr. Haddad never planned to stop serving pizza.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-e3f02fb82742','KR_ENG','reading','mcq',3,'Anika had been a reporter for the Lincoln Ledger, her school''s newspaper, for only a month when she stumbled onto the biggest news of the year. She was waiting in the cafeteria line when she overheard Mr. Haddad, the head cook, talking to a helper.
+
+"After this week, we''re finished with the Friday pizza," he said.
+
+Anika nearly dropped her tray, because Pizza Friday was the most popular day at Lincoln Elementary. That afternoon she wrote an article with the headline "No More Pizza Fridays!" The editor, a sixth grader named Marcus, loved it, and the story appeared on the front page the next morning.
+
+By lunchtime, the whole school was in an uproar. Fourth graders made protest signs, and a group of fifth graders started a petition that collected two hundred names. Anika felt proud, since her first big story had everyone talking.
+
+Then Mr. Haddad stopped her in the hallway, looking puzzled rather than angry.
+
+"Anika, I read your article," he said. "We aren''t getting rid of pizza. We''re getting rid of the frozen pizza, and starting next month, my team is going to make it fresh with homemade dough and real vegetables."
+
+Anika''s face grew hot with embarrassment. She had heard only half of the conversation, and she had never asked Mr. Haddad a single question.
+
+She hurried to the newspaper office to find Marcus and announced that they needed to fix the mistake.
+
+Marcus shrugged. "Everyone will forget about it in a week. If we print a correction, people will decide the Ledger can''t be trusted."
+
+Anika thought about the petition, the signs, and the younger students who were truly upset. "If we don''t fix it," she said slowly, "then they really shouldn''t trust us."
+
+That evening she wrote a new article. This time she interviewed Mr. Haddad for twenty minutes, asking about the new recipe, the cost, and when the change would begin. At the top of the page, she added a note: "Last week the Ledger reported that pizza was being removed from the menu, which was wrong, and I am sorry."
+
+The next Friday, students lined up early for the first homemade pizza. While Anika waited, a fourth grader tapped her on the shoulder and asked whether she was the reporter who had written the correction.
+
+When Anika nodded, the girl grinned. "I''m going to read everything you write from now on."','What was Mr. Haddad actually planning to do?',NULL,'["stop serving pizza on Fridays","replace frozen pizza with fresh, homemade pizza","serve pizza every day of the week","let students vote on the lunch menu"]',1,'Mr. Haddad explains that the cafeteria is getting rid of only the frozen pizza and will make it fresh with homemade dough and real vegetables.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-5f0768c1c3c7','KR_ENG','reading','mcq',3,'Anika had been a reporter for the Lincoln Ledger, her school''s newspaper, for only a month when she stumbled onto the biggest news of the year. She was waiting in the cafeteria line when she overheard Mr. Haddad, the head cook, talking to a helper.
+
+"After this week, we''re finished with the Friday pizza," he said.
+
+Anika nearly dropped her tray, because Pizza Friday was the most popular day at Lincoln Elementary. That afternoon she wrote an article with the headline "No More Pizza Fridays!" The editor, a sixth grader named Marcus, loved it, and the story appeared on the front page the next morning.
+
+By lunchtime, the whole school was in an uproar. Fourth graders made protest signs, and a group of fifth graders started a petition that collected two hundred names. Anika felt proud, since her first big story had everyone talking.
+
+Then Mr. Haddad stopped her in the hallway, looking puzzled rather than angry.
+
+"Anika, I read your article," he said. "We aren''t getting rid of pizza. We''re getting rid of the frozen pizza, and starting next month, my team is going to make it fresh with homemade dough and real vegetables."
+
+Anika''s face grew hot with embarrassment. She had heard only half of the conversation, and she had never asked Mr. Haddad a single question.
+
+She hurried to the newspaper office to find Marcus and announced that they needed to fix the mistake.
+
+Marcus shrugged. "Everyone will forget about it in a week. If we print a correction, people will decide the Ledger can''t be trusted."
+
+Anika thought about the petition, the signs, and the younger students who were truly upset. "If we don''t fix it," she said slowly, "then they really shouldn''t trust us."
+
+That evening she wrote a new article. This time she interviewed Mr. Haddad for twenty minutes, asking about the new recipe, the cost, and when the change would begin. At the top of the page, she added a note: "Last week the Ledger reported that pizza was being removed from the menu, which was wrong, and I am sorry."
+
+The next Friday, students lined up early for the first homemade pizza. While Anika waited, a fourth grader tapped her on the shoulder and asked whether she was the reporter who had written the correction.
+
+When Anika nodded, the girl grinned. "I''m going to read everything you write from now on."','How are Anika''s and Marcus''s points of view about printing a correction different?',NULL,'["Marcus thinks a correction will hurt the paper''s reputation, but Anika thinks hiding the mistake would be worse.","Marcus wants to print a correction right away, but Anika wants to wait a week.","Both of them think the mistake is too small to matter.","Anika thinks the article was correct, but Marcus thinks it was wrong."]',0,'Marcus says a correction will make people think the Ledger cannot be trusted. Anika replies that if they do not fix it, readers really should not trust them.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-f166cfd7abaa','KR_ENG','reading','mcq',3,'Anika had been a reporter for the Lincoln Ledger, her school''s newspaper, for only a month when she stumbled onto the biggest news of the year. She was waiting in the cafeteria line when she overheard Mr. Haddad, the head cook, talking to a helper.
+
+"After this week, we''re finished with the Friday pizza," he said.
+
+Anika nearly dropped her tray, because Pizza Friday was the most popular day at Lincoln Elementary. That afternoon she wrote an article with the headline "No More Pizza Fridays!" The editor, a sixth grader named Marcus, loved it, and the story appeared on the front page the next morning.
+
+By lunchtime, the whole school was in an uproar. Fourth graders made protest signs, and a group of fifth graders started a petition that collected two hundred names. Anika felt proud, since her first big story had everyone talking.
+
+Then Mr. Haddad stopped her in the hallway, looking puzzled rather than angry.
+
+"Anika, I read your article," he said. "We aren''t getting rid of pizza. We''re getting rid of the frozen pizza, and starting next month, my team is going to make it fresh with homemade dough and real vegetables."
+
+Anika''s face grew hot with embarrassment. She had heard only half of the conversation, and she had never asked Mr. Haddad a single question.
+
+She hurried to the newspaper office to find Marcus and announced that they needed to fix the mistake.
+
+Marcus shrugged. "Everyone will forget about it in a week. If we print a correction, people will decide the Ledger can''t be trusted."
+
+Anika thought about the petition, the signs, and the younger students who were truly upset. "If we don''t fix it," she said slowly, "then they really shouldn''t trust us."
+
+That evening she wrote a new article. This time she interviewed Mr. Haddad for twenty minutes, asking about the new recipe, the cost, and when the change would begin. At the top of the page, she added a note: "Last week the Ledger reported that pizza was being removed from the menu, which was wrong, and I am sorry."
+
+The next Friday, students lined up early for the first homemade pizza. While Anika waited, a fourth grader tapped her on the shoulder and asked whether she was the reporter who had written the correction.
+
+When Anika nodded, the girl grinned. "I''m going to read everything you write from now on."','Read the sentence: "By lunchtime, the whole school was in an UPROAR." What does UPROAR mean?',NULL,'["a meeting held in the gym","a state of noisy excitement and anger","a quiet and peaceful mood","a long line of hungry people"]',1,'The next sentences describe protest signs and a petition, which show that students were loudly upset. An UPROAR is a noisy, excited disturbance.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-2ad104572c7a','KR_ENG','reading','mcq',3,'Anika had been a reporter for the Lincoln Ledger, her school''s newspaper, for only a month when she stumbled onto the biggest news of the year. She was waiting in the cafeteria line when she overheard Mr. Haddad, the head cook, talking to a helper.
+
+"After this week, we''re finished with the Friday pizza," he said.
+
+Anika nearly dropped her tray, because Pizza Friday was the most popular day at Lincoln Elementary. That afternoon she wrote an article with the headline "No More Pizza Fridays!" The editor, a sixth grader named Marcus, loved it, and the story appeared on the front page the next morning.
+
+By lunchtime, the whole school was in an uproar. Fourth graders made protest signs, and a group of fifth graders started a petition that collected two hundred names. Anika felt proud, since her first big story had everyone talking.
+
+Then Mr. Haddad stopped her in the hallway, looking puzzled rather than angry.
+
+"Anika, I read your article," he said. "We aren''t getting rid of pizza. We''re getting rid of the frozen pizza, and starting next month, my team is going to make it fresh with homemade dough and real vegetables."
+
+Anika''s face grew hot with embarrassment. She had heard only half of the conversation, and she had never asked Mr. Haddad a single question.
+
+She hurried to the newspaper office to find Marcus and announced that they needed to fix the mistake.
+
+Marcus shrugged. "Everyone will forget about it in a week. If we print a correction, people will decide the Ledger can''t be trusted."
+
+Anika thought about the petition, the signs, and the younger students who were truly upset. "If we don''t fix it," she said slowly, "then they really shouldn''t trust us."
+
+That evening she wrote a new article. This time she interviewed Mr. Haddad for twenty minutes, asking about the new recipe, the cost, and when the change would begin. At the top of the page, she added a note: "Last week the Ledger reported that pizza was being removed from the menu, which was wrong, and I am sorry."
+
+The next Friday, students lined up early for the first homemade pizza. While Anika waited, a fourth grader tapped her on the shoulder and asked whether she was the reporter who had written the correction.
+
+When Anika nodded, the girl grinned. "I''m going to read everything you write from now on."','What can the reader conclude from the fourth grader''s words at the end of the story?',NULL,'["Most students never read the Lincoln Ledger.","The fourth grader was still angry about the first article.","The fourth grader wants to become the newspaper''s editor.","Admitting the mistake made readers trust Anika more."]',3,'The girl says she will read everything Anika writes "from now on" because of the correction. This shows that Anika''s honesty earned readers'' trust, the opposite of what Marcus predicted.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-00926a34047c','KR_ENG','reading','mcq',3,'Long ago, in a green valley between two mountains, an elderly farmer named Bao divided his land between his two sons. To Kiet, the elder, he gave the eastern field, and to Lan, the younger, he gave the western field. "Use the soil wisely," Bao told them, "and it will feed you for the rest of your lives."
+
+Kiet wasted no time. That very spring he planted melons, which grew quickly and sold for a handsome price at the market. By autumn his pockets jingled with coins, and he purchased an elegant new coat.
+
+Lan did something that puzzled everyone in the village. He planted rows of tiny walnut trees that were no taller than his knee. Because walnut trees require many years to produce nuts, Lan had nothing to sell for a long time. He earned a little money by repairing fences for his neighbors, and he wore the same patched shirt year after year.
+
+Kiet scoffed at his younger brother. "You are planting for an old man, but I am planting for today."
+
+Lan only smiled and continued watering his saplings.
+
+Eight summers passed, and then came a terrible year when no rain fell at all. The river shrank to a muddy trickle, and the sun baked the valley floor until it cracked. Kiet''s melons withered on their vines before they could ripen. He planted a second crop, but it died as well, and by winter his coins had disappeared and his elegant coat had worn thin.
+
+On the western side of the valley, however, the walnut trees stood tall and healthy. Over the years their roots had grown deep enough to reach water far beneath the dry ground. That autumn the branches sagged with nuts, and Lan filled sack after sack.
+
+One frosty evening Kiet knocked on his brother''s door. He stared at his boots and could not find any words to say.
+
+Lan placed a heavy sack in his brother''s arms. "Father gave us two fields," he said, "but he raised us as one family."
+
+The next spring, the brothers worked side by side. In the eastern field they planted melons to sell that summer, and along its edges they planted walnut trees for the years to come. Kiet dug every hole himself, and this time he did not complain about waiting.','Which lesson does the story teach?',NULL,'["It is always better to grow fruit than to grow trees.","Planning for the future can be wiser than seeking quick rewards.","Hard work never matters when the weather is bad.","Older brothers should make all the decisions for a family."]',1,'Kiet''s quick melon profits disappear in the drought, while Lan''s slow-growing walnut trees survive and feed both brothers. In the end even Kiet plants trees "for the years to come."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-fcf0980c5caf','KR_ENG','reading','mcq',3,'Long ago, in a green valley between two mountains, an elderly farmer named Bao divided his land between his two sons. To Kiet, the elder, he gave the eastern field, and to Lan, the younger, he gave the western field. "Use the soil wisely," Bao told them, "and it will feed you for the rest of your lives."
+
+Kiet wasted no time. That very spring he planted melons, which grew quickly and sold for a handsome price at the market. By autumn his pockets jingled with coins, and he purchased an elegant new coat.
+
+Lan did something that puzzled everyone in the village. He planted rows of tiny walnut trees that were no taller than his knee. Because walnut trees require many years to produce nuts, Lan had nothing to sell for a long time. He earned a little money by repairing fences for his neighbors, and he wore the same patched shirt year after year.
+
+Kiet scoffed at his younger brother. "You are planting for an old man, but I am planting for today."
+
+Lan only smiled and continued watering his saplings.
+
+Eight summers passed, and then came a terrible year when no rain fell at all. The river shrank to a muddy trickle, and the sun baked the valley floor until it cracked. Kiet''s melons withered on their vines before they could ripen. He planted a second crop, but it died as well, and by winter his coins had disappeared and his elegant coat had worn thin.
+
+On the western side of the valley, however, the walnut trees stood tall and healthy. Over the years their roots had grown deep enough to reach water far beneath the dry ground. That autumn the branches sagged with nuts, and Lan filled sack after sack.
+
+One frosty evening Kiet knocked on his brother''s door. He stared at his boots and could not find any words to say.
+
+Lan placed a heavy sack in his brother''s arms. "Father gave us two fields," he said, "but he raised us as one family."
+
+The next spring, the brothers worked side by side. In the eastern field they planted melons to sell that summer, and along its edges they planted walnut trees for the years to come. Kiet dug every hole himself, and this time he did not complain about waiting.','Why did the walnut trees survive the dry year when the melons did not?',NULL,'["Walnut trees do not need any water to grow.","They were planted on the side of the valley that got rain.","Lan carried water to them from the river every day.","Their roots had grown deep enough to reach water underground."]',3,'The story states that the trees'' roots "had grown deep enough to reach water far beneath the dry ground." The river had shrunk, and no rain fell anywhere in the valley.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-0f889a33a344','KR_ENG','reading','mcq',3,'Long ago, in a green valley between two mountains, an elderly farmer named Bao divided his land between his two sons. To Kiet, the elder, he gave the eastern field, and to Lan, the younger, he gave the western field. "Use the soil wisely," Bao told them, "and it will feed you for the rest of your lives."
+
+Kiet wasted no time. That very spring he planted melons, which grew quickly and sold for a handsome price at the market. By autumn his pockets jingled with coins, and he purchased an elegant new coat.
+
+Lan did something that puzzled everyone in the village. He planted rows of tiny walnut trees that were no taller than his knee. Because walnut trees require many years to produce nuts, Lan had nothing to sell for a long time. He earned a little money by repairing fences for his neighbors, and he wore the same patched shirt year after year.
+
+Kiet scoffed at his younger brother. "You are planting for an old man, but I am planting for today."
+
+Lan only smiled and continued watering his saplings.
+
+Eight summers passed, and then came a terrible year when no rain fell at all. The river shrank to a muddy trickle, and the sun baked the valley floor until it cracked. Kiet''s melons withered on their vines before they could ripen. He planted a second crop, but it died as well, and by winter his coins had disappeared and his elegant coat had worn thin.
+
+On the western side of the valley, however, the walnut trees stood tall and healthy. Over the years their roots had grown deep enough to reach water far beneath the dry ground. That autumn the branches sagged with nuts, and Lan filled sack after sack.
+
+One frosty evening Kiet knocked on his brother''s door. He stared at his boots and could not find any words to say.
+
+Lan placed a heavy sack in his brother''s arms. "Father gave us two fields," he said, "but he raised us as one family."
+
+The next spring, the brothers worked side by side. In the eastern field they planted melons to sell that summer, and along its edges they planted walnut trees for the years to come. Kiet dug every hole himself, and this time he did not complain about waiting.','Read the sentence: "Kiet SCOFFED at his younger brother." What does SCOFFED mean?',NULL,'["shouted a warning","made fun of in a scornful way","listened carefully","thanked warmly"]',1,'Kiet tells Lan he is "planting for an old man," mocking his choice. To SCOFF is to speak about someone or something in a mocking, scornful way.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-6abdd3d532e5','KR_ENG','reading','mcq',3,'Long ago, in a green valley between two mountains, an elderly farmer named Bao divided his land between his two sons. To Kiet, the elder, he gave the eastern field, and to Lan, the younger, he gave the western field. "Use the soil wisely," Bao told them, "and it will feed you for the rest of your lives."
+
+Kiet wasted no time. That very spring he planted melons, which grew quickly and sold for a handsome price at the market. By autumn his pockets jingled with coins, and he purchased an elegant new coat.
+
+Lan did something that puzzled everyone in the village. He planted rows of tiny walnut trees that were no taller than his knee. Because walnut trees require many years to produce nuts, Lan had nothing to sell for a long time. He earned a little money by repairing fences for his neighbors, and he wore the same patched shirt year after year.
+
+Kiet scoffed at his younger brother. "You are planting for an old man, but I am planting for today."
+
+Lan only smiled and continued watering his saplings.
+
+Eight summers passed, and then came a terrible year when no rain fell at all. The river shrank to a muddy trickle, and the sun baked the valley floor until it cracked. Kiet''s melons withered on their vines before they could ripen. He planted a second crop, but it died as well, and by winter his coins had disappeared and his elegant coat had worn thin.
+
+On the western side of the valley, however, the walnut trees stood tall and healthy. Over the years their roots had grown deep enough to reach water far beneath the dry ground. That autumn the branches sagged with nuts, and Lan filled sack after sack.
+
+One frosty evening Kiet knocked on his brother''s door. He stared at his boots and could not find any words to say.
+
+Lan placed a heavy sack in his brother''s arms. "Father gave us two fields," he said, "but he raised us as one family."
+
+The next spring, the brothers worked side by side. In the eastern field they planted melons to sell that summer, and along its edges they planted walnut trees for the years to come. Kiet dug every hole himself, and this time he did not complain about waiting.','How does Kiet change from the beginning of the story to the end?',NULL,'["He goes from being poor to being the richest man in the valley.","He goes from loving his brother to refusing to speak to him.","He goes from planting walnut trees to planting only melons.","He goes from mocking patience to valuing it."]',3,'At first Kiet scoffs at Lan for planting trees that take years to grow. By the end he digs every walnut-tree hole himself and "did not complain about waiting."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-a2b76a83e66d','KR_ENG','reading','mcq',3,'Long ago, in a green valley between two mountains, an elderly farmer named Bao divided his land between his two sons. To Kiet, the elder, he gave the eastern field, and to Lan, the younger, he gave the western field. "Use the soil wisely," Bao told them, "and it will feed you for the rest of your lives."
+
+Kiet wasted no time. That very spring he planted melons, which grew quickly and sold for a handsome price at the market. By autumn his pockets jingled with coins, and he purchased an elegant new coat.
+
+Lan did something that puzzled everyone in the village. He planted rows of tiny walnut trees that were no taller than his knee. Because walnut trees require many years to produce nuts, Lan had nothing to sell for a long time. He earned a little money by repairing fences for his neighbors, and he wore the same patched shirt year after year.
+
+Kiet scoffed at his younger brother. "You are planting for an old man, but I am planting for today."
+
+Lan only smiled and continued watering his saplings.
+
+Eight summers passed, and then came a terrible year when no rain fell at all. The river shrank to a muddy trickle, and the sun baked the valley floor until it cracked. Kiet''s melons withered on their vines before they could ripen. He planted a second crop, but it died as well, and by winter his coins had disappeared and his elegant coat had worn thin.
+
+On the western side of the valley, however, the walnut trees stood tall and healthy. Over the years their roots had grown deep enough to reach water far beneath the dry ground. That autumn the branches sagged with nuts, and Lan filled sack after sack.
+
+One frosty evening Kiet knocked on his brother''s door. He stared at his boots and could not find any words to say.
+
+Lan placed a heavy sack in his brother''s arms. "Father gave us two fields," he said, "but he raised us as one family."
+
+The next spring, the brothers worked side by side. In the eastern field they planted melons to sell that summer, and along its edges they planted walnut trees for the years to come. Kiet dug every hole himself, and this time he did not complain about waiting.','What does Lan mean when he says, "Father gave us two fields, but he raised us as one family"?',NULL,'["The two fields should be sold and the money divided.","Lan is angry that he received the smaller field.","Even though their land is separate, they should still take care of each other.","Kiet must give his field back to their father."]',2,'Lan says this while handing his struggling brother a sack of walnuts. He means that owning separate fields does not change their duty to help one another as family.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-e28abbf96402','KR_ENG','reading','mcq',3,'Make a fist and squeeze it as hard as you can. Now open and squeeze it again, about once every second. Your hand will probably grow tired within a few minutes. Yet a muscle about the size of that fist has been squeezing inside your chest every second of your life, and it never takes a break. That muscle is your heart.
+
+The heart is the center of the circulatory system, the body system that moves blood to every part of you. Blood carries oxygen from the air you breathe and nutrients from the food you eat. Every cell in your body needs these supplies to stay alive and do its job. Blood also carries away wastes, such as carbon dioxide, that cells must get rid of.
+
+Blood travels through tubes called blood vessels. Arteries carry blood away from the heart, while veins carry blood back to it. Between them are capillaries, tiny vessels thinner than a hair. In the capillaries, oxygen and nutrients pass out of the blood and into the cells, and wastes pass in. If you could lay all of your blood vessels end to end, they would stretch around Earth more than twice.
+
+The heart itself has four rooms, or chambers, and the two on the right side pump blood to the lungs. There the blood drops off carbon dioxide, which you breathe out, and picks up fresh oxygen. The blood then returns to the left side of the heart. The left side pumps this oxygen-rich blood out to the rest of the body. Because the left side has the harder job, its walls are thicker and stronger.
+
+Each time the heart squeezes, it pushes a wave of blood through the arteries. You can feel this wave, called your pulse, in your wrist or neck. When you run or jump, your muscles need more oxygen, so your heart beats faster to deliver it.
+
+Like any muscle, the heart grows stronger with exercise. Playing outside, riding a bike, and dancing all give your heart a workout. Eating nutritious foods and getting enough sleep help, too. Take care of your heart, and it will keep working hard for you.','What is the main idea of the passage?',NULL,'["The left side of the heart is stronger than the right side.","The heart pumps blood through blood vessels to deliver what the body needs and remove wastes.","Exercise is the only way to keep the body healthy.","Blood vessels are long enough to stretch around Earth."]',1,'Most of the passage explains how the heart and blood vessels move blood that carries oxygen and nutrients to cells and takes wastes away. The other choices are smaller details.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-19f547d13d89','KR_ENG','reading','mcq',3,'Make a fist and squeeze it as hard as you can. Now open and squeeze it again, about once every second. Your hand will probably grow tired within a few minutes. Yet a muscle about the size of that fist has been squeezing inside your chest every second of your life, and it never takes a break. That muscle is your heart.
+
+The heart is the center of the circulatory system, the body system that moves blood to every part of you. Blood carries oxygen from the air you breathe and nutrients from the food you eat. Every cell in your body needs these supplies to stay alive and do its job. Blood also carries away wastes, such as carbon dioxide, that cells must get rid of.
+
+Blood travels through tubes called blood vessels. Arteries carry blood away from the heart, while veins carry blood back to it. Between them are capillaries, tiny vessels thinner than a hair. In the capillaries, oxygen and nutrients pass out of the blood and into the cells, and wastes pass in. If you could lay all of your blood vessels end to end, they would stretch around Earth more than twice.
+
+The heart itself has four rooms, or chambers, and the two on the right side pump blood to the lungs. There the blood drops off carbon dioxide, which you breathe out, and picks up fresh oxygen. The blood then returns to the left side of the heart. The left side pumps this oxygen-rich blood out to the rest of the body. Because the left side has the harder job, its walls are thicker and stronger.
+
+Each time the heart squeezes, it pushes a wave of blood through the arteries. You can feel this wave, called your pulse, in your wrist or neck. When you run or jump, your muscles need more oxygen, so your heart beats faster to deliver it.
+
+Like any muscle, the heart grows stronger with exercise. Playing outside, riding a bike, and dancing all give your heart a workout. Eating nutritious foods and getting enough sleep help, too. Take care of your heart, and it will keep working hard for you.','According to the passage, what happens to blood in the lungs?',NULL,'["It drops off carbon dioxide and picks up oxygen.","It picks up nutrients from food.","It is made into new capillaries.","It is pumped out to the rest of the body."]',0,'The passage says that in the lungs "the blood drops off carbon dioxide, which you breathe out, and picks up fresh oxygen."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-091e6212cc57','KR_ENG','reading','mcq',3,'Make a fist and squeeze it as hard as you can. Now open and squeeze it again, about once every second. Your hand will probably grow tired within a few minutes. Yet a muscle about the size of that fist has been squeezing inside your chest every second of your life, and it never takes a break. That muscle is your heart.
+
+The heart is the center of the circulatory system, the body system that moves blood to every part of you. Blood carries oxygen from the air you breathe and nutrients from the food you eat. Every cell in your body needs these supplies to stay alive and do its job. Blood also carries away wastes, such as carbon dioxide, that cells must get rid of.
+
+Blood travels through tubes called blood vessels. Arteries carry blood away from the heart, while veins carry blood back to it. Between them are capillaries, tiny vessels thinner than a hair. In the capillaries, oxygen and nutrients pass out of the blood and into the cells, and wastes pass in. If you could lay all of your blood vessels end to end, they would stretch around Earth more than twice.
+
+The heart itself has four rooms, or chambers, and the two on the right side pump blood to the lungs. There the blood drops off carbon dioxide, which you breathe out, and picks up fresh oxygen. The blood then returns to the left side of the heart. The left side pumps this oxygen-rich blood out to the rest of the body. Because the left side has the harder job, its walls are thicker and stronger.
+
+Each time the heart squeezes, it pushes a wave of blood through the arteries. You can feel this wave, called your pulse, in your wrist or neck. When you run or jump, your muscles need more oxygen, so your heart beats faster to deliver it.
+
+Like any muscle, the heart grows stronger with exercise. Playing outside, riding a bike, and dancing all give your heart a workout. Eating nutritious foods and getting enough sleep help, too. Take care of your heart, and it will keep working hard for you.','Why does the author begin the passage by asking readers to squeeze their fist?',NULL,'["to help readers understand how hard the heart works without resting","to prove that hand muscles are stronger than the heart","to explain why hands get cold in the winter","to show readers how to measure their pulse"]',0,'Readers feel their hand get tired after a few minutes, which helps them appreciate that the heart, a fist-sized muscle, squeezes every second and "never takes a break."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-bd803b72c0be','KR_ENG','reading','mcq',3,'Make a fist and squeeze it as hard as you can. Now open and squeeze it again, about once every second. Your hand will probably grow tired within a few minutes. Yet a muscle about the size of that fist has been squeezing inside your chest every second of your life, and it never takes a break. That muscle is your heart.
+
+The heart is the center of the circulatory system, the body system that moves blood to every part of you. Blood carries oxygen from the air you breathe and nutrients from the food you eat. Every cell in your body needs these supplies to stay alive and do its job. Blood also carries away wastes, such as carbon dioxide, that cells must get rid of.
+
+Blood travels through tubes called blood vessels. Arteries carry blood away from the heart, while veins carry blood back to it. Between them are capillaries, tiny vessels thinner than a hair. In the capillaries, oxygen and nutrients pass out of the blood and into the cells, and wastes pass in. If you could lay all of your blood vessels end to end, they would stretch around Earth more than twice.
+
+The heart itself has four rooms, or chambers, and the two on the right side pump blood to the lungs. There the blood drops off carbon dioxide, which you breathe out, and picks up fresh oxygen. The blood then returns to the left side of the heart. The left side pumps this oxygen-rich blood out to the rest of the body. Because the left side has the harder job, its walls are thicker and stronger.
+
+Each time the heart squeezes, it pushes a wave of blood through the arteries. You can feel this wave, called your pulse, in your wrist or neck. When you run or jump, your muscles need more oxygen, so your heart beats faster to deliver it.
+
+Like any muscle, the heart grows stronger with exercise. Playing outside, riding a bike, and dancing all give your heart a workout. Eating nutritious foods and getting enough sleep help, too. Take care of your heart, and it will keep working hard for you.','Read the sentence: "Blood carries oxygen from the air you breathe and NUTRIENTS from the food you eat." What are NUTRIENTS?',NULL,'["wastes that the body breathes out","muscles that help the heart pump","substances in food that the body needs to live and grow","tiny tubes that carry blood"]',2,'The nutrients come "from the food you eat," and the next sentence says every cell needs these supplies to stay alive, so nutrients are the useful substances in food.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-5f2c4caddf24','KR_ENG','reading','mcq',3,'Make a fist and squeeze it as hard as you can. Now open and squeeze it again, about once every second. Your hand will probably grow tired within a few minutes. Yet a muscle about the size of that fist has been squeezing inside your chest every second of your life, and it never takes a break. That muscle is your heart.
+
+The heart is the center of the circulatory system, the body system that moves blood to every part of you. Blood carries oxygen from the air you breathe and nutrients from the food you eat. Every cell in your body needs these supplies to stay alive and do its job. Blood also carries away wastes, such as carbon dioxide, that cells must get rid of.
+
+Blood travels through tubes called blood vessels. Arteries carry blood away from the heart, while veins carry blood back to it. Between them are capillaries, tiny vessels thinner than a hair. In the capillaries, oxygen and nutrients pass out of the blood and into the cells, and wastes pass in. If you could lay all of your blood vessels end to end, they would stretch around Earth more than twice.
+
+The heart itself has four rooms, or chambers, and the two on the right side pump blood to the lungs. There the blood drops off carbon dioxide, which you breathe out, and picks up fresh oxygen. The blood then returns to the left side of the heart. The left side pumps this oxygen-rich blood out to the rest of the body. Because the left side has the harder job, its walls are thicker and stronger.
+
+Each time the heart squeezes, it pushes a wave of blood through the arteries. You can feel this wave, called your pulse, in your wrist or neck. When you run or jump, your muscles need more oxygen, so your heart beats faster to deliver it.
+
+Like any muscle, the heart grows stronger with exercise. Playing outside, riding a bike, and dancing all give your heart a workout. Eating nutritious foods and getting enough sleep help, too. Take care of your heart, and it will keep working hard for you.','Based on the passage, why does your heart beat faster when you run?',NULL,'["Your muscles need more oxygen, so the heart pumps blood more quickly.","Your lungs stop working, so the heart must work alone.","Your heart is trying to rest by beating faster.","Your blood vessels become shorter while you exercise."]',0,'The passage explains, "When you run or jump, your muscles need more oxygen, so your heart beats faster to deliver it." This is a cause-and-effect relationship.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-8424192eb139','KR_ENG','reading','mcq',3,'The Grand Canyon in Arizona is more than a mile deep in some places. Standing at its edge, you might guess that a giant once carved it with a shovel. The real sculptors were much smaller and much slower: water, wind, and ice working for millions of years.
+
+Scientists use two words to describe how the land changes. Weathering is the breaking down of rock into smaller pieces. Erosion is the moving of those pieces from one place to another. Weathering makes the pieces, and erosion carries them away.
+
+Weathering happens in several ways. In cold places, rain seeps into small cracks in rock. When the temperature drops, the water freezes and expands, pushing the crack a little wider. After the ice melts, more water flows in. Over many winters, this cycle can split a boulder in two. Plants cause weathering, too. A tree root growing into a crack acts like a slowly opening wedge. Even the acid in rainwater can dissolve some kinds of rock, such as limestone.
+
+Once rock has been broken apart, erosion goes to work. Moving water is the most powerful force of erosion on Earth. Rivers pick up sand and pebbles and tumble them downstream, scraping the riverbed as they go. That is exactly how the Colorado River cut the Grand Canyon, grinding a little deeper year after year. Wind can also cause erosion, especially in deserts, where it blasts sand against rocks. In very cold regions, enormous sheets of ice called glaciers creep downhill and drag huge rocks along with them.
+
+The pieces that erosion carries away do not vanish. Eventually, the water or wind slows down and drops them. This process is called deposition. A river that empties into the sea may leave behind so much mud and sand that it builds new land. The area of land that forms at the mouth of a river is called a delta.
+
+Weathering and erosion can cause problems for people. They can wash away farm soil and weaken roads and bridges. Farmers plant grass and trees to hold the soil in place, and towns build walls to protect their beaches. Still, these forces never stop, slowly reshaping the land beneath our feet.','What is the difference between weathering and erosion?',NULL,'["Weathering breaks rock into pieces, and erosion moves the pieces away.","Weathering happens only in deserts, and erosion happens only in rivers.","Weathering is caused by people, and erosion is caused by nature.","Weathering builds new land, and erosion destroys it."]',0,'The passage says, "Weathering makes the pieces, and erosion carries them away." The other choices are not stated and are not true.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-7a558aca9000','KR_ENG','reading','mcq',3,'The Grand Canyon in Arizona is more than a mile deep in some places. Standing at its edge, you might guess that a giant once carved it with a shovel. The real sculptors were much smaller and much slower: water, wind, and ice working for millions of years.
+
+Scientists use two words to describe how the land changes. Weathering is the breaking down of rock into smaller pieces. Erosion is the moving of those pieces from one place to another. Weathering makes the pieces, and erosion carries them away.
+
+Weathering happens in several ways. In cold places, rain seeps into small cracks in rock. When the temperature drops, the water freezes and expands, pushing the crack a little wider. After the ice melts, more water flows in. Over many winters, this cycle can split a boulder in two. Plants cause weathering, too. A tree root growing into a crack acts like a slowly opening wedge. Even the acid in rainwater can dissolve some kinds of rock, such as limestone.
+
+Once rock has been broken apart, erosion goes to work. Moving water is the most powerful force of erosion on Earth. Rivers pick up sand and pebbles and tumble them downstream, scraping the riverbed as they go. That is exactly how the Colorado River cut the Grand Canyon, grinding a little deeper year after year. Wind can also cause erosion, especially in deserts, where it blasts sand against rocks. In very cold regions, enormous sheets of ice called glaciers creep downhill and drag huge rocks along with them.
+
+The pieces that erosion carries away do not vanish. Eventually, the water or wind slows down and drops them. This process is called deposition. A river that empties into the sea may leave behind so much mud and sand that it builds new land. The area of land that forms at the mouth of a river is called a delta.
+
+Weathering and erosion can cause problems for people. They can wash away farm soil and weaken roads and bridges. Farmers plant grass and trees to hold the soil in place, and towns build walls to protect their beaches. Still, these forces never stop, slowly reshaping the land beneath our feet.','How does ice cause weathering, according to the passage?',NULL,'["Ice covers the rock and protects it from wind.","Ice melts the rock into a liquid.","Ice makes the rock heavier until it sinks.","Water freezes in a crack, expands, and pushes the crack wider."]',3,'The passage explains that rain seeps into cracks, freezes, and expands, pushing the crack a little wider each winter until a boulder can split.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-82d0a4d65b8a','KR_ENG','reading','mcq',3,'The Grand Canyon in Arizona is more than a mile deep in some places. Standing at its edge, you might guess that a giant once carved it with a shovel. The real sculptors were much smaller and much slower: water, wind, and ice working for millions of years.
+
+Scientists use two words to describe how the land changes. Weathering is the breaking down of rock into smaller pieces. Erosion is the moving of those pieces from one place to another. Weathering makes the pieces, and erosion carries them away.
+
+Weathering happens in several ways. In cold places, rain seeps into small cracks in rock. When the temperature drops, the water freezes and expands, pushing the crack a little wider. After the ice melts, more water flows in. Over many winters, this cycle can split a boulder in two. Plants cause weathering, too. A tree root growing into a crack acts like a slowly opening wedge. Even the acid in rainwater can dissolve some kinds of rock, such as limestone.
+
+Once rock has been broken apart, erosion goes to work. Moving water is the most powerful force of erosion on Earth. Rivers pick up sand and pebbles and tumble them downstream, scraping the riverbed as they go. That is exactly how the Colorado River cut the Grand Canyon, grinding a little deeper year after year. Wind can also cause erosion, especially in deserts, where it blasts sand against rocks. In very cold regions, enormous sheets of ice called glaciers creep downhill and drag huge rocks along with them.
+
+The pieces that erosion carries away do not vanish. Eventually, the water or wind slows down and drops them. This process is called deposition. A river that empties into the sea may leave behind so much mud and sand that it builds new land. The area of land that forms at the mouth of a river is called a delta.
+
+Weathering and erosion can cause problems for people. They can wash away farm soil and weaken roads and bridges. Farmers plant grass and trees to hold the soil in place, and towns build walls to protect their beaches. Still, these forces never stop, slowly reshaping the land beneath our feet.','Why does the author compare a tree root to "a slowly opening wedge"?',NULL,'["to prove that plants grow faster than rocks","to help readers picture how a root pushes rock apart as it grows","to show that tree roots are made of metal","to explain how farmers cut down trees"]',1,'A wedge is a tool that is forced into a gap to split something. The comparison helps readers imagine a growing root slowly forcing a crack in a rock to widen.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-bf71d5f1ce25','KR_ENG','reading','mcq',3,'The Grand Canyon in Arizona is more than a mile deep in some places. Standing at its edge, you might guess that a giant once carved it with a shovel. The real sculptors were much smaller and much slower: water, wind, and ice working for millions of years.
+
+Scientists use two words to describe how the land changes. Weathering is the breaking down of rock into smaller pieces. Erosion is the moving of those pieces from one place to another. Weathering makes the pieces, and erosion carries them away.
+
+Weathering happens in several ways. In cold places, rain seeps into small cracks in rock. When the temperature drops, the water freezes and expands, pushing the crack a little wider. After the ice melts, more water flows in. Over many winters, this cycle can split a boulder in two. Plants cause weathering, too. A tree root growing into a crack acts like a slowly opening wedge. Even the acid in rainwater can dissolve some kinds of rock, such as limestone.
+
+Once rock has been broken apart, erosion goes to work. Moving water is the most powerful force of erosion on Earth. Rivers pick up sand and pebbles and tumble them downstream, scraping the riverbed as they go. That is exactly how the Colorado River cut the Grand Canyon, grinding a little deeper year after year. Wind can also cause erosion, especially in deserts, where it blasts sand against rocks. In very cold regions, enormous sheets of ice called glaciers creep downhill and drag huge rocks along with them.
+
+The pieces that erosion carries away do not vanish. Eventually, the water or wind slows down and drops them. This process is called deposition. A river that empties into the sea may leave behind so much mud and sand that it builds new land. The area of land that forms at the mouth of a river is called a delta.
+
+Weathering and erosion can cause problems for people. They can wash away farm soil and weaken roads and bridges. Farmers plant grass and trees to hold the soil in place, and towns build walls to protect their beaches. Still, these forces never stop, slowly reshaping the land beneath our feet.','Read the sentence: "The area of land that forms at the MOUTH of a river is called a delta." What does MOUTH mean here?',NULL,'["the place where a river begins in the mountains","the place where a river flows into a larger body of water","the deepest part of a canyon","the part of the face used for eating"]',1,'The sentence before describes a river that "empties into the sea," so the MOUTH of a river is where it flows into a larger body of water. This is a multiple-meaning word.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-53aec5fdf0b5','KR_ENG','reading','mcq',3,'The Grand Canyon in Arizona is more than a mile deep in some places. Standing at its edge, you might guess that a giant once carved it with a shovel. The real sculptors were much smaller and much slower: water, wind, and ice working for millions of years.
+
+Scientists use two words to describe how the land changes. Weathering is the breaking down of rock into smaller pieces. Erosion is the moving of those pieces from one place to another. Weathering makes the pieces, and erosion carries them away.
+
+Weathering happens in several ways. In cold places, rain seeps into small cracks in rock. When the temperature drops, the water freezes and expands, pushing the crack a little wider. After the ice melts, more water flows in. Over many winters, this cycle can split a boulder in two. Plants cause weathering, too. A tree root growing into a crack acts like a slowly opening wedge. Even the acid in rainwater can dissolve some kinds of rock, such as limestone.
+
+Once rock has been broken apart, erosion goes to work. Moving water is the most powerful force of erosion on Earth. Rivers pick up sand and pebbles and tumble them downstream, scraping the riverbed as they go. That is exactly how the Colorado River cut the Grand Canyon, grinding a little deeper year after year. Wind can also cause erosion, especially in deserts, where it blasts sand against rocks. In very cold regions, enormous sheets of ice called glaciers creep downhill and drag huge rocks along with them.
+
+The pieces that erosion carries away do not vanish. Eventually, the water or wind slows down and drops them. This process is called deposition. A river that empties into the sea may leave behind so much mud and sand that it builds new land. The area of land that forms at the mouth of a river is called a delta.
+
+Weathering and erosion can cause problems for people. They can wash away farm soil and weaken roads and bridges. Farmers plant grass and trees to hold the soil in place, and towns build walls to protect their beaches. Still, these forces never stop, slowly reshaping the land beneath our feet.','Which sentence from the passage best supports the idea that people try to slow erosion?',NULL,'["\"The pieces that erosion carries away do not vanish.\"","\"Moving water is the most powerful force of erosion on Earth.\"","\"Farmers plant grass and trees to hold the soil in place, and towns build walls to protect their beaches.\"","\"Wind can also cause erosion, especially in deserts, where it blasts sand against rocks.\""]',2,'Only this sentence describes actions people take, planting grass and trees and building walls, to keep soil and beaches from washing away.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-c748a862a908','KR_ENG','reading','mcq',3,'Imagine a classroom where one student made all the rules, decided who broke them, and chose every punishment. That student would have a lot of power, and the others would have very little say. The people who wrote the United States Constitution in 1787 worried about this kind of problem. They had just fought a war to escape the rule of a king, and they did not want any one person or group to become too powerful.
+
+Their solution was to divide the national government into three parts, called branches. Each branch has its own job.
+
+The legislative branch makes the laws. It is called Congress, and it has two parts, the Senate and the House of Representatives. Members of Congress are elected by the people of each state. When they want to create a new law, they write a plan called a bill. Both parts of Congress must vote to approve it.
+
+The executive branch carries out the laws. The president leads this branch. After Congress passes a bill, the president can sign it into law. The president also commands the military and works with leaders of other countries. Many departments help the president, such as the ones that work on schools, farms, and national parks.
+
+The judicial branch explains the laws. It includes the Supreme Court and many lower courts. Judges decide what laws mean and whether they follow the rules in the Constitution. If the Supreme Court decides that a law breaks those rules, the law can no longer be used.
+
+The writers of the Constitution also gave each branch ways to limit the others. This idea is called checks and balances. For example, the president can veto, or reject, a bill that Congress has passed. However, Congress can still turn that bill into a law if two-thirds of the members in each part of Congress vote for it again. The president chooses judges for the Supreme Court, but the Senate must agree to each choice.
+
+Checks and balances can make the government move slowly, because the branches often have to work together and compromise. Yet that is exactly what the writers wanted. By sharing power, the three branches help protect the rights of every citizen.','Why did the writers of the Constitution divide the government into three branches?',NULL,'["They needed more jobs for people who had fought in the war.","They did not want any one person or group to become too powerful.","They wanted the government to make decisions as quickly as possible.","They wanted the president to make all of the laws."]',1,'The first paragraph explains that the writers had escaped the rule of a king and "did not want any one person or group to become too powerful."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-522a78c20720','KR_ENG','reading','mcq',3,'Imagine a classroom where one student made all the rules, decided who broke them, and chose every punishment. That student would have a lot of power, and the others would have very little say. The people who wrote the United States Constitution in 1787 worried about this kind of problem. They had just fought a war to escape the rule of a king, and they did not want any one person or group to become too powerful.
+
+Their solution was to divide the national government into three parts, called branches. Each branch has its own job.
+
+The legislative branch makes the laws. It is called Congress, and it has two parts, the Senate and the House of Representatives. Members of Congress are elected by the people of each state. When they want to create a new law, they write a plan called a bill. Both parts of Congress must vote to approve it.
+
+The executive branch carries out the laws. The president leads this branch. After Congress passes a bill, the president can sign it into law. The president also commands the military and works with leaders of other countries. Many departments help the president, such as the ones that work on schools, farms, and national parks.
+
+The judicial branch explains the laws. It includes the Supreme Court and many lower courts. Judges decide what laws mean and whether they follow the rules in the Constitution. If the Supreme Court decides that a law breaks those rules, the law can no longer be used.
+
+The writers of the Constitution also gave each branch ways to limit the others. This idea is called checks and balances. For example, the president can veto, or reject, a bill that Congress has passed. However, Congress can still turn that bill into a law if two-thirds of the members in each part of Congress vote for it again. The president chooses judges for the Supreme Court, but the Senate must agree to each choice.
+
+Checks and balances can make the government move slowly, because the branches often have to work together and compromise. Yet that is exactly what the writers wanted. By sharing power, the three branches help protect the rights of every citizen.','Which branch of government decides whether a law follows the rules in the Constitution?',NULL,'["the military","the legislative branch","the judicial branch","the executive branch"]',2,'The passage states that in the judicial branch, judges decide what laws mean "and whether they follow the rules in the Constitution."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-cb1a5038294f','KR_ENG','reading','mcq',3,'Imagine a classroom where one student made all the rules, decided who broke them, and chose every punishment. That student would have a lot of power, and the others would have very little say. The people who wrote the United States Constitution in 1787 worried about this kind of problem. They had just fought a war to escape the rule of a king, and they did not want any one person or group to become too powerful.
+
+Their solution was to divide the national government into three parts, called branches. Each branch has its own job.
+
+The legislative branch makes the laws. It is called Congress, and it has two parts, the Senate and the House of Representatives. Members of Congress are elected by the people of each state. When they want to create a new law, they write a plan called a bill. Both parts of Congress must vote to approve it.
+
+The executive branch carries out the laws. The president leads this branch. After Congress passes a bill, the president can sign it into law. The president also commands the military and works with leaders of other countries. Many departments help the president, such as the ones that work on schools, farms, and national parks.
+
+The judicial branch explains the laws. It includes the Supreme Court and many lower courts. Judges decide what laws mean and whether they follow the rules in the Constitution. If the Supreme Court decides that a law breaks those rules, the law can no longer be used.
+
+The writers of the Constitution also gave each branch ways to limit the others. This idea is called checks and balances. For example, the president can veto, or reject, a bill that Congress has passed. However, Congress can still turn that bill into a law if two-thirds of the members in each part of Congress vote for it again. The president chooses judges for the Supreme Court, but the Senate must agree to each choice.
+
+Checks and balances can make the government move slowly, because the branches often have to work together and compromise. Yet that is exactly what the writers wanted. By sharing power, the three branches help protect the rights of every citizen.','Read the sentence: "the president can VETO, or reject, a bill that Congress has passed." What does VETO mean?',NULL,'["to vote in an election","to sign happily","to refuse to approve","to write a new plan"]',2,'The words right after VETO, "or reject," give its meaning. To veto a bill is to refuse to approve it.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-e40c9d430925','KR_ENG','reading','mcq',3,'Imagine a classroom where one student made all the rules, decided who broke them, and chose every punishment. That student would have a lot of power, and the others would have very little say. The people who wrote the United States Constitution in 1787 worried about this kind of problem. They had just fought a war to escape the rule of a king, and they did not want any one person or group to become too powerful.
+
+Their solution was to divide the national government into three parts, called branches. Each branch has its own job.
+
+The legislative branch makes the laws. It is called Congress, and it has two parts, the Senate and the House of Representatives. Members of Congress are elected by the people of each state. When they want to create a new law, they write a plan called a bill. Both parts of Congress must vote to approve it.
+
+The executive branch carries out the laws. The president leads this branch. After Congress passes a bill, the president can sign it into law. The president also commands the military and works with leaders of other countries. Many departments help the president, such as the ones that work on schools, farms, and national parks.
+
+The judicial branch explains the laws. It includes the Supreme Court and many lower courts. Judges decide what laws mean and whether they follow the rules in the Constitution. If the Supreme Court decides that a law breaks those rules, the law can no longer be used.
+
+The writers of the Constitution also gave each branch ways to limit the others. This idea is called checks and balances. For example, the president can veto, or reject, a bill that Congress has passed. However, Congress can still turn that bill into a law if two-thirds of the members in each part of Congress vote for it again. The president chooses judges for the Supreme Court, but the Senate must agree to each choice.
+
+Checks and balances can make the government move slowly, because the branches often have to work together and compromise. Yet that is exactly what the writers wanted. By sharing power, the three branches help protect the rights of every citizen.','Why does the author compare the government to a classroom in the first paragraph?',NULL,'["to show that students should write their own laws","to explain how teachers are elected","to describe the building where Congress meets","to help readers understand the problem of one person holding too much power"]',3,'The imagined student who makes every rule and punishment is an everyday example of too much power in one place, the same problem the Constitution was designed to prevent.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-e3670b50cc6b','KR_ENG','reading','mcq',3,'Imagine a classroom where one student made all the rules, decided who broke them, and chose every punishment. That student would have a lot of power, and the others would have very little say. The people who wrote the United States Constitution in 1787 worried about this kind of problem. They had just fought a war to escape the rule of a king, and they did not want any one person or group to become too powerful.
+
+Their solution was to divide the national government into three parts, called branches. Each branch has its own job.
+
+The legislative branch makes the laws. It is called Congress, and it has two parts, the Senate and the House of Representatives. Members of Congress are elected by the people of each state. When they want to create a new law, they write a plan called a bill. Both parts of Congress must vote to approve it.
+
+The executive branch carries out the laws. The president leads this branch. After Congress passes a bill, the president can sign it into law. The president also commands the military and works with leaders of other countries. Many departments help the president, such as the ones that work on schools, farms, and national parks.
+
+The judicial branch explains the laws. It includes the Supreme Court and many lower courts. Judges decide what laws mean and whether they follow the rules in the Constitution. If the Supreme Court decides that a law breaks those rules, the law can no longer be used.
+
+The writers of the Constitution also gave each branch ways to limit the others. This idea is called checks and balances. For example, the president can veto, or reject, a bill that Congress has passed. However, Congress can still turn that bill into a law if two-thirds of the members in each part of Congress vote for it again. The president chooses judges for the Supreme Court, but the Senate must agree to each choice.
+
+Checks and balances can make the government move slowly, because the branches often have to work together and compromise. Yet that is exactly what the writers wanted. By sharing power, the three branches help protect the rights of every citizen.','Which example from the passage best shows checks and balances?',NULL,'["Members of Congress are elected by the people of each state.","Congress has two parts, the Senate and the House of Representatives.","The president chooses Supreme Court judges, but the Senate must agree to each choice.","Many departments help the president work on schools, farms, and parks."]',2,'Checks and balances means each branch can limit another. The president''s choice of judges is limited because the Senate must approve it.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-99ff64cabe84','KR_ENG','vocab','mcq',3,NULL,'The words ERUPT, INTERRUPT, and RUPTURE all share the Latin root RUPT. What does RUPT most likely mean?',NULL,'["listen","build","break","grow"]',2,'A volcano erupts when it breaks open, and you interrupt when you break into a conversation, so RUPT means "break."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-984a6ef63ae6','KR_ENG','vocab','mcq',3,NULL,'MANUAL, MANUSCRIPT, and MANUFACTURE all contain the Latin root MANU. What does MANU most likely mean?',NULL,'["paper","machine","hand","many"]',2,'A manual task is done by hand, and a manuscript was once written by hand, so MANU means "hand."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-427eb239767d','KR_ENG','vocab','mcq',3,NULL,'PEDAL, PEDESTRIAN, and CENTIPEDE all contain the Latin root PED. What does PED mean?',NULL,'["foot","slow","road","wheel"]',0,'You push a pedal with your foot, a pedestrian travels on foot, and a centipede seems to have a hundred feet, so PED means "foot."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-74a7c84fd9e9','KR_ENG','vocab','mcq',3,NULL,'What does the prefix SEMI- mean in the word SEMICIRCLE?',NULL,'["large","half","twice","around"]',1,'A semicircle is half of a circle. SEMI- means "half" or "partly," as in semifinal.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-7054fafbe778','KR_ENG','vocab','mcq',3,NULL,'What does the suffix -IST mean in the words ARTIST and SCIENTIST?',NULL,'["the state of being","a person who does or studies something","full of","in the direction of"]',1,'An artist is a person who makes art, and a scientist is a person who studies science, so -IST means "a person who does or studies something."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-2125279fb801','KR_ENG','vocab','mcq',3,NULL,'What does the suffix -WARD mean in the words HOMEWARD and UPWARD?',NULL,'["without","one who","able to be","in the direction of"]',3,'Homeward means "toward home," and upward means "toward a higher place," so -WARD means "in the direction of."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-d2df4cac786f','KR_ENG','vocab','mcq',3,NULL,'What does the prefix NON- mean in the word NONFICTION?',NULL,'["half","not","after","again"]',1,'Nonfiction is writing that is not made up. The prefix NON- means "not," as in nonstop and nonsense.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-fd2dda365628','KR_ENG','vocab','mcq',3,NULL,'Which word is a SYNONYM for VERTICAL?',NULL,'["flat","narrow","upright","curved"]',2,'Something vertical goes straight up and down, so UPRIGHT is a synonym. FLAT is closer to horizontal, its opposite.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-0b76f3f05aef','KR_ENG','vocab','mcq',3,NULL,'Which word is a SYNONYM for SWIFT?',NULL,'["clumsy","steady","quick","gentle"]',2,'SWIFT means moving with great speed, so QUICK is a synonym.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-d2bfa3c4f3ff','KR_ENG','vocab','mcq',3,NULL,'Which word is an ANTONYM for SHRINK?',NULL,'["dwindle","grow","fade","wrinkle"]',1,'To shrink is to become smaller, and to grow is to become larger. DWINDLE is a synonym for SHRINK.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-9eb7b73c7050','KR_ENG','vocab','mcq',3,NULL,'Which word is an ANTONYM for ARTIFICIAL?',NULL,'["fake","plastic","invented","natural"]',3,'Something artificial is made by people, while something natural comes from nature. FAKE is close in meaning to ARTIFICIAL.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-6bcc5f97a35d','KR_ENG','vocab','mcq',3,NULL,'Read the sentence: "After the storm passed, the floodwater began to RECEDE, and the streets slowly dried out." What does RECEDE mean?',NULL,'["move back or go down","freeze solid","rise higher","turn muddy"]',0,'The streets "slowly dried out," which tells you the water was going away. RECEDE means to move back or become lower.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-8c5ebbd57c47','KR_ENG','vocab','mcq',3,NULL,'Read the sentence: "Grandma is very FRUGAL; she reuses gift wrap and never buys anything she does not need." What does FRUGAL mean?',NULL,'["careful about spending money","forgetful about details","very generous with gifts","fond of shopping"]',0,'Reusing gift wrap and buying only what she needs are clues that FRUGAL means careful not to waste money.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-6d1c7db74fbb','KR_ENG','vocab','mcq',3,NULL,'Read the sentence: "A fallen tree was an OBSTACLE on the trail, so the hikers had to climb over it." What is an OBSTACLE?',NULL,'["a shortcut through the woods","a sign that gives directions","something that blocks the way","a place to rest"]',2,'The hikers had to climb over the tree to keep going, so an OBSTACLE is something that blocks your way.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-3bf6d74bf761','KR_ENG','vocab','mcq',3,NULL,'Read the sentence: "The twins'' handwriting is nearly IDENTICAL, so even their teacher cannot tell whose paper is whose." What does IDENTICAL mean?',NULL,'["hard to read","very messy","exactly alike","completely different"]',2,'The teacher cannot tell the papers apart, which shows that IDENTICAL means exactly the same.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-d5744eb03c2d','KR_ENG','vocab','mcq',3,NULL,'Read the sentence: "The little stream MEANDERED through the meadow, curving back and forth like a ribbon." What does MEANDERED mean?',NULL,'["rushed straight ahead","followed a winding path","froze over","dried up completely"]',1,'The clue "curving back and forth like a ribbon" shows that MEANDERED means followed a slow, winding path.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-bcc5a55cb1a4','KR_ENG','vocab','mcq',3,NULL,'In which sentence does FAIR mean "treating everyone equally"?',NULL,'["Tomorrow the weather will be FAIR and sunny.","We rode the Ferris wheel at the county FAIR.","The referee made a FAIR call, so neither team complained.","The baby has FAIR hair and blue eyes."]',2,'A fair call by a referee treats both teams the same way. In the other sentences FAIR means an outdoor festival, light in color, and clear weather.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-324b059f54b0','KR_ENG','vocab','mcq',3,NULL,'In which sentence does BARK mean "the outer covering of a tree"?',NULL,'["The seals BARK as they swim near the dock.","The rough BARK of the oak scraped my hands.","Our puppy will BARK at the mail carrier.","I heard a loud BARK from the yard next door."]',1,'Only in the first sentence is BARK something on a tree that can scrape your hands. In the others it is the sound an animal makes.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-06033f931a79','KR_ENG','vocab','mcq',3,NULL,'Read the sentence: "The hikers filled their bottles with cold, clear water from a SPRING beside the trail." What does SPRING mean in this sentence?',NULL,'["a coil of metal that bounces back","a sudden jump forward","a place where water flows up from the ground","the season after winter"]',2,'The hikers get water from it beside the trail, so SPRING here means a natural source of water coming out of the ground.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-a51fd6c1f4b0','KR_ENG','vocab','mcq',3,NULL,'Read the sentence: "Before dinner, Dad asked me to SET the table." What does SET mean in this sentence?',NULL,'["become firm or hard","go down below the horizon","a group of things that belong together","arrange plates and silverware on"]',3,'When you set the table, you arrange plates, cups, and silverware on it for a meal. The other choices are different meanings of SET.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-45a1b90854ce','KR_ENG','vocab','mcq',3,NULL,'Kendra joined the soccer team, the school play, and the chess club in the same week, and now she has no free time. Her dad says she BIT OFF MORE THAN SHE COULD CHEW. What does this mean?',NULL,'["She refused to try anything new.","She took on more than she could handle.","She ate too much food at lunch.","She spoke without thinking first."]',1,'Joining three activities at once left Kendra with no free time. The idiom means taking on more work or responsibility than you can manage.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-fee07249ac6d','KR_ENG','vocab','mcq',3,NULL,'Marco promised to keep the surprise party a secret, but he SPILLED THE BEANS at breakfast. What does SPILLED THE BEANS mean?',NULL,'["forgot about the party","made a mess at the table","cooked a big meal","told the secret too early"]',3,'Marco was supposed to keep a secret, so SPILLED THE BEANS means he revealed it before he should have.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-01f0d3497c4a','KR_ENG','vocab','mcq',3,NULL,'When Ruby said the story was really about friendship, the teacher smiled and said, "You HIT THE NAIL ON THE HEAD." What did the teacher mean?',NULL,'["Ruby needed to try again.","Ruby had hurt her hand.","Ruby was speaking too loudly.","Ruby was exactly right."]',3,'The teacher smiles because Ruby found the true theme. HIT THE NAIL ON THE HEAD means to say something exactly right.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-2b2b2a9951b5','KR_ENG','vocab','mcq',3,NULL,'My cousins live far away, so we see them only ONCE IN A BLUE MOON. What does ONCE IN A BLUE MOON mean?',NULL,'["every night","during the winter","in the evening","very rarely"]',3,'Because the cousins live far away, the family seldom sees them. ONCE IN A BLUE MOON means very rarely.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-211f3ce9df8a','KR_ENG','vocab','mcq',3,NULL,'What does the saying DON''T JUDGE A BOOK BY ITS COVER mean?',NULL,'["Take good care of library books so the covers stay clean.","Don''t decide what someone or something is like based only on how it looks.","Books with plain covers are usually the most interesting.","Always read the whole book before you write a report."]',1,'The saying warns that outward appearance does not always show what is inside or what a person is really like.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-2017861768cd','KR_ENG','vocab','mcq',3,NULL,'What does the saying TWO HEADS ARE BETTER THAN ONE mean?',NULL,'["It is better to have two teachers in every classroom.","People should always work alone to avoid arguments.","Two people working together can often solve a problem better than one person alone.","Thinking about a problem twice is a waste of time."]',2,'The saying means that sharing ideas with another person often leads to a better solution.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-ffb963a565b7','KR_ENG','vocab','mcq',3,NULL,'Complete the analogy. STETHOSCOPE is to DOCTOR as HAMMER is to ______.',NULL,'["hospital","carpenter","nail","wood"]',1,'A stethoscope is a tool a doctor uses, and a hammer is a tool a carpenter uses. The relationship is tool to worker.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-ab8c45db4347','KR_ENG','vocab','mcq',3,NULL,'Complete the analogy. FOAL is to HORSE as CUB is to ______.',NULL,'["puppy","kitten","den","bear"]',3,'A foal is a young horse, and a cub is a young bear. The relationship is young animal to adult animal.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-b9f99fe3820a','KR_ENG','vocab','mcq',3,NULL,'Which word shows the STRONGEST degree of happiness?',NULL,'["pleased","glad","overjoyed","content"]',2,'All four words describe happiness, but OVERJOYED means extremely happy, while CONTENT, PLEASED, and GLAD are milder.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-vocab-0217bd0047bc','KR_ENG','vocab','mcq',3,NULL,'Your teacher asks you to PARAPHRASE a paragraph from your science book. What should you do?',NULL,'["copy it word for word","read it aloud to a partner","restate its ideas in your own words","draw a diagram of it"]',2,'To PARAPHRASE means to explain the same ideas using your own words instead of the author''s exact words.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-1fbb1235c116','KR_ENG','grammar','mcq',3,NULL,'Choose the relative pronoun that correctly completes the sentence.
+"The lifeguard ______ pulled the swimmer from the waves received an award."',NULL,'["whose","which","who","whom"]',2,'WHO refers to a person and is the subject of the clause; the lifeguard is the one who pulled the swimmer.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-c2684720de6e','KR_ENG','grammar','mcq',3,NULL,'Choose the relative pronoun that correctly completes the sentence.
+"The library book ______ I borrowed last month is overdue."',NULL,'["that","whom","whose","who"]',0,'THAT refers to things, such as a book. WHO and WHOM refer to people, and WHOSE shows ownership.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-bd4e8d60b173','KR_ENG','grammar','mcq',3,NULL,'Choose the relative pronoun that correctly completes the sentence.
+"Mr. Ortiz, ______ dog won first prize at the show, lives across the street."',NULL,'["who","that","whose","which"]',2,'WHOSE shows possession; the dog belongs to Mr. Ortiz.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-b47d86d5d59c','KR_ENG','grammar','mcq',3,NULL,'Choose the relative pronoun that correctly completes the sentence.
+"The new student, ______ I met at lunch, just moved here from Brazil."',NULL,'["whose","what","whom","which"]',2,'The pronoun refers to a person and is the object of MET (I met her), so the object form WHOM is correct.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-8bcca7b6c56a','KR_ENG','grammar','mcq',3,NULL,'Choose the verb that correctly completes the sentence.
+"By the end of this school year, I ______ fifty books."',NULL,'["have read","was reading","had read","will have read"]',3,'The phrase "by the end of this school year" points to an action that will be finished before a future time, which calls for the future perfect tense.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-b7f90423bf89','KR_ENG','grammar','mcq',3,NULL,'Choose the verb that correctly completes the sentence.
+"When the power went out, I ______ a shower."',NULL,'["was taking","take","am taking","will take"]',0,'The past progressive WAS TAKING shows an action that was in progress when another past event, the power going out, interrupted it.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-a752321fb039','KR_ENG','grammar','mcq',3,NULL,'Choose the verb that correctly completes the sentence.
+"Last night the wind ______ our patio chairs into the neighbor''s yard."',NULL,'["blown","blows","blowed","blew"]',3,'BLOW is an irregular verb; its simple past form is BLEW. BLOWED is not a word, and BLOWN needs a helping verb.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-c991bc08395e','KR_ENG','grammar','mcq',3,NULL,'Choose the verb that correctly completes the sentence.
+"Have you ever ______ a horse?"',NULL,'["ride","ridden","rode","rided"]',1,'After the helping verb HAVE, use the past participle. The past participle of RIDE is RIDDEN.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-f0ea8dd89938','KR_ENG','grammar','mcq',3,NULL,'Choose the verb that correctly completes the sentence.
+"The flock of geese ______ south every fall."',NULL,'["have flown","flying","are flying","flies"]',3,'The subject is FLOCK, a singular collective noun, so it takes the singular verb FLIES. "Of geese" is a phrase that does not change the subject.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-d6c7d326cad1','KR_ENG','grammar','mcq',3,NULL,'Choose the verb that correctly completes the sentence.
+"Mathematics ______ my favorite subject this year."',NULL,'["are","have been","were","is"]',3,'MATHEMATICS ends in -s but is a singular subject, so it takes the singular verb IS.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-b5595ed687f9','KR_ENG','grammar','mcq',3,NULL,'Choose the verb that correctly completes the sentence.
+"There ______ three baby birds in the nest outside my window."',NULL,'["was","is","has been","are"]',3,'In a sentence that begins with THERE, the subject comes after the verb. The subject BIRDS is plural, so the verb is ARE.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-bdb800f5a4aa','KR_ENG','grammar','mcq',3,NULL,'Choose the pronoun that correctly completes the sentence.
+"Ms. Lee asked Sam and ______ to carry the boxes to the gym."',NULL,'["myself","mine","I","me"]',3,'The pronoun is an object of the verb ASKED, so the object pronoun ME is correct. Try it alone: "Ms. Lee asked me."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-bb43cbfd6f61','KR_ENG','grammar','mcq',3,NULL,'Choose the pronoun that correctly completes the sentence.
+"The campers set up the tents by ______."',NULL,'["themself","themselves","theirself","theirselves"]',1,'THEMSELVES is the correct reflexive pronoun for a plural subject. THEIRSELVES, THEMSELF, and THEIRSELF are not standard English.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-b57aeb2e1273','KR_ENG','grammar','mcq',3,NULL,'Choose the pronoun that correctly completes the sentence.
+"Every student must bring ______ own water bottle on the field trip."',NULL,'["his or her","its","our","your"]',0,'EVERY STUDENT is singular, so in formal school English the pronoun is HIS OR HER. ITS is used for things, and OUR does not match the antecedent.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-ca9d11e3d6a2','KR_ENG','grammar','mcq',3,NULL,'Choose the word that correctly completes the sentence.
+"Of all the planets in our solar system, Jupiter is the ______."',NULL,'["largest","more larger","larger","most large"]',0,'When comparing three or more things, use the superlative form. For a short adjective like LARGE, add -EST.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-7fe62537af36','KR_ENG','grammar','mcq',3,NULL,'Choose the words that correctly complete the sentence.
+"Everyone agreed that the movie was ______ than the book."',NULL,'["most exciting","excitinger","more excitinger","more exciting"]',3,'For a long adjective like EXCITING, use MORE to compare two things. Never add -ER to a word that already uses MORE.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-a49bf3e242c7','KR_ENG','grammar','mcq',3,NULL,'Choose the word that correctly completes the sentence.
+"That was the ______ snowstorm our town has had in fifty years."',NULL,'["worse","most bad","baddest","worst"]',3,'BAD is irregular: bad, worse, worst. The sentence compares this storm with all the storms in fifty years, so the superlative WORST is correct.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-bad03d38bf67','KR_ENG','grammar','mcq',3,NULL,'Choose the word that correctly completes the sentence.
+"The choir sang so ______ that the audience stood up and cheered."',NULL,'["beautiful","beauty","beautifuller","beautifully"]',3,'The word describes how the choir sang, a verb, so it must be the adverb BEAUTIFULLY.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-33a53b53f4d2','KR_ENG','grammar','mcq',3,NULL,'Choose the word that correctly completes the sentence.
+"Diego studied hard, and he did ______ on his science test."',NULL,'["good","best","well","goodly"]',2,'WELL is an adverb that describes how Diego did. GOOD is an adjective and should not describe a verb.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-b50f646265a9','KR_ENG','grammar','mcq',3,NULL,'Which group of words is a complete sentence?',NULL,'["Because the bus was late this morning.","The tall man with the red umbrella.","Running down the hallway after the bell.","The children laughed at the clown."]',3,'A complete sentence needs a subject and a verb and must express a complete thought. The other choices are fragments.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-977e0036c1a8','KR_ENG','grammar','mcq',3,NULL,'Which of these is a run-on sentence?',NULL,'["The rain stopped we went outside to play.","After the rain stopped, we went outside to play.","The rain stopped; we went outside to play.","The rain stopped, and we went outside to play."]',0,'A run-on joins two complete sentences with no punctuation or conjunction. The other choices join the clauses correctly with a comma and AND, a dependent clause, or a semicolon.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-d13a2c21e4bd','KR_ENG','grammar','mcq',3,NULL,'Which sentence correctly uses a semicolon?',NULL,'["Maria loves; to swim her brother prefers to hike.","Maria loves to swim; her brother prefers to hike.","Maria loves to swim her brother; prefers to hike.","Maria; loves to swim her brother prefers to hike."]',1,'A semicolon can join two complete sentences that are closely related. Each side of the semicolon must be a complete thought.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-836d243c331e','KR_ENG','grammar','mcq',3,NULL,'Which sentence correctly uses commas to set off an appositive (a phrase that renames a noun)?',NULL,'["My neighbor, a retired pilot, taught me how to fold paper airplanes.","My, neighbor a retired pilot taught me how to fold paper airplanes.","My neighbor a retired pilot, taught me how to fold paper airplanes.","My neighbor, a retired pilot taught me how to fold paper airplanes."]',0,'The phrase "a retired pilot" renames "my neighbor," so it needs a comma before it and a comma after it.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-e3b78f020344','KR_ENG','grammar','mcq',3,NULL,'Which sentence uses commas correctly with city and state names?',NULL,'["We moved from Tucson, Arizona to Portland Maine, last year.","We moved from Tucson, Arizona, to Portland, Maine, last year.","We moved from Tucson Arizona, to Portland Maine, last year.","We moved from, Tucson, Arizona to Portland, Maine last year."]',1,'Put a comma between a city and its state, and another comma after the state when the sentence continues.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-51f171fd955c','KR_ENG','grammar','mcq',3,NULL,'Choose the word that correctly completes the sentence.
+"The ______ basketball team practices in the gym on Tuesdays."',NULL,'["womens","womans''","womens''","women''s"]',3,'WOMEN is a plural that does not end in -s, so you add an apostrophe and -s to make it possessive: WOMEN''S.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-ed81074f81eb','KR_ENG','grammar','mcq',3,NULL,'Choose the word that correctly completes the sentence.
+"The cat licked ______ paw after dinner."',NULL,'["its''","it is","it''s","its"]',3,'ITS (with no apostrophe) is a possessive pronoun. IT''S is a contraction that means "it is."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-3a675ccf32d3','KR_ENG','grammar','mcq',3,NULL,'Which sentence is capitalized correctly?',NULL,'["Last thanksgiving, my family drove to the pacific ocean.","Last Thanksgiving, my family drove to the Pacific Ocean.","last Thanksgiving, my family drove to the Pacific Ocean.","Last Thanksgiving, my Family drove to the Pacific ocean."]',1,'Holidays and the names of specific places, such as the Pacific Ocean, are proper nouns and are capitalized. The first word of a sentence is always capitalized.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-8ba23da8bef9','KR_ENG','grammar','mcq',3,NULL,'Which sentence punctuates the dialogue correctly?',NULL,'["Where are you going? \"asked Mom.\"","\"Where are you going\"? asked Mom.","\"Where are you going?\" asked Mom.","\"Where are you going.\" asked Mom?"]',2,'The question mark belongs inside the closing quotation mark because it is part of what Mom says. Only the spoken words go inside the quotation marks.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-869518ad1ca3','KR_ENG','grammar','mcq',3,NULL,'Choose the conjunction that best completes the sentence.
+"We cannot go camping this weekend ______ the rain stops."',NULL,'["so","unless","since","because"]',1,'UNLESS means "if not": the camping trip cannot happen if the rain does not stop. The other conjunctions do not make sense here.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-grammar-a7ab79fcab1d','KR_ENG','grammar','mcq',3,NULL,'Which sentence lists the adjectives in the correct order?',NULL,'["She keeps her letters in an old wooden small box.","She keeps her letters in a wooden small old box.","She keeps her letters in a wooden old small box.","She keeps her letters in a small old wooden box."]',3,'In English, adjectives usually go in this order: size, then age, then material. So the correct order is SMALL OLD WOODEN.',1,0);
 INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-kr_eng-reading-d59abb33ffdf','KR_ENG','reading','mcq',3,'Rosa had wanted to paint the library mural since the first day of fifth grade, so when Ms. Patel announced that two students would design it together, Rosa raised her hand so quickly that her elbow cracked.
 
 Her partner turned out to be Ethan Brooks, a quiet boy who decorated every scrap of paper with dragons. Rosa preferred to draw flowers, tropical birds, and the colorful outdoor market where her grandmother sold mangoes.
