@@ -14,6 +14,7 @@ class C {
 const PW = 'Mock-test-2026', stamp = Date.now();
 const admin = new C();
 assert.ok((await admin.post('/api/auth/login', { email: process.env.ADMIN_EMAIL || 'admin@example.com', password: PW })).user);
+assert.ok((await admin.post('/api/admin/manual-sections', { speaking: true, essay: true })).ok); // this suite exercises teacher grading
 const reg = async (tag, extra = {}) => { const c = new C(); const r = await c.post('/api/auth/register', { email: `${tag}${stamp}@t.com`, name: tag, password: PW, agree: true, ...extra }); assert.ok(r.user, JSON.stringify(r)); c.id = r.user.id; c.email = `${tag}${stamp}@t.com`; return c; };
 const grant = (c, productId = 'p-cat4-3') => admin.post(`/api/admin/users/${c.id}/grant`, { productId });
 const finishExam = async (c, id) => assert.ok((await c.post(`/api/attempts/${id}/finish`)).ok);

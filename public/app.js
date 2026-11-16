@@ -165,7 +165,7 @@ async function pageKr() {
       h('div', {},
         h('span', { class: 'eyebrow' }, '★ 국내 학원 레벨테스트'),
         h('h1', {}, '레테, ', h('span', { class: 'hl' }, '미리'), ' 보고 가세요.', h('em', {}, '영어 9–12세 · 국어 문해력 7–12세 · 수학 사고력 7–12세')),
-        h('p', { class: 'lead' }, '학원 입학 레벨테스트와 같은 구성과 시간으로 미리 풀어 보고, 나이별 기준에 맞춘 판정과 보완할 영역을 바로 확인하세요. 라이팅·서술형은 선생님이 채점합니다.'),
+        h('p', { class: 'lead' }, '학원 입학 레벨테스트와 같은 구성과 시간으로 미리 풀어 보고, 나이별 기준에 맞춘 판정과 보완할 영역을 바로 확인하세요. ' + (essayOn() ? '라이팅·서술형은 선생님이 채점합니다.' : '결과는 시험이 끝나는 즉시 확인할 수 있습니다.')),
         h('div', { class: 'row' }, h('a', { class: 'btn lg', href: '#kr-tests', onclick: (e) => { e.preventDefault(); document.getElementById('kr-tests')?.scrollIntoView({ behavior: 'smooth' }); } }, '레테 고르기 →'), me ? h('a', { class: 'btn lg alt', href: '#/me' }, '내 시험') : h('a', { class: 'btn lg alt', href: '#/register' }, '회원가입'))),
       h('div', { class: 'kr-levels', 'aria-hidden': 'true' },
         h('div', { class: 'kicker' }, '영어 레테 기준 리딩 레벨'),
@@ -177,14 +177,14 @@ async function pageKr() {
     payment.bank === undefined || products.some((p) => krTypes.some(([t]) => t === p.exam_type)) ? null : h('p', { class: 'notice' }, '레테 문항을 검수하고 있습니다. 곧 구매하실 수 있습니다.'),
     head('02', 'Structure', '구성과 시간'),
     h('div', { class: 'kr-tables' },
-      h('div', { class: 'card' }, h('h3', {}, '영어 레테'), h('table', {}, [['Reading', '지문 3개 · 15문항', '30분'], ['Vocabulary', '15문항', '10분'], ['Grammar', '15문항', '12분'], ['Writing · Creative', '1편 (선생님 채점)', '15분'], ['Writing · Expository', '1편 (선생님 채점)', '15분']].map((r) => h('tr', {}, r.map((c) => h('td', {}, c))))),
+      h('div', { class: 'card' }, h('h3', {}, '영어 레테'), h('table', {}, [['Reading', '지문 3개 · 15문항', '30분'], ['Vocabulary', '15문항', '10분'], ['Grammar', '15문항', '12분']].concat(essayOn() ? [['Writing · Creative', '1편 (선생님 채점)', '15분'], ['Writing · Expository', '1편 (선생님 채점)', '15분']] : []).map((r) => h('tr', {}, r.map((c) => h('td', {}, c))))),
         h('p', { class: 'small muted' }, '나이별 기준: 9세 SR 3.5 · 10세 SR 4.5 · 11세 SR 5.5 · 12세 SR 6.5. 지문은 350–400단어, 픽션과 논픽션을 섞어 출제합니다.')),
-      h('div', { class: 'card' }, h('h3', {}, '국어 문해력 레테'), h('table', {}, [['비문학 독해', '지문 2개 · 8문항', '20분'], ['문학 독해', '지문 2개 · 8문항', '20분'], ['어휘·어법', '10문항', '10분'], ['서술형', '1문항 (선생님 채점)', '15분']].map((r) => h('tr', {}, r.map((c) => h('td', {}, c))))),
+      h('div', { class: 'card' }, h('h3', {}, '국어 문해력 레테'), h('table', {}, [['비문학 독해', '지문 2개 · 8문항', '20분'], ['문학 독해', '지문 2개 · 8문항', '20분'], ['어휘·어법', '10문항', '10분']].concat(essayOn() ? [['서술형', '1문항 (선생님 채점)', '15분']] : []).map((r) => h('tr', {}, r.map((c) => h('td', {}, c))))),
         h('p', { class: 'small muted' }, '지문 길이: 7세 250–350자 → 12세 1,500–1,900자로 나이에 따라 길어집니다.')),
       h('div', { class: 'card' }, h('h3', {}, '수학 사고력 레테'), h('table', {}, [['수·연산 감각', '6문항', '12분'], ['도형·공간', '6문항', '12분'], ['규칙·추론', '6문항', '12분'], ['문제해결', '6문항', '14분']].map((r) => h('tr', {}, r.map((c) => h('td', {}, c))))),
         h('p', { class: 'small muted' }, '객관식과 단답형(숫자 입력)을 섞어 출제하며, 도형 문항은 그림으로 제시합니다.'))),
     head('03', 'Result', '결과는 이렇게 나옵니다'),
-    h('div', { class: 'steps' }, [['영역별 점수', '영역마다 100점 환산 점수와 정답 수'], ['판정', '영어: 추정 SR과 반 판정 · 국어·수학: 최상위~기초 5단계'], ['보완 영역', '가장 약한 영역과 문항별 해설'], ['선생님 채점', '라이팅·서술형 점수와 코멘트 (채점 후 알림)']].map(([t, d]) => h('div', { class: 'step' }, h('h3', {}, t), h('p', {}, d)))),
+    h('div', { class: 'steps' }, [['영역별 점수', '영역마다 100점 환산 점수와 정답 수'], ['판정', '영어: 추정 SR과 반 판정 · 국어·수학: 최상위~기초 5단계'], ['보완 영역', '가장 약한 영역과 문항별 해설']].concat(essayOn() ? [['선생님 채점', '라이팅·서술형 점수와 코멘트 (채점 후 알림)']] : [['바로 확인', '시험이 끝나는 즉시 결과와 해설 확인']]).map(([t, d]) => h('div', { class: 'step' }, h('h3', {}, t), h('p', {}, d)))),
     h('p', { class: 'small muted', style: 'margin-top:18px' }, '※ 이 레테는 형식과 난이도를 참고해 새로 만든 연습용 시험이며 특정 학원과 무관합니다. 실제 반 배정 기준은 학원마다 다릅니다.'),
   );
 }
@@ -728,13 +728,13 @@ async function pageInfo(type) {
   type = (type || '').toUpperCase(); const meta = EXAM_META[type], inf = EXAM_INFO[type];
   if (!meta || !inf) return mount(h('div', { class: 'card' }, h('h2', {}, '시험을 찾을 수 없습니다.')));
   const [{ exams }, { products, payment }] = await Promise.all([api('GET', '/exam-info'), api('GET', '/products')]);
-  const e = exams.find((x) => x.type === type), mine = products.filter((p) => p.exam_type === type && p.id !== 'p-test');
+  const e0 = exams.find((x) => x.type === type), e = { ...e0, sections: e0.sections.filter((x) => !x.manual || (x.key === 'speaking' ? speakingOn() : essayOn())) }, mine = products.filter((p) => p.exam_type === type && p.id !== 'p-test');
   const totalMin = e.sections.reduce((a, s) => a + s.minutes, 0), totalQ = e.sections.reduce((a, s) => a + s.n, 0);
   mount(
     h('div', { class: 'kicker' }, 'Test guide'), h('h1', { style: 'font-family:var(--serif);font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-.05em;margin:6px 0 10px' }, meta.name),
     h('p', { class: 'lead muted', style: 'max-width:42em' }, inf.about),
     h('div', { class: 'stats', style: 'margin:22px 0;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))' }, [['총 문항', `${totalQ}`], ['총 시간', `${totalMin}분`], ['영역', `${e.sections.length}개`], ['출제 방식', e.adaptive ? '적응형' : '고정형']].map(([l, v]) => h('div', { class: 'stat' }, h('div', { class: 'muted small' }, l), h('b', {}, v)))),
-    h('div', { class: 'card' }, h('h3', {}, '시험 구성'), h('table', {}, h('tr', {}, ['영역', '문항', '시간', '채점'].map((x) => h('th', {}, x))), e.sections.map((s) => h('tr', {}, h('td', {}, s.name), h('td', {}, s.n), h('td', {}, `${s.minutes}분`), h('td', {}, s.manual ? '교사 채점' : '자동 채점'))))),
+    h('div', { class: 'card' }, h('h3', {}, '시험 구성'), h('table', {}, h('tr', {}, ['영역', '문항', '시간', '채점'].map((x) => h('th', {}, x))), e.sections.filter((s) => !s.off).map((s) => h('tr', {}, h('td', {}, s.name), h('td', {}, s.n), h('td', {}, `${s.minutes}분`), h('td', {}, s.manual ? '교사 채점' : '자동 채점'))))),
     e.levels.length > 1 ? h('div', { class: 'card' }, h('h3', {}, '레벨 · 학년'), h('p', { class: 'muted small' }, '응시할 때 레벨을 고를 수 있습니다. 레벨에 따라 출제 난이도 구간(1~5)과 점수 척도가 달라집니다.'), h('table', {}, h('tr', {}, ['레벨', '대상', '난이도 구간', '점수 척도'].map((x) => h('th', {}, x))), e.levels.map((l) => h('tr', {}, h('td', {}, h('b', {}, l.name)), h('td', {}, l.grades), h('td', {}, `${l.dmin}–${l.dmax}`), h('td', {}, l.scaled ? `영역별 ${l.scaled.min}–${l.scaled.max}` : '공통'))))) : null,
     h('div', { class: 'grid', style: 'grid-template-columns:repeat(auto-fit,minmax(300px,1fr))' },
       h('div', { class: 'card' }, h('div', { class: 'kicker' }, 'Who takes it'), h('p', {}, inf.who)),
@@ -887,7 +887,7 @@ function pageExamSection(id, state) {
     const sec = state.section;
     if (sec.index !== lastSection) {
       lastSection = sec.index;
-      return mount(h('div', { class: 'card intro' }, h('div', { class: 'big' }, `Section ${sec.index + 1} / ${sec.total}`), h('h2', {}, sec.name),
+      return mount(h('div', { class: 'card intro' }, h('div', { class: 'big' }, `Section ${sec.pos ?? sec.index + 1} / ${sec.count ?? sec.total}`), h('h2', {}, sec.name),
         h('p', {}, `${state.questions.length}문항 · 제한 시간 약 ${Math.max(1, Math.round((sec.deadline - state.serverNow) / 60000))}분`),
         h('ul', { class: 'small', style: 'padding-left:1.1em;color:var(--ink-2)' },
           h('li', {}, '이 영역 안에서는 이전·다음 문항으로 자유롭게 이동하고 답을 바꿀 수 있습니다.'),
@@ -953,7 +953,7 @@ function pageExamSection(id, state) {
     const last = cur === qs.length - 1;
     mount(h('div', { class: 'exam-shell' },
       h('div', { class: 'exam-top' },
-        h('div', { class: 'exam-head' }, h('div', { class: 'sec-pill' }, sec.name, h('i', {}, `${sec.index + 1}/${sec.total}`)), counter, fsButton(), h('span', {}, '⏱ ', timer)),
+        h('div', { class: 'exam-head' }, h('div', { class: 'sec-pill' }, sec.name, h('i', {}, `${sec.pos ?? sec.index + 1}/${sec.count ?? sec.total}`)), counter, fsButton(), h('span', {}, '⏱ ', timer)),
         palette),
       h('div', { class: 'qcard' + (longP ? ' split' : '') }, h('div', { class: 'qmeta' }, h('b', {}, `Question ${cur + 1}`), h('span', { class: 'row', style: 'gap:6px' }, clearBtn, flagBtn)), longP ? h('div', { class: 'splitwrap' }, body[0], h('div', { class: 'qside' }, body.slice(1))) : body,
         h('div', { class: 'exam-foot' },
@@ -977,7 +977,7 @@ async function pageExamAdaptive(id, state) {
     const q = state.question, sec = state.section;
     if (sec.index !== lastSection) { // section intro
       lastSection = sec.index;
-      return mount(h('div', { class: 'card intro' }, h('div', { class: 'big' }, `Section ${sec.index + 1} / ${sec.total}`), h('h2', {}, sec.name),
+      return mount(h('div', { class: 'card intro' }, h('div', { class: 'big' }, `Section ${sec.pos ?? sec.index + 1} / ${sec.count ?? sec.total}`), h('h2', {}, sec.name),
         h('p', {}, `제한 시간: 약 ${Math.max(1, Math.round((sec.deadline - state.serverNow) / 60000))}분. 시간이 끝나면 자동으로 다음 영역으로 넘어갑니다.`),
         sec.manual ? h('p', { class: 'muted' }, '이 영역은 교사가 직접 채점하며, 채점이 끝나면 이메일로 알려드립니다.') : null,
         sec.key === 'speaking' ? h('p', { class: 'muted' }, '마이크 사용 권한이 필요합니다.') : null,
@@ -1026,7 +1026,7 @@ async function pageExamAdaptive(id, state) {
     const tot = state.progress.total || state.progress.n;
     mount(h('div', { class: 'exam-shell' },
       h('div', { class: 'exam-top' },
-        h('div', { class: 'exam-head' }, h('div', { class: 'sec-pill' }, sec.name, h('i', {}, `${sec.index + 1}/${sec.total}`)), h('span', { class: 'muted small' }, `문항 ${state.progress.n} / ${tot}`), fsButton(), h('span', {}, '⏱ ', timer)),
+        h('div', { class: 'exam-head' }, h('div', { class: 'sec-pill' }, sec.name, h('i', {}, `${sec.pos ?? sec.index + 1}/${sec.count ?? sec.total}`)), h('span', { class: 'muted small' }, `문항 ${state.progress.n} / ${tot}`), fsButton(), h('span', {}, '⏱ ', timer)),
         h('div', { class: 'bar' }, h('i', { style: `width:${Math.round(((state.progress.n - 1) / tot) * 100)}%` }))),
       h('div', { class: 'qcard' + (longP ? ' split' : '') }, longP ? h('div', { class: 'splitwrap' }, body[0], h('div', { class: 'qside' }, body.slice(1))) : body, h('div', { class: 'exam-foot' }, h('span', { class: 'kbd hide-touch' }, q.kind === 'mcq' ? '키보드 A–D 선택 · Enter 다음' : ''), next))));
     if (kh) { window._kh = kh; document.addEventListener('keydown', kh); } // after mount(), which clears the previous handler
@@ -1379,7 +1379,11 @@ async function adminPayments(b) {
     row('카카오 알림톡 (SOLAPI)', st.kakao.alimtalk, [['템플릿', `결과 알림 ${st.kakao.templates.result ? '✓' : '✗'} · 결제 알림 ${st.kakao.templates.paid ? '✓' : '✗'}`], ['필요 값', 'SOLAPI_API_KEY, SOLAPI_API_SECRET (Secret), SOLAPI_SENDER, KAKAO_PFID, ALIMTALK_TPL_RESULT, ALIMTALK_TPL_PAID']]));
 }
 async function adminGrading(b) {
-  const [{ items }, ai] = await Promise.all([api('GET', '/admin/grading'), api('GET', '/admin/ai-grading')]);
+  const [{ items }, ai, { manual }] = await Promise.all([api('GET', '/admin/grading'), api('GET', '/admin/ai-grading'), api('GET', '/admin/manual-sections')]);
+  const sw = (key, label) => h('label', { class: 'giftchk' }, h('input', { type: 'checkbox', style: 'width:auto', checked: !!manual[key], onchange: guard(async (e) => { manual[key] = e.target.checked; await api('POST', '/admin/manual-sections', manual); cfg.manual = { ...manual }; toast('저장됨 · 새로 시작하는 시험부터 적용됩니다'); }) }), ' ', label);
+  b.append(h('div', { class: 'card' }, h('h3', {}, '채점이 필요한 영역'),
+    h('p', { class: 'small muted' }, '끄면 그 영역 없이 시험이 진행되어 결과가 바로 나옵니다 (채점 대기 없음). 듣기는 자동 채점이라 항상 포함됩니다. 바꾸면 새로 시작하는 시험부터 적용됩니다.'),
+    sw('speaking', '말하기 (WIDA Speaking) 포함'), h('br'), sw('essay', '에세이·쓰기 포함 (WIDA Writing · SSAT Writing Sample · ISEE Essay · 레테 라이팅·서술형)')));
   const MODES = [['review', 'AI 1차 채점 → 선생님 확정 (권장)'], ['auto', 'AI 점수 바로 확정 (과제 이탈 의심 답안만 선생님에게)'], ['off', 'AI 채점 끄기']];
   const pend = ai.pending || {};
   b.append(h('div', { class: 'card' }, h('h3', {}, 'AI 채점'),
@@ -1418,6 +1422,30 @@ async function adminGrading(b) {
 
 /* ---------- legal pages (템플릿: 게시 전 법률 검토 필요) ---------- */
 let cfg = { site: 'MockTest Lab', biz: {} };
+const essayOn = () => !!cfg.manual?.essay, speakingOn = () => !!cfg.manual?.speaking;
+/** Speaking / essay sections can be switched off (관리자 → 채점): make every description match what the test contains. */
+function applySectionSwitches() {
+  const E = essayOn(), S = speakingOn(), M = EXAM_META, I = EXAM_INFO;
+  if (!E) {
+    M.KR_ENG.sub = '입학 레벨테스트 · Reading / Vocabulary / Grammar'; M.KR_ENG.points[2] = '객관식 자동 채점 · 결과 즉시 확인';
+    M.KR_KOR.sub = '7–12세 · 비문학 / 문학 / 어휘·어법'; M.KR_KOR.points[2] = '객관식 자동 채점 · 결과 즉시 확인';
+    M.SSAT.sub = '사립학교 입시 · Quant / Reading / Verbal'; M.SSAT.points[1] = '3개 점수 영역 자동 채점 · 결과 즉시 확인';
+    M.ISEE.sub = '사립학교 입시 · Verbal / Quant / Reading / Math';
+    I.KR_ENG.about = I.KR_ENG.about.replace('Reading · Vocabulary · Grammar와 Creative · Expository Writing으로', 'Reading · Vocabulary · Grammar로');
+    I.KR_ENG.score = I.KR_ENG.score.replace(' 라이팅은 선생님이 1–6점으로 채점합니다.', ''); I.KR_ENG.tips = I.KR_ENG.tips.filter((t) => !t.startsWith('Writing'));
+    I.KR_KOR.score = I.KR_KOR.score.replace(' 서술형은 선생님이 채점합니다.', '');
+    I.SSAT.about = I.SSAT.about.replace('Writing Sample, ', ''); I.ISEE.about = I.ISEE.about.replace(', Essay', '');
+  }
+  for (const v of Object.values(I)) if (v.tips) v.tips = v.tips.filter((t) => !((!E && /라이팅|에세이|서술형|Writing|쓰기는/.test(t)) || (!S && /말하기/.test(t))));
+  if (!E || !S) {
+    const parts = ['Listening', 'Reading', E && 'Writing', S && 'Speaking'].filter(Boolean);
+    M.WIDA.sub = '영어 숙달도 · ' + parts.join(' / ');
+    M.WIDA.points = [E || S ? `듣기·읽기 자동 채점, ${[E && '쓰기', S && '말하기'].filter(Boolean).join('·')}는 교사 채점` : '듣기·읽기 자동 채점 · 결과 즉시 확인', '1–6 Proficiency Level 과 영역별 가중 종합 레벨', S ? '브라우저 녹음으로 실제 말하기 응시' : '듣기는 음성으로 재생 (최대 2회)'];
+    I.WIDA.score = `영역별 Proficiency Level 1~6. 종합 레벨은 응시한 영역(${parts.join('·')})의 공식 가중치로 계산합니다.${E || S ? ' 쓰기·말하기는 교사가 채점합니다.' : ''}`;
+    SCORE_HELP.WIDA = 'Level 1(Entering) → 6(Reaching). 종합 레벨은 응시한 영역의 가중 평균입니다.';
+    const i = FAQ.findIndex(([q]) => q.startsWith('WIDA 쓰기·말하기')); if (i >= 0 && !E && !S) FAQ.splice(i, 1);
+  }
+}
 const LEGAL = {
   terms: ['이용약관', (c) => [
     ['제1조 (목적)', `이 약관은 ${c.biz.name}(이하 "회사")가 제공하는 ${c.site} 온라인 모의고사 서비스(이하 "서비스")의 이용 조건과 절차, 회사와 회원의 권리·의무를 규정합니다.`],
@@ -1530,6 +1558,7 @@ document.addEventListener('keydown', (e) => { if (e.key === 'Escape') document.q
   const [m0, c0] = await Promise.all([pMe, pCfg]);
   me = m0.user || null;
   try { cfg = c0 || cfg; const b = cfg.biz; document.getElementById('bizinfo').textContent = `${b.name} · 대표 ${b.owner} · 사업자등록번호 ${b.regNo} · 통신판매업 ${b.salesNo} · ${b.address} · ${b.contact}`; } catch {}
+  try { applySectionSwitches(); } catch {}
   renderNav(); showNotice();
   const po = new URLSearchParams(location.search).get('portone_order'); // mobile redirect return
   if (po) {

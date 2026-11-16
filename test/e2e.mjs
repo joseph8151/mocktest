@@ -16,6 +16,7 @@ const adminEmail = process.env.ADMIN_EMAIL || 'admin@example.com';
 let r = await admin.post('/api/auth/register', { email: adminEmail, name: 'Admin', password: 'Mock-test-2026', agree: true });
 if (r.status === 409) r = await admin.post('/api/auth/login', { email: adminEmail, password: 'Mock-test-2026' });
 assert.equal(r.user.role, 'admin', 'admin bootstrap');
+assert.ok((await admin.post('/api/admin/manual-sections', { speaking: true, essay: true })).ok); // this suite exercises teacher grading
 r = await kid.post('/api/auth/register', { email: `kid${stamp}@t.com`, name: 'Kid', password: 'Mock-test-2026', agree: true });
 assert.equal(r.user.role, 'student');
 assert.equal((await kid.get('/api/admin/stats')).status, 403, 'student blocked from admin');

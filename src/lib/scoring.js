@@ -43,7 +43,9 @@ const cefr = (score, cuts) => (score >= cuts[2] ? 'B2' : score >= cuts[1] ? 'B1'
 const WIDA_LABEL = ['', 'Entering', 'Emerging', 'Developing', 'Expanding', 'Bridging', 'Reaching'];
 
 const KR_BAND = (p) => (p >= 0.9 ? '최상위' : p >= 0.75 ? '상위' : p >= 0.55 ? '중위' : p >= 0.35 ? '기본' : '기초');
-export function computeScore(examType, ex, lv, answers) {
+export function computeScore(examType, exFull, lv, answers, skip = []) {
+  // sections switched off for this attempt (speaking / essays) are left out entirely
+  const ex = skip.length ? { ...exFull, sections: exFull.sections.filter((x) => !skip.includes(x.key)) } : exFull;
   const sections = {}, out = { sections, level: lv ? { key: lv.key, name: lv.name, grades: lv.grades } : null, extras: [], notes: [] };
   const grade = lv && /^g(\d+)$/.test(lv.key) ? +lv.key.slice(1) : lv?.key === 'k' ? 0 : null;
 
@@ -136,6 +138,16 @@ export function computeScore(examType, ex, lv, answers) {
     out.pendingManual = ex.sections.filter((x) => x.manual).some((x) => !sections[x.key].graded);
   } else if (examType === 'WIDA') {
     const L = sections.listening?.level, R = sections.reading?.level, W = sections.writing?.level, S = sections.speaking?.level;
+    if (skip.includes('writing') || skip.includes('speaking')) { // partial WIDA: overall from the domains actually taken (same weights, renormalised)
+      const parts = [[L, 0.15], [S, 0.15], [R, 0.35], [W, 0.35]].filter(([, ], i) => !skip.includes(['listening', 'speaking', 'reading', 'writing'][i]));
+      const ok = parts.every(([x]) => x != null), wsum = parts.reduce((m, [, w]) => m + w, 0);
+      const overall = ok && parts.length ? r1(parts.reduce((m, [x, w]) => m + x * w, 0) / wsum) : null;
+      out.composites = { overall, comprehension: L != null && R != null ? r1(0.3 * L + 0.7 * R) : null };
+      out.headline = { label: `Overall Level (${ex.sections.map((x) => x.name).join('·')})`, value: overall ?? '–' };
+      out.extras.push({ label: 'Comprehension (L 30 · R 70)', value: out.composites.comprehension ?? '–' });
+      out.notes.push('이번 시험은 말하기·쓰기 영역 없이 진행되어, 종합 레벨은 응시한 영역의 공식 가중치를 다시 맞춰 계산했습니다.');
+      out.pendingManual = ex.sections.filter((x) => x.manual).some((x) => !sections[x.key]?.graded);
+    } else {
     const f = (x) => (x === null || x === undefined ? null : r1(x));
     out.composites = {
       oral: f(L != null && S != null ? 0.5 * L + 0.5 * S : null), literacy: f(R != null && W != null ? 0.5 * R + 0.5 * W : null),
@@ -144,6 +156,7 @@ export function computeScore(examType, ex, lv, answers) {
     out.headline = { label: 'Overall (Composite) Level', value: out.composites.overall ?? '–' };
     out.extras.push({ label: 'Oral (L·S 50:50)', value: out.composites.oral ?? '–' }, { label: 'Literacy (R·W 50:50)', value: out.composites.literacy ?? '–' }, { label: 'Comprehension (L 30 · R 70)', value: out.composites.comprehension ?? '–' });
     out.pendingManual = !(sections.writing?.graded && sections.speaking?.graded);
+    }
   } else {
     const scored = Object.entries(sections).filter(([k]) => !ex.sections.find((x) => x.key === k)?.manual).map(([, x]) => x.scaled).filter((x) => x != null);
     out.overall = scored.length ? scored.reduce((m, x) => m + x, 0) : null;

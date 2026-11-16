@@ -28,6 +28,7 @@ class C {
 }
 const admin = new C();
 assert.ok((await admin.post('/api/auth/login', { email: process.env.ADMIN_EMAIL || 'admin@example.com', password: 'Mock-test-2026' })).user);
+assert.ok((await admin.post('/api/admin/manual-sections', { speaking: true, essay: true })).ok); // this suite exercises teacher grading
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 async function takeWriting(textFor) { // KR_ENG: answer only the two writing tasks
   const s = await admin.post('/api/attempts', { examType: 'KR_ENG', level: 'a10' });

@@ -10,6 +10,7 @@ import { audit, redact, logEvent } from '../lib/security.js';
 import { clearNoticeCache, DEFAULT_POPUP } from './shop.js';
 import { purgeEdge } from '../lib/edgecache.js';
 import { bankAccount } from '../lib/bank.js';
+import { manualSettings, clearManualCache } from '../lib/sections.js';
 import { deliver, mailFrom, mailTest, sendMail, mailSupportReply } from '../lib/email.js';
 import { anonymizeUser } from './auth.js';
 import { hashPassword } from '../lib/auth.js';
@@ -482,6 +483,14 @@ app.post('/notice', async (c) => {
   return c.json({ ok: true });
 });
 
+app.get('/manual-sections', async (c) => c.json({ manual: await manualSettings(c.env) }));
+app.post('/manual-sections', async (c) => { // turn speaking / essay sections on or off for NEW attempts
+  const b = await c.req.json().catch(() => ({}));
+  const v = { speaking: !!b.speaking, essay: !!b.essay };
+  await c.env.DB.prepare(`INSERT INTO settings (key,value,updated_at) VALUES ('manual_sections',?,?) ON CONFLICT(key) DO UPDATE SET value=excluded.value, updated_at=excluded.updated_at`).bind(JSON.stringify(v), now()).run();
+  clearManualCache(); clearNoticeCache(); await purgeEdge(c, ['/api/config', '/api/exam-info']);
+  return c.json({ ok: true, manual: v });
+});
 app.get('/popup', async (c) => {
   const row = await c.env.DB.prepare(`SELECT value FROM settings WHERE key='popup'`).first();
   return c.json({ popup: row?.value ? JSON.parse(row.value) : { ...DEFAULT_POPUP, default: true } });

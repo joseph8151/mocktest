@@ -10,6 +10,7 @@ import {
 import { bankAccount, cleanDepositor, BANK_DAYS } from '../lib/bank.js';
 import { sendMail, mailBankOrder } from '../lib/email.js';
 import { operatorAlert } from '../lib/notify.js';
+import { manualSettings } from '../lib/sections.js';
 
 const app = new Hono();
 
@@ -43,6 +44,7 @@ app.get('/config', async (c) => c.json({
   kakao: !!c.env.KAKAO_REST_KEY,
   notice: await siteNotice(c.env),
   popup: await sitePopup(c.env),
+  manual: await manualSettings(c.env), // which teacher-graded sections are offered (speaking / essay)
   biz: { name: c.env.BIZ_NAME || '(상호명 입력)', owner: c.env.BIZ_OWNER || '(대표자명)', regNo: c.env.BIZ_REG_NO || '(사업자등록번호)', salesNo: c.env.BIZ_SALES_NO || '(통신판매업 신고번호)', address: c.env.BIZ_ADDRESS || '(사업장 주소)', contact: c.env.BIZ_CONTACT || '(고객센터 이메일/전화)' },
 }));
 

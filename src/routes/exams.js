@@ -2,7 +2,8 @@ import { Hono } from 'hono';
 import { uid, now, bufToB64, numEqual, randomToken, sha256hex } from '../lib/util.js';
 import { requireUser, accountGate } from '../lib/auth.js';
 import { HTTPException } from 'hono/http-exception';
-import { EXAMS, GRACE_MS, initialState, pickNext, pickGrouped, sectionTarget, adaptDifficulty, scoreAttempt, getLevel, levelBank, levelForGrade } from '../lib/exam.js';
+import { manualSettings, skipKeys } from '../lib/sections.js';
+import { EXAMS, GRACE_MS, sectionPos, initialState, pickNext, pickGrouped, sectionTarget, adaptDifficulty, scoreAttempt, getLevel, levelBank, levelForGrade } from '../lib/exam.js';
 import { sendMail, mailReport } from '../lib/email.js';
 import { audit, logEvent, rateLimited, tooMany } from '../lib/security.js';
 import { alimtalk, phoneFor } from '../lib/notify.js';
@@ -32,7 +33,7 @@ async function levelReady(env, examType) {
   return Object.fromEntries(ex.levels.map((l) => [l.key, ex.sections.every((sec) => have(sec.key, l.dmin) >= (sec.manual ? 1 : sec.n))]));
 }
 app.get('/exams', async (c) => c.json({
-  exams: await Promise.all(Object.entries(EXAMS).map(async ([k, e]) => { const ready = await levelReady(c.env, k); return { type: k, title: e.title, category: e.category || 'us', sections: e.sections, levels: (e.levels || []).map((l) => (ready ? { ...l, ready: ready[l.key] } : l)), suggested: levelForGrade(k, c.get('user')?.grade) }; })),
+  exams: await Promise.all(Object.entries(EXAMS).map(async ([k, e]) => { const skip = skipKeys(k, await manualSettings(c.env)); const ready = await levelReady(c.env, k); return { type: k, title: e.title, category: e.category || 'us', sections: e.sections.map((x) => (skip.includes(x.key) ? { ...x, off: true } : x)), levels: (e.levels || []).map((l) => (ready ? { ...l, ready: ready[l.key] } : l)), suggested: levelForGrade(k, c.get('user')?.grade) }; })),
 }));
 
 /** Wrong-answer notebook: the most recent wrong answer per question, with the explanation. */
@@ -92,7 +93,7 @@ app.post('/attempts', async (c) => {
   const id = uid();
   try {
     await c.env.DB.prepare('INSERT INTO attempts (id,user_id,entitlement_id,exam_type,state,started_at,session_hash) VALUES (?,?,?,?,?,?,?)')
-      .bind(id, u.id, ent.id, examType, JSON.stringify(initialState(examType, now(), levelKey)), now(), c.get('sid') || null).run();
+      .bind(id, u.id, ent.id, examType, JSON.stringify(initialState(examType, now(), levelKey, skipKeys(examType, await manualSettings(c.env)))), now(), c.get('sid') || null).run();
   } catch (e) { // a parallel request already opened one: return the ticket and resume that attempt
     await c.env.DB.prepare('UPDATE entitlements SET attempts_used=attempts_used-1 WHERE id=? AND attempts_used>0').bind(ent.id).run();
     const again = await c.env.DB.prepare(`SELECT id FROM attempts WHERE user_id=? AND exam_type=? AND status='in_progress'`).bind(u.id, examType).first();
@@ -128,7 +129,7 @@ export async function canView(env, viewer, ownerId) {
 
 async function finish(env, a, st) {
   const { results } = await env.DB.prepare('SELECT * FROM answers WHERE attempt_id=?').bind(a.id).all();
-  const score = scoreAttempt(a.exam_type, results, st.level);
+  const score = scoreAttempt(a.exam_type, results, st.level, st.skip);
   const status = score.pendingManual ? 'submitted' : 'graded';
   await env.DB.prepare('UPDATE attempts SET status=?, score=?, state=?, finished_at=? WHERE id=?')
     .bind(status, JSON.stringify(score), JSON.stringify(st), now(), a.id).run();
@@ -143,7 +144,7 @@ export async function regradeAttempt(env, attemptId) {
   const att = await env.DB.prepare('SELECT * FROM attempts WHERE id=?').bind(attemptId).first();
   if (!att) return null;
   const { results } = await env.DB.prepare('SELECT * FROM answers WHERE attempt_id=?').bind(att.id).all();
-  const sc = scoreAttempt(att.exam_type, results, JSON.parse(att.state).level);
+  const ast = JSON.parse(att.state); const sc = scoreAttempt(att.exam_type, results, ast.level, ast.skip);
   const status = att.status === 'in_progress' ? 'in_progress' : sc.pendingManual ? 'submitted' : 'graded';
   if (status === 'graded') { // only the request that flips submitted -> graded sends the result
     const upd = await env.DB.prepare(`UPDATE attempts SET score=?, status='graded' WHERE id=? AND status='submitted'`).bind(JSON.stringify(sc), att.id).run();
@@ -166,7 +167,8 @@ export async function notifyResult(env, a) { // child profiles: the parent recei
 function nextSection(a, st) {
   const ex = EXAMS[a.exam_type];
   const lv = getLevel(a.exam_type, st.level);
-  st.si += 1; st.qi = 0; st.served = []; st.current = null; st.set = null; st.diff = Math.round((lv.dmin + lv.dmax) / 2);
+  st.si += 1; while (st.si < ex.sections.length && (st.skip || []).includes(ex.sections[st.si].key)) st.si += 1; // switched-off sections
+  st.qi = 0; st.served = []; st.current = null; st.set = null; st.diff = Math.round((lv.dmin + lv.dmax) / 2);
   if (st.si >= ex.sections.length) return false;
   st.deadline = now() + ex.sections[st.si].minutes * 60000;
   return true;
@@ -241,7 +243,7 @@ async function sectionView(env, a, st) {
   const { results: ans } = await env.DB.prepare(`SELECT question_id,choice,text,audio_key FROM answers WHERE attempt_id=? AND section=?`).bind(a.id, sec.key).all();
   return {
     status: 'in_progress', mode: 'section',
-    section: { index: st.si, key: sec.key, name: sec.name, total: ex.sections.length, deadline: st.deadline, manual: !!sec.manual },
+    section: { index: st.si, key: sec.key, name: sec.name, total: ex.sections.length, ...sectionPos(a.exam_type, st), deadline: st.deadline, manual: !!sec.manual },
     questions: ids.map((id) => byId[id]).filter(Boolean).map(publicQ),
     saved: Object.fromEntries(ans.map((r) => [r.question_id, { choice: r.choice, text: r.text, audio: !!r.audio_key }])),
     penalty: a.exam_type === 'SSAT' && st.level !== 'elem',
@@ -254,7 +256,7 @@ function view(a, st, q, newSection) {
   const sec = ex.sections[Math.min(st.si, ex.sections.length - 1)];
   return {
     status: q ? 'in_progress' : 'finished',
-    section: { index: st.si, key: sec.key, name: sec.name, total: ex.sections.length, deadline: st.deadline, manual: !!sec.manual },
+    section: { index: st.si, key: sec.key, name: sec.name, total: ex.sections.length, ...sectionPos(a.exam_type, st), deadline: st.deadline, manual: !!sec.manual },
     progress: { n: st.qi + 1, total: st.target || null },
     question: q ? publicQ(q) : null,
     serverNow: now(),

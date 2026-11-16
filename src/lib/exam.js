@@ -172,9 +172,15 @@ export function levelBank(bank, level, need) {
 export const GRACE_MS = 5000;
 
 /** Build the initial attempt state. */
-export function initialState(examType, now, levelKey) {
+export function initialState(examType, now, levelKey, skip = []) {
   const ex = EXAMS[examType], lv = getLevel(examType, levelKey);
-  return { si: 0, qi: 0, deadline: now + ex.sections[0].minutes * 60000, diff: Math.round((lv.dmin + lv.dmax) / 2), served: [], current: null, shown: now, fixed: null, level: lv.key };
+  let si = 0; while (si < ex.sections.length - 1 && skip.includes(ex.sections[si].key)) si++;
+  return { si, qi: 0, deadline: now + ex.sections[si].minutes * 60000, diff: Math.round((lv.dmin + lv.dmax) / 2), served: [], current: null, shown: now, fixed: null, level: lv.key, ...(skip.length ? { skip } : {}) };
+}
+/** Position of the current section among the sections this attempt actually takes (skipped ones left out). */
+export function sectionPos(examType, st) {
+  const act = EXAMS[examType].sections.map((x, i) => [x, i]).filter(([x]) => !(st.skip || []).includes(x.key));
+  return { pos: Math.max(1, act.findIndex(([, i]) => i === st.si) + 1), count: act.length };
 }
 
 /** Choose next question id for the current section. `bank` = [{id,difficulty}] active in section. */
@@ -229,9 +235,9 @@ export function adaptDifficulty(diff, correct, lo = 1, hi = 5) {
 /* ---------------- scoring ---------------- */
 const clamp = (x, lo, hi) => Math.max(lo, Math.min(hi, x));
 
-export function scoreAttempt(examType, answers, levelKey) {
+export function scoreAttempt(examType, answers, levelKey, skip = []) {
   const ex = EXAMS[examType], lv = ex.levels ? getLevel(examType, levelKey) : null;
-  return computeScore(examType, ex, lv, answers);
+  return computeScore(examType, ex, lv, answers, skip);
 }
 
 export function levelFromPct(p) {
