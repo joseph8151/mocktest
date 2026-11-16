@@ -58,3 +58,8 @@ export const mailSupportReply = (env, name, subject, id) =>
   `<p><b>${esc(name)}</b>님, 문의하신 「${esc(subject)}」에 답변이 등록되었습니다.</p>${btn(`${env.SITE_URL}/#/support/${id}`, '답변 확인하기')}`;
 export const mailGift = (env, name, title, codes) =>
   `<p><b>${esc(name)}</b>님, 선물용 이용권 코드가 발급되었습니다.</p><p>상품: ${esc(title)}</p>${codes.map((c) => `<p style="font:600 20px monospace;letter-spacing:2px;background:#f5f4ef;padding:10px 14px;display:inline-block">${esc(c)}</p>`).join('<br>')}<p>받는 분이 로그인 후 <b>내 시험 → 선물 코드 등록</b>에 입력하면 이용권이 지급됩니다.</p>`;
+export const mailBankOrder = (env, name, v) =>
+  `<p><b>${esc(name)}</b>님, 주문이 접수되었습니다. 아래 계좌로 입금해 주시면 확인 후 이용권을 지급해 드립니다.</p>
+   <table style="border-collapse:collapse;font-size:14px">${[['상품', v.title], ['입금액', `<b>${v.amount.toLocaleString()}원</b>`], ['은행', v.account.bank], ['계좌번호', `<b>${esc(v.account.account)}</b>`], ['예금주', v.account.holder], ['입금자명', v.depositor], ['입금기한', new Date(v.expiresAt + 9 * 3600000).toISOString().slice(0, 16).replace('T', ' ') + ' (KST)']]
+     .map(([k, x]) => `<tr><td style="padding:4px 14px 4px 0;color:#6b7280">${k}</td><td>${k === '입금액' || k === '계좌번호' ? x : esc(x)}</td></tr>`).join('')}</table>
+   <p style="font-size:13px;color:#6b7280">입금자명이 다르면 확인이 늦어질 수 있습니다. 기한 안에 입금되지 않으면 주문은 자동 취소됩니다.</p>${btn(`${env.SITE_URL}/#/pay/bank?order=${v.orderId}`, '입금 안내 다시 보기')}`;

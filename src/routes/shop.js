@@ -7,6 +7,8 @@ import {
   fulfillOrder, stripeCreateCheckout, stripeVerify, stripeRetrieveSession,
   portoneVerifyAndFulfill, portoneGetPayment, portoneVerifyWebhook, recheckOrder, failOrder,
 } from '../lib/payments.js';
+import { bankAccount, cleanDepositor, BANK_DAYS } from '../lib/bank.js';
+import { sendMail, mailBankOrder } from '../lib/email.js';
 
 const app = new Hono();
 
@@ -35,11 +37,11 @@ app.get('/products', async (c) => {
   const admin = (await loadUser(c))?.role === 'admin'; // the 1,000-won payment test product is only visible to admins
   const { results } = await c.env.DB.prepare(`SELECT * FROM products WHERE active=1 OR (?1 AND id='p-test') ORDER BY sort,price_krw`).bind(admin ? 1 : 0).all();
   // never sell an exam that has no questions yet (e.g. a new category whose bank is still being reviewed)
-  const ready = await readyExams(c.env);
+  const [ready, bank] = await Promise.all([readyExams(c.env), bankAccount(c.env)]);
   return c.json({
     products: results.filter((p) => p.id === 'p-test' || ready.has(p.exam_type)),
     payment: { kcp: kcpEnabled(c.env), stripe: !!c.env.STRIPE_SECRET_KEY, portone: !!(c.env.PORTONE_STORE_ID && c.env.PORTONE_CHANNEL_KEY),
-      portoneStoreId: c.env.PORTONE_STORE_ID || null, portoneChannelKey: c.env.PORTONE_CHANNEL_KEY || null },
+      portoneStoreId: c.env.PORTONE_STORE_ID || null, portoneChannelKey: c.env.PORTONE_CHANNEL_KEY || null, bank: !!bank },
   });
 });
 
@@ -66,6 +68,7 @@ async function newOrder(c, productId, provider, couponCode, gift = false) {
   if (!product) return {};
   const price = await applyCoupon(c.env, couponCode, product);
   if (price.error) return { couponError: price.error };
+  if (provider === 'bank' && product.id === 'p-test') return { couponError: '테스트 상품은 무통장입금을 쓸 수 없습니다.' };
   const currency = provider === 'stripe' ? 'USD' : 'KRW';
   const amount = provider === 'stripe' ? price.usd : price.krw;
   const list = provider === 'stripe' ? product.price_usd_cents : product.price_krw;
@@ -216,6 +219,44 @@ app.post('/pay/kcp/return', async (c) => {
   }
 });
 
+/* ---- 무통장입금 ---- */
+const expireBank = (env) => failOrder(env, `o.provider='bank' AND o.status='awaiting_deposit' AND o.created_at<?`, [now() - BANK_DAYS * 86400000], `no deposit within ${BANK_DAYS} days`);
+const bankView = (o, acct) => { const m = JSON.parse(o.meta || '{}'); return { orderId: o.id, status: o.status, amount: o.amount, title: o.title, depositor: m.depositor, cashReceipt: m.cashReceipt || null, expiresAt: o.created_at + BANK_DAYS * 86400000, account: acct }; };
+app.post('/pay/bank/order', requireUser, async (c) => {
+  const acct = await bankAccount(c.env);
+  if (!acct) return c.json({ error: '무통장입금을 받을 계좌가 설정되지 않았습니다.' }, 503);
+  const b = await c.req.json().catch(() => ({}));
+  const depositor = cleanDepositor(b.depositor);
+  if (depositor.length < 2) return c.json({ error: '입금자명을 입력해 주세요.' }, 400);
+  let cashReceipt = null;
+  if (b.cashReceipt && b.cashReceipt.type !== 'none') {
+    const type = b.cashReceipt.type === 'business' ? 'business' : 'personal', num = String(b.cashReceipt.number || '').replace(/\D/g, '');
+    if (type === 'personal' ? !/^01\d{8,9}$/.test(num) : !/^\d{10}$/.test(num)) return c.json({ error: type === 'personal' ? '현금영수증용 휴대폰 번호를 확인해 주세요.' : '사업자등록번호 10자리를 확인해 주세요.' }, 400);
+    cashReceipt = { type, number: num };
+  }
+  await expireBank(c.env);
+  const open = await c.env.DB.prepare(`SELECT COUNT(*) n FROM orders WHERE user_id=? AND provider='bank' AND status='awaiting_deposit'`).bind(c.get('user').id).first();
+  if (open.n >= 3) return c.json({ error: '입금 대기 중인 주문이 3건 있습니다. 입금하거나 취소한 뒤 다시 주문해 주세요.' }, 409);
+  const r = await newOrder(c, b.productId, 'bank', b.coupon, !!b.gift); const bad = orderProblem(c, r); if (bad) return bad;
+  const { user, product, order } = r;
+  await insertOrder(c, order, null).run();
+  await c.env.DB.prepare(`UPDATE orders SET status='awaiting_deposit', meta=? WHERE id=?`).bind(JSON.stringify({ depositor, cashReceipt, account: acct }), order.id).run();
+  const view = bankView({ ...order, status: 'awaiting_deposit', title: product.title, meta: JSON.stringify({ depositor, cashReceipt }) }, acct);
+  await sendMail(c.env, user.email, `[${c.env.SITE_NAME}] 입금 안내`, mailBankOrder(c.env, user.name, view));
+  return c.json(view);
+});
+app.get('/pay/bank/:id', requireUser, async (c) => {
+  const o = await c.env.DB.prepare(`SELECT o.*, p.title FROM orders o JOIN products p ON p.id=o.product_id WHERE o.id=? AND o.user_id=? AND o.provider='bank'`).bind(c.req.param('id'), c.get('user').id).first();
+  if (!o) return c.json({ error: 'not found' }, 404);
+  return c.json(bankView(o, JSON.parse(o.meta || '{}').account || (await bankAccount(c.env))));
+});
+app.post('/pay/bank/:id/cancel', requireUser, async (c) => {
+  const o = await c.env.DB.prepare(`SELECT id FROM orders WHERE id=? AND user_id=? AND provider='bank' AND status='awaiting_deposit'`).bind(c.req.param('id'), c.get('user').id).first();
+  if (!o) return c.json({ error: '취소할 수 없는 주문입니다.' }, 400);
+  await failOrder(c.env, `o.id=? AND o.status='awaiting_deposit'`, [o.id], 'cancelled by customer');
+  return c.json({ ok: true });
+});
+
 app.get('/orders/:id/status', requireUser, async (c) => {
   const o = await c.env.DB.prepare('SELECT status FROM orders WHERE id=? AND user_id=?').bind(c.req.param('id'), c.get('user').id).first();
   return o ? c.json({ status: o.status }) : c.json({ error: 'not found' }, 404);
@@ -223,6 +264,7 @@ app.get('/orders/:id/status', requireUser, async (c) => {
 
 app.get('/orders', requireUser, async (c) => {
   await failOrder(c.env, `o.status='pending' AND o.created_at<?`, [now() - 3 * 86400000], 'abandoned (3 days)'); // abandoned checkouts
+  await expireBank(c.env);
   const { results } = await c.env.DB.prepare(
     `SELECT o.id,o.provider,o.amount,o.currency,o.status,o.created_at,o.paid_at,p.title,
             (SELECT status FROM refund_requests r WHERE r.order_id=o.id) AS refund_status

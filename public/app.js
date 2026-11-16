@@ -233,16 +233,32 @@ function buy(p, payment) {
       try { const r = await api('POST', '/coupons/check', { code: cpIn.value, productId: p.id }); coupon = r.coupon; showPrice(r); cpMsg.className = 'small ok-text'; cpMsg.textContent = `✓ ${r.label} 적용`; }
       catch (e) { cpMsg.className = 'small err'; cpMsg.textContent = e.message; }
     }) }, '적용')), cpMsg);
+  // 무통장입금: depositor name + optional cash receipt, then the account details page
+  const bankBox = payment.bank && p.id !== 'p-test' ? (() => {
+    const dep = h('input', { value: me.name || '', maxlength: 20, placeholder: '입금하실 분 이름' });
+    const crType = h('select', {}, [['none', '현금영수증 신청 안 함'], ['personal', '소득공제용 (휴대폰 번호)'], ['business', '지출증빙용 (사업자등록번호)']].map(([v, l]) => h('option', { value: v }, l)));
+    const crNum = h('input', { inputmode: 'numeric', placeholder: '번호 (숫자만)', hidden: true });
+    crType.onchange = () => { crNum.hidden = crType.value === 'none'; };
+    return h('div', { class: 'notice', hidden: true, style: 'margin-top:14px' },
+      h('b', {}, '무통장입금'), h('p', { class: 'small' }, '주문 후 안내되는 계좌로 3일 안에 입금하시면, 입금 확인 뒤 이용권이 지급됩니다 (영업일 기준 보통 당일).'),
+      field('입금자명', dep), field('현금영수증', h('div', { class: 'row', style: 'gap:8px' }, crType, crNum)),
+      h('button', { class: 'btn', onclick: guard(once(async () => {
+        const r = await api('POST', '/pay/bank/order', { productId: p.id, coupon, gift, depositor: dep.value, cashReceipt: { type: crType.value, number: crNum.value } });
+        close(); location.hash = `#/pay/bank?order=${r.orderId}`;
+      })) }, '주문하고 계좌 받기'));
+  })() : null;
   const modal = h('div', { class: 'modal', onclick: (e) => e.target === modal && close() }, h('div', { class: 'card' },
     h('div', { class: 'kicker' }, 'Checkout'), h('h3', {}, p.title), h('p', { class: 'muted small' }, `${p.attempts}회 응시 · ${p.valid_days}일 이내 사용`),
     shown.length ? h('div', {}, h('label', {}, '결제 수단'), h('div', { class: 'row paymethods' }, methodBtns)) : null,
-    shown.length || payment.stripe ? cpBox : null,
-    (shown.length || payment.stripe) && p.id !== 'p-test' ? h('label', { class: 'giftchk' }, h('input', { type: 'checkbox', style: 'width:auto', onchange: (e) => (gift = e.target.checked) }), ' 선물하기 — 이용권 대신 ', h('b', {}, '선물 코드'), '를 이메일로 받습니다') : null,
+    shown.length || payment.stripe || payment.bank ? cpBox : null,
+    (shown.length || payment.stripe || payment.bank) && p.id !== 'p-test' ? h('label', { class: 'giftchk' }, h('input', { type: 'checkbox', style: 'width:auto', onchange: (e) => (gift = e.target.checked) }), ' 선물하기 — 이용권 대신 ', h('b', {}, '선물 코드'), '를 이메일로 받습니다') : null,
     h('div', { class: 'row', style: 'margin-top:18px' },
       shown.map(([k, l], i) => h('button', { class: 'btn', onclick: guard(once(() => (k === 'kcp' ? payKcp(p, method, coupon, gift) : payPortone(p, close, method, coupon, gift)))) }, me.role === 'admin' ? l + ' · ' : '', newPriceK())),
       payment.stripe ? h('button', { class: 'btn alt', onclick: guard(once(() => payStripe(p, coupon, gift))) }, 'International card · ', priceU) : null,
+      payment.bank && p.id !== 'p-test' ? h('button', { class: 'btn alt', onclick: () => { bankBox.hidden = !bankBox.hidden; } }, '무통장입금 · ', newPriceK()) : null,
     ),
-    !shown.length && !payment.stripe ? (me.role === 'admin'
+    bankBox,
+    !shown.length && !payment.stripe && !payment.bank ? (me.role === 'admin'
       ? h('div', { class: 'notice' }, h('b', {}, '결제 수단이 아직 연결되지 않았습니다.'), h('p', { class: 'small' }, 'PG사(포트원·KCP·Stripe)에서 받은 키를 Cloudflare 대시보드 → Workers → mocktest → Settings → Variables and Secrets에 넣으면 이 창에 결제 버튼이 나타납니다.'), h('a', { class: 'btn sm', href: '#/admin/payments', onclick: close }, '결제설정 보기 →'))
       : h('p', { class: 'err' }, '지금은 결제를 받을 수 없습니다. 잠시 후 다시 시도하거나 고객센터로 문의해 주세요.')) : null,
     h('p', { style: 'margin-top:16px' }, h('button', { class: 'btn alt sm', onclick: close }, '닫기')),
@@ -271,6 +287,21 @@ async function payPortone(p, close, method = 'CARD', coupon, gift) {
   location.hash = `#/pay/success?order=${o.orderId}&provider=portone`;
 }
 
+async function pagePayBank(q) {
+  const v = await api('GET', `/pay/bank/${encodeURIComponent(q.order || '')}`);
+  const a = v.account || {};
+  const copy = (t) => h('button', { class: 'btn sm alt', onclick: () => navigator.clipboard?.writeText(t).then(() => toast('복사했습니다.')) }, '복사');
+  const head = { awaiting_deposit: ['Awaiting deposit', '입금을 기다리고 있습니다.'], paid: ['Payment complete', '입금이 확인되었습니다.'], failed: ['Cancelled', '취소된 주문입니다.'], refunded: ['Refunded', '환불된 주문입니다.'] }[v.status] || ['Order', v.status];
+  mount(h('div', { class: 'card intro' }, h('div', { class: 'big' }, head[0]), h('h2', {}, head[1]),
+    v.status === 'awaiting_deposit' ? h('p', {}, '아래 계좌로 입금해 주시면 확인 후 이용권을 지급하고 이메일로 알려 드립니다. 같은 내용을 이메일로도 보내 드렸습니다.') : null,
+    v.status === 'paid' ? h('p', {}, '이용권이 지급되었습니다.') : null,
+    h('table', {}, [['상품', v.title], ['입금액', h('b', {}, money(v.amount, 'KRW'))], ['은행', a.bank], ['계좌번호', h('span', {}, h('b', {}, a.account), ' ', copy(String(a.account || '').replace(/-/g, '')))], ['예금주', a.holder], ['입금자명', v.depositor],
+      ['현금영수증', v.cashReceipt ? `${v.cashReceipt.type === 'business' ? '지출증빙' : '소득공제'} · ${v.cashReceipt.number}` : '신청 안 함'], v.status === 'awaiting_deposit' ? ['입금기한', date(v.expiresAt)] : null]
+      .filter(Boolean).map(([k, x]) => h('tr', {}, h('th', {}, k), h('td', {}, x)))),
+    v.status === 'awaiting_deposit' ? h('p', { class: 'small muted' }, '입금자명과 금액이 주문과 같아야 빨리 확인됩니다. 기한 안에 입금이 없으면 주문은 자동 취소됩니다.') : null,
+    h('div', { class: 'row' }, h('a', { class: 'btn', href: v.status === 'paid' ? '#/me' : '#/me' }, '내 시험 →'),
+      v.status === 'awaiting_deposit' ? h('button', { class: 'btn alt', onclick: guard(async () => { if (!confirm('이 주문을 취소할까요?')) return; await api('POST', `/pay/bank/${v.orderId}/cancel`); toast('주문을 취소했습니다.'); pagePayBank(q); }) }, '주문 취소') : null)));
+}
 async function pagePaySuccess(q) {
   mount(h('div', { class: 'card intro' }, h('div', { class: 'big' }, 'Payment'), h('h2', {}, '결제 확인 중'), h('p', { class: 'muted' }, '잠시만 기다려 주세요.')));
   const done = () => mount(h('div', { class: 'card intro' }, h('div', { class: 'big' }, 'Payment complete'), h('h2', {}, '결제가 완료되었습니다.'), h('p', {}, '이용권이 지급되었습니다. 지금 바로 시험을 시작할 수 있습니다.'), h('a', { class: 'btn', href: '#/me' }, '내 시험으로 가기 →')));
@@ -361,7 +392,7 @@ async function pageMe(q = {}) {
     toast(r.status === 'paid' ? '결제가 확인되어 이용권이 지급되었습니다.' : r.status === 'awaiting_deposit' ? '아직 입금이 확인되지 않았습니다.' : r.error || (r.status === 'failed' ? '결제가 완료되지 않았습니다.' : '결제 승인을 기다리는 중입니다.'));
     pageMe();
   });
-  const refund = guard(async (o) => { const reason = prompt('환불 사유를 입력해 주세요 (선택)') ; if (reason === null) return; await api('POST', `/orders/${o.id}/request-refund`, { reason }); toast('환불 요청이 접수되었습니다.'); pageMe(); });
+  const refund = guard(async (o) => { const reason = prompt(o.provider === 'bank' ? '환불 사유와 환불받을 계좌(은행·계좌번호·예금주)를 입력해 주세요.' : '환불 사유를 입력해 주세요 (선택)'); if (reason === null) return; await api('POST', `/orders/${o.id}/request-refund`, { reason }); toast('환불 요청이 접수되었습니다.'); pageMe(); });
   const gateBox = gateBanner();
   const extra = me.isChild ? [] : [giftCard(), joinClassCard()];
   mount(
@@ -376,7 +407,7 @@ async function pageMe(q = {}) {
     h('div', { class: 'card' }, h('h3', {}, '응시 기록'), ov.attempts.length ? h('table', {}, ov.attempts.map((a) => h('tr', {}, h('td', {}, a.exam_type, a.level ? h('div', { class: 'small muted' }, (exams.find((x) => x.type === a.exam_type)?.levels || []).find((l) => l.key === a.level)?.name || '') : null), h('td', {}, date(a.started_at)), h('td', {}, statusBadge(a.status)),
       h('td', {}, a.status !== 'in_progress' ? h('a', { href: `#/report/${a.id}` }, '리포트') : null)))) : h('p', { class: 'muted' }, '아직 응시 기록이 없습니다.')),
     h('div', { class: 'card' }, h('h3', {}, '결제 내역'), ord.orders.length ? h('table', {}, ord.orders.map((o) => h('tr', {}, h('td', {}, o.title), h('td', {}, money(o.amount, o.currency)), h('td', {}, date(o.paid_at || o.created_at)), h('td', {}, h('span', { class: 'badge ' + (o.status === 'paid' ? 'ok' : ['awaiting_deposit', 'pending'].includes(o.status) ? 'warn' : 'bad') }, { paid: '결제완료', refunded: '환불', failed: '실패', awaiting_deposit: '입금 대기', pending: '결제 진행중' }[o.status] || o.status)),
-      h('td', {}, ['pending', 'awaiting_deposit'].includes(o.status) ? h('button', { class: 'btn sm alt', onclick: () => recheck(o) }, '결제 확인') : null, o.status === 'paid' && o.provider !== 'admin' ? (o.refund_status === 'pending' ? h('span', { class: 'badge warn' }, '환불 검토중') : o.refund_status === 'rejected' ? h('span', { class: 'badge' }, '환불 거절됨') : h('button', { class: 'btn sm alt', onclick: () => refund(o) }, '환불 요청')) : null)))) : h('p', { class: 'muted' }, '결제 내역이 없습니다.')),
+      h('td', {}, o.provider === 'bank' && o.status === 'awaiting_deposit' ? h('a', { class: 'btn sm alt', href: `#/pay/bank?order=${o.id}` }, '입금 안내') : ['pending', 'awaiting_deposit'].includes(o.status) ? h('button', { class: 'btn sm alt', onclick: () => recheck(o) }, '결제 확인') : null, o.status === 'paid' && o.provider !== 'admin' ? (o.refund_status === 'pending' ? h('span', { class: 'badge warn' }, '환불 검토중') : o.refund_status === 'rejected' ? h('span', { class: 'badge' }, '환불 거절됨') : h('button', { class: 'btn sm alt', onclick: () => refund(o) }, '환불 요청')) : null)))) : h('p', { class: 'muted' }, '결제 내역이 없습니다.')),
     me.role === 'admin' ? h('div', { class: 'card' }, h('div', { class: 'kicker' }, 'Admin'), h('h3', {}, '관리자 체험 응시'), h('p', { class: 'muted small' }, '결제 없이 모든 시험을 직접 풀어 볼 수 있습니다. (횟수 제한 없음)'), h('div', { class: 'row' }, exams.map((x) => h('button', { class: 'btn sm alt', onclick: () => chooseLevel(x, false) }, x.type === 'TOEFLJ' ? 'TOEFL Jr' : EXAM_META[x.type]?.kr ? EXAM_META[x.type].name : x.type)))) : null,
     charts.length ? h('div', { class: 'card' }, h('h3', {}, '성적 추이 (종합 추정 점수)'), h('div', { class: 'grid' }, charts)) : null,
     h('div', { class: 'card' }, h('h3', {}, '회원 정보'), prof, h('h3', {}, '비밀번호 변경'), pw),
@@ -1064,7 +1095,7 @@ async function adminStats(b) {
   b.append(h('div', { class: 'card' }, h('h3', {}, '사이트 공지 배너'), nt, h('div', { class: 'row' }, h('button', { class: 'btn sm', onclick: guard(async () => { await api('POST', '/admin/notice', { text: nt.value }); cfg.notice = nt.value.trim() || null; showNotice(); toast('공지가 저장되었습니다.'); }) }, '저장'))));
   const charts = h('div', { class: 'charts' });
   api('GET', '/admin/stats/series').then((x) => charts.replaceChildren(...dashCharts(x))).catch(() => {});
-  b.append(h('div', { class: 'stats' }, [['회원', s.users], ['결제 주문', s.paidOrders], ['응시', s.attempts], ['채점 대기', s.pendingGrading], ['환불 요청', s.pendingRefunds], ['활성 문제', s.questions], ...s.revenue.map((r) => [`매출 ${r.currency}`, money(r.s, r.currency)])].map(([l, v]) => h('div', { class: 'stat' }, h('div', { class: 'muted small' }, l), h('b', {}, v)))));
+  b.append(h('div', { class: 'stats' }, [['회원', s.users], ['결제 주문', s.paidOrders], ['응시', s.attempts], ['채점 대기', s.pendingGrading], ['환불 요청', s.pendingRefunds], ['입금 대기', s.awaitingDeposit ?? 0], ['활성 문제', s.questions], ...s.revenue.map((r) => [`매출 ${r.currency}`, money(r.s, r.currency)])].map(([l, v]) => h('div', { class: 'stat' }, h('div', { class: 'muted small' }, l), h('b', {}, v)))));
   b.append(charts);
 }
 function dashCharts(x) {
@@ -1211,11 +1242,12 @@ async function userDetail(id) {
 async function adminOrders(b) {
   const { orders } = await api('GET', '/admin/orders');
   b.append(h('p', {}, h('a', { class: 'btn sm alt', href: '/api/admin/orders.csv' }, 'CSV 내보내기')), h('table', {}, h('tr', {}, ['일시', '회원', '상품', '수단', '금액', '상태', ''].map((x) => h('th', {}, x))), orders.map((o) => h('tr', {},
-    h('td', {}, date(o.created_at)), h('td', {}, `${o.name} (${o.email})`), h('td', {}, o.title), h('td', {}, o.provider), h('td', {}, money(o.amount, o.currency)), h('td', {}, o.status),
+    h('td', {}, date(o.created_at)), h('td', {}, `${o.name} (${o.email})`), h('td', {}, o.title), h('td', {}, o.provider === 'bank' ? (() => { const m = JSON.parse(o.meta || '{}'); return h('span', {}, '무통장', h('div', { class: 'small muted' }, `입금자 ${m.depositor || '-'}`, m.cashReceipt ? ` · 현금영수증 ${m.cashReceipt.type === 'business' ? '지출증빙' : '소득공제'} ${m.cashReceipt.number}` : '')); })() : o.provider), h('td', {}, money(o.amount, o.currency)), h('td', {}, o.status === 'awaiting_deposit' && o.provider === 'bank' ? h('span', { class: 'badge warn' }, '입금 대기') : o.status),
     h('td', {}, o.refund_status === 'pending' ? h('div', { class: 'small' }, h('span', { class: 'badge warn' }, '환불요청'), ` ${o.refund_reason || ''} `, h('button', { class: 'btn sm alt', onclick: guard(async () => { await api('POST', `/admin/refund-requests/${o.refund_id}/reject`); pageAdmin('orders'); }) }, '거절')) : null,
-      ['pending', 'failed', 'awaiting_deposit'].includes(o.status) && o.provider !== 'admin' ? h('button', { class: 'btn sm alt', title: 'PG사 관리자 화면에서 결제를 확인한 경우에만', onclick: guard(async () => { const tno = prompt('PG사(KCP·포트원·Stripe) 관리자 화면에서 결제 완료를 확인했나요? 확인했다면 거래번호를 입력하세요 (선택).'); if (tno === null) return; await api('POST', `/admin/orders/${o.id}/mark-paid`, { tno }); toast('결제 확정 · 이용권 지급'); pageAdmin('orders'); }) }, '수동 확정') : null,
-      ['pending', 'failed', 'awaiting_deposit'].includes(o.status) && o.provider !== 'admin' ? h('button', { class: 'btn sm alt', onclick: guard(async () => { const r = await api('POST', `/admin/orders/${o.id}/recheck`); toast(`결제사 확인 결과: ${r.status}${r.error ? ' (' + r.error + ')' : ''}`); pageAdmin('orders'); }) }, '재확인') : null,
-      o.status === 'paid' && o.provider !== 'admin' ? h('button', { class: 'btn sm danger', onclick: guard(async () => { if (confirm('PG사에 환불을 요청하고 이용권을 회수합니다. 진행할까요?')) { await api('POST', `/admin/orders/${o.id}/refund`); toast('환불 완료'); pageAdmin('orders'); } }) }, '환불') : null)))));
+      ['awaiting_deposit', 'failed'].includes(o.status) && o.provider === 'bank' ? h('button', { class: 'btn sm', onclick: guard(async () => { const m = JSON.parse(o.meta || '{}'); if (!confirm(`통장에서 입금을 확인했나요?\n입금자 ${m.depositor || '-'} · ${money(o.amount, o.currency)}\n확인하면 이용권이 지급됩니다.`)) return; await api('POST', `/admin/orders/${o.id}/mark-paid`, {}); toast('입금 확인 · 이용권 지급'); pageAdmin('orders'); }) }, '입금 확인') : null,
+      ['pending', 'failed', 'awaiting_deposit'].includes(o.status) && !['admin', 'bank'].includes(o.provider) ? h('button', { class: 'btn sm alt', title: 'PG사 관리자 화면에서 결제를 확인한 경우에만', onclick: guard(async () => { const tno = prompt('PG사(KCP·포트원·Stripe) 관리자 화면에서 결제 완료를 확인했나요? 확인했다면 거래번호를 입력하세요 (선택).'); if (tno === null) return; await api('POST', `/admin/orders/${o.id}/mark-paid`, { tno }); toast('결제 확정 · 이용권 지급'); pageAdmin('orders'); }) }, '수동 확정') : null,
+      ['pending', 'failed', 'awaiting_deposit'].includes(o.status) && !['admin', 'bank'].includes(o.provider) ? h('button', { class: 'btn sm alt', onclick: guard(async () => { const r = await api('POST', `/admin/orders/${o.id}/recheck`); toast(`결제사 확인 결과: ${r.status}${r.error ? ' (' + r.error + ')' : ''}`); pageAdmin('orders'); }) }, '재확인') : null,
+      o.status === 'paid' && o.provider !== 'admin' ? h('button', { class: 'btn sm danger', onclick: guard(async () => { if (confirm(o.provider === 'bank' ? '무통장입금 주문입니다. 고객 계좌로 환불금을 직접 송금했나요?\n확인하면 환불로 기록하고 이용권을 회수합니다.' : 'PG사에 환불을 요청하고 이용권을 회수합니다. 진행할까요?')) { await api('POST', `/admin/orders/${o.id}/refund`, { transferred: o.provider === 'bank' }); toast('환불 완료'); pageAdmin('orders'); } }) }, '환불') : null)))));
 }
 async function adminProducts(b) {
   const { products } = await api('GET', '/admin/products');
@@ -1265,6 +1297,12 @@ async function adminPayments(b) {
   const row = (name, ok, lines) => h('div', { class: 'card' }, h('div', { class: 'row' }, h('h3', { class: 'grow', style: 'margin:0' }, name), h('span', { class: 'badge ' + (ok ? 'ok' : 'warn') }, ok ? '설정됨' : '미설정')), lines.map(([k, v]) => h('p', { class: 'small' }, h('span', { class: 'muted' }, k + ' '), h('code', {}, v))));
   b.append(
     h('p', { class: 'muted' }, '아래 주소를 각 결제사 관리자 화면에 등록하고, 시크릿은 Cloudflare → Workers → Settings → Variables and Secrets에 추가하세요. 연동 점검은 홈의 “[관리자 전용] 결제 테스트 1,000원” 상품으로 직접 결제해 볼 수 있습니다.'),
+    (() => {
+      const f = h('form', { class: 'row', style: 'margin-top:10px', onsubmit: guard(async (e) => { e.preventDefault(); await api('POST', '/admin/bank-account', { bank: f.bank.value, account: f.account.value, holder: f.holder.value }); toast(f.account.value ? '저장됨 · 결제창에 무통장입금이 표시됩니다' : '무통장입금을 껐습니다'); pageAdmin('payments'); }) },
+        h('input', { name: 'bank', placeholder: '은행 (예: 국민은행)', value: st.bank.bank || '', style: 'width:150px' }), h('input', { name: 'account', placeholder: '계좌번호', value: st.bank.account || '', class: 'grow' }), h('input', { name: 'holder', placeholder: '예금주', value: st.bank.holder || '', style: 'width:140px' }), h('button', { class: 'btn sm' }, '저장'));
+      const card = row('무통장입금 (PG 없이 바로 사용)', st.bank.configured, [['입금 확인', '관리자 → 주문에서 입금자명·금액을 통장과 맞춰 보고 “입금 확인”을 누르면 이용권이 지급됩니다'], ['기한', '3일 안에 입금이 없으면 주문 자동 취소'], ['끄기', '계좌번호를 비우고 저장']]);
+      card.append(f); return card;
+    })(),
     row('KCP 직접 연동', st.kcp.configured, [['모드', st.kcp.mode === 'prod' ? '운영(prod)' : '테스트(test)'], ['site_cd', st.kcp.siteCd || '(KCP_SITE_CD 필요)'], ['결과 수신(Ret_URL)', st.kcp.returnUrl], ['필요 시크릿', 'KCP_SITE_CD, KCP_CERT_INFO (운영 전환 시 KCP_MODE=prod)']]),
     row('포트원 (KCP 등 PG 채널)', st.portone.configured, [['웹훅 URL', st.portone.webhookUrl], ['웹훅 시크릿', st.portone.webhookSecret ? '설정됨' : '(PORTONE_WEBHOOK_SECRET 필요)'], ['필요 값', 'PORTONE_STORE_ID, PORTONE_CHANNEL_KEY, PORTONE_API_SECRET']]),
     row('Stripe (해외 카드)', st.stripe.configured, [['웹훅 URL', st.stripe.webhookUrl], ['웹훅 시크릿', st.stripe.webhookSecret ? '설정됨' : '(STRIPE_WEBHOOK_SECRET 필요)']]),
@@ -1380,7 +1418,7 @@ async function route() {
       case 'consent': return await pageConsent(seg[1]);
       case 'admin': return await pageAdmin(seg[1]);
       case 'terms': case 'privacy': case 'refund': return pageLegal(seg[0]);
-      case 'pay': return seg[1] === 'success' ? await pagePaySuccess(q) : mount(h('div', { class: 'card intro' }, h('div', { class: 'big' }, 'Payment not completed'), h('h2', {}, '결제가 완료되지 않았습니다.'),
+      case 'pay': return seg[1] === 'success' ? await pagePaySuccess(q) : seg[1] === 'bank' ? await pagePayBank(q) : mount(h('div', { class: 'card intro' }, h('div', { class: 'big' }, 'Payment not completed'), h('h2', {}, '결제가 완료되지 않았습니다.'),
         q.msg ? h('p', { class: 'err' }, q.msg) : null, h('p', { class: 'muted' }, '결제 금액이 청구되지 않았거나, 청구된 경우 자동으로 취소됩니다. 이미 결제가 됐는데 이용권이 보이지 않으면 “내 시험 > 결제 내역”에서 “결제 확인”을 눌러 주세요.'),
         h('div', { class: 'row' }, h('a', { class: 'btn', href: '#/' }, '다시 시도하기'), h('a', { class: 'btn alt', href: '#/me' }, '내 시험'))));
       default: return mount(h('div', { class: 'card' }, h('h2', {}, '페이지를 찾을 수 없습니다.')));

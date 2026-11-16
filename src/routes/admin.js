@@ -9,6 +9,7 @@ import { kcpCancel, kcpEnabled, kcpConfig } from '../lib/kcp.js';
 import { audit, redact, logEvent } from '../lib/security.js';
 import { clearNoticeCache } from './shop.js';
 import { purgeEdge } from '../lib/edgecache.js';
+import { bankAccount } from '../lib/bank.js';
 import { deliver, mailFrom, mailTest, sendMail, mailSupportReply } from '../lib/email.js';
 import { anonymizeUser } from './auth.js';
 import { hashPassword } from '../lib/auth.js';
@@ -43,12 +44,14 @@ app.get('/stats', async (c) => {
     q(`SELECT COUNT(*) n FROM answers a JOIN attempts t ON t.id=a.attempt_id WHERE a.kind IN ('text','audio') AND a.manual_score IS NULL AND t.status!='in_progress'`),
     q(`SELECT COUNT(*) n FROM questions WHERE active=1`),
   ]);
-  return c.json({ users: users.n, paidOrders: paid.n, revenue: revenue.results, attempts: attempts.n, pendingGrading: pending.n, pendingRefunds: (await q(`SELECT COUNT(*) n FROM refund_requests WHERE status='pending'`)).n, questions: qs.n });
+  return c.json({ users: users.n, paidOrders: paid.n, revenue: revenue.results, attempts: attempts.n, pendingGrading: pending.n, pendingRefunds: (await q(`SELECT COUNT(*) n FROM refund_requests WHERE status='pending'`)).n, awaitingDeposit: (await q(`SELECT COUNT(*) n FROM orders WHERE provider='bank' AND status='awaiting_deposit'`)).n, questions: qs.n });
 });
 
-app.get('/payment-status', (c) => {
+app.get('/payment-status', async (c) => {
   const e = c.env, site = e.SITE_URL;
+  const bank = await bankAccount(e);
   return c.json({
+    bank: { configured: !!bank, ...(bank || {}) },
     siteUrl: site,
     stripe: { configured: !!e.STRIPE_SECRET_KEY, webhookSecret: !!e.STRIPE_WEBHOOK_SECRET, webhookUrl: `${site}/api/webhooks/stripe` },
     portone: { configured: !!(e.PORTONE_API_SECRET && e.PORTONE_STORE_ID && e.PORTONE_CHANNEL_KEY), webhookSecret: !!e.PORTONE_WEBHOOK_SECRET, webhookUrl: `${site}/api/webhooks/portone` },
@@ -137,6 +140,15 @@ app.post('/orders/:id/mark-paid', async (c) => {
   await fulfillOrder(c.env, o.id, o.provider_ref);
   return c.json({ ok: true });
 });
+app.post('/bank-account', async (c) => { // 무통장입금 account (empty account = turn bank transfer off)
+  const b = await c.req.json().catch(() => ({}));
+  const v = { bank: String(b.bank || '').trim().slice(0, 30), account: String(b.account || '').replace(/[^0-9-]/g, '').slice(0, 30), holder: String(b.holder || '').trim().slice(0, 30) };
+  if (v.account && (!v.bank || !v.holder || v.account.replace(/-/g, '').length < 8)) return c.json({ error: '은행, 계좌번호, 예금주를 모두 입력해 주세요.' }, 400);
+  await c.env.DB.prepare(`INSERT INTO settings (key,value,updated_at) VALUES ('bank_account',?,?) ON CONFLICT(key) DO UPDATE SET value=excluded.value, updated_at=excluded.updated_at`)
+    .bind(JSON.stringify(v.account ? v : { enabled: false }), now()).run();
+  await purgeEdge(c, ['/api/products']);
+  return c.json({ ok: true, bank: v.account ? v : null });
+});
 app.post('/orders/:id/recheck', async (c) => {
   const o = await c.env.DB.prepare('SELECT * FROM orders WHERE id=?').bind(c.req.param('id')).first();
   return o ? c.json(await recheckOrder(c.env, o)) : c.json({ error: 'not found' }, 404);
@@ -150,6 +162,9 @@ app.post('/orders/:id/refund', async (c) => {
     ok = !!s.payment_intent && (await stripeRefund(c.env, s.payment_intent));
   } else if (o.provider === 'portone') {
     ok = await portoneCancel(c.env, o.provider_ref);
+  } else if (o.provider === 'bank') { // no PG: the admin sends the money back by transfer, then records the refund here
+    const b = await c.req.json().catch(() => ({}));
+    if (!b.transferred) return c.json({ error: '무통장입금 주문은 고객 계좌로 직접 송금한 뒤 환불 처리해 주세요.' }, 400);
   } else if (o.provider === 'kcp') {
     const tno = JSON.parse(o.meta || '{}').tno;
     ok = !!tno && (await kcpCancel(c.env, { tno }));
