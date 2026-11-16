@@ -45,7 +45,7 @@ app.get('/config', async (c) => c.json({
   notice: await siteNotice(c.env),
   popup: await sitePopup(c.env),
   manual: await manualSettings(c.env), // which teacher-graded sections are offered (speaking / essay)
-  biz: { name: c.env.BIZ_NAME || '(상호명 입력)', owner: c.env.BIZ_OWNER || '(대표자명)', regNo: c.env.BIZ_REG_NO || '(사업자등록번호)', salesNo: c.env.BIZ_SALES_NO || '(통신판매업 신고번호)', address: c.env.BIZ_ADDRESS || '(사업장 주소)', contact: c.env.BIZ_CONTACT || '(고객센터 이메일/전화)' },
+  biz: { name: c.env.BIZ_NAME || '', owner: c.env.BIZ_OWNER || '', regNo: c.env.BIZ_REG_NO || '', salesNo: c.env.BIZ_SALES_NO || '', address: c.env.BIZ_ADDRESS || '', contact: c.env.BIZ_CONTACT || '' }, // unset fields are left out of the footer
 }));
 
 app.get('/products', async (c) => {

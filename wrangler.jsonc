@@ -31,6 +31,9 @@
     "SITE_URL": "",
     "ADMIN_EMAIL": "",
     // Operator alerts (new member, new 무통장입금 order) go to this Formspree form's owner by e-mail.
-    "FORMSPREE_URL": "https://formspree.io/f/maeoerpk"
+    "FORMSPREE_URL": "https://formspree.io/f/maeoerpk",
+    // Business details shown in the footer (전자상거래법 표시 의무). Add BIZ_NAME, BIZ_OWNER, BIZ_SALES_NO, BIZ_CONTACT here too.
+    "BIZ_REG_NO": "654-60-00645",
+    "BIZ_ADDRESS": "서울 서초구 강남대로8길 39-26"
   }
 }

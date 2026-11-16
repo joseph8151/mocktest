@@ -1450,6 +1450,8 @@ async function adminGrading(b) {
 
 /* ---------- legal pages (템플릿: 게시 전 법률 검토 필요) ---------- */
 let cfg = { site: 'MockTest Lab', biz: {} };
+/** Business details shown in the footer / legal pages: only the fields that are configured. */
+const bizLine = (b = {}) => [b.name && `상호 ${b.name}`, b.owner && `대표 ${b.owner}`, b.regNo && `사업자등록번호 ${b.regNo}`, b.salesNo && `통신판매업 신고 ${b.salesNo}`, b.address, b.contact && `고객센터 ${b.contact}`].filter(Boolean).join(' · ');
 const essayOn = () => !!cfg.manual?.essay, speakingOn = () => !!cfg.manual?.speaking;
 /** Speaking / essay sections can be switched off (관리자 → 채점): make every description match what the test contains. */
 function applySectionSwitches() {
@@ -1476,7 +1478,7 @@ function applySectionSwitches() {
 }
 const LEGAL = {
   terms: ['이용약관', (c) => [
-    ['제1조 (목적)', `이 약관은 ${c.biz.name}(이하 "회사")가 제공하는 ${c.site} 온라인 모의고사 서비스(이하 "서비스")의 이용 조건과 절차, 회사와 회원의 권리·의무를 규정합니다.`],
+    ['제1조 (목적)', `이 약관은 ${c.biz.name || c.site}(이하 "회사")가 제공하는 ${c.site} 온라인 모의고사 서비스(이하 "서비스")의 이용 조건과 절차, 회사와 회원의 권리·의무를 규정합니다.`],
     ['제2조 (서비스 내용)', '회사는 MAP, CAT4, CogAT, SCAT, SSAT, ISEE, SAT, TOEFL Junior, WIDA 형식을 참고해 자체 제작한 연습용 모의고사를 제공합니다. 본 서비스는 NWEA, GL Assessment, Riverside Insights(CogAT), Johns Hopkins CTY, Enrollment Management Association(SSAT), ERB(ISEE), College Board(SAT), ETS(TOEFL), WIDA와 제휴·승인 관계가 없으며, 제공되는 점수는 학습 참고용 추정치이고 공식 점수가 아닙니다.'],
     ['제3조 (회원가입)', '회원은 정확한 정보를 입력해야 하며, 만 14세 미만 아동은 법정대리인(보호자)의 동의 하에 가입·이용해야 합니다. 계정은 타인에게 양도하거나 공유할 수 없습니다.'],
     ['제4조 (이용권과 결제)', '이용권은 결제 완료 시 자동 지급되며, 상품별로 정해진 응시 횟수와 유효기간 내에서 사용할 수 있습니다. 시험을 시작하면 응시 1회가 차감됩니다.'],
@@ -1492,20 +1494,20 @@ const LEGAL = {
     ['4. 제3자 제공 및 처리위탁', '결제 처리를 위해 포트원 및 결제대행사, Stripe에 결제에 필요한 정보를 전달하며, 서버·저장소는 Cloudflare, 이메일 발송은 Resend를 통해 처리됩니다. 고객 문의 답변과 운영 알림 메일은 Formspree(미국)를 거쳐 운영자에게 전달되며, 문의 답변에 필요한 이름·이메일·문의 내용 외의 정보(회원 이메일, 현금영수증 번호 등)는 일부를 가려(마스킹) 보냅니다. 쓰기·서술형·말하기 답안의 AI 1차 채점을 위해 답안 내용(말하기는 녹음을 Cloudflare Workers AI로 글로 옮긴 내용)과 문항만 Anthropic(미국)에 전송하며, 이름·이메일 등 회원을 알아볼 수 있는 정보는 보내지 않습니다. 이 외에는 법령에 근거한 경우를 제외하고 동의 없이 제공하지 않습니다.'],
     ['5. 이용자의 권리', '회원은 언제든지 개인정보 열람·정정·삭제·처리정지를 요청할 수 있으며, 아래 문의처로 연락하면 지체 없이 처리합니다.'],
     ['6. 아동의 개인정보', '만 14세 미만 아동의 개인정보는 법정대리인의 동의를 받아 수집합니다.'],
-    ['7. 개인정보 보호책임자', `${c.biz.owner} · 문의: ${c.biz.contact}`],
+    ['7. 개인정보 보호책임자', `${c.biz.owner || c.biz.name || c.site} · 문의: ${c.biz.contact || '고객센터(사이트 하단 “고객센터 · 문제 신고”)'}`],
   ]],
   refund: ['환불규정', (c) => [
     ['1. 전액 환불', '결제 후 7일 이내이며 응시 기록이 전혀 없는(미사용) 이용권은 전액 환불됩니다.'],
     ['2. 부분 환불', '다회권은 사용하지 않은 회차에 대해, 이미 응시한 회차 가격(정가 기준)을 공제한 금액을 환불합니다.'],
     ['3. 환불 불가', '응시를 시작한 1회권, 유효기간이 지난 이용권, 회원의 약관 위반으로 이용이 제한된 경우.'],
-    ['4. 환불 절차', `고객센터(${c.biz.contact})로 주문 정보와 함께 요청하시면 확인 후 영업일 기준 3일 이내에 결제 수단으로 환불합니다. 카드사 사정에 따라 취소 반영에 며칠이 더 걸릴 수 있습니다. 무통장입금으로 결제한 경우 환불받을 계좌(은행·계좌번호·예금주)를 알려 주시면 그 계좌로 송금합니다.`],
+    ['4. 환불 절차', `고객센터(${c.biz.contact || '사이트 하단 “고객센터 · 문제 신고”'})로 주문 정보와 함께 요청하시면 확인 후 영업일 기준 3일 이내에 결제 수단으로 환불합니다. 카드사 사정에 따라 취소 반영에 며칠이 더 걸릴 수 있습니다. 무통장입금으로 결제한 경우 환불받을 계좌(은행·계좌번호·예금주)를 알려 주시면 그 계좌로 송금합니다.`],
     ['5. 서비스 장애', '회사 귀책으로 시험을 정상 응시하지 못한 경우 응시 횟수를 복구하거나 환불합니다.'],
   ]],
 };
 function pageLegal(kind) {
   const [title, build] = LEGAL[kind];
   mount(h('div', { class: 'card' }, h('h2', {}, title), build(cfg).map(([t, body]) => h('div', {}, h('h3', {}, t), h('p', {}, body))),
-    h('p', { class: 'small muted' }, `사업자: ${cfg.biz.name} · 대표 ${cfg.biz.owner} · 사업자등록번호 ${cfg.biz.regNo} · 통신판매업 ${cfg.biz.salesNo} · ${cfg.biz.address} · ${cfg.biz.contact}`)));
+    h('p', { class: 'small muted' }, bizLine(cfg.biz))));
 }
 
 /* ---------- router ---------- */
@@ -1587,7 +1589,7 @@ document.addEventListener('keydown', (e) => { if (e.key === 'Escape') document.q
   if (/^#?\/?(kr)?$/.test(location.hash.replace(/^#/, '')) || !location.hash) prefetchProducts = api('GET', '/products').catch(() => null);
   const [m0, c0] = await Promise.all([pMe, pCfg]);
   me = m0.user || null;
-  try { cfg = c0 || cfg; const b = cfg.biz; document.getElementById('bizinfo').textContent = `${b.name} · 대표 ${b.owner} · 사업자등록번호 ${b.regNo} · 통신판매업 ${b.salesNo} · ${b.address} · ${b.contact}`; } catch {}
+  try { cfg = c0 || cfg; const b = cfg.biz; document.getElementById('bizinfo').textContent = bizLine(b); } catch {}
   try { applySectionSwitches(); } catch {}
   renderNav(); showNotice();
   const po = new URLSearchParams(location.search).get('portone_order'); // mobile redirect return
