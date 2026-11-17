@@ -1,0 +1,962 @@
+[
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Teacher: Tomorrow is show-and-tell. Bring one small thing from home. It can be a toy, a photo, or a rock. Put it in a paper bag and write your name on the bag. You will each talk about your thing for one minute.",
+  "stem": "What should the students write on the bag?",
+  "choices": [
+   "Their name",
+   "The date",
+   "A color",
+   "A number"
+  ],
+  "answer": 0,
+  "explanation": "The teacher says to write your name on the bag."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Teacher: Tomorrow is show-and-tell. Bring one small thing from home. It can be a toy, a photo, or a rock. Put it in a paper bag and write your name on the bag. You will each talk about your thing for one minute.",
+  "stem": "How long will each student talk?",
+  "choices": [
+   "For five minutes",
+   "For one minute",
+   "For ten minutes",
+   "For two minutes"
+  ],
+  "answer": 1,
+  "explanation": "The teacher says each student will talk for one minute."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Boy: Oh no. I forgot my snack today.\nGirl: You can have some of mine. I have crackers and grapes.\nBoy: Thanks! Can I have some crackers?\nGirl: Sure. Here you go.\nBoy: You are a good friend.",
+  "stem": "What is the boy's problem?",
+  "choices": [
+   "He forgot his snack.",
+   "He lost his crackers.",
+   "He is very tired.",
+   "He has no friends."
+  ],
+  "answer": 0,
+  "explanation": "The boy says he forgot his snack today."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Boy: Oh no. I forgot my snack today.\nGirl: You can have some of mine. I have crackers and grapes.\nBoy: Thanks! Can I have some crackers?\nGirl: Sure. Here you go.\nBoy: You are a good friend.",
+  "stem": "What does the boy take from the girl?",
+  "choices": [
+   "Some grapes",
+   "Some crackers",
+   "A cookie",
+   "An apple"
+  ],
+  "answer": 1,
+  "explanation": "The boy asks for some crackers, and the girl gives them to him."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Announcer: Good morning, students. Today the school nurse will check everyone's eyes. Room 2 will go to the nurse's office at ten o'clock. Room 3 will go at eleven o'clock. Please bring your glasses if you have them.",
+  "stem": "What will the nurse check today?",
+  "choices": [
+   "Students' teeth",
+   "Students' eyes",
+   "Students' ears",
+   "Students' feet"
+  ],
+  "answer": 1,
+  "explanation": "The announcer says the nurse will check everyone's eyes."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Announcer: Good morning, students. Today the school nurse will check everyone's eyes. Room 2 will go to the nurse's office at ten o'clock. Room 3 will go at eleven o'clock. Please bring your glasses if you have them.",
+  "stem": "When will Room 3 go to the nurse's office?",
+  "choices": [
+   "At ten o'clock",
+   "At twelve o'clock",
+   "At eleven o'clock",
+   "At nine o'clock"
+  ],
+  "answer": 2,
+  "explanation": "Room 2 goes at ten o'clock, and Room 3 goes at eleven o'clock."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Girl: Let's build a tall tower with the blocks.\nBoy: Okay! I have the red blocks. You can use the yellow ones.\nGirl: Put the big blocks on the bottom.\nBoy: Good idea. Then it won't fall down.",
+  "stem": "What are the children making?",
+  "choices": [
+   "A house",
+   "A car",
+   "A bridge",
+   "A tower"
+  ],
+  "answer": 3,
+  "explanation": "The girl says, \"Let's build a tall tower with the blocks.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Girl: Let's build a tall tower with the blocks.\nBoy: Okay! I have the red blocks. You can use the yellow ones.\nGirl: Put the big blocks on the bottom.\nBoy: Good idea. Then it won't fall down.",
+  "stem": "Why do they put the big blocks on the bottom?",
+  "choices": [
+   "So the tower will be red",
+   "So they can finish fast",
+   "So the boy can have more blocks",
+   "So the tower will not fall"
+  ],
+  "answer": 3,
+  "explanation": "The boy says that with big blocks on the bottom, the tower won't fall down."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Teacher: Here are the class jobs for this week. Table one will pass out the paper. Table two will clean the board. Table three will sharpen the pencils. Please do your job every afternoon before you go home.",
+  "stem": "What job does table two have?",
+  "choices": [
+   "Passing out paper",
+   "Cleaning the board",
+   "Sharpening pencils",
+   "Opening the windows"
+  ],
+  "answer": 1,
+  "explanation": "The teacher says table two will clean the board."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Teacher: Here are the class jobs for this week. Table one will pass out the paper. Table two will clean the board. Table three will sharpen the pencils. Please do your job every afternoon before you go home.",
+  "stem": "When should the students do their jobs?",
+  "choices": [
+   "Every afternoon before going home",
+   "At lunch time",
+   "Only on Friday",
+   "Every morning before class"
+  ],
+  "answer": 0,
+  "explanation": "The teacher says to do the job every afternoon before you go home."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Girl: Guess what? I have a new baby sister!\nBoy: Wow! What is her name?\nGirl: Her name is Rose. She is very small, and she sleeps a lot.\nBoy: Does she cry?\nGirl: Yes, at night. But she is so cute.",
+  "stem": "What is the girl's news?",
+  "choices": [
+   "She is moving to a new house.",
+   "She has a new bike.",
+   "She has a new baby sister.",
+   "She has a new puppy."
+  ],
+  "answer": 2,
+  "explanation": "The girl says, \"I have a new baby sister!\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Girl: Guess what? I have a new baby sister!\nBoy: Wow! What is her name?\nGirl: Her name is Rose. She is very small, and she sleeps a lot.\nBoy: Does she cry?\nGirl: Yes, at night. But she is so cute.",
+  "stem": "When does the baby cry?",
+  "choices": [
+   "In the morning",
+   "At lunch",
+   "After school",
+   "At night"
+  ],
+  "answer": 3,
+  "explanation": "When the boy asks if the baby cries, the girl says, \"Yes, at night.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Announcer: Hello, everyone. Tomorrow is Funny Hat Day! Wear a silly hat to school. At two o'clock, we will have a hat parade in the gym. Families are welcome to come and watch.",
+  "stem": "What should students wear tomorrow?",
+  "choices": [
+   "Red socks",
+   "A silly hat",
+   "A school shirt",
+   "Their pajamas"
+  ],
+  "answer": 1,
+  "explanation": "The announcer says to wear a silly hat to school tomorrow."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Announcer: Hello, everyone. Tomorrow is Funny Hat Day! Wear a silly hat to school. At two o'clock, we will have a hat parade in the gym. Families are welcome to come and watch.",
+  "stem": "Where will the parade be?",
+  "choices": [
+   "On the playground",
+   "In the gym",
+   "In the cafeteria",
+   "In the library"
+  ],
+  "answer": 1,
+  "explanation": "The announcer says there will be a hat parade in the gym."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Teacher: Please come and sit on the rug. Make a big circle. Today's story is about a little bear who cannot fall asleep. Listen carefully. After the story, I will ask you what the bear did to fall asleep.",
+  "stem": "Where should the children sit?",
+  "choices": [
+   "On the stairs",
+   "By the door",
+   "On the rug",
+   "At their desks"
+  ],
+  "answer": 2,
+  "explanation": "The teacher says, \"Please come and sit on the rug.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Teacher: Please come and sit on the rug. Make a big circle. Today's story is about a little bear who cannot fall asleep. Listen carefully. After the story, I will ask you what the bear did to fall asleep.",
+  "stem": "What is the bear's problem in the story?",
+  "choices": [
+   "He cannot fall asleep.",
+   "He is lost in the woods.",
+   "He cannot find his mother.",
+   "He is very hungry."
+  ],
+  "answer": 0,
+  "explanation": "The teacher says the story is about a little bear who cannot fall asleep."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Man: You need a new backpack for school. Do you like the blue one or the purple one?\nGirl: I like the purple one. It has little stars on it.\nMan: Okay. And it has a pocket for your water bottle, too.",
+  "stem": "Which backpack does the girl like?",
+  "choices": [
+   "The black one",
+   "The green one",
+   "The purple one",
+   "The blue one"
+  ],
+  "answer": 2,
+  "explanation": "The girl says, \"I like the purple one.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Man: You need a new backpack for school. Do you like the blue one or the purple one?\nGirl: I like the purple one. It has little stars on it.\nMan: Okay. And it has a pocket for your water bottle, too.",
+  "stem": "What is on the backpack the girl likes?",
+  "choices": [
+   "Little stars",
+   "Big flowers",
+   "A cat",
+   "Little hearts"
+  ],
+  "answer": 0,
+  "explanation": "The girl says the purple backpack has little stars on it."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Boy: Can I have a turn on the swing?\nGirl: Yes. Let me swing until I count to twenty.\nBoy: Okay. I will wait here by the slide.\nGirl: Eighteen, nineteen, twenty! Your turn!",
+  "stem": "What does the boy want?",
+  "choices": [
+   "A ball to play with",
+   "Help with counting",
+   "A turn on the slide",
+   "A turn on the swing"
+  ],
+  "answer": 3,
+  "explanation": "The boy asks, \"Can I have a turn on the swing?\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Boy: Can I have a turn on the swing?\nGirl: Yes. Let me swing until I count to twenty.\nBoy: Okay. I will wait here by the slide.\nGirl: Eighteen, nineteen, twenty! Your turn!",
+  "stem": "Where does the boy wait?",
+  "choices": [
+   "Under a tree",
+   "On a bench",
+   "By the slide",
+   "By the door"
+  ],
+  "answer": 2,
+  "explanation": "The boy says, \"I will wait here by the slide.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Announcer: Attention, please. The water fountain on the first floor is broken today. Please do not use it. If you are thirsty, use the water fountain next to the gym. Thank you.",
+  "stem": "What is broken?",
+  "choices": [
+   "A water fountain",
+   "A light",
+   "A clock",
+   "A door"
+  ],
+  "answer": 0,
+  "explanation": "The announcer says the water fountain on the first floor is broken."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Announcer: Attention, please. The water fountain on the first floor is broken today. Please do not use it. If you are thirsty, use the water fountain next to the gym. Thank you.",
+  "stem": "Where can thirsty students get water today?",
+  "choices": [
+   "In the classroom",
+   "Next to the gym",
+   "On the first floor",
+   "Next to the office"
+  ],
+  "answer": 1,
+  "explanation": "The announcer says to use the water fountain next to the gym."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Teacher: Each of you has ten buttons on your table. Some buttons are big, and some are small. Put the big buttons in the blue cup. Put the small buttons in the red cup. Then count the buttons in each cup.",
+  "stem": "How many buttons does each student have?",
+  "choices": [
+   "Ten",
+   "Twelve",
+   "Two",
+   "Five"
+  ],
+  "answer": 0,
+  "explanation": "The teacher says, \"Each of you has ten buttons.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Teacher: Each of you has ten buttons on your table. Some buttons are big, and some are small. Put the big buttons in the blue cup. Put the small buttons in the red cup. Then count the buttons in each cup.",
+  "stem": "Where should the small buttons go?",
+  "choices": [
+   "In the blue cup",
+   "In a bag",
+   "On the floor",
+   "In the red cup"
+  ],
+  "answer": 3,
+  "explanation": "The teacher says to put the small buttons in the red cup."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 1,
+  "passage": "PLAYGROUND RULES\nPlease ___ turns on the slide. Wait in line and do not push.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "make",
+   "give",
+   "do",
+   "take"
+  ],
+  "answer": 3,
+  "explanation": "We say \"take turns\" when people go one at a time."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 1,
+  "passage": "Dear Ms. Brown,\nMy daughter Lily has a cold. She ___ at home today. She will come back tomorrow.\nThank you,\nMrs. Cho",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "be",
+   "is",
+   "am",
+   "are"
+  ],
+  "answer": 1,
+  "explanation": "With one person (\"she\"), we use \"is.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 1,
+  "passage": "SNACK TIME\nPlease eat your snack at your desk. When you finish, put your wrapper in the ___.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "window",
+   "chair",
+   "trash can",
+   "pencil case"
+  ],
+  "answer": 2,
+  "explanation": "A wrapper is trash, so it goes in the trash can."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 1,
+  "passage": "Hi Mom,\nI have ___ new friend at school. Her name is Rosa. We play together at recess.\nLove,\nKai",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "an",
+   "many",
+   "a",
+   "some"
+  ],
+  "answer": 2,
+  "explanation": "We use \"a\" before one thing that starts with a consonant sound, like \"new.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 1,
+  "passage": "CLASS NEWS\nWe ___ a new student in our class. His name is Omar. Please say hello to him!",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "have",
+   "having",
+   "has",
+   "is"
+  ],
+  "answer": 0,
+  "explanation": "With \"we,\" the verb is \"have,\" not \"has.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 2,
+  "passage": "NAP ROOM\nThe little children are sleeping. Please walk slowly and talk ___ in the hallway.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "loudly",
+   "quietly",
+   "quick",
+   "happy"
+  ],
+  "answer": 1,
+  "explanation": "Sleeping children need quiet, so we should talk \"quietly.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 1,
+  "passage": "COAT HOOKS\nWhen you come in, please hang your coat ___ your hook. Then sit down.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "on",
+   "of",
+   "under",
+   "in"
+  ],
+  "answer": 0,
+  "explanation": "We hang a coat \"on\" a hook."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 1,
+  "passage": "Dear Class,\nTomorrow we will walk ___ the city park. Please wear good shoes.\nMr. Tan",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "at",
+   "of",
+   "on",
+   "to"
+  ],
+  "answer": 3,
+  "explanation": "We use \"to\" to show where we are going."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 2,
+  "passage": "MY FAMILY\nMy big brother is ten years old. I am six years old. He is ___ than me.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "more old",
+   "oldest",
+   "old",
+   "older"
+  ],
+  "answer": 3,
+  "explanation": "We compare two people with \"older than.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 2,
+  "passage": "Hi Dad,\nCan you pick me up at the pool? My swim class ___ at 2:30 today.\nThanks,\nNoah",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "ends",
+   "ending",
+   "to end",
+   "end"
+  ],
+  "answer": 0,
+  "explanation": "\"Class\" is one thing, so the verb is \"ends\" with -s."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 2,
+  "passage": "MATH CORNER\nThere are ten counting bears in the box. Please count ___ and then close the box.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "them",
+   "it",
+   "they",
+   "their"
+  ],
+  "answer": 0,
+  "explanation": "\"Them\" means the ten counting bears, and it comes after the verb \"count.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 2,
+  "passage": "CLASS NEWS\nYesterday, we ___ cookies with our teacher. They were very good!",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "make",
+   "makes",
+   "made",
+   "making"
+  ],
+  "answer": 2,
+  "explanation": "\"Yesterday\" tells us it happened in the past, so we use \"made.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "SCHOOL NURSE'S OFFICE\nDo you feel sick or hurt? Come here for help.\nOpen: Monday to Friday, 8:00 to 3:00\n1. Knock on the door before you come in.\n2. Bring a note from your teacher.\n3. Sit in a chair and wait for your turn.\nIf the nurse is not here, please go to the main office.",
+  "stem": "Who should go to this room?",
+  "choices": [
+   "A student who wants a book",
+   "A student who wants to play",
+   "A student who feels sick",
+   "A student who is hungry"
+  ],
+  "answer": 2,
+  "explanation": "The sign says, \"Do you feel sick or hurt? Come here for help.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "SCHOOL NURSE'S OFFICE\nDo you feel sick or hurt? Come here for help.\nOpen: Monday to Friday, 8:00 to 3:00\n1. Knock on the door before you come in.\n2. Bring a note from your teacher.\n3. Sit in a chair and wait for your turn.\nIf the nurse is not here, please go to the main office.",
+  "stem": "What should you do before you go in?",
+  "choices": [
+   "Knock on the door",
+   "Wash your hands",
+   "Call your mom",
+   "Take off your shoes"
+  ],
+  "answer": 0,
+  "explanation": "Rule 1 says to knock on the door before you come in."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "SCHOOL NURSE'S OFFICE\nDo you feel sick or hurt? Come here for help.\nOpen: Monday to Friday, 8:00 to 3:00\n1. Knock on the door before you come in.\n2. Bring a note from your teacher.\n3. Sit in a chair and wait for your turn.\nIf the nurse is not here, please go to the main office.",
+  "stem": "What should you bring?",
+  "choices": [
+   "Your lunch box",
+   "A note from your teacher",
+   "A pencil",
+   "Some money"
+  ],
+  "answer": 1,
+  "explanation": "Rule 2 says to bring a note from your teacher."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "SCHOOL NURSE'S OFFICE\nDo you feel sick or hurt? Come here for help.\nOpen: Monday to Friday, 8:00 to 3:00\n1. Knock on the door before you come in.\n2. Bring a note from your teacher.\n3. Sit in a chair and wait for your turn.\nIf the nurse is not here, please go to the main office.",
+  "stem": "What should you do if the nurse is not there?",
+  "choices": [
+   "Wait outside",
+   "Go home",
+   "Go back to the playground",
+   "Go to the main office"
+  ],
+  "answer": 3,
+  "explanation": "The sign says that if the nurse is not here, you should go to the main office."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "Kai,\nI went to the store to buy food for dinner. I will be home at five o'clock. Your snack is in the fridge. It is an apple and some cheese. After your snack, please do your spelling words. Then you can play outside. Please take your key with you if you go outside.\nLove,\nMom",
+  "stem": "Why did Mom go to the store?",
+  "choices": [
+   "To buy shoes",
+   "To buy a toy",
+   "To buy food for dinner",
+   "To buy a new key"
+  ],
+  "answer": 2,
+  "explanation": "Mom writes, \"I went to the store to buy food for dinner.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "Kai,\nI went to the store to buy food for dinner. I will be home at five o'clock. Your snack is in the fridge. It is an apple and some cheese. After your snack, please do your spelling words. Then you can play outside. Please take your key with you if you go outside.\nLove,\nMom",
+  "stem": "What is Kai's snack?",
+  "choices": [
+   "Some cookies",
+   "A banana and some milk",
+   "An apple and some cheese",
+   "A sandwich"
+  ],
+  "answer": 2,
+  "explanation": "The note says the snack is an apple and some cheese."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Kai,\nI went to the store to buy food for dinner. I will be home at five o'clock. Your snack is in the fridge. It is an apple and some cheese. After your snack, please do your spelling words. Then you can play outside. Please take your key with you if you go outside.\nLove,\nMom",
+  "stem": "What should Kai do right after his snack?",
+  "choices": [
+   "Clean his room",
+   "Do his spelling words",
+   "Play outside",
+   "Go to the store"
+  ],
+  "answer": 1,
+  "explanation": "Mom writes, \"After your snack, please do your spelling words.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Kai,\nI went to the store to buy food for dinner. I will be home at five o'clock. Your snack is in the fridge. It is an apple and some cheese. After your snack, please do your spelling words. Then you can play outside. Please take your key with you if you go outside.\nLove,\nMom",
+  "stem": "What should Kai take if he goes outside?",
+  "choices": [
+   "His ball",
+   "His key",
+   "His coat",
+   "His bike"
+  ],
+  "answer": 1,
+  "explanation": "Mom writes, \"Please take your key with you if you go outside.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "My Room\nMy room is small, but I love it. My bed is next to the window. In the morning, the sun comes in and wakes me up. I have a green rug on the floor. On my shelf, there are ten books and a toy robot. My favorite thing is my lamp. It looks like the moon! I turn it on at night when I read.",
+  "stem": "Where is the bed?",
+  "choices": [
+   "Under the shelf",
+   "Next to the door",
+   "Next to the window",
+   "On the green rug"
+  ],
+  "answer": 2,
+  "explanation": "The writer says, \"My bed is next to the window.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "My Room\nMy room is small, but I love it. My bed is next to the window. In the morning, the sun comes in and wakes me up. I have a green rug on the floor. On my shelf, there are ten books and a toy robot. My favorite thing is my lamp. It looks like the moon! I turn it on at night when I read.",
+  "stem": "What color is the rug?",
+  "choices": [
+   "Blue",
+   "Red",
+   "Yellow",
+   "Green"
+  ],
+  "answer": 3,
+  "explanation": "The writer says, \"I have a green rug on the floor.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "My Room\nMy room is small, but I love it. My bed is next to the window. In the morning, the sun comes in and wakes me up. I have a green rug on the floor. On my shelf, there are ten books and a toy robot. My favorite thing is my lamp. It looks like the moon! I turn it on at night when I read.",
+  "stem": "What is on the shelf?",
+  "choices": [
+   "Books and a lamp",
+   "Toy cars and books",
+   "Books and a toy robot",
+   "A clock and a robot"
+  ],
+  "answer": 2,
+  "explanation": "The writer says there are ten books and a toy robot on the shelf."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "My Room\nMy room is small, but I love it. My bed is next to the window. In the morning, the sun comes in and wakes me up. I have a green rug on the floor. On my shelf, there are ten books and a toy robot. My favorite thing is my lamp. It looks like the moon! I turn it on at night when I read.",
+  "stem": "What is the writer's favorite thing?",
+  "choices": [
+   "A book about the moon",
+   "A lamp that looks like the moon",
+   "A robot that can walk",
+   "A big window"
+  ],
+  "answer": 1,
+  "explanation": "The writer says, \"My favorite thing is my lamp. It looks like the moon!\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "ROOM 4 DAY PLAN\n8:30 Morning circle\n9:00 Reading\n10:00 Snack\n10:15 Math\n11:30 Lunch\n12:15 Recess\n1:00 Art (Monday and Wednesday)\n1:00 Music (Tuesday and Thursday)\n1:00 Gym (Friday)\n2:30 Go home\nPlease bring your gym shoes on Friday. On rainy days, we have recess in the classroom.",
+  "stem": "What do the students do first every day?",
+  "choices": [
+   "Snack",
+   "Math",
+   "Reading",
+   "Morning circle"
+  ],
+  "answer": 3,
+  "explanation": "The plan starts with \"8:30 Morning circle.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "ROOM 4 DAY PLAN\n8:30 Morning circle\n9:00 Reading\n10:00 Snack\n10:15 Math\n11:30 Lunch\n12:15 Recess\n1:00 Art (Monday and Wednesday)\n1:00 Music (Tuesday and Thursday)\n1:00 Gym (Friday)\n2:30 Go home\nPlease bring your gym shoes on Friday. On rainy days, we have recess in the classroom.",
+  "stem": "What time is lunch?",
+  "choices": [
+   "10:00",
+   "1:00",
+   "11:30",
+   "12:15"
+  ],
+  "answer": 2,
+  "explanation": "The plan says \"11:30 Lunch.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "ROOM 4 DAY PLAN\n8:30 Morning circle\n9:00 Reading\n10:00 Snack\n10:15 Math\n11:30 Lunch\n12:15 Recess\n1:00 Art (Monday and Wednesday)\n1:00 Music (Tuesday and Thursday)\n1:00 Gym (Friday)\n2:30 Go home\nPlease bring your gym shoes on Friday. On rainy days, we have recess in the classroom.",
+  "stem": "What do the students do at 1:00 on Friday?",
+  "choices": [
+   "Recess",
+   "Art",
+   "Music",
+   "Gym"
+  ],
+  "answer": 3,
+  "explanation": "The plan says \"1:00 Gym (Friday).\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "ROOM 4 DAY PLAN\n8:30 Morning circle\n9:00 Reading\n10:00 Snack\n10:15 Math\n11:30 Lunch\n12:15 Recess\n1:00 Art (Monday and Wednesday)\n1:00 Music (Tuesday and Thursday)\n1:00 Gym (Friday)\n2:30 Go home\nPlease bring your gym shoes on Friday. On rainy days, we have recess in the classroom.",
+  "stem": "What comes right after snack?",
+  "choices": [
+   "Lunch",
+   "Reading",
+   "Recess",
+   "Math"
+  ],
+  "answer": 3,
+  "explanation": "Snack is at 10:00, and math is next, at 10:15."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "Snails\nA snail is a small animal. It has a soft body and a hard shell on its back. The shell is the snail's home. When the snail is scared, it goes inside its shell. Snails move very slowly. They like wet places, so you can often see them after it rains. Snails eat leaves and flowers. Some people do not like snails in their gardens!",
+  "stem": "What is on a snail's back?",
+  "choices": [
+   "A hard shell",
+   "Small wings",
+   "Long legs",
+   "Soft fur"
+  ],
+  "answer": 0,
+  "explanation": "The text says a snail has a hard shell on its back."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "Snails\nA snail is a small animal. It has a soft body and a hard shell on its back. The shell is the snail's home. When the snail is scared, it goes inside its shell. Snails move very slowly. They like wet places, so you can often see them after it rains. Snails eat leaves and flowers. Some people do not like snails in their gardens!",
+  "stem": "What does a snail do when it is scared?",
+  "choices": [
+   "It climbs a tree.",
+   "It goes inside its shell.",
+   "It runs away fast.",
+   "It jumps into water."
+  ],
+  "answer": 1,
+  "explanation": "The text says, \"When the snail is scared, it goes inside its shell.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Snails\nA snail is a small animal. It has a soft body and a hard shell on its back. The shell is the snail's home. When the snail is scared, it goes inside its shell. Snails move very slowly. They like wet places, so you can often see them after it rains. Snails eat leaves and flowers. Some people do not like snails in their gardens!",
+  "stem": "When can you often see snails?",
+  "choices": [
+   "At lunch time",
+   "After it rains",
+   "When it snows",
+   "On hot, dry days"
+  ],
+  "answer": 1,
+  "explanation": "Snails like wet places, so you can often see them after it rains."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Snails\nA snail is a small animal. It has a soft body and a hard shell on its back. The shell is the snail's home. When the snail is scared, it goes inside its shell. Snails move very slowly. They like wet places, so you can often see them after it rains. Snails eat leaves and flowers. Some people do not like snails in their gardens!",
+  "stem": "Why do some people not like snails in their gardens?",
+  "choices": [
+   "Snails are very loud.",
+   "Snails move too fast.",
+   "Snails dig big holes.",
+   "Snails eat leaves and flowers."
+  ],
+  "answer": 3,
+  "explanation": "The text says snails eat leaves and flowers, so they can hurt a garden."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "It rained last night. Today Lucy puts on her yellow boots. She sees a big puddle. She jumps in it. Splash! Her dog jumps in, too. Now Lucy and her dog are both wet. Lucy laughs.",
+  "stem": "What color are Lucy's boots?",
+  "choices": [
+   "Red",
+   "Green",
+   "Blue",
+   "Yellow"
+  ],
+  "answer": 3,
+  "explanation": "Key line: \"Today Lucy puts on her yellow boots.\" So the answer is \"Yellow\"."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "It rained last night. Today Lucy puts on her yellow boots. She sees a big puddle. She jumps in it. Splash! Her dog jumps in, too. Now Lucy and her dog are both wet. Lucy laughs.",
+  "stem": "Why are Lucy and her dog wet?",
+  "choices": [
+   "They jumped in a puddle.",
+   "They swam in a pool.",
+   "They walked in the rain.",
+   "They took a bath."
+  ],
+  "answer": 0,
+  "explanation": "Key line: \"She jumps in it. Splash! Her dog jumps in, too.\" So the answer is \"They jumped in a puddle\"."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "Shopping List\n- 2 bananas\n- 6 eggs\n- 1 bag of rice\n- milk\nMom and I go to the store. I hold the list. I find the bananas first. Mom gets the eggs. We cannot find the rice.",
+  "stem": "How many eggs are on the list?",
+  "choices": [
+   "6",
+   "1",
+   "4",
+   "2"
+  ],
+  "answer": 0,
+  "explanation": "Key line: \"6 eggs.\" So the answer is \"6\"."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Shopping List\n- 2 bananas\n- 6 eggs\n- 1 bag of rice\n- milk\nMom and I go to the store. I hold the list. I find the bananas first. Mom gets the eggs. We cannot find the rice.",
+  "stem": "What can they NOT find?",
+  "choices": [
+   "Eggs",
+   "Milk",
+   "Bananas",
+   "Rice"
+  ],
+  "answer": 3,
+  "explanation": "Key line: \"We cannot find the rice.\" So the answer is \"Rice\"."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "Go outside on a sunny day. Look down. You can see your shadow. Your shadow is dark. When you move, your shadow moves, too. When you wave, it waves! On a cloudy day, it is hard to see your shadow.",
+  "stem": "What does your shadow do when you move?",
+  "choices": [
+   "It goes away.",
+   "It gets bigger.",
+   "It moves, too.",
+   "It stays still."
+  ],
+  "answer": 2,
+  "explanation": "Key line: \"When you move, your shadow moves, too.\" So the answer is \"It moves, too\"."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Go outside on a sunny day. Look down. You can see your shadow. Your shadow is dark. When you move, your shadow moves, too. When you wave, it waves! On a cloudy day, it is hard to see your shadow.",
+  "stem": "When is it hard to see your shadow?",
+  "choices": [
+   "On a sunny day",
+   "On a cloudy day",
+   "When you wave",
+   "In the morning"
+  ],
+  "answer": 1,
+  "explanation": "Key line: \"On a cloudy day, it is hard to see your shadow.\" So the answer is \"On a cloudy day\"."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "Ken is hungry. He makes a sandwich. First, he puts two pieces of bread on a plate. Next, he adds cheese. Then he adds a slice of tomato. Ken cuts the sandwich in half. He gives one half to his sister.",
+  "stem": "What does Ken put on the plate first?",
+  "choices": [
+   "Tomato",
+   "Cheese",
+   "Bread",
+   "Ham"
+  ],
+  "answer": 2,
+  "explanation": "Key line: \"First, he puts two pieces of bread on a plate.\" So the answer is \"Bread\"."
+ },
+ {
+  "exam_type": "WIDA",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Ken is hungry. He makes a sandwich. First, he puts two pieces of bread on a plate. Next, he adds cheese. Then he adds a slice of tomato. Ken cuts the sandwich in half. He gives one half to his sister.",
+  "stem": "What does Ken do with one half of the sandwich?",
+  "choices": [
+   "He gives it to his sister.",
+   "He gives it to his dog.",
+   "He puts it in his lunch box.",
+   "He eats it fast."
+  ],
+  "answer": 0,
+  "explanation": "Key line: \"He gives one half to his sister.\" So the answer is \"He gives it to his sister\"."
+ }
+]
