@@ -1,0 +1,842 @@
+[
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Cub is to bear as calf is to ___",
+  "choices": [
+   "milk",
+   "cow",
+   "lamb",
+   "field"
+  ],
+  "answer": 1,
+  "explanation": "A cub is a baby bear, and a calf is a baby cow."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Snake is to slither as kangaroo is to ___",
+  "choices": [
+   "pouch",
+   "tail",
+   "jump",
+   "grass"
+  ],
+  "answer": 2,
+  "explanation": "A snake moves by slithering, and a kangaroo moves by jumping."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Wet is to dry as full is to ___",
+  "choices": [
+   "cup",
+   "heavy",
+   "spill",
+   "empty"
+  ],
+  "answer": 3,
+  "explanation": "Wet and dry are opposites; full and empty are opposites."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Bread is to baker as house is to ___",
+  "choices": [
+   "builder",
+   "brick",
+   "roof",
+   "home"
+  ],
+  "answer": 0,
+  "explanation": "A baker makes bread, and a builder makes a house."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Pillow is to bed as cushion is to ___",
+  "choices": [
+   "soft",
+   "sofa",
+   "feather",
+   "sleep"
+  ],
+  "answer": 1,
+  "explanation": "A pillow is placed on a bed, and a cushion is placed on a sofa."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Which word belongs with the group: purple, orange, brown?",
+  "choices": [
+   "paint",
+   "bright",
+   "green",
+   "crayon"
+  ],
+  "answer": 2,
+  "explanation": "Purple, orange and brown are colors, and green is also a color."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Which word belongs with the group: lion, tiger, leopard?",
+  "choices": [
+   "zoo",
+   "stripe",
+   "cage",
+   "cheetah"
+  ],
+  "answer": 3,
+  "explanation": "Lions, tigers and leopards are wild cats, and so is a cheetah."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Which word belongs with the group: shirt, skirt, jacket?",
+  "choices": [
+   "sweater",
+   "button",
+   "closet",
+   "needle"
+  ],
+  "answer": 0,
+  "explanation": "A shirt, skirt and jacket are clothes you wear, and so is a sweater."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Which word belongs with the group: bus, train, truck?",
+  "choices": [
+   "driver",
+   "van",
+   "station",
+   "wheel"
+  ],
+  "answer": 1,
+  "explanation": "Buses, trains and trucks are vehicles, and a van is also a vehicle."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Which word is most similar to these words: shout, yell?",
+  "choices": [
+   "listen",
+   "sing",
+   "scream",
+   "smile"
+  ],
+  "answer": 2,
+  "explanation": "To shout, yell and scream all mean to call out very loudly."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Which word is most similar to these words: shiny, bright?",
+  "choices": [
+   "dull",
+   "dark",
+   "smooth",
+   "sparkly"
+  ],
+  "answer": 3,
+  "explanation": "Shiny, bright and sparkly all describe something that gives off light."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Which word is most similar to these words: grin, beam?",
+  "choices": [
+   "smile",
+   "frown",
+   "cry",
+   "wave"
+  ],
+  "answer": 0,
+  "explanation": "A grin, a beam and a smile are all happy looks on a face."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Feather is to light as stone is to ___",
+  "choices": [
+   "gray",
+   "round",
+   "heavy",
+   "path"
+  ],
+  "answer": 2,
+  "explanation": "A feather is light in weight, while a stone is heavy."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Doctor is to hospital as chef is to ___",
+  "choices": [
+   "recipe",
+   "waiter",
+   "menu",
+   "restaurant"
+  ],
+  "answer": 3,
+  "explanation": "A doctor works in a hospital, and a chef works in a restaurant."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Seed is to plant as egg is to ___",
+  "choices": [
+   "chick",
+   "shell",
+   "yolk",
+   "breakfast"
+  ],
+  "answer": 0,
+  "explanation": "A seed grows into a plant, and an egg hatches into a chick."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Hungry is to eat as thirsty is to ___",
+  "choices": [
+   "cup",
+   "drink",
+   "juice",
+   "dry"
+  ],
+  "answer": 1,
+  "explanation": "When you are hungry you eat, and when you are thirsty you drink."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Pedal is to bicycle as oar is to ___",
+  "choices": [
+   "river",
+   "splash",
+   "rowboat",
+   "paddle"
+  ],
+  "answer": 2,
+  "explanation": "You push pedals to move a bicycle, and you pull oars to move a rowboat."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Which word belongs with the group: hammer, wrench, screwdriver?",
+  "choices": [
+   "nail",
+   "toolbox",
+   "garage",
+   "pliers"
+  ],
+  "answer": 3,
+  "explanation": "A hammer, wrench and screwdriver are hand tools, and so are pliers."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Which word belongs with the group: eagle, robin, sparrow?",
+  "choices": [
+   "owl",
+   "bat",
+   "butterfly",
+   "kite"
+  ],
+  "answer": 0,
+  "explanation": "Eagles, robins and sparrows are birds; an owl is a bird too, but a bat and a butterfly are not."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Which word belongs with the group: cheese, yogurt, butter?",
+  "choices": [
+   "bread",
+   "cream",
+   "egg",
+   "jam"
+  ],
+  "answer": 1,
+  "explanation": "Cheese, yogurt and butter are dairy foods made from milk, and so is cream."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Which word belongs with the group: copper, iron, silver?",
+  "choices": [
+   "glass",
+   "plastic",
+   "tin",
+   "diamond"
+  ],
+  "answer": 2,
+  "explanation": "Copper, iron and silver are metals, and tin is also a metal."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Which word is most similar to these words: damp, moist?",
+  "choices": [
+   "dry",
+   "cool",
+   "dusty",
+   "wet"
+  ],
+  "answer": 3,
+  "explanation": "Damp, moist and wet all describe something with water in or on it."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Which word is most similar to these words: brave, fearless?",
+  "choices": [
+   "courageous",
+   "scared",
+   "strong",
+   "proud"
+  ],
+  "answer": 0,
+  "explanation": "Brave, fearless and courageous all mean not afraid of danger."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Which word is most similar to these words: tidy, neat?",
+  "choices": [
+   "messy",
+   "orderly",
+   "pretty",
+   "simple"
+  ],
+  "answer": 1,
+  "explanation": "Tidy, neat and orderly all mean well arranged."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Brick is to wall as link is to ___",
+  "choices": [
+   "metal",
+   "connect",
+   "fence",
+   "chain"
+  ],
+  "answer": 3,
+  "explanation": "Bricks are joined to make a wall, and links are joined to make a chain."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Caterpillar is to butterfly as tadpole is to ___",
+  "choices": [
+   "frog",
+   "pond",
+   "fish",
+   "egg"
+  ],
+  "answer": 0,
+  "explanation": "A caterpillar grows into a butterfly, and a tadpole grows into a frog."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Wardrobe is to clothes as pantry is to ___",
+  "choices": [
+   "kitchen",
+   "groceries",
+   "shelves",
+   "cook"
+  ],
+  "answer": 1,
+  "explanation": "A wardrobe stores clothes, and a pantry stores groceries."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Shallow is to deep as narrow is to ___",
+  "choices": [
+   "thin",
+   "long",
+   "wide",
+   "bridge"
+  ],
+  "answer": 2,
+  "explanation": "Shallow is the opposite of deep, and narrow is the opposite of wide."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Sculptor is to chisel as painter is to ___",
+  "choices": [
+   "canvas",
+   "color",
+   "gallery",
+   "brush"
+  ],
+  "answer": 3,
+  "explanation": "A sculptor works with a chisel as a tool, and a painter works with a brush."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Which word belongs with the group: Mercury, Venus, Mars?",
+  "choices": [
+   "Saturn",
+   "Moon",
+   "Sun",
+   "comet"
+  ],
+  "answer": 0,
+  "explanation": "Mercury, Venus and Mars are planets, and Saturn is also a planet."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Which word belongs with the group: oak, maple, birch?",
+  "choices": [
+   "acorn",
+   "willow",
+   "forest",
+   "bark"
+  ],
+  "answer": 1,
+  "explanation": "Oak, maple and birch are kinds of trees, and so is willow."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Which word belongs with the group: meter, kilometer, centimeter?",
+  "choices": [
+   "kilogram",
+   "liter",
+   "millimeter",
+   "minute"
+  ],
+  "answer": 2,
+  "explanation": "Meters, kilometers and centimeters measure length, and so do millimeters."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Which word belongs with the group: anger, joy, fear?",
+  "choices": [
+   "laughter",
+   "smile",
+   "tears",
+   "grief"
+  ],
+  "answer": 3,
+  "explanation": "Anger, joy and fear are emotions, and grief is also an emotion; laughter, smiles and tears are ways of showing feelings."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Which word is most similar to these words: gloomy, dreary?",
+  "choices": [
+   "dismal",
+   "cheerful",
+   "rainy",
+   "damp"
+  ],
+  "answer": 0,
+  "explanation": "Gloomy, dreary and dismal all mean dark and depressing."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Which word is most similar to these words: mend, repair?",
+  "choices": [
+   "break",
+   "fix",
+   "paint",
+   "build"
+  ],
+  "answer": 1,
+  "explanation": "To mend, repair and fix all mean to make something broken work again."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Which word is most similar to these words: odd, peculiar?",
+  "choices": [
+   "uneven",
+   "ordinary",
+   "strange",
+   "number"
+  ],
+  "answer": 2,
+  "explanation": "Odd, peculiar and strange all mean unusual; 'uneven' matches only the number meaning of odd."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Locksmith is to keys as cartographer is to ___",
+  "choices": [
+   "maps",
+   "explorers",
+   "oceans",
+   "compasses"
+  ],
+  "answer": 0,
+  "explanation": "A locksmith makes keys, and a cartographer makes maps."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Herd is to cattle as flock is to ___",
+  "choices": [
+   "shepherd",
+   "sheep",
+   "wolves",
+   "meadow"
+  ],
+  "answer": 1,
+  "explanation": "A herd is a group of cattle, and a flock is a group of sheep."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Fluent is to speech as legible is to ___",
+  "choices": [
+   "reading",
+   "eyesight",
+   "handwriting",
+   "alphabet"
+  ],
+  "answer": 2,
+  "explanation": "Fluent describes speech that is easy to follow, and legible describes handwriting that is easy to read."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Germ is to disease as spark is to ___",
+  "choices": [
+   "electricity",
+   "flint",
+   "light",
+   "fire"
+  ],
+  "answer": 3,
+  "explanation": "A germ can cause a disease, and a spark can cause a fire."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Microscope is to biologist as telescope is to ___",
+  "choices": [
+   "astronomer",
+   "astronaut",
+   "planet",
+   "lens"
+  ],
+  "answer": 0,
+  "explanation": "A biologist uses a microscope, and an astronomer uses a telescope."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Which word belongs with the group: sonnet, limerick, haiku?",
+  "choices": [
+   "novel",
+   "ballad",
+   "essay",
+   "biography"
+  ],
+  "answer": 1,
+  "explanation": "A sonnet, limerick and haiku are kinds of poems, and a ballad is also a poem."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Which word belongs with the group: trumpet, trombone, tuba?",
+  "choices": [
+   "clarinet",
+   "drum",
+   "French horn",
+   "oboe"
+  ],
+  "answer": 2,
+  "explanation": "The trumpet, trombone and tuba are brass instruments, and so is the French horn; the clarinet and oboe are woodwinds."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Which word belongs with the group: democracy, monarchy, dictatorship?",
+  "choices": [
+   "election",
+   "parliament",
+   "citizen",
+   "republic"
+  ],
+  "answer": 3,
+  "explanation": "Democracy, monarchy and dictatorship are systems of government, and a republic is too."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Which word belongs with the group: retina, cornea, pupil?",
+  "choices": [
+   "iris",
+   "eyelash",
+   "eyebrow",
+   "tear"
+  ],
+  "answer": 0,
+  "explanation": "The retina, cornea and pupil are parts of the eyeball itself, and so is the iris."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Which word is most similar to these words: abandon, desert?",
+  "choices": [
+   "rescue",
+   "forsake",
+   "wander",
+   "sand"
+  ],
+  "answer": 1,
+  "explanation": "Abandon, desert and forsake all mean to leave someone or something behind for good."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Which word is most similar to these words: obstinate, stubborn?",
+  "choices": [
+   "flexible",
+   "foolish",
+   "headstrong",
+   "angry"
+  ],
+  "answer": 2,
+  "explanation": "Obstinate, stubborn and headstrong all mean refusing to change one's mind."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Which word is most similar to these words: fatigued, exhausted?",
+  "choices": [
+   "energetic",
+   "injured",
+   "bored",
+   "weary"
+  ],
+  "answer": 3,
+  "explanation": "Fatigued, exhausted and weary all mean very tired."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Lexicographer is to dictionary as cartographer is to ___",
+  "choices": [
+   "compass",
+   "atlas",
+   "latitude",
+   "explorer"
+  ],
+  "answer": 1,
+  "explanation": "A lexicographer compiles a dictionary, a book of words, and a cartographer compiles an atlas, a book of maps."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Ornithologist is to birds as entomologist is to ___",
+  "choices": [
+   "words",
+   "fossils",
+   "insects",
+   "rocks"
+  ],
+  "answer": 2,
+  "explanation": "An ornithologist studies birds, and an entomologist studies insects (an etymologist studies word origins)."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Insipid is to flavor as monotonous is to ___",
+  "choices": [
+   "sound",
+   "boredom",
+   "color",
+   "variety"
+  ],
+  "answer": 3,
+  "explanation": "Something insipid lacks flavor, and something monotonous lacks variety."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Pugnacious is to fight as garrulous is to ___",
+  "choices": [
+   "talk",
+   "laugh",
+   "eat",
+   "argue"
+  ],
+  "answer": 0,
+  "explanation": "A pugnacious person is eager to fight, and a garrulous person is eager to talk."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Drizzle is to downpour as breeze is to ___",
+  "choices": [
+   "wind",
+   "gale",
+   "calm",
+   "sail"
+  ],
+  "answer": 1,
+  "explanation": "A drizzle is a light form of a downpour, and a breeze is a light form of a gale."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Which word belongs with the group: granite, basalt, obsidian?",
+  "choices": [
+   "marble",
+   "limestone",
+   "pumice",
+   "sandstone"
+  ],
+  "answer": 2,
+  "explanation": "Granite, basalt and obsidian are igneous rocks formed from cooled magma or lava, and so is pumice."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Which word belongs with the group: simile, metaphor, personification?",
+  "choices": [
+   "paragraph",
+   "narrator",
+   "glossary",
+   "hyperbole"
+  ],
+  "answer": 3,
+  "explanation": "A simile, metaphor and personification are figures of speech, and so is hyperbole."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Which word belongs with the group: mitochondria, nucleus, ribosome?",
+  "choices": [
+   "chloroplast",
+   "tissue",
+   "organ",
+   "molecule"
+  ],
+  "answer": 0,
+  "explanation": "Mitochondria, the nucleus and ribosomes are structures inside a cell, and so is a chloroplast."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Which word belongs with the group: jubilant, elated, euphoric?",
+  "choices": [
+   "anxious",
+   "ecstatic",
+   "weary",
+   "sullen"
+  ],
+  "answer": 1,
+  "explanation": "Jubilant, elated and euphoric all describe intense happiness, and so does ecstatic."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Which word is most similar to these words: ameliorate, improve?",
+  "choices": [
+   "worsen",
+   "maintain",
+   "enhance",
+   "reveal"
+  ],
+  "answer": 2,
+  "explanation": "To ameliorate, improve and enhance all mean to make something better."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Which word is most similar to these words: obsolete, outdated?",
+  "choices": [
+   "novel",
+   "broken",
+   "useful",
+   "antiquated"
+  ],
+  "answer": 3,
+  "explanation": "Obsolete, outdated and antiquated all mean no longer current or in use."
+ },
+ {
+  "exam_type": "CAT4",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Which word is most similar to these words: placate, appease?",
+  "choices": [
+   "pacify",
+   "provoke",
+   "deceive",
+   "persuade"
+  ],
+  "answer": 0,
+  "explanation": "To placate, appease and pacify all mean to calm someone who is angry."
+ }
+]
