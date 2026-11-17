@@ -18693,6 +18693,219 @@ The mean, often called the average, is calculated by adding all the values in a 
 Consider a small company with five employees. Four of them earn $40,000 per year, and the owner earns $240,000. The mean salary is $80,000, which is twice what most employees actually earn. The median salary, however, is $40,000, which describes the typical worker much more accurately. A single high salary pulled the mean upward but had no effect on the median.
 
 For this reason, economists usually report the median when describing incomes or home prices. Otherwise, a few extremely expensive houses or very high salaries could make an area appear wealthier than it actually is. Before drawing conclusions from a statistic, a careful reader should ask which measure is being used and whether outliers might be influencing it.','In the company example, suppose the owner''s salary rose to $340,000 and the other salaries stayed the same. What would happen?',NULL,'["Neither the mean nor the median would change.","Both the mean and the median would increase.","The median would increase, but the mean would stay the same.","The mean would increase, but the median would stay the same."]',3,'A higher top salary raises the total, so the mean goes up (to $100,000), but the middle value is still $40,000; as the passage says, one high salary "had no effect on the median."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-listening-0844161de3a2','TOEFLJ','listening','mcq',1,'Teacher: Tomorrow is show-and-tell. Bring one small thing from home. It can be a toy, a photo, or a rock. Put it in a paper bag and write your name on the bag. You will each talk about your thing for one minute.','What should the students write on the bag?',NULL,'["Their name","The date","A number","A color"]',0,'The teacher says to write your name on the bag.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-listening-0fa2e9d8fb96','TOEFLJ','listening','mcq',2,'Teacher: Tomorrow is show-and-tell. Bring one small thing from home. It can be a toy, a photo, or a rock. Put it in a paper bag and write your name on the bag. You will each talk about your thing for one minute.','How long will each student talk?',NULL,'["For five minutes","For ten minutes","For two minutes","For one minute"]',3,'The teacher says each student will talk for one minute.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-listening-3a68d6ecca0d','TOEFLJ','listening','mcq',1,'Boy: Oh no. I forgot my snack today.
+Girl: You can have some of mine. I have crackers and grapes.
+Boy: Thanks! Can I have some crackers?
+Girl: Sure. Here you go.
+Boy: You are a good friend.','What is the boy''s problem?',NULL,'["He is very tired.","He lost his crackers.","He has no friends.","He forgot his snack."]',3,'The boy says he forgot his snack today.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-listening-268fa4eba677','TOEFLJ','listening','mcq',1,'Boy: Oh no. I forgot my snack today.
+Girl: You can have some of mine. I have crackers and grapes.
+Boy: Thanks! Can I have some crackers?
+Girl: Sure. Here you go.
+Boy: You are a good friend.','What does the boy take from the girl?',NULL,'["An apple","Some crackers","Some grapes","A cookie"]',1,'The boy asks for some crackers, and the girl gives them to him.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-listening-e3436947a9df','TOEFLJ','listening','mcq',1,'Announcer: Good morning, students. Today the school nurse will check everyone''s eyes. Room 2 will go to the nurse''s office at ten o''clock. Room 3 will go at eleven o''clock. Please bring your glasses if you have them.','What will the nurse check today?',NULL,'["Students'' eyes","Students'' ears","Students'' teeth","Students'' feet"]',0,'The announcer says the nurse will check everyone''s eyes.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-listening-939c026f6273','TOEFLJ','listening','mcq',2,'Announcer: Good morning, students. Today the school nurse will check everyone''s eyes. Room 2 will go to the nurse''s office at ten o''clock. Room 3 will go at eleven o''clock. Please bring your glasses if you have them.','When will Room 3 go to the nurse''s office?',NULL,'["At twelve o''clock","At ten o''clock","At nine o''clock","At eleven o''clock"]',3,'Room 2 goes at ten o''clock, and Room 3 goes at eleven o''clock.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-listening-7829e9b57a8b','TOEFLJ','listening','mcq',1,'Girl: Let''s build a tall tower with the blocks.
+Boy: Okay! I have the red blocks. You can use the yellow ones.
+Girl: Put the big blocks on the bottom.
+Boy: Good idea. Then it won''t fall down.','What are the children making?',NULL,'["A bridge","A house","A car","A tower"]',3,'The girl says, "Let''s build a tall tower with the blocks."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-listening-366767b36173','TOEFLJ','listening','mcq',2,'Girl: Let''s build a tall tower with the blocks.
+Boy: Okay! I have the red blocks. You can use the yellow ones.
+Girl: Put the big blocks on the bottom.
+Boy: Good idea. Then it won''t fall down.','Why do they put the big blocks on the bottom?',NULL,'["So the tower will be red","So the boy can have more blocks","So they can finish fast","So the tower will not fall"]',3,'The boy says that with big blocks on the bottom, the tower won''t fall down.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-listening-90c68cd725cc','TOEFLJ','listening','mcq',1,'Teacher: Here are the class jobs for this week. Table one will pass out the paper. Table two will clean the board. Table three will sharpen the pencils. Please do your job every afternoon before you go home.','What job does table two have?',NULL,'["Cleaning the board","Opening the windows","Passing out paper","Sharpening pencils"]',0,'The teacher says table two will clean the board.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-listening-e8be3fa13624','TOEFLJ','listening','mcq',2,'Teacher: Here are the class jobs for this week. Table one will pass out the paper. Table two will clean the board. Table three will sharpen the pencils. Please do your job every afternoon before you go home.','When should the students do their jobs?',NULL,'["Every morning before class","At lunch time","Only on Friday","Every afternoon before going home"]',3,'The teacher says to do the job every afternoon before you go home.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-listening-367df661ab4c','TOEFLJ','listening','mcq',1,'Girl: Guess what? I have a new baby sister!
+Boy: Wow! What is her name?
+Girl: Her name is Rose. She is very small, and she sleeps a lot.
+Boy: Does she cry?
+Girl: Yes, at night. But she is so cute.','What is the girl''s news?',NULL,'["She has a new baby sister.","She has a new puppy.","She is moving to a new house.","She has a new bike."]',0,'The girl says, "I have a new baby sister!"',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-listening-25b6b7cf1c24','TOEFLJ','listening','mcq',2,'Girl: Guess what? I have a new baby sister!
+Boy: Wow! What is her name?
+Girl: Her name is Rose. She is very small, and she sleeps a lot.
+Boy: Does she cry?
+Girl: Yes, at night. But she is so cute.','When does the baby cry?',NULL,'["At lunch","After school","In the morning","At night"]',3,'When the boy asks if the baby cries, the girl says, "Yes, at night."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-listening-bd9c4974c3c1','TOEFLJ','listening','mcq',1,'Announcer: Hello, everyone. Tomorrow is Funny Hat Day! Wear a silly hat to school. At two o''clock, we will have a hat parade in the gym. Families are welcome to come and watch.','What should students wear tomorrow?',NULL,'["A silly hat","Red socks","Their pajamas","A school shirt"]',0,'The announcer says to wear a silly hat to school tomorrow.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-listening-1e6e06ddaa82','TOEFLJ','listening','mcq',1,'Announcer: Hello, everyone. Tomorrow is Funny Hat Day! Wear a silly hat to school. At two o''clock, we will have a hat parade in the gym. Families are welcome to come and watch.','Where will the parade be?',NULL,'["In the gym","In the library","In the cafeteria","On the playground"]',0,'The announcer says there will be a hat parade in the gym.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-listening-e0f5b7b84038','TOEFLJ','listening','mcq',1,'Teacher: Please come and sit on the rug. Make a big circle. Today''s story is about a little bear who cannot fall asleep. Listen carefully. After the story, I will ask you what the bear did to fall asleep.','Where should the children sit?',NULL,'["At their desks","On the rug","On the stairs","By the door"]',1,'The teacher says, "Please come and sit on the rug."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-listening-a77971ee3226','TOEFLJ','listening','mcq',2,'Teacher: Please come and sit on the rug. Make a big circle. Today''s story is about a little bear who cannot fall asleep. Listen carefully. After the story, I will ask you what the bear did to fall asleep.','What is the bear''s problem in the story?',NULL,'["He cannot find his mother.","He is very hungry.","He is lost in the woods.","He cannot fall asleep."]',3,'The teacher says the story is about a little bear who cannot fall asleep.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-listening-795f3d6bf036','TOEFLJ','listening','mcq',1,'Man: You need a new backpack for school. Do you like the blue one or the purple one?
+Girl: I like the purple one. It has little stars on it.
+Man: Okay. And it has a pocket for your water bottle, too.','Which backpack does the girl like?',NULL,'["The purple one","The black one","The green one","The blue one"]',0,'The girl says, "I like the purple one."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-listening-b209483f99f7','TOEFLJ','listening','mcq',2,'Man: You need a new backpack for school. Do you like the blue one or the purple one?
+Girl: I like the purple one. It has little stars on it.
+Man: Okay. And it has a pocket for your water bottle, too.','What is on the backpack the girl likes?',NULL,'["Big flowers","Little stars","A cat","Little hearts"]',1,'The girl says the purple backpack has little stars on it.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-listening-26bae58f9900','TOEFLJ','listening','mcq',1,'Boy: Can I have a turn on the swing?
+Girl: Yes. Let me swing until I count to twenty.
+Boy: Okay. I will wait here by the slide.
+Girl: Eighteen, nineteen, twenty! Your turn!','What does the boy want?',NULL,'["A turn on the swing","Help with counting","A turn on the slide","A ball to play with"]',0,'The boy asks, "Can I have a turn on the swing?"',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-listening-beec10d9cfd4','TOEFLJ','listening','mcq',2,'Boy: Can I have a turn on the swing?
+Girl: Yes. Let me swing until I count to twenty.
+Boy: Okay. I will wait here by the slide.
+Girl: Eighteen, nineteen, twenty! Your turn!','Where does the boy wait?',NULL,'["On a bench","Under a tree","By the slide","By the door"]',2,'The boy says, "I will wait here by the slide."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-listening-b40cc2224c99','TOEFLJ','listening','mcq',1,'Announcer: Attention, please. The water fountain on the first floor is broken today. Please do not use it. If you are thirsty, use the water fountain next to the gym. Thank you.','What is broken?',NULL,'["A light","A clock","A door","A water fountain"]',3,'The announcer says the water fountain on the first floor is broken.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-listening-364da4b0e5cf','TOEFLJ','listening','mcq',2,'Announcer: Attention, please. The water fountain on the first floor is broken today. Please do not use it. If you are thirsty, use the water fountain next to the gym. Thank you.','Where can thirsty students get water today?',NULL,'["Next to the gym","On the first floor","Next to the office","In the classroom"]',0,'The announcer says to use the water fountain next to the gym.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-listening-367acb795565','TOEFLJ','listening','mcq',1,'Teacher: Each of you has ten buttons on your table. Some buttons are big, and some are small. Put the big buttons in the blue cup. Put the small buttons in the red cup. Then count the buttons in each cup.','How many buttons does each student have?',NULL,'["Two","Five","Ten","Twelve"]',2,'The teacher says, "Each of you has ten buttons."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-listening-05165bf4f82f','TOEFLJ','listening','mcq',2,'Teacher: Each of you has ten buttons on your table. Some buttons are big, and some are small. Put the big buttons in the blue cup. Put the small buttons in the red cup. Then count the buttons in each cup.','Where should the small buttons go?',NULL,'["In the blue cup","In the red cup","On the floor","In a bag"]',1,'The teacher says to put the small buttons in the red cup.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-lfm-3121d26ae30d','TOEFLJ','lfm','mcq',1,'PLAYGROUND RULES
+Please ___ turns on the slide. Wait in line and do not push.','Choose the best word or phrase to fill the blank.',NULL,'["give","make","take","do"]',2,'We say "take turns" when people go one at a time.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-lfm-f65bee5191f6','TOEFLJ','lfm','mcq',1,'Dear Ms. Brown,
+My daughter Lily has a cold. She ___ at home today. She will come back tomorrow.
+Thank you,
+Mrs. Cho','Choose the best word or phrase to fill the blank.',NULL,'["is","are","am","be"]',0,'With one person ("she"), we use "is."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-lfm-28e56dbb8455','TOEFLJ','lfm','mcq',1,'SNACK TIME
+Please eat your snack at your desk. When you finish, put your wrapper in the ___.','Choose the best word or phrase to fill the blank.',NULL,'["trash can","chair","window","pencil case"]',0,'A wrapper is trash, so it goes in the trash can.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-lfm-979576cecb4e','TOEFLJ','lfm','mcq',1,'Hi Mom,
+I have ___ new friend at school. Her name is Rosa. We play together at recess.
+Love,
+Kai','Choose the best word or phrase to fill the blank.',NULL,'["many","some","a","an"]',2,'We use "a" before one thing that starts with a consonant sound, like "new."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-lfm-92444d83aa2d','TOEFLJ','lfm','mcq',1,'CLASS NEWS
+We ___ a new student in our class. His name is Omar. Please say hello to him!','Choose the best word or phrase to fill the blank.',NULL,'["having","has","is","have"]',3,'With "we," the verb is "have," not "has."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-lfm-000417b734f7','TOEFLJ','lfm','mcq',2,'NAP ROOM
+The little children are sleeping. Please walk slowly and talk ___ in the hallway.','Choose the best word or phrase to fill the blank.',NULL,'["quick","happy","quietly","loudly"]',2,'Sleeping children need quiet, so we should talk "quietly."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-lfm-4318a78e2325','TOEFLJ','lfm','mcq',1,'COAT HOOKS
+When you come in, please hang your coat ___ your hook. Then sit down.','Choose the best word or phrase to fill the blank.',NULL,'["in","of","under","on"]',3,'We hang a coat "on" a hook.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-lfm-1a40e5799284','TOEFLJ','lfm','mcq',1,'Dear Class,
+Tomorrow we will walk ___ the city park. Please wear good shoes.
+Mr. Tan','Choose the best word or phrase to fill the blank.',NULL,'["of","at","on","to"]',3,'We use "to" to show where we are going.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-lfm-7f0b63d12594','TOEFLJ','lfm','mcq',2,'MY FAMILY
+My big brother is ten years old. I am six years old. He is ___ than me.','Choose the best word or phrase to fill the blank.',NULL,'["old","older","oldest","more old"]',1,'We compare two people with "older than."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-lfm-40dff27fd8ab','TOEFLJ','lfm','mcq',2,'Hi Dad,
+Can you pick me up at the pool? My swim class ___ at 2:30 today.
+Thanks,
+Noah','Choose the best word or phrase to fill the blank.',NULL,'["ending","to end","end","ends"]',3,'"Class" is one thing, so the verb is "ends" with -s.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-lfm-45cce09a18e6','TOEFLJ','lfm','mcq',2,'MATH CORNER
+There are ten counting bears in the box. Please count ___ and then close the box.','Choose the best word or phrase to fill the blank.',NULL,'["them","they","it","their"]',0,'"Them" means the ten counting bears, and it comes after the verb "count."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-lfm-1fd7b099983d','TOEFLJ','lfm','mcq',2,'CLASS NEWS
+Yesterday, we ___ cookies with our teacher. They were very good!','Choose the best word or phrase to fill the blank.',NULL,'["make","making","made","makes"]',2,'"Yesterday" tells us it happened in the past, so we use "made."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-reading-eb4b5b533497','TOEFLJ','reading','mcq',1,'SCHOOL NURSE''S OFFICE
+Do you feel sick or hurt? Come here for help.
+Open: Monday to Friday, 8:00 to 3:00
+1. Knock on the door before you come in.
+2. Bring a note from your teacher.
+3. Sit in a chair and wait for your turn.
+If the nurse is not here, please go to the main office.','Who should go to this room?',NULL,'["A student who wants to play","A student who wants a book","A student who is hungry","A student who feels sick"]',3,'The sign says, "Do you feel sick or hurt? Come here for help."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-reading-9f48b66c85b7','TOEFLJ','reading','mcq',1,'SCHOOL NURSE''S OFFICE
+Do you feel sick or hurt? Come here for help.
+Open: Monday to Friday, 8:00 to 3:00
+1. Knock on the door before you come in.
+2. Bring a note from your teacher.
+3. Sit in a chair and wait for your turn.
+If the nurse is not here, please go to the main office.','What should you do before you go in?',NULL,'["Knock on the door","Call your mom","Wash your hands","Take off your shoes"]',0,'Rule 1 says to knock on the door before you come in.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-reading-f6e39d779c94','TOEFLJ','reading','mcq',2,'SCHOOL NURSE''S OFFICE
+Do you feel sick or hurt? Come here for help.
+Open: Monday to Friday, 8:00 to 3:00
+1. Knock on the door before you come in.
+2. Bring a note from your teacher.
+3. Sit in a chair and wait for your turn.
+If the nurse is not here, please go to the main office.','What should you bring?',NULL,'["A pencil","Some money","A note from your teacher","Your lunch box"]',2,'Rule 2 says to bring a note from your teacher.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-reading-0f52fe9ed231','TOEFLJ','reading','mcq',2,'SCHOOL NURSE''S OFFICE
+Do you feel sick or hurt? Come here for help.
+Open: Monday to Friday, 8:00 to 3:00
+1. Knock on the door before you come in.
+2. Bring a note from your teacher.
+3. Sit in a chair and wait for your turn.
+If the nurse is not here, please go to the main office.','What should you do if the nurse is not there?',NULL,'["Go back to the playground","Go home","Go to the main office","Wait outside"]',2,'The sign says that if the nurse is not here, you should go to the main office.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-reading-62e625781d0d','TOEFLJ','reading','mcq',1,'Kai,
+I went to the store to buy food for dinner. I will be home at five o''clock. Your snack is in the fridge. It is an apple and some cheese. After your snack, please do your spelling words. Then you can play outside. Please take your key with you if you go outside.
+Love,
+Mom','Why did Mom go to the store?',NULL,'["To buy a new key","To buy food for dinner","To buy shoes","To buy a toy"]',1,'Mom writes, "I went to the store to buy food for dinner."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-reading-95b7d10ec1d2','TOEFLJ','reading','mcq',1,'Kai,
+I went to the store to buy food for dinner. I will be home at five o''clock. Your snack is in the fridge. It is an apple and some cheese. After your snack, please do your spelling words. Then you can play outside. Please take your key with you if you go outside.
+Love,
+Mom','What is Kai''s snack?',NULL,'["A sandwich","An apple and some cheese","Some cookies","A banana and some milk"]',1,'The note says the snack is an apple and some cheese.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-reading-fb099826c41a','TOEFLJ','reading','mcq',2,'Kai,
+I went to the store to buy food for dinner. I will be home at five o''clock. Your snack is in the fridge. It is an apple and some cheese. After your snack, please do your spelling words. Then you can play outside. Please take your key with you if you go outside.
+Love,
+Mom','What should Kai do right after his snack?',NULL,'["Do his spelling words","Go to the store","Clean his room","Play outside"]',0,'Mom writes, "After your snack, please do your spelling words."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-reading-8dbfb0f1e7f3','TOEFLJ','reading','mcq',2,'Kai,
+I went to the store to buy food for dinner. I will be home at five o''clock. Your snack is in the fridge. It is an apple and some cheese. After your snack, please do your spelling words. Then you can play outside. Please take your key with you if you go outside.
+Love,
+Mom','What should Kai take if he goes outside?',NULL,'["His ball","His coat","His key","His bike"]',2,'Mom writes, "Please take your key with you if you go outside."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-reading-8d60d0bcd119','TOEFLJ','reading','mcq',1,'My Room
+My room is small, but I love it. My bed is next to the window. In the morning, the sun comes in and wakes me up. I have a green rug on the floor. On my shelf, there are ten books and a toy robot. My favorite thing is my lamp. It looks like the moon! I turn it on at night when I read.','Where is the bed?',NULL,'["Next to the door","Under the shelf","Next to the window","On the green rug"]',2,'The writer says, "My bed is next to the window."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-reading-b31dac973b70','TOEFLJ','reading','mcq',1,'My Room
+My room is small, but I love it. My bed is next to the window. In the morning, the sun comes in and wakes me up. I have a green rug on the floor. On my shelf, there are ten books and a toy robot. My favorite thing is my lamp. It looks like the moon! I turn it on at night when I read.','What color is the rug?',NULL,'["Yellow","Green","Blue","Red"]',1,'The writer says, "I have a green rug on the floor."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-reading-7cf92f3e7e3b','TOEFLJ','reading','mcq',2,'My Room
+My room is small, but I love it. My bed is next to the window. In the morning, the sun comes in and wakes me up. I have a green rug on the floor. On my shelf, there are ten books and a toy robot. My favorite thing is my lamp. It looks like the moon! I turn it on at night when I read.','What is on the shelf?',NULL,'["A clock and a robot","Toy cars and books","Books and a lamp","Books and a toy robot"]',3,'The writer says there are ten books and a toy robot on the shelf.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-reading-39648fdff554','TOEFLJ','reading','mcq',2,'My Room
+My room is small, but I love it. My bed is next to the window. In the morning, the sun comes in and wakes me up. I have a green rug on the floor. On my shelf, there are ten books and a toy robot. My favorite thing is my lamp. It looks like the moon! I turn it on at night when I read.','What is the writer''s favorite thing?',NULL,'["A book about the moon","A lamp that looks like the moon","A big window","A robot that can walk"]',1,'The writer says, "My favorite thing is my lamp. It looks like the moon!"',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-reading-f53b2672fcb4','TOEFLJ','reading','mcq',4,'ROOM 4 DAY PLAN
+8:30 Morning circle
+9:00 Reading
+10:00 Snack
+10:15 Math
+11:30 Lunch
+12:15 Recess
+1:00 Art (Monday and Wednesday)
+1:00 Music (Tuesday and Thursday)
+1:00 Gym (Friday)
+2:30 Go home
+Please bring your gym shoes on Friday. On rainy days, we have recess in the classroom.','What do the students do first every day?',NULL,'["Snack","Math","Reading","Morning circle"]',3,'The plan starts with "8:30 Morning circle."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-reading-307661657929','TOEFLJ','reading','mcq',4,'ROOM 4 DAY PLAN
+8:30 Morning circle
+9:00 Reading
+10:00 Snack
+10:15 Math
+11:30 Lunch
+12:15 Recess
+1:00 Art (Monday and Wednesday)
+1:00 Music (Tuesday and Thursday)
+1:00 Gym (Friday)
+2:30 Go home
+Please bring your gym shoes on Friday. On rainy days, we have recess in the classroom.','What time is lunch?',NULL,'["11:30","1:00","12:15","10:00"]',0,'The plan says "11:30 Lunch."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-reading-6a66978967a4','TOEFLJ','reading','mcq',4,'ROOM 4 DAY PLAN
+8:30 Morning circle
+9:00 Reading
+10:00 Snack
+10:15 Math
+11:30 Lunch
+12:15 Recess
+1:00 Art (Monday and Wednesday)
+1:00 Music (Tuesday and Thursday)
+1:00 Gym (Friday)
+2:30 Go home
+Please bring your gym shoes on Friday. On rainy days, we have recess in the classroom.','What do the students do at 1:00 on Friday?',NULL,'["Recess","Gym","Art","Music"]',1,'The plan says "1:00 Gym (Friday)."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-reading-d1f30f60a729','TOEFLJ','reading','mcq',4,'ROOM 4 DAY PLAN
+8:30 Morning circle
+9:00 Reading
+10:00 Snack
+10:15 Math
+11:30 Lunch
+12:15 Recess
+1:00 Art (Monday and Wednesday)
+1:00 Music (Tuesday and Thursday)
+1:00 Gym (Friday)
+2:30 Go home
+Please bring your gym shoes on Friday. On rainy days, we have recess in the classroom.','What comes right after snack?',NULL,'["Math","Recess","Lunch","Reading"]',0,'Snack is at 10:00, and math is next, at 10:15.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-reading-205bc46dc453','TOEFLJ','reading','mcq',1,'Snails
+A snail is a small animal. It has a soft body and a hard shell on its back. The shell is the snail''s home. When the snail is scared, it goes inside its shell. Snails move very slowly. They like wet places, so you can often see them after it rains. Snails eat leaves and flowers. Some people do not like snails in their gardens!','What is on a snail''s back?',NULL,'["Small wings","A hard shell","Soft fur","Long legs"]',1,'The text says a snail has a hard shell on its back.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-reading-073961926263','TOEFLJ','reading','mcq',1,'Snails
+A snail is a small animal. It has a soft body and a hard shell on its back. The shell is the snail''s home. When the snail is scared, it goes inside its shell. Snails move very slowly. They like wet places, so you can often see them after it rains. Snails eat leaves and flowers. Some people do not like snails in their gardens!','What does a snail do when it is scared?',NULL,'["It runs away fast.","It goes inside its shell.","It jumps into water.","It climbs a tree."]',1,'The text says, "When the snail is scared, it goes inside its shell."',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-reading-e01ab6d11ffd','TOEFLJ','reading','mcq',2,'Snails
+A snail is a small animal. It has a soft body and a hard shell on its back. The shell is the snail''s home. When the snail is scared, it goes inside its shell. Snails move very slowly. They like wet places, so you can often see them after it rains. Snails eat leaves and flowers. Some people do not like snails in their gardens!','When can you often see snails?',NULL,'["On hot, dry days","When it snows","At lunch time","After it rains"]',3,'Snails like wet places, so you can often see them after it rains.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-toeflj-reading-8059c4e410c1','TOEFLJ','reading','mcq',2,'Snails
+A snail is a small animal. It has a soft body and a hard shell on its back. The shell is the snail''s home. When the snail is scared, it goes inside its shell. Snails move very slowly. They like wet places, so you can often see them after it rains. Snails eat leaves and flowers. Some people do not like snails in their gardens!','Why do some people not like snails in their gardens?',NULL,'["Snails dig big holes.","Snails eat leaves and flowers.","Snails move too fast.","Snails are very loud."]',1,'The text says snails eat leaves and flowers, so they can hurt a garden.',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-wida-reading-e74968b8a5de','WIDA','reading','mcq',1,'It rained last night. Today Lucy puts on her yellow boots. She sees a big puddle. She jumps in it. Splash! Her dog jumps in, too. Now Lucy and her dog are both wet. Lucy laughs.','What color are Lucy''s boots?',NULL,'["Blue","Yellow","Red","Green"]',1,'Key line: "Today Lucy puts on her yellow boots." So the answer is "Yellow".',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-wida-reading-7ecb04540d42','WIDA','reading','mcq',2,'It rained last night. Today Lucy puts on her yellow boots. She sees a big puddle. She jumps in it. Splash! Her dog jumps in, too. Now Lucy and her dog are both wet. Lucy laughs.','Why are Lucy and her dog wet?',NULL,'["They walked in the rain.","They swam in a pool.","They took a bath.","They jumped in a puddle."]',3,'Key line: "She jumps in it. Splash! Her dog jumps in, too." So the answer is "They jumped in a puddle".',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-wida-reading-fcf6009f404f','WIDA','reading','mcq',1,'Shopping List
+- 2 bananas
+- 6 eggs
+- 1 bag of rice
+- milk
+Mom and I go to the store. I hold the list. I find the bananas first. Mom gets the eggs. We cannot find the rice.','How many eggs are on the list?',NULL,'["4","2","6","1"]',2,'Key line: "6 eggs." So the answer is "6".',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-wida-reading-0ed8e091a048','WIDA','reading','mcq',2,'Shopping List
+- 2 bananas
+- 6 eggs
+- 1 bag of rice
+- milk
+Mom and I go to the store. I hold the list. I find the bananas first. Mom gets the eggs. We cannot find the rice.','What can they NOT find?',NULL,'["Eggs","Milk","Bananas","Rice"]',3,'Key line: "We cannot find the rice." So the answer is "Rice".',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-wida-reading-3e1e3ecb6acb','WIDA','reading','mcq',1,'Go outside on a sunny day. Look down. You can see your shadow. Your shadow is dark. When you move, your shadow moves, too. When you wave, it waves! On a cloudy day, it is hard to see your shadow.','What does your shadow do when you move?',NULL,'["It gets bigger.","It stays still.","It moves, too.","It goes away."]',2,'Key line: "When you move, your shadow moves, too." So the answer is "It moves, too".',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-wida-reading-038bc76f29fa','WIDA','reading','mcq',2,'Go outside on a sunny day. Look down. You can see your shadow. Your shadow is dark. When you move, your shadow moves, too. When you wave, it waves! On a cloudy day, it is hard to see your shadow.','When is it hard to see your shadow?',NULL,'["In the morning","On a cloudy day","On a sunny day","When you wave"]',1,'Key line: "On a cloudy day, it is hard to see your shadow." So the answer is "On a cloudy day".',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-wida-reading-a1b5ca12a758','WIDA','reading','mcq',1,'Ken is hungry. He makes a sandwich. First, he puts two pieces of bread on a plate. Next, he adds cheese. Then he adds a slice of tomato. Ken cuts the sandwich in half. He gives one half to his sister.','What does Ken put on the plate first?',NULL,'["Bread","Cheese","Tomato","Ham"]',0,'Key line: "First, he puts two pieces of bread on a plate." So the answer is "Bread".',1,0);
+INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-wida-reading-aa644c10b558','WIDA','reading','mcq',2,'Ken is hungry. He makes a sandwich. First, he puts two pieces of bread on a plate. Next, he adds cheese. Then he adds a slice of tomato. Ken cuts the sandwich in half. He gives one half to his sister.','What does Ken do with one half of the sandwich?',NULL,'["He gives it to his dog.","He puts it in his lunch box.","He gives it to his sister.","He eats it fast."]',2,'Key line: "He gives one half to his sister." So the answer is "He gives it to his sister".',1,0);
 INSERT OR IGNORE INTO questions (id,exam_type,section,kind,difficulty,passage,stem,image_svg,choices,answer,explanation,active,created_at) VALUES ('seed-wida-reading-fea8a8f09a52','WIDA','reading','mcq',1,'Book Corner
 1. Take off your shoes.
 2. Sit on the rug or a pillow.
