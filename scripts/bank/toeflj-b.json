@@ -1,0 +1,1412 @@
+[
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 1,
+  "passage": "ART ROOM RULES\nPlease wash your brushes after you paint. Then put the paper back ___ the shelf.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "of",
+   "from",
+   "on",
+   "at"
+  ],
+  "answer": 2,
+  "explanation": "Things rest \"on\" a shelf, so we put the paper back on the shelf."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 1,
+  "passage": "Hi Grandma,\nThank you for the new book! I ___ it every night before bed. It is my favorite story.\nLove,\nBen",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "read",
+   "reads",
+   "reading",
+   "to read"
+  ],
+  "answer": 0,
+  "explanation": "With the subject \"I\" in the simple present, the verb is \"read,\" with no -s."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 1,
+  "passage": "Our class has a fish tank. There are five fish in it. The biggest fish is orange. ___ name is Goldie.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "It",
+   "Its",
+   "It's",
+   "Their"
+  ],
+  "answer": 1,
+  "explanation": "\"Its\" shows that the name belongs to one fish; \"It's\" means \"it is.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 1,
+  "passage": "FIELD DAY NOTE\nTomorrow will be sunny and hot. Remember to bring a hat and a bottle of ___ to drink.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "paper",
+   "sand",
+   "chalk",
+   "water"
+  ],
+  "answer": 3,
+  "explanation": "You drink water, so a bottle of water is the best choice."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 1,
+  "passage": "LUNCH TIME\nStudents eat lunch in the cafeteria at 12:00. Please ___ your hands before you eat.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "washes",
+   "washing",
+   "washed",
+   "wash"
+  ],
+  "answer": 3,
+  "explanation": "After \"Please,\" we use the base form of the verb: \"Please wash.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 1,
+  "passage": "Dear Ms. Park,\nMy son, Tim, is sick today, so he can't come to school. I am taking him to the ___ this morning.\nThank you,\nMrs. Lee",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "library",
+   "zoo",
+   "doctor",
+   "playground"
+  ],
+  "answer": 2,
+  "explanation": "A sick child goes to see a doctor."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 1,
+  "passage": "Our music class is ___ the morning. We sing songs and play the drums before lunch.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "on",
+   "in",
+   "at",
+   "to"
+  ],
+  "answer": 1,
+  "explanation": "We say \"in the morning.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 1,
+  "passage": "MY CLASSROOM\nMy classroom is on the second floor. There ___ two big windows, so it is very bright.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "are",
+   "is",
+   "am",
+   "be"
+  ],
+  "answer": 0,
+  "explanation": "\"Two big windows\" is plural, so we use \"are.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 1,
+  "passage": "Sam is tall, but his little sister is ___. She can't reach the top shelf without a stool.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "short",
+   "tall",
+   "fast",
+   "old"
+  ],
+  "answer": 0,
+  "explanation": "She needs a stool to reach the shelf, so she is short."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 1,
+  "passage": "CLASS BIRTHDAY CHART\nTeacher: ___ is your birthday, Mina?\nMina: It is in June. It is on June 9.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "Where",
+   "Who",
+   "When",
+   "Why"
+  ],
+  "answer": 2,
+  "explanation": "Mina answers with a month and a date, so the question asks \"When.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 2,
+  "passage": "Last Friday, our class ___ a trip to a farm. We saw cows, fed the goats, and picked apples.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "take",
+   "took",
+   "taken",
+   "taking"
+  ],
+  "answer": 1,
+  "explanation": "\"Last Friday\" shows the past, and the past tense of \"take\" is \"took.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 2,
+  "passage": "The new playground is great! The slide is ___ than the old one, so the ride down lasts longer.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "long",
+   "longest",
+   "more long",
+   "longer"
+  ],
+  "answer": 3,
+  "explanation": "\"Than\" tells us to use the comparative form, \"longer.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 2,
+  "passage": "LIBRARY NOTICE\nThe library will be closed on Monday ___ workers are painting the walls. It will open again on Tuesday.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "so",
+   "but",
+   "or",
+   "because"
+  ],
+  "answer": 3,
+  "explanation": "The painting is the reason the library is closed, so \"because\" fits."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 2,
+  "passage": "Hi Dad,\nI'm at the science fair now. Right now, my friends and I ___ at the robot table. The robots can dance!\nSee you soon,\nOlivia",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "look",
+   "looked",
+   "are looking",
+   "looks"
+  ],
+  "answer": 2,
+  "explanation": "\"Right now\" shows an action happening at this moment, so we use the present continuous \"are looking.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 2,
+  "passage": "CAUTION\nThe hallway floor is wet. Please walk slowly so you don't ___ and fall.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "slip",
+   "swim",
+   "sing",
+   "sleep"
+  ],
+  "answer": 0,
+  "explanation": "On a wet floor, people can slip and fall."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 2,
+  "passage": "LOST AND FOUND\nWe found a green umbrella near the gym. If it is ___, please come to the main office to get it.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "your",
+   "yours",
+   "you",
+   "you're"
+  ],
+  "answer": 1,
+  "explanation": "\"Yours\" stands alone to mean \"your umbrella\": \"If it is yours.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 2,
+  "passage": "Dear Families,\nWe don't have ___ glue left for our art project. Please send a bottle to school if you can.\nThank you,\nMr. Clark",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "many",
+   "a few",
+   "several",
+   "much"
+  ],
+  "answer": 3,
+  "explanation": "\"Glue\" cannot be counted, so we use \"much\" in a negative sentence."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 2,
+  "passage": "SPORTS DAY RESULTS\nAmir ran the race in nine seconds. No one ran faster. He was the ___ runner in the whole school.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "fastest",
+   "faster",
+   "fast",
+   "most fast"
+  ],
+  "answer": 0,
+  "explanation": "\"No one ran faster\" and \"in the whole school\" call for the superlative, \"fastest.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 2,
+  "passage": "TEST DAY REMINDER\nSome students will finish the test early. Please read or work ___ so you don't bother the students who are still writing.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "quiet",
+   "quietly",
+   "quieter",
+   "quietness"
+  ],
+  "answer": 1,
+  "explanation": "The word describes how to work, so we need the adverb \"quietly.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 2,
+  "passage": "Dear Parents,\nTomorrow, the fourth graders ___ plant trees behind the school. Please send your child in old clothes.\nMs. Diaz",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "were going to",
+   "have gone to",
+   "are going to",
+   "went to"
+  ],
+  "answer": 2,
+  "explanation": "\"Tomorrow\" shows a future plan, so \"are going to\" is correct."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 3,
+  "passage": "GARDEN CLUB NEWS\nOur school ___ a garden club for five years, and it is still growing. This spring, we will plant pumpkins for the first time.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "has had",
+   "had",
+   "is having",
+   "have had"
+  ],
+  "answer": 0,
+  "explanation": "The club started in the past and still exists, so we use the present perfect \"has had\" with the singular subject \"school.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 3,
+  "passage": "The school band is the most popular club at Pine Hill. Many students enjoy ___ in the band because they can make new friends and perform at concerts.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "to play",
+   "play",
+   "played",
+   "playing"
+  ],
+  "answer": 3,
+  "explanation": "The verb \"enjoy\" is followed by a gerund (-ing form): \"enjoy playing.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 3,
+  "passage": "READING CONTEST WINNERS\nCongratulations to Ms. Lopez, the teacher ___ class read the most books this year. Her students read 412 books!",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "who",
+   "whose",
+   "which",
+   "whom"
+  ],
+  "answer": 1,
+  "explanation": "\"Whose\" shows possession: the class belongs to Ms. Lopez."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 3,
+  "passage": "OFFICE NOTICE\nAll lost items ___ to the main office at the end of each school day. Students may pick them up before 4:00 p.m.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "take",
+   "are taking",
+   "are taken",
+   "took"
+  ],
+  "answer": 2,
+  "explanation": "The items do not take themselves somewhere, so the passive voice \"are taken\" is needed."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 3,
+  "passage": "BUS SAFETY\nPlease ___ your seat as soon as you get on the bus. Standing in the aisle while the bus is moving is not safe.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "make",
+   "do",
+   "give",
+   "take"
+  ],
+  "answer": 3,
+  "explanation": "The correct expression is \"take your seat,\" which means sit down."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 3,
+  "passage": "COMPUTER LAB RULES\nStudents may not enter the computer lab ___ a teacher is in the room. Food and drinks are never allowed.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "if",
+   "so",
+   "unless",
+   "although"
+  ],
+  "answer": 2,
+  "explanation": "\"Unless\" means \"except if\": students cannot enter except if a teacher is there."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 3,
+  "passage": "The book fair was a huge ___. We sold more than three hundred books and raised $600 for new library shelves.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "success",
+   "mistake",
+   "problem",
+   "accident"
+  ],
+  "answer": 0,
+  "explanation": "Selling many books and raising money shows the event went very well, so it was a success."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 3,
+  "passage": "On moving day, the box of science books was ___ heavy for one student to carry, so two of us lifted it together.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "very",
+   "too",
+   "so",
+   "enough"
+  ],
+  "answer": 1,
+  "explanation": "\"Too ... for one student to carry\" means it was more than one student could lift."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 3,
+  "passage": "Hello Mr. Ruiz,\nCould you tell me what time ___ on Friday? I want to make sure I am not late for the field trip.\nThanks,\nNoah",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "does the bus leave",
+   "the bus leaves",
+   "leaves the bus",
+   "is the bus leave"
+  ],
+  "answer": 1,
+  "explanation": "In an indirect question after \"Could you tell me,\" the subject comes before the verb: \"what time the bus leaves.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 3,
+  "passage": "Only a ___ students came to the club meeting because of the heavy snow. We will meet again next Tuesday.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "little",
+   "lot",
+   "few",
+   "many"
+  ],
+  "answer": 2,
+  "explanation": "\"Students\" can be counted, so we say \"only a few students.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 4,
+  "passage": "Priya found it hard to wake up at 6:00 a.m. when she first joined the swim team. After a month of morning practices, however, she is used to ___ up early.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "getting",
+   "get",
+   "got",
+   "have got"
+  ],
+  "answer": 0,
+  "explanation": "In \"be used to,\" \"to\" is a preposition, so it is followed by an -ing form: \"used to getting up.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 4,
+  "passage": "The science documentary about deep-sea creatures was so ___ that the whole class asked to watch it again the next day.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "fascinated",
+   "fascinate",
+   "fascination",
+   "fascinating"
+  ],
+  "answer": 3,
+  "explanation": "The documentary caused the interest, so the -ing adjective \"fascinating\" is correct."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 4,
+  "passage": "VOLUNTEERS WANTED\nWe need eight students to help ___ this year's food drive. Duties include making posters, collecting cans, and sorting boxes.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "postpone",
+   "organize",
+   "ignore",
+   "forbid"
+  ],
+  "answer": 1,
+  "explanation": "The volunteers will make posters and collect cans, which means they will help organize the event."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 4,
+  "passage": "LIBRARY POLICY\nLibrary books that are damaged must ___ to the front desk. Do not put them back on the shelves.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "bring",
+   "be bringing",
+   "brought",
+   "be brought"
+  ],
+  "answer": 3,
+  "explanation": "Books are brought by people, so after the modal \"must\" we need the passive form \"be brought.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 4,
+  "passage": "Ants are among the smallest animals in the schoolyard. ___, they can carry objects many times heavier than their own bodies.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "Therefore",
+   "For example",
+   "Nevertheless",
+   "Similarly"
+  ],
+  "answer": 2,
+  "explanation": "The second sentence contrasts with the first (small but very strong), so \"Nevertheless\" fits."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 4,
+  "passage": "SPORTS UPDATE\nBecause of the ___ rain this afternoon, Thursday's soccer game has been moved to the indoor gym.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "heavy",
+   "thick",
+   "tall",
+   "deep"
+  ],
+  "answer": 0,
+  "explanation": "In English, we say \"heavy rain\" for a lot of rain."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 4,
+  "passage": "HISTORY FAIR\nEach of the students in Room 12 ___ a different topic for the history fair, so there will be no repeated projects.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "have chosen",
+   "are choosing",
+   "choose",
+   "has chosen"
+  ],
+  "answer": 3,
+  "explanation": "The subject is \"Each,\" which is singular, so the verb is \"has chosen.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 4,
+  "passage": "During Earth Hour, the students turned off all the classroom lights ___ save energy and show they care about the planet.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "so that",
+   "in order to",
+   "because of",
+   "for"
+  ],
+  "answer": 1,
+  "explanation": "\"In order to\" is followed by the base form of a verb (\"save\") to show purpose."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 4,
+  "passage": "Mr. Grant's directions for the experiment were very ___. He explained every step exactly, so nobody was confused about what to do.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "precise",
+   "vague",
+   "careless",
+   "rare"
+  ],
+  "answer": 0,
+  "explanation": "Directions that explain every step exactly are precise."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 4,
+  "passage": "Our school concert is held in a rented hall every year. If our school ___ a bigger gym, we could hold the concert there instead.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "has",
+   "will have",
+   "had",
+   "would have"
+  ],
+  "answer": 2,
+  "explanation": "This is an unreal present situation, so the \"if\" clause uses the past tense \"had\" with \"could\" in the main clause."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 5,
+  "passage": "FIELD TRIP UPDATE\n___ the field trip takes place on Friday depends on the weather forecast. We will email all families on Thursday evening.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "If",
+   "That",
+   "What",
+   "Whether"
+  ],
+  "answer": 3,
+  "explanation": "A noun clause used as the subject of a sentence about two possibilities begins with \"Whether\"; \"If\" cannot start a subject clause."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 5,
+  "passage": "Leo did not look at the trail map before the hike. If he had studied it more carefully yesterday, he ___ lost in the forest right now.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "wouldn't be",
+   "won't be",
+   "hadn't been",
+   "isn't"
+  ],
+  "answer": 0,
+  "explanation": "This mixed conditional links a past condition (\"had studied\") to a present result, so \"wouldn't be\" is correct."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 5,
+  "passage": "Scientists remain ___ about why the lake's fish are disappearing; some believe the water is too warm, while others blame pollution.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "united",
+   "certain",
+   "divided",
+   "silent"
+  ],
+  "answer": 2,
+  "explanation": "Scientists hold different opinions, so they are divided."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 5,
+  "passage": "___ by the loud thunder, the class puppy hid under the teacher's desk until the storm ended.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "Frightening",
+   "Frightened",
+   "To frighten",
+   "Having frightened"
+  ],
+  "answer": 1,
+  "explanation": "The puppy was frightened by the thunder, so the past participle \"Frightened\" is needed."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 5,
+  "passage": "Only after all the votes were counted ___ who the new student council president would be.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "we learned",
+   "did we learn",
+   "we did learn",
+   "learned we"
+  ],
+  "answer": 1,
+  "explanation": "When a sentence begins with \"Only after ...,\" the main clause uses question word order: \"did we learn.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 5,
+  "passage": "BOOK REVIEW\nAlthough the novel is long, its author's ___ style makes it easy to read; she never uses an unnecessary word.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "wordy",
+   "obscure",
+   "repetitive",
+   "concise"
+  ],
+  "answer": 3,
+  "explanation": "A style with no unnecessary words is concise."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 5,
+  "passage": "Hi Maya,\nYour science report is due at 8:00 tomorrow morning, and you haven't started it yet. You ___ start it tonight!\nYour friend,\nJess",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "would rather",
+   "ought",
+   "had better",
+   "should have"
+  ],
+  "answer": 2,
+  "explanation": "\"Had better\" + base verb gives strong advice: \"You had better start it tonight.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 5,
+  "passage": "ESSAY CONTEST\nThe topic ___ Hana wrote her winning essay was the history of the town's first public library.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "about which",
+   "which",
+   "about that",
+   "what"
+  ],
+  "answer": 0,
+  "explanation": "The verb phrase is \"write about\" something, and the preposition can move before \"which\": \"the topic about which she wrote.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 5,
+  "passage": "PRINCIPAL'S NOTE\nMs. Okafor ___ the rumor that school would close early this year. She said that classes will continue until June 20 as planned.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "confirmed",
+   "spread",
+   "started",
+   "dismissed"
+  ],
+  "answer": 3,
+  "explanation": "She said classes would continue as planned, so she rejected the rumor as untrue, or dismissed it."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "lfm",
+  "difficulty": 5,
+  "passage": "___ having practiced for weeks, the debate team lost in the first round of the regional tournament.",
+  "stem": "Choose the best word or phrase to fill the blank.",
+  "choices": [
+   "In spite",
+   "Despite",
+   "Because",
+   "However"
+  ],
+  "answer": 1,
+  "explanation": "\"Despite\" is a preposition and can be followed by a gerund phrase (\"having practiced\"); \"In spite\" would need \"of.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "SCHOOL ART SHOW\nCome and see our students' paintings and drawings!\nWhen: Friday, March 14, from 3:00 to 5:00 p.m.\nWhere: The school gym\nThe show is free for everyone. Families are welcome. Each class has its own table.\nPlease do not touch the pictures.\nThe fifth grade will sell snacks and juice. All the money will help buy new paintbrushes for the art room.",
+  "stem": "What is this notice about?",
+  "choices": [
+   "A soccer game",
+   "A music concert",
+   "An art show",
+   "A book sale"
+  ],
+  "answer": 2,
+  "explanation": "The notice says \"SCHOOL ART SHOW\" and talks about paintings and drawings."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "SCHOOL ART SHOW\nCome and see our students' paintings and drawings!\nWhen: Friday, March 14, from 3:00 to 5:00 p.m.\nWhere: The school gym\nThe show is free for everyone. Families are welcome. Each class has its own table.\nPlease do not touch the pictures.\nThe fifth grade will sell snacks and juice. All the money will help buy new paintbrushes for the art room.",
+  "stem": "Where is the show?",
+  "choices": [
+   "In the school gym",
+   "In the library",
+   "In the school cafeteria",
+   "In the art room"
+  ],
+  "answer": 0,
+  "explanation": "The notice says \"Where: The school gym.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "SCHOOL ART SHOW\nCome and see our students' paintings and drawings!\nWhen: Friday, March 14, from 3:00 to 5:00 p.m.\nWhere: The school gym\nThe show is free for everyone. Families are welcome. Each class has its own table.\nPlease do not touch the pictures.\nThe fifth grade will sell snacks and juice. All the money will help buy new paintbrushes for the art room.",
+  "stem": "What should visitors NOT do?",
+  "choices": [
+   "Touch the pictures",
+   "Bring their families",
+   "Buy snacks and juice",
+   "Come at 3:00 p.m."
+  ],
+  "answer": 0,
+  "explanation": "The notice says \"Please do not touch the pictures.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "SCHOOL ART SHOW\nCome and see our students' paintings and drawings!\nWhen: Friday, March 14, from 3:00 to 5:00 p.m.\nWhere: The school gym\nThe show is free for everyone. Families are welcome. Each class has its own table.\nPlease do not touch the pictures.\nThe fifth grade will sell snacks and juice. All the money will help buy new paintbrushes for the art room.",
+  "stem": "Why will the fifth grade sell snacks?",
+  "choices": [
+   "To pay for the gym",
+   "To buy new paintbrushes",
+   "To buy new library books",
+   "To pay for a class trip"
+  ],
+  "answer": 1,
+  "explanation": "The notice says the money \"will help buy new paintbrushes for the art room.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "Dear Class,\nOur class rabbit, Cookie, needs your help this week. Every day, one student will feed her and give her fresh water. Here is the plan:\nMonday: Ana\nTuesday: Jack\nWednesday: Lily\nThursday: Omar\nFriday: Ben\nCookie eats carrots and green leaves. Please do not give her candy or bread. They are bad for her. Wash your hands after you touch her.\nThank you!\nMs. Brown",
+  "stem": "Who is Cookie?",
+  "choices": [
+   "A new student",
+   "The teacher",
+   "The class rabbit",
+   "A school cook"
+  ],
+  "answer": 2,
+  "explanation": "The note says \"Our class rabbit, Cookie.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "Dear Class,\nOur class rabbit, Cookie, needs your help this week. Every day, one student will feed her and give her fresh water. Here is the plan:\nMonday: Ana\nTuesday: Jack\nWednesday: Lily\nThursday: Omar\nFriday: Ben\nCookie eats carrots and green leaves. Please do not give her candy or bread. They are bad for her. Wash your hands after you touch her.\nThank you!\nMs. Brown",
+  "stem": "Who will feed Cookie on Wednesday?",
+  "choices": [
+   "Jack",
+   "Omar",
+   "Ana",
+   "Lily"
+  ],
+  "answer": 3,
+  "explanation": "The plan says \"Wednesday: Lily.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "Dear Class,\nOur class rabbit, Cookie, needs your help this week. Every day, one student will feed her and give her fresh water. Here is the plan:\nMonday: Ana\nTuesday: Jack\nWednesday: Lily\nThursday: Omar\nFriday: Ben\nCookie eats carrots and green leaves. Please do not give her candy or bread. They are bad for her. Wash your hands after you touch her.\nThank you!\nMs. Brown",
+  "stem": "What does Cookie eat?",
+  "choices": [
+   "Candy and bread",
+   "Fish and rice",
+   "Apples and cheese crackers",
+   "Carrots and green leaves"
+  ],
+  "answer": 3,
+  "explanation": "The note says \"Cookie eats carrots and green leaves.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Dear Class,\nOur class rabbit, Cookie, needs your help this week. Every day, one student will feed her and give her fresh water. Here is the plan:\nMonday: Ana\nTuesday: Jack\nWednesday: Lily\nThursday: Omar\nFriday: Ben\nCookie eats carrots and green leaves. Please do not give her candy or bread. They are bad for her. Wash your hands after you touch her.\nThank you!\nMs. Brown",
+  "stem": "What should students do after they touch Cookie?",
+  "choices": [
+   "Wash their hands",
+   "Give her candy",
+   "Write a note",
+   "Change her water"
+  ],
+  "answer": 0,
+  "explanation": "Ms. Brown writes, \"Wash your hands after you touch her.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "Penguins are birds, but they cannot fly. Instead, they are very good swimmers. Their wings work like flippers and help them move fast in the water. Most penguins live in cold places near the South Pole. They have thick feathers and a layer of fat. These keep them warm.\nPenguins eat fish, squid, and tiny sea animals called krill. They catch their food with their sharp beaks. On land, penguins walk slowly. Sometimes they slide on their bellies across the ice. This is a fast way to travel!\nMany penguins live together in big groups called colonies.",
+  "stem": "What can penguins NOT do?",
+  "choices": [
+   "Swim",
+   "Fly",
+   "Walk",
+   "Slide on the ice"
+  ],
+  "answer": 1,
+  "explanation": "The text says, \"Penguins are birds, but they cannot fly.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Penguins are birds, but they cannot fly. Instead, they are very good swimmers. Their wings work like flippers and help them move fast in the water. Most penguins live in cold places near the South Pole. They have thick feathers and a layer of fat. These keep them warm.\nPenguins eat fish, squid, and tiny sea animals called krill. They catch their food with their sharp beaks. On land, penguins walk slowly. Sometimes they slide on their bellies across the ice. This is a fast way to travel!\nMany penguins live together in big groups called colonies.",
+  "stem": "What helps keep penguins warm?",
+  "choices": [
+   "Their sharp beaks",
+   "Sliding on the ice",
+   "Thick feathers and a layer of fat",
+   "Swimming in the water"
+  ],
+  "answer": 2,
+  "explanation": "The text says thick feathers and a layer of fat \"keep them warm.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Penguins are birds, but they cannot fly. Instead, they are very good swimmers. Their wings work like flippers and help them move fast in the water. Most penguins live in cold places near the South Pole. They have thick feathers and a layer of fat. These keep them warm.\nPenguins eat fish, squid, and tiny sea animals called krill. They catch their food with their sharp beaks. On land, penguins walk slowly. Sometimes they slide on their bellies across the ice. This is a fast way to travel!\nMany penguins live together in big groups called colonies.",
+  "stem": "What is krill?",
+  "choices": [
+   "A kind of bird",
+   "A big group of penguins",
+   "A cold place near the South Pole",
+   "Tiny sea animals"
+  ],
+  "answer": 3,
+  "explanation": "The text says penguins eat \"tiny sea animals called krill.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Penguins are birds, but they cannot fly. Instead, they are very good swimmers. Their wings work like flippers and help them move fast in the water. Most penguins live in cold places near the South Pole. They have thick feathers and a layer of fat. These keep them warm.\nPenguins eat fish, squid, and tiny sea animals called krill. They catch their food with their sharp beaks. On land, penguins walk slowly. Sometimes they slide on their bellies across the ice. This is a fast way to travel!\nMany penguins live together in big groups called colonies.",
+  "stem": "Why do penguins sometimes slide on their bellies?",
+  "choices": [
+   "It helps them catch fish.",
+   "It keeps their feathers clean.",
+   "It is a fast way to travel.",
+   "It helps them find their colony."
+  ],
+  "answer": 2,
+  "explanation": "The text says sliding on their bellies \"is a fast way to travel!\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "WELCOME TO GREEN VALLEY ZOO\nOpen every day from 9:00 a.m. to 5:00 p.m.\nTickets:\nAdults: $10\nChildren (ages 3 to 12): $5\nChildren under 3: Free\nPlease do not feed the animals. They eat special food.\nStay on the paths at all times.\nWatch the lions eat lunch at 2:00 p.m.!\nThe gift shop is next to the front gate.",
+  "stem": "How much is a ticket for an eight-year-old child?",
+  "choices": [
+   "$5",
+   "$10",
+   "$3",
+   "Free"
+  ],
+  "answer": 0,
+  "explanation": "Children ages 3 to 12 pay $5, and eight is in that group."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "WELCOME TO GREEN VALLEY ZOO\nOpen every day from 9:00 a.m. to 5:00 p.m.\nTickets:\nAdults: $10\nChildren (ages 3 to 12): $5\nChildren under 3: Free\nPlease do not feed the animals. They eat special food.\nStay on the paths at all times.\nWatch the lions eat lunch at 2:00 p.m.!\nThe gift shop is next to the front gate.",
+  "stem": "When can visitors watch the lions eat?",
+  "choices": [
+   "At 9:00 a.m.",
+   "At 2:00 p.m.",
+   "At 5:00 p.m.",
+   "At 12:00 p.m."
+  ],
+  "answer": 1,
+  "explanation": "The sign says, \"Watch the lions eat lunch at 2:00 p.m.!\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "WELCOME TO GREEN VALLEY ZOO\nOpen every day from 9:00 a.m. to 5:00 p.m.\nTickets:\nAdults: $10\nChildren (ages 3 to 12): $5\nChildren under 3: Free\nPlease do not feed the animals. They eat special food.\nStay on the paths at all times.\nWatch the lions eat lunch at 2:00 p.m.!\nThe gift shop is next to the front gate.",
+  "stem": "Why should visitors not feed the animals?",
+  "choices": [
+   "The animals are sleeping.",
+   "The food costs too much.",
+   "The animals eat special food.",
+   "The gift shop sells the food."
+  ],
+  "answer": 2,
+  "explanation": "The sign says, \"Please do not feed the animals. They eat special food.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "WELCOME TO GREEN VALLEY ZOO\nOpen every day from 9:00 a.m. to 5:00 p.m.\nTickets:\nAdults: $10\nChildren (ages 3 to 12): $5\nChildren under 3: Free\nPlease do not feed the animals. They eat special food.\nStay on the paths at all times.\nWatch the lions eat lunch at 2:00 p.m.!\nThe gift shop is next to the front gate.",
+  "stem": "Where is the gift shop?",
+  "choices": [
+   "Next to the front gate",
+   "Next to the lions",
+   "In the middle of the zoo",
+   "Behind the snack bar"
+  ],
+  "answer": 0,
+  "explanation": "The sign says the gift shop \"is next to the front gate.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Ava got a blue bike for her ninth birthday. She was excited, but she was also a little scared. She did not know how to ride it.\nOn Saturday, her father took her to a quiet street near their house. He held the back of the seat while Ava pedaled. \"Don't let go!\" she said. Ava fell two times, but she did not give up.\nAfter an hour, Ava rode all the way to the end of the street. She looked back and saw her father far away. He was waving and smiling. He had let go a long time ago! Ava laughed. She was riding all by herself.",
+  "stem": "How did Ava feel when she got her bike?",
+  "choices": [
+   "Angry and sad",
+   "Excited but a little scared",
+   "Bored and tired",
+   "Surprised and a little angry"
+  ],
+  "answer": 1,
+  "explanation": "The story says, \"She was excited, but she was also a little scared.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "Ava got a blue bike for her ninth birthday. She was excited, but she was also a little scared. She did not know how to ride it.\nOn Saturday, her father took her to a quiet street near their house. He held the back of the seat while Ava pedaled. \"Don't let go!\" she said. Ava fell two times, but she did not give up.\nAfter an hour, Ava rode all the way to the end of the street. She looked back and saw her father far away. He was waving and smiling. He had let go a long time ago! Ava laughed. She was riding all by herself.",
+  "stem": "Where did Ava learn to ride her bike?",
+  "choices": [
+   "In the school playground",
+   "In the big park next to her school",
+   "On a path by the beach",
+   "On a quiet street near her house"
+  ],
+  "answer": 3,
+  "explanation": "Her father \"took her to a quiet street near their house.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Ava got a blue bike for her ninth birthday. She was excited, but she was also a little scared. She did not know how to ride it.\nOn Saturday, her father took her to a quiet street near their house. He held the back of the seat while Ava pedaled. \"Don't let go!\" she said. Ava fell two times, but she did not give up.\nAfter an hour, Ava rode all the way to the end of the street. She looked back and saw her father far away. He was waving and smiling. He had let go a long time ago! Ava laughed. She was riding all by herself.",
+  "stem": "What did Ava's father do when she started to pedal?",
+  "choices": [
+   "He rode his own bike next to her.",
+   "He held the back of the seat.",
+   "He took pictures of her.",
+   "He fixed the bike's wheel."
+  ],
+  "answer": 1,
+  "explanation": "The story says, \"He held the back of the seat while Ava pedaled.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Ava got a blue bike for her ninth birthday. She was excited, but she was also a little scared. She did not know how to ride it.\nOn Saturday, her father took her to a quiet street near their house. He held the back of the seat while Ava pedaled. \"Don't let go!\" she said. Ava fell two times, but she did not give up.\nAfter an hour, Ava rode all the way to the end of the street. She looked back and saw her father far away. He was waving and smiling. He had let go a long time ago! Ava laughed. She was riding all by herself.",
+  "stem": "Why did Ava laugh at the end of the story?",
+  "choices": [
+   "She fell off her bike again.",
+   "Her father fell down on the street.",
+   "She saw that she was riding without help.",
+   "Her father said something very funny to her."
+  ],
+  "answer": 2,
+  "explanation": "Ava saw her father far away and understood that \"She was riding all by herself.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Hi Lucas,\nMy name is Kenji. I live in a small town by the sea. I am in the fourth grade.\nMy school starts at 8:30. Before class, all the students help clean the classroom. We sweep the floor and wipe the desks. At lunchtime, we eat in our classroom, not in a cafeteria. My favorite lunch is rice with fish.\nAfter school, I go to swimming practice on Mondays and Wednesdays. On weekends, I like to fly kites on the beach with my brother.\nWhat is your school like? Please write back soon!\nYour pen pal,\nKenji",
+  "stem": "Why did Kenji write this email?",
+  "choices": [
+   "To tell his pen pal about his school and his life",
+   "To invite Lucas to a birthday party",
+   "To ask Lucas for help with homework",
+   "To thank Lucas for a gift"
+  ],
+  "answer": 0,
+  "explanation": "Kenji describes his school day and hobbies, then asks Lucas to tell him about his school."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 1,
+  "passage": "Hi Lucas,\nMy name is Kenji. I live in a small town by the sea. I am in the fourth grade.\nMy school starts at 8:30. Before class, all the students help clean the classroom. We sweep the floor and wipe the desks. At lunchtime, we eat in our classroom, not in a cafeteria. My favorite lunch is rice with fish.\nAfter school, I go to swimming practice on Mondays and Wednesdays. On weekends, I like to fly kites on the beach with my brother.\nWhat is your school like? Please write back soon!\nYour pen pal,\nKenji",
+  "stem": "What do students at Kenji's school do before class?",
+  "choices": [
+   "Eat lunch",
+   "Go swimming",
+   "Fly kites",
+   "Clean the classroom"
+  ],
+  "answer": 3,
+  "explanation": "Kenji writes, \"Before class, all the students help clean the classroom.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Hi Lucas,\nMy name is Kenji. I live in a small town by the sea. I am in the fourth grade.\nMy school starts at 8:30. Before class, all the students help clean the classroom. We sweep the floor and wipe the desks. At lunchtime, we eat in our classroom, not in a cafeteria. My favorite lunch is rice with fish.\nAfter school, I go to swimming practice on Mondays and Wednesdays. On weekends, I like to fly kites on the beach with my brother.\nWhat is your school like? Please write back soon!\nYour pen pal,\nKenji",
+  "stem": "Where does Kenji eat lunch?",
+  "choices": [
+   "In a cafeteria",
+   "In his classroom",
+   "At home",
+   "On the beach"
+  ],
+  "answer": 1,
+  "explanation": "Kenji writes, \"we eat in our classroom, not in a cafeteria.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 2,
+  "passage": "Hi Lucas,\nMy name is Kenji. I live in a small town by the sea. I am in the fourth grade.\nMy school starts at 8:30. Before class, all the students help clean the classroom. We sweep the floor and wipe the desks. At lunchtime, we eat in our classroom, not in a cafeteria. My favorite lunch is rice with fish.\nAfter school, I go to swimming practice on Mondays and Wednesdays. On weekends, I like to fly kites on the beach with my brother.\nWhat is your school like? Please write back soon!\nYour pen pal,\nKenji",
+  "stem": "When does Kenji fly kites?",
+  "choices": [
+   "On Mondays",
+   "On Wednesdays",
+   "Before school",
+   "On weekends"
+  ],
+  "answer": 3,
+  "explanation": "Kenji writes, \"On weekends, I like to fly kites on the beach.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "Every autumn, millions of monarch butterflies in North America begin one of the most remarkable journeys in the insect world. Monarchs from the eastern United States and Canada fly as far as 4,000 kilometers south to a small area of mountain forests in central Mexico. There, they spend the winter crowded together on the branches of fir trees, sometimes so densely that the branches bend under their weight.\n\nWhat makes this migration especially puzzling is that no single butterfly makes the whole round trip. The monarchs that fly south in autumn belong to a special generation that can live for up to eight months. In contrast, monarchs born in early summer live for only a few weeks. In spring, the long-lived butterflies leave Mexico, fly north, lay eggs, and die. Their offspring continue the journey, and it takes three or four generations to return to Canada. As a result, the butterflies that arrive in Mexico each autumn have never been there before.\n\nHow do they find their way? Scientists have discovered that monarchs use the sun as a compass. Because the sun's position in the sky changes during the day, the butterflies must also keep track of time. Researchers found that a kind of internal clock in the monarchs' antennae allows them to adjust their direction as the hours pass. On cloudy days, monarchs may rely on Earth's magnetic field instead.\n\nUnfortunately, the number of monarchs has declined sharply in recent decades. One major reason is the loss of milkweed, the only plant that monarch caterpillars can eat. Many students and families now help by planting milkweed in their gardens and schoolyards, giving the butterflies places to lay their eggs along their route.",
+  "stem": "What is the passage mainly about?",
+  "choices": [
+   "How monarchs migrate and what threatens them",
+   "Why fir trees in Mexico bend under heavy snow in winter",
+   "How to plant milkweed in a schoolyard",
+   "Why some butterflies live longer than others"
+  ],
+  "answer": 0,
+  "explanation": "The passage describes the monarchs' journey, how they navigate, and the loss of milkweed that threatens them."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "Every autumn, millions of monarch butterflies in North America begin one of the most remarkable journeys in the insect world. Monarchs from the eastern United States and Canada fly as far as 4,000 kilometers south to a small area of mountain forests in central Mexico. There, they spend the winter crowded together on the branches of fir trees, sometimes so densely that the branches bend under their weight.\n\nWhat makes this migration especially puzzling is that no single butterfly makes the whole round trip. The monarchs that fly south in autumn belong to a special generation that can live for up to eight months. In contrast, monarchs born in early summer live for only a few weeks. In spring, the long-lived butterflies leave Mexico, fly north, lay eggs, and die. Their offspring continue the journey, and it takes three or four generations to return to Canada. As a result, the butterflies that arrive in Mexico each autumn have never been there before.\n\nHow do they find their way? Scientists have discovered that monarchs use the sun as a compass. Because the sun's position in the sky changes during the day, the butterflies must also keep track of time. Researchers found that a kind of internal clock in the monarchs' antennae allows them to adjust their direction as the hours pass. On cloudy days, monarchs may rely on Earth's magnetic field instead.\n\nUnfortunately, the number of monarchs has declined sharply in recent decades. One major reason is the loss of milkweed, the only plant that monarch caterpillars can eat. Many students and families now help by planting milkweed in their gardens and schoolyards, giving the butterflies places to lay their eggs along their route.",
+  "stem": "The word \"densely\" in paragraph 1 is closest in meaning to",
+  "choices": [
+   "quietly",
+   "quickly",
+   "closely packed",
+   "lightly"
+  ],
+  "answer": 2,
+  "explanation": "The butterflies are \"crowded together\" so thickly that branches bend, so \"densely\" means closely packed."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 5,
+  "passage": "Every autumn, millions of monarch butterflies in North America begin one of the most remarkable journeys in the insect world. Monarchs from the eastern United States and Canada fly as far as 4,000 kilometers south to a small area of mountain forests in central Mexico. There, they spend the winter crowded together on the branches of fir trees, sometimes so densely that the branches bend under their weight.\n\nWhat makes this migration especially puzzling is that no single butterfly makes the whole round trip. The monarchs that fly south in autumn belong to a special generation that can live for up to eight months. In contrast, monarchs born in early summer live for only a few weeks. In spring, the long-lived butterflies leave Mexico, fly north, lay eggs, and die. Their offspring continue the journey, and it takes three or four generations to return to Canada. As a result, the butterflies that arrive in Mexico each autumn have never been there before.\n\nHow do they find their way? Scientists have discovered that monarchs use the sun as a compass. Because the sun's position in the sky changes during the day, the butterflies must also keep track of time. Researchers found that a kind of internal clock in the monarchs' antennae allows them to adjust their direction as the hours pass. On cloudy days, monarchs may rely on Earth's magnetic field instead.\n\nUnfortunately, the number of monarchs has declined sharply in recent decades. One major reason is the loss of milkweed, the only plant that monarch caterpillars can eat. Many students and families now help by planting milkweed in their gardens and schoolyards, giving the butterflies places to lay their eggs along their route.",
+  "stem": "What can be inferred about the monarchs that reach Mexico in autumn?",
+  "choices": [
+   "They were born in Mexico the previous spring.",
+   "They live for only a few weeks.",
+   "They follow older butterflies that already know the way south.",
+   "They find the forests without having learned the route from experience."
+  ],
+  "answer": 3,
+  "explanation": "Paragraph 2 says these butterflies \"have never been there before,\" so they cannot rely on memory of the route."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 5,
+  "passage": "Every autumn, millions of monarch butterflies in North America begin one of the most remarkable journeys in the insect world. Monarchs from the eastern United States and Canada fly as far as 4,000 kilometers south to a small area of mountain forests in central Mexico. There, they spend the winter crowded together on the branches of fir trees, sometimes so densely that the branches bend under their weight.\n\nWhat makes this migration especially puzzling is that no single butterfly makes the whole round trip. The monarchs that fly south in autumn belong to a special generation that can live for up to eight months. In contrast, monarchs born in early summer live for only a few weeks. In spring, the long-lived butterflies leave Mexico, fly north, lay eggs, and die. Their offspring continue the journey, and it takes three or four generations to return to Canada. As a result, the butterflies that arrive in Mexico each autumn have never been there before.\n\nHow do they find their way? Scientists have discovered that monarchs use the sun as a compass. Because the sun's position in the sky changes during the day, the butterflies must also keep track of time. Researchers found that a kind of internal clock in the monarchs' antennae allows them to adjust their direction as the hours pass. On cloudy days, monarchs may rely on Earth's magnetic field instead.\n\nUnfortunately, the number of monarchs has declined sharply in recent decades. One major reason is the loss of milkweed, the only plant that monarch caterpillars can eat. Many students and families now help by planting milkweed in their gardens and schoolyards, giving the butterflies places to lay their eggs along their route.",
+  "stem": "According to paragraph 3, why must monarchs keep track of time?",
+  "choices": [
+   "They must reach Mexico before the first snow.",
+   "The sun's position in the sky changes during the day.",
+   "Earth's magnetic field is weaker in the afternoon than in the morning.",
+   "Their antennae stop working at night."
+  ],
+  "answer": 1,
+  "explanation": "The passage says, \"Because the sun's position in the sky changes during the day, the butterflies must also keep track of time.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "Every autumn, millions of monarch butterflies in North America begin one of the most remarkable journeys in the insect world. Monarchs from the eastern United States and Canada fly as far as 4,000 kilometers south to a small area of mountain forests in central Mexico. There, they spend the winter crowded together on the branches of fir trees, sometimes so densely that the branches bend under their weight.\n\nWhat makes this migration especially puzzling is that no single butterfly makes the whole round trip. The monarchs that fly south in autumn belong to a special generation that can live for up to eight months. In contrast, monarchs born in early summer live for only a few weeks. In spring, the long-lived butterflies leave Mexico, fly north, lay eggs, and die. Their offspring continue the journey, and it takes three or four generations to return to Canada. As a result, the butterflies that arrive in Mexico each autumn have never been there before.\n\nHow do they find their way? Scientists have discovered that monarchs use the sun as a compass. Because the sun's position in the sky changes during the day, the butterflies must also keep track of time. Researchers found that a kind of internal clock in the monarchs' antennae allows them to adjust their direction as the hours pass. On cloudy days, monarchs may rely on Earth's magnetic field instead.\n\nUnfortunately, the number of monarchs has declined sharply in recent decades. One major reason is the loss of milkweed, the only plant that monarch caterpillars can eat. Many students and families now help by planting milkweed in their gardens and schoolyards, giving the butterflies places to lay their eggs along their route.",
+  "stem": "Why do many families plant milkweed?",
+  "choices": [
+   "Monarch caterpillars can eat only milkweed.",
+   "Milkweed protects butterflies from cold weather.",
+   "Adult monarchs sleep on milkweed in Mexico.",
+   "Milkweed helps monarchs sense the magnetic field."
+  ],
+  "answer": 0,
+  "explanation": "Milkweed is \"the only plant that monarch caterpillars can eat,\" so planting it gives monarchs places to lay their eggs."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "The Westbrook Weekly: Student News\nCafeteria Compost Project Cuts Trash in Half\nby Daniel Ortiz, Grade 8 Reporter\n\nLast September, the members of Westbrook Middle School's Green Team noticed a problem. After every lunch period, the cafeteria trash cans were overflowing with banana peels, apple cores, and uneaten bread. \"We were throwing away food scraps that could have been useful,\" explained Green Team president Aisha Morgan. The team decided to start a composting program.\n\nComposting is a natural process in which tiny living things, such as bacteria and worms, break down food scraps and turn them into rich soil. To get started, the Green Team placed three colored bins at the end of each lunch table: green for food scraps, blue for recycling, and gray for everything else. During the first few weeks, team members stood beside the bins to show students where each item belonged.\n\nThe beginning was not easy. Many students were in a hurry and threw everything into the gray bins. Some even complained that sorting took too much time. However, the Green Team did not give up. Members made posters, gave short talks in homeroom classes, and held a contest to see which grade could sort its trash most accurately. The seventh graders won a pizza party.\n\nThe results have been impressive. According to the school custodian, Mr. Hill, the cafeteria now fills only about half as many trash bags each day as it did last year. Meanwhile, the finished compost is being used in the school garden, where students grow lettuce, tomatoes, and herbs.\n\nNext year, the Green Team hopes to share its program with two nearby elementary schools. \"If we can do it here,\" Aisha said, \"any school can.\"",
+  "stem": "What is the article mainly about?",
+  "choices": [
+   "A contest that ended with a pizza party",
+   "How students grow vegetables in a garden",
+   "A student program that reduced cafeteria trash",
+   "Why students dislike cafeteria food"
+  ],
+  "answer": 2,
+  "explanation": "The article explains how the Green Team's composting program began, faced problems, and cut the trash in half."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "The Westbrook Weekly: Student News\nCafeteria Compost Project Cuts Trash in Half\nby Daniel Ortiz, Grade 8 Reporter\n\nLast September, the members of Westbrook Middle School's Green Team noticed a problem. After every lunch period, the cafeteria trash cans were overflowing with banana peels, apple cores, and uneaten bread. \"We were throwing away food scraps that could have been useful,\" explained Green Team president Aisha Morgan. The team decided to start a composting program.\n\nComposting is a natural process in which tiny living things, such as bacteria and worms, break down food scraps and turn them into rich soil. To get started, the Green Team placed three colored bins at the end of each lunch table: green for food scraps, blue for recycling, and gray for everything else. During the first few weeks, team members stood beside the bins to show students where each item belonged.\n\nThe beginning was not easy. Many students were in a hurry and threw everything into the gray bins. Some even complained that sorting took too much time. However, the Green Team did not give up. Members made posters, gave short talks in homeroom classes, and held a contest to see which grade could sort its trash most accurately. The seventh graders won a pizza party.\n\nThe results have been impressive. According to the school custodian, Mr. Hill, the cafeteria now fills only about half as many trash bags each day as it did last year. Meanwhile, the finished compost is being used in the school garden, where students grow lettuce, tomatoes, and herbs.\n\nNext year, the Green Team hopes to share its program with two nearby elementary schools. \"If we can do it here,\" Aisha said, \"any school can.\"",
+  "stem": "According to the article, what is the green bin used for?",
+  "choices": [
+   "Recycling",
+   "Food scraps",
+   "Everything else",
+   "Garden tools"
+  ],
+  "answer": 1,
+  "explanation": "Paragraph 2 says the bins were \"green for food scraps, blue for recycling, and gray for everything else.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 5,
+  "passage": "The Westbrook Weekly: Student News\nCafeteria Compost Project Cuts Trash in Half\nby Daniel Ortiz, Grade 8 Reporter\n\nLast September, the members of Westbrook Middle School's Green Team noticed a problem. After every lunch period, the cafeteria trash cans were overflowing with banana peels, apple cores, and uneaten bread. \"We were throwing away food scraps that could have been useful,\" explained Green Team president Aisha Morgan. The team decided to start a composting program.\n\nComposting is a natural process in which tiny living things, such as bacteria and worms, break down food scraps and turn them into rich soil. To get started, the Green Team placed three colored bins at the end of each lunch table: green for food scraps, blue for recycling, and gray for everything else. During the first few weeks, team members stood beside the bins to show students where each item belonged.\n\nThe beginning was not easy. Many students were in a hurry and threw everything into the gray bins. Some even complained that sorting took too much time. However, the Green Team did not give up. Members made posters, gave short talks in homeroom classes, and held a contest to see which grade could sort its trash most accurately. The seventh graders won a pizza party.\n\nThe results have been impressive. According to the school custodian, Mr. Hill, the cafeteria now fills only about half as many trash bags each day as it did last year. Meanwhile, the finished compost is being used in the school garden, where students grow lettuce, tomatoes, and herbs.\n\nNext year, the Green Team hopes to share its program with two nearby elementary schools. \"If we can do it here,\" Aisha said, \"any school can.\"",
+  "stem": "Why does the writer mention that some students \"complained that sorting took too much time\"?",
+  "choices": [
+   "To show that the program faced difficulties at first",
+   "To explain why the seventh graders won the sorting contest",
+   "To argue that the program should be stopped",
+   "To describe how compost is made"
+  ],
+  "answer": 0,
+  "explanation": "The sentence appears in a paragraph that begins \"The beginning was not easy,\" so it illustrates early problems."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "The Westbrook Weekly: Student News\nCafeteria Compost Project Cuts Trash in Half\nby Daniel Ortiz, Grade 8 Reporter\n\nLast September, the members of Westbrook Middle School's Green Team noticed a problem. After every lunch period, the cafeteria trash cans were overflowing with banana peels, apple cores, and uneaten bread. \"We were throwing away food scraps that could have been useful,\" explained Green Team president Aisha Morgan. The team decided to start a composting program.\n\nComposting is a natural process in which tiny living things, such as bacteria and worms, break down food scraps and turn them into rich soil. To get started, the Green Team placed three colored bins at the end of each lunch table: green for food scraps, blue for recycling, and gray for everything else. During the first few weeks, team members stood beside the bins to show students where each item belonged.\n\nThe beginning was not easy. Many students were in a hurry and threw everything into the gray bins. Some even complained that sorting took too much time. However, the Green Team did not give up. Members made posters, gave short talks in homeroom classes, and held a contest to see which grade could sort its trash most accurately. The seventh graders won a pizza party.\n\nThe results have been impressive. According to the school custodian, Mr. Hill, the cafeteria now fills only about half as many trash bags each day as it did last year. Meanwhile, the finished compost is being used in the school garden, where students grow lettuce, tomatoes, and herbs.\n\nNext year, the Green Team hopes to share its program with two nearby elementary schools. \"If we can do it here,\" Aisha said, \"any school can.\"",
+  "stem": "The word \"accurately\" in paragraph 3 is closest in meaning to",
+  "choices": [
+   "quickly",
+   "quietly",
+   "often",
+   "correctly"
+  ],
+  "answer": 3,
+  "explanation": "The contest checked which grade put trash in the right bins, so \"accurately\" means correctly."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 5,
+  "passage": "The Westbrook Weekly: Student News\nCafeteria Compost Project Cuts Trash in Half\nby Daniel Ortiz, Grade 8 Reporter\n\nLast September, the members of Westbrook Middle School's Green Team noticed a problem. After every lunch period, the cafeteria trash cans were overflowing with banana peels, apple cores, and uneaten bread. \"We were throwing away food scraps that could have been useful,\" explained Green Team president Aisha Morgan. The team decided to start a composting program.\n\nComposting is a natural process in which tiny living things, such as bacteria and worms, break down food scraps and turn them into rich soil. To get started, the Green Team placed three colored bins at the end of each lunch table: green for food scraps, blue for recycling, and gray for everything else. During the first few weeks, team members stood beside the bins to show students where each item belonged.\n\nThe beginning was not easy. Many students were in a hurry and threw everything into the gray bins. Some even complained that sorting took too much time. However, the Green Team did not give up. Members made posters, gave short talks in homeroom classes, and held a contest to see which grade could sort its trash most accurately. The seventh graders won a pizza party.\n\nThe results have been impressive. According to the school custodian, Mr. Hill, the cafeteria now fills only about half as many trash bags each day as it did last year. Meanwhile, the finished compost is being used in the school garden, where students grow lettuce, tomatoes, and herbs.\n\nNext year, the Green Team hopes to share its program with two nearby elementary schools. \"If we can do it here,\" Aisha said, \"any school can.\"",
+  "stem": "What can be inferred about Aisha Morgan?",
+  "choices": [
+   "She works with Mr. Hill as a custodian.",
+   "She was one of the seventh graders who won the pizza party.",
+   "She believes the program could work at other schools.",
+   "She thinks sorting trash takes too much time."
+  ],
+  "answer": 2,
+  "explanation": "Aisha says, \"If we can do it here, any school can,\" showing she believes other schools could succeed."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "The city of Venice, Italy, is famous for its canals, where boats replace cars and people travel along waterways instead of streets. Less well known, however, is what lies beneath the city's elegant buildings: millions of wooden posts driven deep into the mud.\n\nVenice was founded on a group of small, marshy islands in a shallow lagoon. The soil there was far too soft to support heavy stone structures. To solve this problem, builders hammered long wooden posts, called piles, through the soft mud until they reached a firmer layer of packed clay and sand below. The piles were placed so close together that they formed a solid base. Workers then laid wooden platforms and stone slabs across the tops of the piles, and the buildings were constructed on these foundations.\n\nAt first glance, using wood seems like a poor choice. Wood left outdoors usually rots within a few decades, yet many of the piles beneath Venice have lasted for centuries. The explanation lies in the conditions underground. The piles are completely surrounded by mud and salt water, which contain very little oxygen. The fungi and bacteria that normally cause wood to decay need oxygen to survive, so they cannot easily attack the buried piles. Some researchers also believe that minerals from the water slowly soaked into the wood, making it harder.\n\nToday, Venice faces serious challenges. The city has slowly sunk over the centuries while sea levels have risen, and floods have become more frequent. Engineers have built movable barriers at the entrances to the lagoon that can be raised when high tides threaten the city. Nevertheless, the ancient wooden foundations remain one of history's most ingenious solutions to the problem of building on unstable ground.",
+  "stem": "What is the purpose of paragraph 1?",
+  "choices": [
+   "To introduce the hidden foundations beneath Venice",
+   "To compare Venice with other famous cities",
+   "To explain why cars are not allowed in Venice",
+   "To describe the history of boats in Venice"
+  ],
+  "answer": 0,
+  "explanation": "Paragraph 1 points to \"what lies beneath the city's elegant buildings,\" the topic of the rest of the passage."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "The city of Venice, Italy, is famous for its canals, where boats replace cars and people travel along waterways instead of streets. Less well known, however, is what lies beneath the city's elegant buildings: millions of wooden posts driven deep into the mud.\n\nVenice was founded on a group of small, marshy islands in a shallow lagoon. The soil there was far too soft to support heavy stone structures. To solve this problem, builders hammered long wooden posts, called piles, through the soft mud until they reached a firmer layer of packed clay and sand below. The piles were placed so close together that they formed a solid base. Workers then laid wooden platforms and stone slabs across the tops of the piles, and the buildings were constructed on these foundations.\n\nAt first glance, using wood seems like a poor choice. Wood left outdoors usually rots within a few decades, yet many of the piles beneath Venice have lasted for centuries. The explanation lies in the conditions underground. The piles are completely surrounded by mud and salt water, which contain very little oxygen. The fungi and bacteria that normally cause wood to decay need oxygen to survive, so they cannot easily attack the buried piles. Some researchers also believe that minerals from the water slowly soaked into the wood, making it harder.\n\nToday, Venice faces serious challenges. The city has slowly sunk over the centuries while sea levels have risen, and floods have become more frequent. Engineers have built movable barriers at the entrances to the lagoon that can be raised when high tides threaten the city. Nevertheless, the ancient wooden foundations remain one of history's most ingenious solutions to the problem of building on unstable ground.",
+  "stem": "Why did the builders of Venice use wooden piles?",
+  "choices": [
+   "Stone was not available in the area.",
+   "Wood was much easier to carry across the lagoon by boat than stone.",
+   "The piles kept floodwater out of the city.",
+   "The soil was too soft to support heavy buildings."
+  ],
+  "answer": 3,
+  "explanation": "Paragraph 2 says \"The soil there was far too soft to support heavy stone structures.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 5,
+  "passage": "The city of Venice, Italy, is famous for its canals, where boats replace cars and people travel along waterways instead of streets. Less well known, however, is what lies beneath the city's elegant buildings: millions of wooden posts driven deep into the mud.\n\nVenice was founded on a group of small, marshy islands in a shallow lagoon. The soil there was far too soft to support heavy stone structures. To solve this problem, builders hammered long wooden posts, called piles, through the soft mud until they reached a firmer layer of packed clay and sand below. The piles were placed so close together that they formed a solid base. Workers then laid wooden platforms and stone slabs across the tops of the piles, and the buildings were constructed on these foundations.\n\nAt first glance, using wood seems like a poor choice. Wood left outdoors usually rots within a few decades, yet many of the piles beneath Venice have lasted for centuries. The explanation lies in the conditions underground. The piles are completely surrounded by mud and salt water, which contain very little oxygen. The fungi and bacteria that normally cause wood to decay need oxygen to survive, so they cannot easily attack the buried piles. Some researchers also believe that minerals from the water slowly soaked into the wood, making it harder.\n\nToday, Venice faces serious challenges. The city has slowly sunk over the centuries while sea levels have risen, and floods have become more frequent. Engineers have built movable barriers at the entrances to the lagoon that can be raised when high tides threaten the city. Nevertheless, the ancient wooden foundations remain one of history's most ingenious solutions to the problem of building on unstable ground.",
+  "stem": "According to the passage, why have many of the piles not rotted?",
+  "choices": [
+   "Workers replace the piles every few decades.",
+   "The piles were covered with a special paint.",
+   "The mud and water around them contain little oxygen.",
+   "The salt water kills all the worms and insects that live in the lagoon."
+  ],
+  "answer": 2,
+  "explanation": "The fungi and bacteria that cause decay \"need oxygen to survive,\" and the mud and salt water \"contain very little oxygen.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 5,
+  "passage": "The city of Venice, Italy, is famous for its canals, where boats replace cars and people travel along waterways instead of streets. Less well known, however, is what lies beneath the city's elegant buildings: millions of wooden posts driven deep into the mud.\n\nVenice was founded on a group of small, marshy islands in a shallow lagoon. The soil there was far too soft to support heavy stone structures. To solve this problem, builders hammered long wooden posts, called piles, through the soft mud until they reached a firmer layer of packed clay and sand below. The piles were placed so close together that they formed a solid base. Workers then laid wooden platforms and stone slabs across the tops of the piles, and the buildings were constructed on these foundations.\n\nAt first glance, using wood seems like a poor choice. Wood left outdoors usually rots within a few decades, yet many of the piles beneath Venice have lasted for centuries. The explanation lies in the conditions underground. The piles are completely surrounded by mud and salt water, which contain very little oxygen. The fungi and bacteria that normally cause wood to decay need oxygen to survive, so they cannot easily attack the buried piles. Some researchers also believe that minerals from the water slowly soaked into the wood, making it harder.\n\nToday, Venice faces serious challenges. The city has slowly sunk over the centuries while sea levels have risen, and floods have become more frequent. Engineers have built movable barriers at the entrances to the lagoon that can be raised when high tides threaten the city. Nevertheless, the ancient wooden foundations remain one of history's most ingenious solutions to the problem of building on unstable ground.",
+  "stem": "The word \"ingenious\" in paragraph 4 is closest in meaning to",
+  "choices": [
+   "expensive",
+   "clever",
+   "fragile",
+   "ancient"
+  ],
+  "answer": 1,
+  "explanation": "The foundations solved a difficult problem in an inventive way, so \"ingenious\" means clever."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 5,
+  "passage": "The city of Venice, Italy, is famous for its canals, where boats replace cars and people travel along waterways instead of streets. Less well known, however, is what lies beneath the city's elegant buildings: millions of wooden posts driven deep into the mud.\n\nVenice was founded on a group of small, marshy islands in a shallow lagoon. The soil there was far too soft to support heavy stone structures. To solve this problem, builders hammered long wooden posts, called piles, through the soft mud until they reached a firmer layer of packed clay and sand below. The piles were placed so close together that they formed a solid base. Workers then laid wooden platforms and stone slabs across the tops of the piles, and the buildings were constructed on these foundations.\n\nAt first glance, using wood seems like a poor choice. Wood left outdoors usually rots within a few decades, yet many of the piles beneath Venice have lasted for centuries. The explanation lies in the conditions underground. The piles are completely surrounded by mud and salt water, which contain very little oxygen. The fungi and bacteria that normally cause wood to decay need oxygen to survive, so they cannot easily attack the buried piles. Some researchers also believe that minerals from the water slowly soaked into the wood, making it harder.\n\nToday, Venice faces serious challenges. The city has slowly sunk over the centuries while sea levels have risen, and floods have become more frequent. Engineers have built movable barriers at the entrances to the lagoon that can be raised when high tides threaten the city. Nevertheless, the ancient wooden foundations remain one of history's most ingenious solutions to the problem of building on unstable ground.",
+  "stem": "Which of the following is NOT mentioned as a challenge that Venice faces today?",
+  "choices": [
+   "The city slowly sinking into the lagoon",
+   "Earthquakes damaging its buildings",
+   "Rising sea levels",
+   "More frequent floods"
+  ],
+  "answer": 1,
+  "explanation": "Paragraph 4 mentions sinking, rising sea levels, and floods, but not earthquakes."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "If you look at the top of a tree stump, you will see a pattern of circles, one inside another. These circles, called growth rings, form because trees grow at different speeds during different seasons. In spring and early summer, when water is plentiful, a tree grows quickly and produces large cells with thin walls, which create a light-colored band. Later in the season, growth slows, and the tree produces smaller, thicker-walled cells that form a darker band. Together, one light band and one dark band represent a single year of growth.\n\nBecause of this pattern, counting the rings is a simple way to estimate a tree's age. However, the rings reveal much more than age. In a year with plenty of rain and mild temperatures, a tree usually forms a wide ring. In a year of drought, the ring is often very narrow. By measuring the width of each ring, scientists can learn about the climate of the past, long before people began keeping weather records.\n\nThe study of tree rings is called dendrochronology. Its founder, an American astronomer named A. E. Douglass, began studying rings in the early 1900s because he wanted to know whether changes in the sun affected Earth's weather. Although his original question was never fully answered, his method proved extremely useful in other fields.\n\nFor example, archaeologists use tree rings to date wooden objects. Since the trees in one region experience the same wet and dry years, they share a similar pattern of wide and narrow rings. By matching the pattern in an old wooden beam to a known record from the same region, researchers can determine the exact year in which the tree was cut down. This technique has helped to date ancient homes in the American Southwest with remarkable precision.",
+  "stem": "What is the main idea of the passage?",
+  "choices": [
+   "Tree rings show a tree's age and also give information about the past.",
+   "A. E. Douglass proved that changes in the sun control the weather on Earth.",
+   "Trees grow faster in spring than in late summer.",
+   "Archaeologists have found many ancient homes in the Southwest."
+  ],
+  "answer": 0,
+  "explanation": "The passage explains how rings form, how they show age and past climate, and how they are used to date wooden objects."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "If you look at the top of a tree stump, you will see a pattern of circles, one inside another. These circles, called growth rings, form because trees grow at different speeds during different seasons. In spring and early summer, when water is plentiful, a tree grows quickly and produces large cells with thin walls, which create a light-colored band. Later in the season, growth slows, and the tree produces smaller, thicker-walled cells that form a darker band. Together, one light band and one dark band represent a single year of growth.\n\nBecause of this pattern, counting the rings is a simple way to estimate a tree's age. However, the rings reveal much more than age. In a year with plenty of rain and mild temperatures, a tree usually forms a wide ring. In a year of drought, the ring is often very narrow. By measuring the width of each ring, scientists can learn about the climate of the past, long before people began keeping weather records.\n\nThe study of tree rings is called dendrochronology. Its founder, an American astronomer named A. E. Douglass, began studying rings in the early 1900s because he wanted to know whether changes in the sun affected Earth's weather. Although his original question was never fully answered, his method proved extremely useful in other fields.\n\nFor example, archaeologists use tree rings to date wooden objects. Since the trees in one region experience the same wet and dry years, they share a similar pattern of wide and narrow rings. By matching the pattern in an old wooden beam to a known record from the same region, researchers can determine the exact year in which the tree was cut down. This technique has helped to date ancient homes in the American Southwest with remarkable precision.",
+  "stem": "The word \"plentiful\" in paragraph 1 is closest in meaning to",
+  "choices": [
+   "difficult to find",
+   "very cold",
+   "moving quickly",
+   "available in large amounts"
+  ],
+  "answer": 3,
+  "explanation": "When water is plentiful, there is a lot of it, so the tree grows quickly."
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 4,
+  "passage": "If you look at the top of a tree stump, you will see a pattern of circles, one inside another. These circles, called growth rings, form because trees grow at different speeds during different seasons. In spring and early summer, when water is plentiful, a tree grows quickly and produces large cells with thin walls, which create a light-colored band. Later in the season, growth slows, and the tree produces smaller, thicker-walled cells that form a darker band. Together, one light band and one dark band represent a single year of growth.\n\nBecause of this pattern, counting the rings is a simple way to estimate a tree's age. However, the rings reveal much more than age. In a year with plenty of rain and mild temperatures, a tree usually forms a wide ring. In a year of drought, the ring is often very narrow. By measuring the width of each ring, scientists can learn about the climate of the past, long before people began keeping weather records.\n\nThe study of tree rings is called dendrochronology. Its founder, an American astronomer named A. E. Douglass, began studying rings in the early 1900s because he wanted to know whether changes in the sun affected Earth's weather. Although his original question was never fully answered, his method proved extremely useful in other fields.\n\nFor example, archaeologists use tree rings to date wooden objects. Since the trees in one region experience the same wet and dry years, they share a similar pattern of wide and narrow rings. By matching the pattern in an old wooden beam to a known record from the same region, researchers can determine the exact year in which the tree was cut down. This technique has helped to date ancient homes in the American Southwest with remarkable precision.",
+  "stem": "According to paragraph 2, what does a very narrow ring usually show?",
+  "choices": [
+   "A very old tree",
+   "A year with mild temperatures",
+   "A year with little rain",
+   "The year the tree was cut down"
+  ],
+  "answer": 2,
+  "explanation": "The passage says, \"In a year of drought, the ring is often very narrow.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 5,
+  "passage": "If you look at the top of a tree stump, you will see a pattern of circles, one inside another. These circles, called growth rings, form because trees grow at different speeds during different seasons. In spring and early summer, when water is plentiful, a tree grows quickly and produces large cells with thin walls, which create a light-colored band. Later in the season, growth slows, and the tree produces smaller, thicker-walled cells that form a darker band. Together, one light band and one dark band represent a single year of growth.\n\nBecause of this pattern, counting the rings is a simple way to estimate a tree's age. However, the rings reveal much more than age. In a year with plenty of rain and mild temperatures, a tree usually forms a wide ring. In a year of drought, the ring is often very narrow. By measuring the width of each ring, scientists can learn about the climate of the past, long before people began keeping weather records.\n\nThe study of tree rings is called dendrochronology. Its founder, an American astronomer named A. E. Douglass, began studying rings in the early 1900s because he wanted to know whether changes in the sun affected Earth's weather. Although his original question was never fully answered, his method proved extremely useful in other fields.\n\nFor example, archaeologists use tree rings to date wooden objects. Since the trees in one region experience the same wet and dry years, they share a similar pattern of wide and narrow rings. By matching the pattern in an old wooden beam to a known record from the same region, researchers can determine the exact year in which the tree was cut down. This technique has helped to date ancient homes in the American Southwest with remarkable precision.",
+  "stem": "Why does the author mention Douglass's question about the sun?",
+  "choices": [
+   "To prove that astronomers are better scientists than archaeologists",
+   "To show that his method became useful in unexpected ways",
+   "To explain how the sun causes trees to form rings",
+   "To suggest that dendrochronology is no longer used today"
+  ],
+  "answer": 1,
+  "explanation": "The author notes the question \"was never fully answered,\" but his method \"proved extremely useful in other fields.\""
+ },
+ {
+  "exam_type": "TOEFLJ",
+  "section": "reading",
+  "difficulty": 5,
+  "passage": "If you look at the top of a tree stump, you will see a pattern of circles, one inside another. These circles, called growth rings, form because trees grow at different speeds during different seasons. In spring and early summer, when water is plentiful, a tree grows quickly and produces large cells with thin walls, which create a light-colored band. Later in the season, growth slows, and the tree produces smaller, thicker-walled cells that form a darker band. Together, one light band and one dark band represent a single year of growth.\n\nBecause of this pattern, counting the rings is a simple way to estimate a tree's age. However, the rings reveal much more than age. In a year with plenty of rain and mild temperatures, a tree usually forms a wide ring. In a year of drought, the ring is often very narrow. By measuring the width of each ring, scientists can learn about the climate of the past, long before people began keeping weather records.\n\nThe study of tree rings is called dendrochronology. Its founder, an American astronomer named A. E. Douglass, began studying rings in the early 1900s because he wanted to know whether changes in the sun affected Earth's weather. Although his original question was never fully answered, his method proved extremely useful in other fields.\n\nFor example, archaeologists use tree rings to date wooden objects. Since the trees in one region experience the same wet and dry years, they share a similar pattern of wide and narrow rings. By matching the pattern in an old wooden beam to a known record from the same region, researchers can determine the exact year in which the tree was cut down. This technique has helped to date ancient homes in the American Southwest with remarkable precision.",
+  "stem": "Which of the following can be inferred from paragraph 4?",
+  "choices": [
+   "Every tree in the world has the same pattern of rings.",
+   "Archaeologists no longer need to count tree rings.",
+   "Wooden beams that are older than one hundred years cannot be dated.",
+   "Ring patterns are best matched with a record from the same region."
+  ],
+  "answer": 3,
+  "explanation": "Trees share patterns because they \"experience the same wet and dry years\" in one region, so a record from that region is needed for a match."
+ }
+]

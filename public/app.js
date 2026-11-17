@@ -38,7 +38,25 @@ const api = async (method, path, body, tries = method === 'GET' ? 2 : 1) => {
 const inApp = /KAKAOTALK|NAVER\(inapp|Instagram|FBAN|FBAV|Line\/|; wv\)/i.test(navigator.userAgent);
 const canSpeak = () => !!(window.speechSynthesis && window.SpeechSynthesisUtterance);
 const stopSpeech = () => { try { window.speechSynthesis?.cancel(); } catch {} };
-const speak = (text) => { stopSpeech(); const u = new window.SpeechSynthesisUtterance(text); u.lang = 'en-US'; u.rate = 0.9; window.speechSynthesis.speak(u); };
+/** Listening scripts are written with speaker labels ("Teacher: …", "Woman: …", "Mia: …"). Read them like audio would:
+ * role labels are not spoken (a one-person talk just plays; in a dialogue each speaker gets a different voice pitch,
+ * women/girls higher, men/boys lower, so "the woman"/"the man" questions work by ear); name labels are spoken
+ * ("Mia: …") because questions ask about those names. Lines are queued, so there is a natural pause between turns. */
+const ROLE_LABELS = new Set(['Teacher', 'Woman', 'Man', 'Boy', 'Girl', 'Lecturer', 'Librarian', 'Announcement', 'Announcer', 'Radio', 'Speaker', 'Narrator', 'Principal', 'Ranger', 'Coach', 'Guide', 'Student', 'Professor', 'Officer', 'Nurse', 'Doctor', 'Host', 'Reporter', 'Clerk']);
+const HIGH = /^(Woman|Girl|Mom|Mother|Grandma|Anna|Lily|Mia|Lena|Sara|Chloe|Emma|Maria|Priya|Sofia|Nadia|Ms|Mrs)\b/, LOW = /^(Man|Boy|Dad|Father|Grandpa|Tom|Ben|Sam|Jake|Daniel|Leo|Noah|Mr)\b/;
+const speak = (text) => {
+  stopSpeech();
+  const lines = String(text).split(/\n+/).map((l) => l.trim()).filter(Boolean);
+  const parsed = lines.map((l) => { const m = l.match(/^([A-Z][a-z]+(?: [A-Z][a-z]+)?):\s+(.+)$/); return m ? { who: m[1], say: m[2] } : { who: null, say: l }; });
+  const speakers = [...new Set(parsed.map((x) => x.who).filter(Boolean))];
+  parsed.forEach(({ who, say }) => {
+    const role = who && ROLE_LABELS.has(who);
+    const u = new window.SpeechSynthesisUtterance(who && !role ? `${who}: ${say}` : say);
+    u.lang = 'en-US'; u.rate = 0.9;
+    if (who && speakers.length > 1) u.pitch = HIGH.test(who) ? 1.3 : LOW.test(who) ? 0.75 : [1, 0.85, 1.15, 0.95][speakers.indexOf(who) % 4];
+    window.speechSynthesis.speak(u);
+  });
+};
 const openExternal = () => { const url = location.href; if (/KAKAOTALK/i.test(navigator.userAgent)) location.href = 'kakaotalk://web/openExternal?url=' + encodeURIComponent(url); else window.open(url, '_blank'); };
 const noSpeech = () => { if (confirm('이 앱 안의 브라우저는 듣기 음성을 재생할 수 없습니다.\n크롬·사파리 같은 기본 브라우저로 열까요? (로그인 후 이어서 응시할 수 있습니다)')) openExternal(); };
 const noRecord = () => { if (confirm('이 브라우저에서는 녹음을 할 수 없습니다.\n크롬·사파리 같은 기본 브라우저로 열까요? (로그인 후 이어서 응시할 수 있습니다)')) openExternal(); };

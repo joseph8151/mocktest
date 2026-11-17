@@ -6,12 +6,12 @@
   "passage": "Teacher: Boys and girls, it is time to clean up. Put the crayons in the red box. Put your paper on my desk. Then line up at the door.",
   "stem": "Where do the crayons go?",
   "choices": [
-   "On the teacher's desk",
    "By the door",
-   "In a backpack",
-   "In the red box"
+   "In the red box",
+   "On the teacher's desk",
+   "In a backpack"
   ],
-  "answer": 3,
+  "answer": 1,
   "explanation": "The teacher says to put the crayons in the red box."
  },
  {
@@ -21,12 +21,12 @@
   "passage": "Teacher: Boys and girls, it is time to clean up. Put the crayons in the red box. Put your paper on my desk. Then line up at the door.",
   "stem": "What do the children do last?",
   "choices": [
-   "Line up at the door",
-   "Put the paper on the desk",
    "Put the crayons away",
-   "Sit on the rug"
+   "Sit on the rug",
+   "Put the paper on the desk",
+   "Line up at the door"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "The teacher says \"Then line up at the door,\" which is the last step."
  },
  {
@@ -36,12 +36,12 @@
   "passage": "Teacher: Look at the board. I drew three shapes. This is a triangle. It has three sides. This is a square. It has four sides. This is a circle. It is round. It has no corners.",
   "stem": "How many sides does the triangle have?",
   "choices": [
-   "Two",
+   "Five",
    "Four",
-   "Three",
-   "Five"
+   "Two",
+   "Three"
   ],
-  "answer": 2,
+  "answer": 3,
   "explanation": "The teacher says the triangle has three sides."
  },
  {
@@ -51,12 +51,12 @@
   "passage": "Teacher: Look at the board. I drew three shapes. This is a triangle. It has three sides. This is a square. It has four sides. This is a circle. It is round. It has no corners.",
   "stem": "Which shape has no corners?",
   "choices": [
-   "The square",
-   "The circle",
    "The triangle",
-   "All of the shapes"
+   "The square",
+   "All of the shapes",
+   "The circle"
   ],
-  "answer": 1,
+  "answer": 3,
   "explanation": "The teacher says the circle is round and has no corners."
  },
  {
@@ -66,12 +66,12 @@
   "passage": "Girl: Brr! It is so cold today. Look outside. It is snowing!\nBoy: Then I will wear my hat and my mittens.",
   "stem": "What is the weather like?",
   "choices": [
-   "Cold and snowy",
-   "Hot and sunny",
    "Warm and rainy",
-   "Cool and cloudy"
+   "Hot and sunny",
+   "Cool and cloudy",
+   "Cold and snowy"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "The girl says it is cold and it is snowing."
  },
  {
@@ -96,13 +96,13 @@
   "passage": "Hello, boys and girls. I am Officer Kim. My job is to help keep people safe. Before you cross the street, stop and look both ways. Always hold a grown-up's hand.",
   "stem": "What is Officer Kim's job?",
   "choices": [
-   "To drive the school bus",
-   "To keep people safe",
    "To teach reading",
-   "To fix cars"
+   "To fix cars",
+   "To drive the school bus",
+   "To keep people safe"
   ],
-  "answer": 1,
-  "explanation": "Officer Kim says her job is to help keep people safe."
+  "answer": 3,
+  "explanation": "Officer Kim says the job is to help keep people safe."
  },
  {
   "exam_type": "WIDA",
@@ -111,12 +111,12 @@
   "passage": "Lily lost her shoe. She looked under her bed. It was not there. She looked in the closet. It was not there. Then her dog ran into the room. The shoe was in his mouth!",
   "stem": "Where was Lily's shoe?",
   "choices": [
-   "Under the bed",
    "In the closet",
-   "By the front door",
-   "In the dog's mouth"
+   "Under the bed",
+   "In the dog's mouth",
+   "By the front door"
   ],
-  "answer": 3,
+  "answer": 2,
   "explanation": "At the end of the story, the shoe was in the dog's mouth."
  },
  {
@@ -128,10 +128,10 @@
   "choices": [
    "In a tree",
    "In a barn",
-   "Under a house",
-   "Near the pond"
+   "Near the pond",
+   "Under a house"
   ],
-  "answer": 3,
+  "answer": 2,
   "explanation": "The woman says the frog lives near the pond."
  },
  {
@@ -141,12 +141,12 @@
   "passage": "Teacher: We have five apples in our basket. Maria brings two more apples. Let's count all the apples in the basket together.",
   "stem": "How many apples are in the basket now?",
   "choices": [
-   "Seven",
-   "Five",
    "Two",
-   "Three"
+   "Seven",
+   "Three",
+   "Five"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "There were five apples and Maria brought two more, and 5 + 2 = 7."
  },
  {
@@ -156,12 +156,12 @@
   "passage": "Librarian: Welcome to the library, Room 5! This week, each of you may take home two books. Please bring them back next Monday. Keep the books away from food and water.",
   "stem": "How many books can each student take home?",
   "choices": [
-   "One",
-   "Three",
    "Two",
+   "Three",
+   "One",
    "Five"
   ],
-  "answer": 2,
+  "answer": 0,
   "explanation": "The librarian says each student may take home two books."
  },
  {
@@ -171,12 +171,12 @@
   "passage": "Librarian: Welcome to the library, Room 5! This week, each of you may take home two books. Please bring them back next Monday. Keep the books away from food and water.",
   "stem": "When should the students bring the books back?",
   "choices": [
-   "Tomorrow",
    "Next Monday",
+   "In two weeks",
    "This Friday",
-   "In two weeks"
+   "Tomorrow"
   ],
-  "answer": 1,
+  "answer": 0,
   "explanation": "The librarian says to bring the books back next Monday."
  },
  {
@@ -186,12 +186,12 @@
   "passage": "Teacher: Look at our bean plant. The roots are under the dirt. The roots drink water. The leaves are green. Leaves need sun to make food. So let's put our plant by the window.",
   "stem": "Why will the class put the plant by the window?",
   "choices": [
-   "So the leaves get sun",
-   "So the roots stay dry",
    "So the plant stays cold",
-   "So the dirt gets wet"
+   "So the leaves get sun",
+   "So the dirt gets wet",
+   "So the roots stay dry"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "The teacher says leaves need sun, so the plant goes by the window."
  },
  {
@@ -201,10 +201,10 @@
   "passage": "Teacher: Look at our bean plant. The roots are under the dirt. The roots drink water. The leaves are green. Leaves need sun to make food. So let's put our plant by the window.",
   "stem": "What do the roots do?",
   "choices": [
-   "They make flowers.",
+   "They grow beans.",
    "They drink water.",
-   "They catch the sun.",
-   "They grow beans."
+   "They make flowers.",
+   "They catch the sun."
   ],
   "answer": 1,
   "explanation": "The teacher says the roots drink water."
@@ -216,12 +216,12 @@
   "passage": "Boy: This is a map of my street. My house is next to the park. The school is across the street from my house. The store is at the end of the street.",
   "stem": "What is next to the boy's house?",
   "choices": [
-   "The school",
    "The store",
-   "The library",
-   "The park"
+   "The park",
+   "The school",
+   "The library"
   ],
-  "answer": 3,
+  "answer": 1,
   "explanation": "The boy says his house is next to the park."
  },
  {
@@ -231,10 +231,10 @@
   "passage": "Boy: This is a map of my street. My house is next to the park. The school is across the street from my house. The store is at the end of the street.",
   "stem": "Where is the school?",
   "choices": [
-   "Next to the store",
    "At the end of the street",
+   "Behind the park",
    "Across the street from his house",
-   "Behind the park"
+   "Next to the store"
   ],
   "answer": 2,
   "explanation": "The boy says the school is across the street from his house."
@@ -246,12 +246,12 @@
   "passage": "Woman: Why are you sad, Leo?\nBoy: I can't find my lunch box.\nWoman: Is this it? The bus driver found it on the bus.\nBoy: Yes, that's it! Thank you!",
   "stem": "Why was Leo sad?",
   "choices": [
-   "He missed the bus.",
+   "He could not find his lunch box.",
    "He was hungry.",
-   "He lost his hat.",
-   "He could not find his lunch box."
+   "He missed the bus.",
+   "He lost his hat."
   ],
-  "answer": 3,
+  "answer": 0,
   "explanation": "Leo says he can't find his lunch box."
  },
  {
@@ -261,12 +261,12 @@
   "passage": "Woman: Why are you sad, Leo?\nBoy: I can't find my lunch box.\nWoman: Is this it? The bus driver found it on the bus.\nBoy: Yes, that's it! Thank you!",
   "stem": "Where was the lunch box?",
   "choices": [
-   "In the classroom",
    "On the bus",
-   "At Leo's house",
-   "In the lunchroom"
+   "In the lunchroom",
+   "In the classroom",
+   "At Leo's house"
   ],
-  "answer": 1,
+  "answer": 0,
   "explanation": "The woman says the bus driver found it on the bus."
  },
  {
@@ -276,12 +276,12 @@
   "passage": "Attention, Room 3. We will have a fire drill after lunch today. When you hear the bell, stop your work. Walk, do not run, to the playground. Stay with your class.",
   "stem": "When will the fire drill be?",
   "choices": [
-   "Before school",
    "At recess",
-   "After lunch",
-   "Tomorrow morning"
+   "Tomorrow morning",
+   "Before school",
+   "After lunch"
   ],
-  "answer": 2,
+  "answer": 3,
   "explanation": "The speaker says the fire drill will be after lunch today."
  },
  {
@@ -292,9 +292,9 @@
   "stem": "What should students do when they hear the bell?",
   "choices": [
    "Stop working and walk to the playground",
-   "Run to the playground",
+   "Go to the lunchroom",
    "Finish their work first",
-   "Go to the lunchroom"
+   "Run to the playground"
   ],
   "answer": 0,
   "explanation": "Students should stop their work and walk, not run, to the playground."
@@ -307,11 +307,11 @@
   "stem": "What must students do before they choose their classes?",
   "choices": [
    "Make an appointment with the vice principal",
-   "Meet with a counselor to review their credits",
    "Turn in a form at the library",
+   "Meet with a counselor to review their credits",
    "Take a placement test"
   ],
-  "answer": 1,
+  "answer": 2,
   "explanation": "The vice principal says students must meet with a counselor to review graduation credits before choosing classes."
  },
  {
@@ -321,12 +321,12 @@
   "passage": "Good morning, students. This is Vice Principal Grant with a reminder about course registration for next year. The online registration form opens on Monday and closes on Friday at four p.m. Before you choose your classes, you must meet with your counselor to review your graduation credits. Counselors will be in the library during lunch all week, so you do not need an appointment. If you plan to take an advanced course, you will also need a signed note from your current teacher in that subject.",
   "stem": "What do students need in order to take an advanced course?",
   "choices": [
-   "Permission from a parent",
    "A meeting with the vice principal",
    "A signed note from their current teacher in that subject",
+   "Permission from a parent",
    "A grade report from last year"
   ],
-  "answer": 2,
+  "answer": 1,
   "explanation": "The announcement says students taking an advanced course need a signed note from their current teacher in that subject."
  },
  {
@@ -337,8 +337,8 @@
   "stem": "Why does the teacher compare the cell membrane to a gatekeeper?",
   "choices": [
    "It makes food for the cell.",
-   "It protects the cell from sunlight.",
    "It stores water for the cell.",
+   "It protects the cell from sunlight.",
    "It controls what enters and leaves the cell."
   ],
   "answer": 3,
@@ -351,12 +351,12 @@
   "passage": "Teacher: Today we're looking at the cell membrane. You can think of it as the gatekeeper of the cell. It's a thin layer that surrounds the cell and controls what goes in and what comes out. Small molecules, like water and oxygen, can pass through fairly easily. Larger molecules, like glucose, need help from special proteins in the membrane. These proteins work like doors that open only for certain substances. That's why we say the membrane is selectively permeable: it lets some things through, but not others.",
   "stem": "According to the teacher, what does \"selectively permeable\" mean?",
   "choices": [
+   "It changes shape when the cell grows.",
    "It lets some substances through but not others.",
    "It lets every substance through easily.",
-   "It blocks all large and small molecules.",
-   "It changes shape when the cell grows."
+   "It blocks all large and small molecules."
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "The teacher defines selectively permeable as letting some things through, but not others."
  },
  {
@@ -366,12 +366,12 @@
   "passage": "Woman: So for our statistics project, we surveyed forty students about how many hours of sleep they get on school nights.\nMan: Right, and I already calculated the mean. It's about six and a half hours.\nWoman: The problem is that two people said they sleep fourteen hours. Those answers pull the mean up.\nMan: So maybe we should report the median instead?\nWoman: Exactly. The median isn't affected as much by a few extreme values.",
   "stem": "What problem does the woman point out?",
   "choices": [
-   "Two unusual answers make the mean higher.",
    "The survey did not include enough students.",
+   "Most students did not answer the question.",
    "The man made an error in his calculation.",
-   "Most students did not answer the question."
+   "Two unusual answers make the mean higher."
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "The woman says two students reported fourteen hours, and those answers pull the mean up."
  },
  {
@@ -381,12 +381,12 @@
   "passage": "Woman: So for our statistics project, we surveyed forty students about how many hours of sleep they get on school nights.\nMan: Right, and I already calculated the mean. It's about six and a half hours.\nWoman: The problem is that two people said they sleep fourteen hours. Those answers pull the mean up.\nMan: So maybe we should report the median instead?\nWoman: Exactly. The median isn't affected as much by a few extreme values.",
   "stem": "What do the students decide to do?",
   "choices": [
-   "Survey forty more students",
    "Remove the question from the project",
    "Ask the two students to answer again",
-   "Report the median instead of the mean"
+   "Report the median instead of the mean",
+   "Survey forty more students"
   ],
-  "answer": 3,
+  "answer": 2,
   "explanation": "They agree to use the median because it is less affected by extreme values."
  },
  {
@@ -396,10 +396,10 @@
   "passage": "Man: Are you voting in the student council election tomorrow?\nWoman: I'm not sure. I don't really know what the candidates want to do.\nMan: There's a debate in the gym during third period. Each candidate gets three minutes to explain their plans, and then students can ask questions.\nWoman: Oh, that's helpful. I want to ask about the plan to make lunch longer.\nMan: Then write your question on a card before the debate starts. That's how they collect them.",
   "stem": "Why is the woman unsure about voting?",
   "choices": [
-   "She will be absent tomorrow.",
-   "She does not know the candidates' plans.",
    "She does not like any of the candidates.",
-   "She thinks the election is unfair."
+   "She does not know the candidates' plans.",
+   "She thinks the election is unfair.",
+   "She will be absent tomorrow."
   ],
   "answer": 1,
   "explanation": "The woman says she doesn't really know what the candidates want to do."
@@ -411,12 +411,12 @@
   "passage": "Man: Are you voting in the student council election tomorrow?\nWoman: I'm not sure. I don't really know what the candidates want to do.\nMan: There's a debate in the gym during third period. Each candidate gets three minutes to explain their plans, and then students can ask questions.\nWoman: Oh, that's helpful. I want to ask about the plan to make lunch longer.\nMan: Then write your question on a card before the debate starts. That's how they collect them.",
   "stem": "How can students ask questions at the debate?",
   "choices": [
-   "By raising their hands during the speeches",
-   "By sending them to the student council by email",
    "By writing them on a card before it starts",
-   "By talking to the candidates after third period"
+   "By raising their hands during the speeches",
+   "By talking to the candidates after third period",
+   "By sending them to the student council by email"
   ],
-  "answer": 2,
+  "answer": 0,
   "explanation": "The man says to write the question on a card before the debate starts, because that is how questions are collected."
  },
  {
@@ -427,9 +427,9 @@
   "stem": "According to the lecture, what was the main effect of the Erie Canal?",
   "choices": [
    "It replaced the Hudson River as a route to the ocean.",
-   "It made wagon travel faster and safer.",
+   "It moved factories from New York City to the Midwest.",
    "It made shipping cheaper and helped cities grow.",
-   "It moved factories from New York City to the Midwest."
+   "It made wagon travel faster and safer."
   ],
   "answer": 2,
   "explanation": "The teacher explains that the canal cut shipping costs and that New York City and canal towns grew as a result."
@@ -441,12 +441,12 @@
   "passage": "Teacher: When the Erie Canal opened in 1825, it connected the Great Lakes to the Hudson River and, through the river, to New York City. Before the canal, moving goods from the Midwest to the East Coast by wagon was slow and very expensive. The canal cut shipping costs dramatically, by some estimates by about ninety percent. As a result, New York City grew into the nation's leading port, and towns along the canal route, like Buffalo and Rochester, expanded quickly. So when you think about the canal, don't picture it as just a long ditch full of water. Think of it as an engine of economic growth.",
   "stem": "Why does the teacher say not to picture the canal as \"just a long ditch full of water\"?",
   "choices": [
+   "To compare it to modern highways",
    "To explain how the canal was built",
    "To stress how important it was to the economy",
-   "To point out that the canal was too shallow",
-   "To compare it to modern highways"
+   "To point out that the canal was too shallow"
   ],
-  "answer": 1,
+  "answer": 2,
   "explanation": "The teacher wants students to see the canal as \"an engine of economic growth,\" not just a ditch."
  },
  {
@@ -458,8 +458,8 @@
   "choices": [
    "The temperature will rise.",
    "The temperature will stay the same.",
-   "The mixture will stop bubbling.",
-   "The vinegar will change color."
+   "The vinegar will change color.",
+   "The mixture will stop bubbling."
   ],
   "answer": 0,
   "explanation": "The man says, \"I guess it'll go up, since there's so much bubbling.\""
@@ -471,9 +471,9 @@
   "passage": "Woman: Before we start the lab, did you read the procedure?\nMan: Yes. We add baking soda to vinegar and measure the temperature every thirty seconds.\nWoman: Right. So what do you predict will happen to the temperature?\nMan: I guess it'll go up, since there's so much bubbling.\nWoman: That's a common guess. But this reaction actually absorbs heat from its surroundings, so the temperature drops. We call that an endothermic reaction.\nMan: Oh, so bubbling doesn't necessarily mean a reaction gives off heat.",
   "stem": "What does the man realize at the end of the conversation?",
   "choices": [
-   "The procedure has an error in it.",
-   "Endothermic reactions never produce bubbles.",
    "The temperature should be measured more often.",
+   "Endothermic reactions never produce bubbles.",
+   "The procedure has an error in it.",
    "Bubbling does not always mean heat is released."
   ],
   "answer": 3,
@@ -486,12 +486,12 @@
   "passage": "Teacher: Let's talk about the narrator of the story we just finished. She tells us again and again that she isn't upset about losing the race. But notice what she does. She throws away her running shoes, she avoids her teammates, and she refuses to watch the next meet. When a narrator's words and actions don't match, readers have to decide which one to trust. In this case, I'd argue that her actions tell us more than her words do.",
   "stem": "What is the teacher's main point?",
   "choices": [
-   "The narrator should have trained harder for the race.",
-   "The narrator's teammates treated her unfairly.",
+   "The narrator's actions show feelings that her words deny.",
    "Readers should always believe what a narrator says.",
-   "The narrator's actions show feelings that her words deny."
+   "The narrator's teammates treated her unfairly.",
+   "The narrator should have trained harder for the race."
   ],
-  "answer": 3,
+  "answer": 0,
   "explanation": "The teacher says the narrator's words and actions don't match and that her actions tell us more."
  },
  {
@@ -501,12 +501,12 @@
   "passage": "Teacher: Let's talk about the narrator of the story we just finished. She tells us again and again that she isn't upset about losing the race. But notice what she does. She throws away her running shoes, she avoids her teammates, and she refuses to watch the next meet. When a narrator's words and actions don't match, readers have to decide which one to trust. In this case, I'd argue that her actions tell us more than her words do.",
   "stem": "Which detail does the teacher use as evidence?",
   "choices": [
+   "The narrator thanks her coach.",
    "The narrator throws away her running shoes.",
    "The narrator wins the next meet.",
-   "The narrator thanks her coach.",
    "The narrator writes a letter to her team."
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "The teacher lists throwing away her running shoes as one of the narrator's actions."
  },
  {
@@ -517,11 +517,11 @@
   "stem": "In the teacher's example, what does the slope represent?",
   "choices": [
    "The flat monthly fee",
-   "The cost added for each text message",
+   "The cost of the phone itself",
    "The total number of texts sent",
-   "The cost of the phone itself"
+   "The cost added for each text message"
   ],
-  "answer": 1,
+  "answer": 3,
   "explanation": "The teacher says the slope, five cents per text, tells how fast the cost goes up."
  },
  {
@@ -531,12 +531,12 @@
   "passage": "Teacher: Yesterday someone asked why slope matters outside of math class. Here's an example. Suppose a phone plan charges a flat fee of twenty dollars a month plus five cents for each text message. If you graph the total monthly cost against the number of texts, you get a straight line. The point where the line crosses the y-axis, twenty dollars, is the flat fee. The slope, five cents per text, tells you how fast the cost goes up. So a plan with a steeper slope gets expensive faster as you send more texts.",
   "stem": "Under this plan, how much would a month with 100 text messages cost?",
   "choices": [
-   "$20",
    "$70",
    "$25",
+   "$20",
    "$520"
   ],
-  "answer": 2,
+  "answer": 1,
   "explanation": "The cost is $20 + 100 × $0.05 = $20 + $5 = $25."
  },
  {
@@ -546,8 +546,8 @@
   "passage": "Lecturer: Ecologists use the term \"ecosystem engineer\" for a species that physically reshapes its environment. Beavers are a classic example. When a beaver builds a dam, it floods part of a stream and creates a pond. The pond slows the water, traps soil, and raises the water level in the ground nearby, which helps plants survive dry summers. Fish, frogs, and birds then move into the new wetland. Here's the interesting part: when beavers were trapped out of many areas in the 1800s, streams cut deeper channels and the land around them dried out. Today, some restoration projects are bringing beavers back instead of building artificial structures, because the beavers do the work for free and keep repairing it themselves.",
   "stem": "What is the lecture mainly about?",
   "choices": [
-   "Why beavers were trapped in the 1800s",
    "How engineers design artificial dams",
+   "Why beavers were trapped in the 1800s",
    "How beavers change their surroundings in ways that help other species",
    "Why fish and frogs need deep stream channels"
   ],
@@ -561,12 +561,12 @@
   "passage": "Lecturer: Ecologists use the term \"ecosystem engineer\" for a species that physically reshapes its environment. Beavers are a classic example. When a beaver builds a dam, it floods part of a stream and creates a pond. The pond slows the water, traps soil, and raises the water level in the ground nearby, which helps plants survive dry summers. Fish, frogs, and birds then move into the new wetland. Here's the interesting part: when beavers were trapped out of many areas in the 1800s, streams cut deeper channels and the land around them dried out. Today, some restoration projects are bringing beavers back instead of building artificial structures, because the beavers do the work for free and keep repairing it themselves.",
   "stem": "Why do some restoration projects bring beavers back instead of building structures?",
   "choices": [
-   "Artificial structures are not allowed in streams.",
    "Beavers build and maintain dams at no cost.",
    "Beavers make streams cut deeper channels.",
+   "Artificial structures are not allowed in streams.",
    "Beavers keep frogs and birds away from the water."
   ],
-  "answer": 1,
+  "answer": 0,
   "explanation": "The lecturer says beavers do the work for free and keep repairing it themselves."
  },
  {
@@ -576,12 +576,12 @@
   "passage": "Woman: For my research paper on the 1918 flu pandemic, I'm using a textbook chapter and a couple of websites.\nMan: Didn't Ms. Ortiz say we need primary sources too?\nWoman: She did, but I'm not sure where to find any.\nMan: The city library has put old newspapers online. You could read articles that were written while the pandemic was happening.\nWoman: But wouldn't those be less accurate? People back then didn't know as much about the disease.\nMan: Maybe, but that's kind of the point. A primary source shows you what people believed and experienced at the time, even if they got some facts wrong.\nWoman: So I'd be using the articles as evidence of how people reacted, not as evidence of the medical facts.\nMan: Exactly.",
   "stem": "What is the woman's concern about the old newspapers?",
   "choices": [
-   "They may contain information that is not accurate.",
+   "They do not mention the pandemic.",
    "They are too difficult to find online.",
-   "Her teacher does not allow newspapers.",
-   "They do not mention the pandemic."
+   "They may contain information that is not accurate.",
+   "Her teacher does not allow newspapers."
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "The woman asks whether the articles would be less accurate because people knew less about the disease then."
  },
  {
@@ -593,10 +593,10 @@
   "choices": [
    "They should replace her textbook as a source of medical facts.",
    "They are not worth including in her paper.",
-   "They prove that the textbook is wrong.",
-   "They are useful evidence of how people reacted at the time."
+   "They are useful evidence of how people reacted at the time.",
+   "They prove that the textbook is wrong."
   ],
-  "answer": 3,
+  "answer": 2,
   "explanation": "She concludes she will use the articles as evidence of people's reactions, not of the medical facts."
  },
  {
@@ -606,12 +606,12 @@
   "passage": "Teacher: Many people assume that heavier objects fall faster than lighter ones. If you drop a book and a flat sheet of paper at the same time, the book does hit the floor first, so the idea seems reasonable. But now crumple the paper into a tight ball and drop them again. This time they land at almost exactly the same moment. The paper's mass didn't change; only its shape did. What was slowing the flat sheet down was air resistance, not its lighter weight. In fact, in a place with no air at all, like the surface of the Moon, a hammer and a feather dropped together hit the ground at the same time.",
   "stem": "Why does the teacher have the students crumple the paper?",
   "choices": [
-   "To show that air resistance, not weight, slowed the flat paper",
-   "To make the paper heavier than the book",
+   "To measure the mass of the paper",
    "To show that heavier objects fall faster",
-   "To measure the mass of the paper"
+   "To make the paper heavier than the book",
+   "To show that air resistance, not weight, slowed the flat paper"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Crumpling changes only the paper's shape, and the paper then falls with the book, so air resistance was the cause."
  },
  {
@@ -621,12 +621,12 @@
   "passage": "Teacher: Many people assume that heavier objects fall faster than lighter ones. If you drop a book and a flat sheet of paper at the same time, the book does hit the floor first, so the idea seems reasonable. But now crumple the paper into a tight ball and drop them again. This time they land at almost exactly the same moment. The paper's mass didn't change; only its shape did. What was slowing the flat sheet down was air resistance, not its lighter weight. In fact, in a place with no air at all, like the surface of the Moon, a hammer and a feather dropped together hit the ground at the same time.",
   "stem": "Based on the talk, what would happen if the book and the flat sheet were dropped where there is no air?",
   "choices": [
-   "The book would land first.",
-   "The sheet would land first.",
+   "The sheet would float and never land.",
    "They would land at the same time.",
-   "The sheet would float and never land."
+   "The sheet would land first.",
+   "The book would land first."
   ],
-  "answer": 2,
+  "answer": 1,
   "explanation": "The teacher explains that without air, all objects fall at the same rate."
  },
  {
@@ -652,11 +652,11 @@
   "stem": "What does the teacher warn students against?",
   "choices": [
    "Writing more than one paragraph",
-   "Mentioning an opposing view without responding to it",
    "Agreeing with readers who disagree",
+   "Mentioning an opposing view without responding to it",
    "Revising their essays too many times"
   ],
-  "answer": 1,
+  "answer": 2,
   "explanation": "The teacher says simply listing an opposing view and moving on can confuse the reader."
  },
  {
@@ -666,12 +666,12 @@
   "passage": "Class Garden Rules\n1. Walk on the path.\n2. Do not pick the flowers.\n3. Water the plants on Monday and Thursday.\n4. Wash your hands when you are done.",
   "stem": "When do students water the plants?",
   "choices": [
-   "Every day",
-   "On Tuesday and Friday",
    "Only on Monday",
-   "On Monday and Thursday"
+   "On Monday and Thursday",
+   "Every day",
+   "On Tuesday and Friday"
   ],
-  "answer": 3,
+  "answer": 1,
   "explanation": "Rule 3 says to water the plants on Monday and Thursday."
  },
  {
@@ -681,12 +681,12 @@
   "passage": "Class Garden Rules\n1. Walk on the path.\n2. Do not pick the flowers.\n3. Water the plants on Monday and Thursday.\n4. Wash your hands when you are done.",
   "stem": "What should students do when they are done?",
   "choices": [
-   "Pick a flower",
    "Wash their hands",
+   "Pick a flower",
    "Run on the path",
    "Water the plants again"
   ],
-  "answer": 1,
+  "answer": 0,
   "explanation": "Rule 4 says to wash your hands when you are done."
  },
  {
@@ -698,8 +698,8 @@
   "choices": [
    "Orange",
    "Blue",
-   "Yellow",
-   "Green"
+   "Green",
+   "Yellow"
   ],
   "answer": 0,
   "explanation": "The story says the fish is orange."
@@ -712,11 +712,11 @@
   "stem": "How many times a day does Jay feed his fish?",
   "choices": [
    "Two times",
-   "Three times",
    "One time",
-   "Four times"
+   "Four times",
+   "Three times"
   ],
-  "answer": 2,
+  "answer": 1,
   "explanation": "Jay feeds the fish one time each day."
  },
  {
@@ -726,12 +726,12 @@
   "passage": "Dear Mom,\nI will stay after school today. My class is making a big poster about the moon. Ms. Diaz will walk me to the bus at four o'clock. Please save me a snack!\nLove,\nNina",
   "stem": "Why will Nina stay after school?",
   "choices": [
+   "To play on the playground",
    "To eat a snack",
    "To read a book about the sun",
-   "To make a poster about the moon",
-   "To play on the playground"
+   "To make a poster about the moon"
   ],
-  "answer": 2,
+  "answer": 3,
   "explanation": "Nina writes that her class is making a big poster about the moon."
  },
  {
@@ -741,12 +741,12 @@
   "passage": "Dear Mom,\nI will stay after school today. My class is making a big poster about the moon. Ms. Diaz will walk me to the bus at four o'clock. Please save me a snack!\nLove,\nNina",
   "stem": "Who will walk Nina to the bus?",
   "choices": [
-   "Ms. Diaz",
-   "Mom",
+   "Nina's friend",
    "The bus driver",
-   "Nina's friend"
+   "Mom",
+   "Ms. Diaz"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "The note says Ms. Diaz will walk Nina to the bus."
  },
  {
@@ -756,8 +756,8 @@
   "passage": "Ice is cold and hard. When ice gets warm, it melts. It turns into water. When water gets very cold, it freezes. It turns back into ice. You can make ice in a freezer.",
   "stem": "What happens when ice gets warm?",
   "choices": [
-   "It gets harder.",
    "It turns into snow.",
+   "It gets harder.",
    "It stays the same.",
    "It melts into water."
   ],
@@ -771,10 +771,10 @@
   "passage": "Ice is cold and hard. When ice gets warm, it melts. It turns into water. When water gets very cold, it freezes. It turns back into ice. You can make ice in a freezer.",
   "stem": "What happens when water gets very cold?",
   "choices": [
-   "It gets warm.",
+   "It goes away.",
    "It freezes into ice.",
-   "It melts.",
-   "It goes away."
+   "It gets warm.",
+   "It melts."
   ],
   "answer": 1,
   "explanation": "The passage says when water gets very cold, it freezes and turns into ice."
@@ -786,12 +786,12 @@
   "passage": "Parts of a Tree\nRoots: They grow under the ground. They take in water.\nTrunk: It is the strong middle part. It holds up the tree.\nBranches: They grow out from the trunk.\nLeaves: They grow on the branches. They use sunlight to make food.",
   "stem": "Which part holds up the tree?",
   "choices": [
-   "The roots",
-   "The leaves",
    "The trunk",
-   "The branches"
+   "The branches",
+   "The leaves",
+   "The roots"
   ],
-  "answer": 2,
+  "answer": 0,
   "explanation": "The label says the trunk is the strong middle part that holds up the tree."
  },
  {
@@ -801,10 +801,10 @@
   "passage": "Parts of a Tree\nRoots: They grow under the ground. They take in water.\nTrunk: It is the strong middle part. It holds up the tree.\nBranches: They grow out from the trunk.\nLeaves: They grow on the branches. They use sunlight to make food.",
   "stem": "Where do the leaves grow?",
   "choices": [
-   "Under the ground",
-   "On the branches",
    "Inside the trunk",
-   "On the roots"
+   "On the branches",
+   "On the roots",
+   "Under the ground"
   ],
   "answer": 1,
   "explanation": "The label says leaves grow on the branches."
@@ -816,12 +816,12 @@
   "passage": "Owen has 6 stickers. His friend Ruby gives him 4 more stickers. Then Owen gives 3 stickers to his little brother. Owen puts the rest of his stickers in his sticker book.",
   "stem": "How many stickers does Ruby give Owen?",
   "choices": [
-   "4",
-   "3",
    "6",
-   "10"
+   "10",
+   "3",
+   "4"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "The story says Ruby gives Owen 4 more stickers."
  },
  {
@@ -832,11 +832,11 @@
   "stem": "How many stickers does Owen put in his sticker book?",
   "choices": [
    "10",
+   "7",
    "13",
-   "3",
-   "7"
+   "3"
   ],
-  "answer": 3,
+  "answer": 1,
   "explanation": "Owen has 6 + 4 = 10 stickers, then gives away 3, so 10 − 3 = 7 go in his book."
  },
  {
@@ -846,12 +846,12 @@
   "passage": "Long ago, many children did not ride a bus to school. They walked a long way. Some schools had only one room. Big kids and little kids learned together in that room. They wrote on small boards called slates instead of on paper.",
   "stem": "What did children write on long ago?",
   "choices": [
-   "Computers",
-   "Big posters",
    "Small boards called slates",
-   "Paper notebooks"
+   "Computers",
+   "Paper notebooks",
+   "Big posters"
   ],
-  "answer": 2,
+  "answer": 0,
   "explanation": "The passage says they wrote on small boards called slates instead of paper."
  },
  {
@@ -861,12 +861,12 @@
   "passage": "Long ago, many children did not ride a bus to school. They walked a long way. Some schools had only one room. Big kids and little kids learned together in that room. They wrote on small boards called slates instead of on paper.",
   "stem": "What was true about a one-room school?",
   "choices": [
-   "Big kids and little kids learned together.",
    "Only big kids went there.",
    "Every class had its own room.",
+   "Big kids and little kids learned together.",
    "Children rode a bus to get there."
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "The passage says big kids and little kids learned together in that room."
  },
  {
@@ -876,12 +876,12 @@
   "passage": "It was the first day of school. Ava felt shy. She did not know anyone. At recess, she sat on a bench by herself. Then a girl named Kim sat next to her. \"Do you want to play tag?\" Kim asked. Ava smiled and jumped up.",
   "stem": "How did Ava feel at the start of the story?",
   "choices": [
+   "Silly",
    "Angry",
-   "Shy",
    "Sleepy",
-   "Silly"
+   "Shy"
   ],
-  "answer": 1,
+  "answer": 3,
   "explanation": "The story says Ava felt shy because she did not know anyone."
  },
  {
@@ -891,12 +891,12 @@
   "passage": "It was the first day of school. Ava felt shy. She did not know anyone. At recess, she sat on a bench by herself. Then a girl named Kim sat next to her. \"Do you want to play tag?\" Kim asked. Ava smiled and jumped up.",
   "stem": "What did Kim ask Ava to do?",
   "choices": [
-   "Sit on the bench",
    "Read a book",
+   "Play tag",
    "Eat lunch",
-   "Play tag"
+   "Sit on the bench"
   ],
-  "answer": 3,
+  "answer": 1,
   "explanation": "Kim asked, \"Do you want to play tag?\""
  }
 ]

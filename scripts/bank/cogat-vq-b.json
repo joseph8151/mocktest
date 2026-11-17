@@ -1137,15 +1137,15 @@
   "exam_type": "COGAT",
   "section": "quantitative",
   "difficulty": 3,
-  "stem": "Number analogy:  18 → 6,   27 → 9,   12 → ?",
+  "stem": "Number analogy:  15 → 5,   24 → 8,   21 → ?",
   "choices": [
-   "3",
-   "6",
-   "36",
-   "4"
+   "18",
+   "9",
+   "63",
+   "7"
   ],
   "answer": 3,
-  "explanation": "Each number is divided by 3: 18 ÷ 3 = 6 and 27 ÷ 3 = 9, so 12 ÷ 3 = 4."
+  "explanation": "Each number is divided by 3: 15 ÷ 3 = 5 and 24 ÷ 3 = 8, so 21 ÷ 3 = 7."
  },
  {
   "exam_type": "COGAT",
