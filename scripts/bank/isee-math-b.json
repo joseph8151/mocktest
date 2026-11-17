@@ -45,16 +45,16 @@
     "exam_type": "ISEE",
     "section": "math",
     "difficulty": 1,
-    "stem": "What is the perimeter of the rectangle?",
+    "stem": "The figure shows a garden shaped like a triangle. How many meters of fence are needed to go all the way around the garden?",
     "choices": [
-      "28 cm",
-      "22 cm",
-      "11 cm",
-      "18 cm"
+      "14 m",
+      "24 m",
+      "48 m",
+      "18 m"
     ],
     "answer": 1,
-    "explanation": "Perimeter = 7 + 4 + 7 + 4 = 22 cm.",
-    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 330 170\" width=\"330\" height=\"170\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#222\"><rect x=\"60\" y=\"30\" width=\"210\" height=\"120\" fill=\"none\" stroke=\"#0a1f44\" stroke-width=\"3\"/><text x=\"165\" y=\"22\" text-anchor=\"middle\">7 cm</text><text x=\"278\" y=\"95\">4 cm</text></svg>"
+    "explanation": "Add the three side lengths: 6 + 8 + 10 = 24 meters.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 200\" width=\"300\" height=\"200\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#222\"><polygon points=\"60,175 236,175 60,43\" fill=\"none\" stroke=\"#0a1f44\" stroke-width=\"3\"/><polyline points=\"60,163 72,163 72,175\" fill=\"none\" stroke=\"#888\" stroke-width=\"2\"/><text x=\"148\" y=\"197\" text-anchor=\"middle\">8 m</text><text x=\"52\" y=\"114\" text-anchor=\"end\">6 m</text><text x=\"160\" y=\"105\">10 m</text></svg>"
   },
   {
     "exam_type": "ISEE",
@@ -239,7 +239,7 @@
     ],
     "answer": 1,
     "explanation": "Volume = length × width × height = 5 × 3 × 4 = 60 cubic units.",
-    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 238.05\" width=\"340\" height=\"238.05\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#222\"><polygon points=\"80,204.1 250,204.1 250,68.1 80,68.1\" fill=\"none\" stroke=\"#0a1f44\" stroke-width=\"3\"/><polygon points=\"80,68.1 250,68.1 298.6,40 128.6,40\" fill=\"none\" stroke=\"#0a1f44\" stroke-width=\"3\"/><polygon points=\"250,204.1 298.6,176 298.6,40 250,68.1\" fill=\"none\" stroke=\"#0a1f44\" stroke-width=\"3\"/><text x=\"165\" y=\"226.1\" text-anchor=\"middle\">5 units</text><text x=\"72\" y=\"141.1\" text-anchor=\"end\">4 units</text><text x=\"284.3\" y=\"196\">3 units</text></svg>"
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 218.75\" width=\"340\" height=\"218.75\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#222\"><polygon points=\"75,184.8 225,184.8 225,64.8 75,64.8\" fill=\"none\" stroke=\"#0a1f44\" stroke-width=\"3\"/><polygon points=\"75,64.8 225,64.8 267.9,40 117.9,40\" fill=\"none\" stroke=\"#0a1f44\" stroke-width=\"3\"/><polygon points=\"225,184.8 267.9,160 267.9,40 225,64.8\" fill=\"none\" stroke=\"#0a1f44\" stroke-width=\"3\"/><text x=\"150\" y=\"206.8\" text-anchor=\"middle\">5 units</text><text x=\"67\" y=\"129.8\" text-anchor=\"end\">4 units</text><text x=\"256.4\" y=\"178.4\">3 units</text></svg>"
   },
   {
     "exam_type": "ISEE",
