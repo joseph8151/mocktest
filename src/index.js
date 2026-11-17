@@ -56,10 +56,10 @@ app.use('/api/*', async (c, next) => {
   }
   // Request size caps (bytes): audio answers and bulk question import are the only large bodies.
   const len = Number(c.req.header('content-length') || 0);
-  const cap = c.req.path.endsWith('/audio') ? 1_300_000 : c.req.path === '/api/admin/questions/import' ? 8_000_000 : 256_000;
+  const cap = c.req.path.endsWith('/audio') ? 1_300_000 : c.req.path.startsWith('/api/admin/listening/') ? 1_450_000 : c.req.path === '/api/admin/questions/import' ? 8_000_000 : 256_000;
   if (len > cap) return c.json({ error: '요청이 너무 큽니다.' }, 413);
   await next();
-  c.header('Cache-Control', 'no-store');
+  if (!c.req.path.startsWith('/api/listening/') || c.res.status >= 300) c.header('Cache-Control', 'no-store'); // recordings: versioned URLs, cached
   for (const [k, v] of Object.entries(API_HEADERS)) if (!c.res.headers.has(k)) c.header(k, v);
 });
 

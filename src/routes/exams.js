@@ -8,6 +8,7 @@ import { sendMail, mailReport } from '../lib/email.js';
 import { audit, logEvent, rateLimited, tooMany } from '../lib/security.js';
 import { alimtalk, phoneFor } from '../lib/notify.js';
 import { gradeAttempt } from '../lib/aigrade.js';
+import { audioIndex, audioUrl } from '../lib/listening.js';
 
 const app = new Hono();
 app.use('*', requireUser);
@@ -19,8 +20,8 @@ app.use('*', async (c, next) => { // an attempt that just finished with writing/
   try { c.executionCtx.waitUntil(job); } catch { /* no execution context (tests): the cron sweep picks it up */ }
 });
 
-const publicQ = (q) => ({
-  id: q.id, section: q.section, kind: q.kind, passage: q.passage, stem: q.stem, image_svg: q.image_svg,
+const publicQ = (q, aud = null) => ({
+  id: q.id, section: q.section, kind: q.kind, passage: q.passage, stem: q.stem, image_svg: q.image_svg, audio: aud ? audioUrl(aud, q.exam_type, q) : null,
   choices: q.choices && q.kind !== 'num' ? JSON.parse(q.choices) : null,
 });
 
@@ -257,24 +258,25 @@ async function sectionView(env, a, st) {
   const { results: qs } = await env.DB.prepare(`SELECT * FROM questions WHERE id IN (${ids.map(() => '?').join(',')})`).bind(...ids).all();
   const byId = Object.fromEntries(qs.map((q) => [q.id, q]));
   const { results: ans } = await env.DB.prepare(`SELECT question_id,choice,text,audio_key FROM answers WHERE attempt_id=? AND section=?`).bind(a.id, sec.key).all();
+  const aud = /listen/i.test(sec.key) ? await audioIndex(env) : null;
   return {
     status: 'in_progress', mode: 'section',
     section: { index: st.si, key: sec.key, name: sec.name, total: ex.sections.length, ...sectionPos(a.exam_type, st), deadline: st.deadline, manual: !!sec.manual },
-    questions: ids.map((id) => byId[id]).filter(Boolean).map(publicQ),
+    questions: ids.map((id) => byId[id]).filter(Boolean).map((q) => publicQ(q, aud)),
     saved: Object.fromEntries(ans.map((r) => [r.question_id, { choice: r.choice, text: r.text, audio: !!r.audio_key }])),
     penalty: a.exam_type === 'SSAT' && st.level !== 'elem',
     serverNow: now(),
   };
 }
 
-function view(a, st, q, newSection) {
+function view(a, st, q, newSection, aud = null) {
   const ex = EXAMS[a.exam_type];
   const sec = ex.sections[Math.min(st.si, ex.sections.length - 1)];
   return {
     status: q ? 'in_progress' : 'finished',
     section: { index: st.si, key: sec.key, name: sec.name, total: ex.sections.length, ...sectionPos(a.exam_type, st), deadline: st.deadline, manual: !!sec.manual },
     progress: { n: st.qi + 1, total: st.target || null },
-    question: q ? publicQ(q) : null,
+    question: q ? publicQ(q, aud) : null,
     serverNow: now(),
   };
 }
@@ -297,7 +299,7 @@ app.get('/attempts/:id/current', async (c) => {
   }
   const q = await ensureCurrent(c.env, a, st);
   if (q) await c.env.DB.prepare('UPDATE attempts SET state=? WHERE id=?').bind(JSON.stringify(st), a.id).run();
-  return c.json({ ...view(a, st, q), mode: 'adaptive' });
+  return c.json({ ...view(a, st, q, false, q?.passage ? await audioIndex(c.env) : null), mode: 'adaptive' });
 });
 
 /** Save (or change, or clear) one answer inside the current section. */
@@ -372,7 +374,7 @@ app.post('/attempts/:id/answer', async (c) => {
   }
   const next = await ensureCurrent(c.env, a, st);
   if (next) await c.env.DB.prepare('UPDATE attempts SET state=? WHERE id=?').bind(JSON.stringify(st), a.id).run();
-  return c.json(view(a, st, next));
+  return c.json(view(a, st, next, false, next?.passage ? await audioIndex(c.env) : null));
 });
 
 app.put('/attempts/:id/audio', async (c) => {

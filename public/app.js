@@ -37,7 +37,8 @@ const api = async (method, path, body, tries = method === 'GET' ? 2 : 1) => {
 // always go through these helpers, never the bare globals (a bare undeclared global throws and blanks the page).
 const inApp = /KAKAOTALK|NAVER\(inapp|Instagram|FBAN|FBAV|Line\/|; wv\)/i.test(navigator.userAgent);
 const canSpeak = () => !!(window.speechSynthesis && window.SpeechSynthesisUtterance);
-const stopSpeech = () => { try { window.speechSynthesis?.cancel(); } catch {} };
+let listenAudio = null; // recorded listening audio (관리자 → 리스닝 음원); plays in in-app browsers too, unlike TTS
+const stopSpeech = () => { try { window.speechSynthesis?.cancel(); } catch {} try { listenAudio?.pause(); } catch {} };
 /** Listening scripts are written with speaker labels ("Teacher: …", "Woman: …", "Mia: …"). Read them like audio would:
  * role labels are not spoken (a one-person talk just plays; in a dialogue each speaker gets a different voice pitch,
  * women/girls higher, men/boys lower, so "the woman"/"the man" questions work by ear); name labels are spoken
@@ -56,6 +57,17 @@ const speak = (text) => {
     if (who && speakers.length > 1) u.pitch = HIGH.test(who) ? 1.3 : LOW.test(who) ? 0.75 : [1, 0.85, 1.15, 0.95][speakers.indexOf(who) % 4];
     window.speechSynthesis.speak(u);
   });
+};
+/** Play a listening passage: the uploaded recording when there is one, otherwise read the script aloud. false = could not play. */
+const playListening = (q) => {
+  stopSpeech();
+  if (q.audio) {
+    listenAudio = new Audio(q.audio);
+    listenAudio.play().catch(() => { if (canSpeak()) speak(q.passage); else toast('음원을 재생하지 못했습니다. 잠시 후 다시 눌러 주세요.'); });
+    return true;
+  }
+  if (!canSpeak()) { noSpeech(); return false; }
+  speak(q.passage); return true;
 };
 const openExternal = () => { const url = location.href; if (/KAKAOTALK/i.test(navigator.userAgent)) location.href = 'kakaotalk://web/openExternal?url=' + encodeURIComponent(url); else window.open(url, '_blank'); };
 const noSpeech = () => { if (confirm('이 앱 안의 브라우저는 듣기 음성을 재생할 수 없습니다.\n크롬·사파리 같은 기본 브라우저로 열까요? (로그인 후 이어서 응시할 수 있습니다)')) openExternal(); };
@@ -232,7 +244,7 @@ async function pageHome() {
         h('h1', {}, 'Practice like', h('br'), 'it\'s ', h('span', { class: 'hl' }, 'test day'), '.', h('em', {}, 'MAP / CAT4 / CogAT / SCAT / SSAT / ISEE / SAT / TOEFL Junior / WIDA')),
         h('p', { class: 'lead' }, '실제 시험과 같은 형식, 같은 시간 압박. 결제하면 곧바로 응시할 수 있고, 끝나는 즉시 영역별 점수와 문항별 해설이 나옵니다.'),
         h('div', { class: 'row' }, h('button', { class: 'btn lg', onclick: toExams }, 'Browse tests →'), me ? h('a', { class: 'btn lg alt', href: '#/me' }, '내 시험') : h('a', { class: 'btn lg alt', href: '#/register' }, '회원가입')),
-        h('div', { class: 'chips' }, [['3,300+', 'original questions'], ['9', 'test types'], ['0s', 'wait for your score']].map(([b, t]) => h('div', {}, h('b', {}, b), t)))),
+        h('div', { class: 'chips' }, [['5,000+', 'original questions'], ['12', 'test types'], ['0s', 'wait for your score']].map(([b, t]) => h('div', {}, h('b', {}, b), t)))),
       h('div', { class: 'mock', 'aria-hidden': 'true' },
         h('div', { class: 'mrow' }, h('b', { style: 'font-weight:500' }, 'Verbal / 03'), h('span', {}, '08:42')),
         h('div', { class: 'mq' }, 'Author is to book as composer is to ___'),
@@ -797,14 +809,21 @@ async function pageSample(type) {
     const answers = d.questions.map((q) => ({ id: q.id, choice: picked[q.id] ?? null }));
     const r = await api('POST', '/sample/grade', { answers });
     const by = Object.fromEntries(r.results.map((x) => [x.id, x]));
-    document.querySelectorAll('[data-q]').forEach((card) => { const x = by[card.dataset.q]; if (!x) return; card.classList.add(x.correct ? 'good' : 'wrong'); card.querySelectorAll('.choice').forEach((c, i) => { c.style.pointerEvents = 'none'; c.classList.remove('sel'); if (i === x.answer) c.classList.add('right'); else if (picked[card.dataset.q] === i) c.classList.add('miss'); }); card.append(h('p', { class: 'small' }, h('b', {}, x.correct ? '정답. ' : '오답. '), x.explanation || '')); });
+    document.querySelectorAll('[data-q]').forEach((card) => { const x = by[card.dataset.q]; if (!x) return; card.classList.add(x.correct ? 'good' : 'wrong'); card.querySelectorAll('.choice').forEach((c, i) => { c.style.pointerEvents = 'none'; c.classList.remove('sel'); if (i === x.answer) c.classList.add('right'); else if (picked[card.dataset.q] === i) c.classList.add('miss'); }); card.querySelector('.script')?.removeAttribute('hidden'); card.append(h('p', { class: 'small' }, h('b', {}, x.correct ? '정답. ' : '오답. '), x.explanation || '')); });
     btn.remove(); out.replaceChildren(h('div', { class: 'score-hero' }, h('div', {}, h('div', { class: 'muted' }, 'Sample result'), h('h2', {}, `${r.total}문항 중 ${r.score}문항 정답`), h('p', { class: 'muted small' }, '실제 시험은 영역별 제한 시간이 있고 점수와 리포트가 제공됩니다.')), h('a', { class: 'btn', href: `#/info/${type}` }, '시험 안내 · 구매 →')));
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
   const btn = h('button', { class: 'btn lg', onclick: submit }, '채점하기');
   mount(h('div', { class: 'kicker' }, 'Free sample · no login'), h('h2', {}, `${d.title} 무료 샘플`), out,
     d.questions.map((q, n) => { const boxes = q.choices.map((c, i) => h('label', { class: 'choice', onclick: () => { picked[q.id] = i; boxes.forEach((b, j) => b.classList.toggle('sel', i === j)); } }, h('b', {}, 'ABCD'[i]), choiceNode(c)));
-      return h('div', { class: 'card', 'data-q': q.id }, h('div', { class: 'small muted' }, `#${n + 1} · ${q.section}`), q.passage ? h('div', { class: 'passage' }, q.passage) : null, q.image_svg ? h('img', { class: 'qimg', src: svgUri(q.image_svg), alt: '' }) : null, h('h3', { class: 'stem' }, q.stem), boxes); }), btn);
+      return h('div', { class: 'card', 'data-q': q.id }, h('div', { class: 'small muted' }, `#${n + 1} · ${q.section}`), q.listening ? sampleListen(q) : q.passage ? h('div', { class: 'passage' }, q.passage) : null, q.image_svg ? h('img', { class: 'qimg', src: svgUri(q.image_svg), alt: '' }) : null, h('h3', { class: 'stem' }, q.stem), boxes); }), btn);
+}
+
+/** Free-sample listening item: play button (max 2, like the real test); the script is revealed only after grading. */
+function sampleListen(q) {
+  let n = 0;
+  const play = h('button', { class: 'btn alt', onclick: () => { if (n >= 2) return toast('최대 2번까지 들을 수 있습니다.'); if (!playListening(q)) return; n++; play.textContent = `▶ 다시 듣기 (${2 - n}회 남음)`; } }, '▶ 듣기 (최대 2회)');
+  return h('div', { class: 'passage' }, play, h('div', { class: 'script small', hidden: true, style: 'margin-top:10px;white-space:pre-line' }, h('b', {}, 'Script'), h('br'), q.passage));
 }
 
 async function pageMistakes(q = {}) {
@@ -954,7 +973,7 @@ function pageExamSection(id, state) {
     const body = [];
     if (sec.key === 'listening' && q.passage) {
       listens[q.id] ||= 0;
-      const play = h('button', { class: 'btn alt', onclick: () => { if (!canSpeak()) return noSpeech(); if (listens[q.id] >= 2) return toast('최대 2번까지 들을 수 있습니다.'); listens[q.id]++; speak(q.passage); play.textContent = `▶ 다시 듣기 (${2 - listens[q.id]}회 남음)`; } }, listens[q.id] ? `▶ 다시 듣기 (${2 - listens[q.id]}회 남음)` : '▶ 듣기 (최대 2회)');
+      const play = h('button', { class: 'btn alt', onclick: () => { if (listens[q.id] >= 2) return toast('최대 2번까지 들을 수 있습니다.'); if (!playListening(q)) return; listens[q.id]++; play.textContent = `▶ 다시 듣기 (${2 - listens[q.id]}회 남음)`; } }, listens[q.id] ? `▶ 다시 듣기 (${2 - listens[q.id]}회 남음)` : '▶ 듣기 (최대 2회)');
       body.push(h('div', { class: 'passage' }, play));
     } else if (q.passage) {
       const grp = qs.map((x, i) => (x.passage === q.passage ? i : -1)).filter((i) => i >= 0); // questions sharing this passage (kept together)
@@ -1041,7 +1060,7 @@ async function pageExamAdaptive(id, state) {
     });
     const body = [];
     if (q.kind === 'mcq' && sec.key === 'listening') {
-      const play = h('button', { class: 'btn alt', onclick: () => { if (!canSpeak()) return noSpeech(); if (listens >= 2) return toast('최대 2번까지 들을 수 있습니다.'); listens++; speak(q.passage); play.textContent = `▶ 다시 듣기 (${2 - listens}회 남음)`; } }, '▶ 듣기 (최대 2회)');
+      const play = h('button', { class: 'btn alt', onclick: () => { if (listens >= 2) return toast('최대 2번까지 들을 수 있습니다.'); if (!playListening(q)) return; listens++; play.textContent = `▶ 다시 듣기 (${2 - listens}회 남음)`; } }, '▶ 듣기 (최대 2회)');
       body.push(h('div', { class: 'passage' }, play));
     } else if (q.passage) body.push(h('div', { class: 'passage' }, q.passage));
     const longP = !!q.passage && sec.key !== 'listening' && q.passage.split(/\s+/).length >= 110;
@@ -1179,14 +1198,77 @@ function renderReport(r, id) {
 }
 
 /* ---------- admin ---------- */
-const ADMIN_TABS = [['stats', '대시보드'], ['users', '회원'], ['orders', '주문'], ['products', '상품'], ['coupons', '쿠폰'], ['gifts', '선물코드'], ['support', '문의'], ['questions', '문제'], ['grading', '채점'], ['payments', '결제설정'], ['logs', '기록'], ['security', '보안']];
+const ADMIN_TABS = [['stats', '대시보드'], ['users', '회원'], ['orders', '주문'], ['products', '상품'], ['coupons', '쿠폰'], ['gifts', '선물코드'], ['support', '문의'], ['questions', '문제'], ['grading', '채점'], ['payments', '결제설정'], ['listening', '리스닝 음원'], ['logs', '기록'], ['security', '보안']];
 async function pageAdmin(tab = 'stats') {
   if (!me || me.role !== 'admin') return (location.hash = '#/');
   const body = h('div', {});
   mount(h('h2', {}, '관리자'), h('div', { class: 'tabs' }, ADMIN_TABS.map(([k, l]) => h('button', { class: k === tab ? 'on' : '', onclick: () => (location.hash = `#/admin/${k}`) }, l))), body);
   document.querySelector('.tabs .on')?.scrollIntoView({ inline: 'center', block: 'nearest' }); // phones: keep the current tab visible
   window.scrollTo(0, 0);
-  await ({ stats: adminStats, users: adminUsers, orders: adminOrders, products: adminProducts, questions: adminQuestions, grading: adminGrading, payments: adminPayments, coupons: adminCoupons, security: adminSecurity, logs: adminLogs, gifts: adminGifts, support: adminSupport }[tab] || adminStats)(body);
+  await ({ stats: adminStats, users: adminUsers, orders: adminOrders, products: adminProducts, questions: adminQuestions, grading: adminGrading, payments: adminPayments, listening: adminListening, coupons: adminCoupons, security: adminSecurity, logs: adminLogs, gifts: adminGifts, support: adminSupport }[tab] || adminStats)(body);
+}
+/* 리스닝 음원: download the scripts, record them (any TTS/voice tool), upload files named by code. Missing ones use TTS. */
+const LISTEN_GUIDE = `MockTest Lab — listening scripts
+Make one audio file per block below and name it exactly with the block's code, e.g. wida-1a2b3c4d.mp3
+- Natural American English, calm and clear, slightly slower than normal (children's test).
+- Do NOT read the speaker labels aloud (Woman:, Man:, Teacher:, Boy:, Girl:, Announcer: ...). Use a different voice for each
+  speaker in a dialogue: a female voice for Woman/Girl/Mom/female names, a male voice for Man/Boy/Dad/male names.
+- Leave a short pause between speakers. No music or sound effects.
+- mp3, mono, 64 kbps is plenty; each file must be under 1.4 MB.
+Upload: 관리자 → 리스닝 음원 → 음원 파일 올리기 (several files at once is fine).
+`;
+async function adminListening(b) {
+  const d = await api('GET', '/admin/listening');
+  const ps = d.passages, qp = new URLSearchParams(location.hash.split('?')[1] || '');
+  const ex = qp.get('exam') || 'all', st = qp.get('show') || 'all';
+  const nav = (k, v) => { qp.set(k, v); history.replaceState(null, '', '#/admin/listening?' + qp); pageAdmin('listening'); };
+  const exams = [...new Set(ps.map((p) => p.exam))];
+  const shown = ps.filter((p) => (ex === 'all' || p.exam === ex) && (st === 'all' || (st === 'missing' ? !p.audio : !!p.audio)));
+  const download = () => {
+    const pick = shown.length ? shown : ps;
+    const txt = LISTEN_GUIDE + pick.map((p) => `\n==================== ${p.key} ====================\n[${p.exam} · difficulty ${p.difficulty} · ${p.questions} question(s)]\n\n${p.script}\n`).join('');
+    const a = h('a', { href: URL.createObjectURL(new Blob([txt], { type: 'text/plain;charset=utf-8' })), download: `listening-scripts-${ex}-${st}.txt` }); document.body.append(a); a.click(); a.remove();
+  };
+  const log = h('div', { class: 'small' });
+  const upload = async (files) => {
+    let ok = 0; log.replaceChildren();
+    for (const f of files) {
+      const key = f.name.replace(/\.[a-z0-9]+$/i, '').trim().toLowerCase();
+      const line = h('div', {}, `${f.name} … 올리는 중`); log.append(line);
+      try {
+        const r = await fetch(`/api/admin/listening/${encodeURIComponent(key)}`, { method: 'PUT', headers: { 'content-type': f.type || 'audio/mpeg' }, body: f });
+        const j = await r.json().catch(() => ({}));
+        if (!r.ok) throw new Error(j.error || r.status);
+        ok++; line.textContent = `✓ ${f.name} (${(f.size / 1e6).toFixed(2)}MB)`;
+      } catch (e) { line.textContent = `✗ ${f.name}: ${e.message}`; line.style.color = 'var(--bad, #b31942)'; }
+    }
+    toast(`${ok}/${files.length}개 올림`); if (ok) setTimeout(() => pageAdmin('listening'), 1200);
+  };
+  const picker = h('input', { type: 'file', accept: 'audio/*,.mp3,.m4a,.wav', multiple: true, hidden: true, onchange: (e) => upload([...e.target.files]) });
+  const count = (e) => { const l = ps.filter((p) => p.exam === e); return `${e} ${l.filter((p) => p.audio).length}/${l.length}`; };
+  b.append(h('div', { class: 'card' },
+    h('h3', {}, '리스닝 음원'),
+    h('p', { class: 'small muted' }, '음원이 없는 지문은 브라우저가 스크립트를 읽어 줍니다(TTS). 카카오톡 등 앱 안 브라우저는 TTS가 안 되므로 음원을 올려 두면 어디서나 들을 수 있습니다.'),
+    h('ol', { class: 'small' }, h('li', {}, '스크립트 내려받기 → 각 블록을 음성으로 만들기 (화자 이름표는 읽지 않기, 화자마다 다른 목소리)'), h('li', {}, '파일 이름을 블록의 코드로 저장 (예: wida-1a2b3c4d.mp3, 1.4MB 이하)'), h('li', {}, '음원 파일 올리기 — 여러 개를 한 번에 골라도 됩니다')),
+    h('p', {}, h('b', {}, '등록 현황: '), exams.map(count).join(' · ')),
+    h('div', { class: 'row' }, h('button', { class: 'btn', onclick: download }, '스크립트 내려받기 (지금 보이는 목록)'), h('button', { class: 'btn alt', onclick: () => picker.click() }, '음원 파일 올리기'), picker),
+    log,
+    d.orphans.length ? h('p', { class: 'small muted' }, `스크립트가 바뀌어 쓰이지 않는 음원 ${d.orphans.length}개: ${d.orphans.join(', ')}`) : null));
+  b.append(h('div', { class: 'row', style: 'margin:12px 0' },
+    [['all', '전체'], ...exams.map((e) => [e, e])].map(([k, l]) => h('button', { class: 'btn sm ' + (k === ex ? '' : 'alt'), onclick: () => nav('exam', k) }, l)),
+    [['all', '모두'], ['missing', '음원 없음'], ['done', '음원 있음']].map(([k, l]) => h('button', { class: 'btn sm ' + (k === st ? '' : 'alt'), onclick: () => nav('show', k) }, l))));
+  b.append(...shown.map((p) => {
+    const one = h('input', { type: 'file', accept: 'audio/*,.mp3,.m4a,.wav', hidden: true, onchange: (e) => { const f = e.target.files[0]; if (f) upload([new File([f], p.key + '.' + (f.name.split('.').pop() || 'mp3'), { type: f.type })]); } });
+    return h('div', { class: 'card' },
+      h('div', { class: 'row', style: 'justify-content:space-between;align-items:center;flex-wrap:wrap' },
+        h('div', { style: 'flex:1;min-width:0' }, h('b', {}, p.key), h('span', { class: 'small muted' }, ` · ${p.exam} · 난이도 ${p.difficulty} · ${p.questions}문항${p.sample ? ' · 무료샘플' : ''}`)),
+        h('span', { class: 'badge' }, p.audio ? '음원 있음' : 'TTS')),
+      h('details', {}, h('summary', { class: 'small' }, '스크립트'), h('div', { class: 'passage small', style: 'white-space:pre-line' }, p.script)),
+      h('div', { class: 'row', style: 'align-items:center;margin-top:8px' },
+        p.audio ? h('audio', { controls: true, preload: 'none', src: p.audio.url }) : null,
+        h('button', { class: 'btn sm alt', onclick: () => one.click() }, p.audio ? '바꾸기' : '이 지문 음원 올리기'), one,
+        p.audio ? h('button', { class: 'btn sm alt', onclick: guard(async () => { if (!confirm('이 음원을 지울까요? 지우면 TTS로 돌아갑니다.')) return; await api('DELETE', `/admin/listening/${p.key}`); pageAdmin('listening'); }) }, '삭제') : null));
+  }));
 }
 async function adminStats(b) {
   const s = await api('GET', '/admin/stats');

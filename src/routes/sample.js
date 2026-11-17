@@ -4,6 +4,7 @@ import { EXAMS } from '../lib/exam.js';
 import { buildReport } from './exams.js';
 import { sha256hex, now } from '../lib/util.js';
 import { clientIp, rateLimited, tooMany, audit } from '../lib/security.js';
+import { audioIndex, audioUrl } from '../lib/listening.js';
 
 const app = new Hono();
 
@@ -16,7 +17,7 @@ app.get('/exam-info', (c) => c.json({
 
 // The free sample only ever shows and grades the sample pool (ids ending in '0' or '8'); paid attempts never use those questions,
 // so revealing sample answers cannot leak answers of a paid test.
-const publicQ = (q) => ({ id: q.id, section: q.section, passage: q.passage, stem: q.stem, image_svg: q.image_svg, choices: JSON.parse(q.choices) });
+const publicQ = (q, aud) => ({ id: q.id, section: q.section, listening: /listen/i.test(q.section), audio: audioUrl(aud, q.exam_type, q), passage: q.passage, stem: q.stem, image_svg: q.image_svg, choices: JSON.parse(q.choices) });
 
 /** 5 auto-graded questions: one per difficulty band (1..5 where available) from the exam's graded sections. */
 app.get('/sample/:exam', async (c) => {
@@ -31,7 +32,8 @@ app.get('/sample/:exam', async (c) => {
     if (cands[0]) { picked.push(cands[0]); used.add(cands[0].id); }
   }
   for (const q of results) { if (picked.length >= 5) break; if (!used.has(q.id)) { picked.push(q); used.add(q.id); } }
-  return c.json({ exam, title: EXAMS[exam].title, questions: picked.map(publicQ) });
+  const aud = await audioIndex(c.env);
+  return c.json({ exam, title: EXAMS[exam].title, questions: picked.map((q) => publicQ(q, aud)) });
 });
 
 app.post('/sample/grade', async (c) => {
@@ -43,6 +45,24 @@ app.post('/sample/grade', async (c) => {
     if (q) out.push({ id: q.id, correct: Number.isInteger(a.choice) && a.choice === q.answer, answer: q.answer, explanation: q.explanation });
   }
   return c.json({ results: out, score: out.filter((x) => x.correct).length, total: out.length });
+});
+
+// Recorded listening audio (public: the script itself is shown with the answers after grading). Supports Range,
+// which iOS Safari needs before it will play an <audio> source.
+app.get('/listening/:file', async (c) => {
+  const key = c.req.param('file').replace(/\.mp3$/, '');
+  if (!/^[a-z0-9_]+-[0-9a-f]{8}$/.test(key)) return c.json({ error: 'not found' }, 404);
+  const row = await c.env.DB.prepare('SELECT content_type,data FROM listening_audio WHERE key=?').bind(key).first();
+  if (!row) return c.json({ error: 'not found' }, 404);
+  const bin = Uint8Array.from(atob(row.data), (ch) => ch.charCodeAt(0));
+  const headers = { 'Content-Type': row.content_type, 'Accept-Ranges': 'bytes', 'Cache-Control': 'public, max-age=31536000, immutable' };
+  const m = /^bytes=(\d*)-(\d*)$/.exec(c.req.header('range') || '');
+  if (m && (m[1] || m[2])) {
+    let start = m[1] ? +m[1] : Math.max(0, bin.length - +m[2]), end = m[1] && m[2] ? Math.min(+m[2], bin.length - 1) : bin.length - 1;
+    if (start >= bin.length || start > end) return new Response(null, { status: 416, headers: { 'Content-Range': `bytes */${bin.length}` } });
+    return new Response(bin.slice(start, end + 1), { status: 206, headers: { ...headers, 'Content-Range': `bytes ${start}-${end}/${bin.length}`, 'Content-Length': String(end - start + 1) } });
+  }
+  return new Response(bin, { headers: { ...headers, 'Content-Length': String(bin.length) } });
 });
 
 // Read-only report opened from a share link (parents / tutors). Token is stored hashed; expired or revoked links 404.

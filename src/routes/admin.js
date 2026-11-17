@@ -14,7 +14,8 @@ import { manualSettings, clearManualCache } from '../lib/sections.js';
 import { deliver, mailFrom, mailTest, sendMail, mailSupportReply, mailGuestReply } from '../lib/email.js';
 import { anonymizeUser } from './auth.js';
 import { hashPassword } from '../lib/auth.js';
-import { randomToken } from '../lib/util.js';
+import { randomToken, bufToB64 } from '../lib/util.js';
+import { listenKey, clearAudioIndex, LISTEN_MAX_BYTES } from '../lib/listening.js';
 
 const app = new Hono();
 app.use('*', requireAdmin);
@@ -314,6 +315,40 @@ app.post('/grading/:id/ai', async (c) => { // (re)grade one answer with AI, sync
   const r = await c.env.DB.prepare('SELECT ai_status,ai_score,ai_feedback,ai_transcript FROM answers WHERE id=?').bind(id).first();
   return c.json({ ok, ...r });
 });
+// 리스닝 음원: every listening passage (script + key); upload a recording per key; without one the browser uses TTS.
+async function listeningPassages(env) {
+  const { results } = await env.DB.prepare(
+    `SELECT exam_type, passage, COUNT(*) n, MIN(difficulty) dmin, MAX(difficulty) dmax, MAX(CASE WHEN substr(id,-1) IN ('0','8') THEN 1 ELSE 0 END) sample
+     FROM questions WHERE section LIKE '%listen%' AND active=1 AND passage IS NOT NULL AND passage!='' GROUP BY exam_type, passage ORDER BY exam_type, dmin, passage`).all();
+  return results.map((r) => ({ key: listenKey(r.exam_type, r.passage), exam: r.exam_type, script: r.passage, questions: r.n, difficulty: r.dmin === r.dmax ? `${r.dmin}` : `${r.dmin}–${r.dmax}`, sample: !!r.sample }));
+}
+app.get('/listening', async (c) => {
+  const [list, files] = await Promise.all([listeningPassages(c.env), c.env.DB.prepare('SELECT key,bytes,updated_at FROM listening_audio').all()]);
+  const have = new Map(files.results.map((f) => [f.key, f]));
+  return c.json({ maxBytes: LISTEN_MAX_BYTES, passages: list.map((p) => ({ ...p, audio: have.get(p.key) ? { bytes: have.get(p.key).bytes, url: `/api/listening/${p.key}.mp3?v=${have.get(p.key).updated_at}`, updated_at: have.get(p.key).updated_at } : null })),
+    orphans: files.results.filter((f) => !list.some((p) => p.key === f.key)).map((f) => f.key) });
+});
+app.put('/listening/:key', async (c) => {
+  const key = c.req.param('key').replace(/\.(mp3|m4a|wav|ogg)$/i, '');
+  const ctype = (c.req.header('content-type') || '').split(';')[0].trim().toLowerCase();
+  if (!/^audio\/(mpeg|mp3|mp4|x-m4a|aac|wav|x-wav|wave|ogg|webm)$/.test(ctype)) return c.json({ error: 'mp3 · m4a · wav 오디오 파일만 올릴 수 있습니다.' }, 415);
+  if (!(await listeningPassages(c.env)).some((p) => p.key === key)) return c.json({ error: `'${key}'에 해당하는 리스닝 지문이 없습니다. 파일 이름을 목록의 코드와 같게 해 주세요.` }, 404);
+  const buf = await c.req.arrayBuffer();
+  if (!buf.byteLength) return c.json({ error: '빈 파일입니다.' }, 400);
+  if (buf.byteLength > LISTEN_MAX_BYTES) return c.json({ error: `파일이 너무 큽니다 (${(buf.byteLength / 1e6).toFixed(1)}MB). 1.4MB 이하로 줄여 주세요 (mp3 64kbps 모노 권장).` }, 413);
+  await c.env.DB.prepare(`INSERT INTO listening_audio (key,content_type,data,bytes,updated_at) VALUES (?,?,?,?,?)
+    ON CONFLICT(key) DO UPDATE SET content_type=excluded.content_type, data=excluded.data, bytes=excluded.bytes, updated_at=excluded.updated_at`)
+    .bind(key, ctype === 'audio/mp3' ? 'audio/mpeg' : ctype === 'audio/x-wav' || ctype === 'audio/wave' ? 'audio/wav' : ctype, bufToB64(buf), buf.byteLength, now()).run();
+  clearAudioIndex(); await purgeEdge(c, [`/api/sample/${key.split('-')[0].toUpperCase()}`]); // free sample shows it too
+  await audit(c, 'listening.upload', key, { bytes: buf.byteLength });
+  return c.json({ ok: true, key, bytes: buf.byteLength });
+});
+app.delete('/listening/:key', async (c) => {
+  await c.env.DB.prepare('DELETE FROM listening_audio WHERE key=?').bind(c.req.param('key')).run();
+  clearAudioIndex(); await purgeEdge(c, [`/api/sample/${c.req.param('key').split('-')[0].toUpperCase()}`]);
+  return c.json({ ok: true });
+});
+
 app.get('/audio/*', async (c) => {
   const key = decodeURIComponent(c.req.path.replace(/^\/api\/admin\/audio\//, ''));
   const o = await c.env.DB.prepare('SELECT content_type,data FROM audio_files WHERE key=?').bind(key).first();
