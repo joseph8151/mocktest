@@ -1,0 +1,1410 @@
+[
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 1,
+    "stem": "Library : Books :: Aquarium : ?",
+    "choices": [
+      "Water",
+      "Glass",
+      "Fish",
+      "Visitor"
+    ],
+    "answer": 2,
+    "explanation": "A library is a place that holds books as an aquarium is a place that holds fish."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 1,
+    "stem": "Helmet : Head :: Glove : ?",
+    "choices": [
+      "Hand",
+      "Finger",
+      "Ball",
+      "Warm"
+    ],
+    "answer": 0,
+    "explanation": "A helmet is worn on the head as a glove is worn on the hand."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 1,
+    "stem": "Ancient : Old :: Enormous : ?",
+    "choices": [
+      "Tiny",
+      "Heavy",
+      "Huge",
+      "Tall"
+    ],
+    "answer": 2,
+    "explanation": "Ancient means very old, and enormous means huge; each pair are synonyms."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 1,
+    "stem": "Calm : Nervous :: Brave : ?",
+    "choices": [
+      "Strong",
+      "Bold",
+      "Fearful",
+      "Loud"
+    ],
+    "answer": 2,
+    "explanation": "Calm and nervous are opposites as brave and fearful are opposites."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 1,
+    "stem": "Carpenter : Wood :: Potter : ?",
+    "choices": [
+      "Wheel",
+      "Clay",
+      "Vase",
+      "Oven"
+    ],
+    "answer": 1,
+    "explanation": "A carpenter shapes wood as a potter shapes clay."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 1,
+    "stem": "Caterpillar : Butterfly :: Tadpole : ?",
+    "choices": [
+      "Pond",
+      "Fish",
+      "Egg",
+      "Frog"
+    ],
+    "answer": 3,
+    "explanation": "A caterpillar grows into a butterfly as a tadpole grows into a frog."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 1,
+    "stem": "Hive : Bee :: Den : ?",
+    "choices": [
+      "Cave",
+      "Forest",
+      "Bird",
+      "Fox"
+    ],
+    "answer": 3,
+    "explanation": "A bee lives in a hive as a fox lives in a den."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 1,
+    "stem": "Pupil : Eye :: Nostril : ?",
+    "choices": [
+      "Breath",
+      "Nose",
+      "Smell",
+      "Mouth"
+    ],
+    "answer": 1,
+    "explanation": "The pupil is part of the eye as a nostril is part of the nose."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 1,
+    "stem": "Broom : Sweep :: Shovel : ?",
+    "choices": [
+      "Dirt",
+      "Dig",
+      "Garden",
+      "Handle"
+    ],
+    "answer": 1,
+    "explanation": "A broom is used to sweep as a shovel is used to dig."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 1,
+    "stem": "Minute : Hour :: Month : ?",
+    "choices": [
+      "Year",
+      "Week",
+      "Day",
+      "Calendar"
+    ],
+    "answer": 0,
+    "explanation": "Sixty minutes make up an hour as twelve months make up a year; the first is a smaller unit within the second."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 2,
+    "stem": "Fragile : Break :: Flammable : ?",
+    "choices": [
+      "Melt",
+      "Freeze",
+      "Bend",
+      "Burn"
+    ],
+    "answer": 3,
+    "explanation": "Something fragile breaks easily as something flammable burns easily."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 2,
+    "stem": "Drought : Rain :: Famine : ?",
+    "choices": [
+      "Food",
+      "Hunger",
+      "Crops",
+      "Thirst"
+    ],
+    "answer": 0,
+    "explanation": "A drought is a severe lack of rain as a famine is a severe lack of food."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 2,
+    "stem": "Cautious : Reckless :: Generous : ?",
+    "choices": [
+      "Kind",
+      "Wealthy",
+      "Selfish",
+      "Grateful"
+    ],
+    "answer": 2,
+    "explanation": "Cautious and reckless are opposites as generous and selfish are opposites."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 2,
+    "stem": "Novice : Expert :: Apprentice : ?",
+    "choices": [
+      "Student",
+      "Worker",
+      "Beginner",
+      "Master"
+    ],
+    "answer": 3,
+    "explanation": "A novice is a beginner who may become an expert, as an apprentice learns a trade to become a master."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 2,
+    "stem": "Sculptor : Statue :: Playwright : ?",
+    "choices": [
+      "Stage",
+      "Play",
+      "Actor",
+      "Audience"
+    ],
+    "answer": 1,
+    "explanation": "A sculptor creates a statue as a playwright creates a play."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 2,
+    "stem": "Herd : Cattle :: Swarm : ?",
+    "choices": [
+      "Wolves",
+      "Geese",
+      "Honey",
+      "Bees"
+    ],
+    "answer": 3,
+    "explanation": "A herd is a group of cattle as a swarm is a group of bees."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 2,
+    "stem": "Ravenous : Hungry :: Exhausted : ?",
+    "choices": [
+      "Rested",
+      "Sick",
+      "Tired",
+      "Bored"
+    ],
+    "answer": 2,
+    "explanation": "Ravenous means extremely hungry as exhausted means extremely tired."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 2,
+    "stem": "Compass : Direction :: Scale : ?",
+    "choices": [
+      "Weight",
+      "Fish",
+      "Balance",
+      "Height"
+    ],
+    "answer": 0,
+    "explanation": "A compass shows direction as a scale shows weight."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 2,
+    "stem": "Orchard : Fruit :: Vineyard : ?",
+    "choices": [
+      "Wine",
+      "Barrel",
+      "Grapes",
+      "Field"
+    ],
+    "answer": 2,
+    "explanation": "Fruit trees grow in an orchard as grapes grow in a vineyard."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 2,
+    "stem": "Mechanic : Engine :: Plumber : ?",
+    "choices": [
+      "Water",
+      "Pipes",
+      "Wrench",
+      "House"
+    ],
+    "answer": 1,
+    "explanation": "A mechanic repairs engines as a plumber repairs pipes."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 3,
+    "stem": "Benevolent : Kind :: Hostile : ?",
+    "choices": [
+      "Peaceful",
+      "Brave",
+      "Lonely",
+      "Unfriendly"
+    ],
+    "answer": 3,
+    "explanation": "Benevolent means kind as hostile means unfriendly; each pair are synonyms."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 3,
+    "stem": "Abundant : Scarce :: Victory : ?",
+    "choices": [
+      "Triumph",
+      "Battle",
+      "Prize",
+      "Defeat"
+    ],
+    "answer": 3,
+    "explanation": "Abundant and scarce are opposites as victory and defeat are opposites."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 3,
+    "stem": "Pride : Lions :: Pod : ?",
+    "choices": [
+      "Cattle",
+      "Crows",
+      "Whales",
+      "Ocean"
+    ],
+    "answer": 2,
+    "explanation": "A pride is a group of lions as a pod is a group of whales."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 3,
+    "stem": "Telescope : Distant :: Microscope : ?",
+    "choices": [
+      "Lens",
+      "Tiny",
+      "Laboratory",
+      "Clear"
+    ],
+    "answer": 1,
+    "explanation": "A telescope helps us see distant things as a microscope helps us see tiny things."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 3,
+    "stem": "Conceal : Reveal :: Expand : ?",
+    "choices": [
+      "Grow",
+      "Stretch",
+      "Contract",
+      "Explain"
+    ],
+    "answer": 2,
+    "explanation": "Conceal and reveal are opposites as expand and contract are opposites."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 3,
+    "stem": "Diligent : Lazy :: Courteous : ?",
+    "choices": [
+      "Rude",
+      "Polite",
+      "Gentle",
+      "Quiet"
+    ],
+    "answer": 0,
+    "explanation": "Diligent and lazy are opposites as courteous and rude are opposites."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 3,
+    "stem": "Tremble : Fear :: Blush : ?",
+    "choices": [
+      "Anger",
+      "Embarrassment",
+      "Cheek",
+      "Red"
+    ],
+    "answer": 1,
+    "explanation": "People may tremble from fear as they may blush from embarrassment."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 3,
+    "stem": "Pedal : Bicycle :: Oar : ?",
+    "choices": [
+      "Rowboat",
+      "Water",
+      "Paddle",
+      "Sail"
+    ],
+    "answer": 0,
+    "explanation": "Pushing a pedal moves a bicycle as pulling an oar moves a rowboat."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 3,
+    "stem": "Clumsy : Grace :: Ignorant : ?",
+    "choices": [
+      "School",
+      "Teacher",
+      "Question",
+      "Knowledge"
+    ],
+    "answer": 3,
+    "explanation": "A clumsy person lacks grace as an ignorant person lacks knowledge."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 3,
+    "stem": "Hoof : Horse :: Talon : ?",
+    "choices": [
+      "Eagle",
+      "Claw",
+      "Feather",
+      "Nest"
+    ],
+    "answer": 0,
+    "explanation": "A hoof is the foot of a horse as a talon is the claw of an eagle."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 4,
+    "stem": "Prologue : Novel :: Overture : ?",
+    "choices": [
+      "Curtain",
+      "Finale",
+      "Audience",
+      "Opera"
+    ],
+    "answer": 3,
+    "explanation": "A prologue introduces a novel as an overture introduces an opera."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 4,
+    "stem": "Choreographer : Dance :: Cartographer : ?",
+    "choices": [
+      "Globe",
+      "Map",
+      "Compass",
+      "Journey"
+    ],
+    "answer": 1,
+    "explanation": "A choreographer designs a dance as a cartographer draws a map."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 4,
+    "stem": "Arsenal : Weapons :: Archive : ?",
+    "choices": [
+      "Records",
+      "Libraries",
+      "Historians",
+      "Museums"
+    ],
+    "answer": 0,
+    "explanation": "An arsenal is where weapons are stored as an archive is where records are stored."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 4,
+    "stem": "Meticulous : Careless :: Tranquil : ?",
+    "choices": [
+      "Serene",
+      "Turbulent",
+      "Silent",
+      "Gentle"
+    ],
+    "answer": 1,
+    "explanation": "Meticulous and careless are opposites as tranquil and turbulent are opposites."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 4,
+    "stem": "Placate : Anger :: Quench : ?",
+    "choices": [
+      "Thirst",
+      "Water",
+      "Drink",
+      "Glass"
+    ],
+    "answer": 0,
+    "explanation": "To placate is to ease anger as to quench is to satisfy thirst."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 4,
+    "stem": "Coward : Courage :: Ingrate : ?",
+    "choices": [
+      "Wealth",
+      "Friends",
+      "Manners",
+      "Gratitude"
+    ],
+    "answer": 3,
+    "explanation": "A coward lacks courage as an ingrate lacks gratitude."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 4,
+    "stem": "Prudent : Rash :: Lethargic : ?",
+    "choices": [
+      "Energetic",
+      "Sluggish",
+      "Sleepy",
+      "Careful"
+    ],
+    "answer": 0,
+    "explanation": "Prudent and rash are opposites as lethargic and energetic are opposites."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 4,
+    "stem": "Simmer : Boil :: Smolder : ?",
+    "choices": [
+      "Smoke",
+      "Ash",
+      "Blaze",
+      "Ember"
+    ],
+    "answer": 2,
+    "explanation": "To simmer is a milder form of boiling as to smolder is a milder form of blazing."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 4,
+    "stem": "Ornithologist : Birds :: Entomologist : ?",
+    "choices": [
+      "Words",
+      "Fossils",
+      "Insects",
+      "Plants"
+    ],
+    "answer": 2,
+    "explanation": "An ornithologist studies birds as an entomologist studies insects."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 4,
+    "stem": "Gavel : Judge :: Baton : ?",
+    "choices": [
+      "Orchestra",
+      "Conductor",
+      "Music",
+      "Drummer"
+    ],
+    "answer": 1,
+    "explanation": "A judge uses a gavel to direct a courtroom as a conductor uses a baton to direct an orchestra."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 5,
+    "stem": "Taciturn : Talkative :: Indolent : ?",
+    "choices": [
+      "Lazy",
+      "Indifferent",
+      "Insolent",
+      "Industrious"
+    ],
+    "answer": 3,
+    "explanation": "Taciturn and talkative are opposites as indolent (lazy) and industrious are opposites."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 5,
+    "stem": "Ameliorate : Improve :: Corroborate : ?",
+    "choices": [
+      "Deny",
+      "Confirm",
+      "Collaborate",
+      "Question"
+    ],
+    "answer": 1,
+    "explanation": "Ameliorate means improve as corroborate means confirm; each pair are synonyms."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 5,
+    "stem": "Cacophony : Harmony :: Chaos : ?",
+    "choices": [
+      "Noise",
+      "Disaster",
+      "Storm",
+      "Order"
+    ],
+    "answer": 3,
+    "explanation": "Cacophony is the opposite of harmony as chaos is the opposite of order."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 5,
+    "stem": "Insomniac : Sleep :: Amnesiac : ?",
+    "choices": [
+      "Memory",
+      "Dreams",
+      "Illness",
+      "Night"
+    ],
+    "answer": 0,
+    "explanation": "An insomniac cannot get sleep as an amnesiac has lost memory."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 5,
+    "stem": "Venerate : Revere :: Abhor : ?",
+    "choices": [
+      "Adore",
+      "Loathe",
+      "Ignore",
+      "Tolerate"
+    ],
+    "answer": 1,
+    "explanation": "Venerate and revere are synonyms as abhor and loathe are synonyms."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 5,
+    "stem": "Esoteric : Obscure :: Ubiquitous : ?",
+    "choices": [
+      "Rare",
+      "Hidden",
+      "Widespread",
+      "Unique"
+    ],
+    "answer": 2,
+    "explanation": "Esoteric means obscure as ubiquitous means widespread; each pair are synonyms."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 5,
+    "stem": "Malleable : Shaped :: Soluble : ?",
+    "choices": [
+      "Melted",
+      "Broken",
+      "Dissolved",
+      "Solved"
+    ],
+    "answer": 2,
+    "explanation": "Something malleable can be shaped as something soluble can be dissolved."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 5,
+    "stem": "Sycophant : Flatter :: Braggart : ?",
+    "choices": [
+      "Lie",
+      "Steal",
+      "Boast",
+      "Complain"
+    ],
+    "answer": 2,
+    "explanation": "A sycophant habitually flatters as a braggart habitually boasts."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 5,
+    "stem": "Ossify : Bone :: Petrify : ?",
+    "choices": [
+      "Wood",
+      "Stone",
+      "Fear",
+      "Fossil"
+    ],
+    "answer": 1,
+    "explanation": "To ossify is to turn into bone as to petrify is to turn into stone."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "verbal",
+    "difficulty": 5,
+    "stem": "Quarry : Stone :: Mint : ?",
+    "choices": [
+      "Coins",
+      "Leaves",
+      "Candy",
+      "Banks"
+    ],
+    "answer": 0,
+    "explanation": "Stone is produced at a quarry as coins are produced at a mint."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 1,
+    "stem": "Quantity A: 7 + 8\nQuantity B: 5 + 9",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 0,
+    "explanation": "Quantity A = 15 and Quantity B = 14."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 1,
+    "stem": "Quantity A: The number of sides of a hexagon\nQuantity B: The number of sides of an octagon",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 1,
+    "explanation": "A hexagon has 6 sides and an octagon has 8 sides."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 1,
+    "stem": "Quantity A: 4 × 6\nQuantity B: 3 × 8",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 2,
+    "explanation": "Both products equal 24."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 1,
+    "stem": "Box P holds 3 more pencils than Box Q.\nQuantity A: The number of pencils in Box P\nQuantity B: 5",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 3,
+    "explanation": "Box P holds 3 more than Box Q, but Box Q could hold any number, so Box P could hold fewer than, exactly, or more than 5."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 1,
+    "stem": "Quantity A: The perimeter of the rectangle (in cm)\nQuantity B: 15",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 0,
+    "explanation": "Perimeter = 6 + 2 + 6 + 2 = 16 cm, which is greater than 15.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 140\" width=\"320\" height=\"140\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111827\"><rect x=\"40\" y=\"30\" width=\"240\" height=\"80\" fill=\"none\" stroke=\"#0a1f44\" stroke-width=\"3\"/><text x=\"160\" y=\"20\" text-anchor=\"middle\">6 cm</text><text x=\"288\" y=\"75\" text-anchor=\"start\">2 cm</text></svg>"
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 1,
+    "stem": "Quantity A: 1/2 of 18\nQuantity B: 1/3 of 30",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 1,
+    "explanation": "Half of 18 is 9 and one-third of 30 is 10."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 1,
+    "stem": "Quantity A: The value of the digit 4 in 2,463\nQuantity B: 40 × 10",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 2,
+    "explanation": "The 4 is in the hundreds place, so its value is 400, and 40 × 10 = 400."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 1,
+    "stem": "A bag holds only red cubes and blue cubes. There are 12 cubes in all.\nQuantity A: The number of red cubes\nQuantity B: The number of blue cubes",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 3,
+    "explanation": "Any split of 12 is possible (for example 8 and 4, 6 and 6, or 3 and 9), so the relationship cannot be determined."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 1,
+    "stem": "Quantity A: The number of minutes in 2 hours\nQuantity B: 100",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 0,
+    "explanation": "2 hours = 2 × 60 = 120 minutes, which is greater than 100."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 1,
+    "stem": "Ana has 3 coins. Each coin is either a dime or a quarter.\nQuantity A: The total value of Ana's coins (in cents)\nQuantity B: 50",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 3,
+    "explanation": "The total could be 30, 45, 60, or 75 cents, so it could be less than or greater than 50."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 2,
+    "stem": "Quantity A: 0.7\nQuantity B: 0.65",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 0,
+    "explanation": "0.7 = 0.70, which is greater than 0.65."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 2,
+    "stem": "Quantity A: 3/4\nQuantity B: 5/6",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 1,
+    "explanation": "3/4 = 9/12 and 5/6 = 10/12, so Quantity B is greater."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 2,
+    "stem": "Quantity A: 2.5 × 4\nQuantity B: 10",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 2,
+    "explanation": "2.5 × 4 = 10."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 2,
+    "stem": "p + q = 12, where p and q are whole numbers.\nQuantity A: p\nQuantity B: q",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 3,
+    "explanation": "p could be 10 and q 2, both could be 6, or p could be 1 and q 11, so the relationship cannot be determined."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 2,
+    "stem": "Quantity A: The area of the rectangle (in square cm)\nQuantity B: The area of a square with sides 6 cm long (in square cm)",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 1,
+    "explanation": "The rectangle's area is 7 × 5 = 35 square cm; the square's area is 6 × 6 = 36 square cm.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 210\" width=\"320\" height=\"210\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111827\"><rect x=\"55\" y=\"30\" width=\"210\" height=\"150\" fill=\"none\" stroke=\"#0a1f44\" stroke-width=\"3\"/><text x=\"160\" y=\"20\" text-anchor=\"middle\">7 cm</text><text x=\"273\" y=\"110\" text-anchor=\"start\">5 cm</text></svg>"
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 2,
+    "stem": "Quantity A: 25% of 48\nQuantity B: 1/3 of 33",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 0,
+    "explanation": "25% of 48 = 12 and 1/3 of 33 = 11."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 2,
+    "stem": "Quantity A: The perimeter of a square with sides 9 cm long\nQuantity B: The perimeter of a rectangle 10 cm long and 8 cm wide",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 2,
+    "explanation": "Both perimeters are 36 cm: 4 × 9 = 36 and 2 × (10 + 8) = 36."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 2,
+    "stem": "Quantity A: The average (mean) of 6, 9, and 15\nQuantity B: 9",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 0,
+    "explanation": "The average is (6 + 9 + 15) ÷ 3 = 30 ÷ 3 = 10, which is greater than 9."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 2,
+    "stem": "A number rounded to the nearest ten is 40.\nQuantity A: The number\nQuantity B: 40",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 3,
+    "explanation": "Any number from 35 up to (but not including) 45 rounds to 40, so it could be less than, equal to, or greater than 40."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 2,
+    "stem": "Quantity A: 3 × 4 + 5\nQuantity B: 3 × (4 + 5)",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 1,
+    "explanation": "Quantity A = 12 + 5 = 17 and Quantity B = 3 × 9 = 27."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 3,
+    "stem": "Quantity A: −8 + 5\nQuantity B: −2",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 1,
+    "explanation": "−8 + 5 = −3, and −3 is less than −2."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 3,
+    "stem": "Quantity A: 15% of 60\nQuantity B: 60% of 15",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 2,
+    "explanation": "Both equal 0.15 × 60 = 0.60 × 15 = 9."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 3,
+    "stem": "Quantity A: x\nQuantity B: 60",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 2,
+    "explanation": "The angles of a triangle add to 180°, so x = 180 − 50 − 70 = 60.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 230\" width=\"340\" height=\"230\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111827\"><polygon points=\"50,200 290,200 217.4,0.5\" fill=\"none\" stroke=\"#0a1f44\" stroke-width=\"3\"/><text x=\"90\" y=\"190\" text-anchor=\"middle\">50°</text><text x=\"256\" y=\"190\" text-anchor=\"middle\">70°</text><text x=\"217.4\" y=\"38.5\" text-anchor=\"middle\">x°</text></svg>"
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 3,
+    "stem": "The ratio of boys to girls in a class is 3 : 4.\nQuantity A: The number of boys in the class\nQuantity B: The number of girls in the class",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 1,
+    "explanation": "For every 3 boys there are 4 girls, so there are always more girls than boys."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 3,
+    "stem": "x > 0\nQuantity A: x/2\nQuantity B: x/3",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 0,
+    "explanation": "For any positive x, half of x is greater than one-third of x."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 3,
+    "stem": "3n + 4 = 19\nQuantity A: n\nQuantity B: 4",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 0,
+    "explanation": "3n = 15, so n = 5, which is greater than 4."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 3,
+    "stem": "Quantity A: (−3)²\nQuantity B: −3²",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 0,
+    "explanation": "(−3)² = 9, while −3² means −(3²) = −9."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 3,
+    "stem": "A rectangle has a perimeter of 20 cm.\nQuantity A: The length of the rectangle (in cm)\nQuantity B: The width of the rectangle (in cm)",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 3,
+    "explanation": "Length + width = 10, so the sides could be 7 and 3, 5 and 5, or 2 and 8; the relationship cannot be determined."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 3,
+    "stem": "The mean of four test scores is 85. Each score is between 0 and 100.\nQuantity A: The highest of the four scores\nQuantity B: 90",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 3,
+    "explanation": "The scores could all be 85 (highest 85), or 70, 80, 90, 100 (highest 100), so the relationship cannot be determined."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 3,
+    "stem": "Quantity A: The distance from P to 0 on the number line\nQuantity B: The distance from Q to 0 on the number line",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 1,
+    "explanation": "P is at −1.25, which is 1.25 from 0; Q is at 1.75, which is 1.75 from 0.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 100\" width=\"360\" height=\"100\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111827\"><line x1=\"20\" y1=\"60\" x2=\"340\" y2=\"60\" stroke=\"#111827\" stroke-width=\"2\"/><line x1=\"30\" y1=\"51\" x2=\"30\" y2=\"69\" stroke=\"#111827\" stroke-width=\"2\"/><text x=\"30\" y=\"88\" text-anchor=\"middle\">−2</text><line x1=\"48.8\" y1=\"55\" x2=\"48.8\" y2=\"65\" stroke=\"#9ca3af\" stroke-width=\"2\"/><line x1=\"67.5\" y1=\"55\" x2=\"67.5\" y2=\"65\" stroke=\"#9ca3af\" stroke-width=\"2\"/><line x1=\"86.3\" y1=\"55\" x2=\"86.3\" y2=\"65\" stroke=\"#9ca3af\" stroke-width=\"2\"/><line x1=\"105\" y1=\"51\" x2=\"105\" y2=\"69\" stroke=\"#111827\" stroke-width=\"2\"/><text x=\"105\" y=\"88\" text-anchor=\"middle\">−1</text><line x1=\"123.8\" y1=\"55\" x2=\"123.8\" y2=\"65\" stroke=\"#9ca3af\" stroke-width=\"2\"/><line x1=\"142.5\" y1=\"55\" x2=\"142.5\" y2=\"65\" stroke=\"#9ca3af\" stroke-width=\"2\"/><line x1=\"161.3\" y1=\"55\" x2=\"161.3\" y2=\"65\" stroke=\"#9ca3af\" stroke-width=\"2\"/><line x1=\"180\" y1=\"51\" x2=\"180\" y2=\"69\" stroke=\"#111827\" stroke-width=\"2\"/><text x=\"180\" y=\"88\" text-anchor=\"middle\">0</text><line x1=\"198.8\" y1=\"55\" x2=\"198.8\" y2=\"65\" stroke=\"#9ca3af\" stroke-width=\"2\"/><line x1=\"217.5\" y1=\"55\" x2=\"217.5\" y2=\"65\" stroke=\"#9ca3af\" stroke-width=\"2\"/><line x1=\"236.3\" y1=\"55\" x2=\"236.3\" y2=\"65\" stroke=\"#9ca3af\" stroke-width=\"2\"/><line x1=\"255\" y1=\"51\" x2=\"255\" y2=\"69\" stroke=\"#111827\" stroke-width=\"2\"/><text x=\"255\" y=\"88\" text-anchor=\"middle\">1</text><line x1=\"273.8\" y1=\"55\" x2=\"273.8\" y2=\"65\" stroke=\"#9ca3af\" stroke-width=\"2\"/><line x1=\"292.5\" y1=\"55\" x2=\"292.5\" y2=\"65\" stroke=\"#9ca3af\" stroke-width=\"2\"/><line x1=\"311.3\" y1=\"55\" x2=\"311.3\" y2=\"65\" stroke=\"#9ca3af\" stroke-width=\"2\"/><line x1=\"330\" y1=\"51\" x2=\"330\" y2=\"69\" stroke=\"#111827\" stroke-width=\"2\"/><text x=\"330\" y=\"88\" text-anchor=\"middle\">2</text><circle cx=\"86.3\" cy=\"60\" r=\"6\" fill=\"#0a1f44\"/><text x=\"86.3\" y=\"44\" text-anchor=\"middle\" font-weight=\"700\">P</text><circle cx=\"311.3\" cy=\"60\" r=\"6\" fill=\"#0a1f44\"/><text x=\"311.3\" y=\"44\" text-anchor=\"middle\" font-weight=\"700\">Q</text></svg>"
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 4,
+    "stem": "Quantity A: c\nQuantity B: 10",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 2,
+    "explanation": "By the Pythagorean theorem, c² = 6² + 8² = 100, so c = 10.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 230\" width=\"320\" height=\"230\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111827\"><polygon points=\"70,190 270,190 70,40\" fill=\"none\" stroke=\"#0a1f44\" stroke-width=\"3\"/><polyline points=\"70,174 86,174 86,190\" fill=\"none\" stroke=\"#111827\" stroke-width=\"2\"/><text x=\"170\" y=\"214\" text-anchor=\"middle\">8</text><text x=\"58\" y=\"120\" text-anchor=\"end\">6</text><text x=\"184\" y=\"107\" text-anchor=\"start\" font-style=\"italic\">c</text></svg>"
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 4,
+    "stem": "Quantity A: 2^10\nQuantity B: 10^3",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 0,
+    "explanation": "2^10 = 1,024 and 10^3 = 1,000."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 4,
+    "stem": "Quantity A: √80\nQuantity B: 9",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 1,
+    "explanation": "9 = √81, and √80 is less than √81."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 4,
+    "stem": "2x − 7 = 3x + 2\nQuantity A: x\nQuantity B: −8",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 1,
+    "explanation": "Subtracting 2x from both sides gives −7 = x + 2, so x = −9, which is less than −8."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 4,
+    "stem": "x² = 16\nQuantity A: x\nQuantity B: 0",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 3,
+    "explanation": "x could be 4 or −4, so x could be greater than or less than 0."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 4,
+    "stem": "Lines m and n are parallel.\nQuantity A: y\nQuantity B: 65",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 2,
+    "explanation": "The 115° angle and y° are same-side interior angles between parallel lines, so they add to 180°, giving y = 65.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 230\" width=\"340\" height=\"230\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111827\"><line x1=\"30\" y1=\"60\" x2=\"310\" y2=\"60\" stroke=\"#111827\" stroke-width=\"2\"/><line x1=\"30\" y1=\"170\" x2=\"310\" y2=\"170\" stroke=\"#111827\" stroke-width=\"2\"/><line x1=\"121\" y1=\"19.2\" x2=\"210.3\" y2=\"210.8\" stroke=\"#0a1f44\" stroke-width=\"3\"/><text x=\"310\" y=\"52\" text-anchor=\"end\" font-style=\"italic\">m</text><text x=\"310\" y=\"162\" text-anchor=\"end\" font-style=\"italic\">n</text><text x=\"121.7\" y=\"93.7\" text-anchor=\"middle\">115°</text><text x=\"167.7\" y=\"160\" text-anchor=\"middle\">y°</text></svg>"
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 4,
+    "stem": "Quantity A: 4.5 × 10^5\nQuantity B: 45,000 × 10",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 2,
+    "explanation": "4.5 × 10^5 = 450,000 and 45,000 × 10 = 450,000."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 4,
+    "stem": "a and b are integers, and a > b.\nQuantity A: a²\nQuantity B: b²",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 3,
+    "explanation": "If a = 3 and b = 1, then a² > b²; if a = 1 and b = −3, then a² < b², so the relationship cannot be determined."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 4,
+    "stem": "Quantity A: The slope of the line through (1, 2) and (4, 11)\nQuantity B: The slope of the line y = −2x + 5",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 0,
+    "explanation": "Quantity A = (11 − 2) ÷ (4 − 1) = 3 and Quantity B = −2."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 4,
+    "stem": "A jacket that costs $40 is marked down 25%. Later, the sale price is raised by 25%.\nQuantity A: The final price of the jacket\nQuantity B: $40",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 1,
+    "explanation": "The sale price is $30, and 25% more than $30 is $37.50, which is less than $40."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 5,
+    "stem": "x < 0\nQuantity A: x²\nQuantity B: x³",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 0,
+    "explanation": "For negative x, x² is positive and x³ is negative."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 5,
+    "stem": "x > 0\nQuantity A: x²\nQuantity B: x",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 3,
+    "explanation": "If x = 1/2, x² = 1/4 < x; if x = 1, they are equal; if x = 3, x² > x."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 5,
+    "stem": "The circle fits exactly inside the square.\nQuantity A: The area of the shaded region\nQuantity B: 20",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 0,
+    "explanation": "Shaded area = 10² − π(5²) = 100 − 25π ≈ 21.5, which is greater than 20.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 240\" width=\"320\" height=\"240\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111827\"><path d=\"M70,20h180v180h-180Z M70,110 a90,90 0 1,0 180,0 a90,90 0 1,0 -180,0 Z\" fill=\"#0a1f44\" fill-opacity=\"0.35\" fill-rule=\"evenodd\" stroke=\"#111827\" stroke-width=\"2\"/><circle cx=\"160\" cy=\"110\" r=\"90\" fill=\"none\" stroke=\"#111827\" stroke-width=\"2\"/><text x=\"160\" y=\"224\" text-anchor=\"middle\">10</text></svg>"
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 5,
+    "stem": "Quantity A: The probability of getting two heads when two fair coins are tossed\nQuantity B: The probability of rolling a number greater than 4 on a fair six-sided die",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 1,
+    "explanation": "Quantity A = 1/4; Quantity B = 2/6 = 1/3, which is greater."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 5,
+    "stem": "(x − 3)(x + 5) = 0\nQuantity A: The sum of the two solutions\nQuantity B: −2",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 2,
+    "explanation": "The solutions are 3 and −5, and 3 + (−5) = −2."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 5,
+    "stem": "a and b are positive numbers, and a + b = 10.\nQuantity A: ab\nQuantity B: 25",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 3,
+    "explanation": "If a = b = 5, then ab = 25, but if a = 2 and b = 8, then ab = 16; the product can never exceed 25, but it can equal 25 or be less, so the relationship cannot be determined."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 5,
+    "stem": "Quantity A: (1/2)^−3\nQuantity B: 2^3",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 2,
+    "explanation": "(1/2)^−3 = 2^3 = 8."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 5,
+    "stem": "Quantity A: The distance between points P and Q\nQuantity B: 10",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 2,
+    "explanation": "The horizontal change is 6 and the vertical change is 8, so the distance is √(36 + 64) = 10.",
+    "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 246 304\" width=\"246\" height=\"304\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111827\"><line x1=\"30\" y1=\"284\" x2=\"30\" y2=\"20\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><line x1=\"52\" y1=\"284\" x2=\"52\" y2=\"20\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><line x1=\"74\" y1=\"284\" x2=\"74\" y2=\"20\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><line x1=\"96\" y1=\"284\" x2=\"96\" y2=\"20\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><line x1=\"118\" y1=\"284\" x2=\"118\" y2=\"20\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><line x1=\"140\" y1=\"284\" x2=\"140\" y2=\"20\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><line x1=\"162\" y1=\"284\" x2=\"162\" y2=\"20\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><line x1=\"184\" y1=\"284\" x2=\"184\" y2=\"20\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><line x1=\"206\" y1=\"284\" x2=\"206\" y2=\"20\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><line x1=\"30\" y1=\"284\" x2=\"206\" y2=\"284\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><line x1=\"30\" y1=\"262\" x2=\"206\" y2=\"262\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><line x1=\"30\" y1=\"240\" x2=\"206\" y2=\"240\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><line x1=\"30\" y1=\"218\" x2=\"206\" y2=\"218\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><line x1=\"30\" y1=\"196\" x2=\"206\" y2=\"196\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><line x1=\"30\" y1=\"174\" x2=\"206\" y2=\"174\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><line x1=\"30\" y1=\"152\" x2=\"206\" y2=\"152\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><line x1=\"30\" y1=\"130\" x2=\"206\" y2=\"130\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><line x1=\"30\" y1=\"108\" x2=\"206\" y2=\"108\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><line x1=\"30\" y1=\"86\" x2=\"206\" y2=\"86\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><line x1=\"30\" y1=\"64\" x2=\"206\" y2=\"64\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><line x1=\"30\" y1=\"42\" x2=\"206\" y2=\"42\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><line x1=\"30\" y1=\"20\" x2=\"206\" y2=\"20\" stroke=\"#e5e7eb\" stroke-width=\"1\"/><line x1=\"30\" y1=\"262\" x2=\"206\" y2=\"262\" stroke=\"#111827\" stroke-width=\"2\"/><line x1=\"74\" y1=\"284\" x2=\"74\" y2=\"20\" stroke=\"#111827\" stroke-width=\"2\"/><text x=\"212\" y=\"267\" text-anchor=\"start\" font-style=\"italic\">x</text><text x=\"74\" y=\"14\" text-anchor=\"middle\" font-style=\"italic\">y</text><text x=\"118\" y=\"280\" text-anchor=\"middle\">2</text><text x=\"162\" y=\"280\" text-anchor=\"middle\">4</text><text x=\"206\" y=\"280\" text-anchor=\"middle\">6</text><text x=\"68\" y=\"223\" text-anchor=\"end\">2</text><text x=\"68\" y=\"179\" text-anchor=\"end\">4</text><text x=\"68\" y=\"135\" text-anchor=\"end\">6</text><text x=\"68\" y=\"91\" text-anchor=\"end\">8</text><text x=\"68\" y=\"47\" text-anchor=\"end\">10</text><circle cx=\"52\" cy=\"218\" r=\"5\" fill=\"#0a1f44\"/><text x=\"60\" y=\"212\" text-anchor=\"start\">P(−1, 2)</text><circle cx=\"184\" cy=\"42\" r=\"5\" fill=\"#0a1f44\"/><text x=\"192\" y=\"36\" text-anchor=\"start\">Q(5, 10)</text></svg>"
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 5,
+    "stem": "n is a positive integer.\nQuantity A: (−1)^n\nQuantity B: 0",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 3,
+    "explanation": "(−1)^n is −1 when n is odd and 1 when n is even, so it could be less than or greater than 0."
+  },
+  {
+    "exam_type": "SCAT",
+    "section": "quantitative",
+    "difficulty": 5,
+    "stem": "3x + y = 14 and x − y = 2\nQuantity A: xy\nQuantity B: x + y + 3",
+    "choices": [
+      "Quantity A is greater",
+      "Quantity B is greater",
+      "The two quantities are equal",
+      "The relationship cannot be determined"
+    ],
+    "answer": 1,
+    "explanation": "Adding the equations gives 4x = 16, so x = 4 and y = 2; Quantity A = 8 and Quantity B = 9."
+  }
+]
