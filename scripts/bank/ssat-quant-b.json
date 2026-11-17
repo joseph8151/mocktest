@@ -5,12 +5,12 @@
   "difficulty": 1,
   "stem": "What is 405 − 178?",
   "choices": [
-   "227",
    "237",
+   "223",
    "327",
-   "223"
+   "227"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Regroup to subtract: 405 − 178 = 227."
  },
  {
@@ -19,10 +19,10 @@
   "difficulty": 1,
   "stem": "Which digit is in the hundreds place in the number 47,825?",
   "choices": [
-   "7",
+   "4",
    "8",
-   "2",
-   "4"
+   "7",
+   "2"
   ],
   "answer": 1,
   "explanation": "In 47,825 the digits are 4 ten-thousands, 7 thousands, 8 hundreds, 2 tens, and 5 ones."
@@ -33,12 +33,12 @@
   "difficulty": 1,
   "stem": "What is the value of 36 ÷ 4 + 5?",
   "choices": [
-   "9",
-   "13",
+   "18",
    "14",
-   "18"
+   "13",
+   "9"
   ],
-  "answer": 2,
+  "answer": 1,
   "explanation": "Divide first: 36 ÷ 4 = 9, then 9 + 5 = 14."
  },
  {
@@ -47,12 +47,12 @@
   "difficulty": 1,
   "stem": "Maya has 3 packs of stickers with 8 stickers in each pack. She gives away 5 stickers. How many stickers does she have left?",
   "choices": [
+   "19",
    "24",
    "16",
-   "21",
-   "19"
+   "21"
   ],
-  "answer": 3,
+  "answer": 0,
   "explanation": "3 × 8 = 24 stickers, and 24 − 5 = 19."
  },
  {
@@ -61,12 +61,12 @@
   "difficulty": 1,
   "stem": "Which fraction is equal to 1/2?",
   "choices": [
-   "3/5",
-   "2/6",
    "4/8",
-   "5/8"
+   "5/8",
+   "3/5",
+   "2/6"
   ],
-  "answer": 2,
+  "answer": 0,
   "explanation": "4/8 simplifies to 1/2 because 4 is half of 8."
  },
  {
@@ -76,8 +76,8 @@
   "stem": "What is 3,462 rounded to the nearest hundred?",
   "choices": [
    "3,500",
-   "3,400",
    "3,460",
+   "3,400",
    "4,000"
   ],
   "answer": 0,
@@ -90,11 +90,11 @@
   "stem": "What is 0.6 + 0.25?",
   "choices": [
    "0.31",
-   "0.65",
    "0.95",
-   "0.85"
+   "0.85",
+   "0.65"
   ],
-  "answer": 3,
+  "answer": 2,
   "explanation": "Line up the decimal points: 0.60 + 0.25 = 0.85."
  },
  {
@@ -103,9 +103,9 @@
   "difficulty": 1,
   "stem": "What number comes next in the pattern 3, 7, 11, 15, ___?",
   "choices": [
-   "18",
-   "19",
    "20",
+   "19",
+   "18",
    "23"
   ],
   "answer": 1,
@@ -131,12 +131,12 @@
   "difficulty": 1,
   "stem": "Which number is even and greater than 50?",
   "choices": [
-   "47",
-   "63",
    "42",
-   "58"
+   "58",
+   "63",
+   "47"
   ],
-  "answer": 3,
+  "answer": 1,
   "explanation": "58 is even and greater than 50; 47 and 63 are odd, and 42 is less than 50."
  },
  {
@@ -145,12 +145,12 @@
   "difficulty": 1,
   "stem": "A carton holds a dozen eggs. If 1/3 of the eggs are used, how many eggs are left?",
   "choices": [
-   "8",
-   "4",
    "9",
-   "6"
+   "6",
+   "8",
+   "4"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "1/3 of 12 is 4 eggs used, so 12 − 4 = 8 eggs are left."
  },
  {
@@ -159,10 +159,10 @@
   "difficulty": 1,
   "stem": "Liam buys 2 pencils for $0.35 each and one eraser for $0.50. How much does he spend in all?",
   "choices": [
+   "$1.40",
    "$0.85",
-   "$1.05",
    "$1.20",
-   "$1.40"
+   "$1.05"
   ],
   "answer": 2,
   "explanation": "Two pencils cost $0.70, and $0.70 + $0.50 = $1.20."
@@ -173,12 +173,12 @@
   "difficulty": 1,
   "stem": "What is the value of 7 × 6 − 12?",
   "choices": [
-   "42",
-   "28",
+   "30",
    "54",
-   "30"
+   "28",
+   "42"
   ],
-  "answer": 3,
+  "answer": 0,
   "explanation": "Multiply first: 7 × 6 = 42, then 42 − 12 = 30."
  },
  {
@@ -187,12 +187,12 @@
   "difficulty": 1,
   "stem": "A bag holds 4 red marbles, 3 blue marbles, and 1 green marble. If one marble is picked without looking, which color is most likely to be picked?",
   "choices": [
-   "Blue",
-   "Green",
+   "All colors are equally likely",
    "Red",
-   "All colors are equally likely"
+   "Blue",
+   "Green"
   ],
-  "answer": 2,
+  "answer": 1,
   "explanation": "There are more red marbles (4) than any other color, so red is most likely."
  },
  {
@@ -201,12 +201,12 @@
   "difficulty": 1,
   "stem": "What is the perimeter of the rectangle?",
   "choices": [
-   "36 cm",
    "26 cm",
-   "13 cm",
-   "22 cm"
+   "22 cm",
+   "36 cm",
+   "13 cm"
   ],
-  "answer": 1,
+  "answer": 0,
   "explanation": "Perimeter = 9 + 4 + 9 + 4 = 26 cm.",
   "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 176.66666666666669\" width=\"360\" height=\"176.66666666666669\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><rect x=\"60\" y=\"34\" width=\"240\" height=\"106.7\" fill=\"rgba(10,31,68,0.10)\" stroke=\"#0a1f44\" stroke-width=\"2.5\"/><text x=\"180\" y=\"24\" text-anchor=\"middle\">9 cm</text><text x=\"308\" y=\"92.3\">4 cm</text></svg>"
  },
@@ -217,9 +217,9 @@
   "stem": "The bar graph shows how many books four students read. How many more books did Ben read than Cara?",
   "choices": [
    "5",
+   "13",
    "3",
-   "2",
-   "13"
+   "2"
   ],
   "answer": 0,
   "explanation": "Ben read 9 books and Cara read 4, so 9 − 4 = 5.",
@@ -231,12 +231,12 @@
   "difficulty": 1,
   "stem": "On the number line, how many units apart are points A and B?",
   "choices": [
+   "51",
    "5",
-   "4",
    "6",
-   "51"
+   "4"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "A is at 23 and B is at 28, and 28 − 23 = 5.",
   "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 90\" width=\"380\" height=\"90\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><line x1=\"12\" y1=\"44\" x2=\"368\" y2=\"44\" stroke=\"#111\" stroke-width=\"2\"/><polygon points=\"372,44 362,39 362,49\" fill=\"#111\"/><polygon points=\"8,44 18,39 18,49\" fill=\"#111\"/><line x1=\"24\" y1=\"37\" x2=\"24\" y2=\"51\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"24\" y=\"70\" text-anchor=\"middle\" font-size=\"13\">20</text><line x1=\"57.2\" y1=\"37\" x2=\"57.2\" y2=\"51\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"57.2\" y=\"70\" text-anchor=\"middle\" font-size=\"13\">21</text><line x1=\"90.4\" y1=\"37\" x2=\"90.4\" y2=\"51\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"90.4\" y=\"70\" text-anchor=\"middle\" font-size=\"13\">22</text><line x1=\"123.6\" y1=\"37\" x2=\"123.6\" y2=\"51\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"123.6\" y=\"70\" text-anchor=\"middle\" font-size=\"13\">23</text><line x1=\"156.8\" y1=\"37\" x2=\"156.8\" y2=\"51\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"156.8\" y=\"70\" text-anchor=\"middle\" font-size=\"13\">24</text><line x1=\"190\" y1=\"37\" x2=\"190\" y2=\"51\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"190\" y=\"70\" text-anchor=\"middle\" font-size=\"13\">25</text><line x1=\"223.2\" y1=\"37\" x2=\"223.2\" y2=\"51\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"223.2\" y=\"70\" text-anchor=\"middle\" font-size=\"13\">26</text><line x1=\"256.4\" y1=\"37\" x2=\"256.4\" y2=\"51\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"256.4\" y=\"70\" text-anchor=\"middle\" font-size=\"13\">27</text><line x1=\"289.6\" y1=\"37\" x2=\"289.6\" y2=\"51\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"289.6\" y=\"70\" text-anchor=\"middle\" font-size=\"13\">28</text><line x1=\"322.8\" y1=\"37\" x2=\"322.8\" y2=\"51\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"322.8\" y=\"70\" text-anchor=\"middle\" font-size=\"13\">29</text><line x1=\"356\" y1=\"37\" x2=\"356\" y2=\"51\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"356\" y=\"70\" text-anchor=\"middle\" font-size=\"13\">30</text><circle cx=\"123.6\" cy=\"44\" r=\"4.5\" fill=\"#0a1f44\"/><text x=\"123.6\" y=\"30\" text-anchor=\"middle\" font-weight=\"700\" fill=\"#0a1f44\">A</text><circle cx=\"289.6\" cy=\"44\" r=\"4.5\" fill=\"#0a1f44\"/><text x=\"289.6\" y=\"30\" text-anchor=\"middle\" font-weight=\"700\" fill=\"#0a1f44\">B</text></svg>"
  },
@@ -246,12 +246,12 @@
   "difficulty": 1,
   "stem": "The table shows how many apples a farm stand sold each day. How many apples did it sell in all four days?",
   "choices": [
-   "48",
-   "51",
    "50",
-   "41"
+   "41",
+   "48",
+   "51"
   ],
-  "answer": 2,
+  "answer": 0,
   "explanation": "12 + 15 + 9 + 14 = 50 apples.",
   "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 268 186\" width=\"268\" height=\"186\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><text x=\"134\" y=\"20\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"700\">Apples Sold</text><rect x=\"4\" y=\"30\" width=\"260\" height=\"30\" fill=\"#e5e7eb\"/><text x=\"79\" y=\"50\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"700\">Day</text><text x=\"209\" y=\"50\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"700\">Apples</text><text x=\"79\" y=\"80\" text-anchor=\"middle\" font-size=\"14\">Monday</text><text x=\"209\" y=\"80\" text-anchor=\"middle\" font-size=\"14\">12</text><text x=\"79\" y=\"110\" text-anchor=\"middle\" font-size=\"14\">Tuesday</text><text x=\"209\" y=\"110\" text-anchor=\"middle\" font-size=\"14\">15</text><text x=\"79\" y=\"140\" text-anchor=\"middle\" font-size=\"14\">Wednesday</text><text x=\"209\" y=\"140\" text-anchor=\"middle\" font-size=\"14\">9</text><text x=\"79\" y=\"170\" text-anchor=\"middle\" font-size=\"14\">Thursday</text><text x=\"209\" y=\"170\" text-anchor=\"middle\" font-size=\"14\">14</text><line x1=\"4\" y1=\"30\" x2=\"264\" y2=\"30\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"4\" y1=\"60\" x2=\"264\" y2=\"60\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"4\" y1=\"90\" x2=\"264\" y2=\"90\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"4\" y1=\"120\" x2=\"264\" y2=\"120\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"4\" y1=\"150\" x2=\"264\" y2=\"150\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"4\" y1=\"180\" x2=\"264\" y2=\"180\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"4\" y1=\"30\" x2=\"4\" y2=\"180\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"154\" y1=\"30\" x2=\"154\" y2=\"180\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"264\" y1=\"30\" x2=\"264\" y2=\"180\" stroke=\"#6b7280\" stroke-width=\"2\"/></svg>"
  },
@@ -261,9 +261,9 @@
   "difficulty": 1,
   "stem": "The spinner has 8 equal sections. What fraction of the sections show an even number?",
   "choices": [
-   "5/8",
    "1/2",
    "3/5",
+   "5/8",
    "3/8"
   ],
   "answer": 3,
@@ -276,10 +276,10 @@
   "difficulty": 1,
   "stem": "What is the perimeter of the triangle?",
   "choices": [
-   "15 cm",
+   "28 cm",
    "20 cm",
    "13 cm",
-   "28 cm"
+   "15 cm"
   ],
   "answer": 1,
   "explanation": "Add the three sides: 5 + 7 + 8 = 20 cm.",
@@ -291,12 +291,12 @@
   "difficulty": 2,
   "stem": "What is 2/3 + 1/6?",
   "choices": [
-   "5/6",
    "3/9",
+   "5/6",
    "1/2",
    "7/6"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "Write 2/3 as 4/6; then 4/6 + 1/6 = 5/6."
  },
  {
@@ -306,11 +306,11 @@
   "stem": "What is 4.5 × 12?",
   "choices": [
    "48",
+   "46.5",
    "54",
-   "540",
-   "46.5"
+   "540"
   ],
-  "answer": 1,
+  "answer": 2,
   "explanation": "4 × 12 = 48 and 0.5 × 12 = 6, so 4.5 × 12 = 54."
  },
  {
@@ -319,12 +319,12 @@
   "difficulty": 2,
   "stem": "What is 25% of 64?",
   "choices": [
-   "25",
    "32",
    "16",
-   "8"
+   "8",
+   "25"
   ],
-  "answer": 2,
+  "answer": 1,
   "explanation": "25% is one fourth, and 64 ÷ 4 = 16."
  },
  {
@@ -362,9 +362,9 @@
   "stem": "Which number is the greatest?",
   "choices": [
    "0.71",
+   "0.707",
    "0.7",
-   "0.65",
-   "0.707"
+   "0.65"
   ],
   "answer": 0,
   "explanation": "Compare as thousandths: 0.710 > 0.707 > 0.700 > 0.650."
@@ -375,9 +375,9 @@
   "difficulty": 2,
   "stem": "A recipe uses 3 cups of flour for every 2 cups of milk. How many cups of milk are needed for 9 cups of flour?",
   "choices": [
+   "5",
    "4",
    "8",
-   "5",
    "6"
   ],
   "answer": 3,
@@ -389,12 +389,12 @@
   "difficulty": 2,
   "stem": "Five notebooks cost $8.75. At this rate, how much does one notebook cost?",
   "choices": [
+   "$1.50",
    "$1.25",
    "$1.75",
-   "$1.50",
    "$3.75"
   ],
-  "answer": 1,
+  "answer": 2,
   "explanation": "$8.75 ÷ 5 = $1.75."
  },
  {
@@ -403,9 +403,9 @@
   "difficulty": 2,
   "stem": "What number comes next in the pattern 2, 6, 18, 54, ___?",
   "choices": [
-   "108",
-   "162",
    "58",
+   "162",
+   "108",
    "216"
   ],
   "answer": 1,
@@ -418,11 +418,11 @@
   "stem": "Sam is 4 years older than twice his sister's age. His sister is 5 years old. How old is Sam?",
   "choices": [
    "18",
-   "13",
    "9",
-   "14"
+   "14",
+   "13"
   ],
-  "answer": 3,
+  "answer": 2,
   "explanation": "Twice 5 is 10, and 10 + 4 = 14."
  },
  {
@@ -431,12 +431,12 @@
   "difficulty": 2,
   "stem": "What is 3 1/2 − 1 3/4?",
   "choices": [
-   "1 3/4",
-   "2 1/4",
    "1 1/4",
-   "2 3/4"
+   "2 3/4",
+   "1 3/4",
+   "2 1/4"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "3 1/2 = 3 2/4 = 2 6/4, and 2 6/4 − 1 3/4 = 1 3/4."
  },
  {
@@ -445,12 +445,12 @@
   "difficulty": 2,
   "stem": "How many minutes are in 2.5 hours?",
   "choices": [
-   "250",
    "125",
-   "150",
-   "130"
+   "250",
+   "130",
+   "150"
   ],
-  "answer": 2,
+  "answer": 3,
   "explanation": "2.5 × 60 = 150 minutes."
  },
  {
@@ -459,12 +459,12 @@
   "difficulty": 2,
   "stem": "What is the mean of 8, 12, 15, 9, and 11?",
   "choices": [
-   "55",
+   "11",
    "12",
-   "10",
-   "11"
+   "55",
+   "10"
   ],
-  "answer": 3,
+  "answer": 0,
   "explanation": "The sum is 55, and 55 ÷ 5 = 11."
  },
  {
@@ -473,10 +473,10 @@
   "difficulty": 2,
   "stem": "A number cube with faces numbered 1 through 6 is rolled once. What is the probability of rolling a number greater than 4?",
   "choices": [
+   "2/3",
    "1/6",
-   "1/2",
    "1/3",
-   "2/3"
+   "1/2"
   ],
   "answer": 2,
   "explanation": "Only 5 and 6 are greater than 4, so the probability is 2/6 = 1/3."
@@ -487,12 +487,12 @@
   "difficulty": 2,
   "stem": "What is the volume of the box shown?",
   "choices": [
-   "12 cubic inches",
-   "60 cubic inches",
    "47 cubic inches",
-   "94 cubic inches"
+   "94 cubic inches",
+   "12 cubic inches",
+   "60 cubic inches"
   ],
-  "answer": 1,
+  "answer": 3,
   "explanation": "Volume = length × width × height = 5 × 3 × 4 = 60 cubic inches.",
   "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 283 199\" width=\"283\" height=\"199\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><polygon points=\"40,165 170,165 170,61 40,61\" fill=\"rgba(10,31,68,0.08)\" stroke=\"#111\" stroke-width=\"2\"/><polygon points=\"40,61 170,61 212.9,25.9 82.9,25.9\" fill=\"rgba(10,31,68,0.16)\" stroke=\"#111\" stroke-width=\"2\"/><polygon points=\"170,165 212.9,129.9 212.9,25.9 170,61\" fill=\"rgba(10,31,68,0.24)\" stroke=\"#111\" stroke-width=\"2\"/><line x1=\"40\" y1=\"165\" x2=\"82.9\" y2=\"129.9\" stroke=\"#6b7280\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/><line x1=\"82.9\" y1=\"129.9\" x2=\"212.9\" y2=\"129.9\" stroke=\"#6b7280\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/><line x1=\"82.9\" y1=\"129.9\" x2=\"82.9\" y2=\"25.9\" stroke=\"#6b7280\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/><text x=\"105\" y=\"187\" text-anchor=\"middle\">5 in</text><text x=\"199.5\" y=\"159.5\">3 in</text><text x=\"32\" y=\"118\" text-anchor=\"end\">4 in</text></svg>"
  },
@@ -502,12 +502,12 @@
   "difficulty": 2,
   "stem": "The graph shows the height of a plant each week. How many centimeters did the plant grow from Week 2 to Week 4?",
   "choices": [
-   "6",
    "4",
+   "6",
    "8",
    "12"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "The plant was 6 cm tall in Week 2 and 12 cm in Week 4, so it grew 12 − 6 = 6 cm.",
   "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 260\" width=\"360\" height=\"260\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><text x=\"180\" y=\"20\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"700\">Plant Height</text><line x1=\"54\" y1=\"214\" x2=\"340\" y2=\"214\" stroke=\"#d1d5db\" stroke-width=\"2\"/><text x=\"48\" y=\"219\" text-anchor=\"end\" font-size=\"13\">0</text><line x1=\"54\" y1=\"191.8\" x2=\"340\" y2=\"191.8\" stroke=\"#d1d5db\" stroke-width=\"2\"/><text x=\"48\" y=\"196.8\" text-anchor=\"end\" font-size=\"13\">2</text><line x1=\"54\" y1=\"169.5\" x2=\"340\" y2=\"169.5\" stroke=\"#d1d5db\" stroke-width=\"2\"/><text x=\"48\" y=\"174.5\" text-anchor=\"end\" font-size=\"13\">4</text><line x1=\"54\" y1=\"147.3\" x2=\"340\" y2=\"147.3\" stroke=\"#d1d5db\" stroke-width=\"2\"/><text x=\"48\" y=\"152.3\" text-anchor=\"end\" font-size=\"13\">6</text><line x1=\"54\" y1=\"125\" x2=\"340\" y2=\"125\" stroke=\"#d1d5db\" stroke-width=\"2\"/><text x=\"48\" y=\"130\" text-anchor=\"end\" font-size=\"13\">8</text><line x1=\"54\" y1=\"102.8\" x2=\"340\" y2=\"102.8\" stroke=\"#d1d5db\" stroke-width=\"2\"/><text x=\"48\" y=\"107.8\" text-anchor=\"end\" font-size=\"13\">10</text><line x1=\"54\" y1=\"80.5\" x2=\"340\" y2=\"80.5\" stroke=\"#d1d5db\" stroke-width=\"2\"/><text x=\"48\" y=\"85.5\" text-anchor=\"end\" font-size=\"13\">12</text><line x1=\"54\" y1=\"58.3\" x2=\"340\" y2=\"58.3\" stroke=\"#d1d5db\" stroke-width=\"2\"/><text x=\"48\" y=\"63.3\" text-anchor=\"end\" font-size=\"13\">14</text><line x1=\"54\" y1=\"36\" x2=\"340\" y2=\"36\" stroke=\"#d1d5db\" stroke-width=\"2\"/><text x=\"48\" y=\"41\" text-anchor=\"end\" font-size=\"13\">16</text><text x=\"74\" y=\"234\" text-anchor=\"middle\" font-size=\"13\">1</text><text x=\"138\" y=\"234\" text-anchor=\"middle\" font-size=\"13\">2</text><text x=\"202\" y=\"234\" text-anchor=\"middle\" font-size=\"13\">3</text><text x=\"266\" y=\"234\" text-anchor=\"middle\" font-size=\"13\">4</text><text x=\"330\" y=\"234\" text-anchor=\"middle\" font-size=\"13\">5</text><line x1=\"54\" y1=\"214\" x2=\"340\" y2=\"214\" stroke=\"#111\" stroke-width=\"2\"/><line x1=\"54\" y1=\"214\" x2=\"54\" y2=\"30\" stroke=\"#111\" stroke-width=\"2\"/><polyline points=\"74,191.8 138,147.3 202,125 266,80.5 330,58.3\" fill=\"none\" stroke=\"#0a1f44\" stroke-width=\"2.5\"/><circle cx=\"74\" cy=\"191.8\" r=\"4.5\" fill=\"#0a1f44\"/><circle cx=\"138\" cy=\"147.3\" r=\"4.5\" fill=\"#0a1f44\"/><circle cx=\"202\" cy=\"125\" r=\"4.5\" fill=\"#0a1f44\"/><circle cx=\"266\" cy=\"80.5\" r=\"4.5\" fill=\"#0a1f44\"/><circle cx=\"330\" cy=\"58.3\" r=\"4.5\" fill=\"#0a1f44\"/><text x=\"197\" y=\"254\" text-anchor=\"middle\" font-size=\"13\">Week</text><text x=\"14\" y=\"125\" text-anchor=\"middle\" font-size=\"13\" transform=\"rotate(-90 14 125)\">Height (cm)</text></svg>"
  },
@@ -517,12 +517,12 @@
   "difficulty": 2,
   "stem": "What is the area of the shaded rectangle, in square units?",
   "choices": [
+   "8",
    "15",
    "16",
-   "8",
    "20"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "The rectangle is 6 − 1 = 5 units wide and 4 − 1 = 3 units tall, so its area is 5 × 3 = 15.",
   "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 304 232\" width=\"304\" height=\"232\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><line x1=\"26\" y1=\"206\" x2=\"26\" y2=\"26\" stroke=\"#e5e7eb\" stroke-width=\"2\"/><line x1=\"62\" y1=\"206\" x2=\"62\" y2=\"26\" stroke=\"#e5e7eb\" stroke-width=\"2\"/><line x1=\"98\" y1=\"206\" x2=\"98\" y2=\"26\" stroke=\"#e5e7eb\" stroke-width=\"2\"/><line x1=\"134\" y1=\"206\" x2=\"134\" y2=\"26\" stroke=\"#e5e7eb\" stroke-width=\"2\"/><line x1=\"170\" y1=\"206\" x2=\"170\" y2=\"26\" stroke=\"#e5e7eb\" stroke-width=\"2\"/><line x1=\"206\" y1=\"206\" x2=\"206\" y2=\"26\" stroke=\"#e5e7eb\" stroke-width=\"2\"/><line x1=\"242\" y1=\"206\" x2=\"242\" y2=\"26\" stroke=\"#e5e7eb\" stroke-width=\"2\"/><line x1=\"278\" y1=\"206\" x2=\"278\" y2=\"26\" stroke=\"#e5e7eb\" stroke-width=\"2\"/><line x1=\"26\" y1=\"206\" x2=\"278\" y2=\"206\" stroke=\"#e5e7eb\" stroke-width=\"2\"/><line x1=\"26\" y1=\"170\" x2=\"278\" y2=\"170\" stroke=\"#e5e7eb\" stroke-width=\"2\"/><line x1=\"26\" y1=\"134\" x2=\"278\" y2=\"134\" stroke=\"#e5e7eb\" stroke-width=\"2\"/><line x1=\"26\" y1=\"98\" x2=\"278\" y2=\"98\" stroke=\"#e5e7eb\" stroke-width=\"2\"/><line x1=\"26\" y1=\"62\" x2=\"278\" y2=\"62\" stroke=\"#e5e7eb\" stroke-width=\"2\"/><line x1=\"26\" y1=\"26\" x2=\"278\" y2=\"26\" stroke=\"#e5e7eb\" stroke-width=\"2\"/><line x1=\"26\" y1=\"206\" x2=\"278\" y2=\"206\" stroke=\"#111\" stroke-width=\"2\"/><line x1=\"26\" y1=\"206\" x2=\"26\" y2=\"26\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"274\" y=\"198\" text-anchor=\"end\" font-size=\"14\" font-weight=\"700\">x</text><text x=\"34\" y=\"40\" font-size=\"14\" font-weight=\"700\">y</text><text x=\"62\" y=\"223\" text-anchor=\"middle\" font-size=\"13\">1</text><text x=\"98\" y=\"223\" text-anchor=\"middle\" font-size=\"13\">2</text><text x=\"134\" y=\"223\" text-anchor=\"middle\" font-size=\"13\">3</text><text x=\"170\" y=\"223\" text-anchor=\"middle\" font-size=\"13\">4</text><text x=\"206\" y=\"223\" text-anchor=\"middle\" font-size=\"13\">5</text><text x=\"242\" y=\"223\" text-anchor=\"middle\" font-size=\"13\">6</text><text x=\"278\" y=\"223\" text-anchor=\"middle\" font-size=\"13\">7</text><text x=\"20\" y=\"175\" text-anchor=\"end\" font-size=\"13\">1</text><text x=\"20\" y=\"139\" text-anchor=\"end\" font-size=\"13\">2</text><text x=\"20\" y=\"103\" text-anchor=\"end\" font-size=\"13\">3</text><text x=\"20\" y=\"67\" text-anchor=\"end\" font-size=\"13\">4</text><text x=\"20\" y=\"31\" text-anchor=\"end\" font-size=\"13\">5</text><text x=\"20\" y=\"223\" text-anchor=\"end\" font-size=\"13\">0</text><polygon points=\"62,170 242,170 242,62 62,62\" fill=\"rgba(10,31,68,0.12)\" stroke=\"#0a1f44\" stroke-width=\"2.5\"/></svg>"
  },
@@ -533,11 +533,11 @@
   "stem": "In the figure, angle ABC is a right angle. What is the value of x?",
   "choices": [
    "145",
+   "45",
    "65",
-   "55",
-   "45"
+   "55"
   ],
-  "answer": 2,
+  "answer": 3,
   "explanation": "The two angles together make 90°, so x = 90 − 35 = 55.",
   "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 230\" width=\"320\" height=\"230\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><line x1=\"70\" y1=\"200\" x2=\"240\" y2=\"200\" stroke=\"#111\" stroke-width=\"2\"/><line x1=\"70\" y1=\"200\" x2=\"70\" y2=\"30\" stroke=\"#111\" stroke-width=\"2\"/><line x1=\"70\" y1=\"200\" x2=\"209.3\" y2=\"102.5\" stroke=\"#0a1f44\" stroke-width=\"2.5\"/><rect x=\"70\" y=\"186\" width=\"14\" height=\"14\" fill=\"none\" stroke=\"#6b7280\" stroke-width=\"2\"/><path d=\"M130,200 A60,60 0 0 0 119.1,165.6\" fill=\"none\" stroke=\"#0a1f44\" stroke-width=\"2\"/><path d=\"M107.7,173.6 A46,46 0 0 0 70,154\" fill=\"none\" stroke=\"#0a1f44\" stroke-width=\"2\"/><text x=\"138.7\" y=\"183.3\" font-weight=\"700\" fill=\"#0a1f44\">35°</text><text x=\"99.6\" y=\"148.2\" font-weight=\"700\" fill=\"#0a1f44\">x°</text><text x=\"62\" y=\"218\" text-anchor=\"end\" font-weight=\"700\">B</text><text x=\"244\" y=\"220\" font-weight=\"700\">C</text><text x=\"60\" y=\"36\" text-anchor=\"end\" font-weight=\"700\">A</text><text x=\"215.3\" y=\"102.5\" font-weight=\"700\">D</text></svg>"
  },
@@ -547,12 +547,12 @@
   "difficulty": 2,
   "stem": "Using the prices in the table, how much do 2 adult tickets and 3 child tickets cost in all?",
   "choices": [
-   "$50",
+   "$45",
    "$38",
    "$19",
-   "$45"
+   "$50"
   ],
-  "answer": 3,
+  "answer": 0,
   "explanation": "2 × $12 = $24 and 3 × $7 = $21, so the total is $45.",
   "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 258 126\" width=\"258\" height=\"126\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><text x=\"129\" y=\"20\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"700\">Museum Tickets</text><rect x=\"4\" y=\"30\" width=\"250\" height=\"30\" fill=\"#e5e7eb\"/><text x=\"74\" y=\"50\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"700\">Ticket</text><text x=\"199\" y=\"50\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"700\">Price</text><text x=\"74\" y=\"80\" text-anchor=\"middle\" font-size=\"14\">Adult</text><text x=\"199\" y=\"80\" text-anchor=\"middle\" font-size=\"14\">$12</text><text x=\"74\" y=\"110\" text-anchor=\"middle\" font-size=\"14\">Child</text><text x=\"199\" y=\"110\" text-anchor=\"middle\" font-size=\"14\">$7</text><line x1=\"4\" y1=\"30\" x2=\"254\" y2=\"30\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"4\" y1=\"60\" x2=\"254\" y2=\"60\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"4\" y1=\"90\" x2=\"254\" y2=\"90\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"4\" y1=\"120\" x2=\"254\" y2=\"120\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"4\" y1=\"30\" x2=\"4\" y2=\"120\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"144\" y1=\"30\" x2=\"144\" y2=\"120\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"254\" y1=\"30\" x2=\"254\" y2=\"120\" stroke=\"#6b7280\" stroke-width=\"2\"/></svg>"
  },
@@ -562,12 +562,12 @@
   "difficulty": 2,
   "stem": "What is the area of the figure, in square feet?",
   "choices": [
-   "28",
    "42",
    "48",
-   "36"
+   "36",
+   "28"
   ],
-  "answer": 1,
+  "answer": 0,
   "explanation": "The full 8 × 6 rectangle has area 48; removing the 3 × 2 corner leaves 48 − 6 = 42.",
   "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 330 250\" width=\"330\" height=\"250\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><polygon points=\"50,210 274,210 274,98 190,98 190,42 50,42\" fill=\"rgba(10,31,68,0.10)\" stroke=\"#0a1f44\" stroke-width=\"2.5\"/><text x=\"162\" y=\"232\" text-anchor=\"middle\">8 ft</text><text x=\"42\" y=\"131\" text-anchor=\"end\">6 ft</text><text x=\"232\" y=\"88\" text-anchor=\"middle\">3 ft</text><text x=\"182\" y=\"75\" text-anchor=\"end\">2 ft</text></svg>"
  },
@@ -579,8 +579,8 @@
   "choices": [
    "5",
    "9",
-   "7",
-   "23"
+   "23",
+   "7"
   ],
   "answer": 0,
   "explanation": "Divide both sides by 3 to get x + 4 = 9, so x = 5."
@@ -591,12 +591,12 @@
   "difficulty": 3,
   "stem": "A family leaves a 15% tip on a $48 restaurant bill. How much is the tip?",
   "choices": [
+   "$6.80",
    "$4.80",
    "$7.20",
-   "$6.80",
    "$55.20"
   ],
-  "answer": 1,
+  "answer": 2,
   "explanation": "10% of $48 is $4.80 and 5% is $2.40, so 15% is $7.20."
  },
  {
@@ -606,9 +606,9 @@
   "stem": "The price of a game rose from $40 to $50. By what percent did the price increase?",
   "choices": [
    "20%",
-   "10%",
+   "50%",
    "25%",
-   "50%"
+   "10%"
   ],
   "answer": 2,
   "explanation": "The increase is $10, and 10/40 = 25%."
@@ -619,9 +619,9 @@
   "difficulty": 3,
   "stem": "What is the value of −8 + 3 × (−2)?",
   "choices": [
-   "10",
    "−2",
    "14",
+   "10",
    "−14"
   ],
   "answer": 3,
@@ -633,12 +633,12 @@
   "difficulty": 3,
   "stem": "A jar holds red and blue marbles in the ratio 3 : 5. If there are 64 marbles in all, how many are blue?",
   "choices": [
-   "24",
-   "32",
+   "45",
    "40",
-   "45"
+   "24",
+   "32"
   ],
-  "answer": 2,
+  "answer": 1,
   "explanation": "There are 3 + 5 = 8 parts, so each part is 64 ÷ 8 = 8 marbles; blue is 5 × 8 = 40."
  },
  {
@@ -647,12 +647,12 @@
   "difficulty": 3,
   "stem": "On a map, 1 inch represents 15 miles. Two towns are 3.5 inches apart on the map. What is the actual distance between them?",
   "choices": [
-   "52.5 miles",
-   "45 miles",
+   "18.5 miles",
    "50.5 miles",
-   "18.5 miles"
+   "45 miles",
+   "52.5 miles"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "3.5 × 15 = 52.5 miles."
  },
  {
@@ -676,11 +676,11 @@
   "stem": "Which expression is equivalent to 5x − 2(x − 3)?",
   "choices": [
    "3x − 6",
+   "7x + 6",
    "3x + 6",
-   "3x − 3",
-   "7x + 6"
+   "3x − 3"
   ],
-  "answer": 1,
+  "answer": 2,
   "explanation": "Distribute: 5x − 2x + 6 = 3x + 6."
  },
  {
@@ -703,12 +703,12 @@
   "difficulty": 3,
   "stem": "What is 0.4 ÷ 0.05?",
   "choices": [
-   "0.8",
-   "80",
+   "8",
    "0.02",
-   "8"
+   "80",
+   "0.8"
   ],
-  "answer": 3,
+  "answer": 0,
   "explanation": "Multiply both numbers by 100: 40 ÷ 5 = 8."
  },
  {
@@ -717,12 +717,12 @@
   "difficulty": 3,
   "stem": "A cyclist rides 18 miles in 1 hour 30 minutes. What is her average speed, in miles per hour?",
   "choices": [
-   "12",
-   "27",
+   "16",
    "9",
-   "16"
+   "27",
+   "12"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "1 hour 30 minutes is 1.5 hours, and 18 ÷ 1.5 = 12."
  },
  {
@@ -745,12 +745,12 @@
   "difficulty": 3,
   "stem": "The pattern 1, 4, 9, 16, … continues. What is the 10th number in the pattern?",
   "choices": [
-   "81",
    "121",
-   "40",
-   "100"
+   "81",
+   "100",
+   "40"
   ],
-  "answer": 3,
+  "answer": 2,
   "explanation": "The nth number is n², so the 10th number is 10² = 100."
  },
  {
@@ -759,10 +759,10 @@
   "difficulty": 3,
   "stem": "What is the smallest whole number x that makes 2x − 5 > 9 true?",
   "choices": [
-   "7",
+   "14",
    "2",
    "8",
-   "14"
+   "7"
   ],
   "answer": 2,
   "explanation": "2x > 14, so x > 7; the smallest whole number greater than 7 is 8."
@@ -773,12 +773,12 @@
   "difficulty": 3,
   "stem": "What is the value of x in the triangle?",
   "choices": [
-   "75",
-   "65",
+   "55",
    "113",
-   "55"
+   "65",
+   "75"
   ],
-  "answer": 1,
+  "answer": 2,
   "explanation": "The angles of a triangle add to 180°, so x = 180 − 48 − 67 = 65.",
   "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 200\" width=\"340\" height=\"200\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><polygon points=\"40,180 238.7,180 175.1,30\" fill=\"rgba(10,31,68,0.10)\" stroke=\"#0a1f44\" stroke-width=\"2.5\"/><text x=\"80\" y=\"171\" font-weight=\"700\" fill=\"#0a1f44\">48°</text><text x=\"198.7\" y=\"171\" text-anchor=\"end\" font-weight=\"700\" fill=\"#0a1f44\">67°</text><text x=\"175.1\" y=\"70\" text-anchor=\"middle\" font-weight=\"700\" fill=\"#0a1f44\">x°</text></svg>"
  },
@@ -788,12 +788,12 @@
   "difficulty": 3,
   "stem": "In the figure, lines ℓ and m are parallel. What is the value of x?",
   "choices": [
-   "68",
-   "112",
+   "78",
    "58",
-   "78"
+   "68",
+   "112"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "The marked angles are same-side interior angles between parallel lines, so they add to 180°: x = 180 − 112 = 68.",
   "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 230\" width=\"360\" height=\"230\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><line x1=\"20\" y1=\"70\" x2=\"340\" y2=\"70\" stroke=\"#111\" stroke-width=\"2\"/><line x1=\"20\" y1=\"170\" x2=\"340\" y2=\"170\" stroke=\"#111\" stroke-width=\"2\"/><line x1=\"131.3\" y1=\"216.4\" x2=\"209.1\" y2=\"23.6\" stroke=\"#0a1f44\" stroke-width=\"2.5\"/><text x=\"338\" y=\"62\" text-anchor=\"end\" font-size=\"16\" font-weight=\"700\">ℓ</text><text x=\"338\" y=\"162\" text-anchor=\"end\" font-size=\"16\" font-weight=\"700\">m</text><path d=\"M216.4,70 A26,26 0 0 1 180.7,94.1\" fill=\"none\" stroke=\"#0a1f44\" stroke-width=\"2\"/><text x=\"216.4\" y=\"104\" font-weight=\"700\" fill=\"#0a1f44\">112°</text><path d=\"M176,170 A26,26 0 0 0 159.7,145.9\" fill=\"none\" stroke=\"#0a1f44\" stroke-width=\"2\"/><text x=\"182\" y=\"158\" font-weight=\"700\" fill=\"#0a1f44\">x°</text></svg>"
  },
@@ -804,9 +804,9 @@
   "stem": "The bar graph shows the rainfall in a town for four months. What was the mean monthly rainfall?",
   "choices": [
    "4 inches",
-   "16 inches",
+   "3.5 inches",
    "5 inches",
-   "3.5 inches"
+   "16 inches"
   ],
   "answer": 0,
   "explanation": "The total is 3 + 5 + 2 + 6 = 16 inches, and 16 ÷ 4 = 4 inches.",
@@ -818,12 +818,12 @@
   "difficulty": 3,
   "stem": "The table shows values of x and y that follow the same rule. What is y when x = 10?",
   "choices": [
-   "29",
-   "35",
+   "50",
    "32",
-   "50"
+   "35",
+   "29"
   ],
-  "answer": 2,
+  "answer": 1,
   "explanation": "y increases by 3 each time x increases by 1, so y = 3x + 2, and 3(10) + 2 = 32.",
   "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 308 70\" width=\"308\" height=\"70\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><rect x=\"4\" y=\"4\" width=\"300\" height=\"30\" fill=\"#e5e7eb\"/><text x=\"34\" y=\"24\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"700\">x</text><text x=\"94\" y=\"24\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"700\">1</text><text x=\"154\" y=\"24\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"700\">2</text><text x=\"214\" y=\"24\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"700\">3</text><text x=\"274\" y=\"24\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"700\">4</text><text x=\"34\" y=\"54\" text-anchor=\"middle\" font-size=\"14\">y</text><text x=\"94\" y=\"54\" text-anchor=\"middle\" font-size=\"14\">5</text><text x=\"154\" y=\"54\" text-anchor=\"middle\" font-size=\"14\">8</text><text x=\"214\" y=\"54\" text-anchor=\"middle\" font-size=\"14\">11</text><text x=\"274\" y=\"54\" text-anchor=\"middle\" font-size=\"14\">14</text><line x1=\"4\" y1=\"4\" x2=\"304\" y2=\"4\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"4\" y1=\"34\" x2=\"304\" y2=\"34\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"4\" y1=\"64\" x2=\"304\" y2=\"64\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"4\" y1=\"4\" x2=\"4\" y2=\"64\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"64\" y1=\"4\" x2=\"64\" y2=\"64\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"124\" y1=\"4\" x2=\"124\" y2=\"64\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"184\" y1=\"4\" x2=\"184\" y2=\"64\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"244\" y1=\"4\" x2=\"244\" y2=\"64\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"304\" y1=\"4\" x2=\"304\" y2=\"64\" stroke=\"#6b7280\" stroke-width=\"2\"/></svg>"
  },
@@ -833,12 +833,12 @@
   "difficulty": 3,
   "stem": "What is the area of the trapezoid, in square meters?",
   "choices": [
-   "64",
-   "40",
    "20",
-   "32"
+   "64",
+   "32",
+   "40"
   ],
-  "answer": 3,
+  "answer": 2,
   "explanation": "Area = ½ × (6 + 10) × 4 = 32 square meters.",
   "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 200\" width=\"340\" height=\"200\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><polygon points=\"40,160 300,160 248,56 92,56\" fill=\"rgba(10,31,68,0.10)\" stroke=\"#0a1f44\" stroke-width=\"2.5\"/><line x1=\"92\" y1=\"160\" x2=\"92\" y2=\"56\" stroke=\"#6b7280\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/><rect x=\"92\" y=\"148\" width=\"12\" height=\"12\" fill=\"none\" stroke=\"#6b7280\" stroke-width=\"2\"/><text x=\"170\" y=\"46\" text-anchor=\"middle\">6 m</text><text x=\"170\" y=\"182\" text-anchor=\"middle\">10 m</text><text x=\"100\" y=\"113\">4 m</text></svg>"
  },
@@ -849,11 +849,11 @@
   "stem": "What is the distance between points P and Q on the coordinate grid?",
   "choices": [
    "2 units",
+   "7 units",
    "8 units",
-   "10 units",
-   "7 units"
+   "10 units"
   ],
-  "answer": 1,
+  "answer": 2,
   "explanation": "P and Q have the same y-coordinate, so the distance is 5 − (−3) = 8 units.",
   "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 352 202\" width=\"352\" height=\"202\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><line x1=\"26\" y1=\"176\" x2=\"26\" y2=\"26\" stroke=\"#e5e7eb\" stroke-width=\"2\"/><line x1=\"56\" y1=\"176\" x2=\"56\" y2=\"26\" stroke=\"#e5e7eb\" stroke-width=\"2\"/><line x1=\"86\" y1=\"176\" x2=\"86\" y2=\"26\" stroke=\"#e5e7eb\" stroke-width=\"2\"/><line x1=\"116\" y1=\"176\" x2=\"116\" y2=\"26\" stroke=\"#e5e7eb\" stroke-width=\"2\"/><line x1=\"146\" y1=\"176\" x2=\"146\" y2=\"26\" stroke=\"#e5e7eb\" stroke-width=\"2\"/><line x1=\"176\" y1=\"176\" x2=\"176\" y2=\"26\" stroke=\"#e5e7eb\" stroke-width=\"2\"/><line x1=\"206\" y1=\"176\" x2=\"206\" y2=\"26\" stroke=\"#e5e7eb\" stroke-width=\"2\"/><line x1=\"236\" y1=\"176\" x2=\"236\" y2=\"26\" stroke=\"#e5e7eb\" stroke-width=\"2\"/><line x1=\"266\" y1=\"176\" x2=\"266\" y2=\"26\" stroke=\"#e5e7eb\" stroke-width=\"2\"/><line x1=\"296\" y1=\"176\" x2=\"296\" y2=\"26\" stroke=\"#e5e7eb\" stroke-width=\"2\"/><line x1=\"326\" y1=\"176\" x2=\"326\" y2=\"26\" stroke=\"#e5e7eb\" stroke-width=\"2\"/><line x1=\"26\" y1=\"176\" x2=\"326\" y2=\"176\" stroke=\"#e5e7eb\" stroke-width=\"2\"/><line x1=\"26\" y1=\"146\" x2=\"326\" y2=\"146\" stroke=\"#e5e7eb\" stroke-width=\"2\"/><line x1=\"26\" y1=\"116\" x2=\"326\" y2=\"116\" stroke=\"#e5e7eb\" stroke-width=\"2\"/><line x1=\"26\" y1=\"86\" x2=\"326\" y2=\"86\" stroke=\"#e5e7eb\" stroke-width=\"2\"/><line x1=\"26\" y1=\"56\" x2=\"326\" y2=\"56\" stroke=\"#e5e7eb\" stroke-width=\"2\"/><line x1=\"26\" y1=\"26\" x2=\"326\" y2=\"26\" stroke=\"#e5e7eb\" stroke-width=\"2\"/><line x1=\"26\" y1=\"146\" x2=\"326\" y2=\"146\" stroke=\"#111\" stroke-width=\"2\"/><line x1=\"146\" y1=\"176\" x2=\"146\" y2=\"26\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"322\" y=\"138\" text-anchor=\"end\" font-size=\"14\" font-weight=\"700\">x</text><text x=\"154\" y=\"40\" font-size=\"14\" font-weight=\"700\">y</text><text x=\"26\" y=\"163\" text-anchor=\"middle\" font-size=\"13\">-4</text><text x=\"56\" y=\"163\" text-anchor=\"middle\" font-size=\"13\">-3</text><text x=\"86\" y=\"163\" text-anchor=\"middle\" font-size=\"13\">-2</text><text x=\"116\" y=\"163\" text-anchor=\"middle\" font-size=\"13\">-1</text><text x=\"176\" y=\"163\" text-anchor=\"middle\" font-size=\"13\">1</text><text x=\"206\" y=\"163\" text-anchor=\"middle\" font-size=\"13\">2</text><text x=\"236\" y=\"163\" text-anchor=\"middle\" font-size=\"13\">3</text><text x=\"266\" y=\"163\" text-anchor=\"middle\" font-size=\"13\">4</text><text x=\"296\" y=\"163\" text-anchor=\"middle\" font-size=\"13\">5</text><text x=\"326\" y=\"163\" text-anchor=\"middle\" font-size=\"13\">6</text><text x=\"140\" y=\"181\" text-anchor=\"end\" font-size=\"13\">-1</text><text x=\"140\" y=\"121\" text-anchor=\"end\" font-size=\"13\">1</text><text x=\"140\" y=\"91\" text-anchor=\"end\" font-size=\"13\">2</text><text x=\"140\" y=\"61\" text-anchor=\"end\" font-size=\"13\">3</text><text x=\"140\" y=\"31\" text-anchor=\"end\" font-size=\"13\">4</text><text x=\"140\" y=\"163\" text-anchor=\"end\" font-size=\"13\">0</text><circle cx=\"56\" cy=\"86\" r=\"4.5\" fill=\"#0a1f44\"/><text x=\"64\" y=\"76\" font-weight=\"700\" fill=\"#0a1f44\">P (−3, 2)</text><circle cx=\"296\" cy=\"86\" r=\"4.5\" fill=\"#0a1f44\"/><text x=\"290\" y=\"76\" text-anchor=\"end\" font-weight=\"700\" fill=\"#0a1f44\">Q (5, 2)</text></svg>"
  },
@@ -863,12 +863,12 @@
   "difficulty": 4,
   "stem": "If 3x − 7 = x + 9, what is the value of x?",
   "choices": [
-   "8",
+   "1",
    "4",
-   "16",
-   "1"
+   "8",
+   "16"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Subtract x and add 7 to both sides: 2x = 16, so x = 8."
  },
  {
@@ -877,12 +877,12 @@
   "difficulty": 4,
   "stem": "Which of the following is equal to 0.00042?",
   "choices": [
-   "4.2 × 10⁻³",
-   "4.2 × 10⁻⁴",
+   "42 × 10⁻³",
    "4.2 × 10⁴",
-   "42 × 10⁻³"
+   "4.2 × 10⁻³",
+   "4.2 × 10⁻⁴"
   ],
-  "answer": 1,
+  "answer": 3,
   "explanation": "Move the decimal point 4 places to the right to get 4.2, so 0.00042 = 4.2 × 10⁻⁴."
  },
  {
@@ -891,12 +891,12 @@
   "difficulty": 4,
   "stem": "A $50 shirt is marked up 20%, and then the new price is discounted 20%. What is the final price?",
   "choices": [
-   "$50",
-   "$52",
    "$48",
-   "$40"
+   "$50",
+   "$40",
+   "$52"
   ],
-  "answer": 2,
+  "answer": 0,
   "explanation": "50 × 1.2 = 60, and 60 × 0.8 = 48."
  },
  {
@@ -905,12 +905,12 @@
   "difficulty": 4,
   "stem": "How much simple interest is earned on $800 at a rate of 4% per year for 3 years?",
   "choices": [
-   "$32",
-   "$896",
    "$192",
-   "$96"
+   "$96",
+   "$896",
+   "$32"
   ],
-  "answer": 3,
+  "answer": 1,
   "explanation": "Interest = 800 × 0.04 × 3 = $96."
  },
  {
@@ -919,12 +919,12 @@
   "difficulty": 4,
   "stem": "If x + y = 14 and x − y = 4, what is the value of x?",
   "choices": [
+   "7",
    "5",
    "10",
-   "9",
-   "7"
+   "9"
   ],
-  "answer": 2,
+  "answer": 3,
   "explanation": "Adding the equations gives 2x = 18, so x = 9 (and y = 5)."
  },
  {
@@ -933,12 +933,12 @@
   "difficulty": 4,
   "stem": "What is the slope of the line that passes through the points (2, 3) and (6, 11)?",
   "choices": [
-   "2",
    "1/2",
+   "8",
    "4",
-   "8"
+   "2"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Slope = (11 − 3) ÷ (6 − 2) = 8 ÷ 4 = 2."
  },
  {
@@ -947,12 +947,12 @@
   "difficulty": 4,
   "stem": "Between which two consecutive whole numbers is √90?",
   "choices": [
-   "8 and 9",
-   "10 and 11",
+   "9 and 10",
    "44 and 46",
-   "9 and 10"
+   "10 and 11",
+   "8 and 9"
   ],
-  "answer": 3,
+  "answer": 0,
   "explanation": "9² = 81 and 10² = 100, and 90 is between 81 and 100."
  },
  {
@@ -961,10 +961,10 @@
   "difficulty": 4,
   "stem": "What is the value of 2³ × 2⁴?",
   "choices": [
-   "4,096",
-   "128",
    "64",
-   "256"
+   "128",
+   "256",
+   "4,096"
   ],
   "answer": 1,
   "explanation": "Add the exponents: 2³ × 2⁴ = 2⁷ = 128."
@@ -975,12 +975,12 @@
   "difficulty": 4,
   "stem": "Two fair coins are tossed. What is the probability that both land heads up?",
   "choices": [
-   "1/2",
    "1/4",
+   "3/4",
    "1/3",
-   "3/4"
+   "1/2"
   ],
-  "answer": 1,
+  "answer": 0,
   "explanation": "The outcomes HH, HT, TH, TT are equally likely, and only HH works, so the probability is 1/4."
  },
  {
@@ -989,12 +989,12 @@
   "difficulty": 4,
   "stem": "Mia's average score on 5 tests is 84. What must she score on her 6th test to raise her average to 86?",
   "choices": [
-   "88",
    "94",
+   "96",
    "90",
-   "96"
+   "88"
   ],
-  "answer": 3,
+  "answer": 1,
   "explanation": "She needs a total of 6 × 86 = 516; she has 5 × 84 = 420, so she needs 516 − 420 = 96."
  },
  {
@@ -1003,12 +1003,12 @@
   "difficulty": 4,
   "stem": "18 is 45% of what number?",
   "choices": [
-   "40",
    "8.1",
    "81",
+   "40",
    "36"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "18 ÷ 0.45 = 40."
  },
  {
@@ -1017,12 +1017,12 @@
   "difficulty": 4,
   "stem": "How many positive factors does 36 have?",
   "choices": [
-   "8",
    "6",
-   "9",
-   "12"
+   "12",
+   "8",
+   "9"
   ],
-  "answer": 2,
+  "answer": 3,
   "explanation": "The factors are 1, 2, 3, 4, 6, 9, 12, 18, and 36."
  },
  {
@@ -1031,12 +1031,12 @@
   "difficulty": 4,
   "stem": "The first term of a sequence is 7, and each term after that is 4 more than the term before it. What is the 25th term?",
   "choices": [
-   "107",
    "100",
-   "99",
-   "103"
+   "107",
+   "103",
+   "99"
   ],
-  "answer": 3,
+  "answer": 2,
   "explanation": "The 25th term is 7 + 24 × 4 = 103."
  },
  {
@@ -1045,12 +1045,12 @@
   "difficulty": 4,
   "stem": "Jada has 4 shirts, 3 pairs of pants, and 2 hats. How many different outfits of one shirt, one pair of pants, and one hat can she make?",
   "choices": [
-   "9",
    "12",
    "24",
+   "9",
    "18"
   ],
-  "answer": 2,
+  "answer": 1,
   "explanation": "Multiply the choices: 4 × 3 × 2 = 24."
  },
  {
@@ -1059,12 +1059,12 @@
   "difficulty": 4,
   "stem": "A 13-foot ladder leans against a wall with its foot 5 feet from the wall, as shown. How high up the wall does the ladder reach?",
   "choices": [
-   "8 ft",
-   "12 ft",
+   "18 ft",
    "14 ft",
-   "18 ft"
+   "12 ft",
+   "8 ft"
   ],
-  "answer": 1,
+  "answer": 2,
   "explanation": "By the Pythagorean theorem, h² = 13² − 5² = 144, so h = 12 feet.",
   "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 330 220\" width=\"330\" height=\"220\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><line x1=\"240\" y1=\"190\" x2=\"240\" y2=\"18\" stroke=\"#6b7280\" stroke-width=\"4\"/><line x1=\"40\" y1=\"190\" x2=\"310\" y2=\"190\" stroke=\"#6b7280\" stroke-width=\"4\"/><line x1=\"175\" y1=\"190\" x2=\"240\" y2=\"34\" stroke=\"#0a1f44\" stroke-width=\"3\"/><rect x=\"228\" y=\"178\" width=\"12\" height=\"12\" fill=\"none\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"195.5\" y=\"112\" text-anchor=\"end\" font-weight=\"700\" fill=\"#0a1f44\">13 ft</text><text x=\"207.5\" y=\"210\" text-anchor=\"middle\">5 ft</text><text x=\"250\" y=\"117\" font-size=\"18\" font-weight=\"700\">?</text></svg>"
  },
@@ -1074,12 +1074,12 @@
   "difficulty": 4,
   "stem": "The cylinder has a radius of 3 inches and a height of 5 inches. What is its volume?",
   "choices": [
-   "45π cubic inches",
-   "15π cubic inches",
    "30π cubic inches",
-   "75π cubic inches"
+   "75π cubic inches",
+   "45π cubic inches",
+   "15π cubic inches"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "V = πr²h = π × 9 × 5 = 45π cubic inches.",
   "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 230\" width=\"300\" height=\"230\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><ellipse cx=\"150\" cy=\"50\" rx=\"70\" ry=\"26\" fill=\"rgba(10,31,68,0.12)\" stroke=\"#0a1f44\" stroke-width=\"2.5\"/><line x1=\"80\" y1=\"50\" x2=\"80\" y2=\"190\" stroke=\"#0a1f44\" stroke-width=\"2.5\"/><line x1=\"220\" y1=\"50\" x2=\"220\" y2=\"190\" stroke=\"#0a1f44\" stroke-width=\"2.5\"/><path d=\"M80,190 A70,26 0 0 0 220,190\" fill=\"none\" stroke=\"#0a1f44\" stroke-width=\"2.5\"/><path d=\"M80,190 A70,26 0 0 1 220,190\" fill=\"none\" stroke=\"#6b7280\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/><line x1=\"150\" y1=\"50\" x2=\"220\" y2=\"50\" stroke=\"#111\" stroke-width=\"2\"/><circle cx=\"150\" cy=\"50\" r=\"4.5\" fill=\"#111\"/><text x=\"185\" y=\"44\" text-anchor=\"middle\" font-size=\"13\">3 in</text><text x=\"228\" y=\"125\">5 in</text></svg>"
  },
@@ -1090,9 +1090,9 @@
   "stem": "Which equation describes the line shown on the grid?",
   "choices": [
    "y = 2x − 2",
-   "y = 2x + 2",
    "y = ½x − 2",
-   "y = −2x − 2"
+   "y = −2x − 2",
+   "y = 2x + 2"
   ],
   "answer": 0,
   "explanation": "The line crosses the y-axis at −2 and rises 2 units for each 1 unit to the right, so y = 2x − 2.",
@@ -1104,12 +1104,12 @@
   "difficulty": 4,
   "stem": "The two right triangles are similar. What is the length of the side marked ?",
   "choices": [
+   "15",
    "11",
    "12",
-   "15",
    "20"
   ],
-  "answer": 2,
+  "answer": 0,
   "explanation": "The scale factor is 9 ÷ 3 = 3, so the side marked ? is 3 × 5 = 15.",
   "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 390 200\" width=\"390\" height=\"200\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><polygon points=\"30,170 118,170 30,104\" fill=\"rgba(10,31,68,0.10)\" stroke=\"#0a1f44\" stroke-width=\"2.5\"/><rect x=\"30\" y=\"158\" width=\"12\" height=\"12\" fill=\"none\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"22\" y=\"142\" text-anchor=\"end\">3</text><text x=\"74\" y=\"190\" text-anchor=\"middle\">4</text><text x=\"82\" y=\"133\" font-weight=\"700\">5</text><polygon points=\"170,170 362,170 170,26\" fill=\"rgba(10,31,68,0.10)\" stroke=\"#0a1f44\" stroke-width=\"2.5\"/><rect x=\"170\" y=\"158\" width=\"12\" height=\"12\" fill=\"none\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"162\" y=\"103\" text-anchor=\"end\">9</text><text x=\"266\" y=\"190\" text-anchor=\"middle\">12</text><text x=\"274\" y=\"94\" font-weight=\"700\">?</text></svg>"
  },
@@ -1119,12 +1119,12 @@
   "difficulty": 4,
   "stem": "The table shows the test scores of 10 students. What is the mean score?",
   "choices": [
-   "80",
+   "81",
    "82",
-   "85",
-   "81"
+   "80",
+   "85"
   ],
-  "answer": 3,
+  "answer": 0,
   "explanation": "The total is 70×2 + 80×5 + 90×3 = 810, and 810 ÷ 10 = 81.",
   "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 318 156\" width=\"318\" height=\"156\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><text x=\"159\" y=\"20\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"700\">Test Scores</text><rect x=\"4\" y=\"30\" width=\"310\" height=\"30\" fill=\"#e5e7eb\"/><text x=\"59\" y=\"50\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"700\">Score</text><text x=\"214\" y=\"50\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"700\">Number of Students</text><text x=\"59\" y=\"80\" text-anchor=\"middle\" font-size=\"14\">70</text><text x=\"214\" y=\"80\" text-anchor=\"middle\" font-size=\"14\">2</text><text x=\"59\" y=\"110\" text-anchor=\"middle\" font-size=\"14\">80</text><text x=\"214\" y=\"110\" text-anchor=\"middle\" font-size=\"14\">5</text><text x=\"59\" y=\"140\" text-anchor=\"middle\" font-size=\"14\">90</text><text x=\"214\" y=\"140\" text-anchor=\"middle\" font-size=\"14\">3</text><line x1=\"4\" y1=\"30\" x2=\"314\" y2=\"30\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"4\" y1=\"60\" x2=\"314\" y2=\"60\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"4\" y1=\"90\" x2=\"314\" y2=\"90\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"4\" y1=\"120\" x2=\"314\" y2=\"120\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"4\" y1=\"150\" x2=\"314\" y2=\"150\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"4\" y1=\"30\" x2=\"4\" y2=\"150\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"114\" y1=\"30\" x2=\"114\" y2=\"150\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"314\" y1=\"30\" x2=\"314\" y2=\"150\" stroke=\"#6b7280\" stroke-width=\"2\"/></svg>"
  },
@@ -1134,12 +1134,12 @@
   "difficulty": 4,
   "stem": "A circle fits exactly inside a square with sides of 10 cm, as shown. What is the area of the shaded region?",
   "choices": [
-   "(100 − 100π) sq cm",
-   "(100 − 25π) sq cm",
    "(100 − 10π) sq cm",
-   "75π sq cm"
+   "75π sq cm",
+   "(100 − 100π) sq cm",
+   "(100 − 25π) sq cm"
   ],
-  "answer": 1,
+  "answer": 3,
   "explanation": "The square has area 100 and the circle has radius 5 and area 25π, so the shaded area is 100 − 25π.",
   "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 240\" width=\"340\" height=\"240\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><rect x=\"80\" y=\"20\" width=\"180\" height=\"180\" fill=\"rgba(10,31,68,0.25)\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"170\" cy=\"110\" r=\"90\" fill=\"#fff\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"170\" y=\"222\" text-anchor=\"middle\">10 cm</text></svg>"
  },
@@ -1149,12 +1149,12 @@
   "difficulty": 5,
   "stem": "If 2^(x + 1) = 32, what is the value of x?",
   "choices": [
-   "4",
-   "5",
    "16",
-   "3"
+   "3",
+   "5",
+   "4"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "32 = 2⁵, so x + 1 = 5 and x = 4."
  },
  {
@@ -1163,12 +1163,12 @@
   "difficulty": 5,
   "stem": "What is the positive solution of x² − 5x − 14 = 0?",
   "choices": [
-   "2",
-   "7",
    "5",
-   "14"
+   "14",
+   "7",
+   "2"
   ],
-  "answer": 1,
+  "answer": 2,
   "explanation": "Factor: (x − 7)(x + 2) = 0, so x = 7 or x = −2."
  },
  {
@@ -1177,8 +1177,8 @@
   "difficulty": 5,
   "stem": "A number is increased by 30%, and the result is then decreased by 30%. What is the overall change?",
   "choices": [
-   "No change",
    "9% increase",
+   "No change",
    "9% decrease",
    "3% decrease"
   ],
@@ -1193,10 +1193,10 @@
   "choices": [
    "50 mph",
    "45 mph",
-   "52 mph",
-   "48 mph"
+   "48 mph",
+   "52 mph"
   ],
-  "answer": 3,
+  "answer": 2,
   "explanation": "For a 120-mile trip each way, the times are 2 h and 3 h, so the average speed is 240 ÷ 5 = 48 mph."
  },
  {
@@ -1206,9 +1206,9 @@
   "stem": "What is the units digit of 7⁴²?",
   "choices": [
    "7",
-   "3",
+   "1",
    "9",
-   "1"
+   "3"
   ],
   "answer": 2,
   "explanation": "Units digits of powers of 7 repeat 7, 9, 3, 1; since 42 leaves remainder 2 when divided by 4, the units digit is 9."
@@ -1219,12 +1219,12 @@
   "difficulty": 5,
   "stem": "A box contains 4 red and 6 blue marbles. Two marbles are drawn at random without replacement. What is the probability that both are red?",
   "choices": [
-   "2/15",
-   "4/25",
    "1/5",
-   "4/15"
+   "4/25",
+   "4/15",
+   "2/15"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "(4/10) × (3/9) = 12/90 = 2/15."
  },
  {
@@ -1233,12 +1233,12 @@
   "difficulty": 5,
   "stem": "If f(x) = x² − 3x, what is f(−2)?",
   "choices": [
-   "−2",
    "2",
    "−10",
-   "10"
+   "10",
+   "−2"
   ],
-  "answer": 3,
+  "answer": 2,
   "explanation": "f(−2) = (−2)² − 3(−2) = 4 + 6 = 10."
  },
  {
@@ -1247,12 +1247,12 @@
   "difficulty": 5,
   "stem": "How many liters of water must be added to 6 liters of a 40% salt solution to make a 30% salt solution?",
   "choices": [
-   "1",
    "2",
-   "3",
-   "4"
+   "4",
+   "1",
+   "3"
   ],
-  "answer": 1,
+  "answer": 0,
   "explanation": "The salt is 0.4 × 6 = 2.4 L; 2.4 ÷ 0.3 = 8 L total, so 8 − 6 = 2 L of water are added."
  },
  {
@@ -1263,8 +1263,8 @@
   "choices": [
    "4.5 hours",
    "2 hours",
-   "9 hours",
-   "1.5 hours"
+   "1.5 hours",
+   "9 hours"
   ],
   "answer": 1,
   "explanation": "Together they fill 1/6 + 1/3 = 1/2 of the tank per hour, so it takes 2 hours."
@@ -1275,12 +1275,12 @@
   "difficulty": 5,
   "stem": "How many integers x satisfy |x − 3| < 5?",
   "choices": [
-   "10",
    "8",
-   "11",
-   "9"
+   "10",
+   "9",
+   "11"
   ],
-  "answer": 3,
+  "answer": 2,
   "explanation": "The inequality means −2 < x < 8, so x can be −1, 0, 1, …, 7, which is 9 integers."
  },
  {
@@ -1289,12 +1289,12 @@
   "difficulty": 5,
   "stem": "What is the sum of all the whole numbers from 1 to 50?",
   "choices": [
-   "1,275",
-   "1,250",
    "2,550",
-   "1,225"
+   "1,250",
+   "1,225",
+   "1,275"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Use the formula n(n + 1)/2: 50 × 51 ÷ 2 = 1,275."
  },
  {
@@ -1303,12 +1303,12 @@
   "difficulty": 5,
   "stem": "What is the value of (3⁴ × 3⁻²) ÷ 3⁻¹?",
   "choices": [
-   "3",
-   "9",
    "27",
-   "1/3"
+   "9",
+   "1/3",
+   "3"
   ],
-  "answer": 2,
+  "answer": 0,
   "explanation": "Combine exponents: 4 + (−2) − (−1) = 3, so the value is 3³ = 27."
  },
  {
@@ -1317,12 +1317,12 @@
   "difficulty": 5,
   "stem": "If a : b = 2 : 3 and b : c = 4 : 5, what is a : c?",
   "choices": [
-   "2 : 5",
-   "5 : 6",
    "6 : 5",
-   "8 : 15"
+   "8 : 15",
+   "2 : 5",
+   "5 : 6"
   ],
-  "answer": 3,
+  "answer": 1,
   "explanation": "Make b match: a : b = 8 : 12 and b : c = 12 : 15, so a : c = 8 : 15."
  },
  {
@@ -1331,8 +1331,8 @@
   "difficulty": 5,
   "stem": "In the sequence 3, 6, 12, 24, …, each term is twice the term before it. What is the sum of the first 6 terms?",
   "choices": [
-   "96",
    "192",
+   "96",
    "189",
    "186"
   ],
@@ -1345,10 +1345,10 @@
   "difficulty": 5,
   "stem": "What is the distance between points A and B?",
   "choices": [
-   "14 units",
-   "10 units",
    "8 units",
-   "12 units"
+   "10 units",
+   "12 units",
+   "14 units"
   ],
   "answer": 1,
   "explanation": "The horizontal change is 6 and the vertical change is 8, so the distance is √(36 + 64) = 10.",
@@ -1360,12 +1360,12 @@
   "difficulty": 5,
   "stem": "In the figure, the triangle is isosceles with the two marked sides equal, and the top angle is 40°. The base is extended to the right. What is the value of x?",
   "choices": [
-   "110",
    "140",
-   "70",
-   "100"
+   "100",
+   "110",
+   "70"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Each base angle is (180 − 40) ÷ 2 = 70°, and x is supplementary to a base angle: 180 − 70 = 110.",
   "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 330 230\" width=\"330\" height=\"230\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><polygon points=\"50,200 173.7,200 111.9,30\" fill=\"rgba(10,31,68,0.10)\" stroke=\"#0a1f44\" stroke-width=\"2.5\"/><line x1=\"173.7\" y1=\"200\" x2=\"263.7\" y2=\"200\" stroke=\"#111\" stroke-width=\"2\"/><line x1=\"74.4\" y1=\"112.6\" x2=\"87.5\" y2=\"117.4\" stroke=\"#111\" stroke-width=\"2\"/><line x1=\"136.2\" y1=\"117.4\" x2=\"149.4\" y2=\"112.6\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"111.9\" y=\"72\" text-anchor=\"middle\" font-weight=\"700\" fill=\"#0a1f44\">40°</text><path d=\"M201.7,200 A28,28 0 0 0 164.2,173.7\" fill=\"none\" stroke=\"#0a1f44\" stroke-width=\"2\"/><text x=\"203.7\" y=\"174\" font-weight=\"700\" fill=\"#0a1f44\">x°</text></svg>"
  },
@@ -1375,14 +1375,14 @@
   "difficulty": 5,
   "stem": "The figure is made of a rectangle and a semicircle. What is the area of the figure, in square centimeters?",
   "choices": [
+   "60 + 3π",
    "60 + 4.5π",
-   "60 + 9π",
    "60 + 18π",
-   "60 + 3π"
+   "60 + 9π"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "The rectangle is 10 × 6 = 60; the semicircle has radius 3, so its area is ½ × 9π = 4.5π.",
-  "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 370 210\" width=\"370\" height=\"210\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><path d=\"M40,40 H280 A72,72 0 0 1 280,184 H40 Z\" fill=\"rgba(10,31,68,0.12)\" stroke=\"#0a1f44\" stroke-width=\"2.5\"/><line x1=\"280\" y1=\"40\" x2=\"280\" y2=\"184\" stroke=\"#6b7280\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/><text x=\"160\" y=\"30\" text-anchor=\"middle\">10 cm</text><text x=\"32\" y=\"117\" text-anchor=\"end\">6 cm</text></svg>"
+  "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-14 0 384 210\" width=\"384\" height=\"210\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><path d=\"M40,40 H280 A72,72 0 0 1 280,184 H40 Z\" fill=\"rgba(10,31,68,0.12)\" stroke=\"#0a1f44\" stroke-width=\"2.5\"/><line x1=\"280\" y1=\"40\" x2=\"280\" y2=\"184\" stroke=\"#6b7280\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/><text x=\"160\" y=\"30\" text-anchor=\"middle\">10 cm</text><text x=\"32\" y=\"117\" text-anchor=\"end\">6 cm</text></svg>"
  },
  {
   "exam_type": "SSAT",
@@ -1391,11 +1391,11 @@
   "stem": "The bar graph shows a club's fundraising totals. By what percent did the total decrease from 2024 to 2025?",
   "choices": [
    "about 11%",
-   "12.5%",
    "10%",
-   "20%"
+   "20%",
+   "12.5%"
   ],
-  "answer": 2,
+  "answer": 1,
   "explanation": "The decrease is $100 − $90 = $10, and 10 ÷ 100 = 10%.",
   "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 290\" width=\"340\" height=\"290\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><text x=\"170\" y=\"20\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"700\">Funds Raised ($)</text><line x1=\"52\" y1=\"256\" x2=\"328\" y2=\"256\" stroke=\"#d1d5db\" stroke-width=\"2\"/><text x=\"46\" y=\"261\" text-anchor=\"end\" font-size=\"13\">0</text><line x1=\"52\" y1=\"237.7\" x2=\"328\" y2=\"237.7\" stroke=\"#d1d5db\" stroke-width=\"2\"/><text x=\"46\" y=\"242.7\" text-anchor=\"end\" font-size=\"13\">10</text><line x1=\"52\" y1=\"219.3\" x2=\"328\" y2=\"219.3\" stroke=\"#d1d5db\" stroke-width=\"2\"/><text x=\"46\" y=\"224.3\" text-anchor=\"end\" font-size=\"13\">20</text><line x1=\"52\" y1=\"201\" x2=\"328\" y2=\"201\" stroke=\"#d1d5db\" stroke-width=\"2\"/><text x=\"46\" y=\"206\" text-anchor=\"end\" font-size=\"13\">30</text><line x1=\"52\" y1=\"182.7\" x2=\"328\" y2=\"182.7\" stroke=\"#d1d5db\" stroke-width=\"2\"/><text x=\"46\" y=\"187.7\" text-anchor=\"end\" font-size=\"13\">40</text><line x1=\"52\" y1=\"164.3\" x2=\"328\" y2=\"164.3\" stroke=\"#d1d5db\" stroke-width=\"2\"/><text x=\"46\" y=\"169.3\" text-anchor=\"end\" font-size=\"13\">50</text><line x1=\"52\" y1=\"146\" x2=\"328\" y2=\"146\" stroke=\"#d1d5db\" stroke-width=\"2\"/><text x=\"46\" y=\"151\" text-anchor=\"end\" font-size=\"13\">60</text><line x1=\"52\" y1=\"127.7\" x2=\"328\" y2=\"127.7\" stroke=\"#d1d5db\" stroke-width=\"2\"/><text x=\"46\" y=\"132.7\" text-anchor=\"end\" font-size=\"13\">70</text><line x1=\"52\" y1=\"109.3\" x2=\"328\" y2=\"109.3\" stroke=\"#d1d5db\" stroke-width=\"2\"/><text x=\"46\" y=\"114.3\" text-anchor=\"end\" font-size=\"13\">80</text><line x1=\"52\" y1=\"91\" x2=\"328\" y2=\"91\" stroke=\"#d1d5db\" stroke-width=\"2\"/><text x=\"46\" y=\"96\" text-anchor=\"end\" font-size=\"13\">90</text><line x1=\"52\" y1=\"72.7\" x2=\"328\" y2=\"72.7\" stroke=\"#d1d5db\" stroke-width=\"2\"/><text x=\"46\" y=\"77.7\" text-anchor=\"end\" font-size=\"13\">100</text><line x1=\"52\" y1=\"54.3\" x2=\"328\" y2=\"54.3\" stroke=\"#d1d5db\" stroke-width=\"2\"/><text x=\"46\" y=\"59.3\" text-anchor=\"end\" font-size=\"13\">110</text><line x1=\"52\" y1=\"36\" x2=\"328\" y2=\"36\" stroke=\"#d1d5db\" stroke-width=\"2\"/><text x=\"46\" y=\"41\" text-anchor=\"end\" font-size=\"13\">120</text><rect x=\"70.4\" y=\"109.3\" width=\"55.2\" height=\"146.7\" fill=\"#0a1f44\"/><text x=\"98\" y=\"276\" text-anchor=\"middle\" font-size=\"13\">2023</text><rect x=\"162.4\" y=\"72.7\" width=\"55.2\" height=\"183.3\" fill=\"#0a1f44\"/><text x=\"190\" y=\"276\" text-anchor=\"middle\" font-size=\"13\">2024</text><rect x=\"254.4\" y=\"91\" width=\"55.2\" height=\"165\" fill=\"#0a1f44\"/><text x=\"282\" y=\"276\" text-anchor=\"middle\" font-size=\"13\">2025</text><line x1=\"52\" y1=\"256\" x2=\"328\" y2=\"256\" stroke=\"#111\" stroke-width=\"2\"/><line x1=\"52\" y1=\"256\" x2=\"52\" y2=\"30\" stroke=\"#111\" stroke-width=\"2\"/></svg>"
  },
@@ -1405,12 +1405,12 @@
   "difficulty": 5,
   "stem": "What is the length of the diagonal shown inside the rectangular box?",
   "choices": [
-   "19 in",
-   "5 in",
    "15 in",
-   "13 in"
+   "5 in",
+   "13 in",
+   "19 in"
   ],
-  "answer": 3,
+  "answer": 2,
   "explanation": "The diagonal is √(3² + 4² + 12²) = √169 = 13 inches.",
   "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 347 140\" width=\"347\" height=\"140\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><polygon points=\"40,106 240,106 240,56 40,56\" fill=\"rgba(10,31,68,0.08)\" stroke=\"#111\" stroke-width=\"2\"/><polygon points=\"40,56 240,56 276.7,26 76.7,26\" fill=\"rgba(10,31,68,0.16)\" stroke=\"#111\" stroke-width=\"2\"/><polygon points=\"240,106 276.7,76 276.7,26 240,56\" fill=\"rgba(10,31,68,0.24)\" stroke=\"#111\" stroke-width=\"2\"/><line x1=\"40\" y1=\"106\" x2=\"76.7\" y2=\"76\" stroke=\"#6b7280\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/><line x1=\"76.7\" y1=\"76\" x2=\"276.7\" y2=\"76\" stroke=\"#6b7280\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/><line x1=\"76.7\" y1=\"76\" x2=\"76.7\" y2=\"26\" stroke=\"#6b7280\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/><line x1=\"40\" y1=\"106\" x2=\"276.7\" y2=\"26\" stroke=\"#b31942\" stroke-width=\"2.5\" stroke-dasharray=\"7 4\"/><text x=\"140\" y=\"128\" text-anchor=\"middle\">12 in</text><text x=\"266.3\" y=\"103\">4 in</text><text x=\"32\" y=\"86\" text-anchor=\"end\">3 in</text></svg>"
  },
@@ -1421,11 +1421,11 @@
   "stem": "The table shows how many students in two grades have a pet. If a Grade 8 student is chosen at random, what is the probability that the student has a pet?",
   "choices": [
    "7/16",
-   "7/20",
+   "16/35",
    "1/5",
-   "16/35"
+   "7/20"
   ],
-  "answer": 1,
+  "answer": 3,
   "explanation": "14 of the 14 + 26 = 40 Grade 8 students have a pet, and 14/40 = 7/20.",
   "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 308 100\" width=\"308\" height=\"100\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><rect x=\"4\" y=\"4\" width=\"300\" height=\"30\" fill=\"#e5e7eb\"/><text x=\"59\" y=\"24\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"700\"></text><text x=\"159\" y=\"24\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"700\">Pet</text><text x=\"254\" y=\"24\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"700\">No Pet</text><text x=\"59\" y=\"54\" text-anchor=\"middle\" font-size=\"14\">Grade 7</text><text x=\"159\" y=\"54\" text-anchor=\"middle\" font-size=\"14\">18</text><text x=\"254\" y=\"54\" text-anchor=\"middle\" font-size=\"14\">12</text><text x=\"59\" y=\"84\" text-anchor=\"middle\" font-size=\"14\">Grade 8</text><text x=\"159\" y=\"84\" text-anchor=\"middle\" font-size=\"14\">14</text><text x=\"254\" y=\"84\" text-anchor=\"middle\" font-size=\"14\">26</text><line x1=\"4\" y1=\"4\" x2=\"304\" y2=\"4\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"4\" y1=\"34\" x2=\"304\" y2=\"34\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"4\" y1=\"64\" x2=\"304\" y2=\"64\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"4\" y1=\"94\" x2=\"304\" y2=\"94\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"4\" y1=\"4\" x2=\"4\" y2=\"94\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"114\" y1=\"4\" x2=\"114\" y2=\"94\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"204\" y1=\"4\" x2=\"204\" y2=\"94\" stroke=\"#6b7280\" stroke-width=\"2\"/><line x1=\"304\" y1=\"4\" x2=\"304\" y2=\"94\" stroke=\"#6b7280\" stroke-width=\"2\"/></svg>"
  }
