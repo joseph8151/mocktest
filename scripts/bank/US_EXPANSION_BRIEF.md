@@ -34,3 +34,14 @@ section in `public/_seed/seed.json` — fields: [id, exam, section, kind, diffic
 `node scripts/passage-stats.mjs <your file>` must say "all items structurally valid". Final message: file, counts per
 section × difficulty, how math was verified, and any item you are unsure about (index + why). Keep helper files in
 /tmp/claude-0/-home-user-mocktest/d898e36e-7fe1-52c6-830c-3a83458ae374/scratchpad/<your-folder>/ (shared scratchpad). Do not commit.
+
+## Round 2 additions: CAT4 · CogAT · WIDA · TOEFL Junior
+Levels → difficulty bands: CAT4 A d1–3 · B/C d1–4 · D d2–5 · E–G d3–5; CogAT L7–8 d1–3 · L9–11 d1–4 · L12–14 d2–5 ·
+L15–17 d3–5; WIDA G1 d1–2 · G2–3 d1–3 · G4–5 d2–4 · G6–8 d2–5 · G9–12 d3–5; TOEFL Primary Step 1 d1–2 · Step 2 d1–3 · Junior Standard d2–5.
+- Figure items (CAT4 spatial/nonverbal, CogAT nonverbal): the question figure goes in `image_svg`; picture answer choices
+  are strings `"svg:<svg …>…</svg>"` (≈120×120, W ≤ 160, same style rules). Study the existing items of that section in
+  public/_seed/seed.json (they include svg: choices) and match their look. Generate shapes by code (rotations,
+  reflections, folds, matrices) and VERIFY by code that exactly one choice is correct (e.g. compare normalized point sets).
+- Listening items (WIDA, TOEFL Junior): the "passage" is the audio script that the browser reads aloud with
+  text-to-speech; the student does not see it. Write natural spoken English (a short talk, announcement or dialogue
+  with "Woman:"/"Man:" labels as in existing items), then questions answerable only from the script.
