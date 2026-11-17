@@ -6,12 +6,12 @@
   "passage": "Book Corner\n1. Take off your shoes.\n2. Sit on the rug or a pillow.\n3. Read with a quiet voice.\n4. Put the book back in the box when you are done.\nYou may stay for ten minutes.",
   "stem": "What do you take off in the Book Corner?",
   "choices": [
-   "Your shoes",
-   "Your hat",
    "Your coat",
-   "Your socks"
+   "Your socks",
+   "Your shoes",
+   "Your hat"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Rule 1 says, \"Take off your shoes.\""
  },
  {
@@ -21,12 +21,12 @@
   "passage": "Book Corner\n1. Take off your shoes.\n2. Sit on the rug or a pillow.\n3. Read with a quiet voice.\n4. Put the book back in the box when you are done.\nYou may stay for ten minutes.",
   "stem": "Where does the book go when you are done?",
   "choices": [
-   "Back in the box",
-   "On a pillow",
    "On the rug",
-   "In your backpack"
+   "On a pillow",
+   "In your backpack",
+   "Back in the box"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Rule 4 says to put the book back in the box when you are done."
  },
  {
@@ -36,12 +36,12 @@
   "passage": "Dear Kim,\nPlease come to my birthday party! It is on Saturday at two o'clock. We will play in the pool at my house, so bring your swimsuit and a towel. There will be cake and games.\nYour friend,\nRosa",
   "stem": "Who wrote this note?",
   "choices": [
+   "Kim",
    "Rosa's mom",
    "A teacher",
-   "Rosa",
-   "Kim"
+   "Rosa"
   ],
-  "answer": 2,
+  "answer": 3,
   "explanation": "The note ends with \"Your friend, Rosa,\" so Rosa wrote it."
  },
  {
@@ -52,11 +52,11 @@
   "stem": "What should Kim bring?",
   "choices": [
    "A hat and a coat",
+   "A swimsuit and a towel",
    "A cake and a card",
-   "A ball and a bat",
-   "A swimsuit and a towel"
+   "A ball and a bat"
   ],
-  "answer": 3,
+  "answer": 1,
   "explanation": "Rosa says, \"bring your swimsuit and a towel.\""
  },
  {
@@ -66,12 +66,12 @@
   "passage": "Leo was eating an apple at lunch. Suddenly, he felt something hard in his mouth. It was his tooth! Leo smiled, and there was a big gap in his smile. His teacher gave him a tiny box to keep the tooth safe. Leo could not wait to show his mom.",
   "stem": "What was Leo eating when his tooth came out?",
   "choices": [
-   "A carrot",
-   "A cookie",
    "An apple",
-   "A sandwich"
+   "A sandwich",
+   "A carrot",
+   "A cookie"
   ],
-  "answer": 2,
+  "answer": 0,
   "explanation": "The story says Leo was eating an apple at lunch."
  },
  {
@@ -81,25 +81,25 @@
   "passage": "Leo was eating an apple at lunch. Suddenly, he felt something hard in his mouth. It was his tooth! Leo smiled, and there was a big gap in his smile. His teacher gave him a tiny box to keep the tooth safe. Leo could not wait to show his mom.",
   "stem": "Why did the teacher give Leo a tiny box?",
   "choices": [
-   "To hold his lunch",
-   "To put his crayons in",
    "To give to a friend",
-   "To keep the tooth safe"
+   "To hold his lunch",
+   "To keep the tooth safe",
+   "To put his crayons in"
   ],
-  "answer": 3,
+  "answer": 2,
   "explanation": "The teacher gave him a tiny box to keep the tooth safe."
  },
  {
   "exam_type": "WIDA",
   "section": "reading",
   "difficulty": 2,
-  "passage": "A magnet can pull some things to it. It pulls things made of iron, like nails and paper clips. A magnet does not pull paper, wood, or plastic. You can try it! Hold a magnet near a spoon, a pencil, and a pin. Which ones jump to the magnet?",
+  "passage": "A magnet can pull some things to it. It pulls things made of iron, like nails and paper clips. A magnet does not pull paper, wood, or plastic. You can try it! Hold a magnet near a paper clip, a pencil, and a pin. Which ones jump to the magnet?",
   "stem": "Which thing will a magnet pull?",
   "choices": [
    "A plastic cup",
    "A paper clip",
-   "A wooden block",
-   "A piece of paper"
+   "A piece of paper",
+   "A wooden block"
   ],
   "answer": 1,
   "explanation": "The text says a magnet pulls things made of iron, like nails and paper clips."
@@ -108,15 +108,15 @@
   "exam_type": "WIDA",
   "section": "reading",
   "difficulty": 2,
-  "passage": "A magnet can pull some things to it. It pulls things made of iron, like nails and paper clips. A magnet does not pull paper, wood, or plastic. You can try it! Hold a magnet near a spoon, a pencil, and a pin. Which ones jump to the magnet?",
+  "passage": "A magnet can pull some things to it. It pulls things made of iron, like nails and paper clips. A magnet does not pull paper, wood, or plastic. You can try it! Hold a magnet near a paper clip, a pencil, and a pin. Which ones jump to the magnet?",
   "stem": "What does a magnet NOT pull?",
   "choices": [
    "Iron",
-   "Wood",
    "Paper clips",
-   "Nails"
+   "Nails",
+   "Wood"
   ],
-  "answer": 1,
+  "answer": 3,
   "explanation": "The text says a magnet does not pull paper, wood, or plastic."
  },
  {
@@ -126,12 +126,12 @@
   "passage": "Our Favorite Fruit\nOur class voted for our favorite fruit.\nApples: 6 votes\nBananas: 4 votes\nGrapes: 8 votes\nOranges: 3 votes\nGrapes got the most votes. We will eat grapes at snack time on Friday!",
   "stem": "Which fruit got the fewest votes?",
   "choices": [
-   "Oranges",
    "Apples",
+   "Oranges",
    "Bananas",
    "Grapes"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "Oranges got 3 votes, which is fewer than any other fruit."
  },
  {
@@ -142,11 +142,11 @@
   "stem": "How many more votes did grapes get than bananas?",
   "choices": [
    "2",
-   "8",
+   "4",
    "12",
-   "4"
+   "8"
   ],
-  "answer": 3,
+  "answer": 1,
   "explanation": "Grapes got 8 votes and bananas got 4 votes, and 8 - 4 = 4."
  },
  {
@@ -156,12 +156,12 @@
   "passage": "Animals need homes. A bird makes a nest in a tree. The nest is made of sticks and grass. A bee lives in a hive with many other bees. A rabbit digs a hole under the ground. The hole keeps the rabbit safe.",
   "stem": "What is a bird's nest made of?",
   "choices": [
+   "Mud and leaves",
    "Paper and string",
    "Sticks and grass",
-   "Mud and leaves",
    "Rocks and sand"
   ],
-  "answer": 1,
+  "answer": 2,
   "explanation": "The text says the nest is made of sticks and grass."
  },
  {
@@ -171,12 +171,12 @@
   "passage": "Animals need homes. A bird makes a nest in a tree. The nest is made of sticks and grass. A bee lives in a hive with many other bees. A rabbit digs a hole under the ground. The hole keeps the rabbit safe.",
   "stem": "Where does a rabbit live?",
   "choices": [
+   "In a nest in a tree",
    "In the water",
-   "In a hole under the ground",
    "In a hive",
-   "In a nest in a tree"
+   "In a hole under the ground"
   ],
-  "answer": 1,
+  "answer": 3,
   "explanation": "The text says a rabbit digs a hole under the ground."
  },
  {
@@ -188,10 +188,10 @@
   "choices": [
    "Sunny",
    "Windy",
-   "Rainy",
-   "Cloudy"
+   "Cloudy",
+   "Rainy"
   ],
-  "answer": 2,
+  "answer": 3,
   "explanation": "The chart says Tuesday will be rainy."
  },
  {
@@ -201,9 +201,9 @@
   "passage": "Weather This Week\nMonday: sunny and hot\nTuesday: rainy (bring an umbrella!)\nWednesday: windy\nThursday: cloudy\nFriday: sunny\nOn sunny days, we eat lunch outside at the picnic tables. On rainy days, we eat lunch in the classroom.",
   "stem": "On which day will the class eat lunch outside?",
   "choices": [
-   "Thursday",
    "Wednesday",
    "Tuesday",
+   "Thursday",
    "Friday"
   ],
   "answer": 3,
@@ -216,12 +216,12 @@
   "passage": "Zoe could not find her left shoe. She looked under her bed. She looked in the closet. It was not there. Then she heard a sound in the kitchen. Her puppy, Bear, was in his bed. He was chewing on something. It was her shoe! Zoe laughed and put her shoe on.",
   "stem": "Where did Zoe look first?",
   "choices": [
-   "In the closet",
    "In the kitchen",
    "Under her bed",
-   "In the yard"
+   "In the yard",
+   "In the closet"
   ],
-  "answer": 2,
+  "answer": 1,
   "explanation": "The story says, \"She looked under her bed,\" before she looked in the closet."
  },
  {
@@ -231,12 +231,12 @@
   "passage": "Zoe could not find her left shoe. She looked under her bed. She looked in the closet. It was not there. Then she heard a sound in the kitchen. Her puppy, Bear, was in his bed. He was chewing on something. It was her shoe! Zoe laughed and put her shoe on.",
   "stem": "Who had Zoe's shoe?",
   "choices": [
-   "Her puppy, Bear",
-   "Her mom",
    "Her brother",
-   "Her cat"
+   "Her cat",
+   "Her puppy, Bear",
+   "Her mom"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Bear, Zoe's puppy, was chewing on her shoe."
  },
  {
@@ -247,11 +247,11 @@
   "stem": "What should the students do first?",
   "choices": [
    "Line up at the door",
-   "Get their lunch boxes",
+   "Wash their hands",
    "Sit at the tables",
-   "Wash their hands"
+   "Get their lunch boxes"
   ],
-  "answer": 3,
+  "answer": 1,
   "explanation": "The teacher says, \"First, wash your hands at the sink.\""
  },
  {
@@ -262,11 +262,11 @@
   "stem": "Where will the students sit today?",
   "choices": [
    "At the yellow tables",
-   "On the floor",
    "At the green tables",
+   "On the floor",
    "Outside"
   ],
-  "answer": 2,
+  "answer": 1,
   "explanation": "The teacher says to sit at the green tables today, not the yellow tables."
  },
  {
@@ -276,12 +276,12 @@
   "passage": "Leo: Emma, can I use your eraser? I made a mistake.\nEmma: Sure, Leo. It is in my pencil case. The pencil case is blue.\nLeo: I see it. Thank you!\nEmma: You're welcome.",
   "stem": "What does Leo want to use?",
   "choices": [
-   "An eraser",
-   "A ruler",
+   "A crayon",
    "A pencil",
-   "A crayon"
+   "A ruler",
+   "An eraser"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Leo asks, \"Can I use your eraser?\""
  },
  {
@@ -291,12 +291,12 @@
   "passage": "Leo: Emma, can I use your eraser? I made a mistake.\nEmma: Sure, Leo. It is in my pencil case. The pencil case is blue.\nLeo: I see it. Thank you!\nEmma: You're welcome.",
   "stem": "What color is Emma's pencil case?",
   "choices": [
-   "Red",
-   "Green",
+   "Yellow",
    "Blue",
-   "Yellow"
+   "Green",
+   "Red"
   ],
-  "answer": 2,
+  "answer": 1,
   "explanation": "Emma says, \"The pencil case is blue.\""
  },
  {
@@ -306,12 +306,12 @@
   "passage": "Hello, students. Tomorrow is Picture Day. Please wear a nice shirt and comb your hair. We will take the pictures in the gym after lunch. Don't forget to smile!",
   "stem": "What will happen tomorrow?",
   "choices": [
-   "Students will have their pictures taken.",
    "Students will draw pictures.",
+   "Students will have their pictures taken.",
    "Students will go on a trip.",
    "Students will play games in the gym."
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "The speaker says, \"Tomorrow is Picture Day.\""
  },
  {
@@ -321,12 +321,12 @@
   "passage": "Hello, students. Tomorrow is Picture Day. Please wear a nice shirt and comb your hair. We will take the pictures in the gym after lunch. Don't forget to smile!",
   "stem": "When will the pictures be taken?",
   "choices": [
-   "Before school",
+   "After lunch",
    "In the morning",
    "After school",
-   "After lunch"
+   "Before school"
   ],
-  "answer": 3,
+  "answer": 0,
   "explanation": "The speaker says the pictures will be taken in the gym after lunch."
  },
  {
@@ -336,12 +336,12 @@
   "passage": "Girl: What are you reading?\nBoy: It's a book about sharks. Did you know some sharks have more than one row of teeth?\nGirl: Wow, that's cool. Can I read it when you finish?\nBoy: Sure. I will give it to you on Friday.",
   "stem": "What is the boy's book about?",
   "choices": [
-   "Teeth",
-   "Whales",
    "Sharks",
+   "Whales",
+   "Teeth",
    "Dinosaurs"
   ],
-  "answer": 2,
+  "answer": 0,
   "explanation": "The boy says, \"It's a book about sharks.\""
  },
  {
@@ -352,11 +352,11 @@
   "stem": "What will the boy do on Friday?",
   "choices": [
    "Return the book to the library",
+   "Give the book to the girl",
    "Go to the aquarium",
-   "Buy a new book",
-   "Give the book to the girl"
+   "Buy a new book"
   ],
-  "answer": 3,
+  "answer": 1,
   "explanation": "The boy says, \"I will give it to you on Friday.\""
  },
  {
@@ -366,12 +366,12 @@
   "passage": "Teacher: Today we are going to measure how tall we are. Work with a partner. One person stands with their back against the wall. The other person puts a sticky note on the wall at the top of their partner's head. Then use the tape measure to find the height. Write the number on your sheet.",
   "stem": "What are the students going to measure?",
   "choices": [
-   "How tall they are",
    "How far they can jump",
    "How long the wall is",
+   "How tall they are",
    "How big their feet are"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "The teacher says, \"Today we are going to measure how tall we are.\""
  },
  {
@@ -382,9 +382,9 @@
   "stem": "Where does the sticky note go?",
   "choices": [
    "On the floor by the partner's feet",
-   "On the partner's sheet",
+   "On the tape measure",
    "On the wall at the top of the partner's head",
-   "On the tape measure"
+   "On the partner's sheet"
   ],
   "answer": 2,
   "explanation": "The teacher says to put the sticky note on the wall at the top of the partner's head."
@@ -396,12 +396,12 @@
   "passage": "Announcer: Attention, please. Bus number four is late this afternoon. It will arrive at three forty-five. If you ride bus number four, please wait in the library, not outside. All other buses are on time. Walkers may leave now.",
   "stem": "What is the announcement mainly about?",
   "choices": [
-   "A new bus driver",
    "A field trip on a bus",
    "A change in the library hours",
-   "A bus that is late"
+   "A bus that is late",
+   "A new bus driver"
   ],
-  "answer": 3,
+  "answer": 2,
   "explanation": "The announcement says that bus number four is late this afternoon."
  },
  {
@@ -411,12 +411,12 @@
   "passage": "Announcer: Attention, please. Bus number four is late this afternoon. It will arrive at three forty-five. If you ride bus number four, please wait in the library, not outside. All other buses are on time. Walkers may leave now.",
   "stem": "Where should the students on bus number four wait?",
   "choices": [
-   "In the gym",
    "In the library",
-   "Outside by the door",
-   "In their classrooms"
+   "In their classrooms",
+   "In the gym",
+   "Outside by the door"
   ],
-  "answer": 1,
+  "answer": 0,
   "explanation": "The speaker says, \"please wait in the library, not outside.\""
  },
  {
@@ -426,12 +426,12 @@
   "passage": "Sofia: Noah, what are you doing this weekend?\nNoah: I'm going to visit my aunt. She lives on a farm.\nSofia: Fun! What will you do there?\nNoah: I will help her feed the goats. And we will pick strawberries.\nSofia: Can you bring me some strawberries?\nNoah: Sure!",
   "stem": "Who will Noah visit this weekend?",
   "choices": [
-   "His teacher",
    "His aunt",
    "His cousin",
-   "His grandma"
+   "His grandma",
+   "His teacher"
   ],
-  "answer": 1,
+  "answer": 0,
   "explanation": "Noah says, \"I'm going to visit my aunt.\""
  },
  {
@@ -456,12 +456,12 @@
   "passage": "Teacher: Class, we are going to practice a fire drill. When you hear the bell, stop what you are doing. Leave your things on your desk. Walk quietly to the door and follow me outside to the big tree. Do not run. When we get to the tree, I will count everyone.",
   "stem": "What should the students do with their things?",
   "choices": [
+   "Put them in their backpacks",
    "Leave them on their desks",
    "Carry them outside",
-   "Put them in their backpacks",
    "Give them to the teacher"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "The teacher says, \"Leave your things on your desk.\""
  },
  {
@@ -471,12 +471,12 @@
   "passage": "Teacher: Class, we are going to practice a fire drill. When you hear the bell, stop what you are doing. Leave your things on your desk. Walk quietly to the door and follow me outside to the big tree. Do not run. When we get to the tree, I will count everyone.",
   "stem": "Why will the teacher count the students at the tree?",
   "choices": [
+   "To give out prizes",
    "To make sure everyone is there",
    "To pick teams for a game",
-   "To see who walked fastest",
-   "To give out prizes"
+   "To see who walked fastest"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "A teacher counts students after a fire drill to check that everyone got out; she says she will count everyone at the tree."
  },
  {
@@ -486,10 +486,10 @@
   "passage": "Maria: Mr. Diaz, I was sick yesterday. Did I miss any homework?\nMr. Diaz: Yes, Maria. We started a new math worksheet. Here is a copy. Please do the first side only.\nMaria: When is it due?\nMr. Diaz: Usually it would be due tomorrow, but you can bring it on Thursday.\nMaria: Thank you!",
   "stem": "Why is Maria talking to Mr. Diaz?",
   "choices": [
-   "She needs help with a hard problem.",
-   "She wants to know what she missed while she was sick.",
    "She lost her math worksheet.",
-   "She wants to change her seat."
+   "She wants to know what she missed while she was sick.",
+   "She wants to change her seat.",
+   "She needs help with a hard problem."
   ],
   "answer": 1,
   "explanation": "Maria says she was sick yesterday and asks if she missed any homework."
@@ -501,43 +501,43 @@
   "passage": "Maria: Mr. Diaz, I was sick yesterday. Did I miss any homework?\nMr. Diaz: Yes, Maria. We started a new math worksheet. Here is a copy. Please do the first side only.\nMaria: When is it due?\nMr. Diaz: Usually it would be due tomorrow, but you can bring it on Thursday.\nMaria: Thank you!",
   "stem": "What does Mr. Diaz tell Maria?",
   "choices": [
-   "She must finish both sides of the worksheet.",
-   "She does not need to do the worksheet.",
    "She must turn in the worksheet tomorrow.",
-   "She can turn in the worksheet on Thursday."
+   "She can turn in the worksheet on Thursday.",
+   "She must finish both sides of the worksheet.",
+   "She does not need to do the worksheet."
   ],
-  "answer": 3,
+  "answer": 1,
   "explanation": "Mr. Diaz gives Maria extra time and says she can bring it on Thursday, and she only has to do the first side."
  },
  {
   "exam_type": "TOEFLJ",
   "section": "listening",
   "difficulty": 3,
-  "passage": "Principal: Good morning, everyone. Our lost-and-found table by the front office is very full. There are jackets, water bottles, and even one shoe! Please check the table this week. On Friday afternoon, we will give everything that is left to a clothing drive. So if something is yours, take it home before Friday.",
+  "passage": "Principal: Good morning, everyone. Our lost-and-found table by the front office is very full. There are jackets, water bottles, and even one shoe! Please check the table this week. On Friday afternoon, we will give everything that is left to a donation box. So if something is yours, take it home before Friday.",
   "stem": "What is the problem the principal talks about?",
   "choices": [
-   "Many lost things have not been picked up.",
-   "The school needs more water bottles.",
    "The front office is closed this week.",
-   "Students are leaving the school too early."
+   "The school needs more water bottles.",
+   "Students are leaving the school too early.",
+   "Many lost things have not been picked up."
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "The principal says the lost-and-found table is very full and asks students to check it."
  },
  {
   "exam_type": "TOEFLJ",
   "section": "listening",
   "difficulty": 3,
-  "passage": "Principal: Good morning, everyone. Our lost-and-found table by the front office is very full. There are jackets, water bottles, and even one shoe! Please check the table this week. On Friday afternoon, we will give everything that is left to a clothing drive. So if something is yours, take it home before Friday.",
+  "passage": "Principal: Good morning, everyone. Our lost-and-found table by the front office is very full. There are jackets, water bottles, and even one shoe! Please check the table this week. On Friday afternoon, we will give everything that is left to a donation box. So if something is yours, take it home before Friday.",
   "stem": "What will happen on Friday afternoon?",
   "choices": [
    "The office will call students' parents.",
    "Things left on the table will be given away.",
-   "The table will be moved to the gym.",
-   "Students will get new jackets."
+   "Students will get new jackets.",
+   "The table will be moved to the gym."
   ],
   "answer": 1,
-  "explanation": "The principal says that on Friday afternoon everything left will go to a clothing drive."
+  "explanation": "The principal says that on Friday afternoon everything left will go to a donation box."
  },
  {
   "exam_type": "TOEFLJ",
@@ -548,10 +548,10 @@
   "choices": [
    "He took Peanut home last week.",
    "His mom said no.",
-   "His family is going camping.",
-   "He is afraid of hamsters."
+   "He is afraid of hamsters.",
+   "His family is going camping."
   ],
-  "answer": 2,
+  "answer": 3,
   "explanation": "Jake says his family is going camping and won't be home."
  },
  {
@@ -563,8 +563,8 @@
   "choices": [
    "Buy some carrots",
    "Ask her mom",
-   "Clean the cage",
-   "Talk to the teacher"
+   "Talk to the teacher",
+   "Clean the cage"
   ],
   "answer": 1,
   "explanation": "Lily says, \"I just have to ask my mom first.\""
@@ -576,12 +576,12 @@
   "passage": "Teacher: During a storm, have you noticed that you see the lightning before you hear the thunder? Lightning and thunder actually happen at the same time. But light travels much faster than sound. So the flash of light reaches your eyes first, and the sound of thunder reaches your ears a few seconds later. The longer you wait for the thunder, the farther away the storm is.",
   "stem": "Why do we see lightning before we hear thunder?",
   "choices": [
-   "Sound travels faster than light.",
-   "Light travels faster than sound.",
    "Our eyes work faster than our ears.",
-   "Thunder happens after lightning."
+   "Thunder happens after lightning.",
+   "Sound travels faster than light.",
+   "Light travels faster than sound."
   ],
-  "answer": 1,
+  "answer": 3,
   "explanation": "The teacher explains that light travels much faster than sound, so the flash reaches us first."
  },
  {
@@ -591,9 +591,9 @@
   "passage": "Teacher: During a storm, have you noticed that you see the lightning before you hear the thunder? Lightning and thunder actually happen at the same time. But light travels much faster than sound. So the flash of light reaches your eyes first, and the sound of thunder reaches your ears a few seconds later. The longer you wait for the thunder, the farther away the storm is.",
   "stem": "What does a long wait for the thunder tell you?",
   "choices": [
-   "The storm is very close.",
    "The storm is getting stronger.",
    "There will be no more lightning.",
+   "The storm is very close.",
    "The storm is far away."
   ],
   "answer": 3,
