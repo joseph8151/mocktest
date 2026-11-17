@@ -1,0 +1,1402 @@
+[
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Bird is to fly as fish is to ___",
+  "choices": [
+   "swim",
+   "water",
+   "fin",
+   "eat"
+  ],
+  "answer": 0,
+  "explanation": "A bird moves by flying; a fish moves by swimming."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Cow is to calf as horse is to ___",
+  "choices": [
+   "barn",
+   "foal",
+   "hay",
+   "tail"
+  ],
+  "answer": 1,
+  "explanation": "A calf is a baby cow; a foal is a baby horse."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Day is to night as summer is to ___",
+  "choices": [
+   "sun",
+   "hot",
+   "winter",
+   "spring"
+  ],
+  "answer": 2,
+  "explanation": "Day and night are opposites, as are summer and winter."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Cup is to drink as bed is to ___",
+  "choices": [
+   "pillow",
+   "room",
+   "blanket",
+   "sleep"
+  ],
+  "answer": 3,
+  "explanation": "You use a cup to drink and a bed to sleep."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Which word belongs with dog, cat, and rabbit?",
+  "choices": [
+   "hamster",
+   "carrot",
+   "ball",
+   "bowl"
+  ],
+  "answer": 0,
+  "explanation": "All of these are animals people keep as pets."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Which word does NOT belong: car, bus, train, apple?",
+  "choices": [
+   "car",
+   "apple",
+   "bus",
+   "train"
+  ],
+  "answer": 1,
+  "explanation": "A car, a bus, and a train carry people; an apple is a food."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Which word belongs with circle, square, and triangle?",
+  "choices": [
+   "pencil",
+   "paper",
+   "rectangle",
+   "number"
+  ],
+  "answer": 2,
+  "explanation": "All of these are shapes."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Which word does NOT belong: shirt, pants, sock, spoon?",
+  "choices": [
+   "shirt",
+   "pants",
+   "sock",
+   "spoon"
+  ],
+  "answer": 3,
+  "explanation": "A shirt, pants, and a sock are clothes; a spoon is not."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "The baby began to ___ because she was hungry.",
+  "choices": [
+   "cry",
+   "sing",
+   "jump",
+   "read"
+  ],
+  "answer": 0,
+  "explanation": "Hungry babies cry."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "I carry an umbrella when it is ___.",
+  "choices": [
+   "sunny",
+   "raining",
+   "dark",
+   "quiet"
+  ],
+  "answer": 1,
+  "explanation": "An umbrella keeps you dry in the rain."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "The ice cream ___ in the hot sun.",
+  "choices": [
+   "froze",
+   "grew",
+   "melted",
+   "sang"
+  ],
+  "answer": 2,
+  "explanation": "Heat makes ice cream melt."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "We can borrow books from the ___.",
+  "choices": [
+   "bakery",
+   "garage",
+   "pool",
+   "library"
+  ],
+  "answer": 3,
+  "explanation": "A library lends books."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Author is to book as composer is to ___",
+  "choices": [
+   "piano",
+   "symphony",
+   "orchestra",
+   "singer"
+  ],
+  "answer": 1,
+  "explanation": "An author writes a book; a composer writes a symphony."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Petal is to flower as page is to ___",
+  "choices": [
+   "word",
+   "write",
+   "book",
+   "letter"
+  ],
+  "answer": 2,
+  "explanation": "A petal is part of a flower; a page is part of a book."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Hungry is to eat as tired is to ___",
+  "choices": [
+   "run",
+   "cook",
+   "awake",
+   "rest"
+  ],
+  "answer": 3,
+  "explanation": "When you are hungry you eat; when you are tired you rest."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Kitchen is to cook as gym is to ___",
+  "choices": [
+   "exercise",
+   "paint",
+   "read",
+   "sleep"
+  ],
+  "answer": 0,
+  "explanation": "People cook in a kitchen and exercise in a gym."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Which word belongs with lettuce, carrot, and celery?",
+  "choices": [
+   "cherry",
+   "spinach",
+   "bread",
+   "cheese"
+  ],
+  "answer": 1,
+  "explanation": "All of these are vegetables."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Which word does NOT belong: eagle, owl, robin, bat?",
+  "choices": [
+   "eagle",
+   "owl",
+   "bat",
+   "robin"
+  ],
+  "answer": 2,
+  "explanation": "An eagle, an owl, and a robin are birds; a bat is a mammal."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Which word belongs with inch, foot, and yard?",
+  "choices": [
+   "pound",
+   "hour",
+   "gallon",
+   "mile"
+  ],
+  "answer": 3,
+  "explanation": "All of these are units for measuring length."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Which word does NOT belong: January, March, Monday, October?",
+  "choices": [
+   "Monday",
+   "January",
+   "March",
+   "October"
+  ],
+  "answer": 0,
+  "explanation": "The others are months; Monday is a day of the week."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "The library was so ___ that we could hear a pin drop.",
+  "choices": [
+   "crowded",
+   "quiet",
+   "bright",
+   "large"
+  ],
+  "answer": 1,
+  "explanation": "Hearing a pin drop means it was very quiet."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "After the long hike, Maya was too ___ to walk any farther.",
+  "choices": [
+   "eager",
+   "cheerful",
+   "exhausted",
+   "early"
+  ],
+  "answer": 2,
+  "explanation": "Being exhausted would stop someone from walking farther."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "The ___ puppy chewed and chased every toy in the house.",
+  "choices": [
+   "sleepy",
+   "frozen",
+   "silent",
+   "playful"
+  ],
+  "answer": 3,
+  "explanation": "Chewing and chasing toys shows the puppy was playful."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Leo was ___ to share his snack, so he gave half to his friend.",
+  "choices": [
+   "willing",
+   "unable",
+   "afraid",
+   "forbidden"
+  ],
+  "answer": 0,
+  "explanation": "Giving half away shows he was willing to share."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Carpenter is to saw as surgeon is to ___",
+  "choices": [
+   "hospital",
+   "patient",
+   "scalpel",
+   "nurse"
+  ],
+  "answer": 2,
+  "explanation": "A carpenter cuts with a saw; a surgeon cuts with a scalpel."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Cub is to bear as tadpole is to ___",
+  "choices": [
+   "pond",
+   "fish",
+   "egg",
+   "frog"
+  ],
+  "answer": 3,
+  "explanation": "A cub grows into a bear; a tadpole grows into a frog."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Timid is to bold as generous is to ___",
+  "choices": [
+   "selfish",
+   "kind",
+   "wealthy",
+   "giving"
+  ],
+  "answer": 0,
+  "explanation": "Timid and bold are opposites; generous and selfish are opposites."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Library is to books as museum is to ___",
+  "choices": [
+   "tickets",
+   "artifacts",
+   "guards",
+   "buildings"
+  ],
+  "answer": 1,
+  "explanation": "A library holds a collection of books; a museum holds a collection of artifacts."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Which word belongs with copper, iron, and silver?",
+  "choices": [
+   "wood",
+   "glass",
+   "aluminum",
+   "plastic"
+  ],
+  "answer": 2,
+  "explanation": "All of these are metals."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Which word does NOT belong: triangle, cube, square, pentagon?",
+  "choices": [
+   "triangle",
+   "square",
+   "pentagon",
+   "cube"
+  ],
+  "answer": 3,
+  "explanation": "The others are flat shapes; a cube is a solid figure."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Which word belongs with thrilled, joyful, and delighted?",
+  "choices": [
+   "elated",
+   "anxious",
+   "weary",
+   "sullen"
+  ],
+  "answer": 0,
+  "explanation": "All of these words describe great happiness."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Which word does NOT belong: lake, pond, river, valley?",
+  "choices": [
+   "lake",
+   "valley",
+   "pond",
+   "river"
+  ],
+  "answer": 1,
+  "explanation": "A lake, a pond, and a river are bodies of water; a valley is low land."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "The detective found a ___ that helped her solve the mystery.",
+  "choices": [
+   "crime",
+   "question",
+   "clue",
+   "delay"
+  ],
+  "answer": 2,
+  "explanation": "A clue is a piece of information that helps solve a mystery."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "The hikers moved ___ across the icy bridge, testing each step.",
+  "choices": [
+   "carelessly",
+   "noisily",
+   "quickly",
+   "cautiously"
+  ],
+  "answer": 3,
+  "explanation": "Testing each step shows they moved cautiously."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Because the instructions were so ___, everyone finished the project easily.",
+  "choices": [
+   "clear",
+   "confusing",
+   "lengthy",
+   "strange"
+  ],
+  "answer": 0,
+  "explanation": "Clear instructions make a project easy to finish."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Many houses were ___ by the flood, so families stayed in the school gym.",
+  "choices": [
+   "built",
+   "damaged",
+   "painted",
+   "sold"
+  ],
+  "answer": 1,
+  "explanation": "Families had to leave because the flood had damaged their houses."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Biography is to life as forecast is to ___",
+  "choices": [
+   "history",
+   "newspaper",
+   "author",
+   "weather"
+  ],
+  "answer": 3,
+  "explanation": "A biography describes a life; a forecast describes the coming weather."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Prologue is to epilogue as dawn is to ___",
+  "choices": [
+   "dusk",
+   "sunrise",
+   "light",
+   "noon"
+  ],
+  "answer": 0,
+  "explanation": "A prologue begins a story and an epilogue ends it; dawn begins the day and dusk ends it."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Meticulous is to careless as candid is to ___",
+  "choices": [
+   "frank",
+   "evasive",
+   "honest",
+   "cheerful"
+  ],
+  "answer": 1,
+  "explanation": "Meticulous is the opposite of careless; candid (open and direct) is the opposite of evasive."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Pedal is to bicycle as oar is to ___",
+  "choices": [
+   "water",
+   "sail",
+   "rowboat",
+   "paddle"
+  ],
+  "answer": 2,
+  "explanation": "You push pedals to move a bicycle and pull oars to move a rowboat."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Which word belongs with ponder, contemplate, and reflect?",
+  "choices": [
+   "ignore",
+   "shout",
+   "wander",
+   "consider"
+  ],
+  "answer": 3,
+  "explanation": "All of these mean to think carefully about something."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Which word does NOT belong: drizzle, sleet, hail, breeze?",
+  "choices": [
+   "breeze",
+   "drizzle",
+   "sleet",
+   "hail"
+  ],
+  "answer": 0,
+  "explanation": "Drizzle, sleet, and hail are forms of precipitation; a breeze is a light wind."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Which word belongs with sparse, meager, and scant?",
+  "choices": [
+   "abundant",
+   "scarce",
+   "plentiful",
+   "ample"
+  ],
+  "answer": 1,
+  "explanation": "All of these describe a small or barely enough amount."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Which word does NOT belong: novice, beginner, amateur, expert?",
+  "choices": [
+   "novice",
+   "beginner",
+   "expert",
+   "amateur"
+  ],
+  "answer": 2,
+  "explanation": "The others describe someone without much skill or experience; an expert is highly skilled."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "The new evidence ___ the theory, so scientists had to rethink it.",
+  "choices": [
+   "supported",
+   "proved",
+   "repeated",
+   "contradicted"
+  ],
+  "answer": 3,
+  "explanation": "Scientists rethink a theory when evidence goes against it."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Although the task seemed ___ at first, it turned out to be quite simple.",
+  "choices": [
+   "daunting",
+   "easy",
+   "brief",
+   "pleasant"
+  ],
+  "answer": 0,
+  "explanation": "\"Although\" signals a contrast with \"simple,\" so the task first seemed daunting."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "The coach praised the team's ___ effort, saying they never gave up.",
+  "choices": [
+   "halfhearted",
+   "persistent",
+   "lazy",
+   "accidental"
+  ],
+  "answer": 1,
+  "explanation": "Never giving up is persistent effort."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "The museum's ___ collection included fossils, paintings, and ancient coins.",
+  "choices": [
+   "narrow",
+   "tiny",
+   "diverse",
+   "uniform"
+  ],
+  "answer": 2,
+  "explanation": "A collection with many different kinds of objects is diverse."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Benevolent is to malicious as transparent is to ___",
+  "choices": [
+   "opaque",
+   "clear",
+   "glass",
+   "honest"
+  ],
+  "answer": 0,
+  "explanation": "Benevolent and malicious are opposites; transparent and opaque are opposites."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Cartographer is to map as lexicographer is to ___",
+  "choices": [
+   "language",
+   "dictionary",
+   "word",
+   "library"
+  ],
+  "answer": 1,
+  "explanation": "A cartographer makes maps; a lexicographer makes dictionaries."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Ephemeral is to permanent as novice is to ___",
+  "choices": [
+   "beginner",
+   "student",
+   "veteran",
+   "amateur"
+  ],
+  "answer": 2,
+  "explanation": "Ephemeral is the opposite of permanent; a novice is the opposite of a veteran."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Mitigate is to worsen as ascend is to ___",
+  "choices": [
+   "climb",
+   "rise",
+   "soar",
+   "descend"
+  ],
+  "answer": 3,
+  "explanation": "Mitigate (make less severe) is the opposite of worsen; ascend is the opposite of descend."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Which word belongs with gregarious, sociable, and outgoing?",
+  "choices": [
+   "convivial",
+   "reclusive",
+   "aloof",
+   "taciturn"
+  ],
+  "answer": 0,
+  "explanation": "All of these describe someone friendly who enjoys company."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Which word does NOT belong: ambiguous, vague, equivocal, explicit?",
+  "choices": [
+   "ambiguous",
+   "explicit",
+   "vague",
+   "equivocal"
+  ],
+  "answer": 1,
+  "explanation": "The others describe unclear meaning; explicit means stated clearly."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Which word belongs with sonata, concerto, and symphony?",
+  "choices": [
+   "sculpture",
+   "sonnet",
+   "overture",
+   "mural"
+  ],
+  "answer": 2,
+  "explanation": "All of these are pieces of instrumental music."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Which word does NOT belong: mitigate, alleviate, assuage, aggravate?",
+  "choices": [
+   "mitigate",
+   "alleviate",
+   "assuage",
+   "aggravate"
+  ],
+  "answer": 3,
+  "explanation": "The others mean to make something less severe; aggravate means to make it worse."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "The professor's explanation was so ___ that even experts struggled to follow it.",
+  "choices": [
+   "convoluted",
+   "lucid",
+   "concise",
+   "entertaining"
+  ],
+  "answer": 0,
+  "explanation": "An explanation that is hard to follow is convoluted."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Far from being ___, the reviewer praised nearly every part of the film.",
+  "choices": [
+   "enthusiastic",
+   "disparaging",
+   "admiring",
+   "complimentary"
+  ],
+  "answer": 1,
+  "explanation": "\"Far from\" signals the opposite of praise, so the missing word means critical: disparaging."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "The witness's ___ account, full of contradictions, made the jury doubt her.",
+  "choices": [
+   "credible",
+   "coherent",
+   "inconsistent",
+   "detailed"
+  ],
+  "answer": 2,
+  "explanation": "An account full of contradictions is inconsistent."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Her ___ remarks, though brief, revealed a deep understanding of the subject.",
+  "choices": [
+   "trivial",
+   "rambling",
+   "vague",
+   "insightful"
+  ],
+  "answer": 3,
+  "explanation": "Remarks that reveal deep understanding are insightful."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 1,
+  "stem": "What number comes next?  2, 4, 6, 8, 10, ?",
+  "choices": [
+   "12",
+   "11",
+   "14",
+   "10"
+  ],
+  "answer": 0,
+  "explanation": "Add 2 each time."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 1,
+  "stem": "What number comes next?  20, 18, 16, 14, 12, ?",
+  "choices": [
+   "8",
+   "10",
+   "11",
+   "14"
+  ],
+  "answer": 1,
+  "explanation": "Subtract 2 each time."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 1,
+  "stem": "What number comes next?  5, 10, 15, 20, 25, ?",
+  "choices": [
+   "35",
+   "26",
+   "30",
+   "25"
+  ],
+  "answer": 2,
+  "explanation": "Add 5 each time."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 1,
+  "stem": "Number analogy:  3 → 5,   6 → 8,   9 → ?",
+  "choices": [
+   "12",
+   "10",
+   "18",
+   "11"
+  ],
+  "answer": 3,
+  "explanation": "Each number increases by 2: 3 + 2 = 5 and 6 + 2 = 8, so 9 + 2 = 11."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 1,
+  "stem": "Number analogy:  10 → 7,   8 → 5,   6 → ?",
+  "choices": [
+   "3",
+   "4",
+   "9",
+   "2"
+  ],
+  "answer": 0,
+  "explanation": "Each number decreases by 3: 10 − 3 = 7 and 8 − 3 = 5, so 6 − 3 = 3."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 1,
+  "stem": "Number analogy:  1 → 11,   4 → 14,   7 → ?",
+  "choices": [
+   "18",
+   "17",
+   "70",
+   "16"
+  ],
+  "answer": 1,
+  "explanation": "Each number increases by 10: 1 + 10 = 11 and 4 + 10 = 14, so 7 + 10 = 17."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 1,
+  "stem": "Use each number and sign exactly once to make a true equation:  4   5   7   +   −  Which answer can you make?",
+  "choices": [
+   "16",
+   "3",
+   "8",
+   "12"
+  ],
+  "answer": 2,
+  "explanation": "5 + 7 − 4 = 8. No way of using 4, 5, 7, + and − once each makes 16, 3, or 12."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 1,
+  "stem": "Use each number and sign exactly once to make a true equation:  9   3   1   −   +  Which answer can you make?",
+  "choices": [
+   "13",
+   "6",
+   "12",
+   "11"
+  ],
+  "answer": 3,
+  "explanation": "9 + 3 − 1 = 11. No arrangement of the numbers and signs makes 13, 6, or 12."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 2,
+  "stem": "What number comes next?  50, 45, 40, 35, 30, ?",
+  "choices": [
+   "20",
+   "25",
+   "24",
+   "35"
+  ],
+  "answer": 1,
+  "explanation": "Subtract 5 each time."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 2,
+  "stem": "What number comes next?  2, 4, 8, 16, 32, ?",
+  "choices": [
+   "34",
+   "48",
+   "64",
+   "62"
+  ],
+  "answer": 2,
+  "explanation": "Multiply by 2 each time."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 2,
+  "stem": "What number comes next?  64, 32, 16, 8, ?",
+  "choices": [
+   "0",
+   "6",
+   "2",
+   "4"
+  ],
+  "answer": 3,
+  "explanation": "Divide by 2 each time (each number is half of the one before)."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 2,
+  "stem": "Number analogy:  2 → 6,   5 → 15,   7 → ?",
+  "choices": [
+   "21",
+   "10",
+   "14",
+   "22"
+  ],
+  "answer": 0,
+  "explanation": "Each number is multiplied by 3: 2 × 3 = 6 and 5 × 3 = 15, so 7 × 3 = 21."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 2,
+  "stem": "Number analogy:  12 → 6,   20 → 10,   16 → ?",
+  "choices": [
+   "12",
+   "8",
+   "32",
+   "4"
+  ],
+  "answer": 1,
+  "explanation": "Each number is divided by 2: 12 ÷ 2 = 6 and 20 ÷ 2 = 10, so 16 ÷ 2 = 8."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 2,
+  "stem": "Number analogy:  15 → 9,   11 → 5,   20 → ?",
+  "choices": [
+   "26",
+   "15",
+   "14",
+   "16"
+  ],
+  "answer": 2,
+  "explanation": "Each number decreases by 6: 15 − 6 = 9 and 11 − 6 = 5, so 20 − 6 = 14."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 2,
+  "stem": "Use each number and sign exactly once to make a true equation:  10   4   3   −   −  Which answer can you make?",
+  "choices": [
+   "1",
+   "7",
+   "17",
+   "3"
+  ],
+  "answer": 3,
+  "explanation": "10 − 4 − 3 = 3. No arrangement of the numbers and signs makes 1, 7, or 17."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 2,
+  "stem": "Use each number and sign exactly once to make a true equation:  12   5   2   +   −  Which answer can you make?",
+  "choices": [
+   "15",
+   "19",
+   "10",
+   "13"
+  ],
+  "answer": 0,
+  "explanation": "12 + 5 − 2 = 15. No arrangement of the numbers and signs makes 19, 10, or 13."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 3,
+  "stem": "What number comes next?  10, 13, 11, 14, 12, ?",
+  "choices": [
+   "10",
+   "13",
+   "15",
+   "16"
+  ],
+  "answer": 2,
+  "explanation": "The steps alternate +3, −2, so the next step is +3: 12 + 3 = 15."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 3,
+  "stem": "What number comes next?  1, 2, 4, 7, 11, ?",
+  "choices": [
+   "15",
+   "14",
+   "22",
+   "16"
+  ],
+  "answer": 3,
+  "explanation": "The amount added grows by 1 each time (+1, +2, +3, +4), so add 5: 11 + 5 = 16."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 3,
+  "stem": "What number comes next?  3, 7, 15, 31, ?",
+  "choices": [
+   "63",
+   "47",
+   "62",
+   "35"
+  ],
+  "answer": 0,
+  "explanation": "Each number is doubled and then 1 is added: 31 × 2 + 1 = 63."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 3,
+  "stem": "Number analogy:  3 → 7,   5 → 11,   8 → ?",
+  "choices": [
+   "16",
+   "17",
+   "15",
+   "24"
+  ],
+  "answer": 1,
+  "explanation": "Each number is doubled and then 1 is added: 3 × 2 + 1 = 7 and 5 × 2 + 1 = 11, so 8 × 2 + 1 = 17."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 3,
+  "stem": "Number analogy:  2 → 14,   6 → 42,   5 → ?",
+  "choices": [
+   "30",
+   "40",
+   "35",
+   "12"
+  ],
+  "answer": 2,
+  "explanation": "Each number is multiplied by 7: 2 × 7 = 14 and 6 × 7 = 42, so 5 × 7 = 35."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 3,
+  "stem": "Number analogy:  18 → 6,   27 → 9,   12 → ?",
+  "choices": [
+   "3",
+   "6",
+   "36",
+   "4"
+  ],
+  "answer": 3,
+  "explanation": "Each number is divided by 3: 18 ÷ 3 = 6 and 27 ÷ 3 = 9, so 12 ÷ 3 = 4."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 3,
+  "stem": "Use each number and sign exactly once to make a true equation:  2   3   5   ×   +  (Do × and ÷ before + and −.)  Which answer can you make?",
+  "choices": [
+   "13",
+   "10",
+   "15",
+   "19"
+  ],
+  "answer": 0,
+  "explanation": "2 × 5 + 3 = 13. No arrangement of the numbers and signs makes 10, 15, or 19."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 3,
+  "stem": "Use each number and sign exactly once to make a true equation:  12   4   2   ÷   +  (Do × and ÷ before + and −.)  Which answer can you make?",
+  "choices": [
+   "7",
+   "5",
+   "4",
+   "9"
+  ],
+  "answer": 1,
+  "explanation": "12 ÷ 4 + 2 = 5. No arrangement of the numbers and signs makes 7, 4, or 9."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 4,
+  "stem": "What number comes next?  2, 3, 5, 8, 13, ?",
+  "choices": [
+   "18",
+   "26",
+   "19",
+   "21"
+  ],
+  "answer": 3,
+  "explanation": "Each number is the sum of the two before it: 8 + 13 = 21."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 4,
+  "stem": "What number comes next?  2, 20, 4, 18, 6, 16, ?",
+  "choices": [
+   "8",
+   "14",
+   "10",
+   "7"
+  ],
+  "answer": 0,
+  "explanation": "Two patterns take turns: 2, 4, 6 (add 2) and 20, 18, 16 (subtract 2). The next number continues the first pattern: 6 + 2 = 8."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 4,
+  "stem": "What number comes next?  100, 81, 64, 49, ?",
+  "choices": [
+   "35",
+   "36",
+   "38",
+   "32"
+  ],
+  "answer": 1,
+  "explanation": "These are square numbers counting down: 10×10, 9×9, 8×8, 7×7, so next is 6×6 = 36."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 4,
+  "stem": "Number analogy:  4 → 11,   6 → 17,   9 → ?",
+  "choices": [
+   "27",
+   "24",
+   "26",
+   "23"
+  ],
+  "answer": 2,
+  "explanation": "Each number is multiplied by 3 and then 1 is subtracted: 4 × 3 − 1 = 11 and 6 × 3 − 1 = 17, so 9 × 3 − 1 = 26."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 4,
+  "stem": "Number analogy:  24 → 10,   16 → 6,   30 → ?",
+  "choices": [
+   "15",
+   "16",
+   "14",
+   "13"
+  ],
+  "answer": 3,
+  "explanation": "Each number is halved and then 2 is subtracted: 24 ÷ 2 − 2 = 10 and 16 ÷ 2 − 2 = 6, so 30 ÷ 2 − 2 = 13."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 4,
+  "stem": "Number analogy:  2 → 4,   5 → 25,   3 → 9,   7 → ?",
+  "choices": [
+   "49",
+   "14",
+   "21",
+   "42"
+  ],
+  "answer": 0,
+  "explanation": "Each number is multiplied by itself: 2 × 2 = 4, 5 × 5 = 25, 3 × 3 = 9, so 7 × 7 = 49."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 4,
+  "stem": "Use each number and sign exactly once to make a true equation:  4   6   3   ×   −  (Do × and ÷ before + and −.)  Which answer can you make?",
+  "choices": [
+   "18",
+   "21",
+   "9",
+   "15"
+  ],
+  "answer": 1,
+  "explanation": "4 × 6 − 3 = 21. No arrangement of the numbers and signs makes 18, 9, or 15."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 4,
+  "stem": "Use each number and sign exactly once to make a true equation:  8   3   5   ×   −  (Do × and ÷ before + and −.)  Which answer can you make?",
+  "choices": [
+   "11",
+   "29",
+   "19",
+   "21"
+  ],
+  "answer": 2,
+  "explanation": "8 × 3 − 5 = 19. No arrangement of the numbers and signs makes 11, 29, or 21."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 5,
+  "stem": "What number comes next?  1, 8, 27, 64, ?",
+  "choices": [
+   "125",
+   "100",
+   "101",
+   "128"
+  ],
+  "answer": 0,
+  "explanation": "These are cube numbers: 1×1×1, 2×2×2, 3×3×3, 4×4×4, so next is 5×5×5 = 125."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 5,
+  "stem": "What number comes next?  2, 6, 12, 20, 30, ?",
+  "choices": [
+   "40",
+   "42",
+   "44",
+   "36"
+  ],
+  "answer": 1,
+  "explanation": "The amount added grows by 2 each time (+4, +6, +8, +10), so add 12: 30 + 12 = 42."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 5,
+  "stem": "What number comes next?  1, 2, 6, 24, 120, ?",
+  "choices": [
+   "240",
+   "600",
+   "720",
+   "144"
+  ],
+  "answer": 2,
+  "explanation": "Multiply by 2, then 3, then 4, then 5; next multiply by 6: 120 × 6 = 720."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 5,
+  "stem": "Number analogy:  2 → 5,   4 → 17,   5 → 26,   7 → ?",
+  "choices": [
+   "35",
+   "49",
+   "36",
+   "50"
+  ],
+  "answer": 3,
+  "explanation": "Each number is multiplied by itself and then 1 is added: 2 × 2 + 1 = 5, 4 × 4 + 1 = 17, 5 × 5 + 1 = 26, so 7 × 7 + 1 = 50."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 5,
+  "stem": "Number analogy:  1 → 2,   3 → 8,   4 → 16,   6 → ?",
+  "choices": [
+   "64",
+   "36",
+   "32",
+   "12"
+  ],
+  "answer": 0,
+  "explanation": "Multiply 2 by itself as many times as the first number: 2 × 2 × 2 = 8 and 2 × 2 × 2 × 2 = 16, so six 2s multiplied together make 64."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 5,
+  "stem": "Number analogy:  3 → 7,   6 → 19,   8 → ?",
+  "choices": [
+   "25",
+   "27",
+   "21",
+   "32"
+  ],
+  "answer": 1,
+  "explanation": "Each number is multiplied by 4 and then 5 is subtracted: 3 × 4 − 5 = 7 and 6 × 4 − 5 = 19, so 8 × 4 − 5 = 27."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 5,
+  "stem": "Use each number and sign exactly once to make a true equation:  24   3   2   5   ÷   +   ×  (Do × and ÷ before + and −.)  Which answer can you make?",
+  "choices": [
+   "34",
+   "45",
+   "41",
+   "30"
+  ],
+  "answer": 2,
+  "explanation": "24 ÷ 2 × 3 + 5 = 41 (24 ÷ 2 = 12, 12 × 3 = 36, 36 + 5 = 41). No arrangement of the numbers and signs makes 34, 45, or 30."
+ },
+ {
+  "exam_type": "COGAT",
+  "section": "quantitative",
+  "difficulty": 5,
+  "stem": "Use each number and sign exactly once to make a true equation:  20   4   3   6   ÷   ×   +  (Do × and ÷ before + and −.)  Which answer can you make?",
+  "choices": [
+   "30",
+   "26",
+   "40",
+   "33"
+  ],
+  "answer": 3,
+  "explanation": "20 ÷ 4 × 6 + 3 = 33. No arrangement of the numbers and signs makes 30, 26, or 40."
+ }
+]

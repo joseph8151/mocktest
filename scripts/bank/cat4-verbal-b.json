@@ -5,12 +5,12 @@
   "difficulty": 1,
   "stem": "Cub is to bear as calf is to ___",
   "choices": [
+   "field",
    "milk",
-   "cow",
    "lamb",
-   "field"
+   "cow"
   ],
-  "answer": 1,
+  "answer": 3,
   "explanation": "A cub is a baby bear, and a calf is a baby cow."
  },
  {
@@ -20,11 +20,11 @@
   "stem": "Snake is to slither as kangaroo is to ___",
   "choices": [
    "pouch",
-   "tail",
    "jump",
-   "grass"
+   "grass",
+   "tail"
   ],
-  "answer": 2,
+  "answer": 1,
   "explanation": "A snake moves by slithering, and a kangaroo moves by jumping."
  },
  {
@@ -33,9 +33,9 @@
   "difficulty": 1,
   "stem": "Wet is to dry as full is to ___",
   "choices": [
+   "spill",
    "cup",
    "heavy",
-   "spill",
    "empty"
   ],
   "answer": 3,
@@ -48,9 +48,9 @@
   "stem": "Bread is to baker as house is to ___",
   "choices": [
    "builder",
+   "home",
    "brick",
-   "roof",
-   "home"
+   "roof"
   ],
   "answer": 0,
   "explanation": "A baker makes bread, and a builder makes a house."
@@ -61,12 +61,12 @@
   "difficulty": 1,
   "stem": "Pillow is to bed as cushion is to ___",
   "choices": [
-   "soft",
    "sofa",
    "feather",
-   "sleep"
+   "sleep",
+   "soft"
   ],
-  "answer": 1,
+  "answer": 0,
   "explanation": "A pillow is placed on a bed, and a cushion is placed on a sofa."
  },
  {
@@ -76,11 +76,11 @@
   "stem": "Which word belongs with the group: purple, orange, brown?",
   "choices": [
    "paint",
-   "bright",
    "green",
-   "crayon"
+   "crayon",
+   "bright"
   ],
-  "answer": 2,
+  "answer": 1,
   "explanation": "Purple, orange and brown are colors, and green is also a color."
  },
  {
@@ -91,10 +91,10 @@
   "choices": [
    "zoo",
    "stripe",
-   "cage",
-   "cheetah"
+   "cheetah",
+   "cage"
   ],
-  "answer": 3,
+  "answer": 2,
   "explanation": "Lions, tigers and leopards are wild cats, and so is a cheetah."
  },
  {
@@ -103,12 +103,12 @@
   "difficulty": 1,
   "stem": "Which word belongs with the group: shirt, skirt, jacket?",
   "choices": [
+   "needle",
    "sweater",
-   "button",
    "closet",
-   "needle"
+   "button"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "A shirt, skirt and jacket are clothes you wear, and so is a sweater."
  },
  {
@@ -117,12 +117,12 @@
   "difficulty": 1,
   "stem": "Which word belongs with the group: bus, train, truck?",
   "choices": [
+   "wheel",
    "driver",
-   "van",
    "station",
-   "wheel"
+   "van"
   ],
-  "answer": 1,
+  "answer": 3,
   "explanation": "Buses, trains and trucks are vehicles, and a van is also a vehicle."
  },
  {
@@ -131,12 +131,12 @@
   "difficulty": 1,
   "stem": "Which word is most similar to these words: shout, yell?",
   "choices": [
+   "scream",
    "listen",
    "sing",
-   "scream",
    "smile"
   ],
-  "answer": 2,
+  "answer": 0,
   "explanation": "To shout, yell and scream all mean to call out very loudly."
  },
  {
@@ -145,12 +145,12 @@
   "difficulty": 1,
   "stem": "Which word is most similar to these words: shiny, bright?",
   "choices": [
+   "sparkly",
    "dull",
    "dark",
-   "smooth",
-   "sparkly"
+   "smooth"
   ],
-  "answer": 3,
+  "answer": 0,
   "explanation": "Shiny, bright and sparkly all describe something that gives off light."
  },
  {
@@ -159,12 +159,12 @@
   "difficulty": 1,
   "stem": "Which word is most similar to these words: grin, beam?",
   "choices": [
-   "smile",
-   "frown",
+   "wave",
    "cry",
-   "wave"
+   "smile",
+   "frown"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "A grin, a beam and a smile are all happy looks on a face."
  },
  {
@@ -173,12 +173,12 @@
   "difficulty": 2,
   "stem": "Feather is to light as stone is to ___",
   "choices": [
-   "gray",
    "round",
-   "heavy",
-   "path"
+   "path",
+   "gray",
+   "heavy"
   ],
-  "answer": 2,
+  "answer": 3,
   "explanation": "A feather is light in weight, while a stone is heavy."
  },
  {
@@ -188,11 +188,11 @@
   "stem": "Doctor is to hospital as chef is to ___",
   "choices": [
    "recipe",
-   "waiter",
    "menu",
-   "restaurant"
+   "restaurant",
+   "waiter"
   ],
-  "answer": 3,
+  "answer": 2,
   "explanation": "A doctor works in a hospital, and a chef works in a restaurant."
  },
  {
@@ -201,12 +201,12 @@
   "difficulty": 2,
   "stem": "Seed is to plant as egg is to ___",
   "choices": [
-   "chick",
+   "breakfast",
    "shell",
-   "yolk",
-   "breakfast"
+   "chick",
+   "yolk"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "A seed grows into a plant, and an egg hatches into a chick."
  },
  {
@@ -215,12 +215,12 @@
   "difficulty": 2,
   "stem": "Hungry is to eat as thirsty is to ___",
   "choices": [
-   "cup",
-   "drink",
    "juice",
-   "dry"
+   "dry",
+   "cup",
+   "drink"
   ],
-  "answer": 1,
+  "answer": 3,
   "explanation": "When you are hungry you eat, and when you are thirsty you drink."
  },
  {
@@ -229,10 +229,10 @@
   "difficulty": 2,
   "stem": "Pedal is to bicycle as oar is to ___",
   "choices": [
+   "paddle",
    "river",
-   "splash",
    "rowboat",
-   "paddle"
+   "splash"
   ],
   "answer": 2,
   "explanation": "You push pedals to move a bicycle, and you pull oars to move a rowboat."
@@ -243,12 +243,12 @@
   "difficulty": 2,
   "stem": "Which word belongs with the group: hammer, wrench, screwdriver?",
   "choices": [
-   "nail",
+   "pliers",
    "toolbox",
-   "garage",
-   "pliers"
+   "nail",
+   "garage"
   ],
-  "answer": 3,
+  "answer": 0,
   "explanation": "A hammer, wrench and screwdriver are hand tools, and so are pliers."
  },
  {
@@ -257,12 +257,12 @@
   "difficulty": 2,
   "stem": "Which word belongs with the group: eagle, robin, sparrow?",
   "choices": [
-   "owl",
+   "kite",
    "bat",
-   "butterfly",
-   "kite"
+   "owl",
+   "butterfly"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Eagles, robins and sparrows are birds; an owl is a bird too, but a bat and a butterfly are not."
  },
  {
@@ -271,12 +271,12 @@
   "difficulty": 2,
   "stem": "Which word belongs with the group: cheese, yogurt, butter?",
   "choices": [
-   "bread",
-   "cream",
+   "jam",
    "egg",
-   "jam"
+   "bread",
+   "cream"
   ],
-  "answer": 1,
+  "answer": 3,
   "explanation": "Cheese, yogurt and butter are dairy foods made from milk, and so is cream."
  },
  {
@@ -287,10 +287,10 @@
   "choices": [
    "glass",
    "plastic",
-   "tin",
-   "diamond"
+   "diamond",
+   "tin"
   ],
-  "answer": 2,
+  "answer": 3,
   "explanation": "Copper, iron and silver are metals, and tin is also a metal."
  },
  {
@@ -299,12 +299,12 @@
   "difficulty": 2,
   "stem": "Which word is most similar to these words: damp, moist?",
   "choices": [
-   "dry",
    "cool",
    "dusty",
-   "wet"
+   "wet",
+   "dry"
   ],
-  "answer": 3,
+  "answer": 2,
   "explanation": "Damp, moist and wet all describe something with water in or on it."
  },
  {
@@ -313,12 +313,12 @@
   "difficulty": 2,
   "stem": "Which word is most similar to these words: brave, fearless?",
   "choices": [
-   "courageous",
    "scared",
-   "strong",
-   "proud"
+   "proud",
+   "courageous",
+   "strong"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Brave, fearless and courageous all mean not afraid of danger."
  },
  {
@@ -327,12 +327,12 @@
   "difficulty": 2,
   "stem": "Which word is most similar to these words: tidy, neat?",
   "choices": [
+   "simple",
    "messy",
-   "orderly",
    "pretty",
-   "simple"
+   "orderly"
   ],
-  "answer": 1,
+  "answer": 3,
   "explanation": "Tidy, neat and orderly all mean well arranged."
  },
  {
@@ -341,12 +341,12 @@
   "difficulty": 3,
   "stem": "Brick is to wall as link is to ___",
   "choices": [
+   "chain",
    "metal",
-   "connect",
    "fence",
-   "chain"
+   "connect"
   ],
-  "answer": 3,
+  "answer": 0,
   "explanation": "Bricks are joined to make a wall, and links are joined to make a chain."
  },
  {
@@ -370,11 +370,11 @@
   "stem": "Wardrobe is to clothes as pantry is to ___",
   "choices": [
    "kitchen",
-   "groceries",
    "shelves",
-   "cook"
+   "cook",
+   "groceries"
   ],
-  "answer": 1,
+  "answer": 3,
   "explanation": "A wardrobe stores clothes, and a pantry stores groceries."
  },
  {
@@ -383,12 +383,12 @@
   "difficulty": 3,
   "stem": "Shallow is to deep as narrow is to ___",
   "choices": [
-   "thin",
-   "long",
+   "bridge",
    "wide",
-   "bridge"
+   "long",
+   "thin"
   ],
-  "answer": 2,
+  "answer": 1,
   "explanation": "Shallow is the opposite of deep, and narrow is the opposite of wide."
  },
  {
@@ -398,11 +398,11 @@
   "stem": "Sculptor is to chisel as painter is to ___",
   "choices": [
    "canvas",
-   "color",
+   "brush",
    "gallery",
-   "brush"
+   "color"
   ],
-  "answer": 3,
+  "answer": 1,
   "explanation": "A sculptor works with a chisel as a tool, and a painter works with a brush."
  },
  {
@@ -411,12 +411,12 @@
   "difficulty": 3,
   "stem": "Which word belongs with the group: Mercury, Venus, Mars?",
   "choices": [
+   "comet",
    "Saturn",
-   "Moon",
    "Sun",
-   "comet"
+   "Moon"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "Mercury, Venus and Mars are planets, and Saturn is also a planet."
  },
  {
@@ -425,12 +425,12 @@
   "difficulty": 3,
   "stem": "Which word belongs with the group: oak, maple, birch?",
   "choices": [
-   "acorn",
    "willow",
    "forest",
-   "bark"
+   "bark",
+   "acorn"
   ],
-  "answer": 1,
+  "answer": 0,
   "explanation": "Oak, maple and birch are kinds of trees, and so is willow."
  },
  {
@@ -439,12 +439,12 @@
   "difficulty": 3,
   "stem": "Which word belongs with the group: meter, kilometer, centimeter?",
   "choices": [
-   "kilogram",
-   "liter",
+   "minute",
    "millimeter",
-   "minute"
+   "liter",
+   "kilogram"
   ],
-  "answer": 2,
+  "answer": 1,
   "explanation": "Meters, kilometers and centimeters measure length, and so do millimeters."
  },
  {
@@ -454,11 +454,11 @@
   "stem": "Which word belongs with the group: anger, joy, fear?",
   "choices": [
    "laughter",
-   "smile",
+   "grief",
    "tears",
-   "grief"
+   "smile"
   ],
-  "answer": 3,
+  "answer": 1,
   "explanation": "Anger, joy and fear are emotions, and grief is also an emotion; laughter, smiles and tears are ways of showing feelings."
  },
  {
@@ -467,12 +467,12 @@
   "difficulty": 3,
   "stem": "Which word is most similar to these words: gloomy, dreary?",
   "choices": [
-   "dismal",
-   "cheerful",
    "rainy",
-   "damp"
+   "damp",
+   "dismal",
+   "cheerful"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Gloomy, dreary and dismal all mean dark and depressing."
  },
  {
@@ -481,10 +481,10 @@
   "difficulty": 3,
   "stem": "Which word is most similar to these words: mend, repair?",
   "choices": [
-   "break",
+   "build",
    "fix",
    "paint",
-   "build"
+   "break"
   ],
   "answer": 1,
   "explanation": "To mend, repair and fix all mean to make something broken work again."
@@ -495,12 +495,12 @@
   "difficulty": 3,
   "stem": "Which word is most similar to these words: odd, peculiar?",
   "choices": [
+   "strange",
    "uneven",
    "ordinary",
-   "strange",
    "number"
   ],
-  "answer": 2,
+  "answer": 0,
   "explanation": "Odd, peculiar and strange all mean unusual; 'uneven' matches only the number meaning of odd."
  },
  {
@@ -509,12 +509,12 @@
   "difficulty": 4,
   "stem": "Locksmith is to keys as cartographer is to ___",
   "choices": [
+   "oceans",
    "maps",
    "explorers",
-   "oceans",
    "compasses"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "A locksmith makes keys, and a cartographer makes maps."
  },
  {
@@ -523,12 +523,12 @@
   "difficulty": 4,
   "stem": "Herd is to cattle as flock is to ___",
   "choices": [
-   "shepherd",
-   "sheep",
+   "meadow",
    "wolves",
-   "meadow"
+   "sheep",
+   "shepherd"
   ],
-  "answer": 1,
+  "answer": 2,
   "explanation": "A herd is a group of cattle, and a flock is a group of sheep."
  },
  {
@@ -537,12 +537,12 @@
   "difficulty": 4,
   "stem": "Fluent is to speech as legible is to ___",
   "choices": [
-   "reading",
+   "alphabet",
    "eyesight",
-   "handwriting",
-   "alphabet"
+   "reading",
+   "handwriting"
   ],
-  "answer": 2,
+  "answer": 3,
   "explanation": "Fluent describes speech that is easy to follow, and legible describes handwriting that is easy to read."
  },
  {
@@ -551,12 +551,12 @@
   "difficulty": 4,
   "stem": "Germ is to disease as spark is to ___",
   "choices": [
-   "electricity",
    "flint",
+   "fire",
    "light",
-   "fire"
+   "electricity"
   ],
-  "answer": 3,
+  "answer": 1,
   "explanation": "A germ can cause a disease, and a spark can cause a fire."
  },
  {
@@ -565,12 +565,12 @@
   "difficulty": 4,
   "stem": "Microscope is to biologist as telescope is to ___",
   "choices": [
-   "astronomer",
-   "astronaut",
    "planet",
-   "lens"
+   "astronaut",
+   "lens",
+   "astronomer"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "A biologist uses a microscope, and an astronomer uses a telescope."
  },
  {
@@ -579,12 +579,12 @@
   "difficulty": 4,
   "stem": "Which word belongs with the group: sonnet, limerick, haiku?",
   "choices": [
-   "novel",
    "ballad",
+   "biography",
    "essay",
-   "biography"
+   "novel"
   ],
-  "answer": 1,
+  "answer": 0,
   "explanation": "A sonnet, limerick and haiku are kinds of poems, and a ballad is also a poem."
  },
  {
@@ -593,10 +593,10 @@
   "difficulty": 4,
   "stem": "Which word belongs with the group: trumpet, trombone, tuba?",
   "choices": [
-   "clarinet",
    "drum",
+   "oboe",
    "French horn",
-   "oboe"
+   "clarinet"
   ],
   "answer": 2,
   "explanation": "The trumpet, trombone and tuba are brass instruments, and so is the French horn; the clarinet and oboe are woodwinds."
@@ -607,12 +607,12 @@
   "difficulty": 4,
   "stem": "Which word belongs with the group: democracy, monarchy, dictatorship?",
   "choices": [
-   "election",
    "parliament",
-   "citizen",
-   "republic"
+   "republic",
+   "election",
+   "citizen"
   ],
-  "answer": 3,
+  "answer": 1,
   "explanation": "Democracy, monarchy and dictatorship are systems of government, and a republic is too."
  },
  {
@@ -622,9 +622,9 @@
   "stem": "Which word belongs with the group: retina, cornea, pupil?",
   "choices": [
    "iris",
-   "eyelash",
+   "tear",
    "eyebrow",
-   "tear"
+   "eyelash"
   ],
   "answer": 0,
   "explanation": "The retina, cornea and pupil are parts of the eyeball itself, and so is the iris."
@@ -637,8 +637,8 @@
   "choices": [
    "rescue",
    "forsake",
-   "wander",
-   "sand"
+   "sand",
+   "wander"
   ],
   "answer": 1,
   "explanation": "Abandon, desert and forsake all mean to leave someone or something behind for good."
@@ -651,10 +651,10 @@
   "choices": [
    "flexible",
    "foolish",
-   "headstrong",
-   "angry"
+   "angry",
+   "headstrong"
   ],
-  "answer": 2,
+  "answer": 3,
   "explanation": "Obstinate, stubborn and headstrong all mean refusing to change one's mind."
  },
  {
@@ -663,9 +663,9 @@
   "difficulty": 4,
   "stem": "Which word is most similar to these words: fatigued, exhausted?",
   "choices": [
-   "energetic",
-   "injured",
    "bored",
+   "injured",
+   "energetic",
    "weary"
   ],
   "answer": 3,
@@ -678,11 +678,11 @@
   "stem": "Lexicographer is to dictionary as cartographer is to ___",
   "choices": [
    "compass",
+   "explorer",
    "atlas",
-   "latitude",
-   "explorer"
+   "latitude"
   ],
-  "answer": 1,
+  "answer": 2,
   "explanation": "A lexicographer compiles a dictionary, a book of words, and a cartographer compiles an atlas, a book of maps."
  },
  {
@@ -692,11 +692,11 @@
   "stem": "Ornithologist is to birds as entomologist is to ___",
   "choices": [
    "words",
+   "rocks",
    "fossils",
-   "insects",
-   "rocks"
+   "insects"
   ],
-  "answer": 2,
+  "answer": 3,
   "explanation": "An ornithologist studies birds, and an entomologist studies insects (an etymologist studies word origins)."
  },
  {
@@ -705,9 +705,9 @@
   "difficulty": 5,
   "stem": "Insipid is to flavor as monotonous is to ___",
   "choices": [
+   "color",
    "sound",
    "boredom",
-   "color",
    "variety"
   ],
   "answer": 3,
@@ -719,12 +719,12 @@
   "difficulty": 5,
   "stem": "Pugnacious is to fight as garrulous is to ___",
   "choices": [
-   "talk",
    "laugh",
-   "eat",
-   "argue"
+   "argue",
+   "talk",
+   "eat"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "A pugnacious person is eager to fight, and a garrulous person is eager to talk."
  },
  {
@@ -735,8 +735,8 @@
   "choices": [
    "wind",
    "gale",
-   "calm",
-   "sail"
+   "sail",
+   "calm"
   ],
   "answer": 1,
   "explanation": "A drizzle is a light form of a downpour, and a breeze is a light form of a gale."
@@ -747,10 +747,10 @@
   "difficulty": 5,
   "stem": "Which word belongs with the group: granite, basalt, obsidian?",
   "choices": [
+   "sandstone",
    "marble",
-   "limestone",
    "pumice",
-   "sandstone"
+   "limestone"
   ],
   "answer": 2,
   "explanation": "Granite, basalt and obsidian are igneous rocks formed from cooled magma or lava, and so is pumice."
@@ -761,8 +761,8 @@
   "difficulty": 5,
   "stem": "Which word belongs with the group: simile, metaphor, personification?",
   "choices": [
-   "paragraph",
    "narrator",
+   "paragraph",
    "glossary",
    "hyperbole"
   ],
@@ -775,12 +775,12 @@
   "difficulty": 5,
   "stem": "Which word belongs with the group: mitochondria, nucleus, ribosome?",
   "choices": [
-   "chloroplast",
-   "tissue",
    "organ",
+   "tissue",
+   "chloroplast",
    "molecule"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Mitochondria, the nucleus and ribosomes are structures inside a cell, and so is a chloroplast."
  },
  {
@@ -789,12 +789,12 @@
   "difficulty": 5,
   "stem": "Which word belongs with the group: jubilant, elated, euphoric?",
   "choices": [
-   "anxious",
    "ecstatic",
-   "weary",
-   "sullen"
+   "sullen",
+   "anxious",
+   "weary"
   ],
-  "answer": 1,
+  "answer": 0,
   "explanation": "Jubilant, elated and euphoric all describe intense happiness, and so does ecstatic."
  },
  {
@@ -803,12 +803,12 @@
   "difficulty": 5,
   "stem": "Which word is most similar to these words: ameliorate, improve?",
   "choices": [
+   "enhance",
    "worsen",
    "maintain",
-   "enhance",
    "reveal"
   ],
-  "answer": 2,
+  "answer": 0,
   "explanation": "To ameliorate, improve and enhance all mean to make something better."
  },
  {
@@ -817,8 +817,8 @@
   "difficulty": 5,
   "stem": "Which word is most similar to these words: obsolete, outdated?",
   "choices": [
-   "novel",
    "broken",
+   "novel",
    "useful",
    "antiquated"
   ],
@@ -831,12 +831,12 @@
   "difficulty": 5,
   "stem": "Which word is most similar to these words: placate, appease?",
   "choices": [
-   "pacify",
-   "provoke",
+   "persuade",
    "deceive",
-   "persuade"
+   "provoke",
+   "pacify"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "To placate, appease and pacify all mean to calm someone who is angry."
  }
 ]
