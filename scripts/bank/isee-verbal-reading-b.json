@@ -1,0 +1,1002 @@
+[
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 1,
+    "stem": "Select the word whose meaning is closest to GLAD.",
+    "choices": [
+      "angry",
+      "happy",
+      "sleepy",
+      "loud"
+    ],
+    "answer": 1,
+    "explanation": "Glad means pleased or happy."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 1,
+    "stem": "Select the word whose meaning is closest to DAMP.",
+    "choices": [
+      "hot",
+      "wet",
+      "dusty",
+      "bright"
+    ],
+    "answer": 1,
+    "explanation": "Something damp is slightly wet."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 1,
+    "stem": "Select the word whose meaning is closest to TIDY.",
+    "choices": [
+      "messy",
+      "heavy",
+      "neat",
+      "quick"
+    ],
+    "answer": 2,
+    "explanation": "Tidy means neat and in order."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 1,
+    "stem": "Select the word whose meaning is closest to GAZE.",
+    "choices": [
+      "shout",
+      "jump",
+      "whisper",
+      "stare"
+    ],
+    "answer": 3,
+    "explanation": "To gaze is to look steadily at something, or stare."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 1,
+    "stem": "Select the word whose meaning is closest to STURDY.",
+    "choices": [
+      "tiny",
+      "strong",
+      "shiny",
+      "soft"
+    ],
+    "answer": 1,
+    "explanation": "Something sturdy is strongly built and hard to break."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 1,
+    "stem": "Maya was so ___ about her birthday party that she could not sleep the night before.",
+    "choices": [
+      "excited",
+      "bored",
+      "calm",
+      "sleepy"
+    ],
+    "answer": 0,
+    "explanation": "Being unable to sleep before a party shows she was excited."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 1,
+    "stem": "The little kitten was ___, so it hid under the bed when the doorbell rang.",
+    "choices": [
+      "proud",
+      "hungry",
+      "scared",
+      "noisy"
+    ],
+    "answer": 2,
+    "explanation": "Hiding when a loud noise happens shows the kitten was scared."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 1,
+    "stem": "Please speak ___ in the library so you do not bother other readers.",
+    "choices": [
+      "loudly",
+      "quickly",
+      "angrily",
+      "quietly"
+    ],
+    "answer": 3,
+    "explanation": "Speaking quietly is how you avoid bothering others in a library."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 1,
+    "stem": "After playing in the mud, the dog was so ___ that it needed a bath.",
+    "choices": [
+      "clean",
+      "hungry",
+      "dirty",
+      "small"
+    ],
+    "answer": 2,
+    "explanation": "Playing in mud makes a dog dirty, which is why it needed a bath."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 1,
+    "stem": "The old bridge was too ___ to hold the heavy truck, so the driver took another road.",
+    "choices": [
+      "weak",
+      "wide",
+      "new",
+      "strong"
+    ],
+    "answer": 0,
+    "explanation": "A bridge that cannot hold a heavy truck is weak."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 2,
+    "stem": "Select the word whose meaning is closest to ANCIENT.",
+    "choices": [
+      "very old",
+      "very large",
+      "very costly",
+      "very rare"
+    ],
+    "answer": 0,
+    "explanation": "Ancient means belonging to the distant past, or very old."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 2,
+    "stem": "Select the word whose meaning is closest to VACANT.",
+    "choices": [
+      "crowded",
+      "distant",
+      "empty",
+      "broken"
+    ],
+    "answer": 2,
+    "explanation": "A vacant room or lot has no one in it; it is empty."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 2,
+    "stem": "Select the word whose meaning is closest to TIMID.",
+    "choices": [
+      "clumsy",
+      "cheerful",
+      "stubborn",
+      "shy"
+    ],
+    "answer": 3,
+    "explanation": "A timid person lacks confidence and is shy."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 2,
+    "stem": "Select the word whose meaning is closest to GRASP.",
+    "choices": [
+      "toss",
+      "hide",
+      "crush",
+      "grip"
+    ],
+    "answer": 3,
+    "explanation": "To grasp something is to grip it firmly."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 2,
+    "stem": "Select the word whose meaning is closest to DREARY.",
+    "choices": [
+      "gloomy",
+      "lively",
+      "chilly",
+      "foolish"
+    ],
+    "answer": 0,
+    "explanation": "Dreary means dull and gloomy."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 2,
+    "stem": "The museum guide was ___ and answered every question the students asked with a smile.",
+    "choices": [
+      "rude",
+      "sleepy",
+      "careless",
+      "patient"
+    ],
+    "answer": 3,
+    "explanation": "Calmly answering every question with a smile shows patience."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 2,
+    "stem": "Because the instructions were so ___, nobody could figure out how to build the shelf.",
+    "choices": [
+      "simple",
+      "colorful",
+      "confusing",
+      "helpful"
+    ],
+    "answer": 2,
+    "explanation": "Instructions that no one can follow are confusing."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 2,
+    "stem": "The team was ___ after losing the final game, but the coach reminded them how far they had come.",
+    "choices": [
+      "thrilled",
+      "curious",
+      "disappointed",
+      "generous"
+    ],
+    "answer": 2,
+    "explanation": "Losing a final game leaves a team disappointed, and \"but\" signals the coach cheering them up."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 2,
+    "stem": "Desert plants must be able to ___ long periods without rain.",
+    "choices": [
+      "enjoy",
+      "prevent",
+      "forget",
+      "survive"
+    ],
+    "answer": 3,
+    "explanation": "Desert plants have to stay alive, or survive, through dry spells."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 2,
+    "stem": "Jamal ___ his little sister's tower of blocks by accident, so he helped her build it again.",
+    "choices": [
+      "painted",
+      "toppled",
+      "admired",
+      "finished"
+    ],
+    "answer": 1,
+    "explanation": "He had to help rebuild the tower, so he must have knocked it over, or toppled it."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 3,
+    "stem": "Select the word whose meaning is closest to COMPEL.",
+    "choices": [
+      "praise",
+      "delay",
+      "force",
+      "invite"
+    ],
+    "answer": 2,
+    "explanation": "To compel is to force someone to do something."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 3,
+    "stem": "Select the word whose meaning is closest to VIGILANT.",
+    "choices": [
+      "violent",
+      "carefree",
+      "gentle",
+      "watchful"
+    ],
+    "answer": 3,
+    "explanation": "Vigilant means keeping careful watch for danger."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 3,
+    "stem": "Select the word whose meaning is closest to LUCRATIVE.",
+    "choices": [
+      "humorous",
+      "temporary",
+      "profitable",
+      "dangerous"
+    ],
+    "answer": 2,
+    "explanation": "A lucrative job or business makes a lot of money; it is profitable."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 3,
+    "stem": "Select the word whose meaning is closest to TRIVIAL.",
+    "choices": [
+      "difficult",
+      "mysterious",
+      "ancient",
+      "unimportant"
+    ],
+    "answer": 3,
+    "explanation": "Trivial means of little value or importance."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 3,
+    "stem": "Select the word whose meaning is closest to HAUGHTY.",
+    "choices": [
+      "nervous",
+      "arrogant",
+      "graceful",
+      "forgetful"
+    ],
+    "answer": 1,
+    "explanation": "A haughty person acts superior to others, or arrogant."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 3,
+    "stem": "The new rule was so ___ that even students who usually complained agreed it was fair.",
+    "choices": [
+      "harsh",
+      "confusing",
+      "secret",
+      "reasonable"
+    ],
+    "answer": 3,
+    "explanation": "A rule that even complainers call fair must be reasonable."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 3,
+    "stem": "Though the fox looked ___, it was actually alert to every sound in the forest.",
+    "choices": [
+      "watchful",
+      "nervous",
+      "drowsy",
+      "hungry"
+    ],
+    "answer": 2,
+    "explanation": "\"Though\" sets up a contrast with \"alert,\" so the fox looked drowsy."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 3,
+    "stem": "The volunteers worked ___ through the night to fill sandbags before the river rose.",
+    "choices": [
+      "lazily",
+      "rarely",
+      "tirelessly",
+      "carelessly"
+    ],
+    "answer": 2,
+    "explanation": "Working all night against a deadline means working tirelessly."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 3,
+    "stem": "The scientist was ___ about the new results and insisted on repeating the experiment before announcing them.",
+    "choices": [
+      "skeptical",
+      "certain",
+      "careless",
+      "thrilled"
+    ],
+    "answer": 0,
+    "explanation": "Insisting on repeating the experiment shows she doubted the results; she was skeptical."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 3,
+    "stem": "The town's population ___ after the factory closed, as many families moved away to find work.",
+    "choices": [
+      "flourished",
+      "dwindled",
+      "doubled",
+      "celebrated"
+    ],
+    "answer": 1,
+    "explanation": "Families moving away made the population shrink, or dwindle."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 4,
+    "stem": "Select the word whose meaning is closest to AMIABLE.",
+    "choices": [
+      "friendly",
+      "capable",
+      "wealthy",
+      "restless"
+    ],
+    "answer": 0,
+    "explanation": "Amiable means pleasant and friendly."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 4,
+    "stem": "Select the word whose meaning is closest to CORROBORATE.",
+    "choices": [
+      "contradict",
+      "confirm",
+      "exaggerate",
+      "investigate"
+    ],
+    "answer": 1,
+    "explanation": "To corroborate a claim is to support or confirm it with evidence."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 4,
+    "stem": "Select the word whose meaning is closest to IMPETUOUS.",
+    "choices": [
+      "patient",
+      "gloomy",
+      "rash",
+      "polite"
+    ],
+    "answer": 2,
+    "explanation": "An impetuous person acts suddenly without thinking; such a person is rash."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 4,
+    "stem": "Select the word whose meaning is closest to LETHARGIC.",
+    "choices": [
+      "deadly",
+      "sluggish",
+      "cheerful",
+      "anxious"
+    ],
+    "answer": 1,
+    "explanation": "Lethargic means lacking energy, or sluggish."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 4,
+    "stem": "Select the word whose meaning is closest to ADMONISH.",
+    "choices": [
+      "applaud",
+      "reprimand",
+      "abandon",
+      "imitate"
+    ],
+    "answer": 1,
+    "explanation": "To admonish is to warn or scold someone firmly, that is, to reprimand."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 4,
+    "stem": "The witness's account was ___ with the security footage, so the police trusted her version of events.",
+    "choices": [
+      "incompatible",
+      "unfamiliar",
+      "preoccupied",
+      "consistent"
+    ],
+    "answer": 3,
+    "explanation": "The police trusted her because her story matched, or was consistent with, the footage."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 4,
+    "stem": "Rather than ___ the issue, the committee chair addressed it directly at the start of the meeting.",
+    "choices": [
+      "resolving",
+      "clarifying",
+      "evading",
+      "announcing"
+    ],
+    "answer": 2,
+    "explanation": "\"Rather than\" contrasts with \"addressed it directly,\" so the missing word means avoiding: evading."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 4,
+    "stem": "The once-___ village had become a busy tourist destination, its streets crowded with visitors every summer.",
+    "choices": [
+      "secluded",
+      "bustling",
+      "famous",
+      "prosperous"
+    ],
+    "answer": 0,
+    "explanation": "\"Once\" signals a change from the present crowded state, so the village used to be secluded."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 4,
+    "stem": "Her argument was so ___ that even her strongest opponents could find no flaw in it.",
+    "choices": [
+      "whimsical",
+      "tentative",
+      "flimsy",
+      "irrefutable"
+    ],
+    "answer": 3,
+    "explanation": "An argument with no flaw that opponents can find is irrefutable."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 4,
+    "stem": "The negotiators reached a ___ only after each side agreed to give up some of its demands.",
+    "choices": [
+      "compromise",
+      "stalemate",
+      "grievance",
+      "monopoly"
+    ],
+    "answer": 0,
+    "explanation": "An agreement in which each side gives up something is a compromise."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 5,
+    "stem": "Select the word whose meaning is closest to LACONIC.",
+    "choices": [
+      "lazy",
+      "tearful",
+      "terse",
+      "boastful"
+    ],
+    "answer": 2,
+    "explanation": "A laconic speaker uses very few words, so laconic means terse."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 5,
+    "stem": "Select the word whose meaning is closest to OBSEQUIOUS.",
+    "choices": [
+      "obscure",
+      "obstinate",
+      "fawning",
+      "indifferent"
+    ],
+    "answer": 2,
+    "explanation": "Obsequious means excessively eager to please or obey, that is, fawning."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 5,
+    "stem": "Select the word whose meaning is closest to PERNICIOUS.",
+    "choices": [
+      "harmful",
+      "stingy",
+      "persistent",
+      "precise"
+    ],
+    "answer": 0,
+    "explanation": "Pernicious describes something that causes great harm, often gradually."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 5,
+    "stem": "Select the word whose meaning is closest to RECALCITRANT.",
+    "choices": [
+      "recovering",
+      "calculating",
+      "remorseful",
+      "defiant"
+    ],
+    "answer": 3,
+    "explanation": "A recalcitrant person stubbornly resists authority; such a person is defiant."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 5,
+    "stem": "Select the word whose meaning is closest to EQUANIMITY.",
+    "choices": [
+      "composure",
+      "fairness",
+      "similarity",
+      "hostility"
+    ],
+    "answer": 0,
+    "explanation": "Equanimity is calmness and evenness of temper, or composure, especially under stress."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 5,
+    "stem": "The novelist is known for her ___ style; she never uses a word that is not absolutely necessary.",
+    "choices": [
+      "florid",
+      "succinct",
+      "verbose",
+      "convoluted"
+    ],
+    "answer": 1,
+    "explanation": "Using no unnecessary words describes a succinct style; the other choices all suggest wordiness or complexity."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 5,
+    "stem": "Far from being ___, the senator's change of position followed months of careful study.",
+    "choices": [
+      "deliberate",
+      "methodical",
+      "inevitable",
+      "capricious"
+    ],
+    "answer": 3,
+    "explanation": "\"Far from\" contrasts with careful study, so the change was not capricious, meaning impulsive or unpredictable."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 5,
+    "stem": "The historian warned that the treaty's apparent success was ___; within a decade, the old rivalries had returned.",
+    "choices": [
+      "enduring",
+      "illusory",
+      "genuine",
+      "unprecedented"
+    ],
+    "answer": 1,
+    "explanation": "If the rivalries returned, the success only seemed real; it was illusory."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 5,
+    "stem": "Although the inventor was ___ about his early failures, freely admitting each mistake, he was secretive about his current work.",
+    "choices": [
+      "reticent",
+      "forthright",
+      "evasive",
+      "indifferent"
+    ],
+    "answer": 1,
+    "explanation": "\"Freely admitting each mistake\" defines forthright, and \"although\" sets it against his secrecy."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "verbal",
+    "difficulty": 5,
+    "stem": "The committee's report, ___ technical jargon, was nearly impossible for ordinary citizens to understand.",
+    "choices": [
+      "devoid of",
+      "laden with",
+      "free from",
+      "wary of"
+    ],
+    "answer": 1,
+    "explanation": "A report hard to understand because of jargon must be full of, or laden with, it."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "Pia had folded eleven paper airplanes, and every one of them had crashed.\n\nThe school's paper airplane contest was on Friday, and the plane that flew the farthest would win a shiny blue ribbon. Pia wanted that ribbon more than anything. She had given her planes long, pointed noses, wide wings, and even little paper tails, and she had decorated them with colorful stripes. They certainly looked fast. But every time she threw one, it flipped over and dove straight into the grass.\n\nOn Thursday afternoon, Pia sat on the back steps and sulked. Her little brother Teo wandered outside carrying a plain sheet of paper. He folded it in half, bent down two corners, and made two simple wings, which took him less than a minute.\n\n\"That one won't fly,\" Pia told him. \"It doesn't even have a tail.\"\n\nTeo shrugged and tossed it gently. The plane sailed across the whole yard and landed softly near the fence.\n\nPia stared in surprise. Then she picked up the plane and carefully turned it over in her hands. The wings were flat and even, and both sides were exactly the same. Her own planes, she realized, had been heavier on one side because of all the extra paper she had added.\n\n\"Can you show me how you did that?\" she asked.\n\nTeo grinned. \"Only if I get to help with the stripes.\"\n\nThat evening, the two of them sat at the kitchen table and folded plane after plane. Pia kept the wings flat and the sides even, and she left off the decorations that had made her earlier planes so heavy. When she tested her new plane in the hallway, it glided all the way to the front door.\n\nOn Friday, Pia's plane did not win the blue ribbon; it came in second. But as she walked home beside Teo, she did not feel disappointed at all. She already had an idea for next year's plane, and she knew exactly who would help her build it.",
+    "stem": "The passage is mainly about",
+    "choices": [
+      "a boy who wins a blue ribbon at a school contest",
+      "a girl who learns from her younger brother how to make a better paper airplane",
+      "the history of paper airplane contests",
+      "a girl who decides to stop making paper airplanes"
+    ],
+    "answer": 1,
+    "explanation": "The story follows Pia as Teo shows her a simple plane and she uses his idea to build a better one."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "Pia had folded eleven paper airplanes, and every one of them had crashed.\n\nThe school's paper airplane contest was on Friday, and the plane that flew the farthest would win a shiny blue ribbon. Pia wanted that ribbon more than anything. She had given her planes long, pointed noses, wide wings, and even little paper tails, and she had decorated them with colorful stripes. They certainly looked fast. But every time she threw one, it flipped over and dove straight into the grass.\n\nOn Thursday afternoon, Pia sat on the back steps and sulked. Her little brother Teo wandered outside carrying a plain sheet of paper. He folded it in half, bent down two corners, and made two simple wings, which took him less than a minute.\n\n\"That one won't fly,\" Pia told him. \"It doesn't even have a tail.\"\n\nTeo shrugged and tossed it gently. The plane sailed across the whole yard and landed softly near the fence.\n\nPia stared in surprise. Then she picked up the plane and carefully turned it over in her hands. The wings were flat and even, and both sides were exactly the same. Her own planes, she realized, had been heavier on one side because of all the extra paper she had added.\n\n\"Can you show me how you did that?\" she asked.\n\nTeo grinned. \"Only if I get to help with the stripes.\"\n\nThat evening, the two of them sat at the kitchen table and folded plane after plane. Pia kept the wings flat and the sides even, and she left off the decorations that had made her earlier planes so heavy. When she tested her new plane in the hallway, it glided all the way to the front door.\n\nOn Friday, Pia's plane did not win the blue ribbon; it came in second. But as she walked home beside Teo, she did not feel disappointed at all. She already had an idea for next year's plane, and she knew exactly who would help her build it.",
+    "stem": "According to the passage, what was wrong with Pia's first planes?",
+    "choices": [
+      "They were heavier on one side.",
+      "They were too small to fly.",
+      "They were made of thick cardboard.",
+      "They did not have any wings."
+    ],
+    "answer": 0,
+    "explanation": "Pia realizes her planes \"had been heavier on one side because of all the extra paper she had added.\""
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "Pia had folded eleven paper airplanes, and every one of them had crashed.\n\nThe school's paper airplane contest was on Friday, and the plane that flew the farthest would win a shiny blue ribbon. Pia wanted that ribbon more than anything. She had given her planes long, pointed noses, wide wings, and even little paper tails, and she had decorated them with colorful stripes. They certainly looked fast. But every time she threw one, it flipped over and dove straight into the grass.\n\nOn Thursday afternoon, Pia sat on the back steps and sulked. Her little brother Teo wandered outside carrying a plain sheet of paper. He folded it in half, bent down two corners, and made two simple wings, which took him less than a minute.\n\n\"That one won't fly,\" Pia told him. \"It doesn't even have a tail.\"\n\nTeo shrugged and tossed it gently. The plane sailed across the whole yard and landed softly near the fence.\n\nPia stared in surprise. Then she picked up the plane and carefully turned it over in her hands. The wings were flat and even, and both sides were exactly the same. Her own planes, she realized, had been heavier on one side because of all the extra paper she had added.\n\n\"Can you show me how you did that?\" she asked.\n\nTeo grinned. \"Only if I get to help with the stripes.\"\n\nThat evening, the two of them sat at the kitchen table and folded plane after plane. Pia kept the wings flat and the sides even, and she left off the decorations that had made her earlier planes so heavy. When she tested her new plane in the hallway, it glided all the way to the front door.\n\nOn Friday, Pia's plane did not win the blue ribbon; it came in second. But as she walked home beside Teo, she did not feel disappointed at all. She already had an idea for next year's plane, and she knew exactly who would help her build it.",
+    "stem": "As used in the third paragraph, the word \"sulked\" most nearly means",
+    "choices": [
+      "laughed loudly",
+      "worked very hard",
+      "fell fast asleep",
+      "sat quietly in a bad mood"
+    ],
+    "answer": 3,
+    "explanation": "After eleven crashes, Pia is unhappy, so \"sulked\" means sat in a bad mood."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "Pia had folded eleven paper airplanes, and every one of them had crashed.\n\nThe school's paper airplane contest was on Friday, and the plane that flew the farthest would win a shiny blue ribbon. Pia wanted that ribbon more than anything. She had given her planes long, pointed noses, wide wings, and even little paper tails, and she had decorated them with colorful stripes. They certainly looked fast. But every time she threw one, it flipped over and dove straight into the grass.\n\nOn Thursday afternoon, Pia sat on the back steps and sulked. Her little brother Teo wandered outside carrying a plain sheet of paper. He folded it in half, bent down two corners, and made two simple wings, which took him less than a minute.\n\n\"That one won't fly,\" Pia told him. \"It doesn't even have a tail.\"\n\nTeo shrugged and tossed it gently. The plane sailed across the whole yard and landed softly near the fence.\n\nPia stared in surprise. Then she picked up the plane and carefully turned it over in her hands. The wings were flat and even, and both sides were exactly the same. Her own planes, she realized, had been heavier on one side because of all the extra paper she had added.\n\n\"Can you show me how you did that?\" she asked.\n\nTeo grinned. \"Only if I get to help with the stripes.\"\n\nThat evening, the two of them sat at the kitchen table and folded plane after plane. Pia kept the wings flat and the sides even, and she left off the decorations that had made her earlier planes so heavy. When she tested her new plane in the hallway, it glided all the way to the front door.\n\nOn Friday, Pia's plane did not win the blue ribbon; it came in second. But as she walked home beside Teo, she did not feel disappointed at all. She already had an idea for next year's plane, and she knew exactly who would help her build it.",
+    "stem": "At the end of the story, Pia most likely feels",
+    "choices": [
+      "hopeful about building planes with Teo again",
+      "angry that her plane did not win",
+      "jealous of the contest winner",
+      "tired of paper airplanes forever"
+    ],
+    "answer": 0,
+    "explanation": "She \"did not feel disappointed at all\" and already plans next year's plane with Teo's help."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "Pia had folded eleven paper airplanes, and every one of them had crashed.\n\nThe school's paper airplane contest was on Friday, and the plane that flew the farthest would win a shiny blue ribbon. Pia wanted that ribbon more than anything. She had given her planes long, pointed noses, wide wings, and even little paper tails, and she had decorated them with colorful stripes. They certainly looked fast. But every time she threw one, it flipped over and dove straight into the grass.\n\nOn Thursday afternoon, Pia sat on the back steps and sulked. Her little brother Teo wandered outside carrying a plain sheet of paper. He folded it in half, bent down two corners, and made two simple wings, which took him less than a minute.\n\n\"That one won't fly,\" Pia told him. \"It doesn't even have a tail.\"\n\nTeo shrugged and tossed it gently. The plane sailed across the whole yard and landed softly near the fence.\n\nPia stared in surprise. Then she picked up the plane and carefully turned it over in her hands. The wings were flat and even, and both sides were exactly the same. Her own planes, she realized, had been heavier on one side because of all the extra paper she had added.\n\n\"Can you show me how you did that?\" she asked.\n\nTeo grinned. \"Only if I get to help with the stripes.\"\n\nThat evening, the two of them sat at the kitchen table and folded plane after plane. Pia kept the wings flat and the sides even, and she left off the decorations that had made her earlier planes so heavy. When she tested her new plane in the hallway, it glided all the way to the front door.\n\nOn Friday, Pia's plane did not win the blue ribbon; it came in second. But as she walked home beside Teo, she did not feel disappointed at all. She already had an idea for next year's plane, and she knew exactly who would help her build it.",
+    "stem": "How is the story mainly organized?",
+    "choices": [
+      "It compares two different contests.",
+      "It tells events in the order they happened.",
+      "It lists the steps for folding a paper airplane.",
+      "It begins at the end and then goes back in time."
+    ],
+    "answer": 1,
+    "explanation": "The story moves from Pia's crashes, to Thursday with Teo, to the contest on Friday, in time order."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "On a summer evening, you might see small dark shapes darting through the air above a pond. Many of them are bats, out hunting for insects. Bats fly in the dark, yet they almost never bump into trees or into each other. How do they do it?\n\nMost bats use a special skill called echolocation. As a bat flies, it makes very high squeaks and clicks, sounds so high that people cannot hear them. When a sound hits an object, such as a moth or a branch, it bounces back to the bat. This returning sound is called an echo, and the bat listens carefully to every one.\n\nEchoes give a bat a great deal of information. If an echo comes back quickly, the object is close. If it takes longer, the object is farther away. The echoes can even tell the bat how big an insect is and in which direction it is traveling. A bat's large ears help it catch these faint sounds.\n\nWhen a bat gets close to an insect, it squeaks faster and faster. Each new echo tells the bat exactly where its dinner is. Then, in a flash, the bat snatches its meal right out of the air. A single small bat can catch hundreds of insects in one night.\n\nBats are not the only animals that use echoes. Dolphins send out clicks to locate fish in dark or cloudy water. People have borrowed the idea, too. Ships use a tool called sonar, which sends sound waves through the water to measure the depth of the sea or to locate other ships.\n\nSo the next time you see bats at dusk, remember that they are not just flying around. They are listening their way through the night.",
+    "stem": "Which sentence best tells what the passage is mainly about?",
+    "choices": [
+      "why bats sleep during the day",
+      "how bats use sound to find their way and catch food",
+      "how dolphins hunt for fish in the sea",
+      "why some people are afraid of bats"
+    ],
+    "answer": 1,
+    "explanation": "Most of the passage explains echolocation and how it helps bats fly and hunt."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "On a summer evening, you might see small dark shapes darting through the air above a pond. Many of them are bats, out hunting for insects. Bats fly in the dark, yet they almost never bump into trees or into each other. How do they do it?\n\nMost bats use a special skill called echolocation. As a bat flies, it makes very high squeaks and clicks, sounds so high that people cannot hear them. When a sound hits an object, such as a moth or a branch, it bounces back to the bat. This returning sound is called an echo, and the bat listens carefully to every one.\n\nEchoes give a bat a great deal of information. If an echo comes back quickly, the object is close. If it takes longer, the object is farther away. The echoes can even tell the bat how big an insect is and in which direction it is traveling. A bat's large ears help it catch these faint sounds.\n\nWhen a bat gets close to an insect, it squeaks faster and faster. Each new echo tells the bat exactly where its dinner is. Then, in a flash, the bat snatches its meal right out of the air. A single small bat can catch hundreds of insects in one night.\n\nBats are not the only animals that use echoes. Dolphins send out clicks to locate fish in dark or cloudy water. People have borrowed the idea, too. Ships use a tool called sonar, which sends sound waves through the water to measure the depth of the sea or to locate other ships.\n\nSo the next time you see bats at dusk, remember that they are not just flying around. They are listening their way through the night.",
+    "stem": "According to the passage, how can a bat tell that an object is close?",
+    "choices": [
+      "The echo never comes back.",
+      "The object makes its own clicking sound.",
+      "The bat can see it in the moonlight.",
+      "The echo comes back quickly."
+    ],
+    "answer": 3,
+    "explanation": "The third paragraph says, \"If an echo comes back quickly, the object is close.\""
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "On a summer evening, you might see small dark shapes darting through the air above a pond. Many of them are bats, out hunting for insects. Bats fly in the dark, yet they almost never bump into trees or into each other. How do they do it?\n\nMost bats use a special skill called echolocation. As a bat flies, it makes very high squeaks and clicks, sounds so high that people cannot hear them. When a sound hits an object, such as a moth or a branch, it bounces back to the bat. This returning sound is called an echo, and the bat listens carefully to every one.\n\nEchoes give a bat a great deal of information. If an echo comes back quickly, the object is close. If it takes longer, the object is farther away. The echoes can even tell the bat how big an insect is and in which direction it is traveling. A bat's large ears help it catch these faint sounds.\n\nWhen a bat gets close to an insect, it squeaks faster and faster. Each new echo tells the bat exactly where its dinner is. Then, in a flash, the bat snatches its meal right out of the air. A single small bat can catch hundreds of insects in one night.\n\nBats are not the only animals that use echoes. Dolphins send out clicks to locate fish in dark or cloudy water. People have borrowed the idea, too. Ships use a tool called sonar, which sends sound waves through the water to measure the depth of the sea or to locate other ships.\n\nSo the next time you see bats at dusk, remember that they are not just flying around. They are listening their way through the night.",
+    "stem": "As used in the third paragraph, the word \"faint\" most nearly means",
+    "choices": [
+      "very fast",
+      "dizzy",
+      "hard to hear",
+      "scary"
+    ],
+    "answer": 2,
+    "explanation": "The bat needs large ears to catch the sounds, so \"faint\" means weak and hard to hear."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "On a summer evening, you might see small dark shapes darting through the air above a pond. Many of them are bats, out hunting for insects. Bats fly in the dark, yet they almost never bump into trees or into each other. How do they do it?\n\nMost bats use a special skill called echolocation. As a bat flies, it makes very high squeaks and clicks, sounds so high that people cannot hear them. When a sound hits an object, such as a moth or a branch, it bounces back to the bat. This returning sound is called an echo, and the bat listens carefully to every one.\n\nEchoes give a bat a great deal of information. If an echo comes back quickly, the object is close. If it takes longer, the object is farther away. The echoes can even tell the bat how big an insect is and in which direction it is traveling. A bat's large ears help it catch these faint sounds.\n\nWhen a bat gets close to an insect, it squeaks faster and faster. Each new echo tells the bat exactly where its dinner is. Then, in a flash, the bat snatches its meal right out of the air. A single small bat can catch hundreds of insects in one night.\n\nBats are not the only animals that use echoes. Dolphins send out clicks to locate fish in dark or cloudy water. People have borrowed the idea, too. Ships use a tool called sonar, which sends sound waves through the water to measure the depth of the sea or to locate other ships.\n\nSo the next time you see bats at dusk, remember that they are not just flying around. They are listening their way through the night.",
+    "stem": "Based on the passage, a bat would most likely have the hardest time finding insects if",
+    "choices": [
+      "the night were very dark",
+      "the pond were very large",
+      "the insects were flying quickly",
+      "it could not hear well"
+    ],
+    "answer": 3,
+    "explanation": "Bats find insects by listening to echoes, so poor hearing would cause the most trouble."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "On a summer evening, you might see small dark shapes darting through the air above a pond. Many of them are bats, out hunting for insects. Bats fly in the dark, yet they almost never bump into trees or into each other. How do they do it?\n\nMost bats use a special skill called echolocation. As a bat flies, it makes very high squeaks and clicks, sounds so high that people cannot hear them. When a sound hits an object, such as a moth or a branch, it bounces back to the bat. This returning sound is called an echo, and the bat listens carefully to every one.\n\nEchoes give a bat a great deal of information. If an echo comes back quickly, the object is close. If it takes longer, the object is farther away. The echoes can even tell the bat how big an insect is and in which direction it is traveling. A bat's large ears help it catch these faint sounds.\n\nWhen a bat gets close to an insect, it squeaks faster and faster. Each new echo tells the bat exactly where its dinner is. Then, in a flash, the bat snatches its meal right out of the air. A single small bat can catch hundreds of insects in one night.\n\nBats are not the only animals that use echoes. Dolphins send out clicks to locate fish in dark or cloudy water. People have borrowed the idea, too. Ships use a tool called sonar, which sends sound waves through the water to measure the depth of the sea or to locate other ships.\n\nSo the next time you see bats at dusk, remember that they are not just flying around. They are listening their way through the night.",
+    "stem": "Why does the author mention dolphins and ships in the fifth paragraph?",
+    "choices": [
+      "to show that other animals and people also use echoes",
+      "to explain why bats live near water",
+      "to prove that dolphins are smarter than bats",
+      "to describe how ships catch insects"
+    ],
+    "answer": 0,
+    "explanation": "The paragraph begins, \"Bats are not the only animals that use echoes,\" and then gives these examples."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "In 1860, the United States stretched from one ocean to another, but news traveled across it very slowly. A letter mailed in Missouri might take three weeks or more to reach California by stagecoach. People in the West wanted a faster way to hear from friends and family in the East.\n\nThat spring, a company started a bold new service called the Pony Express. Instead of slow coaches, it used riders on fast horses. The route ran nearly two thousand miles, from St. Joseph, Missouri, to Sacramento, California. Along the way were more than 150 stations, most of them about ten to fifteen miles apart.\n\nThe system worked like a relay race. A rider galloped at top speed to the next station, where a fresh horse was waiting, saddled and ready. He swapped horses in about two minutes and raced on. After riding about seventy-five miles, he handed the mail pouch to a new rider. Riders carried the mail day and night. They rode through hot deserts, snowy mountains, and pouring rain. With this system, a letter could cross the country in about ten days.\n\nRiders had to be small, tough, and brave. Many of them were teenagers. To save weight, letters were written on very thin paper, and sending one cost a lot of money.\n\nYet the Pony Express lasted only about eighteen months. In October 1861, workers finished a telegraph line that joined the East and West coasts. A message that once took ten days could now travel in minutes along the wire. Almost overnight, the riders were no longer needed, and the Pony Express shut down.\n\nEven so, people still remember it today. The Pony Express showed how much Americans wanted to stay connected, and its riders became symbols of courage and speed.",
+    "stem": "What is the passage mainly about?",
+    "choices": [
+      "a fast mail service that crossed the country for a short time",
+      "the building of the first railroad across the country",
+      "how the telegraph was invented",
+      "the life of one famous Pony Express rider"
+    ],
+    "answer": 0,
+    "explanation": "The passage describes how the Pony Express worked and why it lasted only about eighteen months."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "In 1860, the United States stretched from one ocean to another, but news traveled across it very slowly. A letter mailed in Missouri might take three weeks or more to reach California by stagecoach. People in the West wanted a faster way to hear from friends and family in the East.\n\nThat spring, a company started a bold new service called the Pony Express. Instead of slow coaches, it used riders on fast horses. The route ran nearly two thousand miles, from St. Joseph, Missouri, to Sacramento, California. Along the way were more than 150 stations, most of them about ten to fifteen miles apart.\n\nThe system worked like a relay race. A rider galloped at top speed to the next station, where a fresh horse was waiting, saddled and ready. He swapped horses in about two minutes and raced on. After riding about seventy-five miles, he handed the mail pouch to a new rider. Riders carried the mail day and night. They rode through hot deserts, snowy mountains, and pouring rain. With this system, a letter could cross the country in about ten days.\n\nRiders had to be small, tough, and brave. Many of them were teenagers. To save weight, letters were written on very thin paper, and sending one cost a lot of money.\n\nYet the Pony Express lasted only about eighteen months. In October 1861, workers finished a telegraph line that joined the East and West coasts. A message that once took ten days could now travel in minutes along the wire. Almost overnight, the riders were no longer needed, and the Pony Express shut down.\n\nEven so, people still remember it today. The Pony Express showed how much Americans wanted to stay connected, and its riders became symbols of courage and speed.",
+    "stem": "According to the passage, what happened at each station along the route?",
+    "choices": [
+      "A rider switched to a fresh horse.",
+      "Letters were sorted and stamped.",
+      "Riders stopped to sleep for the night.",
+      "Horses were sold to settlers."
+    ],
+    "answer": 0,
+    "explanation": "The third paragraph says a fresh horse was waiting at the next station, and the rider swapped horses there."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "In 1860, the United States stretched from one ocean to another, but news traveled across it very slowly. A letter mailed in Missouri might take three weeks or more to reach California by stagecoach. People in the West wanted a faster way to hear from friends and family in the East.\n\nThat spring, a company started a bold new service called the Pony Express. Instead of slow coaches, it used riders on fast horses. The route ran nearly two thousand miles, from St. Joseph, Missouri, to Sacramento, California. Along the way were more than 150 stations, most of them about ten to fifteen miles apart.\n\nThe system worked like a relay race. A rider galloped at top speed to the next station, where a fresh horse was waiting, saddled and ready. He swapped horses in about two minutes and raced on. After riding about seventy-five miles, he handed the mail pouch to a new rider. Riders carried the mail day and night. They rode through hot deserts, snowy mountains, and pouring rain. With this system, a letter could cross the country in about ten days.\n\nRiders had to be small, tough, and brave. Many of them were teenagers. To save weight, letters were written on very thin paper, and sending one cost a lot of money.\n\nYet the Pony Express lasted only about eighteen months. In October 1861, workers finished a telegraph line that joined the East and West coasts. A message that once took ten days could now travel in minutes along the wire. Almost overnight, the riders were no longer needed, and the Pony Express shut down.\n\nEven so, people still remember it today. The Pony Express showed how much Americans wanted to stay connected, and its riders became symbols of courage and speed.",
+    "stem": "As used in the third paragraph, the word \"swapped\" most nearly means",
+    "choices": [
+      "fed",
+      "traded",
+      "rested",
+      "chased"
+    ],
+    "answer": 1,
+    "explanation": "The rider gave up his tired horse for a fresh one, so \"swapped\" means traded."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "In 1860, the United States stretched from one ocean to another, but news traveled across it very slowly. A letter mailed in Missouri might take three weeks or more to reach California by stagecoach. People in the West wanted a faster way to hear from friends and family in the East.\n\nThat spring, a company started a bold new service called the Pony Express. Instead of slow coaches, it used riders on fast horses. The route ran nearly two thousand miles, from St. Joseph, Missouri, to Sacramento, California. Along the way were more than 150 stations, most of them about ten to fifteen miles apart.\n\nThe system worked like a relay race. A rider galloped at top speed to the next station, where a fresh horse was waiting, saddled and ready. He swapped horses in about two minutes and raced on. After riding about seventy-five miles, he handed the mail pouch to a new rider. Riders carried the mail day and night. They rode through hot deserts, snowy mountains, and pouring rain. With this system, a letter could cross the country in about ten days.\n\nRiders had to be small, tough, and brave. Many of them were teenagers. To save weight, letters were written on very thin paper, and sending one cost a lot of money.\n\nYet the Pony Express lasted only about eighteen months. In October 1861, workers finished a telegraph line that joined the East and West coasts. A message that once took ten days could now travel in minutes along the wire. Almost overnight, the riders were no longer needed, and the Pony Express shut down.\n\nEven so, people still remember it today. The Pony Express showed how much Americans wanted to stay connected, and its riders became symbols of courage and speed.",
+    "stem": "The passage suggests that the Pony Express wanted riders who were small mainly because",
+    "choices": [
+      "small riders were paid less money",
+      "the stations had very little room",
+      "only small riders could read the mail",
+      "a lighter load let the horses run faster"
+    ],
+    "answer": 3,
+    "explanation": "Just as letters were written on thin paper \"to save weight,\" light riders kept the load small so the horses could go fast."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "In 1860, the United States stretched from one ocean to another, but news traveled across it very slowly. A letter mailed in Missouri might take three weeks or more to reach California by stagecoach. People in the West wanted a faster way to hear from friends and family in the East.\n\nThat spring, a company started a bold new service called the Pony Express. Instead of slow coaches, it used riders on fast horses. The route ran nearly two thousand miles, from St. Joseph, Missouri, to Sacramento, California. Along the way were more than 150 stations, most of them about ten to fifteen miles apart.\n\nThe system worked like a relay race. A rider galloped at top speed to the next station, where a fresh horse was waiting, saddled and ready. He swapped horses in about two minutes and raced on. After riding about seventy-five miles, he handed the mail pouch to a new rider. Riders carried the mail day and night. They rode through hot deserts, snowy mountains, and pouring rain. With this system, a letter could cross the country in about ten days.\n\nRiders had to be small, tough, and brave. Many of them were teenagers. To save weight, letters were written on very thin paper, and sending one cost a lot of money.\n\nYet the Pony Express lasted only about eighteen months. In October 1861, workers finished a telegraph line that joined the East and West coasts. A message that once took ten days could now travel in minutes along the wire. Almost overnight, the riders were no longer needed, and the Pony Express shut down.\n\nEven so, people still remember it today. The Pony Express showed how much Americans wanted to stay connected, and its riders became symbols of courage and speed.",
+    "stem": "How does the author mostly organize the passage?",
+    "choices": [
+      "by comparing two mail services side by side",
+      "by listing several failed ways to send mail",
+      "by telling events in time order, from why the service began to why it ended",
+      "by telling the story from one rider's point of view"
+    ],
+    "answer": 2,
+    "explanation": "The passage moves from 1860 and the need for faster mail, through how the service worked, to its end in 1861."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "Louis Braille was born in a small village in France in 1809. When he was three years old, he was playing in his father's leather workshop and hurt his eye with a sharp tool. The eye became infected, and the infection soon spread to his other eye. By the age of five, Louis was completely blind.\n\nLouis was a bright and curious boy, and his parents wanted him to learn. At ten, he won a place at a special school for blind children in Paris. The school had a few books for blind readers, but they were huge and heavy. Each letter was printed large and raised so that students could feel its shape with their fingers. Reading this way was very slow, and students could not easily write this way on their own.\n\nOne day, a former soldier visited the school. He showed the students a code that soldiers could read in the dark. It used raised dots pressed into paper. The code was clever, but it was also hard to use. Some words needed dozens of dots, so a reader could not feel them with one touch.\n\nLouis could not stop thinking about the dots. For the next few years, he worked on the idea whenever he had free time. Finally, when he was only fifteen, he created a simpler system. Each letter was made from a small group of up to six dots, set in two columns of three. A fingertip could feel a whole letter at once. Louis later added patterns for numbers and even music.\n\nAt first, many teachers did not accept the new system. Some sighted adults liked the old raised letters better. But the students loved Braille's code and kept using it. In 1854, two years after Louis died, the school finally adopted it.\n\nToday, people all over the world read braille. You may even find it on elevator buttons and signs. The idea of a curious fifteen-year-old has helped millions of people read and write on their own.",
+    "stem": "Which sentence best states the main idea of the passage?",
+    "choices": [
+      "Louis Braille created a reading system that changed life for blind people.",
+      "Louis Braille was hurt in his father's workshop.",
+      "Soldiers invented a code for reading in the dark.",
+      "Schools in Paris had many books for blind students."
+    ],
+    "answer": 0,
+    "explanation": "The passage tells how Braille invented his six-dot code and how it came to be used around the world."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "Louis Braille was born in a small village in France in 1809. When he was three years old, he was playing in his father's leather workshop and hurt his eye with a sharp tool. The eye became infected, and the infection soon spread to his other eye. By the age of five, Louis was completely blind.\n\nLouis was a bright and curious boy, and his parents wanted him to learn. At ten, he won a place at a special school for blind children in Paris. The school had a few books for blind readers, but they were huge and heavy. Each letter was printed large and raised so that students could feel its shape with their fingers. Reading this way was very slow, and students could not easily write this way on their own.\n\nOne day, a former soldier visited the school. He showed the students a code that soldiers could read in the dark. It used raised dots pressed into paper. The code was clever, but it was also hard to use. Some words needed dozens of dots, so a reader could not feel them with one touch.\n\nLouis could not stop thinking about the dots. For the next few years, he worked on the idea whenever he had free time. Finally, when he was only fifteen, he created a simpler system. Each letter was made from a small group of up to six dots, set in two columns of three. A fingertip could feel a whole letter at once. Louis later added patterns for numbers and even music.\n\nAt first, many teachers did not accept the new system. Some sighted adults liked the old raised letters better. But the students loved Braille's code and kept using it. In 1854, two years after Louis died, the school finally adopted it.\n\nToday, people all over the world read braille. You may even find it on elevator buttons and signs. The idea of a curious fifteen-year-old has helped millions of people read and write on their own.",
+    "stem": "According to the passage, what was one problem with the soldier's code?",
+    "choices": [
+      "It could be read only in daylight.",
+      "Its raised letters were too small.",
+      "Some words needed too many dots to feel with one touch.",
+      "It was written in a foreign language."
+    ],
+    "answer": 2,
+    "explanation": "The third paragraph says some words \"needed dozens of dots, so a reader could not feel them with one touch.\""
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "Louis Braille was born in a small village in France in 1809. When he was three years old, he was playing in his father's leather workshop and hurt his eye with a sharp tool. The eye became infected, and the infection soon spread to his other eye. By the age of five, Louis was completely blind.\n\nLouis was a bright and curious boy, and his parents wanted him to learn. At ten, he won a place at a special school for blind children in Paris. The school had a few books for blind readers, but they were huge and heavy. Each letter was printed large and raised so that students could feel its shape with their fingers. Reading this way was very slow, and students could not easily write this way on their own.\n\nOne day, a former soldier visited the school. He showed the students a code that soldiers could read in the dark. It used raised dots pressed into paper. The code was clever, but it was also hard to use. Some words needed dozens of dots, so a reader could not feel them with one touch.\n\nLouis could not stop thinking about the dots. For the next few years, he worked on the idea whenever he had free time. Finally, when he was only fifteen, he created a simpler system. Each letter was made from a small group of up to six dots, set in two columns of three. A fingertip could feel a whole letter at once. Louis later added patterns for numbers and even music.\n\nAt first, many teachers did not accept the new system. Some sighted adults liked the old raised letters better. But the students loved Braille's code and kept using it. In 1854, two years after Louis died, the school finally adopted it.\n\nToday, people all over the world read braille. You may even find it on elevator buttons and signs. The idea of a curious fifteen-year-old has helped millions of people read and write on their own.",
+    "stem": "As used in the fifth paragraph, the word \"adopted\" most nearly means",
+    "choices": [
+      "began to officially use",
+      "raised as its own child",
+      "turned down",
+      "printed in a book"
+    ],
+    "answer": 0,
+    "explanation": "After years of resistance, the school finally accepted and began using the code, so \"adopted\" means began to officially use."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "Louis Braille was born in a small village in France in 1809. When he was three years old, he was playing in his father's leather workshop and hurt his eye with a sharp tool. The eye became infected, and the infection soon spread to his other eye. By the age of five, Louis was completely blind.\n\nLouis was a bright and curious boy, and his parents wanted him to learn. At ten, he won a place at a special school for blind children in Paris. The school had a few books for blind readers, but they were huge and heavy. Each letter was printed large and raised so that students could feel its shape with their fingers. Reading this way was very slow, and students could not easily write this way on their own.\n\nOne day, a former soldier visited the school. He showed the students a code that soldiers could read in the dark. It used raised dots pressed into paper. The code was clever, but it was also hard to use. Some words needed dozens of dots, so a reader could not feel them with one touch.\n\nLouis could not stop thinking about the dots. For the next few years, he worked on the idea whenever he had free time. Finally, when he was only fifteen, he created a simpler system. Each letter was made from a small group of up to six dots, set in two columns of three. A fingertip could feel a whole letter at once. Louis later added patterns for numbers and even music.\n\nAt first, many teachers did not accept the new system. Some sighted adults liked the old raised letters better. But the students loved Braille's code and kept using it. In 1854, two years after Louis died, the school finally adopted it.\n\nToday, people all over the world read braille. You may even find it on elevator buttons and signs. The idea of a curious fifteen-year-old has helped millions of people read and write on their own.",
+    "stem": "The passage suggests that the students loved Braille's code mainly because it",
+    "choices": [
+      "let them read faster and write on their own",
+      "was invented by one of their teachers",
+      "used large raised letters",
+      "was required by the school"
+    ],
+    "answer": 0,
+    "explanation": "The old books were slow and hard to write with, while Braille's code let a fingertip feel a whole letter at once."
+  },
+  {
+    "exam_type": "ISEE",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "Louis Braille was born in a small village in France in 1809. When he was three years old, he was playing in his father's leather workshop and hurt his eye with a sharp tool. The eye became infected, and the infection soon spread to his other eye. By the age of five, Louis was completely blind.\n\nLouis was a bright and curious boy, and his parents wanted him to learn. At ten, he won a place at a special school for blind children in Paris. The school had a few books for blind readers, but they were huge and heavy. Each letter was printed large and raised so that students could feel its shape with their fingers. Reading this way was very slow, and students could not easily write this way on their own.\n\nOne day, a former soldier visited the school. He showed the students a code that soldiers could read in the dark. It used raised dots pressed into paper. The code was clever, but it was also hard to use. Some words needed dozens of dots, so a reader could not feel them with one touch.\n\nLouis could not stop thinking about the dots. For the next few years, he worked on the idea whenever he had free time. Finally, when he was only fifteen, he created a simpler system. Each letter was made from a small group of up to six dots, set in two columns of three. A fingertip could feel a whole letter at once. Louis later added patterns for numbers and even music.\n\nAt first, many teachers did not accept the new system. Some sighted adults liked the old raised letters better. But the students loved Braille's code and kept using it. In 1854, two years after Louis died, the school finally adopted it.\n\nToday, people all over the world read braille. You may even find it on elevator buttons and signs. The idea of a curious fifteen-year-old has helped millions of people read and write on their own.",
+    "stem": "The author's attitude toward Louis Braille can best be described as",
+    "choices": [
+      "doubtful",
+      "admiring",
+      "disappointed",
+      "uninterested"
+    ],
+    "answer": 1,
+    "explanation": "The author praises \"a curious fifteen-year-old\" whose idea \"has helped millions of people,\" showing admiration."
+  }
+]

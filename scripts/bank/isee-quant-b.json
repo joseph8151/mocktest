@@ -1,0 +1,712 @@
+[
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 1,
+  "stem": "Maya has 3 bags with 8 marbles in each bag. She gives 5 marbles to her brother. How many marbles does Maya have left?",
+  "choices": [
+   "19",
+   "16",
+   "29",
+   "24"
+  ],
+  "answer": 0,
+  "explanation": "Maya starts with 3 × 8 = 24 marbles, and 24 − 5 = 19."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 1,
+  "stem": "Look at the number pattern: 4, 7, 10, 13, … If the pattern continues, what is the 7th number?",
+  "choices": [
+   "21",
+   "22",
+   "19",
+   "25"
+  ],
+  "answer": 1,
+  "explanation": "Each number is 3 more than the one before, so the 7th number is 4 + 6 × 3 = 22."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 1,
+  "stem": "Which of these numbers could be the sum of two odd numbers?",
+  "choices": [
+   "15",
+   "21",
+   "18",
+   "27"
+  ],
+  "answer": 2,
+  "explanation": "Odd + odd is always even, and 18 is the only even choice."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 1,
+  "stem": "A school library has 312 fiction books and 489 nonfiction books. Which is the best estimate of the total number of books?",
+  "choices": [
+   "600",
+   "900",
+   "700",
+   "800"
+  ],
+  "answer": 3,
+  "explanation": "Round to 300 + 500 = 800; the exact total, 801, is very close to 800."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 1,
+  "stem": "The bar graph shows how many books four students read last month. How many more books did Ben read than Cara?",
+  "choices": [
+   "5",
+   "13",
+   "4",
+   "3"
+  ],
+  "answer": 0,
+  "explanation": "Ben read 9 books and Cara read 4 books, so Ben read 9 − 4 = 5 more.",
+  "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 240\" width=\"320\" height=\"240\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><line x1=\"56\" y1=\"190\" x2=\"310\" y2=\"190\" stroke=\"#ccc\" stroke-width=\"2\"/><text x=\"48\" y=\"195\" text-anchor=\"end\">0</text><line x1=\"56\" y1=\"158\" x2=\"310\" y2=\"158\" stroke=\"#ccc\" stroke-width=\"2\"/><text x=\"48\" y=\"163\" text-anchor=\"end\">2</text><line x1=\"56\" y1=\"126\" x2=\"310\" y2=\"126\" stroke=\"#ccc\" stroke-width=\"2\"/><text x=\"48\" y=\"131\" text-anchor=\"end\">4</text><line x1=\"56\" y1=\"94\" x2=\"310\" y2=\"94\" stroke=\"#ccc\" stroke-width=\"2\"/><text x=\"48\" y=\"99\" text-anchor=\"end\">6</text><line x1=\"56\" y1=\"62\" x2=\"310\" y2=\"62\" stroke=\"#ccc\" stroke-width=\"2\"/><text x=\"48\" y=\"67\" text-anchor=\"end\">8</text><line x1=\"56\" y1=\"30\" x2=\"310\" y2=\"30\" stroke=\"#ccc\" stroke-width=\"2\"/><text x=\"48\" y=\"35\" text-anchor=\"end\">10</text><rect x=\"68.7\" y=\"94\" width=\"38.1\" height=\"96\" fill=\"#0a1f44\"/><text x=\"87.8\" y=\"210\" text-anchor=\"middle\">Ana</text><rect x=\"132.2\" y=\"46\" width=\"38.1\" height=\"144\" fill=\"#0a1f44\"/><text x=\"151.3\" y=\"210\" text-anchor=\"middle\">Ben</text><rect x=\"195.7\" y=\"126\" width=\"38.1\" height=\"64\" fill=\"#0a1f44\"/><text x=\"214.8\" y=\"210\" text-anchor=\"middle\">Cara</text><rect x=\"259.2\" y=\"78\" width=\"38.1\" height=\"112\" fill=\"#0a1f44\"/><text x=\"278.3\" y=\"210\" text-anchor=\"middle\">Dev</text><line x1=\"56\" y1=\"190\" x2=\"310\" y2=\"190\" stroke=\"#111\" stroke-width=\"2\"/><line x1=\"56\" y1=\"190\" x2=\"56\" y2=\"30\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"16\" y=\"110\" text-anchor=\"middle\" transform=\"rotate(-90 16 110)\">Books read</text></svg>"
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 1,
+  "stem": "A movie starts at 2:45 P.M. and lasts 1 hour 30 minutes. At what time does the movie end?",
+  "choices": [
+   "3:15 P.M.",
+   "4:15 P.M.",
+   "4:45 P.M.",
+   "4:05 P.M."
+  ],
+  "answer": 1,
+  "explanation": "2:45 plus 1 hour is 3:45, and 30 more minutes is 4:15 P.M."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 1,
+  "stem": "A bag holds 4 red cubes, 3 blue cubes, and 1 green cube. Leo picks one cube without looking. Which color is he most likely to pick?",
+  "choices": [
+   "green",
+   "Each color is equally likely.",
+   "red",
+   "blue"
+  ],
+  "answer": 2,
+  "explanation": "There are more red cubes (4) than any other color, so red is most likely."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 1,
+  "stem": "Pencils cost 25 cents each. How many pencils can Jo buy with $2.00?",
+  "choices": [
+   "10",
+   "4",
+   "6",
+   "8"
+  ],
+  "answer": 3,
+  "explanation": "$2.00 is 200 cents, and 200 ÷ 25 = 8 pencils."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 1,
+  "stem": "What is the perimeter of the rectangle shown?",
+  "choices": [
+   "20 cm",
+   "24 cm",
+   "10 cm",
+   "16 cm"
+  ],
+  "answer": 0,
+  "explanation": "Perimeter = 6 + 4 + 6 + 4 = 20 cm.",
+  "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 260 170\" width=\"260\" height=\"170\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><rect x=\"50\" y=\"35\" width=\"150\" height=\"100\" fill=\"#e5e5e5\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"125\" y=\"26\" text-anchor=\"middle\">6 cm</text><text x=\"208\" y=\"90\">4 cm</text></svg>"
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 1,
+  "stem": "Which number is between 3,450 and 3,540 and has a 9 in the tens place?",
+  "choices": [
+   "3,409",
+   "3,495",
+   "3,549",
+   "3,590"
+  ],
+  "answer": 1,
+  "explanation": "3,495 is between 3,450 and 3,540, and its tens digit is 9."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 2,
+  "stem": "Sam ate 1/4 of a pizza, and Kim ate 3/8 of the same pizza. What fraction of the pizza is left?",
+  "choices": [
+   "1/4",
+   "5/8",
+   "3/8",
+   "1/2"
+  ],
+  "answer": 2,
+  "explanation": "Together they ate 2/8 + 3/8 = 5/8, so 1 − 5/8 = 3/8 is left."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 2,
+  "stem": "In a pattern of square tiles, Figure 1 has 1 tile, Figure 2 has 4 tiles, and Figure 3 has 9 tiles. If the pattern continues, how many tiles will Figure 6 have?",
+  "choices": [
+   "18",
+   "25",
+   "30",
+   "36"
+  ],
+  "answer": 3,
+  "explanation": "Figure n has n × n tiles, so Figure 6 has 6 × 6 = 36 tiles."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 2,
+  "stem": "What is the least number that is a multiple of both 6 and 8?",
+  "choices": [
+   "24",
+   "14",
+   "12",
+   "48"
+  ],
+  "answer": 0,
+  "explanation": "The multiples of 8 are 8, 16, 24, …, and 24 is the first one that 6 also divides."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 2,
+  "stem": "Which is the best estimate of 4.9 × 61?",
+  "choices": [
+   "30",
+   "300",
+   "250",
+   "3,000"
+  ],
+  "answer": 1,
+  "explanation": "4.9 is about 5 and 61 is about 60, so the product is about 5 × 60 = 300."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 2,
+  "stem": "The bar graph shows the rainfall in a town over four months. What was the mean (average) monthly rainfall for these four months?",
+  "choices": [
+   "3.5 inches",
+   "5 inches",
+   "4 inches",
+   "16 inches"
+  ],
+  "answer": 2,
+  "explanation": "The total is 3 + 5 + 2 + 6 = 16 inches, and 16 ÷ 4 = 4 inches.",
+  "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 240\" width=\"320\" height=\"240\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><line x1=\"56\" y1=\"190\" x2=\"310\" y2=\"190\" stroke=\"#ccc\" stroke-width=\"2\"/><text x=\"48\" y=\"195\" text-anchor=\"end\">0</text><line x1=\"56\" y1=\"150\" x2=\"310\" y2=\"150\" stroke=\"#ccc\" stroke-width=\"2\"/><text x=\"48\" y=\"155\" text-anchor=\"end\">2</text><line x1=\"56\" y1=\"110\" x2=\"310\" y2=\"110\" stroke=\"#ccc\" stroke-width=\"2\"/><text x=\"48\" y=\"115\" text-anchor=\"end\">4</text><line x1=\"56\" y1=\"70\" x2=\"310\" y2=\"70\" stroke=\"#ccc\" stroke-width=\"2\"/><text x=\"48\" y=\"75\" text-anchor=\"end\">6</text><line x1=\"56\" y1=\"30\" x2=\"310\" y2=\"30\" stroke=\"#ccc\" stroke-width=\"2\"/><text x=\"48\" y=\"35\" text-anchor=\"end\">8</text><rect x=\"68.7\" y=\"130\" width=\"38.1\" height=\"60\" fill=\"#0a1f44\"/><text x=\"87.8\" y=\"210\" text-anchor=\"middle\">Mar</text><rect x=\"132.2\" y=\"90\" width=\"38.1\" height=\"100\" fill=\"#0a1f44\"/><text x=\"151.3\" y=\"210\" text-anchor=\"middle\">Apr</text><rect x=\"195.7\" y=\"150\" width=\"38.1\" height=\"40\" fill=\"#0a1f44\"/><text x=\"214.8\" y=\"210\" text-anchor=\"middle\">May</text><rect x=\"259.2\" y=\"70\" width=\"38.1\" height=\"120\" fill=\"#0a1f44\"/><text x=\"278.3\" y=\"210\" text-anchor=\"middle\">Jun</text><line x1=\"56\" y1=\"190\" x2=\"310\" y2=\"190\" stroke=\"#111\" stroke-width=\"2\"/><line x1=\"56\" y1=\"190\" x2=\"56\" y2=\"30\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"16\" y=\"110\" text-anchor=\"middle\" transform=\"rotate(-90 16 110)\">Rainfall (inches)</text></svg>"
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 2,
+  "stem": "Rosa buys 3 notebooks that cost $1.75 each. She pays with a $10 bill. How much change should she get?",
+  "choices": [
+   "$8.25",
+   "$5.75",
+   "$5.25",
+   "$4.75"
+  ],
+  "answer": 3,
+  "explanation": "The notebooks cost 3 × $1.75 = $5.25, and $10.00 − $5.25 = $4.75."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 2,
+  "stem": "A spinner has 8 equal sections numbered 1 through 8. What is the probability that the spinner lands on a number greater than 5?",
+  "choices": [
+   "3/8",
+   "1/8",
+   "5/8",
+   "1/2"
+  ],
+  "answer": 0,
+  "explanation": "Only 6, 7, and 8 are greater than 5, so the probability is 3/8."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 2,
+  "stem": "What is the area of the figure shown? All corners are right angles.",
+  "choices": [
+   "48 square cm",
+   "42 square cm",
+   "36 square cm",
+   "28 square cm"
+  ],
+  "answer": 1,
+  "explanation": "The full 8 × 6 rectangle has area 48, and the missing 3 × 2 corner has area 6, so 48 − 6 = 42 square cm.",
+  "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 230\" width=\"320\" height=\"230\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><polygon points=\"50,30 190,30 190,86 274,86 274,198 50,198\" fill=\"#e5e5e5\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"120\" y=\"22\" text-anchor=\"middle\">5 cm</text><text x=\"184\" y=\"63\" text-anchor=\"end\">2 cm</text><text x=\"232\" y=\"78\" text-anchor=\"middle\">3 cm</text><text x=\"280\" y=\"147\">4 cm</text><text x=\"162\" y=\"218\" text-anchor=\"middle\">8 cm</text><text x=\"44\" y=\"119\" text-anchor=\"end\">6 cm</text></svg>"
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 2,
+  "stem": "A box is 5 cm long, 3 cm wide, and 4 cm tall. How many 1-centimeter cubes are needed to fill the box completely?",
+  "choices": [
+   "47",
+   "35",
+   "60",
+   "12"
+  ],
+  "answer": 2,
+  "explanation": "Volume = 5 × 3 × 4 = 60 cubic centimeters, so 60 cubes fit."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 2,
+  "stem": "When a number is divided by 7, the quotient is 9 and the remainder is 4. What is the number?",
+  "choices": [
+   "71",
+   "63",
+   "59",
+   "67"
+  ],
+  "answer": 3,
+  "explanation": "The number is 7 × 9 + 4 = 67."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 3,
+  "stem": "Quantity A: 3/4 of 48\nQuantity B: 2/3 of 54",
+  "choices": [
+   "Quantity A is greater",
+   "Quantity B is greater",
+   "The two quantities are equal",
+   "The relationship cannot be determined"
+  ],
+  "answer": 2,
+  "explanation": "3/4 of 48 is 36, and 2/3 of 54 is also 36."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 3,
+  "stem": "x is a positive integer.\nQuantity A: x²\nQuantity B: x",
+  "choices": [
+   "Quantity A is greater",
+   "Quantity B is greater",
+   "The two quantities are equal",
+   "The relationship cannot be determined"
+  ],
+  "answer": 3,
+  "explanation": "If x = 1, the quantities are equal; if x = 2, Quantity A is greater, so the relationship cannot be determined."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 3,
+  "stem": "The mean of five numbers is 12. One of the numbers, 20, is removed. What is the mean of the remaining four numbers?",
+  "choices": [
+   "10",
+   "8",
+   "12",
+   "11"
+  ],
+  "answer": 0,
+  "explanation": "The five numbers total 5 × 12 = 60; removing 20 leaves 40, and 40 ÷ 4 = 10."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 3,
+  "stem": "Quantity A: The number of prime numbers between 10 and 30\nQuantity B: 5",
+  "choices": [
+   "Quantity A is greater",
+   "Quantity B is greater",
+   "The two quantities are equal",
+   "The relationship cannot be determined"
+  ],
+  "answer": 0,
+  "explanation": "The primes between 10 and 30 are 11, 13, 17, 19, 23, and 29, which is 6 primes, and 6 > 5."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 3,
+  "stem": "A recipe uses 3 cups of flour for every 2 cups of sugar.\nQuantity A: The number of cups of flour needed for 7 cups of sugar\nQuantity B: 10",
+  "choices": [
+   "Quantity A is greater",
+   "Quantity B is greater",
+   "The two quantities are equal",
+   "The relationship cannot be determined"
+  ],
+  "answer": 0,
+  "explanation": "Flour = 7 × 3/2 = 10.5 cups, which is greater than 10."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 3,
+  "stem": "How many positive whole numbers are factors of 36?",
+  "choices": [
+   "6",
+   "9",
+   "10",
+   "8"
+  ],
+  "answer": 1,
+  "explanation": "The factors are 1, 2, 3, 4, 6, 9, 12, 18, and 36, which is 9 factors."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 3,
+  "stem": "In the triangle shown, the angle measures are in degrees.\nQuantity A: x\nQuantity B: 65",
+  "choices": [
+   "Quantity A is greater",
+   "Quantity B is greater",
+   "The two quantities are equal",
+   "The relationship cannot be determined"
+  ],
+  "answer": 2,
+  "explanation": "The angles of a triangle add to 180°, so x = 180 − 50 − 65 = 65.",
+  "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 200\" width=\"300\" height=\"200\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><polygon points=\"40,180 240,180 168.6,26.8\" fill=\"none\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"70\" y=\"172\">50°</text><text x=\"210\" y=\"172\" text-anchor=\"end\">65°</text><text x=\"168.6\" y=\"60.8\" text-anchor=\"middle\" fill=\"#0a1f44\">x°</text></svg>"
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 3,
+  "stem": "Quantity A: 0.4 × 0.15\nQuantity B: 0.4 + 0.15",
+  "choices": [
+   "Quantity A is greater",
+   "Quantity B is greater",
+   "The two quantities are equal",
+   "The relationship cannot be determined"
+  ],
+  "answer": 1,
+  "explanation": "0.4 × 0.15 = 0.06, while 0.4 + 0.15 = 0.55."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 3,
+  "stem": "Points A and B are shown on the number line. What number is located 3/4 of the way from A to B?",
+  "choices": [
+   "4.5",
+   "2",
+   "4",
+   "3"
+  ],
+  "answer": 2,
+  "explanation": "The distance from A (−2) to B (6) is 8, and 3/4 of 8 is 6, so the number is −2 + 6 = 4.",
+  "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 90\" width=\"320\" height=\"90\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><line x1=\"8\" y1=\"40\" x2=\"312\" y2=\"40\" stroke=\"#111\" stroke-width=\"2\"/><line x1=\"20\" y1=\"32\" x2=\"20\" y2=\"48\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"20\" y=\"70\" text-anchor=\"middle\">−3</text><line x1=\"48\" y1=\"32\" x2=\"48\" y2=\"48\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"48\" y=\"70\" text-anchor=\"middle\">−2</text><line x1=\"76\" y1=\"32\" x2=\"76\" y2=\"48\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"76\" y=\"70\" text-anchor=\"middle\">−1</text><line x1=\"104\" y1=\"32\" x2=\"104\" y2=\"48\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"104\" y=\"70\" text-anchor=\"middle\">0</text><line x1=\"132\" y1=\"32\" x2=\"132\" y2=\"48\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"132\" y=\"70\" text-anchor=\"middle\">1</text><line x1=\"160\" y1=\"32\" x2=\"160\" y2=\"48\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"160\" y=\"70\" text-anchor=\"middle\">2</text><line x1=\"188\" y1=\"32\" x2=\"188\" y2=\"48\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"188\" y=\"70\" text-anchor=\"middle\">3</text><line x1=\"216\" y1=\"32\" x2=\"216\" y2=\"48\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"216\" y=\"70\" text-anchor=\"middle\">4</text><line x1=\"244\" y1=\"32\" x2=\"244\" y2=\"48\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"244\" y=\"70\" text-anchor=\"middle\">5</text><line x1=\"272\" y1=\"32\" x2=\"272\" y2=\"48\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"272\" y=\"70\" text-anchor=\"middle\">6</text><line x1=\"300\" y1=\"32\" x2=\"300\" y2=\"48\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"300\" y=\"70\" text-anchor=\"middle\">7</text><circle cx=\"48\" cy=\"40\" r=\"6\" fill=\"#0a1f44\"/><text x=\"48\" y=\"22\" text-anchor=\"middle\" font-weight=\"bold\">A</text><circle cx=\"272\" cy=\"40\" r=\"6\" fill=\"#0a1f44\"/><text x=\"272\" y=\"22\" text-anchor=\"middle\" font-weight=\"bold\">B</text></svg>"
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 3,
+  "stem": "Two fair coins are tossed at the same time. What is the probability that exactly one coin lands heads up?",
+  "choices": [
+   "1/4",
+   "1/3",
+   "3/4",
+   "1/2"
+  ],
+  "answer": 3,
+  "explanation": "The outcomes HH, HT, TH, and TT are equally likely, and 2 of the 4 have exactly one head."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 4,
+  "stem": "Quantity A: √50\nQuantity B: 7",
+  "choices": [
+   "Quantity A is greater",
+   "Quantity B is greater",
+   "The two quantities are equal",
+   "The relationship cannot be determined"
+  ],
+  "answer": 0,
+  "explanation": "7 = √49, and √50 > √49, so Quantity A is greater."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 4,
+  "stem": "3x − 7 = 2x + 5\nQuantity A: x\nQuantity B: 12",
+  "choices": [
+   "Quantity A is greater",
+   "Quantity B is greater",
+   "The two quantities are equal",
+   "The relationship cannot be determined"
+  ],
+  "answer": 2,
+  "explanation": "Subtracting 2x from both sides and adding 7 gives x = 12."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 4,
+  "stem": "The ratio of red marbles to blue marbles in a jar is 3:5. There are 64 marbles in the jar, and all of them are red or blue. How many more blue marbles than red marbles are there?",
+  "choices": [
+   "16",
+   "24",
+   "40",
+   "8"
+  ],
+  "answer": 0,
+  "explanation": "There are 64 ÷ 8 = 8 marbles per ratio part, so 24 red and 40 blue, and 40 − 24 = 16."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 4,
+  "stem": "n is a negative number.\nQuantity A: n³\nQuantity B: n²",
+  "choices": [
+   "Quantity A is greater",
+   "Quantity B is greater",
+   "The two quantities are equal",
+   "The relationship cannot be determined"
+  ],
+  "answer": 1,
+  "explanation": "For negative n, n³ is negative while n² is positive, so Quantity B is greater."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 4,
+  "stem": "The circle is inscribed in a square with side length 10.\nQuantity A: The area of the shaded region\nQuantity B: 20",
+  "choices": [
+   "Quantity A is greater",
+   "Quantity B is greater",
+   "The two quantities are equal",
+   "The relationship cannot be determined"
+  ],
+  "answer": 0,
+  "explanation": "Shaded area = 100 − 25π ≈ 100 − 78.5 = 21.5, which is greater than 20.",
+  "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 230\" width=\"240\" height=\"230\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><rect x=\"40\" y=\"20\" width=\"170\" height=\"170\" fill=\"#bdbdbd\" stroke=\"#111\" stroke-width=\"2\"/><circle cx=\"125\" cy=\"105\" r=\"85\" fill=\"#fff\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"125\" y=\"214\" text-anchor=\"middle\">10</text><text x=\"30\" y=\"110\" text-anchor=\"end\">10</text></svg>"
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 4,
+  "stem": "The graph shows the distance a cyclist has traveled while riding at a steady speed. At this speed, how many minutes does it take the cyclist to travel 30 miles?",
+  "choices": [
+   "135 minutes",
+   "150 minutes",
+   "120 minutes",
+   "180 minutes"
+  ],
+  "answer": 1,
+  "explanation": "The cyclist rides 12 miles per hour, so 30 miles takes 30 ÷ 12 = 2.5 hours, or 150 minutes.",
+  "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 260\" width=\"320\" height=\"260\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><line x1=\"60\" y1=\"210\" x2=\"300\" y2=\"210\" stroke=\"#ccc\" stroke-width=\"2\"/><text x=\"52\" y=\"215\" text-anchor=\"end\">0</text><line x1=\"60\" y1=\"168\" x2=\"300\" y2=\"168\" stroke=\"#ccc\" stroke-width=\"2\"/><text x=\"52\" y=\"173\" text-anchor=\"end\">12</text><line x1=\"60\" y1=\"126\" x2=\"300\" y2=\"126\" stroke=\"#ccc\" stroke-width=\"2\"/><text x=\"52\" y=\"131\" text-anchor=\"end\">24</text><line x1=\"60\" y1=\"84\" x2=\"300\" y2=\"84\" stroke=\"#ccc\" stroke-width=\"2\"/><text x=\"52\" y=\"89\" text-anchor=\"end\">36</text><line x1=\"60\" y1=\"42\" x2=\"300\" y2=\"42\" stroke=\"#ccc\" stroke-width=\"2\"/><text x=\"52\" y=\"47\" text-anchor=\"end\">48</text><line x1=\"60\" y1=\"210\" x2=\"60\" y2=\"42\" stroke=\"#ccc\" stroke-width=\"2\"/><text x=\"60\" y=\"230\" text-anchor=\"middle\">0</text><line x1=\"120\" y1=\"210\" x2=\"120\" y2=\"42\" stroke=\"#ccc\" stroke-width=\"2\"/><text x=\"120\" y=\"230\" text-anchor=\"middle\">1</text><line x1=\"180\" y1=\"210\" x2=\"180\" y2=\"42\" stroke=\"#ccc\" stroke-width=\"2\"/><text x=\"180\" y=\"230\" text-anchor=\"middle\">2</text><line x1=\"240\" y1=\"210\" x2=\"240\" y2=\"42\" stroke=\"#ccc\" stroke-width=\"2\"/><text x=\"240\" y=\"230\" text-anchor=\"middle\">3</text><line x1=\"300\" y1=\"210\" x2=\"300\" y2=\"42\" stroke=\"#ccc\" stroke-width=\"2\"/><text x=\"300\" y=\"230\" text-anchor=\"middle\">4</text><line x1=\"60\" y1=\"210\" x2=\"300\" y2=\"210\" stroke=\"#111\" stroke-width=\"2\"/><line x1=\"60\" y1=\"210\" x2=\"60\" y2=\"42\" stroke=\"#111\" stroke-width=\"2\"/><polyline points=\"60,210 120,168 180,126 240,84\" fill=\"none\" stroke=\"#0a1f44\" stroke-width=\"3\"/><circle cx=\"60\" cy=\"210\" r=\"5\" fill=\"#0a1f44\"/><circle cx=\"120\" cy=\"168\" r=\"5\" fill=\"#0a1f44\"/><circle cx=\"180\" cy=\"126\" r=\"5\" fill=\"#0a1f44\"/><circle cx=\"240\" cy=\"84\" r=\"5\" fill=\"#0a1f44\"/><text x=\"180\" y=\"252\" text-anchor=\"middle\">Time (hours)</text><text x=\"18\" y=\"126\" text-anchor=\"middle\" transform=\"rotate(-90 18 126)\">Distance (miles)</text></svg>"
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 4,
+  "stem": "A jacket costs $60. Its price is raised by 25%, and then the new price is lowered by 20%.\nQuantity A: The final price of the jacket\nQuantity B: $60",
+  "choices": [
+   "Quantity A is greater",
+   "Quantity B is greater",
+   "The two quantities are equal",
+   "The relationship cannot be determined"
+  ],
+  "answer": 2,
+  "explanation": "$60 × 1.25 = $75, and $75 × 0.80 = $60, so the quantities are equal."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 4,
+  "stem": "x > 0\nQuantity A: x + 1/x\nQuantity B: 2",
+  "choices": [
+   "Quantity A is greater",
+   "Quantity B is greater",
+   "The two quantities are equal",
+   "The relationship cannot be determined"
+  ],
+  "answer": 3,
+  "explanation": "If x = 1 the quantities are equal, but if x = 2 Quantity A is 2.5, so the relationship cannot be determined."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 4,
+  "stem": "What is the ones (units) digit of 3²³?",
+  "choices": [
+   "3",
+   "9",
+   "7",
+   "1"
+  ],
+  "answer": 2,
+  "explanation": "Powers of 3 end in 3, 9, 7, 1 and repeat every 4; since 23 leaves remainder 3 when divided by 4, the ones digit is 7."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 4,
+  "stem": "A bag contains 5 red marbles and 3 green marbles. Two marbles are drawn at random without replacement. What is the probability that both marbles are red?",
+  "choices": [
+   "5/16",
+   "5/8",
+   "25/64",
+   "5/14"
+  ],
+  "answer": 3,
+  "explanation": "P = 5/8 × 4/7 = 20/56 = 5/14."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 5,
+  "stem": "Quantity A: The length of segment AB\nQuantity B: 9.9",
+  "choices": [
+   "Quantity A is greater",
+   "Quantity B is greater",
+   "The two quantities are equal",
+   "The relationship cannot be determined"
+  ],
+  "answer": 0,
+  "explanation": "AB = √(6² + 8²) = √100 = 10, which is greater than 9.9.",
+  "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 280 320\" width=\"280\" height=\"320\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><line x1=\"40\" y1=\"290\" x2=\"40\" y2=\"26\" stroke=\"#ddd\" stroke-width=\"2\"/><line x1=\"64\" y1=\"290\" x2=\"64\" y2=\"26\" stroke=\"#ddd\" stroke-width=\"2\"/><line x1=\"88\" y1=\"290\" x2=\"88\" y2=\"26\" stroke=\"#ddd\" stroke-width=\"2\"/><line x1=\"112\" y1=\"290\" x2=\"112\" y2=\"26\" stroke=\"#ddd\" stroke-width=\"2\"/><line x1=\"136\" y1=\"290\" x2=\"136\" y2=\"26\" stroke=\"#ddd\" stroke-width=\"2\"/><line x1=\"160\" y1=\"290\" x2=\"160\" y2=\"26\" stroke=\"#ddd\" stroke-width=\"2\"/><line x1=\"184\" y1=\"290\" x2=\"184\" y2=\"26\" stroke=\"#ddd\" stroke-width=\"2\"/><line x1=\"208\" y1=\"290\" x2=\"208\" y2=\"26\" stroke=\"#ddd\" stroke-width=\"2\"/><line x1=\"232\" y1=\"290\" x2=\"232\" y2=\"26\" stroke=\"#ddd\" stroke-width=\"2\"/><line x1=\"256\" y1=\"290\" x2=\"256\" y2=\"26\" stroke=\"#ddd\" stroke-width=\"2\"/><line x1=\"40\" y1=\"290\" x2=\"256\" y2=\"290\" stroke=\"#ddd\" stroke-width=\"2\"/><line x1=\"40\" y1=\"266\" x2=\"256\" y2=\"266\" stroke=\"#ddd\" stroke-width=\"2\"/><line x1=\"40\" y1=\"242\" x2=\"256\" y2=\"242\" stroke=\"#ddd\" stroke-width=\"2\"/><line x1=\"40\" y1=\"218\" x2=\"256\" y2=\"218\" stroke=\"#ddd\" stroke-width=\"2\"/><line x1=\"40\" y1=\"194\" x2=\"256\" y2=\"194\" stroke=\"#ddd\" stroke-width=\"2\"/><line x1=\"40\" y1=\"170\" x2=\"256\" y2=\"170\" stroke=\"#ddd\" stroke-width=\"2\"/><line x1=\"40\" y1=\"146\" x2=\"256\" y2=\"146\" stroke=\"#ddd\" stroke-width=\"2\"/><line x1=\"40\" y1=\"122\" x2=\"256\" y2=\"122\" stroke=\"#ddd\" stroke-width=\"2\"/><line x1=\"40\" y1=\"98\" x2=\"256\" y2=\"98\" stroke=\"#ddd\" stroke-width=\"2\"/><line x1=\"40\" y1=\"74\" x2=\"256\" y2=\"74\" stroke=\"#ddd\" stroke-width=\"2\"/><line x1=\"40\" y1=\"50\" x2=\"256\" y2=\"50\" stroke=\"#ddd\" stroke-width=\"2\"/><line x1=\"40\" y1=\"26\" x2=\"256\" y2=\"26\" stroke=\"#ddd\" stroke-width=\"2\"/><line x1=\"40\" y1=\"290\" x2=\"256\" y2=\"290\" stroke=\"#111\" stroke-width=\"2\"/><line x1=\"40\" y1=\"290\" x2=\"40\" y2=\"26\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"88\" y=\"308\" text-anchor=\"middle\">2</text><text x=\"136\" y=\"308\" text-anchor=\"middle\">4</text><text x=\"184\" y=\"308\" text-anchor=\"middle\">6</text><text x=\"232\" y=\"308\" text-anchor=\"middle\">8</text><text x=\"32\" y=\"247\" text-anchor=\"end\">2</text><text x=\"32\" y=\"199\" text-anchor=\"end\">4</text><text x=\"32\" y=\"151\" text-anchor=\"end\">6</text><text x=\"32\" y=\"103\" text-anchor=\"end\">8</text><text x=\"32\" y=\"55\" text-anchor=\"end\">10</text><text x=\"32\" y=\"308\" text-anchor=\"end\">0</text><text x=\"260\" y=\"295\">x</text><text x=\"40\" y=\"20\" text-anchor=\"middle\">y</text><line x1=\"64\" y1=\"242\" x2=\"208\" y2=\"50\" stroke=\"#0a1f44\" stroke-width=\"3\"/><circle cx=\"64\" cy=\"242\" r=\"5\" fill=\"#0a1f44\"/><circle cx=\"208\" cy=\"50\" r=\"5\" fill=\"#0a1f44\"/><text x=\"74\" y=\"247\">A(1, 2)</text><text x=\"198\" y=\"55\" text-anchor=\"end\">B(7, 10)</text></svg>"
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 5,
+  "stem": "x² = 49\nQuantity A: x\nQuantity B: 5",
+  "choices": [
+   "Quantity A is greater",
+   "Quantity B is greater",
+   "The two quantities are equal",
+   "The relationship cannot be determined"
+  ],
+  "answer": 3,
+  "explanation": "x could be 7 (greater than 5) or −7 (less than 5), so the relationship cannot be determined."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 5,
+  "stem": "In the sequence 2, 6, 18, 54, …, each term after the first is 3 times the term before it. What is the 8th term?",
+  "choices": [
+   "4,374",
+   "162",
+   "1,458",
+   "13,122"
+  ],
+  "answer": 0,
+  "explanation": "The 8th term is 2 × 3⁷ = 2 × 2,187 = 4,374."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 5,
+  "stem": "0 < x < 1\nQuantity A: x²\nQuantity B: √x",
+  "choices": [
+   "Quantity A is greater",
+   "Quantity B is greater",
+   "The two quantities are equal",
+   "The relationship cannot be determined"
+  ],
+  "answer": 1,
+  "explanation": "For any x between 0 and 1, x² < x < √x; for example, x = 1/4 gives 1/16 and 1/2."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 5,
+  "stem": "Quantity A: The number of different 2-person teams that can be chosen from 5 students\nQuantity B: The number of different orders in which 4 books can be arranged in a row",
+  "choices": [
+   "Quantity A is greater",
+   "Quantity B is greater",
+   "The two quantities are equal",
+   "The relationship cannot be determined"
+  ],
+  "answer": 1,
+  "explanation": "There are (5 × 4) ÷ 2 = 10 teams and 4 × 3 × 2 × 1 = 24 arrangements."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 5,
+  "stem": "In the circle with center O, the radius is 6 and the shaded sector has a central angle of 120°. What is the area of the shaded sector?",
+  "choices": [
+   "4π",
+   "12π",
+   "24π",
+   "36π"
+  ],
+  "answer": 1,
+  "explanation": "The sector is 120/360 = 1/3 of the circle, and 1/3 × π × 6² = 12π.",
+  "image_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 260 240\" width=\"260\" height=\"240\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#111\"><circle cx=\"130\" cy=\"120\" r=\"95\" fill=\"#fff\" stroke=\"#111\" stroke-width=\"2\"/><path d=\"M130,120 L212.3,167.5 A95,95 0 0 0 130,25 Z\" fill=\"#bdbdbd\" stroke=\"#111\" stroke-width=\"2\"/><circle cx=\"130\" cy=\"120\" r=\"4\" fill=\"#111\"/><text x=\"122\" y=\"140\" text-anchor=\"end\">O</text><text x=\"150\" y=\"106\" fill=\"#0a1f44\">120°</text><text x=\"167.2\" y=\"165.8\">6</text></svg>"
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 5,
+  "stem": "The average (arithmetic mean) of x, y, and z is 20, and x = 26.\nQuantity A: The average of y and z\nQuantity B: 17.5",
+  "choices": [
+   "Quantity A is greater",
+   "Quantity B is greater",
+   "The two quantities are equal",
+   "The relationship cannot be determined"
+  ],
+  "answer": 1,
+  "explanation": "x + y + z = 60, so y + z = 34 and their average is 17, which is less than 17.5."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 5,
+  "stem": "A line passes through the point (0, 3) and has a negative slope.\nQuantity A: The x-intercept of the line\nQuantity B: 3",
+  "choices": [
+   "Quantity A is greater",
+   "Quantity B is greater",
+   "The two quantities are equal",
+   "The relationship cannot be determined"
+  ],
+  "answer": 3,
+  "explanation": "The x-intercept is 3 divided by the absolute value of the slope; a slope of −1 gives 3, but a slope of −3 gives 1, so it cannot be determined."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 5,
+  "stem": "The mean of 7 test scores is 82. When an 8th score is added, the mean of all 8 scores becomes 84. What is the 8th score?",
+  "choices": [
+   "92",
+   "100",
+   "98",
+   "86"
+  ],
+  "answer": 2,
+  "explanation": "The total rises from 7 × 82 = 574 to 8 × 84 = 672, so the 8th score is 672 − 574 = 98."
+ },
+ {
+  "exam_type": "ISEE",
+  "section": "quantitative",
+  "difficulty": 5,
+  "stem": "How many integers from 1 to 100, inclusive, are divisible by 3 or by 5 (or both)?",
+  "choices": [
+   "40",
+   "53",
+   "33",
+   "47"
+  ],
+  "answer": 3,
+  "explanation": "There are 33 multiples of 3 and 20 multiples of 5, but 6 multiples of 15 are counted twice, so 33 + 20 − 6 = 47."
+ }
+]

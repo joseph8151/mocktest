@@ -1,1052 +1,1052 @@
 [
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 1,
-    "stem": "Choose the word closest in meaning to SHUT.",
-    "choices": [
-      "open",
-      "push",
-      "find",
-      "close"
-    ],
-    "answer": 3,
-    "explanation": "To shut something is to close it."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 1,
-    "stem": "Choose the word closest in meaning to LARGE.",
-    "choices": [
-      "tiny",
-      "big",
-      "soft",
-      "late"
-    ],
-    "answer": 1,
-    "explanation": "Large and big both describe something of great size."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 1,
-    "stem": "Choose the word closest in meaning to MISTAKE.",
-    "choices": [
-      "error",
-      "answer",
-      "lesson",
-      "puzzle"
-    ],
-    "answer": 0,
-    "explanation": "A mistake is an error, something done wrong."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 1,
-    "stem": "Choose the word closest in meaning to GIFT.",
-    "choices": [
-      "letter",
-      "party",
-      "present",
-      "ticket"
-    ],
-    "answer": 2,
-    "explanation": "A gift is a present given to someone."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 1,
-    "stem": "Choose the word closest in meaning to SMART.",
-    "choices": [
-      "silly",
-      "short",
-      "clever",
-      "polite"
-    ],
-    "answer": 2,
-    "explanation": "Smart and clever both mean quick to learn and understand."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 1,
-    "stem": "Choose the word closest in meaning to STONE.",
-    "choices": [
-      "rock",
-      "stick",
-      "shell",
-      "cloud"
-    ],
-    "answer": 0,
-    "explanation": "A stone is a small piece of rock."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 1,
-    "stem": "Choose the word closest in meaning to CHOOSE.",
-    "choices": [
-      "lose",
-      "pick",
-      "drop",
-      "hide"
-    ],
-    "answer": 1,
-    "explanation": "To choose something is to pick it."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 1,
-    "stem": "Choose the word closest in meaning to TALE.",
-    "choices": [
-      "song",
-      "road",
-      "game",
-      "story"
-    ],
-    "answer": 3,
-    "explanation": "A tale is a story, often one that is made up."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 1,
-    "stem": "Leaf is to tree as feather is to ___",
-    "choices": [
-      "bird",
-      "nest",
-      "egg",
-      "sky"
-    ],
-    "answer": 0,
-    "explanation": "A leaf is part of a tree, and a feather is part of a bird."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 1,
-    "stem": "Hose is to firefighter as wand is to ___",
-    "choices": [
-      "teacher",
-      "singer",
-      "magician",
-      "pilot"
-    ],
-    "answer": 2,
-    "explanation": "A firefighter uses a hose, and a magician uses a wand."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 1,
-    "stem": "Big is to huge as small is to ___",
-    "choices": [
-      "tall",
-      "wide",
-      "heavy",
-      "tiny"
-    ],
-    "answer": 3,
-    "explanation": "Huge means very big, and tiny means very small."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 1,
-    "stem": "Day is to night as summer is to ___",
-    "choices": [
-      "spring",
-      "winter",
-      "sunny",
-      "beach"
-    ],
-    "answer": 1,
-    "explanation": "Day is the opposite of night, and summer is the opposite of winter."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 1,
-    "stem": "Robin is to bird as salmon is to ___",
-    "choices": [
-      "river",
-      "fish",
-      "pink",
-      "shell"
-    ],
-    "answer": 1,
-    "explanation": "A robin is a kind of bird, and a salmon is a kind of fish."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 1,
-    "stem": "Bed is to sleep as chair is to ___",
-    "choices": [
-      "run",
-      "cook",
-      "swim",
-      "sit"
-    ],
-    "answer": 3,
-    "explanation": "A bed is used for sleeping, and a chair is used for sitting."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 1,
-    "stem": "Joke is to laughter as injury is to ___",
-    "choices": [
-      "smile",
-      "bed",
-      "pain",
-      "song"
-    ],
-    "answer": 2,
-    "explanation": "A joke causes laughter, and an injury causes pain."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 2,
-    "stem": "Choose the word closest in meaning to ANXIOUS.",
-    "choices": [
-      "worried",
-      "proud",
-      "sleepy",
-      "careless"
-    ],
-    "answer": 0,
-    "explanation": "Someone who is anxious is worried about what might happen."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 2,
-    "stem": "Choose the word closest in meaning to SHIVER.",
-    "choices": [
-      "whisper",
-      "sneeze",
-      "tremble",
-      "stretch"
-    ],
-    "answer": 2,
-    "explanation": "To shiver is to tremble or shake, often from cold or fear."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 2,
-    "stem": "Choose the word closest in meaning to GENTLE.",
-    "choices": [
-      "rough",
-      "mild",
-      "loud",
-      "quick"
-    ],
-    "answer": 1,
-    "explanation": "Gentle means mild and kind, not harsh or rough."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 2,
-    "stem": "Choose the word closest in meaning to ANNOUNCE.",
-    "choices": [
-      "forget",
-      "borrow",
-      "wonder",
-      "declare"
-    ],
-    "answer": 3,
-    "explanation": "To announce something is to declare it publicly."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 2,
-    "stem": "Choose the word closest in meaning to DECLINE.",
-    "choices": [
-      "accept",
-      "repeat",
-      "compare",
-      "refuse"
-    ],
-    "answer": 3,
-    "explanation": "To decline an offer is to refuse it politely."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 2,
-    "stem": "Choose the word closest in meaning to FLAWLESS.",
-    "choices": [
-      "broken",
-      "perfect",
-      "ordinary",
-      "hidden"
-    ],
-    "answer": 1,
-    "explanation": "Something flawless has no flaws, so it is perfect."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 2,
-    "stem": "Choose the word closest in meaning to HUMBLE.",
-    "choices": [
-      "proud",
-      "wealthy",
-      "modest",
-      "nervous"
-    ],
-    "answer": 2,
-    "explanation": "A humble person is modest and does not brag."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 2,
-    "stem": "Choose the word closest in meaning to PREDICT.",
-    "choices": [
-      "forecast",
-      "remember",
-      "measure",
-      "explain"
-    ],
-    "answer": 0,
-    "explanation": "To predict is to forecast, or say what will happen in the future."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 2,
-    "stem": "Player is to team as soldier is to ___",
-    "choices": [
-      "war",
-      "army",
-      "uniform",
-      "general"
-    ],
-    "answer": 1,
-    "explanation": "A player is a member of a team, and a soldier is a member of an army."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 2,
-    "stem": "Telescope is to astronomer as microscope is to ___",
-    "choices": [
-      "pilot",
-      "librarian",
-      "chef",
-      "biologist"
-    ],
-    "answer": 3,
-    "explanation": "An astronomer uses a telescope, and a biologist uses a microscope."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 2,
-    "stem": "Chilly is to freezing as hungry is to ___",
-    "choices": [
-      "starving",
-      "full",
-      "thirsty",
-      "eating"
-    ],
-    "answer": 0,
-    "explanation": "Freezing is an extreme degree of chilly, and starving is an extreme degree of hungry."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 2,
-    "stem": "Fearless is to brave as foolish is to ___",
-    "choices": [
-      "wise",
-      "angry",
-      "silly",
-      "timid"
-    ],
-    "answer": 2,
-    "explanation": "Fearless and brave are synonyms, as are foolish and silly."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 2,
-    "stem": "Copper is to metal as granite is to ___",
-    "choices": [
-      "gold",
-      "mountain",
-      "rock",
-      "statue"
-    ],
-    "answer": 2,
-    "explanation": "Copper is a type of metal, and granite is a type of rock."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 2,
-    "stem": "Glue is to attach as scissors is to ___",
-    "choices": [
-      "cut",
-      "paste",
-      "fold",
-      "draw"
-    ],
-    "answer": 0,
-    "explanation": "Glue is used to attach things, and scissors are used to cut things."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 2,
-    "stem": "Exercise is to fitness as study is to ___",
-    "choices": [
-      "school",
-      "homework",
-      "teacher",
-      "knowledge"
-    ],
-    "answer": 3,
-    "explanation": "Exercise leads to fitness, and study leads to knowledge."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 3,
-    "stem": "Choose the word closest in meaning to HESITATE.",
-    "choices": [
-      "hurry",
-      "waver",
-      "decide",
-      "argue"
-    ],
-    "answer": 1,
-    "explanation": "To hesitate is to waver or pause because of uncertainty."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 3,
-    "stem": "Choose the word closest in meaning to FEROCIOUS.",
-    "choices": [
-      "timid",
-      "hungry",
-      "playful",
-      "fierce"
-    ],
-    "answer": 3,
-    "explanation": "Ferocious means fierce and savage."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 3,
-    "stem": "Choose the word closest in meaning to ADEQUATE.",
-    "choices": [
-      "excellent",
-      "lacking",
-      "sufficient",
-      "ancient"
-    ],
-    "answer": 2,
-    "explanation": "Adequate means sufficient, or good enough for the purpose."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 3,
-    "stem": "Choose the word closest in meaning to CONSPICUOUS.",
-    "choices": [
-      "noticeable",
-      "hidden",
-      "careful",
-      "ordinary"
-    ],
-    "answer": 0,
-    "explanation": "Something conspicuous is easily noticeable."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 3,
-    "stem": "Choose the word closest in meaning to ELABORATE.",
-    "choices": [
-      "detailed",
-      "simple",
-      "brief",
-      "colorful"
-    ],
-    "answer": 0,
-    "explanation": "An elaborate plan or design is detailed and complicated."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 3,
-    "stem": "Choose the word closest in meaning to OBSOLETE.",
-    "choices": [
-      "modern",
-      "broken",
-      "outdated",
-      "useful"
-    ],
-    "answer": 2,
-    "explanation": "Something obsolete is outdated and no longer in use."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 3,
-    "stem": "Choose the word closest in meaning to VERSATILE.",
-    "choices": [
-      "stubborn",
-      "fragile",
-      "ordinary",
-      "adaptable"
-    ],
-    "answer": 3,
-    "explanation": "A versatile person or tool is adaptable to many uses."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 3,
-    "stem": "Choose the word closest in meaning to PERSUADE.",
-    "choices": [
-      "prevent",
-      "convince",
-      "confuse",
-      "permit"
-    ],
-    "answer": 1,
-    "explanation": "To persuade someone is to convince them to believe or do something."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 3,
-    "stem": "Stanza is to poem as scene is to ___",
-    "choices": [
-      "actor",
-      "curtain",
-      "play",
-      "audience"
-    ],
-    "answer": 2,
-    "explanation": "A stanza is a section of a poem, and a scene is a section of a play."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 3,
-    "stem": "Scalpel is to surgeon as gavel is to ___",
-    "choices": [
-      "judge",
-      "lawyer",
-      "witness",
-      "prisoner"
-    ],
-    "answer": 0,
-    "explanation": "A surgeon uses a scalpel, and a judge uses a gavel."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 3,
-    "stem": "Dislike is to loathe as like is to ___",
-    "choices": [
-      "prefer",
-      "adore",
-      "ignore",
-      "tolerate"
-    ],
-    "answer": 1,
-    "explanation": "To loathe is to dislike intensely, and to adore is to like intensely."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 3,
-    "stem": "Expand is to contract as ascend is to ___",
-    "choices": [
-      "climb",
-      "soar",
-      "remain",
-      "descend"
-    ],
-    "answer": 3,
-    "explanation": "Expand is the opposite of contract, and ascend is the opposite of descend."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 3,
-    "stem": "Sonnet is to poem as sneaker is to ___",
-    "choices": [
-      "foot",
-      "lace",
-      "race",
-      "shoe"
-    ],
-    "answer": 3,
-    "explanation": "A sonnet is a type of poem, and a sneaker is a type of shoe."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 3,
-    "stem": "Desert is to arid as rainforest is to ___",
-    "choices": [
-      "frozen",
-      "humid",
-      "barren",
-      "sandy"
-    ],
-    "answer": 1,
-    "explanation": "A desert is characteristically arid, and a rainforest is characteristically humid."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 3,
-    "stem": "Spark is to fire as germ is to ___",
-    "choices": [
-      "infection",
-      "cure",
-      "microscope",
-      "soap"
-    ],
-    "answer": 0,
-    "explanation": "A spark can cause a fire, and a germ can cause an infection."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 4,
-    "stem": "Choose the word closest in meaning to TRANQUIL.",
-    "choices": [
-      "turbulent",
-      "gloomy",
-      "serene",
-      "distant"
-    ],
-    "answer": 2,
-    "explanation": "Tranquil means calm and peaceful, or serene."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 4,
-    "stem": "Choose the word closest in meaning to BENEVOLENT.",
-    "choices": [
-      "kindly",
-      "hostile",
-      "wealthy",
-      "clever"
-    ],
-    "answer": 0,
-    "explanation": "A benevolent person is kindly and wishes to do good."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 4,
-    "stem": "Choose the word closest in meaning to INEVITABLE.",
-    "choices": [
-      "unlikely",
-      "desirable",
-      "sudden",
-      "unavoidable"
-    ],
-    "answer": 3,
-    "explanation": "Something inevitable is certain to happen and cannot be avoided."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 4,
-    "stem": "Choose the word closest in meaning to DILAPIDATED.",
-    "choices": [
-      "spacious",
-      "rundown",
-      "luxurious",
-      "crowded"
-    ],
-    "answer": 1,
-    "explanation": "A dilapidated building is rundown and in poor repair."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 4,
-    "stem": "Choose the word closest in meaning to ARDUOUS.",
-    "choices": [
-      "effortless",
-      "strenuous",
-      "rewarding",
-      "cautious"
-    ],
-    "answer": 1,
-    "explanation": "An arduous task is strenuous and requires great effort."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 4,
-    "stem": "Choose the word closest in meaning to SCRUTINIZE.",
-    "choices": [
-      "ignore",
-      "praise",
-      "summarize",
-      "examine"
-    ],
-    "answer": 3,
-    "explanation": "To scrutinize is to examine something closely and carefully."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 4,
-    "stem": "Choose the word closest in meaning to AMIABLE.",
-    "choices": [
-      "friendly",
-      "moody",
-      "talkative",
-      "honest"
-    ],
-    "answer": 0,
-    "explanation": "An amiable person is friendly and pleasant."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 4,
-    "stem": "Choose the word closest in meaning to TENTATIVE.",
-    "choices": [
-      "final",
-      "eager",
-      "uncertain",
-      "careless"
-    ],
-    "answer": 2,
-    "explanation": "A tentative plan is uncertain and not yet settled."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 4,
-    "stem": "Vertebra is to spine as link is to ___",
-    "choices": [
-      "metal",
-      "lock",
-      "anchor",
-      "chain"
-    ],
-    "answer": 3,
-    "explanation": "A vertebra is one unit of a spine, and a link is one unit of a chain."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 4,
-    "stem": "Loom is to weaver as kiln is to ___",
-    "choices": [
-      "baker",
-      "potter",
-      "smith",
-      "tailor"
-    ],
-    "answer": 1,
-    "explanation": "A weaver uses a loom, and a potter uses a kiln to fire clay."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 4,
-    "stem": "Tepid is to boiling as dim is to ___",
-    "choices": [
-      "dark",
-      "faint",
-      "blinding",
-      "shadowy"
-    ],
-    "answer": 2,
-    "explanation": "Boiling is far hotter than tepid, and blinding is far brighter than dim."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 4,
-    "stem": "Novice is to expert as amateur is to ___",
-    "choices": [
-      "professional",
-      "beginner",
-      "hobbyist",
-      "athlete"
-    ],
-    "answer": 0,
-    "explanation": "A novice is the opposite of an expert, and an amateur is the opposite of a professional."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 4,
-    "stem": "Dolphin is to mammal as penguin is to ___",
-    "choices": [
-      "bird",
-      "fish",
-      "reptile",
-      "ocean"
-    ],
-    "answer": 0,
-    "explanation": "A dolphin is a mammal even though it swims, and a penguin is a bird even though it cannot fly."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 4,
-    "stem": "Shield is to deflect as sponge is to ___",
-    "choices": [
-      "repel",
-      "scatter",
-      "absorb",
-      "polish"
-    ],
-    "answer": 2,
-    "explanation": "A shield is used to deflect blows, and a sponge is used to absorb liquid."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 4,
-    "stem": "Negligence is to accident as diligence is to ___",
-    "choices": [
-      "laziness",
-      "success",
-      "effort",
-      "luck"
-    ],
-    "answer": 1,
-    "explanation": "Negligence tends to cause an accident, and diligence tends to bring success."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 5,
-    "stem": "Choose the word closest in meaning to RECALCITRANT.",
-    "choices": [
-      "compliant",
-      "apologetic",
-      "forgetful",
-      "defiant"
-    ],
-    "answer": 3,
-    "explanation": "A recalcitrant person is defiant and resists authority or control."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 5,
-    "stem": "Choose the word closest in meaning to MAGNANIMOUS.",
-    "choices": [
-      "vengeful",
-      "generous",
-      "boastful",
-      "timid"
-    ],
-    "answer": 1,
-    "explanation": "Magnanimous means generous and forgiving, especially toward a rival."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 5,
-    "stem": "Choose the word closest in meaning to EQUANIMITY.",
-    "choices": [
-      "composure",
-      "anxiety",
-      "fairness",
-      "wealth"
-    ],
-    "answer": 0,
-    "explanation": "Equanimity is composure, or calmness under pressure; it does not mean fairness despite the \"equ-\" root."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 5,
-    "stem": "Choose the word closest in meaning to PERNICIOUS.",
-    "choices": [
-      "persistent",
-      "trivial",
-      "harmful",
-      "beneficial"
-    ],
-    "answer": 2,
-    "explanation": "Something pernicious is harmful, often in a gradual or hidden way."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 5,
-    "stem": "Choose the word closest in meaning to UBIQUITOUS.",
-    "choices": [
-      "unique",
-      "rare",
-      "widespread",
-      "ancient"
-    ],
-    "answer": 2,
-    "explanation": "Ubiquitous means found everywhere, or widespread."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 5,
-    "stem": "Choose the word closest in meaning to INSCRUTABLE.",
-    "choices": [
-      "mysterious",
-      "obvious",
-      "careless",
-      "thorough"
-    ],
-    "answer": 0,
-    "explanation": "Something inscrutable is mysterious and impossible to understand or interpret."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 5,
-    "stem": "Choose the word closest in meaning to ALACRITY.",
-    "choices": [
-      "reluctance",
-      "eagerness",
-      "sorrow",
-      "precision"
-    ],
-    "answer": 1,
-    "explanation": "Alacrity is cheerful eagerness or readiness to act."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 5,
-    "stem": "Choose the word closest in meaning to DISPARAGE.",
-    "choices": [
-      "praise",
-      "separate",
-      "encourage",
-      "belittle"
-    ],
-    "answer": 3,
-    "explanation": "To disparage is to belittle or speak of something as unimportant."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 5,
-    "stem": "Archipelago is to island as constellation is to ___",
-    "choices": [
-      "star",
-      "galaxy",
-      "telescope",
-      "planet"
-    ],
-    "answer": 0,
-    "explanation": "An archipelago is a group of islands, and a constellation is a group of stars."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 5,
-    "stem": "Trowel is to mason as awl is to ___",
-    "choices": [
-      "sailor",
-      "chemist",
-      "cobbler",
-      "butcher"
-    ],
-    "answer": 2,
-    "explanation": "A mason uses a trowel to spread mortar, and a cobbler uses an awl to punch holes in leather."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 5,
-    "stem": "Drizzle is to deluge as breeze is to ___",
-    "choices": [
-      "zephyr",
-      "mist",
-      "calm",
-      "gale"
-    ],
-    "answer": 3,
-    "explanation": "A deluge is a far heavier rain than a drizzle, and a gale is a far stronger wind than a breeze; a zephyr is itself a gentle breeze."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 5,
-    "stem": "Prodigal is to thrifty as timorous is to ___",
-    "choices": [
-      "fearful",
-      "intrepid",
-      "wasteful",
-      "cautious"
-    ],
-    "answer": 1,
-    "explanation": "Prodigal (wasteful) is the opposite of thrifty, and timorous (fearful) is the opposite of intrepid."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 5,
-    "stem": "Satire is to literature as fresco is to ___",
-    "choices": [
-      "plaster",
-      "painting",
-      "cathedral",
-      "sculpture"
-    ],
-    "answer": 1,
-    "explanation": "Satire is a form of literature, and a fresco is a form of painting."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 5,
-    "stem": "Charlatan is to deceptive as zealot is to ___",
-    "choices": [
-      "indifferent",
-      "deceitful",
-      "timid",
-      "fervent"
-    ],
-    "answer": 3,
-    "explanation": "A charlatan is by nature deceptive, and a zealot is by nature fervent."
-  },
-  {
-    "exam_type": "SSAT",
-    "section": "verbal",
-    "difficulty": 5,
-    "stem": "Sedative is to drowsiness as stimulant is to ___",
-    "choices": [
-      "sleep",
-      "medicine",
-      "alertness",
-      "relief"
-    ],
-    "answer": 2,
-    "explanation": "A sedative causes drowsiness, and a stimulant causes alertness."
-  }
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Choose the word closest in meaning to SHUT.",
+  "choices": [
+   "open",
+   "push",
+   "find",
+   "close"
+  ],
+  "answer": 3,
+  "explanation": "To shut something is to close it."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Choose the word closest in meaning to LARGE.",
+  "choices": [
+   "tiny",
+   "big",
+   "soft",
+   "late"
+  ],
+  "answer": 1,
+  "explanation": "Large and big both describe something of great size."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Choose the word closest in meaning to MISTAKE.",
+  "choices": [
+   "error",
+   "answer",
+   "lesson",
+   "puzzle"
+  ],
+  "answer": 0,
+  "explanation": "A mistake is an error, something done wrong."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Choose the word closest in meaning to GIFT.",
+  "choices": [
+   "letter",
+   "party",
+   "present",
+   "ticket"
+  ],
+  "answer": 2,
+  "explanation": "A gift is a present given to someone."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Choose the word closest in meaning to SMART.",
+  "choices": [
+   "silly",
+   "short",
+   "clever",
+   "polite"
+  ],
+  "answer": 2,
+  "explanation": "Smart and clever both mean quick to learn and understand."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Choose the word closest in meaning to STONE.",
+  "choices": [
+   "rock",
+   "stick",
+   "shell",
+   "cloud"
+  ],
+  "answer": 0,
+  "explanation": "A stone is a small piece of rock."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Choose the word closest in meaning to CHOOSE.",
+  "choices": [
+   "lose",
+   "pick",
+   "drop",
+   "hide"
+  ],
+  "answer": 1,
+  "explanation": "To choose something is to pick it."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Choose the word closest in meaning to TALE.",
+  "choices": [
+   "song",
+   "road",
+   "game",
+   "story"
+  ],
+  "answer": 3,
+  "explanation": "A tale is a story, often one that is made up."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Leaf is to tree as feather is to ___",
+  "choices": [
+   "bird",
+   "nest",
+   "egg",
+   "sky"
+  ],
+  "answer": 0,
+  "explanation": "A leaf is part of a tree, and a feather is part of a bird."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Hose is to firefighter as wand is to ___",
+  "choices": [
+   "teacher",
+   "singer",
+   "magician",
+   "pilot"
+  ],
+  "answer": 2,
+  "explanation": "A firefighter uses a hose, and a magician uses a wand."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Big is to huge as small is to ___",
+  "choices": [
+   "tall",
+   "wide",
+   "heavy",
+   "tiny"
+  ],
+  "answer": 3,
+  "explanation": "Huge means very big, and tiny means very small."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Day is to night as summer is to ___",
+  "choices": [
+   "spring",
+   "winter",
+   "sunny",
+   "beach"
+  ],
+  "answer": 1,
+  "explanation": "Day is the opposite of night, and summer is the opposite of winter."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Robin is to bird as salmon is to ___",
+  "choices": [
+   "river",
+   "fish",
+   "pink",
+   "shell"
+  ],
+  "answer": 1,
+  "explanation": "A robin is a kind of bird, and a salmon is a kind of fish."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Bed is to sleep as chair is to ___",
+  "choices": [
+   "run",
+   "cook",
+   "swim",
+   "sit"
+  ],
+  "answer": 3,
+  "explanation": "A bed is used for sleeping, and a chair is used for sitting."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 1,
+  "stem": "Joke is to laughter as injury is to ___",
+  "choices": [
+   "smile",
+   "bed",
+   "pain",
+   "song"
+  ],
+  "answer": 2,
+  "explanation": "A joke causes laughter, and an injury causes pain."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Choose the word closest in meaning to ANXIOUS.",
+  "choices": [
+   "worried",
+   "proud",
+   "sleepy",
+   "careless"
+  ],
+  "answer": 0,
+  "explanation": "Someone who is anxious is worried about what might happen."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Choose the word closest in meaning to SHIVER.",
+  "choices": [
+   "whisper",
+   "sneeze",
+   "tremble",
+   "stretch"
+  ],
+  "answer": 2,
+  "explanation": "To shiver is to tremble or shake, often from cold or fear."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Choose the word closest in meaning to GENTLE.",
+  "choices": [
+   "rough",
+   "mild",
+   "loud",
+   "quick"
+  ],
+  "answer": 1,
+  "explanation": "Gentle means mild and kind, not harsh or rough."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Choose the word closest in meaning to ANNOUNCE.",
+  "choices": [
+   "forget",
+   "borrow",
+   "wonder",
+   "declare"
+  ],
+  "answer": 3,
+  "explanation": "To announce something is to declare it publicly."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Choose the word closest in meaning to DECLINE.",
+  "choices": [
+   "accept",
+   "repeat",
+   "compare",
+   "refuse"
+  ],
+  "answer": 3,
+  "explanation": "To decline an offer is to refuse it politely."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Choose the word closest in meaning to FLAWLESS.",
+  "choices": [
+   "broken",
+   "perfect",
+   "ordinary",
+   "hidden"
+  ],
+  "answer": 1,
+  "explanation": "Something flawless has no flaws, so it is perfect."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Choose the word closest in meaning to HUMBLE.",
+  "choices": [
+   "proud",
+   "wealthy",
+   "modest",
+   "nervous"
+  ],
+  "answer": 2,
+  "explanation": "A humble person is modest and does not brag."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Choose the word closest in meaning to PREDICT.",
+  "choices": [
+   "forecast",
+   "remember",
+   "measure",
+   "explain"
+  ],
+  "answer": 0,
+  "explanation": "To predict is to forecast, or say what will happen in the future."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Player is to team as soldier is to ___",
+  "choices": [
+   "war",
+   "army",
+   "uniform",
+   "general"
+  ],
+  "answer": 1,
+  "explanation": "A player is a member of a team, and a soldier is a member of an army."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Telescope is to astronomer as microscope is to ___",
+  "choices": [
+   "pilot",
+   "librarian",
+   "chef",
+   "biologist"
+  ],
+  "answer": 3,
+  "explanation": "An astronomer uses a telescope, and a biologist uses a microscope."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Chilly is to freezing as hungry is to ___",
+  "choices": [
+   "starving",
+   "full",
+   "thirsty",
+   "eating"
+  ],
+  "answer": 0,
+  "explanation": "Freezing is an extreme degree of chilly, and starving is an extreme degree of hungry."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Fearless is to brave as foolish is to ___",
+  "choices": [
+   "wise",
+   "angry",
+   "silly",
+   "timid"
+  ],
+  "answer": 2,
+  "explanation": "Fearless and brave are synonyms, as are foolish and silly."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Copper is to metal as granite is to ___",
+  "choices": [
+   "gold",
+   "mountain",
+   "rock",
+   "statue"
+  ],
+  "answer": 2,
+  "explanation": "Copper is a type of metal, and granite is a type of rock."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Glue is to attach as scissors is to ___",
+  "choices": [
+   "cut",
+   "paste",
+   "fold",
+   "draw"
+  ],
+  "answer": 0,
+  "explanation": "Glue is used to attach things, and scissors are used to cut things."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Exercise is to fitness as study is to ___",
+  "choices": [
+   "school",
+   "homework",
+   "teacher",
+   "knowledge"
+  ],
+  "answer": 3,
+  "explanation": "Exercise leads to fitness, and study leads to knowledge."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Choose the word closest in meaning to HESITATE.",
+  "choices": [
+   "hurry",
+   "waver",
+   "decide",
+   "argue"
+  ],
+  "answer": 1,
+  "explanation": "To hesitate is to waver or pause because of uncertainty."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Choose the word closest in meaning to FEROCIOUS.",
+  "choices": [
+   "timid",
+   "hungry",
+   "playful",
+   "fierce"
+  ],
+  "answer": 3,
+  "explanation": "Ferocious means fierce and savage."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Choose the word closest in meaning to ADEQUATE.",
+  "choices": [
+   "excellent",
+   "lacking",
+   "sufficient",
+   "ancient"
+  ],
+  "answer": 2,
+  "explanation": "Adequate means sufficient, or good enough for the purpose."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Choose the word closest in meaning to CONSPICUOUS.",
+  "choices": [
+   "noticeable",
+   "hidden",
+   "careful",
+   "ordinary"
+  ],
+  "answer": 0,
+  "explanation": "Something conspicuous is easily noticeable."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Choose the word closest in meaning to ELABORATE.",
+  "choices": [
+   "detailed",
+   "simple",
+   "brief",
+   "colorful"
+  ],
+  "answer": 0,
+  "explanation": "An elaborate plan or design is detailed and complicated."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Choose the word closest in meaning to OBSOLETE.",
+  "choices": [
+   "modern",
+   "broken",
+   "outdated",
+   "useful"
+  ],
+  "answer": 2,
+  "explanation": "Something obsolete is outdated and no longer in use."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Choose the word closest in meaning to VERSATILE.",
+  "choices": [
+   "stubborn",
+   "fragile",
+   "ordinary",
+   "adaptable"
+  ],
+  "answer": 3,
+  "explanation": "A versatile person or tool is adaptable to many uses."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Choose the word closest in meaning to PERSUADE.",
+  "choices": [
+   "prevent",
+   "convince",
+   "confuse",
+   "permit"
+  ],
+  "answer": 1,
+  "explanation": "To persuade someone is to convince them to believe or do something."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Stanza is to poem as scene is to ___",
+  "choices": [
+   "actor",
+   "curtain",
+   "play",
+   "audience"
+  ],
+  "answer": 2,
+  "explanation": "A stanza is a section of a poem, and a scene is a section of a play."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Scalpel is to surgeon as gavel is to ___",
+  "choices": [
+   "judge",
+   "lawyer",
+   "witness",
+   "prisoner"
+  ],
+  "answer": 0,
+  "explanation": "A surgeon uses a scalpel, and a judge uses a gavel."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Dislike is to loathe as like is to ___",
+  "choices": [
+   "prefer",
+   "adore",
+   "ignore",
+   "tolerate"
+  ],
+  "answer": 1,
+  "explanation": "To loathe is to dislike intensely, and to adore is to like intensely."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Expand is to contract as ascend is to ___",
+  "choices": [
+   "climb",
+   "soar",
+   "remain",
+   "descend"
+  ],
+  "answer": 3,
+  "explanation": "Expand is the opposite of contract, and ascend is the opposite of descend."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Sonnet is to poem as sneaker is to ___",
+  "choices": [
+   "foot",
+   "lace",
+   "race",
+   "shoe"
+  ],
+  "answer": 3,
+  "explanation": "A sonnet is a type of poem, and a sneaker is a type of shoe."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Desert is to arid as rainforest is to ___",
+  "choices": [
+   "frozen",
+   "humid",
+   "barren",
+   "sandy"
+  ],
+  "answer": 1,
+  "explanation": "A desert is characteristically arid, and a rainforest is characteristically humid."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 3,
+  "stem": "Spark is to fire as germ is to ___",
+  "choices": [
+   "infection",
+   "cure",
+   "microscope",
+   "soap"
+  ],
+  "answer": 0,
+  "explanation": "A spark can cause a fire, and a germ can cause an infection."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Choose the word closest in meaning to TRANQUIL.",
+  "choices": [
+   "turbulent",
+   "gloomy",
+   "serene",
+   "distant"
+  ],
+  "answer": 2,
+  "explanation": "Tranquil means calm and peaceful, or serene."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Choose the word closest in meaning to BENEVOLENT.",
+  "choices": [
+   "kindly",
+   "hostile",
+   "wealthy",
+   "clever"
+  ],
+  "answer": 0,
+  "explanation": "A benevolent person is kindly and wishes to do good."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Choose the word closest in meaning to INEVITABLE.",
+  "choices": [
+   "unlikely",
+   "desirable",
+   "sudden",
+   "unavoidable"
+  ],
+  "answer": 3,
+  "explanation": "Something inevitable is certain to happen and cannot be avoided."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Choose the word closest in meaning to DILAPIDATED.",
+  "choices": [
+   "spacious",
+   "rundown",
+   "luxurious",
+   "crowded"
+  ],
+  "answer": 1,
+  "explanation": "A dilapidated building is rundown and in poor repair."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Choose the word closest in meaning to ARDUOUS.",
+  "choices": [
+   "effortless",
+   "strenuous",
+   "rewarding",
+   "cautious"
+  ],
+  "answer": 1,
+  "explanation": "An arduous task is strenuous and requires great effort."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Choose the word closest in meaning to SCRUTINIZE.",
+  "choices": [
+   "ignore",
+   "praise",
+   "summarize",
+   "examine"
+  ],
+  "answer": 3,
+  "explanation": "To scrutinize is to examine something closely and carefully."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Choose the word closest in meaning to AMIABLE.",
+  "choices": [
+   "friendly",
+   "moody",
+   "talkative",
+   "honest"
+  ],
+  "answer": 0,
+  "explanation": "An amiable person is friendly and pleasant."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Choose the word closest in meaning to TENTATIVE.",
+  "choices": [
+   "final",
+   "eager",
+   "uncertain",
+   "careless"
+  ],
+  "answer": 2,
+  "explanation": "A tentative plan is uncertain and not yet settled."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Vertebra is to spine as link is to ___",
+  "choices": [
+   "metal",
+   "lock",
+   "anchor",
+   "chain"
+  ],
+  "answer": 3,
+  "explanation": "A vertebra is one unit of a spine, and a link is one unit of a chain."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Loom is to weaver as kiln is to ___",
+  "choices": [
+   "baker",
+   "potter",
+   "smith",
+   "tailor"
+  ],
+  "answer": 1,
+  "explanation": "A weaver uses a loom, and a potter uses a kiln to fire clay."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Tepid is to boiling as dim is to ___",
+  "choices": [
+   "dark",
+   "faint",
+   "blinding",
+   "shadowy"
+  ],
+  "answer": 2,
+  "explanation": "Boiling is far hotter than tepid, and blinding is far brighter than dim."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Novice is to expert as amateur is to ___",
+  "choices": [
+   "professional",
+   "beginner",
+   "hobbyist",
+   "athlete"
+  ],
+  "answer": 0,
+  "explanation": "A novice is the opposite of an expert, and an amateur is the opposite of a professional."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 2,
+  "stem": "Dolphin is to mammal as penguin is to ___",
+  "choices": [
+   "bird",
+   "fish",
+   "reptile",
+   "ocean"
+  ],
+  "answer": 0,
+  "explanation": "A dolphin is a mammal even though it swims, and a penguin is a bird even though it cannot fly."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Shield is to deflect as sponge is to ___",
+  "choices": [
+   "repel",
+   "scatter",
+   "absorb",
+   "polish"
+  ],
+  "answer": 2,
+  "explanation": "A shield is used to deflect blows, and a sponge is used to absorb liquid."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 4,
+  "stem": "Negligence is to accident as diligence is to ___",
+  "choices": [
+   "laziness",
+   "success",
+   "effort",
+   "luck"
+  ],
+  "answer": 1,
+  "explanation": "Negligence tends to cause an accident, and diligence tends to bring success."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Choose the word closest in meaning to RECALCITRANT.",
+  "choices": [
+   "compliant",
+   "apologetic",
+   "forgetful",
+   "defiant"
+  ],
+  "answer": 3,
+  "explanation": "A recalcitrant person is defiant and resists authority or control."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Choose the word closest in meaning to MAGNANIMOUS.",
+  "choices": [
+   "vengeful",
+   "generous",
+   "boastful",
+   "timid"
+  ],
+  "answer": 1,
+  "explanation": "Magnanimous means generous and forgiving, especially toward a rival."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Choose the word closest in meaning to EQUANIMITY.",
+  "choices": [
+   "composure",
+   "anxiety",
+   "fairness",
+   "wealth"
+  ],
+  "answer": 0,
+  "explanation": "Equanimity is composure, or calmness under pressure; it does not mean fairness despite the \"equ-\" root."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Choose the word closest in meaning to PERNICIOUS.",
+  "choices": [
+   "persistent",
+   "trivial",
+   "harmful",
+   "beneficial"
+  ],
+  "answer": 2,
+  "explanation": "Something pernicious is harmful, often in a gradual or hidden way."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Choose the word closest in meaning to UBIQUITOUS.",
+  "choices": [
+   "unique",
+   "rare",
+   "widespread",
+   "ancient"
+  ],
+  "answer": 2,
+  "explanation": "Ubiquitous means found everywhere, or widespread."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Choose the word closest in meaning to INSCRUTABLE.",
+  "choices": [
+   "mysterious",
+   "obvious",
+   "careless",
+   "thorough"
+  ],
+  "answer": 0,
+  "explanation": "Something inscrutable is mysterious and impossible to understand or interpret."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Choose the word closest in meaning to ALACRITY.",
+  "choices": [
+   "reluctance",
+   "eagerness",
+   "sorrow",
+   "precision"
+  ],
+  "answer": 1,
+  "explanation": "Alacrity is cheerful eagerness or readiness to act."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Choose the word closest in meaning to DISPARAGE.",
+  "choices": [
+   "praise",
+   "separate",
+   "encourage",
+   "belittle"
+  ],
+  "answer": 3,
+  "explanation": "To disparage is to belittle or speak of something as unimportant."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Archipelago is to island as constellation is to ___",
+  "choices": [
+   "star",
+   "galaxy",
+   "telescope",
+   "planet"
+  ],
+  "answer": 0,
+  "explanation": "An archipelago is a group of islands, and a constellation is a group of stars."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Trowel is to mason as awl is to ___",
+  "choices": [
+   "sailor",
+   "chemist",
+   "cobbler",
+   "butcher"
+  ],
+  "answer": 2,
+  "explanation": "A mason uses a trowel to spread mortar, and a cobbler uses an awl to punch holes in leather."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Drizzle is to deluge as breeze is to ___",
+  "choices": [
+   "zephyr",
+   "mist",
+   "calm",
+   "gale"
+  ],
+  "answer": 3,
+  "explanation": "A deluge is a far heavier rain than a drizzle, and a gale is a far stronger wind than a breeze; a zephyr is itself a gentle breeze."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Prodigal is to thrifty as timorous is to ___",
+  "choices": [
+   "fearful",
+   "intrepid",
+   "wasteful",
+   "cautious"
+  ],
+  "answer": 1,
+  "explanation": "Prodigal (wasteful) is the opposite of thrifty, and timorous (fearful) is the opposite of intrepid."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Satire is to literature as fresco is to ___",
+  "choices": [
+   "plaster",
+   "painting",
+   "cathedral",
+   "sculpture"
+  ],
+  "answer": 1,
+  "explanation": "Satire is a form of literature, and a fresco is a form of painting."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Charlatan is to deceptive as zealot is to ___",
+  "choices": [
+   "indifferent",
+   "deceitful",
+   "timid",
+   "fervent"
+  ],
+  "answer": 3,
+  "explanation": "A charlatan is by nature deceptive, and a zealot is by nature fervent."
+ },
+ {
+  "exam_type": "SSAT",
+  "section": "verbal",
+  "difficulty": 5,
+  "stem": "Sedative is to drowsiness as stimulant is to ___",
+  "choices": [
+   "sleep",
+   "medicine",
+   "alertness",
+   "relief"
+  ],
+  "answer": 2,
+  "explanation": "A sedative causes drowsiness, and a stimulant causes alertness."
+ }
 ]
