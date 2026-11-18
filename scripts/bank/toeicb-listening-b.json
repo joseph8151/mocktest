@@ -574,7 +574,7 @@
     "section": "listening",
     "difficulty": 1,
     "passage": "Caller: Hi, Sam, it's Lisa. I'm calling about dinner tonight. I'm sorry, but I have to work late, so I can't meet you at six. Can we meet at seven thirty instead? The restaurant is the same, the pizza place on Oak Street. Please call me back or send me a text when you get this. Thanks, and see you soon!",
-    "stem": "Why is the woman calling?",
+    "stem": "Why is the speaker calling?",
     "choices": [
       "To cancel a trip",
       "To order a pizza",
@@ -633,7 +633,7 @@
     "exam_type": "TOEICB",
     "section": "listening",
     "difficulty": 1,
-    "passage": "Announcer: Good morning, students. Today's soccer game is canceled because the field is too wet. The game will be played next Friday instead. Also, the library will be closed at lunchtime today. You can return your books after school. Thank you, and have a great day!",
+    "passage": "Announcer: Good morning, students. Today's soccer game is canceled because the field is too wet. The game will be played next Friday instead. Players should still come to practice in the gym after school today. Also, the library will be closed at lunchtime today. You can return your books after school. Thank you, and have a great day!",
     "stem": "Why is the soccer game canceled?",
     "choices": [
       "The field is wet",
@@ -648,7 +648,7 @@
     "exam_type": "TOEICB",
     "section": "listening",
     "difficulty": 1,
-    "passage": "Announcer: Good morning, students. Today's soccer game is canceled because the field is too wet. The game will be played next Friday instead. Also, the library will be closed at lunchtime today. You can return your books after school. Thank you, and have a great day!",
+    "passage": "Announcer: Good morning, students. Today's soccer game is canceled because the field is too wet. The game will be played next Friday instead. Players should still come to practice in the gym after school today. Also, the library will be closed at lunchtime today. You can return your books after school. Thank you, and have a great day!",
     "stem": "When will the game be played?",
     "choices": [
       "Today",
@@ -723,7 +723,7 @@
     "exam_type": "TOEICB",
     "section": "listening",
     "difficulty": 2,
-    "passage": "Announcer: Attention, please. This is an announcement for passengers on Flight two-oh-eight to Boston. The flight will now leave from Gate fourteen, not Gate four. Boarding will begin at one forty. Passengers with small children may board first. Please have your boarding pass and ID ready. Thank you.",
+    "passage": "Announcer: Attention, please. This is an announcement for passengers on Flight two-oh-eight to Boston. The flight will now leave from Gate fourteen, not Gate four. Boarding will begin at one forty. Passengers with small children may board first. Please have your boarding pass and ID ready. We're sorry for the change, and thank you for flying with us.",
     "stem": "What has changed?",
     "choices": [
       "The gate number",
@@ -738,7 +738,7 @@
     "exam_type": "TOEICB",
     "section": "listening",
     "difficulty": 2,
-    "passage": "Announcer: Attention, please. This is an announcement for passengers on Flight two-oh-eight to Boston. The flight will now leave from Gate fourteen, not Gate four. Boarding will begin at one forty. Passengers with small children may board first. Please have your boarding pass and ID ready. Thank you.",
+    "passage": "Announcer: Attention, please. This is an announcement for passengers on Flight two-oh-eight to Boston. The flight will now leave from Gate fourteen, not Gate four. Boarding will begin at one forty. Passengers with small children may board first. Please have your boarding pass and ID ready. We're sorry for the change, and thank you for flying with us.",
     "stem": "Who can board first?",
     "choices": [
       "Passengers with large bags",
@@ -753,7 +753,7 @@
     "exam_type": "TOEICB",
     "section": "listening",
     "difficulty": 2,
-    "passage": "Caller: Hi, Ana, this is Peter from the accounting department. I'm calling about tomorrow's meeting. The meeting room on the second floor isn't available, so we'll meet in my office instead. It's room two-oh-five. Also, could you bring the sales numbers from last month? Thanks, and see you at ten.",
+    "passage": "Caller: Hi, Ana, this is Peter from the accounting department. I'm calling about tomorrow's meeting. The meeting room on the second floor isn't available, so we'll meet in my office instead. It's room two-oh-five. Also, could you bring the sales numbers from last month? The meeting will take about an hour. Thanks, and see you at ten.",
     "stem": "Where will the meeting be held?",
     "choices": [
       "In the meeting room on the second floor",
@@ -768,7 +768,7 @@
     "exam_type": "TOEICB",
     "section": "listening",
     "difficulty": 2,
-    "passage": "Caller: Hi, Ana, this is Peter from the accounting department. I'm calling about tomorrow's meeting. The meeting room on the second floor isn't available, so we'll meet in my office instead. It's room two-oh-five. Also, could you bring the sales numbers from last month? Thanks, and see you at ten.",
+    "passage": "Caller: Hi, Ana, this is Peter from the accounting department. I'm calling about tomorrow's meeting. The meeting room on the second floor isn't available, so we'll meet in my office instead. It's room two-oh-five. Also, could you bring the sales numbers from last month? The meeting will take about an hour. Thanks, and see you at ten.",
     "stem": "What does the caller ask Ana to bring?",
     "choices": [
       "A laptop",
