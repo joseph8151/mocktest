@@ -1,0 +1,1142 @@
+[
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "It is raining.",
+  "stem": "Choose the picture that best matches what you hear.",
+  "choices": [
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"60\" cy=\"60\" r=\"20\" stroke=\"#b31942\" fill=\"#fff\" stroke-width=\"3\"/><line x1=\"85.0\" y1=\"60.0\" x2=\"93.0\" y2=\"60.0\" stroke=\"#b31942\" stroke-width=\"3\"/><line x1=\"77.7\" y1=\"77.7\" x2=\"83.3\" y2=\"83.3\" stroke=\"#b31942\" stroke-width=\"3\"/><line x1=\"60.0\" y1=\"85.0\" x2=\"60.0\" y2=\"93.0\" stroke=\"#b31942\" stroke-width=\"3\"/><line x1=\"42.3\" y1=\"77.7\" x2=\"36.7\" y2=\"83.3\" stroke=\"#b31942\" stroke-width=\"3\"/><line x1=\"35.0\" y1=\"60.0\" x2=\"27.0\" y2=\"60.0\" stroke=\"#b31942\" stroke-width=\"3\"/><line x1=\"42.3\" y1=\"42.3\" x2=\"36.7\" y2=\"36.7\" stroke=\"#b31942\" stroke-width=\"3\"/><line x1=\"60.0\" y1=\"35.0\" x2=\"60.0\" y2=\"27.0\" stroke=\"#b31942\" stroke-width=\"3\"/><line x1=\"77.7\" y1=\"42.3\" x2=\"83.3\" y2=\"36.7\" stroke=\"#b31942\" stroke-width=\"3\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M30,58 Q20,58 22,48 Q24,38 36,40 Q40,24 56,26 Q70,20 78,34 Q94,32 96,46 Q98,58 86,58 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><text x=\"36\" y=\"82\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"18\" font-weight=\"700\" fill=\"#0a1f44\" stroke=\"none\" text-anchor=\"middle\">✻</text><text x=\"56\" y=\"90\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"18\" font-weight=\"700\" fill=\"#0a1f44\" stroke=\"none\" text-anchor=\"middle\">✻</text><text x=\"76\" y=\"82\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"18\" font-weight=\"700\" fill=\"#0a1f44\" stroke=\"none\" text-anchor=\"middle\">✻</text><text x=\"46\" y=\"106\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"18\" font-weight=\"700\" fill=\"#0a1f44\" stroke=\"none\" text-anchor=\"middle\">✻</text><text x=\"68\" y=\"108\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"18\" font-weight=\"700\" fill=\"#0a1f44\" stroke=\"none\" text-anchor=\"middle\">✻</text><text x=\"86\" y=\"100\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"18\" font-weight=\"700\" fill=\"#0a1f44\" stroke=\"none\" text-anchor=\"middle\">✻</text></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M30,58 Q20,58 22,48 Q24,38 36,40 Q40,24 56,26 Q70,20 78,34 Q94,32 96,46 Q98,58 86,58 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><line x1=\"36\" y1=\"66\" x2=\"30\" y2=\"84\" stroke=\"#0a1f44\" stroke-width=\"3\"/><line x1=\"52\" y1=\"72\" x2=\"46\" y2=\"90\" stroke=\"#0a1f44\" stroke-width=\"3\"/><line x1=\"68\" y1=\"66\" x2=\"62\" y2=\"84\" stroke=\"#0a1f44\" stroke-width=\"3\"/><line x1=\"84\" y1=\"72\" x2=\"78\" y2=\"90\" stroke=\"#0a1f44\" stroke-width=\"3\"/><line x1=\"44\" y1=\"92\" x2=\"39\" y2=\"106\" stroke=\"#0a1f44\" stroke-width=\"3\"/><line x1=\"60\" y1=\"92\" x2=\"55\" y2=\"106\" stroke=\"#0a1f44\" stroke-width=\"3\"/><line x1=\"76\" y1=\"92\" x2=\"71\" y2=\"106\" stroke=\"#0a1f44\" stroke-width=\"3\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20,78 Q10,78 12,68 Q14,58 26,60 Q30,44 46,46 Q60,40 68,54 Q84,52 86,66 Q88,78 76,78 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><path d=\"M46,56 Q36,56 38,46 Q40,36 52,38 Q56,22 72,24 Q86,18 94,32 Q110,30 112,44 Q114,56 102,56 Z\" stroke=\"#777\" fill=\"#fff\" stroke-width=\"2.5\"/></svg>"
+  ],
+  "answer": 2,
+  "explanation": "The speaker says it is raining, so the picture with rain falling from a cloud is correct."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "There are three apples on the table.",
+  "stem": "Choose the picture that best matches what you hear.",
+  "choices": [
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"10\" y=\"74\" width=\"100\" height=\"5\" rx=\"0\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><line x1=\"16\" y1=\"79\" x2=\"16\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"104\" y1=\"79\" x2=\"104\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><circle cx=\"40\" cy=\"64\" r=\"8\" stroke=\"#b31942\" fill=\"#b31942\" stroke-width=\"2\"/><line x1=\"40\" y1=\"56\" x2=\"42\" y2=\"51\" stroke=\"#222\" stroke-width=\"2\"/><circle cx=\"60\" cy=\"64\" r=\"8\" stroke=\"#b31942\" fill=\"#b31942\" stroke-width=\"2\"/><line x1=\"60\" y1=\"56\" x2=\"62\" y2=\"51\" stroke=\"#222\" stroke-width=\"2\"/><circle cx=\"80\" cy=\"64\" r=\"8\" stroke=\"#b31942\" fill=\"#b31942\" stroke-width=\"2\"/><line x1=\"80\" y1=\"56\" x2=\"82\" y2=\"51\" stroke=\"#222\" stroke-width=\"2\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"10\" y=\"74\" width=\"100\" height=\"5\" rx=\"0\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><line x1=\"16\" y1=\"79\" x2=\"16\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"104\" y1=\"79\" x2=\"104\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><circle cx=\"50\" cy=\"64\" r=\"8\" stroke=\"#b31942\" fill=\"#b31942\" stroke-width=\"2\"/><line x1=\"50\" y1=\"56\" x2=\"52\" y2=\"51\" stroke=\"#222\" stroke-width=\"2\"/><circle cx=\"70\" cy=\"64\" r=\"8\" stroke=\"#b31942\" fill=\"#b31942\" stroke-width=\"2\"/><line x1=\"70\" y1=\"56\" x2=\"72\" y2=\"51\" stroke=\"#222\" stroke-width=\"2\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"10\" y=\"74\" width=\"100\" height=\"5\" rx=\"0\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><line x1=\"16\" y1=\"79\" x2=\"16\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"104\" y1=\"79\" x2=\"104\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><circle cx=\"30\" cy=\"64\" r=\"8\" stroke=\"#b31942\" fill=\"#b31942\" stroke-width=\"2\"/><line x1=\"30\" y1=\"56\" x2=\"32\" y2=\"51\" stroke=\"#222\" stroke-width=\"2\"/><circle cx=\"50\" cy=\"64\" r=\"8\" stroke=\"#b31942\" fill=\"#b31942\" stroke-width=\"2\"/><line x1=\"50\" y1=\"56\" x2=\"52\" y2=\"51\" stroke=\"#222\" stroke-width=\"2\"/><circle cx=\"70\" cy=\"64\" r=\"8\" stroke=\"#b31942\" fill=\"#b31942\" stroke-width=\"2\"/><line x1=\"70\" y1=\"56\" x2=\"72\" y2=\"51\" stroke=\"#222\" stroke-width=\"2\"/><circle cx=\"90\" cy=\"64\" r=\"8\" stroke=\"#b31942\" fill=\"#b31942\" stroke-width=\"2\"/><line x1=\"90\" y1=\"56\" x2=\"92\" y2=\"51\" stroke=\"#222\" stroke-width=\"2\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"10\" y=\"74\" width=\"100\" height=\"5\" rx=\"0\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><line x1=\"16\" y1=\"79\" x2=\"16\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"104\" y1=\"79\" x2=\"104\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><circle cx=\"60\" cy=\"64\" r=\"8\" stroke=\"#b31942\" fill=\"#b31942\" stroke-width=\"2\"/><line x1=\"60\" y1=\"56\" x2=\"62\" y2=\"51\" stroke=\"#222\" stroke-width=\"2\"/></svg>"
+  ],
+  "answer": 0,
+  "explanation": "Only one picture shows exactly three apples on the table."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "The clock shows seven o'clock.",
+  "stem": "Choose the picture that best matches what you hear.",
+  "choices": [
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"60\" cy=\"60\" r=\"46\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"3\"/><line x1=\"60.0\" y1=\"23.0\" x2=\"60.0\" y2=\"16.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"80.5\" y1=\"24.5\" x2=\"82.0\" y2=\"21.9\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"95.5\" y1=\"39.5\" x2=\"98.1\" y2=\"38.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"97.0\" y1=\"60.0\" x2=\"104.0\" y2=\"60.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"95.5\" y1=\"80.5\" x2=\"98.1\" y2=\"82.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"80.5\" y1=\"95.5\" x2=\"82.0\" y2=\"98.1\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"60.0\" y1=\"97.0\" x2=\"60.0\" y2=\"104.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"39.5\" y1=\"95.5\" x2=\"38.0\" y2=\"98.1\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"24.5\" y1=\"80.5\" x2=\"21.9\" y2=\"82.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"23.0\" y1=\"60.0\" x2=\"16.0\" y2=\"60.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"24.5\" y1=\"39.5\" x2=\"21.9\" y2=\"38.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"39.5\" y1=\"24.5\" x2=\"38.0\" y2=\"21.9\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"60\" y1=\"60\" x2=\"49.0\" y2=\"40.9\" stroke=\"#0a1f44\" stroke-width=\"5\"/><line x1=\"60\" y1=\"60\" x2=\"60.0\" y2=\"25.0\" stroke=\"#222\" stroke-width=\"3\"/><circle cx=\"60\" cy=\"60\" r=\"3\" stroke=\"#222\" fill=\"#222\" stroke-width=\"2.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"60\" cy=\"60\" r=\"46\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"3\"/><line x1=\"60.0\" y1=\"23.0\" x2=\"60.0\" y2=\"16.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"80.5\" y1=\"24.5\" x2=\"82.0\" y2=\"21.9\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"95.5\" y1=\"39.5\" x2=\"98.1\" y2=\"38.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"97.0\" y1=\"60.0\" x2=\"104.0\" y2=\"60.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"95.5\" y1=\"80.5\" x2=\"98.1\" y2=\"82.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"80.5\" y1=\"95.5\" x2=\"82.0\" y2=\"98.1\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"60.0\" y1=\"97.0\" x2=\"60.0\" y2=\"104.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"39.5\" y1=\"95.5\" x2=\"38.0\" y2=\"98.1\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"24.5\" y1=\"80.5\" x2=\"21.9\" y2=\"82.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"23.0\" y1=\"60.0\" x2=\"16.0\" y2=\"60.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"24.5\" y1=\"39.5\" x2=\"21.9\" y2=\"38.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"39.5\" y1=\"24.5\" x2=\"38.0\" y2=\"21.9\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"60\" y1=\"60\" x2=\"44.4\" y2=\"75.6\" stroke=\"#0a1f44\" stroke-width=\"5\"/><line x1=\"60\" y1=\"60\" x2=\"60.0\" y2=\"95.0\" stroke=\"#222\" stroke-width=\"3\"/><circle cx=\"60\" cy=\"60\" r=\"3\" stroke=\"#222\" fill=\"#222\" stroke-width=\"2.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"60\" cy=\"60\" r=\"46\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"3\"/><line x1=\"60.0\" y1=\"23.0\" x2=\"60.0\" y2=\"16.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"80.5\" y1=\"24.5\" x2=\"82.0\" y2=\"21.9\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"95.5\" y1=\"39.5\" x2=\"98.1\" y2=\"38.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"97.0\" y1=\"60.0\" x2=\"104.0\" y2=\"60.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"95.5\" y1=\"80.5\" x2=\"98.1\" y2=\"82.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"80.5\" y1=\"95.5\" x2=\"82.0\" y2=\"98.1\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"60.0\" y1=\"97.0\" x2=\"60.0\" y2=\"104.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"39.5\" y1=\"95.5\" x2=\"38.0\" y2=\"98.1\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"24.5\" y1=\"80.5\" x2=\"21.9\" y2=\"82.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"23.0\" y1=\"60.0\" x2=\"16.0\" y2=\"60.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"24.5\" y1=\"39.5\" x2=\"21.9\" y2=\"38.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"39.5\" y1=\"24.5\" x2=\"38.0\" y2=\"21.9\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"60\" y1=\"60\" x2=\"71.0\" y2=\"79.1\" stroke=\"#0a1f44\" stroke-width=\"5\"/><line x1=\"60\" y1=\"60\" x2=\"60.0\" y2=\"25.0\" stroke=\"#222\" stroke-width=\"3\"/><circle cx=\"60\" cy=\"60\" r=\"3\" stroke=\"#222\" fill=\"#222\" stroke-width=\"2.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"60\" cy=\"60\" r=\"46\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"3\"/><line x1=\"60.0\" y1=\"23.0\" x2=\"60.0\" y2=\"16.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"80.5\" y1=\"24.5\" x2=\"82.0\" y2=\"21.9\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"95.5\" y1=\"39.5\" x2=\"98.1\" y2=\"38.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"97.0\" y1=\"60.0\" x2=\"104.0\" y2=\"60.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"95.5\" y1=\"80.5\" x2=\"98.1\" y2=\"82.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"80.5\" y1=\"95.5\" x2=\"82.0\" y2=\"98.1\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"60.0\" y1=\"97.0\" x2=\"60.0\" y2=\"104.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"39.5\" y1=\"95.5\" x2=\"38.0\" y2=\"98.1\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"24.5\" y1=\"80.5\" x2=\"21.9\" y2=\"82.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"23.0\" y1=\"60.0\" x2=\"16.0\" y2=\"60.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"24.5\" y1=\"39.5\" x2=\"21.9\" y2=\"38.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"39.5\" y1=\"24.5\" x2=\"38.0\" y2=\"21.9\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"60\" y1=\"60\" x2=\"49.0\" y2=\"79.1\" stroke=\"#0a1f44\" stroke-width=\"5\"/><line x1=\"60\" y1=\"60\" x2=\"60.0\" y2=\"25.0\" stroke=\"#222\" stroke-width=\"3\"/><circle cx=\"60\" cy=\"60\" r=\"3\" stroke=\"#222\" fill=\"#222\" stroke-width=\"2.5\"/></svg>"
+  ],
+  "answer": 3,
+  "explanation": "At seven o'clock the short hand points to 7 and the long hand points to 12."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "The man is sitting on a chair.",
+  "stem": "Choose the picture that best matches what you hear.",
+  "choices": [
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"4\" y1=\"112\" x2=\"116\" y2=\"112\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"64\" y1=\"82\" x2=\"86\" y2=\"82\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"64\" y1=\"82\" x2=\"64\" y2=\"56\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"66\" y1=\"82\" x2=\"66\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"84\" y1=\"82\" x2=\"84\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><circle cx=\"38\" cy=\"50\" r=\"7.5\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><polyline points=\"38,58 38,84\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"38,62 27,80\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"38,62 49,80\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"38,84 34,98 30,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"38,84 42,98 46,112\" stroke=\"#222\" stroke-width=\"2.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"4\" y1=\"112\" x2=\"116\" y2=\"112\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"32\" y1=\"79\" x2=\"56.2\" y2=\"79\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"32\" y1=\"79\" x2=\"32\" y2=\"50.4\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"34.2\" y1=\"79\" x2=\"34.2\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"54\" y1=\"79\" x2=\"54\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><circle cx=\"42\" cy=\"50\" r=\"7.5\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><polyline points=\"42,58 42,80\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"42,62 48,74 58,76\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"42,62 50,72 60,74\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"42,80 60,80 62,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"42,80 62,79 66,112\" stroke=\"#222\" stroke-width=\"2.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"4\" y1=\"112\" x2=\"116\" y2=\"112\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"32\" y1=\"79\" x2=\"56.2\" y2=\"79\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"32\" y1=\"79\" x2=\"32\" y2=\"50.4\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"34.2\" y1=\"79\" x2=\"34.2\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"54\" y1=\"79\" x2=\"54\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><circle cx=\"42\" cy=\"50\" r=\"7.5\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><path d=\"M34.5,50 Q33,59 37,61\" stroke=\"#222\" stroke-width=\"2.5\"/><path d=\"M49.5,50 Q51,59 47,61\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"42,58 42,80\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"42,62 48,74 58,76\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"42,62 50,72 60,74\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"42,80 60,80 62,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"42,80 62,79 66,112\" stroke=\"#222\" stroke-width=\"2.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"4\" y1=\"112\" x2=\"116\" y2=\"112\" stroke=\"#777\" stroke-width=\"2\"/><circle cx=\"40\" cy=\"68\" r=\"7.5\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><polyline points=\"40,76 40,102\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"40,80 30,110\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"40,80 52,98\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"40,102 56,100 66,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"40,102 58,102 70,112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"78\" y1=\"82\" x2=\"100\" y2=\"82\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"78\" y1=\"82\" x2=\"78\" y2=\"56\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"80\" y1=\"82\" x2=\"80\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"98\" y1=\"82\" x2=\"98\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/></svg>"
+  ],
+  "answer": 1,
+  "explanation": "The correct picture shows a man sitting on a chair, not standing, not a woman, and not on the floor."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "The book is on the table.",
+  "stem": "Choose the picture that best matches what you hear.",
+  "choices": [
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"4\" y1=\"112\" x2=\"116\" y2=\"112\" stroke=\"#777\" stroke-width=\"2\"/><rect x=\"20\" y=\"70\" width=\"80\" height=\"5\" rx=\"0\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><line x1=\"26\" y1=\"75\" x2=\"26\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"94\" y1=\"75\" x2=\"94\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><rect x=\"49\" y=\"105\" width=\"22\" height=\"7\" rx=\"1\" stroke=\"#0a1f44\" fill=\"#0a1f44\" stroke-width=\"2\"/><line x1=\"51\" y1=\"108.5\" x2=\"69\" y2=\"108.5\" stroke=\"#fff\" stroke-width=\"1.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"4\" y1=\"112\" x2=\"116\" y2=\"112\" stroke=\"#777\" stroke-width=\"2\"/><rect x=\"20\" y=\"70\" width=\"80\" height=\"5\" rx=\"0\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><line x1=\"26\" y1=\"75\" x2=\"26\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"94\" y1=\"75\" x2=\"94\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><rect x=\"49\" y=\"63\" width=\"22\" height=\"7\" rx=\"1\" stroke=\"#0a1f44\" fill=\"#0a1f44\" stroke-width=\"2\"/><line x1=\"51\" y1=\"66.5\" x2=\"69\" y2=\"66.5\" stroke=\"#fff\" stroke-width=\"1.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"4\" y1=\"112\" x2=\"116\" y2=\"112\" stroke=\"#777\" stroke-width=\"2\"/><rect x=\"10\" y=\"70\" width=\"70\" height=\"5\" rx=\"0\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><line x1=\"16\" y1=\"75\" x2=\"16\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"74\" y1=\"75\" x2=\"74\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><rect x=\"88\" y=\"105\" width=\"22\" height=\"7\" rx=\"1\" stroke=\"#0a1f44\" fill=\"#0a1f44\" stroke-width=\"2\"/><line x1=\"90\" y1=\"108.5\" x2=\"108\" y2=\"108.5\" stroke=\"#fff\" stroke-width=\"1.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"4\" y1=\"112\" x2=\"116\" y2=\"112\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"46\" y1=\"82\" x2=\"68\" y2=\"82\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"46\" y1=\"82\" x2=\"46\" y2=\"56\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"48\" y1=\"82\" x2=\"48\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"66\" y1=\"82\" x2=\"66\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><rect x=\"52\" y=\"75\" width=\"22\" height=\"7\" rx=\"1\" stroke=\"#0a1f44\" fill=\"#0a1f44\" stroke-width=\"2\"/><line x1=\"54\" y1=\"78.5\" x2=\"72\" y2=\"78.5\" stroke=\"#fff\" stroke-width=\"1.5\"/></svg>"
+  ],
+  "answer": 1,
+  "explanation": "The book is on top of the table in the correct picture."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "This shirt costs twelve dollars.",
+  "stem": "Choose the picture that best matches what you hear.",
+  "choices": [
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M22,16 L8,30 L16,40 L22,36 L22,72 L54,72 L54,36 L60,40 L68,30 L54,16 Q38,26 22,16 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><line x1=\"60\" y1=\"30\" x2=\"78\" y2=\"52\" stroke=\"#777\" stroke-width=\"2\"/><path d=\"M70,60 L78,52 L116,52 L116,78 L78,78 L70,70 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><circle cx=\"78\" cy=\"65\" r=\"2.5\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><text x=\"97\" y=\"70.95\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"17\" font-weight=\"700\" fill=\"#b31942\" stroke=\"none\" text-anchor=\"middle\">$20</text></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M22,16 L8,30 L16,40 L22,36 L22,72 L54,72 L54,36 L60,40 L68,30 L54,16 Q38,26 22,16 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><line x1=\"60\" y1=\"30\" x2=\"78\" y2=\"52\" stroke=\"#777\" stroke-width=\"2\"/><path d=\"M70,60 L78,52 L116,52 L116,78 L78,78 L70,70 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><circle cx=\"78\" cy=\"65\" r=\"2.5\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><text x=\"97\" y=\"70.95\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"17\" font-weight=\"700\" fill=\"#b31942\" stroke=\"none\" text-anchor=\"middle\">$2</text></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M22,16 L8,30 L16,40 L22,36 L22,72 L54,72 L54,36 L60,40 L68,30 L54,16 Q38,26 22,16 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><line x1=\"60\" y1=\"30\" x2=\"78\" y2=\"52\" stroke=\"#777\" stroke-width=\"2\"/><path d=\"M70,60 L78,52 L116,52 L116,78 L78,78 L70,70 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><circle cx=\"78\" cy=\"65\" r=\"2.5\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><text x=\"97\" y=\"70.95\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"17\" font-weight=\"700\" fill=\"#b31942\" stroke=\"none\" text-anchor=\"middle\">$15</text></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M22,16 L8,30 L16,40 L22,36 L22,72 L54,72 L54,36 L60,40 L68,30 L54,16 Q38,26 22,16 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><line x1=\"60\" y1=\"30\" x2=\"78\" y2=\"52\" stroke=\"#777\" stroke-width=\"2\"/><path d=\"M70,60 L78,52 L116,52 L116,78 L78,78 L70,70 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><circle cx=\"78\" cy=\"65\" r=\"2.5\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><text x=\"97\" y=\"70.95\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"17\" font-weight=\"700\" fill=\"#b31942\" stroke=\"none\" text-anchor=\"middle\">$12</text></svg>"
+  ],
+  "answer": 3,
+  "explanation": "Twelve dollars is written $12; the other tags show different prices."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "The woman is talking on the phone.",
+  "stem": "Choose the picture that best matches what you hear.",
+  "choices": [
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"4\" y1=\"112\" x2=\"116\" y2=\"112\" stroke=\"#777\" stroke-width=\"2\"/><circle cx=\"54\" cy=\"50\" r=\"7.5\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><path d=\"M46.5,50 Q45,59 49,61\" stroke=\"#222\" stroke-width=\"2.5\"/><path d=\"M61.5,50 Q63,59 59,61\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"54,58 54,84\" stroke=\"#222\" stroke-width=\"2.5\"/><path d=\"M54,62 L43,86 L65,86 Z\" stroke=\"#222\" stroke-width=\"2.5\" fill=\"#fff\"/><polyline points=\"54,62 43,80\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"54,62 70,68 61,52\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"54,84 50,98 46,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"54,84 58,98 62,112\" stroke=\"#222\" stroke-width=\"2.5\"/><rect x=\"61\" y=\"44\" width=\"6\" height=\"12\" rx=\"1.5\" stroke=\"#b31942\" fill=\"#b31942\" stroke-width=\"1.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"4\" y1=\"112\" x2=\"116\" y2=\"112\" stroke=\"#777\" stroke-width=\"2\"/><circle cx=\"54\" cy=\"50\" r=\"7.5\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><path d=\"M46.5,50 Q45,59 49,61\" stroke=\"#222\" stroke-width=\"2.5\"/><path d=\"M61.5,50 Q63,59 59,61\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"54,58 54,84\" stroke=\"#222\" stroke-width=\"2.5\"/><path d=\"M54,62 L43,86 L65,86 Z\" stroke=\"#222\" stroke-width=\"2.5\" fill=\"#fff\"/><polyline points=\"54,62 43,80\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"54,62 70,68 62,58\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"54,84 50,98 46,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"54,84 58,98 62,112\" stroke=\"#222\" stroke-width=\"2.5\"/><path d=\"M58,52 L60,64 L68,64 L70,52 Z\" stroke=\"#b31942\" fill=\"#b31942\" stroke-width=\"2\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"4\" y1=\"112\" x2=\"116\" y2=\"112\" stroke=\"#777\" stroke-width=\"2\"/><circle cx=\"54\" cy=\"50\" r=\"7.5\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><path d=\"M46.5,50 Q45,59 49,61\" stroke=\"#222\" stroke-width=\"2.5\"/><path d=\"M61.5,50 Q63,59 59,61\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"54,58 54,84\" stroke=\"#222\" stroke-width=\"2.5\"/><path d=\"M54,62 L43,86 L65,86 Z\" stroke=\"#222\" stroke-width=\"2.5\" fill=\"#fff\"/><polyline points=\"54,62 46,72 58,66\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"54,62 70,72 72,66\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"54,84 50,98 46,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"54,84 58,98 62,112\" stroke=\"#222\" stroke-width=\"2.5\"/><rect x=\"56\" y=\"56\" width=\"22\" height=\"16\" rx=\"1\" stroke=\"#b31942\" fill=\"#b31942\" stroke-width=\"2\"/><line x1=\"67\" y1=\"56\" x2=\"67\" y2=\"72\" stroke=\"#fff\" stroke-width=\"1.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"4\" y1=\"112\" x2=\"116\" y2=\"112\" stroke=\"#777\" stroke-width=\"2\"/><circle cx=\"48\" cy=\"50\" r=\"7.5\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><path d=\"M40.5,50 Q39,59 43,61\" stroke=\"#222\" stroke-width=\"2.5\"/><path d=\"M55.5,50 Q57,59 53,61\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"48,58 48,84\" stroke=\"#222\" stroke-width=\"2.5\"/><path d=\"M48,62 L37,86 L59,86 Z\" stroke=\"#222\" stroke-width=\"2.5\" fill=\"#fff\"/><polyline points=\"48,62 37,80\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"48,62 64,68 66,58\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"48,84 44,98 40,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"48,84 52,98 56,112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"66\" y1=\"58\" x2=\"66\" y2=\"22\" stroke=\"#222\" stroke-width=\"2.5\"/><path d=\"M38,24 Q66,-4 94,24 Z\" stroke=\"#b31942\" fill=\"#b31942\" stroke-width=\"2\"/></svg>"
+  ],
+  "answer": 0,
+  "explanation": "Only one picture shows the woman holding a phone to her ear."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "The man is riding a bicycle.",
+  "stem": "Choose the picture that best matches what you hear.",
+  "choices": [
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"4\" y1=\"112\" x2=\"116\" y2=\"112\" stroke=\"#777\" stroke-width=\"2\"/><circle cx=\"44\" cy=\"100\" r=\"12\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><circle cx=\"84\" cy=\"100\" r=\"12\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><polyline points=\"44,100 58,78 76,78 84,100\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"58,78 64,100 76,78\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"54\" y1=\"74\" x2=\"62\" y2=\"74\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"76,78 78,68 84,68\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"44\" y1=\"100\" x2=\"64\" y2=\"100\" stroke=\"#222\" stroke-width=\"2.5\"/><circle cx=\"22\" cy=\"50\" r=\"7.5\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><polyline points=\"22,58 22,84\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"22,62 11,80\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"22,62 33,80\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"22,84 18,98 14,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"22,84 26,98 30,112\" stroke=\"#222\" stroke-width=\"2.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"4\" y1=\"112\" x2=\"116\" y2=\"112\" stroke=\"#777\" stroke-width=\"2\"/><circle cx=\"36\" cy=\"100\" r=\"12\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><circle cx=\"76\" cy=\"100\" r=\"12\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><polyline points=\"36,100 50,78 68,78 76,100\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"50,78 56,100 68,78\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"46\" y1=\"74\" x2=\"54\" y2=\"74\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"68,78 70,68 76,68\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"36\" y1=\"100\" x2=\"56\" y2=\"100\" stroke=\"#222\" stroke-width=\"2.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"4\" y1=\"112\" x2=\"116\" y2=\"112\" stroke=\"#777\" stroke-width=\"2\"/><circle cx=\"22\" cy=\"100\" r=\"12\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><circle cx=\"62\" cy=\"100\" r=\"12\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><polyline points=\"22,100 36,78 54,78 62,100\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"36,78 42,100 54,78\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"32\" y1=\"74\" x2=\"40\" y2=\"74\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"54,78 56,68 62,68\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"22\" y1=\"100\" x2=\"42\" y2=\"100\" stroke=\"#222\" stroke-width=\"2.5\"/><circle cx=\"44\" cy=\"38\" r=\"7.5\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><polyline points=\"42,46 36,72\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"42,50 50,60 60,66\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"42,50 52,58 62,65\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"36,72 48,82 42,98\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"36,72 50,86 46,102\" stroke=\"#222\" stroke-width=\"2.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"4\" y1=\"112\" x2=\"116\" y2=\"112\" stroke=\"#777\" stroke-width=\"2\"/><circle cx=\"66\" cy=\"48\" r=\"7.5\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><polyline points=\"64,56 60,82\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"64,60 50,68 56,76\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"64,60 74,66 80,58\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"60,82 52,96 42,106\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"60,82 72,96 72,112\" stroke=\"#222\" stroke-width=\"2.5\"/></svg>"
+  ],
+  "answer": 2,
+  "explanation": "The man is sitting on the bicycle and riding it in the correct picture."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Four people are waiting at the bus stop.",
+  "stem": "Choose the picture that best matches what you hear.",
+  "choices": [
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"4\" y1=\"112\" x2=\"116\" y2=\"112\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"14\" y1=\"112\" x2=\"14\" y2=\"40\" stroke=\"#222\" stroke-width=\"3\"/><rect x=\"3\" y=\"16\" width=\"22\" height=\"24\" rx=\"3\" stroke=\"#0a1f44\" fill=\"#0a1f44\" stroke-width=\"2\"/><rect x=\"7\" y=\"20\" width=\"14\" height=\"8\" rx=\"0\" stroke=\"#fff\" fill=\"#fff\" stroke-width=\"1\"/><circle cx=\"9\" cy=\"36\" r=\"2\" stroke=\"#fff\" fill=\"#fff\" stroke-width=\"1\"/><circle cx=\"19\" cy=\"36\" r=\"2\" stroke=\"#fff\" fill=\"#fff\" stroke-width=\"1\"/><circle cx=\"53\" cy=\"59.300000000000004\" r=\"6.375\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><polyline points=\"53,66.1 53,88.2\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"53,69.5 46.2,86.5\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"53,69.5 59.8,86.5\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"53,88.2 49.6,100.1 48.75,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"53,88.2 56.4,100.1 57.25,112\" stroke=\"#222\" stroke-width=\"2.5\"/><circle cx=\"71\" cy=\"59.300000000000004\" r=\"6.375\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><path d=\"M64.625,59.300000000000004 Q63.35,66.95 66.75,68.65\" stroke=\"#222\" stroke-width=\"2.5\"/><path d=\"M77.375,59.300000000000004 Q78.65,66.95 75.25,68.65\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"71,66.1 71,88.2\" stroke=\"#222\" stroke-width=\"2.5\"/><path d=\"M71,69.5 L61.65,89.9 L80.35,89.9 Z\" stroke=\"#222\" stroke-width=\"2.5\" fill=\"#fff\"/><polyline points=\"71,69.5 64.2,86.5\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"71,69.5 77.8,86.5\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"71,88.2 67.6,100.1 66.75,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"71,88.2 74.4,100.1 75.25,112\" stroke=\"#222\" stroke-width=\"2.5\"/><circle cx=\"89\" cy=\"59.300000000000004\" r=\"6.375\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><polyline points=\"89,66.1 89,88.2\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"89,69.5 82.2,86.5\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"89,69.5 95.8,86.5\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"89,88.2 85.6,100.1 84.75,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"89,88.2 92.4,100.1 93.25,112\" stroke=\"#222\" stroke-width=\"2.5\"/><circle cx=\"107\" cy=\"59.300000000000004\" r=\"6.375\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><path d=\"M100.625,59.300000000000004 Q99.35,66.95 102.75,68.65\" stroke=\"#222\" stroke-width=\"2.5\"/><path d=\"M113.375,59.300000000000004 Q114.65,66.95 111.25,68.65\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"107,66.1 107,88.2\" stroke=\"#222\" stroke-width=\"2.5\"/><path d=\"M107,69.5 L97.65,89.9 L116.35,89.9 Z\" stroke=\"#222\" stroke-width=\"2.5\" fill=\"#fff\"/><polyline points=\"107,69.5 100.2,86.5\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"107,69.5 113.8,86.5\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"107,88.2 103.6,100.1 102.75,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"107,88.2 110.4,100.1 111.25,112\" stroke=\"#222\" stroke-width=\"2.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"4\" y1=\"112\" x2=\"116\" y2=\"112\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"14\" y1=\"112\" x2=\"14\" y2=\"40\" stroke=\"#222\" stroke-width=\"3\"/><rect x=\"3\" y=\"16\" width=\"22\" height=\"24\" rx=\"3\" stroke=\"#0a1f44\" fill=\"#0a1f44\" stroke-width=\"2\"/><rect x=\"7\" y=\"20\" width=\"14\" height=\"8\" rx=\"0\" stroke=\"#fff\" fill=\"#fff\" stroke-width=\"1\"/><circle cx=\"9\" cy=\"36\" r=\"2\" stroke=\"#fff\" fill=\"#fff\" stroke-width=\"1\"/><circle cx=\"19\" cy=\"36\" r=\"2\" stroke=\"#fff\" fill=\"#fff\" stroke-width=\"1\"/><circle cx=\"71\" cy=\"59.300000000000004\" r=\"6.375\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><polyline points=\"71,66.1 71,88.2\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"71,69.5 64.2,86.5\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"71,69.5 77.8,86.5\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"71,88.2 67.6,100.1 66.75,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"71,88.2 74.4,100.1 75.25,112\" stroke=\"#222\" stroke-width=\"2.5\"/><circle cx=\"89\" cy=\"59.300000000000004\" r=\"6.375\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><path d=\"M82.625,59.300000000000004 Q81.35,66.95 84.75,68.65\" stroke=\"#222\" stroke-width=\"2.5\"/><path d=\"M95.375,59.300000000000004 Q96.65,66.95 93.25,68.65\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"89,66.1 89,88.2\" stroke=\"#222\" stroke-width=\"2.5\"/><path d=\"M89,69.5 L79.65,89.9 L98.35,89.9 Z\" stroke=\"#222\" stroke-width=\"2.5\" fill=\"#fff\"/><polyline points=\"89,69.5 82.2,86.5\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"89,69.5 95.8,86.5\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"89,88.2 85.6,100.1 84.75,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"89,88.2 92.4,100.1 93.25,112\" stroke=\"#222\" stroke-width=\"2.5\"/><circle cx=\"107\" cy=\"59.300000000000004\" r=\"6.375\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><polyline points=\"107,66.1 107,88.2\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"107,69.5 100.2,86.5\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"107,69.5 113.8,86.5\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"107,88.2 103.6,100.1 102.75,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"107,88.2 110.4,100.1 111.25,112\" stroke=\"#222\" stroke-width=\"2.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"4\" y1=\"112\" x2=\"116\" y2=\"112\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"14\" y1=\"112\" x2=\"14\" y2=\"40\" stroke=\"#222\" stroke-width=\"3\"/><rect x=\"3\" y=\"16\" width=\"22\" height=\"24\" rx=\"3\" stroke=\"#0a1f44\" fill=\"#0a1f44\" stroke-width=\"2\"/><rect x=\"7\" y=\"20\" width=\"14\" height=\"8\" rx=\"0\" stroke=\"#fff\" fill=\"#fff\" stroke-width=\"1\"/><circle cx=\"9\" cy=\"36\" r=\"2\" stroke=\"#fff\" fill=\"#fff\" stroke-width=\"1\"/><circle cx=\"19\" cy=\"36\" r=\"2\" stroke=\"#fff\" fill=\"#fff\" stroke-width=\"1\"/><circle cx=\"35\" cy=\"59.300000000000004\" r=\"6.375\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><polyline points=\"35,66.1 35,88.2\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"35,69.5 28.2,86.5\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"35,69.5 41.8,86.5\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"35,88.2 31.6,100.1 30.75,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"35,88.2 38.4,100.1 39.25,112\" stroke=\"#222\" stroke-width=\"2.5\"/><circle cx=\"53\" cy=\"59.300000000000004\" r=\"6.375\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><path d=\"M46.625,59.300000000000004 Q45.35,66.95 48.75,68.65\" stroke=\"#222\" stroke-width=\"2.5\"/><path d=\"M59.375,59.300000000000004 Q60.65,66.95 57.25,68.65\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"53,66.1 53,88.2\" stroke=\"#222\" stroke-width=\"2.5\"/><path d=\"M53,69.5 L43.65,89.9 L62.35,89.9 Z\" stroke=\"#222\" stroke-width=\"2.5\" fill=\"#fff\"/><polyline points=\"53,69.5 46.2,86.5\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"53,69.5 59.8,86.5\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"53,88.2 49.6,100.1 48.75,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"53,88.2 56.4,100.1 57.25,112\" stroke=\"#222\" stroke-width=\"2.5\"/><circle cx=\"71\" cy=\"59.300000000000004\" r=\"6.375\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><polyline points=\"71,66.1 71,88.2\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"71,69.5 64.2,86.5\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"71,69.5 77.8,86.5\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"71,88.2 67.6,100.1 66.75,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"71,88.2 74.4,100.1 75.25,112\" stroke=\"#222\" stroke-width=\"2.5\"/><circle cx=\"89\" cy=\"59.300000000000004\" r=\"6.375\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><path d=\"M82.625,59.300000000000004 Q81.35,66.95 84.75,68.65\" stroke=\"#222\" stroke-width=\"2.5\"/><path d=\"M95.375,59.300000000000004 Q96.65,66.95 93.25,68.65\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"89,66.1 89,88.2\" stroke=\"#222\" stroke-width=\"2.5\"/><path d=\"M89,69.5 L79.65,89.9 L98.35,89.9 Z\" stroke=\"#222\" stroke-width=\"2.5\" fill=\"#fff\"/><polyline points=\"89,69.5 82.2,86.5\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"89,69.5 95.8,86.5\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"89,88.2 85.6,100.1 84.75,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"89,88.2 92.4,100.1 93.25,112\" stroke=\"#222\" stroke-width=\"2.5\"/><circle cx=\"107\" cy=\"59.300000000000004\" r=\"6.375\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><polyline points=\"107,66.1 107,88.2\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"107,69.5 100.2,86.5\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"107,69.5 113.8,86.5\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"107,88.2 103.6,100.1 102.75,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"107,88.2 110.4,100.1 111.25,112\" stroke=\"#222\" stroke-width=\"2.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"4\" y1=\"112\" x2=\"116\" y2=\"112\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"14\" y1=\"112\" x2=\"14\" y2=\"40\" stroke=\"#222\" stroke-width=\"3\"/><rect x=\"3\" y=\"16\" width=\"22\" height=\"24\" rx=\"3\" stroke=\"#0a1f44\" fill=\"#0a1f44\" stroke-width=\"2\"/><rect x=\"7\" y=\"20\" width=\"14\" height=\"8\" rx=\"0\" stroke=\"#fff\" fill=\"#fff\" stroke-width=\"1\"/><circle cx=\"9\" cy=\"36\" r=\"2\" stroke=\"#fff\" fill=\"#fff\" stroke-width=\"1\"/><circle cx=\"19\" cy=\"36\" r=\"2\" stroke=\"#fff\" fill=\"#fff\" stroke-width=\"1\"/><circle cx=\"89\" cy=\"59.300000000000004\" r=\"6.375\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><polyline points=\"89,66.1 89,88.2\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"89,69.5 82.2,86.5\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"89,69.5 95.8,86.5\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"89,88.2 85.6,100.1 84.75,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"89,88.2 92.4,100.1 93.25,112\" stroke=\"#222\" stroke-width=\"2.5\"/><circle cx=\"107\" cy=\"59.300000000000004\" r=\"6.375\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><path d=\"M100.625,59.300000000000004 Q99.35,66.95 102.75,68.65\" stroke=\"#222\" stroke-width=\"2.5\"/><path d=\"M113.375,59.300000000000004 Q114.65,66.95 111.25,68.65\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"107,66.1 107,88.2\" stroke=\"#222\" stroke-width=\"2.5\"/><path d=\"M107,69.5 L97.65,89.9 L116.35,89.9 Z\" stroke=\"#222\" stroke-width=\"2.5\" fill=\"#fff\"/><polyline points=\"107,69.5 100.2,86.5\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"107,69.5 113.8,86.5\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"107,88.2 103.6,100.1 102.75,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"107,88.2 110.4,100.1 111.25,112\" stroke=\"#222\" stroke-width=\"2.5\"/></svg>"
+  ],
+  "answer": 0,
+  "explanation": "Count the people next to the bus stop sign: four people are waiting."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "The bus leaves at nine fifteen.",
+  "stem": "Choose the picture that best matches what you hear.",
+  "choices": [
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"60\" cy=\"60\" r=\"46\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"3\"/><line x1=\"60.0\" y1=\"23.0\" x2=\"60.0\" y2=\"16.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"80.5\" y1=\"24.5\" x2=\"82.0\" y2=\"21.9\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"95.5\" y1=\"39.5\" x2=\"98.1\" y2=\"38.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"97.0\" y1=\"60.0\" x2=\"104.0\" y2=\"60.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"95.5\" y1=\"80.5\" x2=\"98.1\" y2=\"82.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"80.5\" y1=\"95.5\" x2=\"82.0\" y2=\"98.1\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"60.0\" y1=\"97.0\" x2=\"60.0\" y2=\"104.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"39.5\" y1=\"95.5\" x2=\"38.0\" y2=\"98.1\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"24.5\" y1=\"80.5\" x2=\"21.9\" y2=\"82.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"23.0\" y1=\"60.0\" x2=\"16.0\" y2=\"60.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"24.5\" y1=\"39.5\" x2=\"21.9\" y2=\"38.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"39.5\" y1=\"24.5\" x2=\"38.0\" y2=\"21.9\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"60\" y1=\"60\" x2=\"39.7\" y2=\"51.6\" stroke=\"#0a1f44\" stroke-width=\"5\"/><line x1=\"60\" y1=\"60\" x2=\"25.0\" y2=\"60.0\" stroke=\"#222\" stroke-width=\"3\"/><circle cx=\"60\" cy=\"60\" r=\"3\" stroke=\"#222\" fill=\"#222\" stroke-width=\"2.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"60\" cy=\"60\" r=\"46\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"3\"/><line x1=\"60.0\" y1=\"23.0\" x2=\"60.0\" y2=\"16.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"80.5\" y1=\"24.5\" x2=\"82.0\" y2=\"21.9\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"95.5\" y1=\"39.5\" x2=\"98.1\" y2=\"38.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"97.0\" y1=\"60.0\" x2=\"104.0\" y2=\"60.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"95.5\" y1=\"80.5\" x2=\"98.1\" y2=\"82.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"80.5\" y1=\"95.5\" x2=\"82.0\" y2=\"98.1\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"60.0\" y1=\"97.0\" x2=\"60.0\" y2=\"104.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"39.5\" y1=\"95.5\" x2=\"38.0\" y2=\"98.1\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"24.5\" y1=\"80.5\" x2=\"21.9\" y2=\"82.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"23.0\" y1=\"60.0\" x2=\"16.0\" y2=\"60.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"24.5\" y1=\"39.5\" x2=\"21.9\" y2=\"38.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"39.5\" y1=\"24.5\" x2=\"38.0\" y2=\"21.9\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"60\" y1=\"60\" x2=\"38.2\" y2=\"57.1\" stroke=\"#0a1f44\" stroke-width=\"5\"/><line x1=\"60\" y1=\"60\" x2=\"95.0\" y2=\"60.0\" stroke=\"#222\" stroke-width=\"3\"/><circle cx=\"60\" cy=\"60\" r=\"3\" stroke=\"#222\" fill=\"#222\" stroke-width=\"2.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"60\" cy=\"60\" r=\"46\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"3\"/><line x1=\"60.0\" y1=\"23.0\" x2=\"60.0\" y2=\"16.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"80.5\" y1=\"24.5\" x2=\"82.0\" y2=\"21.9\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"95.5\" y1=\"39.5\" x2=\"98.1\" y2=\"38.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"97.0\" y1=\"60.0\" x2=\"104.0\" y2=\"60.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"95.5\" y1=\"80.5\" x2=\"98.1\" y2=\"82.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"80.5\" y1=\"95.5\" x2=\"82.0\" y2=\"98.1\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"60.0\" y1=\"97.0\" x2=\"60.0\" y2=\"104.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"39.5\" y1=\"95.5\" x2=\"38.0\" y2=\"98.1\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"24.5\" y1=\"80.5\" x2=\"21.9\" y2=\"82.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"23.0\" y1=\"60.0\" x2=\"16.0\" y2=\"60.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"24.5\" y1=\"39.5\" x2=\"21.9\" y2=\"38.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"39.5\" y1=\"24.5\" x2=\"38.0\" y2=\"21.9\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"60\" y1=\"60\" x2=\"80.3\" y2=\"68.4\" stroke=\"#0a1f44\" stroke-width=\"5\"/><line x1=\"60\" y1=\"60\" x2=\"25.0\" y2=\"60.0\" stroke=\"#222\" stroke-width=\"3\"/><circle cx=\"60\" cy=\"60\" r=\"3\" stroke=\"#222\" fill=\"#222\" stroke-width=\"2.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"60\" cy=\"60\" r=\"46\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"3\"/><line x1=\"60.0\" y1=\"23.0\" x2=\"60.0\" y2=\"16.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"80.5\" y1=\"24.5\" x2=\"82.0\" y2=\"21.9\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"95.5\" y1=\"39.5\" x2=\"98.1\" y2=\"38.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"97.0\" y1=\"60.0\" x2=\"104.0\" y2=\"60.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"95.5\" y1=\"80.5\" x2=\"98.1\" y2=\"82.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"80.5\" y1=\"95.5\" x2=\"82.0\" y2=\"98.1\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"60.0\" y1=\"97.0\" x2=\"60.0\" y2=\"104.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"39.5\" y1=\"95.5\" x2=\"38.0\" y2=\"98.1\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"24.5\" y1=\"80.5\" x2=\"21.9\" y2=\"82.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"23.0\" y1=\"60.0\" x2=\"16.0\" y2=\"60.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"24.5\" y1=\"39.5\" x2=\"21.9\" y2=\"38.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"39.5\" y1=\"24.5\" x2=\"38.0\" y2=\"21.9\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"60\" y1=\"60\" x2=\"38.0\" y2=\"60.0\" stroke=\"#0a1f44\" stroke-width=\"5\"/><line x1=\"60\" y1=\"60\" x2=\"60.0\" y2=\"25.0\" stroke=\"#222\" stroke-width=\"3\"/><circle cx=\"60\" cy=\"60\" r=\"3\" stroke=\"#222\" fill=\"#222\" stroke-width=\"2.5\"/></svg>"
+  ],
+  "answer": 1,
+  "explanation": "At nine fifteen the short hand is just past 9 and the long hand points to 3."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "There are five pencils in the cup.",
+  "stem": "Choose the picture that best matches what you hear.",
+  "choices": [
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"48\" y1=\"30\" x2=\"48\" y2=\"70\" stroke=\"#222\" stroke-width=\"3\"/><path d=\"M45,30 L48,22 L51,30 Z\" stroke=\"#b31942\" fill=\"#b31942\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"36\" x2=\"60\" y2=\"70\" stroke=\"#222\" stroke-width=\"3\"/><path d=\"M57,36 L60,28 L63,36 Z\" stroke=\"#b31942\" fill=\"#b31942\" stroke-width=\"1.5\"/><line x1=\"72\" y1=\"30\" x2=\"72\" y2=\"70\" stroke=\"#222\" stroke-width=\"3\"/><path d=\"M69,30 L72,22 L75,30 Z\" stroke=\"#b31942\" fill=\"#b31942\" stroke-width=\"1.5\"/><path d=\"M34,62 L40,108 L80,108 L86,62 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"44\" y1=\"30\" x2=\"44\" y2=\"70\" stroke=\"#222\" stroke-width=\"3\"/><path d=\"M41,30 L44,22 L47,30 Z\" stroke=\"#b31942\" fill=\"#b31942\" stroke-width=\"1.5\"/><line x1=\"55\" y1=\"36\" x2=\"55\" y2=\"70\" stroke=\"#222\" stroke-width=\"3\"/><path d=\"M52,36 L55,28 L58,36 Z\" stroke=\"#b31942\" fill=\"#b31942\" stroke-width=\"1.5\"/><line x1=\"66\" y1=\"30\" x2=\"66\" y2=\"70\" stroke=\"#222\" stroke-width=\"3\"/><path d=\"M63,30 L66,22 L69,30 Z\" stroke=\"#b31942\" fill=\"#b31942\" stroke-width=\"1.5\"/><line x1=\"77\" y1=\"36\" x2=\"77\" y2=\"70\" stroke=\"#222\" stroke-width=\"3\"/><path d=\"M74,36 L77,28 L80,36 Z\" stroke=\"#b31942\" fill=\"#b31942\" stroke-width=\"1.5\"/><path d=\"M34,62 L40,108 L80,108 L86,62 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"40\" y1=\"30\" x2=\"40\" y2=\"70\" stroke=\"#222\" stroke-width=\"3\"/><path d=\"M37,30 L40,22 L43,30 Z\" stroke=\"#b31942\" fill=\"#b31942\" stroke-width=\"1.5\"/><line x1=\"48\" y1=\"36\" x2=\"48\" y2=\"70\" stroke=\"#222\" stroke-width=\"3\"/><path d=\"M45,36 L48,28 L51,36 Z\" stroke=\"#b31942\" fill=\"#b31942\" stroke-width=\"1.5\"/><line x1=\"56\" y1=\"30\" x2=\"56\" y2=\"70\" stroke=\"#222\" stroke-width=\"3\"/><path d=\"M53,30 L56,22 L59,30 Z\" stroke=\"#b31942\" fill=\"#b31942\" stroke-width=\"1.5\"/><line x1=\"64\" y1=\"36\" x2=\"64\" y2=\"70\" stroke=\"#222\" stroke-width=\"3\"/><path d=\"M61,36 L64,28 L67,36 Z\" stroke=\"#b31942\" fill=\"#b31942\" stroke-width=\"1.5\"/><line x1=\"72\" y1=\"30\" x2=\"72\" y2=\"70\" stroke=\"#222\" stroke-width=\"3\"/><path d=\"M69,30 L72,22 L75,30 Z\" stroke=\"#b31942\" fill=\"#b31942\" stroke-width=\"1.5\"/><line x1=\"80\" y1=\"36\" x2=\"80\" y2=\"70\" stroke=\"#222\" stroke-width=\"3\"/><path d=\"M77,36 L80,28 L83,36 Z\" stroke=\"#b31942\" fill=\"#b31942\" stroke-width=\"1.5\"/><path d=\"M34,62 L40,108 L80,108 L86,62 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"42\" y1=\"30\" x2=\"42\" y2=\"70\" stroke=\"#222\" stroke-width=\"3\"/><path d=\"M39,30 L42,22 L45,30 Z\" stroke=\"#b31942\" fill=\"#b31942\" stroke-width=\"1.5\"/><line x1=\"51\" y1=\"36\" x2=\"51\" y2=\"70\" stroke=\"#222\" stroke-width=\"3\"/><path d=\"M48,36 L51,28 L54,36 Z\" stroke=\"#b31942\" fill=\"#b31942\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"30\" x2=\"60\" y2=\"70\" stroke=\"#222\" stroke-width=\"3\"/><path d=\"M57,30 L60,22 L63,30 Z\" stroke=\"#b31942\" fill=\"#b31942\" stroke-width=\"1.5\"/><line x1=\"69\" y1=\"36\" x2=\"69\" y2=\"70\" stroke=\"#222\" stroke-width=\"3\"/><path d=\"M66,36 L69,28 L72,36 Z\" stroke=\"#b31942\" fill=\"#b31942\" stroke-width=\"1.5\"/><line x1=\"78\" y1=\"30\" x2=\"78\" y2=\"70\" stroke=\"#222\" stroke-width=\"3\"/><path d=\"M75,30 L78,22 L81,30 Z\" stroke=\"#b31942\" fill=\"#b31942\" stroke-width=\"1.5\"/><path d=\"M34,62 L40,108 L80,108 L86,62 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/></svg>"
+  ],
+  "answer": 3,
+  "explanation": "Only one cup holds exactly five pencils."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 3,
+  "passage": "The cups are on the shelf above the plates.",
+  "stem": "Choose the picture that best matches what you hear.",
+  "choices": [
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"14\" y=\"10\" width=\"92\" height=\"100\" rx=\"0\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"3\"/><line x1=\"14\" y1=\"58\" x2=\"106\" y2=\"58\" stroke=\"#222\" stroke-width=\"3\"/><ellipse cx=\"36\" cy=\"52\" rx=\"16\" ry=\"2.6\" stroke=\"#0a1f44\" fill=\"#fff\" stroke-width=\"2\"/><ellipse cx=\"36\" cy=\"48\" rx=\"16\" ry=\"2.6\" stroke=\"#0a1f44\" fill=\"#fff\" stroke-width=\"2\"/><ellipse cx=\"36\" cy=\"44\" rx=\"16\" ry=\"2.6\" stroke=\"#0a1f44\" fill=\"#fff\" stroke-width=\"2\"/><ellipse cx=\"78\" cy=\"52\" rx=\"16\" ry=\"2.6\" stroke=\"#0a1f44\" fill=\"#fff\" stroke-width=\"2\"/><ellipse cx=\"78\" cy=\"48\" rx=\"16\" ry=\"2.6\" stroke=\"#0a1f44\" fill=\"#fff\" stroke-width=\"2\"/><ellipse cx=\"78\" cy=\"44\" rx=\"16\" ry=\"2.6\" stroke=\"#0a1f44\" fill=\"#fff\" stroke-width=\"2\"/><path d=\"M22,92 L24,106 L34,106 L36,92 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><path d=\"M36,95 Q42,98 35,103\" stroke=\"#222\" stroke-width=\"2\"/><path d=\"M46,92 L48,106 L58,106 L60,92 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><path d=\"M60,95 Q66,98 59,103\" stroke=\"#222\" stroke-width=\"2\"/><path d=\"M70,92 L72,106 L82,106 L84,92 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><path d=\"M84,95 Q90,98 83,103\" stroke=\"#222\" stroke-width=\"2\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"14\" y=\"10\" width=\"92\" height=\"100\" rx=\"0\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"3\"/><line x1=\"14\" y1=\"58\" x2=\"106\" y2=\"58\" stroke=\"#222\" stroke-width=\"3\"/><path d=\"M22,42 L24,56 L34,56 L36,42 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><path d=\"M36,45 Q42,48 35,53\" stroke=\"#222\" stroke-width=\"2\"/><path d=\"M46,42 L48,56 L58,56 L60,42 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><path d=\"M60,45 Q66,48 59,53\" stroke=\"#222\" stroke-width=\"2\"/><path d=\"M70,42 L72,56 L82,56 L84,42 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><path d=\"M84,45 Q90,48 83,53\" stroke=\"#222\" stroke-width=\"2\"/><path d=\"M22,92 Q36,112 50,92 Z\" stroke=\"#0a1f44\" fill=\"#fff\" stroke-width=\"2.5\"/><path d=\"M64,92 Q78,112 92,92 Z\" stroke=\"#0a1f44\" fill=\"#fff\" stroke-width=\"2.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"14\" y=\"10\" width=\"92\" height=\"100\" rx=\"0\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"3\"/><line x1=\"14\" y1=\"58\" x2=\"106\" y2=\"58\" stroke=\"#222\" stroke-width=\"3\"/><path d=\"M22,42 L24,56 L34,56 L36,42 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><path d=\"M36,45 Q42,48 35,53\" stroke=\"#222\" stroke-width=\"2\"/><path d=\"M46,42 L48,56 L58,56 L60,42 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><path d=\"M60,45 Q66,48 59,53\" stroke=\"#222\" stroke-width=\"2\"/><path d=\"M70,42 L72,56 L82,56 L84,42 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><path d=\"M84,45 Q90,48 83,53\" stroke=\"#222\" stroke-width=\"2\"/><ellipse cx=\"36\" cy=\"102\" rx=\"16\" ry=\"2.6\" stroke=\"#0a1f44\" fill=\"#fff\" stroke-width=\"2\"/><ellipse cx=\"36\" cy=\"98\" rx=\"16\" ry=\"2.6\" stroke=\"#0a1f44\" fill=\"#fff\" stroke-width=\"2\"/><ellipse cx=\"36\" cy=\"94\" rx=\"16\" ry=\"2.6\" stroke=\"#0a1f44\" fill=\"#fff\" stroke-width=\"2\"/><ellipse cx=\"78\" cy=\"102\" rx=\"16\" ry=\"2.6\" stroke=\"#0a1f44\" fill=\"#fff\" stroke-width=\"2\"/><ellipse cx=\"78\" cy=\"98\" rx=\"16\" ry=\"2.6\" stroke=\"#0a1f44\" fill=\"#fff\" stroke-width=\"2\"/><ellipse cx=\"78\" cy=\"94\" rx=\"16\" ry=\"2.6\" stroke=\"#0a1f44\" fill=\"#fff\" stroke-width=\"2\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"14\" y=\"10\" width=\"92\" height=\"100\" rx=\"0\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"3\"/><line x1=\"14\" y1=\"58\" x2=\"106\" y2=\"58\" stroke=\"#222\" stroke-width=\"3\"/><path d=\"M24,36 L27,56 L35,56 L38,36\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><path d=\"M50,36 L53,56 L61,56 L64,36\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><path d=\"M76,36 L79,56 L87,56 L90,36\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><ellipse cx=\"36\" cy=\"102\" rx=\"16\" ry=\"2.6\" stroke=\"#0a1f44\" fill=\"#fff\" stroke-width=\"2\"/><ellipse cx=\"36\" cy=\"98\" rx=\"16\" ry=\"2.6\" stroke=\"#0a1f44\" fill=\"#fff\" stroke-width=\"2\"/><ellipse cx=\"36\" cy=\"94\" rx=\"16\" ry=\"2.6\" stroke=\"#0a1f44\" fill=\"#fff\" stroke-width=\"2\"/><ellipse cx=\"78\" cy=\"102\" rx=\"16\" ry=\"2.6\" stroke=\"#0a1f44\" fill=\"#fff\" stroke-width=\"2\"/><ellipse cx=\"78\" cy=\"98\" rx=\"16\" ry=\"2.6\" stroke=\"#0a1f44\" fill=\"#fff\" stroke-width=\"2\"/><ellipse cx=\"78\" cy=\"94\" rx=\"16\" ry=\"2.6\" stroke=\"#0a1f44\" fill=\"#fff\" stroke-width=\"2\"/></svg>"
+  ],
+  "answer": 2,
+  "explanation": "The cups are on the top shelf and the plates are on the shelf below them."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 3,
+  "passage": "The store opens at eight thirty.",
+  "stem": "Choose the picture that best matches what you hear.",
+  "choices": [
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"26\" y=\"8\" width=\"68\" height=\"104\" rx=\"0\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"3\"/><circle cx=\"84\" cy=\"66\" r=\"3\" stroke=\"#222\" fill=\"#222\" stroke-width=\"2.5\"/><line x1=\"42\" y1=\"22\" x2=\"60\" y2=\"12\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"78\" y1=\"22\" x2=\"60\" y2=\"12\" stroke=\"#777\" stroke-width=\"2\"/><rect x=\"32\" y=\"22\" width=\"56\" height=\"40\" rx=\"3\" stroke=\"#0a1f44\" fill=\"#fff\" stroke-width=\"2.5\"/><text x=\"60\" y=\"38\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0a1f44\" stroke=\"none\" text-anchor=\"middle\">OPENS</text><text x=\"60\" y=\"57\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"17\" font-weight=\"700\" fill=\"#b31942\" stroke=\"none\" text-anchor=\"middle\">9:30</text></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"26\" y=\"8\" width=\"68\" height=\"104\" rx=\"0\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"3\"/><circle cx=\"84\" cy=\"66\" r=\"3\" stroke=\"#222\" fill=\"#222\" stroke-width=\"2.5\"/><line x1=\"42\" y1=\"22\" x2=\"60\" y2=\"12\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"78\" y1=\"22\" x2=\"60\" y2=\"12\" stroke=\"#777\" stroke-width=\"2\"/><rect x=\"32\" y=\"22\" width=\"56\" height=\"40\" rx=\"3\" stroke=\"#0a1f44\" fill=\"#fff\" stroke-width=\"2.5\"/><text x=\"60\" y=\"38\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0a1f44\" stroke=\"none\" text-anchor=\"middle\">OPENS</text><text x=\"60\" y=\"57\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"17\" font-weight=\"700\" fill=\"#b31942\" stroke=\"none\" text-anchor=\"middle\">8:00</text></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"26\" y=\"8\" width=\"68\" height=\"104\" rx=\"0\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"3\"/><circle cx=\"84\" cy=\"66\" r=\"3\" stroke=\"#222\" fill=\"#222\" stroke-width=\"2.5\"/><line x1=\"42\" y1=\"22\" x2=\"60\" y2=\"12\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"78\" y1=\"22\" x2=\"60\" y2=\"12\" stroke=\"#777\" stroke-width=\"2\"/><rect x=\"32\" y=\"22\" width=\"56\" height=\"40\" rx=\"3\" stroke=\"#0a1f44\" fill=\"#fff\" stroke-width=\"2.5\"/><text x=\"60\" y=\"38\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0a1f44\" stroke=\"none\" text-anchor=\"middle\">OPENS</text><text x=\"60\" y=\"57\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"17\" font-weight=\"700\" fill=\"#b31942\" stroke=\"none\" text-anchor=\"middle\">8:30</text></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"26\" y=\"8\" width=\"68\" height=\"104\" rx=\"0\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"3\"/><circle cx=\"84\" cy=\"66\" r=\"3\" stroke=\"#222\" fill=\"#222\" stroke-width=\"2.5\"/><line x1=\"42\" y1=\"22\" x2=\"60\" y2=\"12\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"78\" y1=\"22\" x2=\"60\" y2=\"12\" stroke=\"#777\" stroke-width=\"2\"/><rect x=\"32\" y=\"22\" width=\"56\" height=\"40\" rx=\"3\" stroke=\"#0a1f44\" fill=\"#fff\" stroke-width=\"2.5\"/><text x=\"60\" y=\"38\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0a1f44\" stroke=\"none\" text-anchor=\"middle\">OPENS</text><text x=\"60\" y=\"57\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"17\" font-weight=\"700\" fill=\"#b31942\" stroke=\"none\" text-anchor=\"middle\">6:30</text></svg>"
+  ],
+  "answer": 2,
+  "explanation": "The sign on the door must show the opening time 8:30."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 3,
+  "passage": "The woman is standing between two trees.",
+  "stem": "Choose the picture that best matches what you hear.",
+  "choices": [
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"4\" y1=\"112\" x2=\"116\" y2=\"112\" stroke=\"#777\" stroke-width=\"2\"/><rect x=\"25\" y=\"86\" width=\"6\" height=\"26\" rx=\"0\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><circle cx=\"28\" cy=\"72\" r=\"15\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><rect x=\"89\" y=\"86\" width=\"6\" height=\"26\" rx=\"0\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><circle cx=\"92\" cy=\"72\" r=\"15\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><circle cx=\"60\" cy=\"50\" r=\"7.5\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><path d=\"M52.5,50 Q51,59 55,61\" stroke=\"#222\" stroke-width=\"2.5\"/><path d=\"M67.5,50 Q69,59 65,61\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"60,58 60,84\" stroke=\"#222\" stroke-width=\"2.5\"/><path d=\"M60,62 L49,86 L71,86 Z\" stroke=\"#222\" stroke-width=\"2.5\" fill=\"#fff\"/><polyline points=\"60,62 49,80\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"60,62 71,80\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"60,84 56,98 52,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"60,84 64,98 68,112\" stroke=\"#222\" stroke-width=\"2.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"4\" y1=\"112\" x2=\"116\" y2=\"112\" stroke=\"#777\" stroke-width=\"2\"/><rect x=\"57\" y=\"86\" width=\"6\" height=\"26\" rx=\"0\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><circle cx=\"60\" cy=\"72\" r=\"15\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><rect x=\"93\" y=\"86\" width=\"6\" height=\"26\" rx=\"0\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><circle cx=\"96\" cy=\"72\" r=\"15\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><circle cx=\"18\" cy=\"50\" r=\"7.5\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><path d=\"M10.5,50 Q9,59 13,61\" stroke=\"#222\" stroke-width=\"2.5\"/><path d=\"M25.5,50 Q27,59 23,61\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"18,58 18,84\" stroke=\"#222\" stroke-width=\"2.5\"/><path d=\"M18,62 L7,86 L29,86 Z\" stroke=\"#222\" stroke-width=\"2.5\" fill=\"#fff\"/><polyline points=\"18,62 7,80\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"18,62 29,80\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"18,84 14,98 10,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"18,84 22,98 26,112\" stroke=\"#222\" stroke-width=\"2.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"4\" y1=\"112\" x2=\"116\" y2=\"112\" stroke=\"#777\" stroke-width=\"2\"/><rect x=\"25\" y=\"86\" width=\"6\" height=\"26\" rx=\"0\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><circle cx=\"28\" cy=\"72\" r=\"15\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><rect x=\"89\" y=\"86\" width=\"6\" height=\"26\" rx=\"0\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><circle cx=\"92\" cy=\"72\" r=\"15\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><circle cx=\"60\" cy=\"50\" r=\"7.5\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><polyline points=\"60,58 60,84\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"60,62 49,80\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"60,62 71,80\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"60,84 56,98 52,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"60,84 64,98 68,112\" stroke=\"#222\" stroke-width=\"2.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"4\" y1=\"112\" x2=\"116\" y2=\"112\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"28\" y1=\"112\" x2=\"28\" y2=\"50\" stroke=\"#222\" stroke-width=\"3\"/><path d=\"M20,50 L36,50 L33,40 L23,40 Z\" stroke=\"#222\" fill=\"#b31942\" stroke-width=\"2\"/><line x1=\"92\" y1=\"112\" x2=\"92\" y2=\"50\" stroke=\"#222\" stroke-width=\"3\"/><path d=\"M84,50 L100,50 L97,40 L87,40 Z\" stroke=\"#222\" fill=\"#b31942\" stroke-width=\"2\"/><circle cx=\"60\" cy=\"50\" r=\"7.5\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><path d=\"M52.5,50 Q51,59 55,61\" stroke=\"#222\" stroke-width=\"2.5\"/><path d=\"M67.5,50 Q69,59 65,61\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"60,58 60,84\" stroke=\"#222\" stroke-width=\"2.5\"/><path d=\"M60,62 L49,86 L71,86 Z\" stroke=\"#222\" stroke-width=\"2.5\" fill=\"#fff\"/><polyline points=\"60,62 49,80\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"60,62 71,80\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"60,84 56,98 52,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"60,84 64,98 68,112\" stroke=\"#222\" stroke-width=\"2.5\"/></svg>"
+  ],
+  "answer": 0,
+  "explanation": "The correct picture shows a woman with one tree on each side of her."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 3,
+  "passage": "A movie ticket costs eight fifty.",
+  "stem": "Choose the picture that best matches what you hear.",
+  "choices": [
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M10,32 L110,32 L110,50 A8,8 0 0 0 110,70 L110,88 L10,88 L10,70 A8,8 0 0 0 10,50 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><line x1=\"34\" y1=\"36\" x2=\"34\" y2=\"84\" stroke=\"#777\" stroke-width=\"2\" stroke-dasharray=\"4 4\"/><text x=\"70\" y=\"67\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"19\" font-weight=\"700\" fill=\"#b31942\" stroke=\"none\" text-anchor=\"middle\">$8.15</text></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M10,32 L110,32 L110,50 A8,8 0 0 0 110,70 L110,88 L10,88 L10,70 A8,8 0 0 0 10,50 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><line x1=\"34\" y1=\"36\" x2=\"34\" y2=\"84\" stroke=\"#777\" stroke-width=\"2\" stroke-dasharray=\"4 4\"/><text x=\"70\" y=\"67\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"19\" font-weight=\"700\" fill=\"#b31942\" stroke=\"none\" text-anchor=\"middle\">$18.50</text></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M10,32 L110,32 L110,50 A8,8 0 0 0 110,70 L110,88 L10,88 L10,70 A8,8 0 0 0 10,50 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><line x1=\"34\" y1=\"36\" x2=\"34\" y2=\"84\" stroke=\"#777\" stroke-width=\"2\" stroke-dasharray=\"4 4\"/><text x=\"70\" y=\"67\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"19\" font-weight=\"700\" fill=\"#b31942\" stroke=\"none\" text-anchor=\"middle\">$5.80</text></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M10,32 L110,32 L110,50 A8,8 0 0 0 110,70 L110,88 L10,88 L10,70 A8,8 0 0 0 10,50 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><line x1=\"34\" y1=\"36\" x2=\"34\" y2=\"84\" stroke=\"#777\" stroke-width=\"2\" stroke-dasharray=\"4 4\"/><text x=\"70\" y=\"67\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"19\" font-weight=\"700\" fill=\"#b31942\" stroke=\"none\" text-anchor=\"middle\">$8.50</text></svg>"
+  ],
+  "answer": 3,
+  "explanation": "\"Eight fifty\" means eight dollars and fifty cents, $8.50; the others sound similar but are different prices."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 3,
+  "passage": "The man is climbing a ladder.",
+  "stem": "Choose the picture that best matches what you hear.",
+  "choices": [
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"4\" y1=\"112\" x2=\"116\" y2=\"112\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"66\" y1=\"112\" x2=\"72\" y2=\"26\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"86\" y1=\"112\" x2=\"92\" y2=\"26\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"66.9\" y1=\"99.7\" x2=\"86.9\" y2=\"99.7\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"67.7\" y1=\"87.4\" x2=\"87.7\" y2=\"87.4\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"68.6\" y1=\"75.1\" x2=\"88.6\" y2=\"75.1\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"69.4\" y1=\"62.9\" x2=\"89.4\" y2=\"62.9\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"70.3\" y1=\"50.6\" x2=\"90.3\" y2=\"50.6\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"71.1\" y1=\"38.3\" x2=\"91.1\" y2=\"38.3\" stroke=\"#777\" stroke-width=\"2\"/><circle cx=\"34\" cy=\"50\" r=\"7.5\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><polyline points=\"34,58 34,84\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"34,62 23,80\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"34,62 45,80\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"34,84 30,98 26,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"34,84 38,98 42,112\" stroke=\"#222\" stroke-width=\"2.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"4\" y1=\"112\" x2=\"116\" y2=\"112\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"48\" y1=\"112\" x2=\"54\" y2=\"12\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"84\" y1=\"112\" x2=\"90\" y2=\"12\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"48.9\" y1=\"97.7\" x2=\"84.9\" y2=\"97.7\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"49.7\" y1=\"83.4\" x2=\"85.7\" y2=\"83.4\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"50.6\" y1=\"69.1\" x2=\"86.6\" y2=\"69.1\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"51.4\" y1=\"54.9\" x2=\"87.4\" y2=\"54.9\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"52.3\" y1=\"40.6\" x2=\"88.3\" y2=\"40.6\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"53.1\" y1=\"26.3\" x2=\"89.1\" y2=\"26.3\" stroke=\"#777\" stroke-width=\"2\"/><circle cx=\"70\" cy=\"22\" r=\"7.5\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><polyline points=\"70,30 70,56\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"70,34 57,40 53,28\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"70,34 84,36 89,22\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"70,56 64,70 64,84\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"70,56 78,60 76,72\" stroke=\"#222\" stroke-width=\"2.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"4\" y1=\"112\" x2=\"116\" y2=\"112\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"66\" y1=\"112\" x2=\"72\" y2=\"26\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"86\" y1=\"112\" x2=\"92\" y2=\"26\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"66.9\" y1=\"99.7\" x2=\"86.9\" y2=\"99.7\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"67.7\" y1=\"87.4\" x2=\"87.7\" y2=\"87.4\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"68.6\" y1=\"75.1\" x2=\"88.6\" y2=\"75.1\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"69.4\" y1=\"62.9\" x2=\"89.4\" y2=\"62.9\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"70.3\" y1=\"50.6\" x2=\"90.3\" y2=\"50.6\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"71.1\" y1=\"38.3\" x2=\"91.1\" y2=\"38.3\" stroke=\"#777\" stroke-width=\"2\"/><circle cx=\"30\" cy=\"68\" r=\"7.5\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><polyline points=\"30,76 30,102\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"30,80 20,110\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"30,80 42,98\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"30,102 46,100 56,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"30,102 48,102 60,112\" stroke=\"#222\" stroke-width=\"2.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"4\" y1=\"112\" x2=\"116\" y2=\"112\" stroke=\"#777\" stroke-width=\"2\"/><path d=\"M30,112 L30,98 L44,98 L44,84 L58,84 L58,70 L72,70 L72,56 L86,56 L86,42 L100,42\" stroke=\"#222\" stroke-width=\"2.5\"/><circle cx=\"52\" cy=\"22\" r=\"7.5\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><polyline points=\"52,30 52,56\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"52,34 42,50\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"52,34 64,50\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"52,56 46,70 44,84\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"52,56 62,62 64,70\" stroke=\"#222\" stroke-width=\"2.5\"/></svg>"
+  ],
+  "answer": 1,
+  "explanation": "The man is on the ladder and going up it; in the other pictures he is standing or sitting next to it, or on stairs."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 3,
+  "passage": "The jacket is on sale for thirty percent off.",
+  "stem": "Choose the picture that best matches what you hear.",
+  "choices": [
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20,20 L4,32 L6,90 L16,90 L18,46 L18,94 L58,94 L58,46 L60,90 L70,90 L72,32 L56,20 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><line x1=\"38\" y1=\"26\" x2=\"38\" y2=\"94\" stroke=\"#222\" stroke-width=\"2.5\"/><path d=\"M20,20 L38,42 L56,20\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"60\" y1=\"24\" x2=\"84\" y2=\"40\" stroke=\"#777\" stroke-width=\"2\"/><path d=\"M64,44 L116,44 L116,74 L64,74 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><text x=\"90\" y=\"60\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"15\" font-weight=\"700\" fill=\"#b31942\" stroke=\"none\" text-anchor=\"middle\">30%</text><text x=\"90\" y=\"72\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#b31942\" stroke=\"none\" text-anchor=\"middle\">OFF</text></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20,20 L4,32 L6,90 L16,90 L18,46 L18,94 L58,94 L58,46 L60,90 L70,90 L72,32 L56,20 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><line x1=\"38\" y1=\"26\" x2=\"38\" y2=\"94\" stroke=\"#222\" stroke-width=\"2.5\"/><path d=\"M20,20 L38,42 L56,20\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"60\" y1=\"24\" x2=\"84\" y2=\"40\" stroke=\"#777\" stroke-width=\"2\"/><path d=\"M64,44 L116,44 L116,74 L64,74 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><text x=\"90\" y=\"60\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"15\" font-weight=\"700\" fill=\"#b31942\" stroke=\"none\" text-anchor=\"middle\">13%</text><text x=\"90\" y=\"72\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#b31942\" stroke=\"none\" text-anchor=\"middle\">OFF</text></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20,20 L4,32 L6,90 L16,90 L18,46 L18,94 L58,94 L58,46 L60,90 L70,90 L72,32 L56,20 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><line x1=\"38\" y1=\"26\" x2=\"38\" y2=\"94\" stroke=\"#222\" stroke-width=\"2.5\"/><path d=\"M20,20 L38,42 L56,20\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"60\" y1=\"24\" x2=\"84\" y2=\"40\" stroke=\"#777\" stroke-width=\"2\"/><path d=\"M64,44 L116,44 L116,74 L64,74 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><text x=\"90\" y=\"60\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"15\" font-weight=\"700\" fill=\"#b31942\" stroke=\"none\" text-anchor=\"middle\">40%</text><text x=\"90\" y=\"72\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#b31942\" stroke=\"none\" text-anchor=\"middle\">OFF</text></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20,20 L4,32 L6,90 L16,90 L18,46 L18,94 L58,94 L58,46 L60,90 L70,90 L72,32 L56,20 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><line x1=\"38\" y1=\"26\" x2=\"38\" y2=\"94\" stroke=\"#222\" stroke-width=\"2.5\"/><path d=\"M20,20 L38,42 L56,20\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"60\" y1=\"24\" x2=\"84\" y2=\"40\" stroke=\"#777\" stroke-width=\"2\"/><path d=\"M64,44 L116,44 L116,74 L64,74 Z\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"2.5\"/><text x=\"90\" y=\"60\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"15\" font-weight=\"700\" fill=\"#b31942\" stroke=\"none\" text-anchor=\"middle\">20%</text><text x=\"90\" y=\"72\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#b31942\" stroke=\"none\" text-anchor=\"middle\">OFF</text></svg>"
+  ],
+  "answer": 0,
+  "explanation": "Thirty percent off is 30%; \"thirteen\" (13%) sounds similar but is a different number."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 4,
+  "passage": "The last train departs at a quarter to eleven.",
+  "stem": "Choose the picture that best matches what you hear.",
+  "choices": [
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"60\" cy=\"60\" r=\"46\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"3\"/><line x1=\"60.0\" y1=\"23.0\" x2=\"60.0\" y2=\"16.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"80.5\" y1=\"24.5\" x2=\"82.0\" y2=\"21.9\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"95.5\" y1=\"39.5\" x2=\"98.1\" y2=\"38.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"97.0\" y1=\"60.0\" x2=\"104.0\" y2=\"60.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"95.5\" y1=\"80.5\" x2=\"98.1\" y2=\"82.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"80.5\" y1=\"95.5\" x2=\"82.0\" y2=\"98.1\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"60.0\" y1=\"97.0\" x2=\"60.0\" y2=\"104.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"39.5\" y1=\"95.5\" x2=\"38.0\" y2=\"98.1\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"24.5\" y1=\"80.5\" x2=\"21.9\" y2=\"82.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"23.0\" y1=\"60.0\" x2=\"16.0\" y2=\"60.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"24.5\" y1=\"39.5\" x2=\"21.9\" y2=\"38.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"39.5\" y1=\"24.5\" x2=\"38.0\" y2=\"21.9\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"60\" y1=\"60\" x2=\"51.6\" y2=\"39.7\" stroke=\"#0a1f44\" stroke-width=\"5\"/><line x1=\"60\" y1=\"60\" x2=\"95.0\" y2=\"60.0\" stroke=\"#222\" stroke-width=\"3\"/><circle cx=\"60\" cy=\"60\" r=\"3\" stroke=\"#222\" fill=\"#222\" stroke-width=\"2.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"60\" cy=\"60\" r=\"46\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"3\"/><line x1=\"60.0\" y1=\"23.0\" x2=\"60.0\" y2=\"16.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"80.5\" y1=\"24.5\" x2=\"82.0\" y2=\"21.9\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"95.5\" y1=\"39.5\" x2=\"98.1\" y2=\"38.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"97.0\" y1=\"60.0\" x2=\"104.0\" y2=\"60.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"95.5\" y1=\"80.5\" x2=\"98.1\" y2=\"82.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"80.5\" y1=\"95.5\" x2=\"82.0\" y2=\"98.1\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"60.0\" y1=\"97.0\" x2=\"60.0\" y2=\"104.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"39.5\" y1=\"95.5\" x2=\"38.0\" y2=\"98.1\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"24.5\" y1=\"80.5\" x2=\"21.9\" y2=\"82.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"23.0\" y1=\"60.0\" x2=\"16.0\" y2=\"60.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"24.5\" y1=\"39.5\" x2=\"21.9\" y2=\"38.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"39.5\" y1=\"24.5\" x2=\"38.0\" y2=\"21.9\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"60\" y1=\"60\" x2=\"57.1\" y2=\"38.2\" stroke=\"#0a1f44\" stroke-width=\"5\"/><line x1=\"60\" y1=\"60\" x2=\"25.0\" y2=\"60.0\" stroke=\"#222\" stroke-width=\"3\"/><circle cx=\"60\" cy=\"60\" r=\"3\" stroke=\"#222\" fill=\"#222\" stroke-width=\"2.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"60\" cy=\"60\" r=\"46\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"3\"/><line x1=\"60.0\" y1=\"23.0\" x2=\"60.0\" y2=\"16.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"80.5\" y1=\"24.5\" x2=\"82.0\" y2=\"21.9\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"95.5\" y1=\"39.5\" x2=\"98.1\" y2=\"38.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"97.0\" y1=\"60.0\" x2=\"104.0\" y2=\"60.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"95.5\" y1=\"80.5\" x2=\"98.1\" y2=\"82.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"80.5\" y1=\"95.5\" x2=\"82.0\" y2=\"98.1\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"60.0\" y1=\"97.0\" x2=\"60.0\" y2=\"104.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"39.5\" y1=\"95.5\" x2=\"38.0\" y2=\"98.1\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"24.5\" y1=\"80.5\" x2=\"21.9\" y2=\"82.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"23.0\" y1=\"60.0\" x2=\"16.0\" y2=\"60.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"24.5\" y1=\"39.5\" x2=\"21.9\" y2=\"38.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"39.5\" y1=\"24.5\" x2=\"38.0\" y2=\"21.9\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"60\" y1=\"60\" x2=\"42.5\" y2=\"46.6\" stroke=\"#0a1f44\" stroke-width=\"5\"/><line x1=\"60\" y1=\"60\" x2=\"95.0\" y2=\"60.0\" stroke=\"#222\" stroke-width=\"3\"/><circle cx=\"60\" cy=\"60\" r=\"3\" stroke=\"#222\" fill=\"#222\" stroke-width=\"2.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"60\" cy=\"60\" r=\"46\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"3\"/><line x1=\"60.0\" y1=\"23.0\" x2=\"60.0\" y2=\"16.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"80.5\" y1=\"24.5\" x2=\"82.0\" y2=\"21.9\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"95.5\" y1=\"39.5\" x2=\"98.1\" y2=\"38.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"97.0\" y1=\"60.0\" x2=\"104.0\" y2=\"60.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"95.5\" y1=\"80.5\" x2=\"98.1\" y2=\"82.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"80.5\" y1=\"95.5\" x2=\"82.0\" y2=\"98.1\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"60.0\" y1=\"97.0\" x2=\"60.0\" y2=\"104.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"39.5\" y1=\"95.5\" x2=\"38.0\" y2=\"98.1\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"24.5\" y1=\"80.5\" x2=\"21.9\" y2=\"82.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"23.0\" y1=\"60.0\" x2=\"16.0\" y2=\"60.0\" stroke=\"#222\" stroke-width=\"3\"/><line x1=\"24.5\" y1=\"39.5\" x2=\"21.9\" y2=\"38.0\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"39.5\" y1=\"24.5\" x2=\"38.0\" y2=\"21.9\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"60\" y1=\"60\" x2=\"46.6\" y2=\"42.5\" stroke=\"#0a1f44\" stroke-width=\"5\"/><line x1=\"60\" y1=\"60\" x2=\"25.0\" y2=\"60.0\" stroke=\"#222\" stroke-width=\"3\"/><circle cx=\"60\" cy=\"60\" r=\"3\" stroke=\"#222\" fill=\"#222\" stroke-width=\"2.5\"/></svg>"
+  ],
+  "answer": 3,
+  "explanation": "\"A quarter to eleven\" means fifteen minutes before eleven, which is 10:45."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 4,
+  "passage": "Half of the seats are empty.",
+  "stem": "Choose the picture that best matches what you hear.",
+  "choices": [
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"4\" y1=\"112\" x2=\"116\" y2=\"112\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"6\" y1=\"88\" x2=\"23.6\" y2=\"88\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"6\" y1=\"88\" x2=\"6\" y2=\"67.2\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"7.6\" y1=\"88\" x2=\"7.6\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"22\" y1=\"88\" x2=\"22\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><circle cx=\"11.4\" cy=\"65.80000000000001\" r=\"5.25\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><polyline points=\"10.7,71.4 10,90.3\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"10.7,74.2 18.4,86.8\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"10.7,74.2 19.799999999999997,85.4\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"10,90.3 20.5,90.3 19.1,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"10,90.3 21.9,90.3 21.9,112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"34\" y1=\"88\" x2=\"51.6\" y2=\"88\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"34\" y1=\"88\" x2=\"34\" y2=\"67.2\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"35.6\" y1=\"88\" x2=\"35.6\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"50\" y1=\"88\" x2=\"50\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><circle cx=\"39.4\" cy=\"65.80000000000001\" r=\"5.25\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><polyline points=\"38.7,71.4 38,90.3\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"38.7,74.2 46.4,86.8\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"38.7,74.2 47.8,85.4\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"38,90.3 48.5,90.3 47.1,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"38,90.3 49.9,90.3 49.9,112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"62\" y1=\"88\" x2=\"79.6\" y2=\"88\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"62\" y1=\"88\" x2=\"62\" y2=\"67.2\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"63.6\" y1=\"88\" x2=\"63.6\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"78\" y1=\"88\" x2=\"78\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><circle cx=\"67.4\" cy=\"65.80000000000001\" r=\"5.25\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><polyline points=\"66.7,71.4 66,90.3\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"66.7,74.2 74.4,86.8\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"66.7,74.2 75.8,85.4\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"66,90.3 76.5,90.3 75.1,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"66,90.3 77.9,90.3 77.9,112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"90\" y1=\"88\" x2=\"107.6\" y2=\"88\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"90\" y1=\"88\" x2=\"90\" y2=\"67.2\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"91.6\" y1=\"88\" x2=\"91.6\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"106\" y1=\"88\" x2=\"106\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"4\" y1=\"112\" x2=\"116\" y2=\"112\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"6\" y1=\"88\" x2=\"23.6\" y2=\"88\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"6\" y1=\"88\" x2=\"6\" y2=\"67.2\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"7.6\" y1=\"88\" x2=\"7.6\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"22\" y1=\"88\" x2=\"22\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><circle cx=\"11.4\" cy=\"65.80000000000001\" r=\"5.25\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><polyline points=\"10.7,71.4 10,90.3\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"10.7,74.2 18.4,86.8\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"10.7,74.2 19.799999999999997,85.4\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"10,90.3 20.5,90.3 19.1,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"10,90.3 21.9,90.3 21.9,112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"34\" y1=\"88\" x2=\"51.6\" y2=\"88\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"34\" y1=\"88\" x2=\"34\" y2=\"67.2\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"35.6\" y1=\"88\" x2=\"35.6\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"50\" y1=\"88\" x2=\"50\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"62\" y1=\"88\" x2=\"79.6\" y2=\"88\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"62\" y1=\"88\" x2=\"62\" y2=\"67.2\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"63.6\" y1=\"88\" x2=\"63.6\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"78\" y1=\"88\" x2=\"78\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><circle cx=\"67.4\" cy=\"65.80000000000001\" r=\"5.25\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><polyline points=\"66.7,71.4 66,90.3\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"66.7,74.2 74.4,86.8\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"66.7,74.2 75.8,85.4\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"66,90.3 76.5,90.3 75.1,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"66,90.3 77.9,90.3 77.9,112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"90\" y1=\"88\" x2=\"107.6\" y2=\"88\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"90\" y1=\"88\" x2=\"90\" y2=\"67.2\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"91.6\" y1=\"88\" x2=\"91.6\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"106\" y1=\"88\" x2=\"106\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"4\" y1=\"112\" x2=\"116\" y2=\"112\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"6\" y1=\"88\" x2=\"23.6\" y2=\"88\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"6\" y1=\"88\" x2=\"6\" y2=\"67.2\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"7.6\" y1=\"88\" x2=\"7.6\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"22\" y1=\"88\" x2=\"22\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"34\" y1=\"88\" x2=\"51.6\" y2=\"88\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"34\" y1=\"88\" x2=\"34\" y2=\"67.2\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"35.6\" y1=\"88\" x2=\"35.6\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"50\" y1=\"88\" x2=\"50\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><circle cx=\"39.4\" cy=\"65.80000000000001\" r=\"5.25\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><polyline points=\"38.7,71.4 38,90.3\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"38.7,74.2 46.4,86.8\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"38.7,74.2 47.8,85.4\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"38,90.3 48.5,90.3 47.1,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"38,90.3 49.9,90.3 49.9,112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"62\" y1=\"88\" x2=\"79.6\" y2=\"88\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"62\" y1=\"88\" x2=\"62\" y2=\"67.2\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"63.6\" y1=\"88\" x2=\"63.6\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"78\" y1=\"88\" x2=\"78\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"90\" y1=\"88\" x2=\"107.6\" y2=\"88\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"90\" y1=\"88\" x2=\"90\" y2=\"67.2\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"91.6\" y1=\"88\" x2=\"91.6\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"106\" y1=\"88\" x2=\"106\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"4\" y1=\"112\" x2=\"116\" y2=\"112\" stroke=\"#777\" stroke-width=\"2\"/><line x1=\"6\" y1=\"88\" x2=\"23.6\" y2=\"88\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"6\" y1=\"88\" x2=\"6\" y2=\"67.2\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"7.6\" y1=\"88\" x2=\"7.6\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"22\" y1=\"88\" x2=\"22\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><circle cx=\"11.4\" cy=\"65.80000000000001\" r=\"5.25\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><polyline points=\"10.7,71.4 10,90.3\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"10.7,74.2 18.4,86.8\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"10.7,74.2 19.799999999999997,85.4\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"10,90.3 20.5,90.3 19.1,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"10,90.3 21.9,90.3 21.9,112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"34\" y1=\"88\" x2=\"51.6\" y2=\"88\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"34\" y1=\"88\" x2=\"34\" y2=\"67.2\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"35.6\" y1=\"88\" x2=\"35.6\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"50\" y1=\"88\" x2=\"50\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><circle cx=\"39.4\" cy=\"65.80000000000001\" r=\"5.25\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><polyline points=\"38.7,71.4 38,90.3\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"38.7,74.2 46.4,86.8\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"38.7,74.2 47.8,85.4\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"38,90.3 48.5,90.3 47.1,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"38,90.3 49.9,90.3 49.9,112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"62\" y1=\"88\" x2=\"79.6\" y2=\"88\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"62\" y1=\"88\" x2=\"62\" y2=\"67.2\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"63.6\" y1=\"88\" x2=\"63.6\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"78\" y1=\"88\" x2=\"78\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><circle cx=\"67.4\" cy=\"65.80000000000001\" r=\"5.25\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><polyline points=\"66.7,71.4 66,90.3\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"66.7,74.2 74.4,86.8\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"66.7,74.2 75.8,85.4\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"66,90.3 76.5,90.3 75.1,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"66,90.3 77.9,90.3 77.9,112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"90\" y1=\"88\" x2=\"107.6\" y2=\"88\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"90\" y1=\"88\" x2=\"90\" y2=\"67.2\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"91.6\" y1=\"88\" x2=\"91.6\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"106\" y1=\"88\" x2=\"106\" y2=\"112\" stroke=\"#222\" stroke-width=\"2.5\"/><circle cx=\"95.4\" cy=\"65.80000000000001\" r=\"5.25\" stroke=\"#222\" fill=\"none\" stroke-width=\"2.5\"/><polyline points=\"94.7,71.4 94,90.3\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"94.7,74.2 102.4,86.8\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"94.7,74.2 103.8,85.4\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"94,90.3 104.5,90.3 103.1,112\" stroke=\"#222\" stroke-width=\"2.5\"/><polyline points=\"94,90.3 105.9,90.3 105.9,112\" stroke=\"#222\" stroke-width=\"2.5\"/></svg>"
+  ],
+  "answer": 1,
+  "explanation": "Two of the four seats have nobody in them, which is half of the seats."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 4,
+  "passage": "Neither of the windows is open.",
+  "stem": "Choose the picture that best matches what you hear.",
+  "choices": [
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"4\" y=\"14\" width=\"112\" height=\"98\" rx=\"0\" stroke=\"#777\" fill=\"#fff\" stroke-width=\"2\"/><rect x=\"18\" y=\"36\" width=\"28\" height=\"38\" rx=\"0\" stroke=\"#222\" fill=\"#dfe5ef\" stroke-width=\"3\"/><path d=\"M18,36 L10,42 L10,80 L18,74\" stroke=\"#0a1f44\" fill=\"#fff\" stroke-width=\"2.5\"/><path d=\"M46,36 L54,42 L54,80 L46,74\" stroke=\"#0a1f44\" fill=\"#fff\" stroke-width=\"2.5\"/><rect x=\"74\" y=\"36\" width=\"28\" height=\"38\" rx=\"0\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"3\"/><line x1=\"88\" y1=\"36\" x2=\"88\" y2=\"74\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"74\" y1=\"55\" x2=\"102\" y2=\"55\" stroke=\"#222\" stroke-width=\"2.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"4\" y=\"14\" width=\"112\" height=\"98\" rx=\"0\" stroke=\"#777\" fill=\"#fff\" stroke-width=\"2\"/><rect x=\"18\" y=\"36\" width=\"28\" height=\"38\" rx=\"0\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"3\"/><line x1=\"32\" y1=\"36\" x2=\"32\" y2=\"74\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"18\" y1=\"55\" x2=\"46\" y2=\"55\" stroke=\"#222\" stroke-width=\"2.5\"/><rect x=\"74\" y=\"36\" width=\"28\" height=\"38\" rx=\"0\" stroke=\"#222\" fill=\"#dfe5ef\" stroke-width=\"3\"/><path d=\"M74,36 L66,42 L66,80 L74,74\" stroke=\"#0a1f44\" fill=\"#fff\" stroke-width=\"2.5\"/><path d=\"M102,36 L110,42 L110,80 L102,74\" stroke=\"#0a1f44\" fill=\"#fff\" stroke-width=\"2.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"4\" y=\"14\" width=\"112\" height=\"98\" rx=\"0\" stroke=\"#777\" fill=\"#fff\" stroke-width=\"2\"/><rect x=\"18\" y=\"36\" width=\"28\" height=\"38\" rx=\"0\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"3\"/><line x1=\"32\" y1=\"36\" x2=\"32\" y2=\"74\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"18\" y1=\"55\" x2=\"46\" y2=\"55\" stroke=\"#222\" stroke-width=\"2.5\"/><rect x=\"74\" y=\"36\" width=\"28\" height=\"38\" rx=\"0\" stroke=\"#222\" fill=\"#fff\" stroke-width=\"3\"/><line x1=\"88\" y1=\"36\" x2=\"88\" y2=\"74\" stroke=\"#222\" stroke-width=\"2.5\"/><line x1=\"74\" y1=\"55\" x2=\"102\" y2=\"55\" stroke=\"#222\" stroke-width=\"2.5\"/></svg>",
+   "svg:<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\" width=\"120\" height=\"120\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"4\" y=\"14\" width=\"112\" height=\"98\" rx=\"0\" stroke=\"#777\" fill=\"#fff\" stroke-width=\"2\"/><rect x=\"18\" y=\"36\" width=\"28\" height=\"38\" rx=\"0\" stroke=\"#222\" fill=\"#dfe5ef\" stroke-width=\"3\"/><path d=\"M18,36 L10,42 L10,80 L18,74\" stroke=\"#0a1f44\" fill=\"#fff\" stroke-width=\"2.5\"/><path d=\"M46,36 L54,42 L54,80 L46,74\" stroke=\"#0a1f44\" fill=\"#fff\" stroke-width=\"2.5\"/><rect x=\"74\" y=\"36\" width=\"28\" height=\"38\" rx=\"0\" stroke=\"#222\" fill=\"#dfe5ef\" stroke-width=\"3\"/><path d=\"M74,36 L66,42 L66,80 L74,74\" stroke=\"#0a1f44\" fill=\"#fff\" stroke-width=\"2.5\"/><path d=\"M102,36 L110,42 L110,80 L102,74\" stroke=\"#0a1f44\" fill=\"#fff\" stroke-width=\"2.5\"/></svg>"
+  ],
+  "answer": 2,
+  "explanation": "\"Neither ... is open\" means both windows are closed."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Where is the bathroom?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "Yes, I took a bath.",
+   "It's down the hall.",
+   "At ten o'clock.",
+   "It's very clean."
+  ],
+  "answer": 1,
+  "explanation": "The question asks for a place, and \"down the hall\" gives a location."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "What time is it?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "It's on the table.",
+   "Yes, it's mine.",
+   "For two hours.",
+   "It's almost noon."
+  ],
+  "answer": 3,
+  "explanation": "The speaker asks for the time, and \"almost noon\" tells the time."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Do you like this color?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "Yes, it's really nice.",
+   "I'd like a coffee.",
+   "It's a big collar.",
+   "At the store."
+  ],
+  "answer": 0,
+  "explanation": "A yes/no question about liking something is answered with \"Yes\" and an opinion."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "How much is this bag?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "It's very heavy.",
+   "Yes, I have a bag.",
+   "It's twenty dollars.",
+   "Two bags, please."
+  ],
+  "answer": 2,
+  "explanation": "\"How much\" asks for a price, so \"twenty dollars\" is correct."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Is this your pen?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "Yes, I'm open.",
+   "I write letters.",
+   "No, it's Maria's.",
+   "On Tuesday."
+  ],
+  "answer": 2,
+  "explanation": "The answer says who owns the pen; \"open\" only sounds like \"pen\"."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Who is your teacher?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "Mr. Park.",
+   "In Room 5.",
+   "I teach math.",
+   "Yesterday."
+  ],
+  "answer": 0,
+  "explanation": "\"Who\" asks for a person, and Mr. Park is a person."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Can I sit here?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "It's sunny here.",
+   "No, I ate already.",
+   "Six of them.",
+   "Sure, go ahead."
+  ],
+  "answer": 3,
+  "explanation": "The speaker asks for permission, and \"Sure, go ahead\" gives it."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "When does the bus come?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "At the bus stop.",
+   "In ten minutes.",
+   "By bus.",
+   "Yes, it does."
+  ],
+  "answer": 1,
+  "explanation": "\"When\" asks about time, so \"In ten minutes\" is correct; \"At the bus stop\" answers \"where\"."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Thank you for the gift.",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "You're welcome.",
+   "I'll take it.",
+   "It's a gift shop.",
+   "Yes, please."
+  ],
+  "answer": 0,
+  "explanation": "\"You're welcome\" is the normal reply to \"thank you\"."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Would you like some tea?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "It's three o'clock.",
+   "No, it's mine.",
+   "Yes, please.",
+   "In the kitchen."
+  ],
+  "answer": 2,
+  "explanation": "An offer is accepted politely with \"Yes, please.\""
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "How are you today?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "I'm twelve years old.",
+   "By train.",
+   "Today is Monday.",
+   "I'm fine, thanks."
+  ],
+  "answer": 3,
+  "explanation": "\"How are you?\" is a greeting, answered with \"I'm fine, thanks.\""
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Is it cold outside?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "It's very old.",
+   "Yes, wear a coat.",
+   "It's outside the door.",
+   "I bought a new one."
+  ],
+  "answer": 1,
+  "explanation": "The reply says it is cold and gives advice; \"old\" only sounds like \"cold\"."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Where do you live?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "For five years.",
+   "Near the park.",
+   "Yes, I do.",
+   "I leave at eight."
+  ],
+  "answer": 1,
+  "explanation": "\"Where\" asks for a place, so \"Near the park\" is correct."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 1,
+  "passage": "Please close the window.",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "OK, I'll do it now.",
+   "It's close to my house.",
+   "Yes, it's a window.",
+   "At the store."
+  ],
+  "answer": 0,
+  "explanation": "A request is answered by agreeing to do it."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "What did you buy at the store?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "At about five.",
+   "It's a big store.",
+   "Yes, I did.",
+   "Some bread and milk."
+  ],
+  "answer": 3,
+  "explanation": "\"What did you buy\" asks for things, and bread and milk are things you buy."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Why is the shop closed today?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "It's close to the bank.",
+   "Yes, I shopped there.",
+   "Because it's a holiday.",
+   "I shopped yesterday."
+  ],
+  "answer": 2,
+  "explanation": "\"Why\" asks for a reason, and \"Because it's a holiday\" gives one."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Which bus goes to the station?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "Number twelve.",
+   "It's a nice station.",
+   "Every day.",
+   "Yes, it goes there."
+  ],
+  "answer": 0,
+  "explanation": "\"Which bus\" asks for one bus, and \"Number twelve\" names it."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Are you ready for the test?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "I'm reading a book.",
+   "I think so. I studied a lot.",
+   "It's red.",
+   "At nine."
+  ],
+  "answer": 1,
+  "explanation": "The reply says the speaker is ready and explains why."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Should I call a taxi or take the bus?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "Yes, you should.",
+   "I'll call you later.",
+   "It's a yellow taxi.",
+   "The bus is faster at this time."
+  ],
+  "answer": 3,
+  "explanation": "A choice question needs one of the choices, not \"yes\"; the reply chooses the bus."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Could you help me carry these boxes?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "They're new boxes.",
+   "Yes, I carry a bag.",
+   "Help yourself.",
+   "Of course. Where do they go?"
+  ],
+  "answer": 3,
+  "explanation": "The reply agrees to help and asks a natural follow-up question."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Let's have lunch at the new café.",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "Good idea. I'm hungry.",
+   "I'm a new student.",
+   "No, it's my coffee.",
+   "Yes, it's a new watch."
+  ],
+  "answer": 0,
+  "explanation": "A suggestion is answered by agreeing (\"Good idea\")."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "How long does the movie last?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "It was the last one.",
+   "At the theater downtown.",
+   "About two hours.",
+   "It's a long line."
+  ],
+  "answer": 2,
+  "explanation": "\"How long\" asks about length of time, so \"About two hours\" is correct."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "I lost my phone this morning.",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "Yes, it's a new phone.",
+   "Oh no! Where did you last see it?",
+   "Good morning.",
+   "It's a phone number."
+  ],
+  "answer": 1,
+  "explanation": "The reply shows concern and tries to help find the phone."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Who's going to clean the kitchen?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "I'll do it after dinner.",
+   "Yes, it's clean.",
+   "In the kitchen.",
+   "With some soap."
+  ],
+  "answer": 0,
+  "explanation": "\"Who\" asks for a person; \"I'll do it\" names the speaker."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Did you finish your homework?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "Yes, it's a nice home.",
+   "In my room.",
+   "Not yet. I'm almost done.",
+   "I work at home."
+  ],
+  "answer": 2,
+  "explanation": "The reply answers the yes/no question: the homework is not finished yet."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Do you want a large or a small coffee?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "Yes, I do.",
+   "It's hot coffee.",
+   "In a cup.",
+   "A small one, please."
+  ],
+  "answer": 3,
+  "explanation": "A choice question is answered by choosing one size."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Where can I buy a train ticket?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "At three fifteen.",
+   "At the window over there.",
+   "It's twenty dollars.",
+   "Yes, the train is here."
+  ],
+  "answer": 1,
+  "explanation": "\"Where\" asks for a place, and \"the window over there\" is a place."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "How often do you go swimming?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "Twice a week.",
+   "At the pool.",
+   "For an hour.",
+   "Yes, I can swim."
+  ],
+  "answer": 0,
+  "explanation": "\"How often\" asks about frequency, so \"Twice a week\" is correct."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "The printer isn't working again.",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "Yes, I'm working today.",
+   "Print two pages, please.",
+   "I'll call the repair person.",
+   "It's new paper."
+  ],
+  "answer": 2,
+  "explanation": "The reply offers a solution to the broken printer."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "What's the weather like tomorrow?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "I like it too.",
+   "It'll be sunny.",
+   "Tomorrow is Friday.",
+   "Yes, I'd like that."
+  ],
+  "answer": 1,
+  "explanation": "The question asks about the weather, and \"sunny\" describes the weather."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 2,
+  "passage": "Can you show me where Room 210 is?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "At two ten.",
+   "It's a big room.",
+   "I saw the show.",
+   "Sure, follow me."
+  ],
+  "answer": 3,
+  "explanation": "The speaker asks for directions, and \"follow me\" offers to show the way."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 3,
+  "passage": "Why don't we take a short break?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "Good idea. I'm a little tired.",
+   "Because it broke.",
+   "It wasn't short.",
+   "I take the bus."
+  ],
+  "answer": 0,
+  "explanation": "\"Why don't we...?\" is a suggestion, not a real \"why\" question, so agreeing is correct."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 3,
+  "passage": "Has the package arrived yet?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "I packed my bag.",
+   "It's a big package.",
+   "Yes, it's on your desk.",
+   "No, I haven't eaten yet."
+  ],
+  "answer": 2,
+  "explanation": "The reply confirms that the package arrived and says where it is."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 3,
+  "passage": "Would you mind opening the door for me?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "Yes, it's open on Sundays.",
+   "Not at all.",
+   "I don't mind the color.",
+   "The door is brown."
+  ],
+  "answer": 1,
+  "explanation": "\"Would you mind...?\" is a polite request; \"Not at all\" means \"I am happy to do it.\""
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 3,
+  "passage": "Is the meeting on Tuesday or Wednesday?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "Yes, it is.",
+   "In the meeting room.",
+   "I'll meet you there.",
+   "It was moved to Thursday."
+  ],
+  "answer": 3,
+  "explanation": "The reply gives new information about the day; \"Yes\" cannot answer an either-or question."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 3,
+  "passage": "Excuse me, is this seat taken?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "No, you can sit here.",
+   "I took the bus.",
+   "Yes, I'll take it.",
+   "It's a window seat."
+  ],
+  "answer": 0,
+  "explanation": "\"Is this seat taken?\" means \"Is someone using it?\", and \"No, you can sit here\" answers it."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 3,
+  "passage": "I'm sorry I'm late for class.",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "I'm in the same class.",
+   "That's OK. Please sit down.",
+   "Later, please.",
+   "It's a late bus."
+  ],
+  "answer": 1,
+  "explanation": "The teacher accepts the apology and tells the student to sit down."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 3,
+  "passage": "Who left these books on the table?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "On the table.",
+   "I left at five.",
+   "I think Tom did.",
+   "Yes, they're heavy."
+  ],
+  "answer": 2,
+  "explanation": "\"Who\" asks for a person, and the reply names Tom."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 3,
+  "passage": "When will the new store open?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "It's on Main Street.",
+   "Yes, it's open.",
+   "It sells clothes.",
+   "Next month, I heard."
+  ],
+  "answer": 3,
+  "explanation": "\"When\" asks for a time, and \"Next month\" gives one."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 3,
+  "passage": "How did you get here so quickly?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "Here it is.",
+   "About two miles.",
+   "Yes, it was quick.",
+   "My brother gave me a ride."
+  ],
+  "answer": 3,
+  "explanation": "\"How did you get here\" asks about the way of traveling; a ride from a brother explains it."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 3,
+  "passage": "Your room is on the third floor.",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "Thanks. Is there an elevator?",
+   "The floor is clean.",
+   "Three rooms, please.",
+   "I'll be there at three."
+  ],
+  "answer": 0,
+  "explanation": "A hotel guest thanks the clerk and asks a natural follow-up question."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 3,
+  "passage": "Why was the train late this morning?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "It leaves at eight.",
+   "I'm training for a race.",
+   "There was snow on the tracks.",
+   "Yes, it was late."
+  ],
+  "answer": 2,
+  "explanation": "\"Why\" asks for a reason, and snow on the tracks is a reason."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 3,
+  "passage": "Would you like to join us for dinner tonight?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "Yes, I joined a club.",
+   "I'd love to. What time?",
+   "We had dinner.",
+   "It's a nice dinner table."
+  ],
+  "answer": 1,
+  "explanation": "The reply accepts the invitation and asks about the time."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 3,
+  "passage": "Which jacket should I wear, the blue one or the black one?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "The blue one looks better on you.",
+   "Yes, you should wear one.",
+   "I bought it last week.",
+   "It's on sale today."
+  ],
+  "answer": 0,
+  "explanation": "The reply chooses one of the two jackets."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 3,
+  "passage": "Where should I put these groceries?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "At the grocery store.",
+   "About forty dollars.",
+   "Put on your coat.",
+   "In the kitchen, please."
+  ],
+  "answer": 3,
+  "explanation": "\"Where should I put\" asks for a place in the home, and \"In the kitchen\" answers it."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 3,
+  "passage": "The library will be closed on Monday.",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "It's close to the library.",
+   "On the second floor.",
+   "Then I'll return my books today.",
+   "I'm reading a book."
+  ],
+  "answer": 2,
+  "explanation": "The reply reacts sensibly to the news by planning to return the books before Monday."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 3,
+  "passage": "Can I pay with a credit card?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "It's a birthday card.",
+   "Yes, we accept all cards.",
+   "Yes, he paid yesterday.",
+   "Five dollars each."
+  ],
+  "answer": 1,
+  "explanation": "The clerk answers the question about paying by card."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 3,
+  "passage": "How was your trip to the mountains?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "I'll take the train.",
+   "In the mountains.",
+   "Great, but it was very cold.",
+   "For a week next month."
+  ],
+  "answer": 2,
+  "explanation": "\"How was your trip?\" asks for an opinion about a past trip."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 4,
+  "passage": "Haven't you sent the report to the manager yet?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "I'm doing it right now.",
+   "Yes, she's the manager.",
+   "It was a long report.",
+   "Send it to my address."
+  ],
+  "answer": 0,
+  "explanation": "The reply explains that the report is being sent at this moment."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 4,
+  "passage": "I can't decide which apartment to rent.",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "It's a nice apartment.",
+   "I decided yesterday.",
+   "Rent a car at the airport.",
+   "What do you like about each one?"
+  ],
+  "answer": 3,
+  "explanation": "The reply helps the speaker decide by asking about the two apartments."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 4,
+  "passage": "Wasn't the concert supposed to start at seven?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "It was a great concert.",
+   "Yes, but the singer is running late.",
+   "Seven tickets, please.",
+   "Start the car."
+  ],
+  "answer": 1,
+  "explanation": "The reply agrees about the start time and explains why the concert has not started."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 4,
+  "passage": "Do you know if the pharmacy is still open?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "Yes, I know her.",
+   "Open the window, please.",
+   "I bought some medicine.",
+   "I think it closes at nine."
+  ],
+  "answer": 3,
+  "explanation": "The reply gives information about the pharmacy's hours."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 4,
+  "passage": "Why don't you ask the hotel to change your room?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "Because I changed it.",
+   "Yes, the room is nice.",
+   "I already did, but they're full.",
+   "I'll ask for some change."
+  ],
+  "answer": 2,
+  "explanation": "The reply explains that the speaker already tried the suggestion."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 4,
+  "passage": "The new schedule starts next week, doesn't it?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "Actually, it was moved to next month.",
+   "I start school at eight.",
+   "It was a long week.",
+   "Yes, it was very busy."
+  ],
+  "answer": 0,
+  "explanation": "The reply corrects the speaker with new information about the schedule."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 4,
+  "passage": "Should we eat here or get our food to go?",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "The food was good.",
+   "Yes, we should.",
+   "Let's eat here. There are free tables.",
+   "I'll go tomorrow."
+  ],
+  "answer": 2,
+  "explanation": "The reply chooses to eat in the restaurant and gives a reason."
+ },
+ {
+  "exam_type": "TOEICB",
+  "section": "listening",
+  "difficulty": 4,
+  "passage": "I'm afraid the blue shirts are sold out in your size.",
+  "stem": "Choose the best response to the question or statement you hear.",
+  "choices": [
+   "I'm not afraid.",
+   "Do you have them in another color?",
+   "Yes, I sold it.",
+   "It's a nice blue."
+  ],
+  "answer": 1,
+  "explanation": "\"I'm afraid\" here means \"I'm sorry to say\"; the customer naturally asks about other colors."
+ }
+]
