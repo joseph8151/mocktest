@@ -166,7 +166,7 @@ details.faq p{color:var(--muted);padding:0 0 18px;margin:0;max-width:44em}
 .choice.right{background:var(--ok);border-color:var(--ok);color:#fff;position:relative}.choice.right>b{color:#fff}
 .choice.miss{background:var(--bad);border-color:var(--bad);color:#fff;position:relative}.choice.miss>b{color:#fff}
 .choice.right .badge,.choice.miss .badge{color:#fff;border-color:#fff}
-.choice img{max-height:76px;background:#fff;padding:2px}
+.choice img{max-height:104px;background:#fff;padding:2px}
 .qimg{display:block;max-width:100%;margin:4px 0 22px;background:#fff;border:1px solid var(--line);padding:10px}
 .exam-foot{display:flex;justify-content:space-between;align-items:center;margin-top:28px;gap:10px}
 .kbd{font-size:.72rem;color:var(--muted);letter-spacing:.04em}

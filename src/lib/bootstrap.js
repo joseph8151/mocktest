@@ -15,6 +15,7 @@ import m11 from '../../migrations/0011_kr_tests.sql';
 import m12 from '../../migrations/0012_ai_grading.sql';
 import m13 from '../../migrations/0013_contact.sql';
 import m14 from '../../migrations/0014_listening_audio.sql';
+import m15 from '../../migrations/0015_toeic_bridge.sql';
 import manifest from '../../seed/manifest.json'; // small: version + products. The question bank itself is a private static file.
 
 // [name, sql, a table that exists once this migration has been applied]
@@ -31,7 +32,7 @@ const statements = (sql) => {
 };
 
 // One-time data updates, applied AFTER seeding (so a fresh database is not left with only these rows).
-const DATA_FIXES = [['0004_prices', m4], ['0005_admin_and_kcp', m5], ['0006_new_exams', m6], ['0007_integrity', m7], ['0008_security_features', m8], ['0009_records', m9], ['0010_family_and_more', m10], ['0011_kr_tests', m11], ['0012_ai_grading', m12], ['0013_contact', m13], ['0014_listening_audio', m14]];
+const DATA_FIXES = [['0004_prices', m4], ['0005_admin_and_kcp', m5], ['0006_new_exams', m6], ['0007_integrity', m7], ['0008_security_features', m8], ['0009_records', m9], ['0010_family_and_more', m10], ['0011_kr_tests', m11], ['0012_ai_grading', m12], ['0013_contact', m13], ['0014_listening_audio', m14], ['0015_toeic_bridge', m15]];
 
 let ready = null, syncing = null;
 /**

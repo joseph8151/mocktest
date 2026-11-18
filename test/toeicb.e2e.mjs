@@ -22,7 +22,11 @@ assert.deepEqual(info.sections.map((s) => [s.key, s.n]), [['listening', 25], ['r
 const ORDER = { listening: ['Part 1 · Four Pictures', 'Part 2 · Question-Response', 'Part 3 · Conversations', 'Part 4 · Talks'], reading: ['Part 1 · Sentence Completion', 'Part 2 · Text Completion', 'Part 3 · Reading Comprehension'] };
 const COUNT = { 'Part 1 · Four Pictures': 3, 'Part 2 · Question-Response': 10, 'Part 3 · Conversations': 6, 'Part 4 · Talks': 6, 'Part 1 · Sentence Completion': 8, 'Part 2 · Text Completion': 8, 'Part 3 · Reading Comprehension': 9 };
 const allSeen = new Set();
+// a fresh student with a 3회권 (the admin account keeps history between runs, which would shrink the unseen pool)
+const stu = new C(), reg = await stu.post('/api/auth/register', { email: `tb${Date.now()}@t.com`, name: 'TB', password: 'Mock-test-2026', agree: true });
+assert.ok((await admin.post(`/api/admin/users/${reg.user.id}/grant`, { productId: 'p-toeicb-3' })).ok, 'grant 3회권');
 async function take(right) {
+  const admin = stu; // the student takes the tests
   const s = await admin.post('/api/attempts', { examType: 'TOEICB' });
   assert.ok(s.id, JSON.stringify(s));
   let cur = await admin.get(`/api/attempts/${s.id}/current`); const keys = [];
@@ -50,7 +54,7 @@ for (const k of ['listening', 'reading']) { const sc = rep.score.sections[k].sca
 assert.equal(rep.score.overall, rep.score.sections.listening.scaled + rep.score.sections.reading.scaled, 'total = sum (30–100)');
 // second and third tests: fresh questions while the pool allows
 const before = allSeen.size; await take(false); await take(false);
-assert.ok(allSeen.size >= before + 80, `three tests drew ${allSeen.size} distinct questions`);
+assert.equal(allSeen.size, 150, `three tests drew ${allSeen.size} distinct questions (no repeats)`);
 
 let ok = false;
 for (let i = 0; i < 5 && !ok; i++) ok = (await anon.get('/api/sample/TOEICB')).questions?.length === 5;
