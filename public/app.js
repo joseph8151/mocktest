@@ -162,6 +162,8 @@ Object.assign(EXAM_META, {
     points: ['디지털 SAT 형식의 Reading & Writing 27문항, Math 22문항', '그래프·표·도형은 SVG 그림으로 제공', '영역별 200–800 척도 점수와 합산 점수(400–1600) 추정'] },
   TOEFLJ: { name: 'TOEFL Junior', ico: 'T', accent: 'var(--toeflj)', sub: '영어 숙달도 · Listening / Language Form & Meaning / Reading',
     points: ['듣기는 음성으로 재생(최대 2회), 문법·어휘, 독해 3개 영역', '영역별 200–300 척도 점수와 합산 점수(600–900) 추정', 'CEFR A2–B2 수준 문항'] },
+  TOEICB: { name: 'TOEIC Bridge', ico: 'B', accent: 'var(--toeicb)', sub: '기초 실용 영어 · Listening / Reading',
+    points: ['듣기 4파트(사진 고르기·응답·대화·담화)와 읽기 3파트(문장·글 완성·독해)', '듣기는 음성으로 재생(최대 2회)', '영역별 15–50 척도 점수와 합산 점수(30–100) 추정'] },
 });
 const FAQ = [
   ['결제하면 바로 시험을 볼 수 있나요?', '결제가 확인되면 이용권이 지급되어 “내 시험”에서 바로 시작할 수 있습니다. 무통장입금은 입금 후 30분~1시간 안에 확인해 지급하고, 지급되면 이메일로 알려 드립니다.'],
@@ -176,7 +178,7 @@ function examCard(type, m, i, products, payment) {
       h('div', { class: 'idx' }, h('span', {}, h('b', {}), `0${i + 1}`), h('span', {}, m.kr ? '레테' : type)),
       h('h3', {}, m.name), h('div', { class: 'sub' }, m.sub),
       h('div', { class: 'row small', style: 'margin:-6px 0 16px;gap:14px' }, h('a', { href: `#/info/${type}` }, '시험 안내'), h('a', { href: `#/sample/${type}` }, '무료 샘플 5문항')),
-      h('div', { class: 'tags' }, ({ MAP: ['K–G12', '학년별 13단계'], CAT4: ['Level A', 'B/C', 'D', 'E–G'], COGAT: ['L7–8', 'L9–11', 'L12–14', 'L15–18'], SCAT: ['Elementary', 'Intermediate', 'Advanced'], SSAT: ['Elementary', 'Middle', 'Upper'], ISEE: ['Lower', 'Middle', 'Upper'], SAT: ['PSAT 8/9', 'PSAT 10', 'SAT'], KR_ENG: ['9세 SR3.5', '10세 SR4.5', '11세 SR5.5', '12세 SR6.5'], KR_KOR: ['7세', '8세', '9세', '10세', '11세', '12세'], KR_MATH: ['7세', '8세', '9세', '10세', '11세', '12세'], TOEFLJ: ['Primary 1', 'Primary 2', 'Junior'], WIDA: ['G1', 'G2–3', 'G4–5', 'G6–8', 'G9–12'] }[type] || []).map((x) => h('span', {}, x))),
+      h('div', { class: 'tags' }, ({ MAP: ['K–G12', '학년별 13단계'], CAT4: ['Level A', 'B/C', 'D', 'E–G'], COGAT: ['L7–8', 'L9–11', 'L12–14', 'L15–18'], SCAT: ['Elementary', 'Intermediate', 'Advanced'], SSAT: ['Elementary', 'Middle', 'Upper'], ISEE: ['Lower', 'Middle', 'Upper'], SAT: ['PSAT 8/9', 'PSAT 10', 'SAT'], KR_ENG: ['9세 SR3.5', '10세 SR4.5', '11세 SR5.5', '12세 SR6.5'], KR_KOR: ['7세', '8세', '9세', '10세', '11세', '12세'], KR_MATH: ['7세', '8세', '9세', '10세', '11세', '12세'], TOEFLJ: ['Primary 1', 'Primary 2', 'Junior'], TOEICB: ['Listening & Reading', 'CEFR Pre-A1–B1'], WIDA: ['G1', 'G2–3', 'G4–5', 'G6–8', 'G9–12'] }[type] || []).map((x) => h('span', {}, x))),
       h('ul', {}, m.points.map((x) => h('li', {}, x))),
       h('div', { class: 'push' }, payment.bank === undefined ? h('p', { class: 'small muted price-loading' }, '가격 불러오는 중…') : null, products.filter((p) => p.exam_type === type).map((p) => h('div', { class: 'plan' },
         h('div', {}, h('div', { class: 'pt' }, p.id === 'p-test' ? '관리자 결제 테스트' : `${p.attempts}회권`, (() => { const one = products.find((x) => x.exam_type === type && x.attempts === 1); const off = one && p.attempts > 1 ? Math.round((1 - p.price_krw / (one.price_krw * p.attempts)) * 100) : 0; return off > 0 ? h('em', { class: 'save' }, `−${off}%`) : null; })()), h('div', { class: 'pd' }, `${p.valid_days}D · ${money(p.price_usd_cents, 'USD')}`)),
@@ -241,10 +243,10 @@ async function pageHome() {
     h('section', { class: 'hero' },
       h('div', {},
         h('span', { class: 'eyebrow' }, '★ U.S. admissions test prep'),
-        h('h1', {}, 'Practice like', h('br'), 'it\'s ', h('span', { class: 'hl' }, 'test day'), '.', h('em', {}, 'MAP / CAT4 / CogAT / SCAT / SSAT / ISEE / SAT / TOEFL Junior / WIDA')),
+        h('h1', {}, 'Practice like', h('br'), 'it\'s ', h('span', { class: 'hl' }, 'test day'), '.', h('em', {}, 'MAP / CAT4 / CogAT / SCAT / SSAT / ISEE / SAT / TOEFL Junior / TOEIC Bridge / WIDA')),
         h('p', { class: 'lead' }, '실제 시험과 같은 형식, 같은 시간 압박. 결제하면 곧바로 응시할 수 있고, 끝나는 즉시 영역별 점수와 문항별 해설이 나옵니다.'),
         h('div', { class: 'row' }, h('button', { class: 'btn lg', onclick: toExams }, 'Browse tests →'), me ? h('a', { class: 'btn lg alt', href: '#/me' }, '내 시험') : h('a', { class: 'btn lg alt', href: '#/register' }, '회원가입')),
-        h('div', { class: 'chips' }, [['5,000+', 'original questions'], ['12', 'test types'], ['0s', 'wait for your score']].map(([b, t]) => h('div', {}, h('b', {}, b), t)))),
+        h('div', { class: 'chips' }, [['5,000+', 'original questions'], ['13', 'test types'], ['0s', 'wait for your score']].map(([b, t]) => h('div', {}, h('b', {}, b), t)))),
       h('div', { class: 'mock', 'aria-hidden': 'true' },
         h('div', { class: 'mrow' }, h('b', { style: 'font-weight:500' }, 'Verbal / 03'), h('span', {}, '08:42')),
         h('div', { class: 'mq' }, 'Author is to book as composer is to ___'),
@@ -427,7 +429,7 @@ function authForm(kind, q = {}) {
     h('p', { class: 'small' }, reg ? h('a', { href: '#/login' }, '이미 계정이 있나요?') : [h('a', { href: '#/register' }, '회원가입'), ' · ', h('a', { href: '#/forgot' }, '비밀번호 찾기')]),
   );
   return h('div', { class: 'auth' },
-    h('div', { class: 'side' }, h('span', { class: 'eyebrow' }, 'MockTest Lab'), h('div', {}, h('h2', {}, reg ? 'Practice. Score. Improve.' : 'Welcome back.'), h('p', {}, 'MAP · CAT4 · CogAT · SCAT · SSAT · ISEE · SAT · TOEFL Junior · WIDA'))), f);
+    h('div', { class: 'side' }, h('span', { class: 'eyebrow' }, 'MockTest Lab'), h('div', {}, h('h2', {}, reg ? 'Practice. Score. Improve.' : 'Welcome back.'), h('p', {}, 'MAP · CAT4 · CogAT · SCAT · SSAT · ISEE · SAT · TOEFL Junior · TOEIC Bridge · WIDA'))), f);
 }
 function pageForgot() {
   const msg = h('p', { class: 'muted' });
@@ -524,6 +526,7 @@ const EXAM_INFO = {
     tips: ['문장 완성은 빈칸 앞뒤의 접속어(however, because)로 방향을 먼저 잡으세요.', 'Quantitative는 "계산 없이 어림"으로 보기를 줄일 수 있는지 먼저 보세요.', '에세이는 도입-근거 2개-결론의 틀을 외워 두세요.'] },
   SAT: { about: 'College Board의 대학 입학 시험(디지털 SAT). Reading & Writing과 Math 두 섹션이며 응답에 따라 두 번째 모듈의 난이도가 달라집니다.', who: '고등학생(대학 지원), 국제학교 상위 학년', score: '섹션별 200~800, 합산 400~1600. 이 사이트는 정답률을 환산한 추정치이며 실제 SAT의 등화(equating)와 다릅니다.',
     tips: ['Reading & Writing은 지문을 다 읽기 전에 "무엇을 묻는지"를 먼저 보세요.', '문법 문제는 문장 경계(쉼표·접속사)→주어-동사 일치→시제 순으로 점검하세요.', 'Math는 그래프·표 문제에서 축의 단위를 먼저 확인하세요.'] },
+  TOEICB: { about: 'ETS의 기초·실용 영어 평가(TOEIC Bridge Listening & Reading). 일상·학교·직장 상황의 듣기 4파트와 읽기 3파트로 구성됩니다. 실제 시험은 듣기 50문항(약 25분)·읽기 50문항(35분)이며, 이 모의고사는 같은 파트 구성의 절반 분량(각 25문항)입니다.', who: '토익 입문 전 단계의 중·고등학생과 성인 초급 학습자, 학교·기관에 영어 성적이 필요한 지원자', score: '영역별 15~50, 합산 30~100으로 보고합니다. 이 사이트는 영역별 정답률을 같은 척도로 환산한 추정치입니다.' },
   TOEFLJ: { about: 'ETS의 중등용 영어 숙달도 평가(TOEFL Junior Standard). 듣기 · 언어 형식과 의미(문법·어휘) · 읽기로 구성됩니다.', who: '만 11~15세 영어 학습자, 영어 성적 제출이 필요한 국제학교 지원자', score: '영역별 200~300, 합산 600~900과 CEFR(A2~B2) 수준으로 해석합니다. 이 사이트는 영역별 정답률을 환산한 추정치입니다.',
     tips: ['듣기는 질문 유형(주제·세부·의도)을 미리 떠올리고 들으세요. (이 사이트는 최대 2회 재생)', '문법 문제는 빈칸의 품사를 먼저 판단하세요.', '독해는 공지·이메일·기사 등 글의 목적을 먼저 파악하세요.'] },
   WIDA: { about: 'WIDA ACCESS는 미국 K-12 영어 학습자의 영어 숙달도를 듣기·말하기·읽기·쓰기로 평가합니다.', who: '미국 공립학교 영어 학습자(ELL/EL), 영어 숙달도를 확인하려는 학생', score: '영역별 Proficiency Level 1~6. 종합 레벨은 읽기·쓰기 35%씩, 듣기·말하기 15%씩 가중합니다. 쓰기·말하기는 교사가 채점합니다.',
@@ -540,6 +543,7 @@ const SCORE_HELP = {
   SSAT: '합산 점수는 3개 점수 영역(Quantitative · Reading · Verbal)의 합입니다. 라이팅 샘플은 점수에 포함되지 않습니다.',
   ISEE: '합산 점수는 4개 점수 영역의 합이며 에세이는 점수에 포함되지 않습니다. 스태나인 5가 평균입니다.',
   SAT: '합산 점수는 Reading & Writing + Math(400~1600)입니다. 실제 SAT는 응시자 집단 기준으로 환산하므로 이 점수는 참고용입니다.',
+  TOEICB: '영역별 15~50점, 합산 30~100점입니다. 듣기와 읽기 점수를 함께 보고 약한 영역을 확인하세요.',
   TOEFLJ: '영역별 200~300점, 합산 600~900점입니다. 점수대가 높을수록 CEFR 상위 수준(B1~B2)에 해당합니다.',
   WIDA: 'Level 1(Entering) → 6(Reaching). 종합 레벨은 영역별 가중 평균입니다. 쓰기·말하기는 채점 후 표시됩니다.',
 };
@@ -1018,7 +1022,7 @@ function pageExamSection(id, state) {
       h('div', { class: 'exam-top' },
         h('div', { class: 'exam-head' }, h('div', { class: 'sec-pill' }, sec.name, h('i', {}, `${sec.pos ?? sec.index + 1}/${sec.count ?? sec.total}`)), counter, fsButton(), h('span', {}, '⏱ ', timer)),
         palette),
-      h('div', { class: 'qcard' + (longP ? ' split' : '') }, h('div', { class: 'qmeta' }, h('b', {}, `Question ${cur + 1}`), h('span', { class: 'row', style: 'gap:6px' }, clearBtn, flagBtn)), longP ? h('div', { class: 'splitwrap' }, body[0], h('div', { class: 'qside' }, body.slice(1))) : body,
+      h('div', { class: 'qcard' + (longP ? ' split' : '') }, h('div', { class: 'qmeta' }, h('b', {}, `Question ${cur + 1}`, q.part ? h('span', { class: 'muted small', style: 'font-weight:500;margin-left:8px' }, q.part) : null), h('span', { class: 'row', style: 'gap:6px' }, clearBtn, flagBtn)), longP ? h('div', { class: 'splitwrap' }, body[0], h('div', { class: 'qside' }, body.slice(1))) : body,
         h('div', { class: 'exam-foot' },
           h('button', { class: 'btn alt', disabled: cur === 0, onclick: () => go(cur - 1) }, '← 이전'),
           h('span', { class: 'kbd hide-sm' }, q.kind === 'mcq' ? 'A–D 선택 · ←/→ 이동' : ''),
@@ -1191,7 +1195,7 @@ function renderReport(r, id) {
     }
     return h('div', { class: 'ring' }, svg, h('div', { class: 'c' }, h('b', {}, big), h('span', {}, small)));
   };
-  const accent = { MAP: 'var(--map)', CAT4: 'var(--cat4)', WIDA: 'var(--wida)', SCAT: 'var(--scat)', SSAT: 'var(--ssat)', ISEE: 'var(--isee)', COGAT: 'var(--cogat)', SAT: 'var(--sat)', TOEFLJ: 'var(--toeflj)' }[t];
+  const accent = { MAP: 'var(--map)', CAT4: 'var(--cat4)', WIDA: 'var(--wida)', SCAT: 'var(--scat)', SSAT: 'var(--ssat)', ISEE: 'var(--isee)', COGAT: 'var(--cogat)', SAT: 'var(--sat)', TOEFLJ: 'var(--toeflj)', TOEICB: 'var(--toeicb)' }[t];
   // Each section arrives formatted the way the real test reports it (main value, sub line, optional chip).
   const cards = Object.entries(sc.sections).map(([key, s]) => h('div', { class: 'ring-card' }, h('div', { class: 'muted small' }, s.name),
     ring(s.ring ?? s.pct ?? 0, s.main ?? '–', '', accent),
@@ -1490,7 +1494,7 @@ async function adminProducts(b) {
   };
   b.append(h('p', {}, h('button', { class: 'btn sm', onclick: () => edit() }, '+ 새 상품')), h('table', {}, products.map((p) => h('tr', {}, h('td', {}, p.exam_type), h('td', {}, p.title), h('td', {}, `${money(p.price_krw, 'KRW')} / ${money(p.price_usd_cents, 'USD')}`), h('td', {}, `${p.attempts}회/${p.valid_days}일`), h('td', {}, p.active ? '판매중' : '중지'), h('td', {}, h('button', { class: 'btn sm alt', onclick: () => edit(p) }, '수정'))))));
 }
-const SECTIONS = { MAP: ['reading', 'language', 'math'], CAT4: ['verbal', 'quantitative', 'nonverbal', 'spatial'], WIDA: ['listening', 'reading', 'writing', 'speaking'], SCAT: ['verbal', 'quantitative'], SSAT: ['writing', 'quantitative', 'reading', 'verbal'], ISEE: ['verbal', 'quantitative', 'reading', 'math', 'essay'], COGAT: ['verbal', 'quantitative', 'nonverbal'], SAT: ['rw', 'math'], TOEFLJ: ['listening', 'lfm', 'reading'] , KR_ENG: ['reading', 'vocab', 'grammar', 'writing_creative', 'writing_expository'], KR_KOR: ['nonfiction', 'literature', 'vocab', 'writing'], KR_MATH: ['number', 'geometry', 'pattern', 'problem'] };
+const SECTIONS = { MAP: ['reading', 'language', 'math'], CAT4: ['verbal', 'quantitative', 'nonverbal', 'spatial'], WIDA: ['listening', 'reading', 'writing', 'speaking'], SCAT: ['verbal', 'quantitative'], SSAT: ['writing', 'quantitative', 'reading', 'verbal'], ISEE: ['verbal', 'quantitative', 'reading', 'math', 'essay'], COGAT: ['verbal', 'quantitative', 'nonverbal'], SAT: ['rw', 'math'], TOEFLJ: ['listening', 'lfm', 'reading'], TOEICB: ['listening', 'reading'] , KR_ENG: ['reading', 'vocab', 'grammar', 'writing_creative', 'writing_expository'], KR_KOR: ['nonfiction', 'literature', 'vocab', 'writing'], KR_MATH: ['number', 'geometry', 'pattern', 'problem'] };
 async function adminQuestions(b) {
   const fe = h('select', {}, h('option', { value: '' }, '전체 시험'), ...Object.keys(SECTIONS).map((x) => h('option', {}, x)));
   const list = h('div', {});
@@ -1617,7 +1621,7 @@ function applySectionSwitches() {
 const LEGAL = {
   terms: ['이용약관', (c) => [
     ['제1조 (목적)', `이 약관은 ${c.biz.name || c.site}(이하 "회사")가 제공하는 ${c.site} 온라인 모의고사 서비스(이하 "서비스")의 이용 조건과 절차, 회사와 회원의 권리·의무를 규정합니다.`],
-    ['제2조 (서비스 내용)', '회사는 MAP, CAT4, CogAT, SCAT, SSAT, ISEE, SAT, TOEFL Junior, WIDA 형식을 참고해 자체 제작한 연습용 모의고사를 제공합니다. 본 서비스는 NWEA, GL Assessment, Riverside Insights(CogAT), Johns Hopkins CTY, Enrollment Management Association(SSAT), ERB(ISEE), College Board(SAT), ETS(TOEFL), WIDA와 제휴·승인 관계가 없으며, 제공되는 점수는 학습 참고용 추정치이고 공식 점수가 아닙니다.'],
+    ['제2조 (서비스 내용)', '회사는 MAP, CAT4, CogAT, SCAT, SSAT, ISEE, SAT, TOEFL Junior, TOEIC Bridge, WIDA 형식을 참고해 자체 제작한 연습용 모의고사를 제공합니다. 본 서비스는 NWEA, GL Assessment, Riverside Insights(CogAT), Johns Hopkins CTY, Enrollment Management Association(SSAT), ERB(ISEE), College Board(SAT), ETS(TOEFL), WIDA와 제휴·승인 관계가 없으며, 제공되는 점수는 학습 참고용 추정치이고 공식 점수가 아닙니다.'],
     ['제3조 (회원가입)', '회원은 정확한 정보를 입력해야 하며, 만 14세 미만 아동은 법정대리인(보호자)의 동의 하에 가입·이용해야 합니다. 계정은 타인에게 양도하거나 공유할 수 없습니다.'],
     ['제4조 (이용권과 결제)', '이용권은 결제 완료 시 자동 지급되며, 상품별로 정해진 응시 횟수와 유효기간 내에서 사용할 수 있습니다. 시험을 시작하면 응시 1회가 차감됩니다.'],
     ['제5조 (금지행위)', '문제의 복제·배포·캡처 후 공유, 자동화 도구를 이용한 응시, 타인 계정 도용, 서비스 운영 방해 행위를 금지하며, 위반 시 이용이 제한될 수 있습니다.'],

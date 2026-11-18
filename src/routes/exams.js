@@ -212,7 +212,7 @@ async function seenIds(env, a, section) {
 }
 async function buildSectionSet(env, a, st) {
   const sec = EXAMS[a.exam_type].sections[st.si];
-  const { results: bank } = await env.DB.prepare(`SELECT id,difficulty,substr(passage,1,160) AS pk FROM questions WHERE exam_type=? AND section=? AND active=1 AND substr(id,-1) NOT IN ('0','8')`).bind(a.exam_type, sec.key).all(); // '0'/'8' = free-sample pool
+  const { results: bank } = await env.DB.prepare(`SELECT id,difficulty,substr(passage,1,160) AS pk${sec.parts ? ',stem' : ''} FROM questions WHERE exam_type=? AND section=? AND active=1 AND substr(id,-1) NOT IN ('0','8')`).bind(a.exam_type, sec.key).all(); // '0'/'8' = free-sample pool
   const lv = getLevel(a.exam_type, st.level);
   const { pool, lo, hi } = levelBank(bank, lv, sec.n);
   const target = sectionTarget(a.exam_type, st.si, pool.length);
@@ -226,8 +226,10 @@ async function buildSectionSet(env, a, st) {
   };
   // fresh questions first; questions from earlier attempts only fill what the pool cannot cover
   const fresh = pool.filter((q) => !seen.has(q.id) && !(q.pk && pool.some((x) => x.pk === q.pk && seen.has(x.id))));
-  ids = pick(fresh, target);
-  if (ids.length < target) { const used = new Set(ids); ids.push(...pick(pool.filter((q) => !used.has(q.id)), target - ids.length)); }
+  const fill = (from, all, want) => { const got = pick(from, want); if (got.length < want) { const used = new Set(got); got.push(...pick(all.filter((q) => !used.has(q.id)), want - got.length)); } return got; };
+  if (sec.parts) { // fixed number of questions per part, in the real test's part order
+    for (const part of sec.parts) ids.push(...fill(fresh.filter(part.match), pool.filter(part.match), part.n));
+  } else ids = fill(fresh, pool, target);
   st.set = { si: st.si, ids }; st.target = ids.length;
 }
 async function finalizeSection(env, a, st) { // unanswered -> omitted (choice NULL, correct 0) so they count in the score
@@ -262,7 +264,7 @@ async function sectionView(env, a, st) {
   return {
     status: 'in_progress', mode: 'section',
     section: { index: st.si, key: sec.key, name: sec.name, total: ex.sections.length, ...sectionPos(a.exam_type, st), deadline: st.deadline, manual: !!sec.manual },
-    questions: ids.map((id) => byId[id]).filter(Boolean).map((q) => publicQ(q, aud)),
+    questions: ids.map((id) => byId[id]).filter(Boolean).map((q) => ({ ...publicQ(q, aud), ...(sec.parts ? { part: sec.parts.find((pt) => pt.match({ ...q, pk: (q.passage || '').slice(0, 160) }))?.name } : {}) })),
     saved: Object.fromEntries(ans.map((r) => [r.question_id, { choice: r.choice, text: r.text, audio: !!r.audio_key }])),
     penalty: a.exam_type === 'SSAT' && st.level !== 'elem',
     serverNow: now(),

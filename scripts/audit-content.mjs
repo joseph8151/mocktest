@@ -14,7 +14,7 @@ const fk = (t) => { const ws = String(t || '').match(/[A-Za-z]+/g) || []; if (!w
 const stat = (a) => { if (!a.length) return '-'; const s = [...a].sort((x, y) => x - y); return `${s[0]}/${s[Math.floor(s.length / 2)]}/${s[s.length - 1]}`; };
 const r1 = (x) => Math.round(x * 10) / 10;
 
-const READING = { MAP: ['reading'], WIDA: ['reading', 'listening'], SSAT: ['reading'], ISEE: ['reading'], SAT: ['rw'], TOEFLJ: ['reading', 'listening'] };
+const READING = { MAP: ['reading'], WIDA: ['reading', 'listening'], SSAT: ['reading'], ISEE: ['reading'], SAT: ['rw'], TOEFLJ: ['reading', 'listening'], TOEICB: ['reading', 'listening'] };
 const MATH = { MAP: ['math'], CAT4: ['quantitative', 'nonverbal', 'spatial'], SCAT: ['quantitative'], SSAT: ['quantitative'], ISEE: ['quantitative', 'math'], COGAT: ['quantitative', 'nonverbal'], SAT: ['math'] };
 
 const out = { reading: [], math: [] };

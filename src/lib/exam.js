@@ -88,6 +88,27 @@ EXAMS.TOEFLJ = {
   ],
 };
 
+// TOEIC Bridge Listening & Reading (ETS): real test 50 + 50 questions, each section reported 15–50 (total 30–100).
+// The mock is half length. `parts` fixes how many questions each part contributes and the order they appear in;
+// a question's part is recognized from its fixed stem / script shape (see the writer brief scripts/bank/TOEICB_BRIEF.md).
+const TB_PIC = 'Choose the picture that best matches what you hear.', TB_RESP = 'Choose the best response to the question or statement you hear.';
+EXAMS.TOEICB = {
+  title: 'TOEIC Bridge 스타일 모의고사', adaptive: false, scaled: { min: 15, max: 50, total: 'sum' },
+  sections: [
+    { key: 'listening', name: 'Listening', n: 25, minutes: 20, parts: [
+      { key: 'pictures', name: 'Part 1 · Four Pictures', n: 3, match: (q) => q.stem === TB_PIC },
+      { key: 'response', name: 'Part 2 · Question-Response', n: 10, match: (q) => q.stem === TB_RESP },
+      { key: 'conversations', name: 'Part 3 · Conversations', n: 6, match: (q) => q.stem !== TB_PIC && q.stem !== TB_RESP && /^(Woman|Man):/.test(q.pk || '') },
+      { key: 'talks', name: 'Part 4 · Talks', n: 6, match: (q) => q.stem !== TB_PIC && q.stem !== TB_RESP && !!q.pk && !/^(Woman|Man):/.test(q.pk) },
+    ] },
+    { key: 'reading', name: 'Reading', n: 25, minutes: 20, parts: [
+      { key: 'sentence', name: 'Part 1 · Sentence Completion', n: 8, match: (q) => !q.pk },
+      { key: 'text', name: 'Part 2 · Text Completion', n: 8, match: (q) => !!q.pk && /^Choose the best option for blank \(\d\)\.$/.test(q.stem) },
+      { key: 'comprehension', name: 'Part 3 · Reading Comprehension', n: 9, match: (q) => !!q.pk && !/^Choose the best option for blank/.test(q.stem) },
+    ] },
+  ],
+};
+
 /* ---------- 국내 레벨테스트(레테): Korean academy entrance tests — a separate category, never mixed with the U.S. tests ---------- */
 EXAMS.KR_ENG = {
   title: '영어 레테 (입학 레벨테스트)', category: 'kr', adaptive: false, kr: 'eng',
@@ -133,6 +154,7 @@ EXAMS.SSAT.levels = [L('elem', 'Elementary Level', '3–4학년', 1, 3, { scaled
 EXAMS.ISEE.levels = [L('lower', 'Lower Level', '4–5학년 지원', 1, 3), L('middle', 'Middle Level', '6–7학년 지원', 2, 4), L('upper', 'Upper Level', '8–12학년 지원', 3, 5)];
 EXAMS.SAT.levels = [L('psat89', 'PSAT 8/9', '8–9학년', 1, 3, { scaled: { min: 120, max: 720, total: 'sum' } }), L('psat10', 'PSAT/NMSQT · PSAT 10', '10–11학년', 2, 4, { scaled: { min: 160, max: 760, total: 'sum' } }), L('sat', 'SAT', '11–12학년', 2, 5, { scaled: { min: 200, max: 800, total: 'sum' } })];
 EXAMS.TOEFLJ.levels = [L('p1', 'TOEFL Primary Step 1', '초등 2–4학년 (CEFR Pre-A1–A1)', 1, 2, { scaled: { min: 100, max: 109, total: 'sum' } }), L('p2', 'TOEFL Primary Step 2', '초등 4–6학년 (CEFR A1–A2)', 1, 3, { scaled: { min: 104, max: 115, total: 'sum' } }), L('std', 'TOEFL Junior Standard', '만 11–15세 (CEFR A2–B2)', 2, 5, { scaled: { min: 200, max: 300, total: 'sum' } })];
+EXAMS.TOEICB.levels = [L('std', 'TOEIC Bridge L&R', '초등 고학년–중학생 · 성인 초급 (CEFR Pre-A1–B1)', 1, 4)];
 // 레테: one level per age; the bank's difficulty is the age band itself (ENG 9–12세 → 1–4, 국어·수학 7–12세 → 1–6).
 const KR_GRADE = { 7: '7세 (유치부)', 8: '8세 (초1)', 9: '9세 (초2)', 10: '10세 (초3)', 11: '11세 (초4)', 12: '12세 (초5)' };
 EXAMS.KR_ENG.levels = [[9, 3.5], [10, 4.5], [11, 5.5], [12, 6.5]].map(([age, sr], i) => L(`a${age}`, `${age}세 영어 레테`, `SR ${sr} · 미국 ${Math.floor(sr)}학년 수준`, i + 1, i + 1, { sr, age, cap: 4 }));
@@ -157,7 +179,7 @@ export function levelForGrade(examType, grade) {
     const ok = lv.find((l) => l.age === age) || (age < lv[0].age ? lv[0] : lv[lv.length - 1]);
     return ok.key;
   }
-  const ranges = { CAT4: [2, 5, 7, 12], COGAT: [2, 5, 8, 12], SCAT: [3, 5, 12], SSAT: [4, 7, 12], ISEE: [4, 6, 12], SAT: [9, 10, 12], TOEFLJ: [4, 6, 12], WIDA: [1, 3, 5, 8, 12] }[examType] || [];
+  const ranges = { CAT4: [2, 5, 7, 12], COGAT: [2, 5, 8, 12], SCAT: [3, 5, 12], SSAT: [4, 7, 12], ISEE: [4, 6, 12], SAT: [9, 10, 12], TOEFLJ: [4, 6, 12], TOEICB: [12], WIDA: [1, 3, 5, 8, 12] }[examType] || [];
   const i = ranges.findIndex((max) => g <= max);
   return lv[i === -1 ? lv.length - 1 : i]?.key || null;
 }

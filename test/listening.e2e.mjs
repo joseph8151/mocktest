@@ -17,7 +17,7 @@ assert.equal((await anon.get('/api/admin/listening')).status, 401);
 
 let L = await admin.get('/api/admin/listening');
 assert.ok(L.passages.length >= 90, `listening passages: ${L.passages.length}`);
-assert.ok(L.passages.every((p) => /^(wida|toeflj)-[0-9a-f]{8}$/.test(p.key)), 'keys');
+assert.ok(L.passages.every((p) => /^(wida|toeflj|toeicb)-[0-9a-f]{8}$/.test(p.key)), 'keys');
 assert.equal(new Set(L.passages.map((p) => p.key)).size, L.passages.length, 'unique keys');
 const fake = (n) => { const b = new Uint8Array(n); b.set([0x49, 0x44, 0x33]); for (let i = 3; i < n; i++) b[i] = i % 251; return b; };
 
