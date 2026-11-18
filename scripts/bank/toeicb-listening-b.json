@@ -1,0 +1,1082 @@
+[
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 1,
+    "passage": "Man: Hi, can I get a large tea, please?\nWoman: Sure. Hot or iced?\nMan: Iced, please. And one of those banana muffins.\nWoman: OK. That's six dollars and fifty cents.\nMan: Here you go. Thanks.",
+    "stem": "Where are the speakers?",
+    "choices": [
+      "At a café",
+      "At a bank",
+      "At a library",
+      "At a post office"
+    ],
+    "answer": 0,
+    "explanation": "The man orders a tea and a muffin, so they are at a café."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 1,
+    "passage": "Man: Hi, can I get a large tea, please?\nWoman: Sure. Hot or iced?\nMan: Iced, please. And one of those banana muffins.\nWoman: OK. That's six dollars and fifty cents.\nMan: Here you go. Thanks.",
+    "stem": "What does the man buy with his drink?",
+    "choices": [
+      "A muffin",
+      "A sandwich",
+      "A cookie",
+      "A salad"
+    ],
+    "answer": 0,
+    "explanation": "The man asks for one of the banana muffins."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 1,
+    "passage": "Woman: Have you seen my keys? I can't find them.\nMan: Are they in your bag?\nWoman: No, I looked there already.\nMan: Oh, wait. They're on the kitchen table, next to the phone.\nWoman: Great, thank you!",
+    "stem": "What is the woman looking for?",
+    "choices": [
+      "Her phone",
+      "Her bag",
+      "Her glasses",
+      "Her keys"
+    ],
+    "answer": 3,
+    "explanation": "The woman asks, \"Have you seen my keys?\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 1,
+    "passage": "Woman: Have you seen my keys? I can't find them.\nMan: Are they in your bag?\nWoman: No, I looked there already.\nMan: Oh, wait. They're on the kitchen table, next to the phone.\nWoman: Great, thank you!",
+    "stem": "Where are the keys?",
+    "choices": [
+      "In her bag",
+      "In the car",
+      "On the kitchen table",
+      "Under the sofa"
+    ],
+    "answer": 2,
+    "explanation": "The man says the keys are on the kitchen table, next to the phone."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 1,
+    "passage": "Man: Is it going to rain today?\nWoman: Yes, this afternoon. The radio said heavy rain after three o'clock.\nMan: Then let's have our picnic tomorrow instead.\nWoman: Good idea. Tomorrow will be sunny.",
+    "stem": "What will the weather be like this afternoon?",
+    "choices": [
+      "Sunny",
+      "Snowy",
+      "Rainy",
+      "Windy"
+    ],
+    "answer": 2,
+    "explanation": "The woman says there will be heavy rain this afternoon."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 1,
+    "passage": "Man: Is it going to rain today?\nWoman: Yes, this afternoon. The radio said heavy rain after three o'clock.\nMan: Then let's have our picnic tomorrow instead.\nWoman: Good idea. Tomorrow will be sunny.",
+    "stem": "When will the speakers have their picnic?",
+    "choices": [
+      "Tomorrow",
+      "This morning",
+      "This afternoon",
+      "Next week"
+    ],
+    "answer": 0,
+    "explanation": "Because of the rain, the man suggests having the picnic tomorrow, and the woman agrees."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 1,
+    "passage": "Woman: Excuse me, does this bus go to City Hospital?\nMan: No, it doesn't. You need the number twelve bus.\nWoman: Where can I catch it?\nMan: Across the street, in front of the bank.\nWoman: Thanks a lot.",
+    "stem": "Where does the woman want to go?",
+    "choices": [
+      "To a bank",
+      "To a school",
+      "To a hospital",
+      "To a hotel"
+    ],
+    "answer": 2,
+    "explanation": "The woman asks if the bus goes to City Hospital."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 1,
+    "passage": "Woman: Excuse me, does this bus go to City Hospital?\nMan: No, it doesn't. You need the number twelve bus.\nWoman: Where can I catch it?\nMan: Across the street, in front of the bank.\nWoman: Thanks a lot.",
+    "stem": "Which bus should the woman take?",
+    "choices": [
+      "Number 12",
+      "Number 20",
+      "Number 2",
+      "Number 22"
+    ],
+    "answer": 0,
+    "explanation": "The man says she needs the number twelve bus."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 1,
+    "passage": "Man: Do you have these shoes in a size ten?\nWoman: Let me check. Sorry, we only have size nine and size eleven.\nMan: Hmm. Can I try the size eleven?\nWoman: Of course. I'll bring them out for you.",
+    "stem": "What does the man want to buy?",
+    "choices": [
+      "A jacket",
+      "A hat",
+      "Socks",
+      "Shoes"
+    ],
+    "answer": 3,
+    "explanation": "The man asks about shoes in a size ten."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 2,
+    "passage": "Man: Do you have these shoes in a size ten?\nWoman: Let me check. Sorry, we only have size nine and size eleven.\nMan: Hmm. Can I try the size eleven?\nWoman: Of course. I'll bring them out for you.",
+    "stem": "What will the woman probably do next?",
+    "choices": [
+      "Call another store",
+      "Give the man a refund",
+      "Measure the man's feet",
+      "Bring a pair of shoes"
+    ],
+    "answer": 3,
+    "explanation": "She says she will bring out the size eleven shoes for him."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 2,
+    "passage": "Woman: Good morning, Riverside Dental Clinic. How can I help you?\nMan: Hi, I have an appointment on Thursday at ten, but I need to change it.\nWoman: No problem. Is Friday at the same time OK?\nMan: Friday is fine. Thank you.\nWoman: You're welcome. See you on Friday.",
+    "stem": "Why is the man calling?",
+    "choices": [
+      "To cancel an order",
+      "To ask for directions",
+      "To change an appointment",
+      "To pay a bill"
+    ],
+    "answer": 2,
+    "explanation": "The man says he has an appointment on Thursday but needs to change it."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 2,
+    "passage": "Woman: Good morning, Riverside Dental Clinic. How can I help you?\nMan: Hi, I have an appointment on Thursday at ten, but I need to change it.\nWoman: No problem. Is Friday at the same time OK?\nMan: Friday is fine. Thank you.\nWoman: You're welcome. See you on Friday.",
+    "stem": "When is the man's new appointment?",
+    "choices": [
+      "Thursday at 10:00",
+      "Friday at 2:00",
+      "Thursday at 2:00",
+      "Friday at 10:00"
+    ],
+    "answer": 3,
+    "explanation": "The woman offers Friday at the same time (ten o'clock), and the man accepts."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 2,
+    "passage": "Man: The printer on our floor isn't working again.\nWoman: Really? I need to print a report for the meeting at eleven.\nMan: You can use the one on the third floor. It works fine.\nWoman: OK, I'll go up there now.",
+    "stem": "What is the problem?",
+    "choices": [
+      "A meeting was canceled",
+      "A printer is broken",
+      "A report is missing",
+      "An elevator is not working"
+    ],
+    "answer": 1,
+    "explanation": "The man says the printer on their floor isn't working."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 2,
+    "passage": "Man: The printer on our floor isn't working again.\nWoman: Really? I need to print a report for the meeting at eleven.\nMan: You can use the one on the third floor. It works fine.\nWoman: OK, I'll go up there now.",
+    "stem": "What will the woman probably do next?",
+    "choices": [
+      "Fix the printer",
+      "Call a technician",
+      "Go to the third floor",
+      "Cancel the meeting"
+    ],
+    "answer": 2,
+    "explanation": "She says she will go up to use the printer on the third floor."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 2,
+    "passage": "Woman: Hi. I'd like to book a table for Saturday evening.\nMan: Certainly. For how many people?\nWoman: Six. We're celebrating my mother's birthday.\nMan: Would seven o'clock work for you?\nWoman: Yes, that's perfect.",
+    "stem": "How many people are in the woman's group?",
+    "choices": [
+      "Two",
+      "Seven",
+      "Six",
+      "Four"
+    ],
+    "answer": 2,
+    "explanation": "The woman says the table is for six people; seven is the time, not the number of people."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 2,
+    "passage": "Woman: Hi. I'd like to book a table for Saturday evening.\nMan: Certainly. For how many people?\nWoman: Six. We're celebrating my mother's birthday.\nMan: Would seven o'clock work for you?\nWoman: Yes, that's perfect.",
+    "stem": "Why is the woman making a reservation?",
+    "choices": [
+      "For a birthday",
+      "For a business meeting",
+      "For a wedding",
+      "For a graduation"
+    ],
+    "answer": 0,
+    "explanation": "She says they are celebrating her mother's birthday."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 2,
+    "passage": "Man: Hi, I want to return these two books. I think they're a little late.\nWoman: Let me see. Yes, they were due last Monday. There's a fee of one dollar.\nMan: OK. Can I pay with a card?\nWoman: Sorry, for amounts under five dollars, we only take cash.",
+    "stem": "Where is the conversation probably taking place?",
+    "choices": [
+      "At a library",
+      "At a bookstore",
+      "At a bank",
+      "At a supermarket"
+    ],
+    "answer": 0,
+    "explanation": "The man is returning late books and paying a late fee, which happens at a library."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 2,
+    "passage": "Man: Hi, I want to return these two books. I think they're a little late.\nWoman: Let me see. Yes, they were due last Monday. There's a fee of one dollar.\nMan: OK. Can I pay with a card?\nWoman: Sorry, for amounts under five dollars, we only take cash.",
+    "stem": "How will the man probably pay?",
+    "choices": [
+      "By card",
+      "In cash",
+      "By check",
+      "Online"
+    ],
+    "answer": 1,
+    "explanation": "The fee is under five dollars, and the woman says they only take cash for that."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 2,
+    "passage": "Woman: Hi, I'm interested in joining the gym. How much is it?\nMan: It's thirty dollars a month, or three hundred dollars for a whole year.\nWoman: Is there a swimming pool?\nMan: Yes, and it's open from six in the morning until ten at night.\nWoman: Great. I'll take the yearly plan.",
+    "stem": "How much does a monthly membership cost?",
+    "choices": [
+      "$13",
+      "$30",
+      "$300",
+      "$40"
+    ],
+    "answer": 1,
+    "explanation": "The man says it is thirty dollars a month."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 3,
+    "passage": "Woman: Hi, I'm interested in joining the gym. How much is it?\nMan: It's thirty dollars a month, or three hundred dollars for a whole year.\nWoman: Is there a swimming pool?\nMan: Yes, and it's open from six in the morning until ten at night.\nWoman: Great. I'll take the yearly plan.",
+    "stem": "What does the woman decide to do?",
+    "choices": [
+      "Pay for one year",
+      "Pay for one month",
+      "Visit another gym",
+      "Try the pool for free"
+    ],
+    "answer": 0,
+    "explanation": "She says, \"I'll take the yearly plan.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 2,
+    "passage": "Man: Excuse me, is the train to Hillside on time?\nWoman: I'm afraid it's running twenty minutes late. It'll leave at four fifteen instead of three fifty-five.\nMan: Oh no. I'm meeting a client at five.\nWoman: You could take the express bus. It leaves from Gate B in five minutes.\nMan: Thanks, I'll do that.",
+    "stem": "What time will the train leave?",
+    "choices": [
+      "3:55",
+      "4:50",
+      "5:00",
+      "4:15"
+    ],
+    "answer": 3,
+    "explanation": "The woman says the train will leave at four fifteen instead of three fifty-five."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 3,
+    "passage": "Man: Excuse me, is the train to Hillside on time?\nWoman: I'm afraid it's running twenty minutes late. It'll leave at four fifteen instead of three fifty-five.\nMan: Oh no. I'm meeting a client at five.\nWoman: You could take the express bus. It leaves from Gate B in five minutes.\nMan: Thanks, I'll do that.",
+    "stem": "What does the man decide to do?",
+    "choices": [
+      "Wait for the train",
+      "Take a bus",
+      "Call his client",
+      "Buy a new ticket"
+    ],
+    "answer": 1,
+    "explanation": "The woman suggests the express bus, and the man says he will do that."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 3,
+    "passage": "Woman: Good evening. I have a reservation under the name Kim.\nMan: Welcome, Ms. Kim. You're in room five-oh-four, on the fifth floor.\nWoman: Actually, I asked for a room on a lower floor. I don't like elevators.\nMan: I understand. Let me see. Room two-twelve is available. It's on the second floor.\nWoman: That's much better, thank you.",
+    "stem": "What problem does the woman mention?",
+    "choices": [
+      "She does not want a room on a high floor",
+      "Her reservation is missing",
+      "Her room is too small",
+      "The elevator is broken"
+    ],
+    "answer": 0,
+    "explanation": "She asked for a lower floor because she doesn't like elevators; nothing is said about the elevator being broken."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 3,
+    "passage": "Woman: Good evening. I have a reservation under the name Kim.\nMan: Welcome, Ms. Kim. You're in room five-oh-four, on the fifth floor.\nWoman: Actually, I asked for a room on a lower floor. I don't like elevators.\nMan: I understand. Let me see. Room two-twelve is available. It's on the second floor.\nWoman: That's much better, thank you.",
+    "stem": "Which floor will the woman stay on?",
+    "choices": [
+      "The fifth floor",
+      "The fourth floor",
+      "The first floor",
+      "The second floor"
+    ],
+    "answer": 3,
+    "explanation": "The man gives her room two-twelve on the second floor."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 3,
+    "passage": "Man: Did you hear that Maria is moving to our Denver office next month?\nWoman: Yes, I'm going to miss her. We should do something for her last day.\nMan: How about lunch at the Italian place across the street?\nWoman: Good idea. I'll send an e-mail to everyone on the team and ask who can come.",
+    "stem": "What are the speakers mainly discussing?",
+    "choices": [
+      "A new office in Denver",
+      "A team project",
+      "A restaurant opening",
+      "A lunch for a coworker who is leaving"
+    ],
+    "answer": 3,
+    "explanation": "They plan a lunch for Maria's last day before she moves to another office."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 3,
+    "passage": "Man: Did you hear that Maria is moving to our Denver office next month?\nWoman: Yes, I'm going to miss her. We should do something for her last day.\nMan: How about lunch at the Italian place across the street?\nWoman: Good idea. I'll send an e-mail to everyone on the team and ask who can come.",
+    "stem": "What will the woman do?",
+    "choices": [
+      "Call the restaurant",
+      "Talk to Maria",
+      "Send an e-mail to the team",
+      "Book a flight"
+    ],
+    "answer": 2,
+    "explanation": "She says she will e-mail everyone on the team to ask who can come."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 3,
+    "passage": "Woman: Hi. I ordered a desk lamp online, but it hasn't arrived. The website says it was delivered yesterday.\nMan: Let me check your order. I see. It was sent to your old address on Pine Street.\nWoman: Oh no, I moved last month. I forgot to change it.\nMan: Don't worry. We'll send you a new one today, and it'll arrive in two days.",
+    "stem": "Why did the woman not receive her order?",
+    "choices": [
+      "It went to her old address",
+      "It was sold out",
+      "It was damaged",
+      "She gave the wrong order number"
+    ],
+    "answer": 0,
+    "explanation": "The man says the lamp was sent to her old address on Pine Street."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 3,
+    "passage": "Woman: Hi. I ordered a desk lamp online, but it hasn't arrived. The website says it was delivered yesterday.\nMan: Let me check your order. I see. It was sent to your old address on Pine Street.\nWoman: Oh no, I moved last month. I forgot to change it.\nMan: Don't worry. We'll send you a new one today, and it'll arrive in two days.",
+    "stem": "When will the new lamp probably arrive?",
+    "choices": [
+      "Today",
+      "Tomorrow",
+      "In two days",
+      "Next month"
+    ],
+    "answer": 2,
+    "explanation": "The man says they will send it today and it will arrive in two days."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 3,
+    "passage": "Man: Hi, I'd like to sign up for the Spanish class on Tuesday nights.\nWoman: I'm sorry, that class is full. But there's another one on Thursday nights with the same teacher.\nMan: Hmm, I work late on Thursdays. Is there a weekend class?\nWoman: Yes, on Saturday mornings, but it's for advanced students.\nMan: Then I'll put my name on the waiting list for Tuesday.",
+    "stem": "Why can't the man take the Thursday class?",
+    "choices": [
+      "It is full",
+      "He works late that day",
+      "It is too expensive",
+      "It is for advanced students"
+    ],
+    "answer": 1,
+    "explanation": "The man says he works late on Thursdays."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 3,
+    "passage": "Man: Hi, I'd like to sign up for the Spanish class on Tuesday nights.\nWoman: I'm sorry, that class is full. But there's another one on Thursday nights with the same teacher.\nMan: Hmm, I work late on Thursdays. Is there a weekend class?\nWoman: Yes, on Saturday mornings, but it's for advanced students.\nMan: Then I'll put my name on the waiting list for Tuesday.",
+    "stem": "What will the man probably do?",
+    "choices": [
+      "Join a waiting list",
+      "Take the Saturday class",
+      "Change his work hours",
+      "Find another school"
+    ],
+    "answer": 0,
+    "explanation": "He says he will put his name on the waiting list for the Tuesday class."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 4,
+    "passage": "Woman: The furniture supplier just called. The new chairs for the meeting room won't arrive until Wednesday.\nMan: But we have the training session there on Tuesday. Forty people are coming.\nWoman: I know. Could we borrow some chairs from the cafeteria?\nMan: Those are needed at lunch. Let's ask building management if the large room on the first floor is free instead.\nWoman: Good thinking. I'll call them right away.",
+    "stem": "Why is the man concerned?",
+    "choices": [
+      "The training session was canceled",
+      "The cafeteria is closed on Tuesday",
+      "Too few people signed up",
+      "An event will happen before a delivery arrives"
+    ],
+    "answer": 3,
+    "explanation": "The training is on Tuesday, but the chairs will not arrive until Wednesday."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 4,
+    "passage": "Woman: The furniture supplier just called. The new chairs for the meeting room won't arrive until Wednesday.\nMan: But we have the training session there on Tuesday. Forty people are coming.\nWoman: I know. Could we borrow some chairs from the cafeteria?\nMan: Those are needed at lunch. Let's ask building management if the large room on the first floor is free instead.\nWoman: Good thinking. I'll call them right away.",
+    "stem": "What does the man suggest?",
+    "choices": [
+      "Borrowing chairs from the cafeteria",
+      "Using a different room",
+      "Moving the session to Wednesday",
+      "Buying chairs from another supplier"
+    ],
+    "answer": 1,
+    "explanation": "The man rejects the woman's idea about cafeteria chairs and suggests asking for the large room on the first floor."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 4,
+    "passage": "Man: Hello, this is Daniel Ortiz. I'm returning a call about the sales assistant job.\nWoman: Thanks for calling back, Mr. Ortiz. We'd like to invite you for an interview. Are you free on Monday afternoon?\nMan: I'm taking a course at the community college until three on Mondays, but I could come after four.\nWoman: Four thirty would work. Please bring a copy of your résumé and a photo ID.\nMan: Certainly. Should I come to the main entrance?\nWoman: No, please use the side door on Maple Avenue. The main entrance is being repaired.",
+    "stem": "What is suggested about the man?",
+    "choices": [
+      "He is taking a course",
+      "He already works for the company",
+      "He lives on Maple Avenue",
+      "He is a sales manager"
+    ],
+    "answer": 0,
+    "explanation": "The man says he takes a course at the community college on Monday afternoons."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 4,
+    "passage": "Man: Hello, this is Daniel Ortiz. I'm returning a call about the sales assistant job.\nWoman: Thanks for calling back, Mr. Ortiz. We'd like to invite you for an interview. Are you free on Monday afternoon?\nMan: I'm taking a course at the community college until three on Mondays, but I could come after four.\nWoman: Four thirty would work. Please bring a copy of your résumé and a photo ID.\nMan: Certainly. Should I come to the main entrance?\nWoman: No, please use the side door on Maple Avenue. The main entrance is being repaired.",
+    "stem": "Why should the man use the side door?",
+    "choices": [
+      "It is closer to the parking lot",
+      "The main entrance is being repaired",
+      "The office is on Maple Avenue",
+      "The main entrance closes at four"
+    ],
+    "answer": 1,
+    "explanation": "The woman says the main entrance is being repaired."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 4,
+    "passage": "Woman: Excuse me. The sign says these strawberries are two boxes for five dollars, but I paid three dollars for each box. I bought two.\nMan: Let me look at your receipt. You're right. The sale price wasn't put into the system. I'm sorry about that.\nWoman: That's OK. It happens.\nMan: I'll give you back the difference right now, and I'll tell my manager so the sign and the register match.",
+    "stem": "What is the woman's problem?",
+    "choices": [
+      "She received the wrong fruit",
+      "She paid more than the price on the sign",
+      "She lost her receipt",
+      "The store was out of strawberries"
+    ],
+    "answer": 1,
+    "explanation": "The sign says two boxes for five dollars, but she was charged three dollars per box."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 4,
+    "passage": "Woman: Excuse me. The sign says these strawberries are two boxes for five dollars, but I paid three dollars for each box. I bought two.\nMan: Let me look at your receipt. You're right. The sale price wasn't put into the system. I'm sorry about that.\nWoman: That's OK. It happens.\nMan: I'll give you back the difference right now, and I'll tell my manager so the sign and the register match.",
+    "stem": "How much money will the woman probably get back?",
+    "choices": [
+      "$2",
+      "$3",
+      "$1",
+      "$5"
+    ],
+    "answer": 2,
+    "explanation": "She paid six dollars for two boxes instead of five, so the difference is one dollar."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 1,
+    "passage": "Announcer: Attention, shoppers. The store will close in fifteen minutes, at nine o'clock tonight. Please take your items to the checkout counters at the front of the store. Only three counters are open now, so please be ready for a short wait. We open again tomorrow morning at eight. Thank you for shopping with us, and have a good night.",
+    "stem": "Where is the announcement being made?",
+    "choices": [
+      "At an airport",
+      "In a store",
+      "In a school",
+      "At a hospital"
+    ],
+    "answer": 1,
+    "explanation": "The speaker talks to shoppers about checkout counters, so it is in a store."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 1,
+    "passage": "Announcer: Attention, shoppers. The store will close in fifteen minutes, at nine o'clock tonight. Please take your items to the checkout counters at the front of the store. Only three counters are open now, so please be ready for a short wait. We open again tomorrow morning at eight. Thank you for shopping with us, and have a good night.",
+    "stem": "What time will the store close tonight?",
+    "choices": [
+      "8:00",
+      "9:15",
+      "3:00",
+      "9:00"
+    ],
+    "answer": 3,
+    "explanation": "The store will close at nine o'clock tonight; eight o'clock is when it opens tomorrow."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 1,
+    "passage": "Caller: Hi, Sam, it's Lisa. I'm calling about dinner tonight. I'm sorry, but I have to work late, so I can't meet you at six. Can we meet at seven thirty instead? The restaurant is the same, the pizza place on Oak Street. Please call me back or send me a text when you get this. Thanks, and see you soon!",
+    "stem": "Why is the woman calling?",
+    "choices": [
+      "To cancel a trip",
+      "To order a pizza",
+      "To ask for a job",
+      "To change a meeting time"
+    ],
+    "answer": 3,
+    "explanation": "She can't meet at six and asks to meet at seven thirty instead."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 1,
+    "passage": "Caller: Hi, Sam, it's Lisa. I'm calling about dinner tonight. I'm sorry, but I have to work late, so I can't meet you at six. Can we meet at seven thirty instead? The restaurant is the same, the pizza place on Oak Street. Please call me back or send me a text when you get this. Thanks, and see you soon!",
+    "stem": "What time does the caller want to meet now?",
+    "choices": [
+      "6:00",
+      "7:30",
+      "7:00",
+      "6:30"
+    ],
+    "answer": 1,
+    "explanation": "She asks, \"Can we meet at seven thirty instead?\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 1,
+    "passage": "Host: Good morning, everyone. Here is today's weather. It's very cold this morning, only thirty degrees, so wear a warm coat when you go out. This afternoon, it will be sunny but windy. Tonight, snow will start at around ten o'clock. Tomorrow will be cloudy and a little warmer. Have a great day!",
+    "stem": "What will the weather be like this afternoon?",
+    "choices": [
+      "Rainy",
+      "Sunny and windy",
+      "Snowy",
+      "Cloudy and warm"
+    ],
+    "answer": 1,
+    "explanation": "The host says it will be sunny but windy this afternoon."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 1,
+    "passage": "Host: Good morning, everyone. Here is today's weather. It's very cold this morning, only thirty degrees, so wear a warm coat when you go out. This afternoon, it will be sunny but windy. Tonight, snow will start at around ten o'clock. Tomorrow will be cloudy and a little warmer. Have a great day!",
+    "stem": "What does the speaker tell listeners to do?",
+    "choices": [
+      "Stay at home",
+      "Carry an umbrella",
+      "Wear a warm coat",
+      "Drive slowly"
+    ],
+    "answer": 2,
+    "explanation": "Because it is very cold, the host says to wear a warm coat."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 1,
+    "passage": "Announcer: Good morning, students. Today's soccer game is canceled because the field is too wet. The game will be played next Friday instead. Also, the library will be closed at lunchtime today. You can return your books after school. Thank you, and have a great day!",
+    "stem": "Why is the soccer game canceled?",
+    "choices": [
+      "The field is wet",
+      "The coach is sick",
+      "The bus is late",
+      "The school is closed"
+    ],
+    "answer": 0,
+    "explanation": "The announcer says the field is too wet."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 1,
+    "passage": "Announcer: Good morning, students. Today's soccer game is canceled because the field is too wet. The game will be played next Friday instead. Also, the library will be closed at lunchtime today. You can return your books after school. Thank you, and have a great day!",
+    "stem": "When will the game be played?",
+    "choices": [
+      "Today",
+      "Next Friday",
+      "After school",
+      "Tomorrow"
+    ],
+    "answer": 1,
+    "explanation": "The game will be played next Friday instead."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 1,
+    "passage": "Guide: Welcome to the City Art Museum. My name is Tom, and I'm your guide today. The tour takes about one hour. First, we will see paintings on the second floor. After that, we'll visit the photography room. Please don't take pictures of the paintings, and please don't touch anything. OK, let's take the stairs to the second floor. Follow me!",
+    "stem": "Where are the listeners?",
+    "choices": [
+      "At a zoo",
+      "At a museum",
+      "At a park",
+      "At a theater"
+    ],
+    "answer": 1,
+    "explanation": "The guide welcomes them to the City Art Museum."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 2,
+    "passage": "Guide: Welcome to the City Art Museum. My name is Tom, and I'm your guide today. The tour takes about one hour. First, we will see paintings on the second floor. After that, we'll visit the photography room. Please don't take pictures of the paintings, and please don't touch anything. OK, let's take the stairs to the second floor. Follow me!",
+    "stem": "What are the listeners asked not to do?",
+    "choices": [
+      "Use the stairs",
+      "Talk during the tour",
+      "Take pictures of the paintings",
+      "Go to the photography room"
+    ],
+    "answer": 2,
+    "explanation": "The guide says, \"Please don't take pictures of the paintings.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 2,
+    "passage": "Announcer: Are you looking for fresh bread every morning? Come to Sunny Day Bakery on Main Street! We bake everything ourselves, starting at five in the morning. This week only, buy two loaves of bread and get one free. We also make birthday cakes. Just order two days before your party. Sunny Day Bakery is open every day except Monday. See you soon!",
+    "stem": "What is being advertised?",
+    "choices": [
+      "A supermarket",
+      "A bakery",
+      "A restaurant",
+      "A party store"
+    ],
+    "answer": 1,
+    "explanation": "The ad is for Sunny Day Bakery."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 2,
+    "passage": "Announcer: Are you looking for fresh bread every morning? Come to Sunny Day Bakery on Main Street! We bake everything ourselves, starting at five in the morning. This week only, buy two loaves of bread and get one free. We also make birthday cakes. Just order two days before your party. Sunny Day Bakery is open every day except Monday. See you soon!",
+    "stem": "What is special this week?",
+    "choices": [
+      "Half-price birthday cakes",
+      "Free delivery",
+      "Opening on Mondays",
+      "Buy two loaves, get one free"
+    ],
+    "answer": 3,
+    "explanation": "This week only, customers who buy two loaves get one free."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 2,
+    "passage": "Announcer: Attention, please. This is an announcement for passengers on Flight two-oh-eight to Boston. The flight will now leave from Gate fourteen, not Gate four. Boarding will begin at one forty. Passengers with small children may board first. Please have your boarding pass and ID ready. Thank you.",
+    "stem": "What has changed?",
+    "choices": [
+      "The gate number",
+      "The boarding time",
+      "The flight number",
+      "The destination"
+    ],
+    "answer": 0,
+    "explanation": "The flight will now leave from Gate fourteen instead of Gate four."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 2,
+    "passage": "Announcer: Attention, please. This is an announcement for passengers on Flight two-oh-eight to Boston. The flight will now leave from Gate fourteen, not Gate four. Boarding will begin at one forty. Passengers with small children may board first. Please have your boarding pass and ID ready. Thank you.",
+    "stem": "Who can board first?",
+    "choices": [
+      "Passengers with large bags",
+      "Business travelers",
+      "Passengers with small children",
+      "Airline staff"
+    ],
+    "answer": 2,
+    "explanation": "The announcer says passengers with small children may board first."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 2,
+    "passage": "Caller: Hi, Ana, this is Peter from the accounting department. I'm calling about tomorrow's meeting. The meeting room on the second floor isn't available, so we'll meet in my office instead. It's room two-oh-five. Also, could you bring the sales numbers from last month? Thanks, and see you at ten.",
+    "stem": "Where will the meeting be held?",
+    "choices": [
+      "In the meeting room on the second floor",
+      "In Ana's office",
+      "In Peter's office",
+      "In the cafeteria"
+    ],
+    "answer": 2,
+    "explanation": "Peter says the meeting room isn't available, so they will meet in his office."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 2,
+    "passage": "Caller: Hi, Ana, this is Peter from the accounting department. I'm calling about tomorrow's meeting. The meeting room on the second floor isn't available, so we'll meet in my office instead. It's room two-oh-five. Also, could you bring the sales numbers from last month? Thanks, and see you at ten.",
+    "stem": "What does the caller ask Ana to bring?",
+    "choices": [
+      "A laptop",
+      "Lunch",
+      "A meeting schedule",
+      "Last month's sales numbers"
+    ],
+    "answer": 3,
+    "explanation": "Peter asks Ana to bring the sales numbers from last month."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 2,
+    "passage": "Speaker: Thank you for calling Greenfield Community Center. We are open Monday to Friday from eight a.m. to nine p.m., and on weekends from nine a.m. to five p.m. Our swimming pool is closed this week for cleaning. It will open again next Monday. To sign up for a class, please press one. To speak to a staff member, please stay on the line.",
+    "stem": "Why is the pool closed?",
+    "choices": [
+      "It is being painted",
+      "A class is using it",
+      "It is a holiday",
+      "It is being cleaned"
+    ],
+    "answer": 3,
+    "explanation": "The message says the pool is closed this week for cleaning."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 2,
+    "passage": "Speaker: Thank you for calling Greenfield Community Center. We are open Monday to Friday from eight a.m. to nine p.m., and on weekends from nine a.m. to five p.m. Our swimming pool is closed this week for cleaning. It will open again next Monday. To sign up for a class, please press one. To speak to a staff member, please stay on the line.",
+    "stem": "What should callers do to sign up for a class?",
+    "choices": [
+      "Press one",
+      "Stay on the line",
+      "Visit next Monday",
+      "Send an e-mail"
+    ],
+    "answer": 0,
+    "explanation": "Callers are told to press one to sign up for a class."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 2,
+    "passage": "Speaker: Good morning, everyone. Before the store opens, I have a few things to tell you. First, we have a new cash register at counter three. Ellen will show you how to use it at ten o'clock in the break room. Second, a big delivery of fruit is coming this afternoon, so I need two people to help in the back. If you can help, please tell me before lunch. Thanks, everyone.",
+    "stem": "Who are the listeners?",
+    "choices": [
+      "Shoppers",
+      "Delivery drivers",
+      "Store employees",
+      "Students"
+    ],
+    "answer": 2,
+    "explanation": "The speaker talks to staff before the store opens about registers and deliveries."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 3,
+    "passage": "Speaker: Good morning, everyone. Before the store opens, I have a few things to tell you. First, we have a new cash register at counter three. Ellen will show you how to use it at ten o'clock in the break room. Second, a big delivery of fruit is coming this afternoon, so I need two people to help in the back. If you can help, please tell me before lunch. Thanks, everyone.",
+    "stem": "What should listeners do if they can help with the delivery?",
+    "choices": [
+      "Go to the break room at ten",
+      "Work at counter three",
+      "Call Ellen",
+      "Tell the speaker before lunch"
+    ],
+    "answer": 3,
+    "explanation": "The speaker says, \"If you can help, please tell me before lunch.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 2,
+    "passage": "Guide: Hello, and welcome to Lakeside Park. Today we'll walk along the lake for about two miles. The path is flat, so it's an easy walk. Halfway, we'll stop at the old boathouse for a short break. You can buy drinks and snacks there. Please stay on the path, because some of the plants here are very rare. We should be back at this gate by eleven thirty.",
+    "stem": "Where will the group take a break?",
+    "choices": [
+      "At the gate",
+      "At a café in town",
+      "On the beach",
+      "At the boathouse"
+    ],
+    "answer": 3,
+    "explanation": "The guide says they will stop at the old boathouse for a short break."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 3,
+    "passage": "Guide: Hello, and welcome to Lakeside Park. Today we'll walk along the lake for about two miles. The path is flat, so it's an easy walk. Halfway, we'll stop at the old boathouse for a short break. You can buy drinks and snacks there. Please stay on the path, because some of the plants here are very rare. We should be back at this gate by eleven thirty.",
+    "stem": "Why should listeners stay on the path?",
+    "choices": [
+      "To protect rare plants",
+      "The path is dangerous",
+      "To avoid wild animals",
+      "The lake is deep"
+    ],
+    "answer": 0,
+    "explanation": "The guide asks them to stay on the path because some plants are very rare."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 3,
+    "passage": "Host: And now for local traffic news. Starting Monday, the North Bridge will be closed for repairs for about three weeks. Drivers who usually use the bridge should take River Road instead, but they should expect delays during rush hour. The city is also adding extra buses on Route seven to help people get downtown. You can find more information on the city's website.",
+    "stem": "What is the main topic of the report?",
+    "choices": [
+      "A new bus station",
+      "A city festival",
+      "A traffic accident",
+      "A bridge closing"
+    ],
+    "answer": 3,
+    "explanation": "The report is about the North Bridge closing for repairs."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 3,
+    "passage": "Host: And now for local traffic news. Starting Monday, the North Bridge will be closed for repairs for about three weeks. Drivers who usually use the bridge should take River Road instead, but they should expect delays during rush hour. The city is also adding extra buses on Route seven to help people get downtown. You can find more information on the city's website.",
+    "stem": "What is the city doing to help people?",
+    "choices": [
+      "Opening a new road",
+      "Making the bridge wider",
+      "Offering free parking",
+      "Adding more buses"
+    ],
+    "answer": 3,
+    "explanation": "The city is adding extra buses on Route seven."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 3,
+    "passage": "Announcer: Attention, library visitors. This Saturday at two o'clock, we're holding a free workshop on writing a résumé. A local job counselor will give tips and answer your questions. Space is limited to twenty people, so please sign up at the front desk. Bring a copy of your résumé if you have one. Coffee and cookies will be provided.",
+    "stem": "What is the workshop about?",
+    "choices": [
+      "Writing a résumé",
+      "Using computers",
+      "Baking cookies",
+      "Starting a business"
+    ],
+    "answer": 0,
+    "explanation": "The workshop is on writing a résumé."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 3,
+    "passage": "Announcer: Attention, library visitors. This Saturday at two o'clock, we're holding a free workshop on writing a résumé. A local job counselor will give tips and answer your questions. Space is limited to twenty people, so please sign up at the front desk. Bring a copy of your résumé if you have one. Coffee and cookies will be provided.",
+    "stem": "Why should listeners sign up at the front desk?",
+    "choices": [
+      "The workshop costs money",
+      "The counselor wants their phone numbers",
+      "Only twenty people can attend",
+      "Coffee must be ordered early"
+    ],
+    "answer": 2,
+    "explanation": "Space is limited to twenty people, so visitors must sign up."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 3,
+    "passage": "Caller: Hello, this is Mike from Westside Auto Repair, calling for Ms. Patel. We've finished checking your car. The brakes are fine, but you need two new tires. That will cost about two hundred dollars. We can do the work today if you call us back before three o'clock. If not, your car will be ready on Thursday. Thank you.",
+    "stem": "What does the car need?",
+    "choices": [
+      "New brakes",
+      "New tires",
+      "An oil change",
+      "A new battery"
+    ],
+    "answer": 1,
+    "explanation": "Mike says the brakes are fine but she needs two new tires."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 3,
+    "passage": "Caller: Hello, this is Mike from Westside Auto Repair, calling for Ms. Patel. We've finished checking your car. The brakes are fine, but you need two new tires. That will cost about two hundred dollars. We can do the work today if you call us back before three o'clock. If not, your car will be ready on Thursday. Thank you.",
+    "stem": "What will happen if Ms. Patel calls back before three o'clock?",
+    "choices": [
+      "The work will be done today",
+      "She will get a discount",
+      "The car will be ready on Thursday",
+      "Mike will check the brakes again"
+    ],
+    "answer": 0,
+    "explanation": "Mike says they can do the work today if she calls before three."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 3,
+    "passage": "Speaker: Welcome to tonight's cooking class. Today we're making vegetable soup and fresh bread. The bread needs to rise for one hour, so we'll start with that first. While it rises, we'll cut the vegetables for the soup. Please wash your hands before you begin, and be careful with the knives. They're very sharp. At the end of the class, we'll all eat together.",
+    "stem": "Why will the class make the bread first?",
+    "choices": [
+      "It is the easiest dish",
+      "The soup is already cooked",
+      "It needs time to rise",
+      "The oven is ready"
+    ],
+    "answer": 2,
+    "explanation": "The speaker says the bread needs to rise for one hour, so they start with it."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 3,
+    "passage": "Speaker: Welcome to tonight's cooking class. Today we're making vegetable soup and fresh bread. The bread needs to rise for one hour, so we'll start with that first. While it rises, we'll cut the vegetables for the soup. Please wash your hands before you begin, and be careful with the knives. They're very sharp. At the end of the class, we'll all eat together.",
+    "stem": "What will happen at the end of the class?",
+    "choices": [
+      "Everyone will eat together",
+      "The students will get a recipe book",
+      "The students will take a test",
+      "Everyone will wash the dishes"
+    ],
+    "answer": 0,
+    "explanation": "The speaker says, \"At the end of the class, we'll all eat together.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 3,
+    "passage": "Caller: Good afternoon, Mr. Brown. This is Grace from the front desk at the Harbor View Hotel. You asked about a ride to the airport tomorrow. Our free shuttle leaves every hour, starting at six a.m. Since your flight is at nine fifteen, we suggest taking the six o'clock shuttle. The ride takes about forty-five minutes. If you'd like a seat, please let us know by ten tonight.",
+    "stem": "What is the purpose of the call?",
+    "choices": [
+      "To confirm a room reservation",
+      "To give information about an airport shuttle",
+      "To change a flight time",
+      "To offer a free breakfast"
+    ],
+    "answer": 1,
+    "explanation": "Grace calls to answer Mr. Brown's question about a ride to the airport."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 3,
+    "passage": "Caller: Good afternoon, Mr. Brown. This is Grace from the front desk at the Harbor View Hotel. You asked about a ride to the airport tomorrow. Our free shuttle leaves every hour, starting at six a.m. Since your flight is at nine fifteen, we suggest taking the six o'clock shuttle. The ride takes about forty-five minutes. If you'd like a seat, please let us know by ten tonight.",
+    "stem": "What should Mr. Brown do by ten tonight?",
+    "choices": [
+      "Check out of the hotel",
+      "Reserve a seat on the shuttle",
+      "Pay for the shuttle",
+      "Call the airline"
+    ],
+    "answer": 1,
+    "explanation": "Grace asks him to let the hotel know by ten tonight if he would like a seat; the shuttle is free."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 4,
+    "passage": "Speaker: Good afternoon, everyone. As you know, next month we're replacing our old time-card machines with a new phone app. Starting on the first, you'll check in and out by scanning a code at the entrance. Training sessions will be held next week in the main conference room. Each session lasts thirty minutes, and you only need to attend one. The old machines will be removed on the thirtieth, so please finish your training before then.",
+    "stem": "What is the announcement mainly about?",
+    "choices": [
+      "A change in working hours",
+      "A new entrance to the building",
+      "A new way to record work hours",
+      "A schedule for staff meetings"
+    ],
+    "answer": 2,
+    "explanation": "The speaker explains that time-card machines are being replaced by a phone app for checking in and out."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 4,
+    "passage": "Speaker: Good afternoon, everyone. As you know, next month we're replacing our old time-card machines with a new phone app. Starting on the first, you'll check in and out by scanning a code at the entrance. Training sessions will be held next week in the main conference room. Each session lasts thirty minutes, and you only need to attend one. The old machines will be removed on the thirtieth, so please finish your training before then.",
+    "stem": "What does the speaker say about the training?",
+    "choices": [
+      "It will be offered online only",
+      "It must be finished before the old machines are removed",
+      "It is for managers only",
+      "Each employee must attend several sessions"
+    ],
+    "answer": 1,
+    "explanation": "The old machines will be removed on the thirtieth, and employees should finish training before then."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 4,
+    "passage": "Announcer: Moving to a new home can be stressful, but it doesn't have to be. At Easy Move, our trained team will pack, carry, and unpack your things, so you can relax. We handle everything from small apartments to large houses. Book before the end of this month and receive a free set of moving boxes. Not sure how much it will cost? Visit our website and get a price estimate in just two minutes.",
+    "stem": "Who would most likely use this service?",
+    "choices": [
+      "People who want to sell furniture",
+      "People who are building a house",
+      "People who need a house cleaner",
+      "People who are changing homes"
+    ],
+    "answer": 3,
+    "explanation": "The ad offers packing and carrying for people moving to a new home."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "listening",
+    "difficulty": 4,
+    "passage": "Announcer: Moving to a new home can be stressful, but it doesn't have to be. At Easy Move, our trained team will pack, carry, and unpack your things, so you can relax. We handle everything from small apartments to large houses. Book before the end of this month and receive a free set of moving boxes. Not sure how much it will cost? Visit our website and get a price estimate in just two minutes.",
+    "stem": "What will customers who book early receive?",
+    "choices": [
+      "A lower price for small apartments",
+      "A discount for large houses",
+      "Free boxes for packing",
+      "A free home cleaning"
+    ],
+    "answer": 2,
+    "explanation": "Customers who book before the end of the month get a free set of moving boxes."
+  }
+]

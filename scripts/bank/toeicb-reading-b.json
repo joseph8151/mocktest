@@ -1,0 +1,722 @@
+[
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "CITY POOL\nOpen every day: 7:00 a.m. – 8:00 p.m.\nChildren under 10 must swim with an adult.\nPlease take a quick shower before you swim.\nNo food or drinks near the water.\nTowels: $2 at the front desk.\nLockers are free. Please bring your own lock.",
+    "stem": "Where would you most likely see this sign?",
+    "choices": [
+      "At a restaurant",
+      "At a swimming pool",
+      "At a train station",
+      "At a clothing store"
+    ],
+    "answer": 1,
+    "explanation": "The sign says \"City Pool\" and gives rules about swimming."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "CITY POOL\nOpen every day: 7:00 a.m. – 8:00 p.m.\nChildren under 10 must swim with an adult.\nPlease take a quick shower before you swim.\nNo food or drinks near the water.\nTowels: $2 at the front desk.\nLockers are free. Please bring your own lock.",
+    "stem": "What costs $2?",
+    "choices": [
+      "A locker",
+      "A lock",
+      "A drink",
+      "A towel"
+    ],
+    "answer": 3,
+    "explanation": "The sign says \"Towels: $2 at the front desk.\" Lockers are free."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "CITY POOL\nOpen every day: 7:00 a.m. – 8:00 p.m.\nChildren under 10 must swim with an adult.\nPlease take a quick shower before you swim.\nNo food or drinks near the water.\nTowels: $2 at the front desk.\nLockers are free. Please bring your own lock.",
+    "stem": "Who must swim with an adult?",
+    "choices": [
+      "All visitors",
+      "People with towels",
+      "Children under 10",
+      "Children over 10"
+    ],
+    "answer": 2,
+    "explanation": "The sign says \"Children under 10 must swim with an adult.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "SUNNY CAFE — LUNCH MENU\nServed 11:00 a.m. – 3:00 p.m.\nSoup of the day ........ $4.50\nChicken sandwich ........ $7.00\nGreen salad ........ $6.00\nAdd chicken to any salad: + $2.00\nOrange juice ........ $3.00\nCoffee or tea ........ $2.00\nEvery lunch comes with a free cookie.\nFree refills on coffee and tea.",
+    "stem": "How much is the chicken sandwich?",
+    "choices": [
+      "$6.00",
+      "$4.50",
+      "$2.00",
+      "$7.00"
+    ],
+    "answer": 3,
+    "explanation": "The menu lists the chicken sandwich at $7.00."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "SUNNY CAFE — LUNCH MENU\nServed 11:00 a.m. – 3:00 p.m.\nSoup of the day ........ $4.50\nChicken sandwich ........ $7.00\nGreen salad ........ $6.00\nAdd chicken to any salad: + $2.00\nOrange juice ........ $3.00\nCoffee or tea ........ $2.00\nEvery lunch comes with a free cookie.\nFree refills on coffee and tea.",
+    "stem": "What comes free with every lunch?",
+    "choices": [
+      "An orange juice",
+      "A cookie",
+      "A green salad",
+      "A bowl of soup"
+    ],
+    "answer": 1,
+    "explanation": "The menu says \"Every lunch comes with a free cookie.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "SUNNY CAFE — LUNCH MENU\nServed 11:00 a.m. – 3:00 p.m.\nSoup of the day ........ $4.50\nChicken sandwich ........ $7.00\nGreen salad ........ $6.00\nAdd chicken to any salad: + $2.00\nOrange juice ........ $3.00\nCoffee or tea ........ $2.00\nEvery lunch comes with a free cookie.\nFree refills on coffee and tea.",
+    "stem": "How much does a green salad with chicken cost?",
+    "choices": [
+      "$6.00",
+      "$9.00",
+      "$8.00",
+      "$7.00"
+    ],
+    "answer": 2,
+    "explanation": "A green salad is $6.00, and adding chicken costs $2.00 more, so the total is $8.00."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "Mia (4:10 p.m.): Hi Dad. The bus is late. I'm still at school.\nDad (4:12 p.m.): OK. Do you want me to pick you up?\nMia (4:13 p.m.): Yes, please! I'm at the front gate.\nDad (4:14 p.m.): No problem. I'll be there in 15 minutes.\nMia (4:15 p.m.): Thanks. It's starting to rain, so I'll wait inside the library.",
+    "stem": "Why does Mia send a message to her father?",
+    "choices": [
+      "She lost her bag.",
+      "Her class ended early.",
+      "Her bus is late.",
+      "She needs a library book."
+    ],
+    "answer": 2,
+    "explanation": "Mia writes, \"The bus is late. I'm still at school.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "Mia (4:10 p.m.): Hi Dad. The bus is late. I'm still at school.\nDad (4:12 p.m.): OK. Do you want me to pick you up?\nMia (4:13 p.m.): Yes, please! I'm at the front gate.\nDad (4:14 p.m.): No problem. I'll be there in 15 minutes.\nMia (4:15 p.m.): Thanks. It's starting to rain, so I'll wait inside the library.",
+    "stem": "Where will Mia wait for her father?",
+    "choices": [
+      "At the front gate",
+      "At the bus stop",
+      "At home",
+      "In the library"
+    ],
+    "answer": 3,
+    "explanation": "Because it is raining, Mia says she will wait inside the library."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "Mia (4:10 p.m.): Hi Dad. The bus is late. I'm still at school.\nDad (4:12 p.m.): OK. Do you want me to pick you up?\nMia (4:13 p.m.): Yes, please! I'm at the front gate.\nDad (4:14 p.m.): No problem. I'll be there in 15 minutes.\nMia (4:15 p.m.): Thanks. It's starting to rain, so I'll wait inside the library.",
+    "stem": "At about what time will Mia's father arrive?",
+    "choices": [
+      "4:30 p.m.",
+      "4:10 p.m.",
+      "4:15 p.m.",
+      "5:00 p.m."
+    ],
+    "answer": 0,
+    "explanation": "At 4:14 her father says he will be there in 15 minutes, so he will arrive at about 4:30."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "RIVERSIDE COMMUNITY CENTER — SPRING CLASSES\nMonday, 6:00–7:00 p.m.: Beginner Yoga (Room 2)\nTuesday, 7:00–8:30 p.m.: English Conversation (Room 5)\nWednesday, 6:30–7:30 p.m.: Guitar for Beginners (Room 3)\nSaturday, 10:00 a.m.–12:00 p.m.: Family Cooking (Kitchen)\nEach class costs $40 for eight weeks. Family Cooking is $60 per family.\nTo sign up, visit the front desk or call 555-0142.\nAll classes start the week of March 3.",
+    "stem": "What class is on Wednesday?",
+    "choices": [
+      "Beginner Yoga",
+      "Family Cooking",
+      "Guitar for Beginners",
+      "English Conversation"
+    ],
+    "answer": 2,
+    "explanation": "The schedule lists Guitar for Beginners on Wednesday."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "RIVERSIDE COMMUNITY CENTER — SPRING CLASSES\nMonday, 6:00–7:00 p.m.: Beginner Yoga (Room 2)\nTuesday, 7:00–8:30 p.m.: English Conversation (Room 5)\nWednesday, 6:30–7:30 p.m.: Guitar for Beginners (Room 3)\nSaturday, 10:00 a.m.–12:00 p.m.: Family Cooking (Kitchen)\nEach class costs $40 for eight weeks. Family Cooking is $60 per family.\nTo sign up, visit the front desk or call 555-0142.\nAll classes start the week of March 3.",
+    "stem": "Which class is the longest?",
+    "choices": [
+      "Beginner Yoga",
+      "Family Cooking",
+      "English Conversation",
+      "Guitar for Beginners"
+    ],
+    "answer": 1,
+    "explanation": "Family Cooking lasts two hours; the other classes last one hour or one and a half hours."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "RIVERSIDE COMMUNITY CENTER — SPRING CLASSES\nMonday, 6:00–7:00 p.m.: Beginner Yoga (Room 2)\nTuesday, 7:00–8:30 p.m.: English Conversation (Room 5)\nWednesday, 6:30–7:30 p.m.: Guitar for Beginners (Room 3)\nSaturday, 10:00 a.m.–12:00 p.m.: Family Cooking (Kitchen)\nEach class costs $40 for eight weeks. Family Cooking is $60 per family.\nTo sign up, visit the front desk or call 555-0142.\nAll classes start the week of March 3.",
+    "stem": "How can people sign up for a class?",
+    "choices": [
+      "By sending an e-mail",
+      "By going to the first class",
+      "By calling or visiting the center",
+      "By writing a letter to the teacher"
+    ],
+    "answer": 2,
+    "explanation": "The schedule says to visit the front desk or call 555-0142."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "BIKES FOR RENT AT LAKEVIEW PARK!\nEnjoy the paths around the lake this summer.\nPrices: $5 per hour or $20 for the whole day.\nChildren's bikes and helmets are free with every adult rental.\nOpen 9:00 a.m. to 6:00 p.m., Tuesday to Sunday. Closed on Mondays.\nPlease show a photo ID when you rent a bike.\nGroups of 10 or more get 10% off.\nFind us next to the main parking lot.",
+    "stem": "What is being advertised?",
+    "choices": [
+      "A sale at a bicycle store",
+      "A bicycle race",
+      "A new parking lot",
+      "A bicycle rental service"
+    ],
+    "answer": 3,
+    "explanation": "The ad is about renting bikes at Lakeview Park by the hour or day."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "BIKES FOR RENT AT LAKEVIEW PARK!\nEnjoy the paths around the lake this summer.\nPrices: $5 per hour or $20 for the whole day.\nChildren's bikes and helmets are free with every adult rental.\nOpen 9:00 a.m. to 6:00 p.m., Tuesday to Sunday. Closed on Mondays.\nPlease show a photo ID when you rent a bike.\nGroups of 10 or more get 10% off.\nFind us next to the main parking lot.",
+    "stem": "What must customers show when they rent a bike?",
+    "choices": [
+      "A helmet",
+      "A parking ticket",
+      "A photo ID",
+      "A group ticket"
+    ],
+    "answer": 2,
+    "explanation": "The ad says, \"Please show a photo ID when you rent a bike.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "BIKES FOR RENT AT LAKEVIEW PARK!\nEnjoy the paths around the lake this summer.\nPrices: $5 per hour or $20 for the whole day.\nChildren's bikes and helmets are free with every adult rental.\nOpen 9:00 a.m. to 6:00 p.m., Tuesday to Sunday. Closed on Mondays.\nPlease show a photo ID when you rent a bike.\nGroups of 10 or more get 10% off.\nFind us next to the main parking lot.",
+    "stem": "When is the bike rental closed?",
+    "choices": [
+      "On Mondays",
+      "On Tuesdays",
+      "On Saturdays",
+      "On Sundays"
+    ],
+    "answer": 0,
+    "explanation": "The ad says it is \"Closed on Mondays.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "NOTICE TO ALL RESIDENTS\nThe water in the building will be turned off on Thursday, May 14, from 9:00 a.m. to 1:00 p.m. Workers need to repair a pipe on the third floor. If you need water for cooking or drinking, please fill some bottles before 9:00 a.m. The elevator will work as usual. If you have any questions, please call the building office at 555-0198. We are sorry for the trouble.\n— Building Manager",
+    "stem": "Why will the water be turned off?",
+    "choices": [
+      "The elevator will be cleaned.",
+      "A pipe needs to be repaired.",
+      "The third floor will be painted.",
+      "The office will be closed."
+    ],
+    "answer": 1,
+    "explanation": "The notice says workers need to repair a pipe on the third floor."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "NOTICE TO ALL RESIDENTS\nThe water in the building will be turned off on Thursday, May 14, from 9:00 a.m. to 1:00 p.m. Workers need to repair a pipe on the third floor. If you need water for cooking or drinking, please fill some bottles before 9:00 a.m. The elevator will work as usual. If you have any questions, please call the building office at 555-0198. We are sorry for the trouble.\n— Building Manager",
+    "stem": "What are residents asked to do?",
+    "choices": [
+      "Use the stairs instead of the elevator",
+      "Fill some bottles with water",
+      "Leave the building by 9:00 a.m.",
+      "Visit the building office"
+    ],
+    "answer": 1,
+    "explanation": "Residents are asked to fill bottles before 9:00 a.m. if they need water for cooking or drinking."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "NOTICE TO ALL RESIDENTS\nThe water in the building will be turned off on Thursday, May 14, from 9:00 a.m. to 1:00 p.m. Workers need to repair a pipe on the third floor. If you need water for cooking or drinking, please fill some bottles before 9:00 a.m. The elevator will work as usual. If you have any questions, please call the building office at 555-0198. We are sorry for the trouble.\n— Building Manager",
+    "stem": "For how long will the water be off?",
+    "choices": [
+      "One hour",
+      "Nine hours",
+      "Fourteen hours",
+      "Four hours"
+    ],
+    "answer": 3,
+    "explanation": "The water will be off from 9:00 a.m. to 1:00 p.m., which is four hours."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "MAPLE TOWN LIBRARY — LIBRARY CARD APPLICATION\nName: Daniel Reyes\nAddress: 22 Pine Street, Maple Town\nPhone: 555-0167\nDate of birth: April 18, 2011\nType of card: [ ] Adult (18 and over) [X] Teen (13–17) [ ] Child (under 13)\nParent or guardian signature (needed for all cards under 18): Ana Reyes\nHow do you want to get reminders about due dates?\n[X] Text message [ ] E-mail [ ] Phone call\nFor office use only: Card given on November 2. Card is good for 2 years.",
+    "stem": "What is this form for?",
+    "choices": [
+      "Joining a school club",
+      "Renting an apartment",
+      "Getting a library card",
+      "Returning a library book"
+    ],
+    "answer": 2,
+    "explanation": "The title says it is a library card application."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "MAPLE TOWN LIBRARY — LIBRARY CARD APPLICATION\nName: Daniel Reyes\nAddress: 22 Pine Street, Maple Town\nPhone: 555-0167\nDate of birth: April 18, 2011\nType of card: [ ] Adult (18 and over) [X] Teen (13–17) [ ] Child (under 13)\nParent or guardian signature (needed for all cards under 18): Ana Reyes\nHow do you want to get reminders about due dates?\n[X] Text message [ ] E-mail [ ] Phone call\nFor office use only: Card given on November 2. Card is good for 2 years.",
+    "stem": "How will Daniel get reminders about due dates?",
+    "choices": [
+      "By e-mail",
+      "By phone call",
+      "By text message",
+      "By letter"
+    ],
+    "answer": 2,
+    "explanation": "The box next to \"Text message\" is marked."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "passage": "MAPLE TOWN LIBRARY — LIBRARY CARD APPLICATION\nName: Daniel Reyes\nAddress: 22 Pine Street, Maple Town\nPhone: 555-0167\nDate of birth: April 18, 2011\nType of card: [ ] Adult (18 and over) [X] Teen (13–17) [ ] Child (under 13)\nParent or guardian signature (needed for all cards under 18): Ana Reyes\nHow do you want to get reminders about due dates?\n[X] Text message [ ] E-mail [ ] Phone call\nFor office use only: Card given on November 2. Card is good for 2 years.",
+    "stem": "Why did Ana Reyes most likely sign the form?",
+    "choices": [
+      "She works at the library.",
+      "Daniel is younger than 18.",
+      "She wants a library card, too.",
+      "Daniel lost his old card."
+    ],
+    "answer": 1,
+    "explanation": "Daniel is applying for a teen card, and a parent or guardian must sign for all cards under 18."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "To: Kevin Park\nFrom: Hillside Dental Office\nSubject: Appointment reminder\n\nDear Mr. Park,\nThis is a reminder of your appointment with Dr. Lee on Friday, October 9, at 3:30 p.m. Please arrive 10 minutes early to fill out a short form. If you need to change the time, please call us at least one day before. Please note that our office has moved to the second floor of the Hill Building. We are no longer on the first floor.\nSee you soon!\nHillside Dental Office",
+    "stem": "Why was this e-mail sent?",
+    "choices": [
+      "To remind Mr. Park about an appointment",
+      "To introduce a new dentist",
+      "To ask Mr. Park to pay a bill",
+      "To announce a new dental office"
+    ],
+    "answer": 0,
+    "explanation": "The subject line and first sentence say it is an appointment reminder."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "To: Kevin Park\nFrom: Hillside Dental Office\nSubject: Appointment reminder\n\nDear Mr. Park,\nThis is a reminder of your appointment with Dr. Lee on Friday, October 9, at 3:30 p.m. Please arrive 10 minutes early to fill out a short form. If you need to change the time, please call us at least one day before. Please note that our office has moved to the second floor of the Hill Building. We are no longer on the first floor.\nSee you soon!\nHillside Dental Office",
+    "stem": "What has changed at the dental office?",
+    "choices": [
+      "It has a new phone number.",
+      "It has a new dentist.",
+      "It closes earlier on Fridays.",
+      "It is on a different floor."
+    ],
+    "answer": 3,
+    "explanation": "The office moved from the first floor to the second floor of the Hill Building."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "To: Kevin Park\nFrom: Hillside Dental Office\nSubject: Appointment reminder\n\nDear Mr. Park,\nThis is a reminder of your appointment with Dr. Lee on Friday, October 9, at 3:30 p.m. Please arrive 10 minutes early to fill out a short form. If you need to change the time, please call us at least one day before. Please note that our office has moved to the second floor of the Hill Building. We are no longer on the first floor.\nSee you soon!\nHillside Dental Office",
+    "stem": "What time is Mr. Park's appointment?",
+    "choices": [
+      "3:20 p.m.",
+      "3:00 p.m.",
+      "10:00 a.m.",
+      "3:30 p.m."
+    ],
+    "answer": 3,
+    "explanation": "The appointment is at 3:30 p.m. He is asked to arrive 10 minutes early, at 3:20, but that is not the appointment time."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "QUICK CLEAN LAUNDRY — PRICE LIST\nShirt (washed and ironed) ........ $3.00\nPants ........ $5.00\nDress ........ $9.00\nCoat ........ $14.00\nBed sheets (one set) ........ $8.00\nRegular service: ready in 2 days.\nExpress service: ready the same day if you drop off before 10:00 a.m. Add 50% to the price.\nTuesday special: 5 shirts for $12.00.\nItems not picked up within 30 days will be given to charity.",
+    "stem": "How much does it cost to clean one coat with regular service?",
+    "choices": [
+      "$14.00",
+      "$9.00",
+      "$21.00",
+      "$8.00"
+    ],
+    "answer": 0,
+    "explanation": "The price list shows a coat costs $14.00."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "passage": "QUICK CLEAN LAUNDRY — PRICE LIST\nShirt (washed and ironed) ........ $3.00\nPants ........ $5.00\nDress ........ $9.00\nCoat ........ $14.00\nBed sheets (one set) ........ $8.00\nRegular service: ready in 2 days.\nExpress service: ready the same day if you drop off before 10:00 a.m. Add 50% to the price.\nTuesday special: 5 shirts for $12.00.\nItems not picked up within 30 days will be given to charity.",
+    "stem": "How much would a customer pay to clean one dress with express service?",
+    "choices": [
+      "$13.50",
+      "$9.00",
+      "$18.00",
+      "$14.00"
+    ],
+    "answer": 0,
+    "explanation": "A dress is $9.00, and express service adds 50% ($4.50), so the total is $13.50."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "passage": "QUICK CLEAN LAUNDRY — PRICE LIST\nShirt (washed and ironed) ........ $3.00\nPants ........ $5.00\nDress ........ $9.00\nCoat ........ $14.00\nBed sheets (one set) ........ $8.00\nRegular service: ready in 2 days.\nExpress service: ready the same day if you drop off before 10:00 a.m. Add 50% to the price.\nTuesday special: 5 shirts for $12.00.\nItems not picked up within 30 days will be given to charity.",
+    "stem": "What is true about the Tuesday special?",
+    "choices": [
+      "It is only for express service.",
+      "It saves customers $3.00 on five shirts.",
+      "It includes pants and dresses.",
+      "It is available every day of the week."
+    ],
+    "answer": 1,
+    "explanation": "Five shirts usually cost 5 × $3.00 = $15.00, but on Tuesday they cost $12.00, a saving of $3.00."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "passage": "To: Sales Team\nFrom: Rachel Kim\nSubject: Friday lunch\n\nHi everyone,\nTo thank you for your hard work this quarter, the company will pay for a team lunch this Friday at 12:30 p.m. I have reserved a large table at Garden Table, the Italian restaurant across the street from our office. Please reply by Wednesday and tell me if you can come. If you have any food allergies, let me know so that I can tell the restaurant. Also, since we will all be out of the office, Tom has kindly agreed to answer customer calls until 2:00 p.m. We will bring a lunch back for him.\nThanks,\nRachel",
+    "stem": "What is the main purpose of the e-mail?",
+    "choices": [
+      "To invite the team to a lunch",
+      "To announce a new restaurant",
+      "To ask Tom to work late",
+      "To report the sales results"
+    ],
+    "answer": 0,
+    "explanation": "Rachel writes to tell the sales team about a company-paid lunch on Friday and asks who can come."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "passage": "To: Sales Team\nFrom: Rachel Kim\nSubject: Friday lunch\n\nHi everyone,\nTo thank you for your hard work this quarter, the company will pay for a team lunch this Friday at 12:30 p.m. I have reserved a large table at Garden Table, the Italian restaurant across the street from our office. Please reply by Wednesday and tell me if you can come. If you have any food allergies, let me know so that I can tell the restaurant. Also, since we will all be out of the office, Tom has kindly agreed to answer customer calls until 2:00 p.m. We will bring a lunch back for him.\nThanks,\nRachel",
+    "stem": "What does Rachel ask team members to tell her by Wednesday?",
+    "choices": [
+      "What food they want to order",
+      "Whether they can attend the lunch",
+      "How much they can pay",
+      "When they will finish work on Friday"
+    ],
+    "answer": 1,
+    "explanation": "She writes, \"Please reply by Wednesday and tell me if you can come.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "passage": "To: Sales Team\nFrom: Rachel Kim\nSubject: Friday lunch\n\nHi everyone,\nTo thank you for your hard work this quarter, the company will pay for a team lunch this Friday at 12:30 p.m. I have reserved a large table at Garden Table, the Italian restaurant across the street from our office. Please reply by Wednesday and tell me if you can come. If you have any food allergies, let me know so that I can tell the restaurant. Also, since we will all be out of the office, Tom has kindly agreed to answer customer calls until 2:00 p.m. We will bring a lunch back for him.\nThanks,\nRachel",
+    "stem": "What can be inferred about Tom?",
+    "choices": [
+      "He will not go to the restaurant.",
+      "He works at the restaurant.",
+      "He made the reservation.",
+      "He has a food allergy."
+    ],
+    "answer": 0,
+    "explanation": "Tom will stay to answer customer calls, and the team will bring a lunch back for him, so he will not be at the restaurant."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "passage": "NEW COMMUNITY GARDEN OPENS ON ELM STREET\nOn Saturday, the town opened a new community garden on an empty lot on Elm Street. The garden has 40 small plots where residents can grow vegetables, herbs, and flowers. Each plot costs $25 for the season, and the town provides water, tools, and free advice from experienced gardeners every Sunday morning. \"Many people here live in apartments and don't have a yard,\" said Linda Hoff, who organized the project. \"Now they have a place to grow their own food.\" Half of the plots were rented on the first day, so people who are interested should apply soon at the town hall. Gardeners may give any extra vegetables to the local food bank.",
+    "stem": "What is the article mainly about?",
+    "choices": [
+      "A new farmers' market",
+      "A cooking class for apartment owners",
+      "A new apartment building on Elm Street",
+      "A new garden for town residents"
+    ],
+    "answer": 3,
+    "explanation": "The article describes the new community garden on Elm Street and how residents can use it."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "passage": "NEW COMMUNITY GARDEN OPENS ON ELM STREET\nOn Saturday, the town opened a new community garden on an empty lot on Elm Street. The garden has 40 small plots where residents can grow vegetables, herbs, and flowers. Each plot costs $25 for the season, and the town provides water, tools, and free advice from experienced gardeners every Sunday morning. \"Many people here live in apartments and don't have a yard,\" said Linda Hoff, who organized the project. \"Now they have a place to grow their own food.\" Half of the plots were rented on the first day, so people who are interested should apply soon at the town hall. Gardeners may give any extra vegetables to the local food bank.",
+    "stem": "What does the town provide to gardeners?",
+    "choices": [
+      "Water and tools",
+      "Seeds and plants",
+      "A yard for each apartment",
+      "Free vegetables every Sunday"
+    ],
+    "answer": 0,
+    "explanation": "The article says the town provides water, tools, and free advice."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 4,
+    "passage": "NEW COMMUNITY GARDEN OPENS ON ELM STREET\nOn Saturday, the town opened a new community garden on an empty lot on Elm Street. The garden has 40 small plots where residents can grow vegetables, herbs, and flowers. Each plot costs $25 for the season, and the town provides water, tools, and free advice from experienced gardeners every Sunday morning. \"Many people here live in apartments and don't have a yard,\" said Linda Hoff, who organized the project. \"Now they have a place to grow their own food.\" Half of the plots were rented on the first day, so people who are interested should apply soon at the town hall. Gardeners may give any extra vegetables to the local food bank.",
+    "stem": "What can be inferred about the garden plots?",
+    "choices": [
+      "The garden is open only on Sunday mornings.",
+      "Gardeners must give all their vegetables to the food bank.",
+      "Each plot costs $25 per month.",
+      "The remaining plots may be rented quickly."
+    ],
+    "answer": 3,
+    "explanation": "Half of the plots were rented on the first day, and people are told to apply soon, which suggests the rest may go fast."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "passage": "HARBOR FERRY — WEEKDAY SCHEDULE (Monday–Friday)\nLeaves Port City / Arrives Green Island\n7:15 a.m. / 7:55 a.m.\n9:30 a.m. / 10:10 a.m.\n12:00 p.m. / 12:40 p.m.\n3:45 p.m. / 4:25 p.m.\n6:30 p.m. / 7:10 p.m.\nTickets: Adults $6 one way, $10 round trip. Children under 12: half price.\nOn weekends, the ferry leaves every two hours, starting at 8:00 a.m.\nBicycles are allowed on all trips except the 7:15 a.m. ferry.",
+    "stem": "How long is the ferry trip from Port City to Green Island?",
+    "choices": [
+      "30 minutes",
+      "55 minutes",
+      "1 hour",
+      "40 minutes"
+    ],
+    "answer": 3,
+    "explanation": "Each ferry arrives 40 minutes after it leaves (for example, 7:15 to 7:55)."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "passage": "HARBOR FERRY — WEEKDAY SCHEDULE (Monday–Friday)\nLeaves Port City / Arrives Green Island\n7:15 a.m. / 7:55 a.m.\n9:30 a.m. / 10:10 a.m.\n12:00 p.m. / 12:40 p.m.\n3:45 p.m. / 4:25 p.m.\n6:30 p.m. / 7:10 p.m.\nTickets: Adults $6 one way, $10 round trip. Children under 12: half price.\nOn weekends, the ferry leaves every two hours, starting at 8:00 a.m.\nBicycles are allowed on all trips except the 7:15 a.m. ferry.",
+    "stem": "A woman wants to take her bicycle to Green Island on a Tuesday and arrive before noon. Which ferry should she take?",
+    "choices": [
+      "The 7:15 a.m. ferry",
+      "The 9:30 a.m. ferry",
+      "The 12:00 p.m. ferry",
+      "The 8:00 a.m. ferry"
+    ],
+    "answer": 1,
+    "explanation": "Bicycles are not allowed on the 7:15 ferry, and the 9:30 ferry arrives at 10:10, before noon. The 8:00 ferry runs only on weekends."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "passage": "HARBOR FERRY — WEEKDAY SCHEDULE (Monday–Friday)\nLeaves Port City / Arrives Green Island\n7:15 a.m. / 7:55 a.m.\n9:30 a.m. / 10:10 a.m.\n12:00 p.m. / 12:40 p.m.\n3:45 p.m. / 4:25 p.m.\n6:30 p.m. / 7:10 p.m.\nTickets: Adults $6 one way, $10 round trip. Children under 12: half price.\nOn weekends, the ferry leaves every two hours, starting at 8:00 a.m.\nBicycles are allowed on all trips except the 7:15 a.m. ferry.",
+    "stem": "How much is a round-trip ticket for an eight-year-old child?",
+    "choices": [
+      "$3",
+      "$5",
+      "$6",
+      "$10"
+    ],
+    "answer": 1,
+    "explanation": "An adult round-trip ticket is $10, and children under 12 pay half price, so the ticket is $5."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "Jenna (9:02 a.m.): Hi Marcus, could you work my shift this Saturday? My sister is getting married that day.\nMarcus (9:05 a.m.): Congratulations to her! What time is the shift?\nJenna (9:06 a.m.): 8:00 a.m. to 2:00 p.m. at the front counter.\nMarcus (9:08 a.m.): I have a class until 10:00 on Saturday mornings. I could come in at 10:30.\nJenna (9:10 a.m.): That would be great, thanks! I'll ask Paula to cover the first part. After that, I'll let our manager know.\nMarcus (9:11 a.m.): Sounds good. Maybe you can take my Wednesday shift next week in return.",
+    "stem": "Why does Jenna write to Marcus?",
+    "choices": [
+      "She needs someone to work for her.",
+      "She wants to invite him to a wedding.",
+      "She has a question about a class.",
+      "She wants to complain about the manager."
+    ],
+    "answer": 0,
+    "explanation": "Jenna asks Marcus to work her shift on Saturday because her sister is getting married."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "Jenna (9:02 a.m.): Hi Marcus, could you work my shift this Saturday? My sister is getting married that day.\nMarcus (9:05 a.m.): Congratulations to her! What time is the shift?\nJenna (9:06 a.m.): 8:00 a.m. to 2:00 p.m. at the front counter.\nMarcus (9:08 a.m.): I have a class until 10:00 on Saturday mornings. I could come in at 10:30.\nJenna (9:10 a.m.): That would be great, thanks! I'll ask Paula to cover the first part. After that, I'll let our manager know.\nMarcus (9:11 a.m.): Sounds good. Maybe you can take my Wednesday shift next week in return.",
+    "stem": "Why can't Marcus start work at 8:00 a.m. on Saturday?",
+    "choices": [
+      "He is going to a wedding.",
+      "He works at another job.",
+      "He has a class.",
+      "He has to meet the manager."
+    ],
+    "answer": 2,
+    "explanation": "Marcus says he has a class until 10:00 on Saturday mornings."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "passage": "Jenna (9:02 a.m.): Hi Marcus, could you work my shift this Saturday? My sister is getting married that day.\nMarcus (9:05 a.m.): Congratulations to her! What time is the shift?\nJenna (9:06 a.m.): 8:00 a.m. to 2:00 p.m. at the front counter.\nMarcus (9:08 a.m.): I have a class until 10:00 on Saturday mornings. I could come in at 10:30.\nJenna (9:10 a.m.): That would be great, thanks! I'll ask Paula to cover the first part. After that, I'll let our manager know.\nMarcus (9:11 a.m.): Sounds good. Maybe you can take my Wednesday shift next week in return.",
+    "stem": "What will Jenna most likely do next?",
+    "choices": [
+      "Work at the front counter on Saturday",
+      "Take Marcus's class for him",
+      "Change the date of the wedding",
+      "Ask Paula to work in the morning"
+    ],
+    "answer": 3,
+    "explanation": "Jenna says she will ask Paula to cover the first part of the shift and then tell the manager."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "passage": "BORROW MORE THAN BOOKS\nThe Westfield Public Library has started a new service called the Library of Things. In addition to books and movies, members can now borrow everyday items that they may need only once or twice a year, such as tents, sewing machines, camping stoves, and even a small telescope. Items can be borrowed for up to one week at no charge. \"Buying something expensive that you hardly ever use doesn't make sense,\" explained library director Paul Jensen. \"Sharing these items saves people money and reduces waste.\" The library plans to expand the collection based on suggestions from members, and a suggestion form is available at the information desk. Because the items are popular, members are encouraged to reserve them online at least a few days in advance.",
+    "stem": "What is the article mainly about?",
+    "choices": [
+      "A library that sells used books",
+      "A new camping store in Westfield",
+      "A library that lends everyday items",
+      "A sewing class at the library"
+    ],
+    "answer": 2,
+    "explanation": "The article describes the library's new service for borrowing items such as tents and sewing machines."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 4,
+    "passage": "BORROW MORE THAN BOOKS\nThe Westfield Public Library has started a new service called the Library of Things. In addition to books and movies, members can now borrow everyday items that they may need only once or twice a year, such as tents, sewing machines, camping stoves, and even a small telescope. Items can be borrowed for up to one week at no charge. \"Buying something expensive that you hardly ever use doesn't make sense,\" explained library director Paul Jensen. \"Sharing these items saves people money and reduces waste.\" The library plans to expand the collection based on suggestions from members, and a suggestion form is available at the information desk. Because the items are popular, members are encouraged to reserve them online at least a few days in advance.",
+    "stem": "The word \"expand\" in the article is closest in meaning to",
+    "choices": [
+      "clean",
+      "close",
+      "make larger",
+      "check"
+    ],
+    "answer": 2,
+    "explanation": "The library plans to add more items based on members' suggestions, so \"expand\" means to make larger."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 4,
+    "passage": "BORROW MORE THAN BOOKS\nThe Westfield Public Library has started a new service called the Library of Things. In addition to books and movies, members can now borrow everyday items that they may need only once or twice a year, such as tents, sewing machines, camping stoves, and even a small telescope. Items can be borrowed for up to one week at no charge. \"Buying something expensive that you hardly ever use doesn't make sense,\" explained library director Paul Jensen. \"Sharing these items saves people money and reduces waste.\" The library plans to expand the collection based on suggestions from members, and a suggestion form is available at the information desk. Because the items are popular, members are encouraged to reserve them online at least a few days in advance.",
+    "stem": "What is suggested about the Library of Things?",
+    "choices": [
+      "Some items may not be available if members do not reserve early.",
+      "Members must pay a small fee for each item.",
+      "The collection will not change in the future.",
+      "Items can be kept for up to one month."
+    ],
+    "answer": 0,
+    "explanation": "Members are encouraged to reserve popular items a few days in advance, which suggests items may be unavailable otherwise."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "passage": "To: Ms. Sandra Lopez\nFrom: Customer Service, Northfield Furniture\nSubject: Your order #4471\n\nDear Ms. Lopez,\nThank you for your message about the bookshelf you ordered on June 3. We are sorry that it arrived with a broken side panel. We will send you a replacement panel at no cost, and it should arrive within five business days. There is no need to return the whole bookshelf. If you would prefer a full refund instead, simply reply to this e-mail, and we will arrange for the bookshelf to be picked up from your home. As an apology for the inconvenience, we have also added a $15 credit to your account, which you can use on your next purchase.\nSincerely,\nGrace Chen\nCustomer Service Team",
+    "stem": "Why was this e-mail written?",
+    "choices": [
+      "To confirm a new furniture order",
+      "To advertise a sale on bookshelves",
+      "To respond to a complaint about a damaged item",
+      "To ask for a delivery address"
+    ],
+    "answer": 2,
+    "explanation": "The company is answering Ms. Lopez's message about a bookshelf that arrived with a broken panel."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 4,
+    "passage": "To: Ms. Sandra Lopez\nFrom: Customer Service, Northfield Furniture\nSubject: Your order #4471\n\nDear Ms. Lopez,\nThank you for your message about the bookshelf you ordered on June 3. We are sorry that it arrived with a broken side panel. We will send you a replacement panel at no cost, and it should arrive within five business days. There is no need to return the whole bookshelf. If you would prefer a full refund instead, simply reply to this e-mail, and we will arrange for the bookshelf to be picked up from your home. As an apology for the inconvenience, we have also added a $15 credit to your account, which you can use on your next purchase.\nSincerely,\nGrace Chen\nCustomer Service Team",
+    "stem": "What will most likely happen if Ms. Lopez does not reply to the e-mail?",
+    "choices": [
+      "She will receive a new side panel.",
+      "She will receive a full refund.",
+      "Someone will pick up the bookshelf.",
+      "Her $15 credit will be removed."
+    ],
+    "answer": 0,
+    "explanation": "The company will send a replacement panel; a refund and pickup happen only if she replies to ask for them."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 4,
+    "passage": "To: Ms. Sandra Lopez\nFrom: Customer Service, Northfield Furniture\nSubject: Your order #4471\n\nDear Ms. Lopez,\nThank you for your message about the bookshelf you ordered on June 3. We are sorry that it arrived with a broken side panel. We will send you a replacement panel at no cost, and it should arrive within five business days. There is no need to return the whole bookshelf. If you would prefer a full refund instead, simply reply to this e-mail, and we will arrange for the bookshelf to be picked up from your home. As an apology for the inconvenience, we have also added a $15 credit to your account, which you can use on your next purchase.\nSincerely,\nGrace Chen\nCustomer Service Team",
+    "stem": "The word \"arrange\" in the e-mail is closest in meaning to",
+    "choices": [
+      "repair",
+      "organize",
+      "refuse",
+      "pay for"
+    ],
+    "answer": 1,
+    "explanation": "To \"arrange for the bookshelf to be picked up\" means to organize or plan the pickup."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "passage": "NOW HIRING: PART-TIME MUSEUM GUIDES\nThe Clearwater History Museum is looking for friendly, reliable people to lead tours for visitors of all ages. Guides work 12 to 15 hours a week, mostly on weekends and during school holidays. No experience is necessary, as all new guides receive two weeks of paid training. However, applicants must be comfortable speaking in front of groups. Knowledge of a second language is a plus, since many of our visitors come from other countries. Guides earn $16 per hour and receive free admission to all museum events for themselves and one guest. To apply, send a short letter explaining why you are interested, along with your résumé, to the museum office by April 30. Interviews will take place during the first week of May.",
+    "stem": "What is the purpose of this advertisement?",
+    "choices": [
+      "To find new tour guides",
+      "To announce a new exhibit",
+      "To sell tickets to museum events",
+      "To offer free language lessons"
+    ],
+    "answer": 0,
+    "explanation": "The ad says the museum is hiring part-time guides and explains how to apply."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 4,
+    "passage": "NOW HIRING: PART-TIME MUSEUM GUIDES\nThe Clearwater History Museum is looking for friendly, reliable people to lead tours for visitors of all ages. Guides work 12 to 15 hours a week, mostly on weekends and during school holidays. No experience is necessary, as all new guides receive two weeks of paid training. However, applicants must be comfortable speaking in front of groups. Knowledge of a second language is a plus, since many of our visitors come from other countries. Guides earn $16 per hour and receive free admission to all museum events for themselves and one guest. To apply, send a short letter explaining why you are interested, along with your résumé, to the museum office by April 30. Interviews will take place during the first week of May.",
+    "stem": "The word \"plus\" in the advertisement is closest in meaning to",
+    "choices": [
+      "requirement",
+      "number",
+      "payment",
+      "advantage"
+    ],
+    "answer": 3,
+    "explanation": "Knowing a second language is helpful but not required, so \"plus\" means an advantage."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 4,
+    "passage": "NOW HIRING: PART-TIME MUSEUM GUIDES\nThe Clearwater History Museum is looking for friendly, reliable people to lead tours for visitors of all ages. Guides work 12 to 15 hours a week, mostly on weekends and during school holidays. No experience is necessary, as all new guides receive two weeks of paid training. However, applicants must be comfortable speaking in front of groups. Knowledge of a second language is a plus, since many of our visitors come from other countries. Guides earn $16 per hour and receive free admission to all museum events for themselves and one guest. To apply, send a short letter explaining why you are interested, along with your résumé, to the museum office by April 30. Interviews will take place during the first week of May.",
+    "stem": "Which person would most likely be a good fit for the job?",
+    "choices": [
+      "Someone who wants a full-time job on weekdays",
+      "Someone who enjoys talking to groups and is free on weekends",
+      "Someone who feels nervous speaking in public",
+      "Someone who must start work in early April"
+    ],
+    "answer": 1,
+    "explanation": "Guides work mostly on weekends and must be comfortable speaking to groups; the job is part-time, and interviews are not until May."
+  }
+]

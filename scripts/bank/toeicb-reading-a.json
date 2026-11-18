@@ -1,0 +1,1366 @@
+[
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "stem": "My brother ____ a nurse at the city hospital.",
+    "choices": [
+      "is",
+      "are",
+      "be",
+      "am"
+    ],
+    "answer": 0,
+    "explanation": "\"My brother\" is a singular subject, so the verb is \"is.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "stem": "We have lunch ____ noon every day.",
+    "choices": [
+      "in",
+      "on",
+      "at",
+      "for"
+    ],
+    "answer": 2,
+    "explanation": "We use \"at\" with an exact time such as \"noon.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "stem": "This box is heavy. Can you help ____?",
+    "choices": [
+      "my",
+      "I",
+      "me",
+      "mine"
+    ],
+    "answer": 2,
+    "explanation": "After the verb \"help,\" we need the object pronoun \"me.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "stem": "There ____ three chairs in the meeting room.",
+    "choices": [
+      "are",
+      "has",
+      "is",
+      "be"
+    ],
+    "answer": 0,
+    "explanation": "\"Three chairs\" is plural, so we say \"There are.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "stem": "The bank is closed ____ Sundays.",
+    "choices": [
+      "to",
+      "on",
+      "at",
+      "in"
+    ],
+    "answer": 1,
+    "explanation": "We use \"on\" with days of the week."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "stem": "Ms. Kim ____ to work by bus every morning.",
+    "choices": [
+      "gone",
+      "going",
+      "go",
+      "goes"
+    ],
+    "answer": 3,
+    "explanation": "\"Every morning\" shows a habit, and the subject is singular, so the simple present \"goes\" is correct."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "stem": "Please don't ____ in the library.",
+    "choices": [
+      "talks",
+      "talking",
+      "talked",
+      "talk"
+    ],
+    "answer": 3,
+    "explanation": "After \"don't,\" we use the base form of the verb: \"talk.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "stem": "I ____ my keys yesterday, but I found them later.",
+    "choices": [
+      "lost",
+      "losing",
+      "lose",
+      "loses"
+    ],
+    "answer": 0,
+    "explanation": "\"Yesterday\" shows the past, so the past tense \"lost\" is correct."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "stem": "The new phone is ____ than my old one.",
+    "choices": [
+      "lighter",
+      "more light",
+      "light",
+      "lightest"
+    ],
+    "answer": 0,
+    "explanation": "\"Than\" follows a comparative, and the comparative of \"light\" is \"lighter.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "stem": "We can't play tennis today ____ it is raining.",
+    "choices": [
+      "or",
+      "because",
+      "but",
+      "so"
+    ],
+    "answer": 1,
+    "explanation": "The rain is the reason we can't play, so \"because\" is correct."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "stem": "Ken and I are going to the movies. Do you want to come with ____?",
+    "choices": [
+      "our",
+      "ours",
+      "we",
+      "us"
+    ],
+    "answer": 3,
+    "explanation": "After the preposition \"with,\" we need the object pronoun \"us.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "stem": "The train to Boston leaves ____ 15 minutes.",
+    "choices": [
+      "on",
+      "by",
+      "at",
+      "in"
+    ],
+    "answer": 3,
+    "explanation": "\"In\" + a period of time means \"after that much time from now.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "stem": "Look! The children ____ in the park right now.",
+    "choices": [
+      "plays",
+      "play",
+      "are playing",
+      "played"
+    ],
+    "answer": 2,
+    "explanation": "\"Right now\" describes an action in progress, so the present continuous \"are playing\" is correct."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "stem": "How ____ apples do you need for the pie?",
+    "choices": [
+      "long",
+      "much",
+      "often",
+      "many"
+    ],
+    "answer": 3,
+    "explanation": "\"Apples\" is a plural countable noun, so we ask \"How many.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "stem": "The pharmacy is ____ the post office and the bank.",
+    "choices": [
+      "across",
+      "between",
+      "among",
+      "along"
+    ],
+    "answer": 1,
+    "explanation": "We use \"between\" for a position in the middle of two places."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "stem": "If it ____ tomorrow, the picnic will be moved indoors.",
+    "choices": [
+      "raining",
+      "rained",
+      "rains",
+      "will rain"
+    ],
+    "answer": 2,
+    "explanation": "In a first conditional, the \"if\" clause uses the simple present: \"If it rains.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "stem": "Ms. Lopez has worked at the company ____ 2019.",
+    "choices": [
+      "since",
+      "during",
+      "for",
+      "ago"
+    ],
+    "answer": 0,
+    "explanation": "With the present perfect and a starting point in time (2019), we use \"since.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "stem": "The report must ____ by Friday afternoon.",
+    "choices": [
+      "finishing",
+      "finish",
+      "finished",
+      "be finished"
+    ],
+    "answer": 3,
+    "explanation": "The report does not finish itself, so the passive \"must be finished\" is needed."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "stem": "Customers ____ buy two items will receive a free gift.",
+    "choices": [
+      "which",
+      "who",
+      "whose",
+      "what"
+    ],
+    "answer": 1,
+    "explanation": "\"Who\" is the relative pronoun for people and is the subject of \"buy.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "stem": "Please send the documents to Mr. Park or ____ assistant.",
+    "choices": [
+      "he",
+      "him",
+      "his",
+      "himself"
+    ],
+    "answer": 2,
+    "explanation": "A possessive adjective is needed before the noun \"assistant,\" so \"his\" is correct."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "stem": "I'm looking forward to ____ you at the conference.",
+    "choices": [
+      "seeing",
+      "saw",
+      "seen",
+      "see"
+    ],
+    "answer": 0,
+    "explanation": "In \"look forward to,\" \"to\" is a preposition, so it is followed by the -ing form \"seeing.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "stem": "This is the ____ restaurant in town; it's always full.",
+    "choices": [
+      "busy",
+      "busiest",
+      "busier",
+      "busily"
+    ],
+    "answer": 1,
+    "explanation": "\"The ... in town\" compares it with all others, so the superlative \"busiest\" is correct."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "stem": "____ the heavy rain, the game continued as planned.",
+    "choices": [
+      "Despite",
+      "However",
+      "Although",
+      "Because"
+    ],
+    "answer": 0,
+    "explanation": "\"Despite\" is followed by a noun phrase and shows contrast; \"Although\" would need a full clause."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "stem": "The package was ____ to the wrong address, so it arrived late.",
+    "choices": [
+      "delivers",
+      "delivering",
+      "delivered",
+      "deliver"
+    ],
+    "answer": 2,
+    "explanation": "After \"was,\" the past participle \"delivered\" forms the passive voice."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 4,
+    "stem": "If I had left home earlier, I ____ the bus.",
+    "choices": [
+      "caught",
+      "would have caught",
+      "would catch",
+      "will catch"
+    ],
+    "answer": 1,
+    "explanation": "This is a past unreal condition (\"If I had left\"), so the result clause uses \"would have\" + past participle."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 4,
+    "stem": "Neither the printer ____ the copier is working this morning.",
+    "choices": [
+      "but",
+      "nor",
+      "and",
+      "or"
+    ],
+    "answer": 1,
+    "explanation": "\"Neither\" is always paired with \"nor.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 4,
+    "stem": "By the time we arrived at the theater, the show ____.",
+    "choices": [
+      "is starting",
+      "has already started",
+      "had already started",
+      "already starts"
+    ],
+    "answer": 2,
+    "explanation": "The show started before another past action (we arrived), so the past perfect \"had already started\" is correct."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 4,
+    "stem": "The training session was ____ useful that we asked for another one.",
+    "choices": [
+      "too",
+      "such",
+      "very",
+      "so"
+    ],
+    "answer": 3,
+    "explanation": "The pattern \"so + adjective + that\" shows a result; \"such\" would need a noun."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "stem": "It's cold outside. Please wear your ____.",
+    "choices": [
+      "plate",
+      "ticket",
+      "coat",
+      "towel"
+    ],
+    "answer": 2,
+    "explanation": "People wear a coat to stay warm when it is cold."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "stem": "I'm hungry. Let's ____ something.",
+    "choices": [
+      "sleep",
+      "eat",
+      "wash",
+      "drive"
+    ],
+    "answer": 1,
+    "explanation": "When you are hungry, you want to eat."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "stem": "The library is very ____. Please speak softly.",
+    "choices": [
+      "hungry",
+      "fast",
+      "quiet",
+      "loud"
+    ],
+    "answer": 2,
+    "explanation": "You speak softly because the library is a quiet place."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "stem": "You can buy stamps at the post ____.",
+    "choices": [
+      "shop",
+      "house",
+      "room",
+      "office"
+    ],
+    "answer": 3,
+    "explanation": "The place that sells stamps and sends mail is the \"post office.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "stem": "Turn off the ____ when you leave the room.",
+    "choices": [
+      "books",
+      "chairs",
+      "lights",
+      "doors"
+    ],
+    "answer": 2,
+    "explanation": "We \"turn off\" lights; doors, books, and chairs are not turned off."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "stem": "Please ____ your seat belt during the flight.",
+    "choices": [
+      "tie",
+      "close",
+      "fasten",
+      "open"
+    ],
+    "answer": 2,
+    "explanation": "The usual expression is \"fasten your seat belt.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "stem": "The dentist's office called to ____ my appointment for Thursday.",
+    "choices": [
+      "allow",
+      "confirm",
+      "agree",
+      "accept"
+    ],
+    "answer": 1,
+    "explanation": "To \"confirm\" an appointment means to say that it is definitely happening."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "stem": "The jacket is usually $40, but it is on ____ for $30 this week.",
+    "choices": [
+      "cost",
+      "price",
+      "sale",
+      "money"
+    ],
+    "answer": 2,
+    "explanation": "\"On sale\" means available at a lower price than usual."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "stem": "Our flight was ____ because of the snowstorm.",
+    "choices": [
+      "canceled",
+      "ended",
+      "finished",
+      "closed"
+    ],
+    "answer": 0,
+    "explanation": "A flight that does not happen because of bad weather is \"canceled.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "stem": "Can I try on this shirt in a larger ____?",
+    "choices": [
+      "height",
+      "length",
+      "number",
+      "size"
+    ],
+    "answer": 3,
+    "explanation": "Clothes come in different sizes, such as small, medium, and large."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "stem": "Please ____ the form and give it to the receptionist.",
+    "choices": [
+      "put on",
+      "fill up",
+      "fill out",
+      "take off"
+    ],
+    "answer": 2,
+    "explanation": "To \"fill out\" a form means to write the needed information on it."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "stem": "All visitors must show photo ____ at the front desk.",
+    "choices": [
+      "introduction",
+      "instruction",
+      "information",
+      "identification"
+    ],
+    "answer": 3,
+    "explanation": "\"Photo identification\" is a card with your picture that shows who you are."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "stem": "The store will ____ its hours during the holiday season and stay open until 10 P.M.",
+    "choices": [
+      "grow",
+      "spread",
+      "extend",
+      "raise"
+    ],
+    "answer": 2,
+    "explanation": "To \"extend\" hours means to make them longer, which matches staying open until 10 P.M."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "stem": "Mr. Chen is ____ for ordering office supplies, so please ask him if you need paper.",
+    "choices": [
+      "certain",
+      "responsible",
+      "possible",
+      "likely"
+    ],
+    "answer": 1,
+    "explanation": "\"Responsible for\" means it is his job to do something."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "stem": "Because of road repairs, buses will take a different ____ this week.",
+    "choices": [
+      "tour",
+      "ride",
+      "route",
+      "pass"
+    ],
+    "answer": 2,
+    "explanation": "A bus \"route\" is the way it travels; road repairs make the bus use another way."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 4,
+    "stem": "The hotel offers ____ breakfast to all guests, so there is no extra charge.",
+    "choices": [
+      "separate",
+      "additional",
+      "complementary",
+      "complimentary"
+    ],
+    "answer": 3,
+    "explanation": "\"Complimentary\" means free; \"complementary\" looks similar but means \"going well together.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 4,
+    "stem": "Applicants should have at least two years of ____ in customer service.",
+    "choices": [
+      "experience",
+      "experiment",
+      "expense",
+      "expert"
+    ],
+    "answer": 0,
+    "explanation": "Job applicants are asked for \"experience\" in a type of work."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 4,
+    "stem": "The community center is ____ located near the subway station, so it's easy to reach.",
+    "choices": [
+      "conveniently",
+      "carefully",
+      "politely",
+      "comfortably"
+    ],
+    "answer": 0,
+    "explanation": "\"Conveniently located\" means in a place that is easy to get to."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "Hi Mia! I'm at the store now. Do you (1) ____ milk? They have a big bottle for $3. (2) ____ I can also get bread. We have (3) ____ eggs at home, so I won't buy them. See you (4) ____ 6:00.\n- Ben",
+    "stem": "Choose the best option for blank (1).",
+    "choices": [
+      "needs",
+      "need",
+      "needing",
+      "to need"
+    ],
+    "answer": 1,
+    "explanation": "After \"Do you,\" we use the base form of the verb: \"need.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "Hi Mia! I'm at the store now. Do you (1) ____ milk? They have a big bottle for $3. (2) ____ I can also get bread. We have (3) ____ eggs at home, so I won't buy them. See you (4) ____ 6:00.\n- Ben",
+    "stem": "Choose the best option for blank (2).",
+    "choices": [
+      "The store is closed today.",
+      "I am at the library now.",
+      "I don't have a phone.",
+      "Please text me back."
+    ],
+    "answer": 3,
+    "explanation": "Ben is asking a question, so he wants Mia to answer him. The other sentences do not match a man shopping and texting."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "Hi Mia! I'm at the store now. Do you (1) ____ milk? They have a big bottle for $3. (2) ____ I can also get bread. We have (3) ____ eggs at home, so I won't buy them. See you (4) ____ 6:00.\n- Ben",
+    "stem": "Choose the best option for blank (3).",
+    "choices": [
+      "much",
+      "some",
+      "any",
+      "a"
+    ],
+    "answer": 1,
+    "explanation": "In a positive sentence with a plural noun (\"eggs\"), we use \"some.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "Hi Mia! I'm at the store now. Do you (1) ____ milk? They have a big bottle for $3. (2) ____ I can also get bread. We have (3) ____ eggs at home, so I won't buy them. See you (4) ____ 6:00.\n- Ben",
+    "stem": "Choose the best option for blank (4).",
+    "choices": [
+      "at",
+      "in",
+      "on",
+      "of"
+    ],
+    "answer": 0,
+    "explanation": "We use \"at\" with a clock time such as 6:00."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "POOL NOTICE\nThe city pool (1) ____ open from June 1 to August 31. Hours are 9 A.M. to 7 P.M. every day. Children under 10 must swim (2) ____ an adult. (3) ____ Please bring your own towel. Food and drinks are not allowed in the (4) ____.",
+    "stem": "Choose the best option for blank (1).",
+    "choices": [
+      "be",
+      "is",
+      "am",
+      "are"
+    ],
+    "answer": 1,
+    "explanation": "\"The city pool\" is singular, so the verb is \"is.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "POOL NOTICE\nThe city pool (1) ____ open from June 1 to August 31. Hours are 9 A.M. to 7 P.M. every day. Children under 10 must swim (2) ____ an adult. (3) ____ Please bring your own towel. Food and drinks are not allowed in the (4) ____.",
+    "stem": "Choose the best option for blank (2).",
+    "choices": [
+      "with",
+      "of",
+      "from",
+      "at"
+    ],
+    "answer": 0,
+    "explanation": "Young children must be together \"with\" an adult."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "POOL NOTICE\nThe city pool (1) ____ open from June 1 to August 31. Hours are 9 A.M. to 7 P.M. every day. Children under 10 must swim (2) ____ an adult. (3) ____ Please bring your own towel. Food and drinks are not allowed in the (4) ____.",
+    "stem": "Choose the best option for blank (3).",
+    "choices": [
+      "Adults cannot swim here.",
+      "Towels are not provided.",
+      "The pool is closed in July.",
+      "Please bring your pet."
+    ],
+    "answer": 1,
+    "explanation": "The next sentence asks swimmers to bring their own towel, so the pool does not give towels. The pool is open in July, and adults can swim."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "POOL NOTICE\nThe city pool (1) ____ open from June 1 to August 31. Hours are 9 A.M. to 7 P.M. every day. Children under 10 must swim (2) ____ an adult. (3) ____ Please bring your own towel. Food and drinks are not allowed in the (4) ____.",
+    "stem": "Choose the best option for blank (4).",
+    "choices": [
+      "morning",
+      "menu",
+      "weather",
+      "pool"
+    ],
+    "answer": 3,
+    "explanation": "The notice is about the pool, so food and drinks are not allowed in the pool."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "Dear neighbors,\nPlease come to our summer party! It is (1) ____ Saturday, July 12, at 4 P.M. We will have games, music, and food. (2) ____ You don't need to bring anything. Your children can (3) ____ too. We hope to see (4) ____ there!\nThe Garcia family, Apartment 3B",
+    "stem": "Choose the best option for blank (1).",
+    "choices": [
+      "on",
+      "in",
+      "at",
+      "to"
+    ],
+    "answer": 0,
+    "explanation": "We use \"on\" with a day and date."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "Dear neighbors,\nPlease come to our summer party! It is (1) ____ Saturday, July 12, at 4 P.M. We will have games, music, and food. (2) ____ You don't need to bring anything. Your children can (3) ____ too. We hope to see (4) ____ there!\nThe Garcia family, Apartment 3B",
+    "stem": "Choose the best option for blank (2).",
+    "choices": [
+      "The party is in the garden behind our building.",
+      "We cannot have a party this year.",
+      "Please bring some food to share.",
+      "The store closes at 4 P.M."
+    ],
+    "answer": 0,
+    "explanation": "The sentence tells where the party is. Bringing food is not needed, and the family is having a party."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "Dear neighbors,\nPlease come to our summer party! It is (1) ____ Saturday, July 12, at 4 P.M. We will have games, music, and food. (2) ____ You don't need to bring anything. Your children can (3) ____ too. We hope to see (4) ____ there!\nThe Garcia family, Apartment 3B",
+    "stem": "Choose the best option for blank (3).",
+    "choices": [
+      "came",
+      "comes",
+      "coming",
+      "come"
+    ],
+    "answer": 3,
+    "explanation": "After \"can,\" we use the base form of the verb: \"come.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 1,
+    "passage": "Dear neighbors,\nPlease come to our summer party! It is (1) ____ Saturday, July 12, at 4 P.M. We will have games, music, and food. (2) ____ You don't need to bring anything. Your children can (3) ____ too. We hope to see (4) ____ there!\nThe Garcia family, Apartment 3B",
+    "stem": "Choose the best option for blank (4).",
+    "choices": [
+      "yours",
+      "you",
+      "your",
+      "yourself"
+    ],
+    "answer": 1,
+    "explanation": "The object of \"see\" is the pronoun \"you.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "To: All Staff\nFrom: Sara Patel\nSubject: Kitchen cleaning\n\nHello everyone,\nThe office kitchen will be cleaned this Friday (1) ____ 2 P.M. and 4 P.M. During that time, please do not use the microwave or the coffee machine. (2) ____ Also, please take your food out of the refrigerator (3) ____ Thursday evening. Anything left inside will be thrown away. Thank you for your (4) ____.\nSara",
+    "stem": "Choose the best option for blank (1).",
+    "choices": [
+      "during",
+      "from",
+      "until",
+      "between"
+    ],
+    "answer": 3,
+    "explanation": "The pattern is \"between ... and ...\" for a period of time."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "To: All Staff\nFrom: Sara Patel\nSubject: Kitchen cleaning\n\nHello everyone,\nThe office kitchen will be cleaned this Friday (1) ____ 2 P.M. and 4 P.M. During that time, please do not use the microwave or the coffee machine. (2) ____ Also, please take your food out of the refrigerator (3) ____ Thursday evening. Anything left inside will be thrown away. Thank you for your (4) ____.\nSara",
+    "stem": "Choose the best option for blank (2).",
+    "choices": [
+      "You may use the cafe on the first floor instead.",
+      "Our new printer is on the second floor.",
+      "Thank you for coming to the meeting.",
+      "The kitchen will be open as usual."
+    ],
+    "answer": 0,
+    "explanation": "Staff cannot use the kitchen, so the email offers another place to get food and drinks. The kitchen will not be open as usual."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "To: All Staff\nFrom: Sara Patel\nSubject: Kitchen cleaning\n\nHello everyone,\nThe office kitchen will be cleaned this Friday (1) ____ 2 P.M. and 4 P.M. During that time, please do not use the microwave or the coffee machine. (2) ____ Also, please take your food out of the refrigerator (3) ____ Thursday evening. Anything left inside will be thrown away. Thank you for your (4) ____.\nSara",
+    "stem": "Choose the best option for blank (3).",
+    "choices": [
+      "until",
+      "since",
+      "at",
+      "by"
+    ],
+    "answer": 3,
+    "explanation": "\"By Thursday evening\" means no later than that time, which is the deadline before cleaning."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "passage": "To: All Staff\nFrom: Sara Patel\nSubject: Kitchen cleaning\n\nHello everyone,\nThe office kitchen will be cleaned this Friday (1) ____ 2 P.M. and 4 P.M. During that time, please do not use the microwave or the coffee machine. (2) ____ Also, please take your food out of the refrigerator (3) ____ Thursday evening. Anything left inside will be thrown away. Thank you for your (4) ____.\nSara",
+    "stem": "Choose the best option for blank (4).",
+    "choices": [
+      "cooperation",
+      "operation",
+      "corporation",
+      "competition"
+    ],
+    "answer": 0,
+    "explanation": "\"Thank you for your cooperation\" thanks people for following a request."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "Green Leaf Bike Shop\nSpring Sale! All bikes are 20% (1) ____ this week only. We also (2) ____ helmets, lights, and locks. (3) ____ Our staff can help you choose the right bike for your height. We are open Tuesday to Sunday, 10 A.M. to 6 P.M. Visit us at 45 Park Road, across (4) ____ the city library.",
+    "stem": "Choose the best option for blank (1).",
+    "choices": [
+      "off",
+      "down",
+      "away",
+      "out"
+    ],
+    "answer": 0,
+    "explanation": "\"20% off\" means the price is 20% lower."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "Green Leaf Bike Shop\nSpring Sale! All bikes are 20% (1) ____ this week only. We also (2) ____ helmets, lights, and locks. (3) ____ Our staff can help you choose the right bike for your height. We are open Tuesday to Sunday, 10 A.M. to 6 P.M. Visit us at 45 Park Road, across (4) ____ the city library.",
+    "stem": "Choose the best option for blank (2).",
+    "choices": [
+      "sells",
+      "selling",
+      "to sell",
+      "sell"
+    ],
+    "answer": 3,
+    "explanation": "With the subject \"We,\" the simple present verb is \"sell.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "Green Leaf Bike Shop\nSpring Sale! All bikes are 20% (1) ____ this week only. We also (2) ____ helmets, lights, and locks. (3) ____ Our staff can help you choose the right bike for your height. We are open Tuesday to Sunday, 10 A.M. to 6 P.M. Visit us at 45 Park Road, across (4) ____ the city library.",
+    "stem": "Choose the best option for blank (3).",
+    "choices": [
+      "The library has many new books.",
+      "Bring your old bike and get a free safety check.",
+      "We are closed every day this week.",
+      "Bikes are not sold in our store."
+    ],
+    "answer": 1,
+    "explanation": "Only this sentence fits an ad for a bike shop. The shop is open and sells bikes."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "Green Leaf Bike Shop\nSpring Sale! All bikes are 20% (1) ____ this week only. We also (2) ____ helmets, lights, and locks. (3) ____ Our staff can help you choose the right bike for your height. We are open Tuesday to Sunday, 10 A.M. to 6 P.M. Visit us at 45 Park Road, across (4) ____ the city library.",
+    "stem": "Choose the best option for blank (4).",
+    "choices": [
+      "at",
+      "from",
+      "to",
+      "of"
+    ],
+    "answer": 1,
+    "explanation": "The expression is \"across from,\" meaning on the other side of the street."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "MEMO\nTo: Store Employees\nFrom: Store Manager\nRe: New work schedule\n\nStarting next Monday, the store will open one hour (1) ____, at 8 A.M. instead of 9 A.M. Morning staff should arrive at 7:30 to prepare. (2) ____ If you cannot work the new hours, please speak (3) ____ me before Friday. Thank you for (4) ____ understanding.",
+    "stem": "Choose the best option for blank (1).",
+    "choices": [
+      "earliest",
+      "later",
+      "earlier",
+      "more early"
+    ],
+    "answer": 2,
+    "explanation": "8 A.M. is before 9 A.M., so the store opens \"earlier\"; the comparative of \"early\" is \"earlier,\" not \"more early.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "MEMO\nTo: Store Employees\nFrom: Store Manager\nRe: New work schedule\n\nStarting next Monday, the store will open one hour (1) ____, at 8 A.M. instead of 9 A.M. Morning staff should arrive at 7:30 to prepare. (2) ____ If you cannot work the new hours, please speak (3) ____ me before Friday. Thank you for (4) ____ understanding.",
+    "stem": "Choose the best option for blank (2).",
+    "choices": [
+      "The new schedule is posted next to the staff room door.",
+      "The store will close for good next week.",
+      "Morning staff can arrive at 9:30.",
+      "Customers liked the old menu."
+    ],
+    "answer": 0,
+    "explanation": "The memo is about a new schedule, so telling staff where to find it fits. Staff must arrive at 7:30, not 9:30."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "MEMO\nTo: Store Employees\nFrom: Store Manager\nRe: New work schedule\n\nStarting next Monday, the store will open one hour (1) ____, at 8 A.M. instead of 9 A.M. Morning staff should arrive at 7:30 to prepare. (2) ____ If you cannot work the new hours, please speak (3) ____ me before Friday. Thank you for (4) ____ understanding.",
+    "stem": "Choose the best option for blank (3).",
+    "choices": [
+      "by",
+      "for",
+      "to",
+      "at"
+    ],
+    "answer": 2,
+    "explanation": "We \"speak to\" a person."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "MEMO\nTo: Store Employees\nFrom: Store Manager\nRe: New work schedule\n\nStarting next Monday, the store will open one hour (1) ____, at 8 A.M. instead of 9 A.M. Morning staff should arrive at 7:30 to prepare. (2) ____ If you cannot work the new hours, please speak (3) ____ me before Friday. Thank you for (4) ____ understanding.",
+    "stem": "Choose the best option for blank (4).",
+    "choices": [
+      "you",
+      "yourself",
+      "yours",
+      "your"
+    ],
+    "answer": 3,
+    "explanation": "A possessive adjective is needed before the noun \"understanding.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "Hi Jun, it's Priya. I'm (1) ____ in traffic on Main Street, so I'll be about 20 minutes late for our meeting. (2) ____ Could you start without me? The notes are on my desk (3) ____ the blue folder. I'll join you as soon as I (4) ____. Sorry!",
+    "stem": "Choose the best option for blank (1).",
+    "choices": [
+      "closed",
+      "locked",
+      "parked",
+      "stuck"
+    ],
+    "answer": 3,
+    "explanation": "\"Stuck in traffic\" means unable to move because there are too many cars."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "Hi Jun, it's Priya. I'm (1) ____ in traffic on Main Street, so I'll be about 20 minutes late for our meeting. (2) ____ Could you start without me? The notes are on my desk (3) ____ the blue folder. I'll join you as soon as I (4) ____. Sorry!",
+    "stem": "Choose the best option for blank (2).",
+    "choices": [
+      "I'm already in the meeting room.",
+      "The meeting was yesterday.",
+      "There was an accident near the bridge.",
+      "I took the train today."
+    ],
+    "answer": 2,
+    "explanation": "An accident explains the traffic. Priya is not in the meeting room yet, and she is driving on a street, not taking the train."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 2,
+    "passage": "Hi Jun, it's Priya. I'm (1) ____ in traffic on Main Street, so I'll be about 20 minutes late for our meeting. (2) ____ Could you start without me? The notes are on my desk (3) ____ the blue folder. I'll join you as soon as I (4) ____. Sorry!",
+    "stem": "Choose the best option for blank (3).",
+    "choices": [
+      "on",
+      "in",
+      "to",
+      "at"
+    ],
+    "answer": 1,
+    "explanation": "Notes are \"in\" a folder."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "passage": "Hi Jun, it's Priya. I'm (1) ____ in traffic on Main Street, so I'll be about 20 minutes late for our meeting. (2) ____ Could you start without me? The notes are on my desk (3) ____ the blue folder. I'll join you as soon as I (4) ____. Sorry!",
+    "stem": "Choose the best option for blank (4).",
+    "choices": [
+      "will arrive",
+      "arrive",
+      "arriving",
+      "arrived"
+    ],
+    "answer": 1,
+    "explanation": "After \"as soon as\" about the future, we use the simple present, not \"will.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "passage": "NOTICE TO RESIDENTS\nThe water in Building C will be turned off on Wednesday, May 8, from 9 A.M. to 1 P.M. (1) ____ workers can repair a broken pipe. During this time, you will not be able to use sinks, showers, or toilets. (2) ____ We also recommend (3) ____ some water in bottles the night before. We apologize for any (4) ____ this may cause.\nBuilding Management",
+    "stem": "Choose the best option for blank (1).",
+    "choices": [
+      "so that",
+      "unless",
+      "even though",
+      "instead of"
+    ],
+    "answer": 0,
+    "explanation": "\"So that\" shows purpose: the water is turned off to let workers repair the pipe."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "passage": "NOTICE TO RESIDENTS\nThe water in Building C will be turned off on Wednesday, May 8, from 9 A.M. to 1 P.M. (1) ____ workers can repair a broken pipe. During this time, you will not be able to use sinks, showers, or toilets. (2) ____ We also recommend (3) ____ some water in bottles the night before. We apologize for any (4) ____ this may cause.\nBuilding Management",
+    "stem": "Choose the best option for blank (2).",
+    "choices": [
+      "Water service will not be affected.",
+      "Bottled water will be available in the lobby.",
+      "Residents should take a shower at 10 A.M.",
+      "The pipe was repaired last week."
+    ],
+    "answer": 1,
+    "explanation": "Bottled water helps residents while the water is off. The water will be affected, and no one can shower at 10 A.M."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "passage": "NOTICE TO RESIDENTS\nThe water in Building C will be turned off on Wednesday, May 8, from 9 A.M. to 1 P.M. (1) ____ workers can repair a broken pipe. During this time, you will not be able to use sinks, showers, or toilets. (2) ____ We also recommend (3) ____ some water in bottles the night before. We apologize for any (4) ____ this may cause.\nBuilding Management",
+    "stem": "Choose the best option for blank (3).",
+    "choices": [
+      "store",
+      "storing",
+      "to store",
+      "stored"
+    ],
+    "answer": 1,
+    "explanation": "\"Recommend\" is followed by the -ing form: \"recommend storing.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 4,
+    "passage": "NOTICE TO RESIDENTS\nThe water in Building C will be turned off on Wednesday, May 8, from 9 A.M. to 1 P.M. (1) ____ workers can repair a broken pipe. During this time, you will not be able to use sinks, showers, or toilets. (2) ____ We also recommend (3) ____ some water in bottles the night before. We apologize for any (4) ____ this may cause.\nBuilding Management",
+    "stem": "Choose the best option for blank (4).",
+    "choices": [
+      "convenience",
+      "comfort",
+      "inconvenience",
+      "information"
+    ],
+    "answer": 2,
+    "explanation": "Management apologizes for the trouble, or \"inconvenience,\" that the water stop causes."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "passage": "Dear Mr. Rivera,\nThank you for your order of two office chairs. Unfortunately, the black chairs you chose are (1) ____ out of stock. We expect to receive more (2) ____ two weeks. (3) ____ If you prefer, we can send gray chairs today at the same price. Please reply to let us know which option you (4) ____.\nBest regards,\nCustomer Service Team",
+    "stem": "Choose the best option for blank (1).",
+    "choices": [
+      "currently",
+      "rarely",
+      "lately",
+      "finally"
+    ],
+    "answer": 0,
+    "explanation": "\"Currently\" means \"at this time,\" which fits a problem with the order now."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "passage": "Dear Mr. Rivera,\nThank you for your order of two office chairs. Unfortunately, the black chairs you chose are (1) ____ out of stock. We expect to receive more (2) ____ two weeks. (3) ____ If you prefer, we can send gray chairs today at the same price. Please reply to let us know which option you (4) ____.\nBest regards,\nCustomer Service Team",
+    "stem": "Choose the best option for blank (2).",
+    "choices": [
+      "among",
+      "since",
+      "during",
+      "within"
+    ],
+    "answer": 3,
+    "explanation": "\"Within two weeks\" means in two weeks or less."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "passage": "Dear Mr. Rivera,\nThank you for your order of two office chairs. Unfortunately, the black chairs you chose are (1) ____ out of stock. We expect to receive more (2) ____ two weeks. (3) ____ If you prefer, we can send gray chairs today at the same price. Please reply to let us know which option you (4) ____.\nBest regards,\nCustomer Service Team",
+    "stem": "Choose the best option for blank (3).",
+    "choices": [
+      "Our store sells only black chairs.",
+      "Thank you for returning the chairs.",
+      "Your chairs were delivered yesterday.",
+      "We are sorry for the delay."
+    ],
+    "answer": 3,
+    "explanation": "The chairs will arrive late, so an apology fits. The chairs were not delivered, and the store also has gray chairs."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "passage": "Dear Mr. Rivera,\nThank you for your order of two office chairs. Unfortunately, the black chairs you chose are (1) ____ out of stock. We expect to receive more (2) ____ two weeks. (3) ____ If you prefer, we can send gray chairs today at the same price. Please reply to let us know which option you (4) ____.\nBest regards,\nCustomer Service Team",
+    "stem": "Choose the best option for blank (4).",
+    "choices": [
+      "to prefer",
+      "prefer",
+      "preferring",
+      "preference"
+    ],
+    "answer": 1,
+    "explanation": "The clause \"which option you ___\" needs a main verb in the simple present: \"prefer.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "passage": "You're Invited!\nJoin us for the opening of the Riverside Community Garden on Saturday, April 20. The event (1) ____ at 10 A.M. with a short speech by the garden's volunteers. (2) ____ Visitors can take a tour, plant flowers, and enjoy free snacks. Families are especially welcome, as there will be activities (3) ____ for children. The event will take place rain or shine, so please dress (4) ____.",
+    "stem": "Choose the best option for blank (1).",
+    "choices": [
+      "has begun",
+      "began",
+      "begins",
+      "beginning"
+    ],
+    "answer": 2,
+    "explanation": "The event is in the future and follows a schedule, so the simple present \"begins\" is correct."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "passage": "You're Invited!\nJoin us for the opening of the Riverside Community Garden on Saturday, April 20. The event (1) ____ at 10 A.M. with a short speech by the garden's volunteers. (2) ____ Visitors can take a tour, plant flowers, and enjoy free snacks. Families are especially welcome, as there will be activities (3) ____ for children. The event will take place rain or shine, so please dress (4) ____.",
+    "stem": "Choose the best option for blank (2).",
+    "choices": [
+      "After that, the garden will be open to everyone.",
+      "Unfortunately, the event has been canceled.",
+      "The garden closed many years ago.",
+      "Please do not bring children to the event."
+    ],
+    "answer": 0,
+    "explanation": "The next sentence describes what visitors can do in the garden, so it must be open. Children are welcome, and the event is not canceled."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "passage": "You're Invited!\nJoin us for the opening of the Riverside Community Garden on Saturday, April 20. The event (1) ____ at 10 A.M. with a short speech by the garden's volunteers. (2) ____ Visitors can take a tour, plant flowers, and enjoy free snacks. Families are especially welcome, as there will be activities (3) ____ for children. The event will take place rain or shine, so please dress (4) ____.",
+    "stem": "Choose the best option for blank (3).",
+    "choices": [
+      "designs",
+      "design",
+      "designed",
+      "designing"
+    ],
+    "answer": 2,
+    "explanation": "\"Activities designed for children\" uses a past participle to mean \"activities that were planned for children.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 4,
+    "passage": "You're Invited!\nJoin us for the opening of the Riverside Community Garden on Saturday, April 20. The event (1) ____ at 10 A.M. with a short speech by the garden's volunteers. (2) ____ Visitors can take a tour, plant flowers, and enjoy free snacks. Families are especially welcome, as there will be activities (3) ____ for children. The event will take place rain or shine, so please dress (4) ____.",
+    "stem": "Choose the best option for blank (4).",
+    "choices": [
+      "more appropriate",
+      "appropriate",
+      "appropriately",
+      "appropriation"
+    ],
+    "answer": 2,
+    "explanation": "An adverb is needed to describe the verb \"dress,\" so \"appropriately\" is correct."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 4,
+    "passage": "MEMO\nTo: All Department Heads\nFrom: Human Resources\nSubject: Annual safety training\n\nThis year's safety training will be held online (1) ____ in the conference room. Each employee must complete the course by March 31. (2) ____ Department heads should remind their teams and check that everyone has (3) ____ the course on time. Employees who have trouble (4) ____ the Web site should contact the IT help desk.",
+    "stem": "Choose the best option for blank (1).",
+    "choices": [
+      "rather than",
+      "so that",
+      "as long as",
+      "in spite of"
+    ],
+    "answer": 0,
+    "explanation": "\"Rather than\" means \"instead of\": the training is online, not in the conference room."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "passage": "MEMO\nTo: All Department Heads\nFrom: Human Resources\nSubject: Annual safety training\n\nThis year's safety training will be held online (1) ____ in the conference room. Each employee must complete the course by March 31. (2) ____ Department heads should remind their teams and check that everyone has (3) ____ the course on time. Employees who have trouble (4) ____ the Web site should contact the IT help desk.",
+    "stem": "Choose the best option for blank (2).",
+    "choices": [
+      "The course takes about 45 minutes and can be done in several parts.",
+      "Training will take place in the conference room as usual.",
+      "Employees do not need to take the training this year.",
+      "This year, only new employees must take the course."
+    ],
+    "answer": 0,
+    "explanation": "The training is online and required, so information about the course length fits. Every employee must take it, and it is not in the conference room."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 4,
+    "passage": "MEMO\nTo: All Department Heads\nFrom: Human Resources\nSubject: Annual safety training\n\nThis year's safety training will be held online (1) ____ in the conference room. Each employee must complete the course by March 31. (2) ____ Department heads should remind their teams and check that everyone has (3) ____ the course on time. Employees who have trouble (4) ____ the Web site should contact the IT help desk.",
+    "stem": "Choose the best option for blank (3).",
+    "choices": [
+      "complete",
+      "completing",
+      "completed",
+      "completion"
+    ],
+    "answer": 2,
+    "explanation": "After \"has,\" the past participle \"completed\" forms the present perfect."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 4,
+    "passage": "MEMO\nTo: All Department Heads\nFrom: Human Resources\nSubject: Annual safety training\n\nThis year's safety training will be held online (1) ____ in the conference room. Each employee must complete the course by March 31. (2) ____ Department heads should remind their teams and check that everyone has (3) ____ the course on time. Employees who have trouble (4) ____ the Web site should contact the IT help desk.",
+    "stem": "Choose the best option for blank (4).",
+    "choices": [
+      "to access",
+      "accessing",
+      "access",
+      "accessed"
+    ],
+    "answer": 1,
+    "explanation": "The expression \"have trouble\" is followed by the -ing form: \"have trouble accessing.\""
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 4,
+    "passage": "Now Hiring: Part-Time Cashiers\nBayview Market is looking for friendly, (1) ____ people to join our team. Shifts are available on weekday evenings and weekends. No experience is necessary; we provide full training. (2) ____ Successful applicants will receive an employee discount on all (3) ____. To apply, fill out a form at the customer service desk or visit our Web site. Applications must be (4) ____ by June 15.",
+    "stem": "Choose the best option for blank (1).",
+    "choices": [
+      "reliance",
+      "rely",
+      "reliably",
+      "reliable"
+    ],
+    "answer": 3,
+    "explanation": "An adjective is needed before \"people,\" together with \"friendly,\" so \"reliable\" is correct."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 4,
+    "passage": "Now Hiring: Part-Time Cashiers\nBayview Market is looking for friendly, (1) ____ people to join our team. Shifts are available on weekday evenings and weekends. No experience is necessary; we provide full training. (2) ____ Successful applicants will receive an employee discount on all (3) ____. To apply, fill out a form at the customer service desk or visit our Web site. Applications must be (4) ____ by June 15.",
+    "stem": "Choose the best option for blank (2).",
+    "choices": [
+      "The store is closing permanently next month.",
+      "Our cashiers work only on weekday mornings.",
+      "Only people with five years of experience may apply.",
+      "However, applicants must be at least 18 years old."
+    ],
+    "answer": 3,
+    "explanation": "This sentence adds a requirement that does not conflict with the ad. The ad says no experience is needed and shifts are in the evenings and on weekends."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 3,
+    "passage": "Now Hiring: Part-Time Cashiers\nBayview Market is looking for friendly, (1) ____ people to join our team. Shifts are available on weekday evenings and weekends. No experience is necessary; we provide full training. (2) ____ Successful applicants will receive an employee discount on all (3) ____. To apply, fill out a form at the customer service desk or visit our Web site. Applications must be (4) ____ by June 15.",
+    "stem": "Choose the best option for blank (3).",
+    "choices": [
+      "purchases",
+      "purchaser",
+      "purchasing",
+      "purchased"
+    ],
+    "answer": 0,
+    "explanation": "After \"all,\" a plural noun is needed: \"purchases\" means things that are bought."
+  },
+  {
+    "exam_type": "TOEICB",
+    "section": "reading",
+    "difficulty": 4,
+    "passage": "Now Hiring: Part-Time Cashiers\nBayview Market is looking for friendly, (1) ____ people to join our team. Shifts are available on weekday evenings and weekends. No experience is necessary; we provide full training. (2) ____ Successful applicants will receive an employee discount on all (3) ____. To apply, fill out a form at the customer service desk or visit our Web site. Applications must be (4) ____ by June 15.",
+    "stem": "Choose the best option for blank (4).",
+    "choices": [
+      "submit",
+      "submitted",
+      "submitting",
+      "submission"
+    ],
+    "answer": 1,
+    "explanation": "After \"must be,\" the past participle \"submitted\" forms the passive voice."
+  }
+]
