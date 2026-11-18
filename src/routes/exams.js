@@ -5,7 +5,7 @@ import { HTTPException } from 'hono/http-exception';
 import { manualSettings, skipKeys } from '../lib/sections.js';
 import { EXAMS, GRACE_MS, sectionPos, initialState, pickNext, pickGrouped, sectionTarget, adaptDifficulty, scoreAttempt, getLevel, levelBank, levelForGrade } from '../lib/exam.js';
 import { sendMail, mailReport } from '../lib/email.js';
-import { audit, logEvent, rateLimited, tooMany } from '../lib/security.js';
+import { audit, logEvent } from '../lib/security.js';
 import { alimtalk, phoneFor } from '../lib/notify.js';
 import { gradeAttempt } from '../lib/aigrade.js';
 import { audioIndex, audioUrl } from '../lib/listening.js';
@@ -487,36 +487,6 @@ app.post('/attempts/:id/share', async (c) => {
     .bind(await sha256hex(token), a.id, a.user_id, now() + 14 * 86400000, now()).run();
   await audit(c, 'share.create', a.id, { exam: a.exam_type, days: 14 });
   return c.json({ url: `${c.env.SITE_URL}/#/shared/${token}`, expiresAt: now() + 14 * 86400000 });
-});
-/* ---- 결과지 이메일: the score sheet + a 14-day read-only link, to up to 3 addresses (parent, teacher, academy) ---- */
-const EMAIL_RE = /^[^\s@<>()",;]+@[^\s@<>()",;]+\.[a-z]{2,}$/i;
-app.post('/attempts/:id/email', async (c) => {
-  const a = await loadAttempt(c), me = c.get('user');
-  if (!a) return c.json({ error: 'not found' }, 404);
-  if (a.status === 'in_progress') return c.json({ error: '시험을 마친 뒤 보낼 수 있습니다.' }, 409);
-  const b = await c.req.json().catch(() => ({}));
-  const to = [...new Set((Array.isArray(b.to) ? b.to : String(b.to || '').split(/[,\s]+/)).map((x) => String(x).trim().toLowerCase()).filter(Boolean))];
-  if (!to.length) return c.json({ error: '받는 사람 이메일을 입력해 주세요.' }, 400);
-  if (to.length > 3) return c.json({ error: '한 번에 3명까지 보낼 수 있습니다.' }, 400);
-  const bad = to.find((x) => !EMAIL_RE.test(x) || x.length > 120);
-  if (bad) return c.json({ error: `이메일 주소를 확인해 주세요: ${bad}` }, 400);
-  if (await rateLimited(c.env, `reportmail|${me.id}`, 15, 86400000)) return tooMany(c);
-  if (!c.env.RESEND_API_KEY) return c.json({ error: '이메일 발송이 아직 설정되지 않았습니다. 관리자에게 문의해 주세요.' }, 503);
-  // read-only link (no login needed), like 공유 링크; the owner can revoke it from the report page
-  const token = randomToken(24);
-  await c.env.DB.prepare('INSERT INTO share_links (token_hash,attempt_id,user_id,expires_at,created_at) VALUES (?,?,?,?,?)')
-    .bind(await sha256hex(token), a.id, a.user_id, now() + 14 * 86400000, now()).run();
-  const owner = await c.env.DB.prepare('SELECT name FROM users WHERE id=?').bind(a.user_id).first();
-  const lv = getLevel(a.exam_type, JSON.parse(a.state || '{}').level), sc = a.score ? JSON.parse(a.score) : null;
-  const html = mailReport(c.env, {
-    student: owner?.name, title: EXAMS[a.exam_type].title, level: lv?.name, finishedAt: a.finished_at, score: sc, pending: a.status === 'submitted',
-    link: `${c.env.SITE_URL}/#/shared/${token}`, from: me.name, message: String(b.message || '').slice(0, 500).trim(),
-  });
-  const sent = [];
-  for (const x of to) if (await sendMail(c.env, x, `[${c.env.SITE_NAME}] ${owner?.name || ''} 학생 ${EXAMS[a.exam_type].title} 결과지`, html)) sent.push(x);
-  await audit(c, 'report.email', a.id, { exam: a.exam_type, to: to.map((x) => x.replace(/^(.).*(@.*)$/, '$1***$2')), sent: sent.length });
-  if (!sent.length) return c.json({ error: '메일을 보내지 못했습니다. 잠시 후 다시 시도해 주세요.' }, 502);
-  return c.json({ ok: true, sent, failed: to.filter((x) => !sent.includes(x)) });
 });
 app.delete('/attempts/:id/share', async (c) => {
   const a = await loadAttempt(c);

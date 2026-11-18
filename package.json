@@ -12,7 +12,7 @@
     "db:seed:local": "wrangler d1 execute mocktest --local --file=seed/seed.sql",
     "db:seed:remote": "wrangler d1 execute mocktest --remote --file=seed/seed.sql",
     "test": "node --test test/unit.test.mjs",
-    "test:e2e": "node test/e2e.mjs && node test/payments.e2e.mjs && node test/safety.e2e.mjs && node test/kcp.e2e.mjs && node test/pay.e2e.mjs && node test/security.e2e.mjs && node test/features.e2e.mjs && node test/ai.e2e.mjs && node test/bank.e2e.mjs && node test/report-email.e2e.mjs && node test/ops.e2e.mjs && node test/sections-off.e2e.mjs && node test/repeat.e2e.mjs && node test/contact.e2e.mjs && node test/listening.e2e.mjs"
+    "test:e2e": "node test/e2e.mjs && node test/payments.e2e.mjs && node test/safety.e2e.mjs && node test/kcp.e2e.mjs && node test/pay.e2e.mjs && node test/security.e2e.mjs && node test/features.e2e.mjs && node test/ai.e2e.mjs && node test/bank.e2e.mjs && node test/ops.e2e.mjs && node test/sections-off.e2e.mjs && node test/repeat.e2e.mjs && node test/contact.e2e.mjs && node test/listening.e2e.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.8.0",

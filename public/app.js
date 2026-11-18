@@ -1130,27 +1130,56 @@ function integrityNote(i) {
   return parts.length ? h('div', { class: 'notice integ' }, h('b', {}, '시험 중 기록: '), parts.join(' · '), h('p', { class: 'small muted', style: 'margin:4px 0 0' }, '다른 창으로 이동하거나 복사를 시도한 횟수입니다. 실제 시험에서는 허용되지 않는 행동입니다.')) : null;
 }
 const weakest = (sc) => { const e = Object.entries(sc.sections || {}).filter(([, s]) => s.total).sort((a, b) => a[1].correct / a[1].total - b[1].correct / b[1].total)[0]; return e ? e[0] : ''; };
-function emailBox(r, id) { // 결과지 이메일: score sheet + read-only link to up to 3 addresses
-  const to = h('input', { type: 'text', inputmode: 'email', class: 'grow', placeholder: '받는 사람 이메일 (쉼표로 최대 3명)', autocomplete: 'email' });
-  const msg = h('textarea', { rows: 2, maxlength: 500, placeholder: '함께 보낼 메시지 (선택)' });
-  const out = h('p', { class: 'small' });
-  const send = (addr) => guard(async () => {
-    const list = addr || to.value; if (!String(list).trim()) return toast('받는 사람 이메일을 입력해 주세요.');
-    out.className = 'small muted'; out.textContent = '보내는 중…';
-    try { const s = await api('POST', `/attempts/${id}/email`, { to: list, message: msg.value }); out.className = 'small ok-text'; out.textContent = `✓ ${s.sent.join(', ')}(으)로 결과지를 보냈습니다.${s.failed.length ? ` (실패: ${s.failed.join(', ')})` : ''}`; if (!addr) to.value = ''; }
-    catch (e) { out.className = 'small err'; out.textContent = e.message; }
-  });
-  return h('div', { class: 'card noprint share' }, h('div', { class: 'kicker' }, 'Email'), h('h3', {}, '결과지 이메일로 보내기'),
-    h('p', { class: 'muted small' }, '점수표가 메일 본문에 들어가고, 문항별 해설까지 볼 수 있는 링크(로그인 없이 14일간 열람)가 함께 갑니다. 학부모·선생님·학원에 보내 보세요.'),
-    h('div', { class: 'row', style: 'flex-wrap:nowrap' }, to, h('button', { class: 'btn sm', onclick: send() }, '보내기')), msg,
-    me?.email && !me.email.endsWith('.invalid') ? h('p', {}, h('button', { class: 'btn sm alt', onclick: send(me.email) }, `내 이메일(${me.email})로 받기`)) : null, out);
-}
+/* ---------- 결과지 저장 · 공유: PDF download (score summary) and a 14-day read-only link via the phone's share sheet ---------- */
+let html2pdfLoad = null;
+const loadHtml2pdf = () => (html2pdfLoad ||= new Promise((ok, no) => { const s = document.createElement('script'); s.src = '/vendor/html2pdf.bundle.min.js'; s.onload = () => ok(window.html2pdf); s.onerror = () => { html2pdfLoad = null; no(new Error('PDF 도구를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.')); }; document.head.append(s); }));
+const downloadPdf = (r, btn) => guard(async () => {
+  if (inApp) { if (confirm('카카오톡 등 앱 안 브라우저에서는 파일 저장이 되지 않습니다.\n기본 브라우저(크롬·사파리)로 열어서 저장할까요?')) openExternal(); return; }
+  const sheet = document.getElementById('report-sheet'); if (!sheet) return;
+  const label = btn.textContent; btn.disabled = true; btn.textContent = 'PDF 만드는 중…';
+  const foot = h('p', { class: 'small muted', style: 'margin-top:14px' }, `${cfg.site || 'MockTest Lab'} · ${location.host} · ${new Date().toLocaleDateString('ko-KR')} 발급`);
+  try {
+    const html2pdf = await loadHtml2pdf();
+    const parts = [...sheet.querySelectorAll(':scope > .pdf-part')].filter((x) => x.childElementCount); parts[parts.length - 1].append(foot);
+    window.scrollTo(0, 0);
+    const d = new Date(r.attempt.finished_at || Date.now()), name = `MockTest_${r.attempt.exam_type}_${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; // ASCII: some browsers drop non-Latin download names
+    const opt = {
+      margin: [10, 8, 12, 8], filename: `${name}.pdf`, image: { type: 'jpeg', quality: 0.95 }, pagebreak: { mode: ['avoid-all'] },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+      html2canvas: { scale: 2, useCORS: true, scrollX: 0, scrollY: 0, backgroundColor: '#ffffff',
+        ignoreElements: (el) => el.classList?.contains('noprint'),
+        onclone: (doc) => { // always the light theme, a print-friendly width, and SVG colors resolved (var() does not survive rasterizing)
+          doc.documentElement.classList.add('pdf-light');
+          doc.head.append(Object.assign(doc.createElement('style'), { textContent: '*,*::before,*::after{animation:none!important;transition:none!important}' })); // the page fade-in would restart at opacity 0
+          doc.querySelectorAll('svg *').forEach((el) => { const cs = doc.defaultView.getComputedStyle(el); for (const k of ['stroke', 'fill']) if ((el.getAttribute(k) || '').startsWith('var(')) el.setAttribute(k, cs[k]); });
+        } },
+    };
+    let w = html2pdf().set(opt).from(parts[0]).toPdf(); // each part starts on a new page
+    for (const part of parts.slice(1)) w = w.get('pdf').then((pdf) => pdf.addPage()).from(part).toContainer().toCanvas().toPdf();
+    await w.save();
+    toast('PDF를 저장했습니다.');
+  } finally { foot.remove(); btn.disabled = false; btn.textContent = label; }
+});
 function shareBox(r, id) {
+  let url = null; // one link per visit; a second tap reuses it
   const out = h('div', { class: 'small' });
-  const make = guard(async () => { const s = await api('POST', `/attempts/${id}/share`); out.replaceChildren(h('div', { class: 'share-url' }, h('input', { value: s.url, readonly: true, onclick: (e) => e.target.select() }), h('button', { class: 'btn sm', onclick: () => copyText(s.url) }, '복사')), h('p', { class: 'muted' }, `${date(s.expiresAt)}까지 열람 가능 · 로그인 없이 보는 읽기 전용 리포트 (이메일은 표시되지 않음)`)); stop.hidden = false; });
-  const stop = h('button', { class: 'btn sm alt', hidden: !r.shareCount, onclick: guard(async () => { if (!confirm('이 리포트의 공유 링크를 모두 중지할까요?')) return; await api('DELETE', `/attempts/${id}/share`); stop.hidden = true; out.replaceChildren(h('p', { class: 'muted' }, '공유가 중지되었습니다. 이전 링크는 더 이상 열리지 않습니다.')); }) }, `공유 중지${r.shareCount ? ` (${r.shareCount})` : ''}`);
-  return h('div', { class: 'card noprint share' }, h('div', { class: 'kicker' }, 'Share'), h('h3', {}, '학부모·선생님과 리포트 공유'), h('p', { class: 'muted small' }, '링크를 받은 사람은 로그인 없이 이 리포트만 볼 수 있습니다. 14일 후 자동으로 만료되고, 언제든 중지할 수 있습니다.'),
-    h('div', { class: 'row' }, h('button', { class: 'btn sm', onclick: make }, '공유 링크 만들기'), stop), out);
+  const show = (s) => out.replaceChildren(h('div', { class: 'share-url' }, h('input', { value: s.url, readonly: true, onclick: (e) => e.target.select() }), h('button', { class: 'btn sm alt', onclick: () => copyText(s.url) }, '복사')), h('p', { class: 'muted' }, `${date(s.expiresAt)}까지 열람 가능 · 로그인 없이 보는 읽기 전용 리포트 (이메일은 표시되지 않음)`));
+  const link = async () => { if (!url) { const s = await api('POST', `/attempts/${id}/share`); url = s.url; show(s); stop.hidden = false; } return url; };
+  const title = `${r.student?.name || ''} · ${r.attempt.title} 결과`;
+  const share = guard(async () => {
+    const u = await link();
+    if (navigator.share) {
+      try { await navigator.share({ title, text: `${title} — 문항별 해설까지 볼 수 있어요 (로그인 없이 14일간)`, url: u }); return; }
+      catch (e) { if (e.name === 'AbortError') return; if (e.name === 'NotAllowedError') return toast('링크가 만들어졌습니다. 공유하기를 한 번 더 눌러 주세요.'); }
+    }
+    copyText(u);
+  });
+  const copy = guard(async () => copyText(await link()));
+  const stop = h('button', { class: 'btn sm alt', hidden: !r.shareCount, onclick: guard(async () => { if (!confirm('이 리포트의 공유 링크를 모두 중지할까요?')) return; await api('DELETE', `/attempts/${id}/share`); stop.hidden = true; url = null; out.replaceChildren(h('p', { class: 'muted' }, '공유가 중지되었습니다. 이전 링크는 더 이상 열리지 않습니다.')); }) }, `공유 중지${r.shareCount ? ` (${r.shareCount})` : ''}`);
+  const pdf = h('button', { class: 'btn sm' }, 'PDF 다운로드'); pdf.onclick = downloadPdf(r, pdf);
+  return h('div', { class: 'card noprint share' }, h('div', { class: 'kicker' }, 'Save · Share'), h('h3', {}, '결과지 저장 · 공유'),
+    h('p', { class: 'muted small' }, 'PDF로 저장하거나, 링크를 카카오톡·문자로 보내세요. 링크를 받은 학부모·선생님은 로그인 없이 문항별 해설까지 14일간 볼 수 있습니다.'),
+    h('div', { class: 'row' }, pdf, h('button', { class: 'btn sm', onclick: share }, '공유하기'), h('button', { class: 'btn sm alt', onclick: copy }, '링크 복사'), stop), out);
 }
 function renderReport(r, id) {
   const sc = r.score, t = r.attempt.exam_type;
@@ -1178,22 +1207,21 @@ function renderReport(r, id) {
     it.kind === 'num' ? h('div', {}, h('p', {}, h('span', { class: 'badge ' + (it.correct ? 'ok' : 'bad') }, '내 답'), ' ', it.text || '(무응답)', '  ', h('span', { class: 'badge ok' }, '정답'), ' ', (it.choices || []).join(' 또는 ')), it.explanation ? h('p', { class: 'small muted' }, `해설: ${it.explanation}`) : null) :
     it.kind === 'mcq' ? h('div', {}, it.choices.map((c, j) => h('div', { class: 'choice' + (j === it.answer ? ' right' : j === it.choice ? ' miss' : '') }, h('b', {}, 'ABCDEFGH'[j]), choiceNode(c), j === it.choice ? h('span', { class: 'badge ' + (j === it.answer ? 'ok' : 'bad') }, '내 답') : null, j === it.answer ? h('span', { class: 'badge ok' }, '정답') : null)), it.explanation ? h('p', { class: 'small muted' }, `해설: ${it.explanation}`) : null)
       : h('div', {}, it.text ? h('div', { class: 'passage' }, it.text) : h('p', { class: 'muted' }, '(녹음 응답)'), h('p', {}, it.manual_score ? `${it.graded_by === 'ai' ? 'AI 채점' : it.graded_by === 'ai+teacher' ? '채점 (AI·선생님 확인)' : '선생님 채점'}: ${it.manual_score}/6` : '채점 대기 중', it.feedback ? ` · ${it.feedback}` : ''))));
-  mount(
-    h('div', { class: 'score-hero' },
+  mount(h('div', { id: 'report-sheet' }, // what the PDF contains: the score summary (the full review is in the share link); one .pdf-part per PDF page
+    h('div', { class: 'pdf-part' }, h('div', { class: 'score-hero' },
       h('div', {}, h('div', { class: 'muted small' }, `${r.student.name} · ${date(r.attempt.finished_at)}${r.attempt.level?.name && r.attempt.level.key !== 'all' ? ' · ' + r.attempt.level.name : ''}`), h('h2', {}, `${r.attempt.title} 결과`),
         sc.pendingManual ? h('span', { class: 'badge warn' }, t === 'WIDA' ? '쓰기/말하기 채점 후 종합 레벨이 표시됩니다' : '에세이/라이팅은 교사 채점 후 표시됩니다 (점수에는 포함되지 않음)') : null,
         r.shared ? h('span', { class: 'badge' }, '공유된 리포트 · 읽기 전용') : null,
-        h('p', { class: 'muted small noprint' }, h('button', { class: 'btn sm alt', onclick: () => window.print() }, '인쇄 / PDF 저장'))),
+        h('p', { class: 'muted small noprint' }, (() => { const b = h('button', { class: 'btn sm alt' }, 'PDF 다운로드'); b.onclick = downloadPdf(r, b); return b; })())),
       h('div', { class: 'hero-score' }, h('div', { class: 'muted small' }, head.label), h('div', { class: 'total' + (String(head.value).length > 6 ? ' long' : '') }, head.value ?? '–'))),
     h('div', { class: 'rings' }, cards),
     (sc.extras || []).length ? h('div', { class: 'extras' }, sc.extras.map((x) => h('div', {}, h('div', { class: 'kicker' }, x.label), h('b', {}, x.value)))) : null,
     h('div', { class: 'small muted', style: 'margin:10px 0 18px' }, (sc.notes || ['※ 모의고사 결과는 공식 점수가 아닌 추정치이며 학습 참고용입니다.']).map((n) => h('p', { style: 'margin:3px 0' }, '※ ' + n))),
     integrityNote(r.integrity),
     r.compare && r.compare.n < 10 ? h('p', { class: 'small muted' }, `※ 같은 시험·레벨 응시자가 10명 이상 모이면 또래 비교(상위 %)가 표시됩니다. (현재 ${r.compare.n}명)`) : r.compare ? h('p', { class: 'small muted' }, '※ 또래 비교는 이 사이트 응시자 기준이며 공식 규준이 아닙니다.') : null,
-    analytics(r, t),
+    ), h('div', { class: 'pdf-part' }, analytics(r, t))),
     !r.shared && id ? h('p', { class: 'noprint' }, h('a', { class: 'btn sm alt', href: `#/practice?exam=${t}&section=${weakest(sc)}` }, '약한 영역 연습하기 →')) : null,
     id && !r.shared && (r.student?.email === me?.email || r.student?.email?.endsWith('@family.invalid')) ? shareBox(r, id) : null,
-    id && !r.shared && r.attempt?.status !== 'in_progress' ? emailBox(r, id) : null,
     h('h3', {}, '문항별 리뷰'), items);
 }
 
